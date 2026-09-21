@@ -107,6 +107,7 @@
       "description": "One choice above the small prep sink; appliance tower and primary-sink drying storage stay fixed.",
       "assumptions": [
         "The OTG, microwave and PRIMARY washing-sink drying cabinet are fixed in both variants. Only the shallow upper above the SMALL food-prep sink is optional.",
+        "Both variants share the updated 380 mm right-end crockery showcase, with two tinted-glass faces, warm lighting and decorative crockery. The adjacent prep slab is 1350 mm; total room dimensions remain 3400 x 4580 mm.",
         "The original 3400 x 4580 mm layout, sinks, worktops, two-face-open decorative display and 300 mm-deep shutter garage are retained.",
         "Generic procedural appliances are placeholders, not selected products. OTG body 480 W x 420 D x 340 H mm; microwave body 480 W x 390 D x 300 H mm. Handles and feet are additional.",
         "The open appliance niches illustrate placement only. A normal countertop OTG is NOT assumed safe to operate in cabinetry. Manufacturer approval, heat resistance, clearances, ventilation, door opening, access and electrical requirements must be checked before specifying any product or enclosure.",
@@ -116,9 +117,9 @@
         "Interactive GLB uses approximate PBR, not the Cycles poster appearance. Procedural textures and lighting are simplified; no external assets or URLs are required."
       ],
       "model": {
-        "src": "models/configurator-clear-bd85cfa6474f.glb",
-        "poster": "images/kitchen_configurator/clear-b1c3eff1fa78.png",
-        "bytes": 2522824,
+        "src": "models/configurator-clear-7609df9f5f17.glb",
+        "poster": "images/kitchen_configurator/clear-e7f14a0b06e4.png",
+        "bytes": 2831368,
         "label": "Interactive kitchen - Clear backsplash and task light"
       },
       "configuration": {
@@ -142,9 +143,9 @@
             },
             "description": "Clear backsplash and task light",
             "model": {
-              "src": "models/configurator-clear-bd85cfa6474f.glb",
-              "poster": "images/kitchen_configurator/clear-b1c3eff1fa78.png",
-              "bytes": 2522824,
+              "src": "models/configurator-clear-7609df9f5f17.glb",
+              "poster": "images/kitchen_configurator/clear-e7f14a0b06e4.png",
+              "bytes": 2831368,
               "label": "Interactive kitchen - Clear backsplash and task light"
             }
           },
@@ -155,9 +156,9 @@
             },
             "description": "Shallow cabinet and task light",
             "model": {
-              "src": "models/configurator-cabinet-16e50156268e.glb",
-              "poster": "images/kitchen_configurator/cabinet-f088e2fcffdd.png",
-              "bytes": 2534556,
+              "src": "models/configurator-cabinet-bc6b8e15bf64.glb",
+              "poster": "images/kitchen_configurator/cabinet-cc1d84e14bce.png",
+              "bytes": 2842920,
               "label": "Interactive kitchen - Shallow cabinet and task light"
             }
           }
@@ -170,7 +171,7 @@
           "title": "Clear backsplash and task light",
           "room": "Kitchen",
           "description": "Rendered reference for this selection.",
-          "src": "images/kitchen_configurator/clear-b1c3eff1fa78.png",
+          "src": "images/kitchen_configurator/clear-e7f14a0b06e4.png",
           "width": 960,
           "height": 840
         },
@@ -180,7 +181,7 @@
           "title": "Shallow cabinet and task light",
           "room": "Kitchen",
           "description": "Rendered reference for this selection.",
-          "src": "images/kitchen_configurator/cabinet-f088e2fcffdd.png",
+          "src": "images/kitchen_configurator/cabinet-cc1d84e14bce.png",
           "width": 960,
           "height": 840
         }
@@ -190,19 +191,20 @@
       "id": "user_sketch_kitchen",
       "title": "Earlier sketch - before appliance tower",
       "status": "Sketch interpretation - provisional",
-      "description": "Your 3400 x 4580 mm kitchen: longer prep slab, illuminated 230 mm display open on two faces, and a half-depth shutter with counter space in front.",
+      "description": "Your 3400 x 4580 mm kitchen: 380 mm tinted-glass crockery showcase on two faces, 1350 mm prep slab, and the two-face-open left display.",
       "assumptions": [
+        "The right end showcase is now 380 mm wide, with light bronze-tinted glass on its front and entry-facing side, warm shelf lights and decorative crockery. The freed 220 mm extends the adjacent prep slab to 1350 mm; room dimensions are unchanged.",
         "The decorative display is now open on its aisle-facing front and entry-facing end. Shelves, lights, top/back and the lower cabinet are retained.",
-        "Latest requested change: both runs gain 230 mm; right prep slab is 1130 mm and left has a 230 mm illuminated decorative end section after the small sink.",
+        "The earlier 230 mm room extension and left illuminated decorative end section after the small sink are retained.",
         "Only the shutter garage is reduced to 300 mm depth. Its 600 mm frontage, full-depth worktop and 600 mm-deep upper cabinet remain unchanged, leaving 300 mm clear counter in front.",
         "Interactive cutaway, not a photorealistic Cycles render. Ceiling omitted and exterior walls lowered for visibility.",
         "Colors, metallic surfaces and roughness are preserved approximately. Procedural wood/stone textures and scene lighting are simplified for real-time browsing.",
         "Nominal modules follow the revised sketch. OTS partition, heights and appliance installation details remain provisional."
       ],
       "model": {
-        "src": "models/user_sketch_kitchen-722223b12d05.glb",
-        "bytes": 1909704,
-        "poster": "images/user_sketch_kitchen/cutaway-05ede626c41e.png",
+        "src": "models/user_sketch_kitchen-5b717ee19ba4.glb",
+        "bytes": 2217860,
+        "poster": "images/user_sketch_kitchen/cutaway-921e8308ba0f.png",
         "label": "Interactive 3D sketch kitchen"
       },
       "views": [
@@ -211,7 +213,7 @@
           "title": "Rendered cutaway",
           "room": "Kitchen",
           "description": "The rendered reference. The interactive model uses simplified real-time materials.",
-          "src": "images/user_sketch_kitchen/cutaway-05ede626c41e.png",
+          "src": "images/user_sketch_kitchen/cutaway-921e8308ba0f.png",
           "width": 1120,
           "height": 840
         }
