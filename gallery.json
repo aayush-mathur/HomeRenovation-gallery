@@ -104,8 +104,9 @@
       "id": "user_sketch_kitchen",
       "title": "Your sketch kitchen",
       "status": "Sketch interpretation - provisional",
-      "description": "Your 3400 x 4580 mm kitchen: longer prep slab, illuminated 230 mm end display and a half-depth shutter with counter space in front.",
+      "description": "Your 3400 x 4580 mm kitchen: longer prep slab, illuminated 230 mm display open on two faces, and a half-depth shutter with counter space in front.",
       "assumptions": [
+        "The decorative display is now open on its aisle-facing front and entry-facing end. Shelves, lights, top/back and the lower cabinet are retained.",
         "Latest requested change: both runs gain 230 mm; right prep slab is 1130 mm and left has a 230 mm illuminated decorative end section after the small sink.",
         "Only the shutter garage is reduced to 300 mm depth. Its 600 mm frontage, full-depth worktop and 600 mm-deep upper cabinet remain unchanged, leaving 300 mm clear counter in front.",
         "Interactive cutaway, not a photorealistic Cycles render. Ceiling omitted and exterior walls lowered for visibility.",
@@ -113,9 +114,9 @@
         "Nominal modules follow the revised sketch. OTS partition, heights and appliance installation details remain provisional."
       ],
       "model": {
-        "src": "models/user_sketch_kitchen-e54d29e03c7e.glb",
-        "bytes": 1913160,
-        "poster": "images/user_sketch_kitchen/cutaway-fb321e04681d.png",
+        "src": "models/user_sketch_kitchen-722223b12d05.glb",
+        "bytes": 1909704,
+        "poster": "images/user_sketch_kitchen/cutaway-05ede626c41e.png",
         "label": "Interactive 3D sketch kitchen"
       },
       "views": [
@@ -124,7 +125,7 @@
           "title": "Rendered cutaway",
           "room": "Kitchen",
           "description": "The rendered reference. The interactive model uses simplified real-time materials.",
-          "src": "images/user_sketch_kitchen/cutaway-fb321e04681d.png",
+          "src": "images/user_sketch_kitchen/cutaway-05ede626c41e.png",
           "width": 1120,
           "height": 840
         }
