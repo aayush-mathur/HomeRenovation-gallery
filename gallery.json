@@ -101,8 +101,94 @@
       ]
     },
     {
-      "id": "user_sketch_kitchen",
+      "id": "kitchen_configurator",
       "title": "Your sketch kitchen",
+      "status": "Interactive choices - provisional",
+      "description": "One choice above the small prep sink; appliance tower and primary-sink drying storage stay fixed.",
+      "assumptions": [
+        "The OTG, microwave and PRIMARY washing-sink drying cabinet are fixed in both variants. Only the shallow upper above the SMALL food-prep sink is optional.",
+        "The original 3400 x 4580 mm layout, sinks, worktops, two-face-open decorative display and 300 mm-deep shutter garage are retained.",
+        "Generic procedural appliances are placeholders, not selected products. OTG body 480 W x 420 D x 340 H mm; microwave body 480 W x 390 D x 300 H mm. Handles and feet are additional.",
+        "The open appliance niches illustrate placement only. A normal countertop OTG is NOT assumed safe to operate in cabinetry. Manufacturer approval, heat resistance, clearances, ventilation, door opening, access and electrical requirements must be checked before specifying any product or enclosure.",
+        "Illustrative empty gaps around appliances are not certified thermal clearances. No sliding support or modeled gap is a safety guarantee.",
+        "The primary-sink drying cabinet contains a real modeled wire dish rack, plates and a removable drip tray behind closed matching fronts. Tray emptying/access and cabinet moisture protection need detailing; no drainage connection is modeled or verified.",
+        "Prep-sink upper is 600 mm frontage x 320 mm deep, elevations 1600 to 2350 mm, with an under-cabinet task strip. Clear mode has no upper cabinet and uses a slim wall-mounted task light.",
+        "Interactive GLB uses approximate PBR, not the Cycles poster appearance. Procedural textures and lighting are simplified; no external assets or URLs are required."
+      ],
+      "model": {
+        "src": "models/configurator-clear-bd85cfa6474f.glb",
+        "poster": "images/kitchen_configurator/clear-b1c3eff1fa78.png",
+        "bytes": 2522824,
+        "label": "Interactive kitchen - Clear backsplash and task light"
+      },
+      "configuration": {
+        "version": 1,
+        "id": "kitchen_configurator",
+        "options": [
+          {
+            "id": "prep_sink_upper",
+            "label": "Cabinet above prep sink",
+            "description": "On: shallow storage and task light. Off: clear backsplash and slim task light."
+          }
+        ],
+        "defaults": {
+          "prep_sink_upper": false
+        },
+        "variants": [
+          {
+            "id": "clear",
+            "selections": {
+              "prep_sink_upper": false
+            },
+            "description": "Clear backsplash and task light",
+            "model": {
+              "src": "models/configurator-clear-bd85cfa6474f.glb",
+              "poster": "images/kitchen_configurator/clear-b1c3eff1fa78.png",
+              "bytes": 2522824,
+              "label": "Interactive kitchen - Clear backsplash and task light"
+            }
+          },
+          {
+            "id": "cabinet",
+            "selections": {
+              "prep_sink_upper": true
+            },
+            "description": "Shallow cabinet and task light",
+            "model": {
+              "src": "models/configurator-cabinet-16e50156268e.glb",
+              "poster": "images/kitchen_configurator/cabinet-f088e2fcffdd.png",
+              "bytes": 2534556,
+              "label": "Interactive kitchen - Shallow cabinet and task light"
+            }
+          }
+        ]
+      },
+      "views": [
+        {
+          "id": "clear",
+          "variantId": "clear",
+          "title": "Clear backsplash and task light",
+          "room": "Kitchen",
+          "description": "Rendered reference for this selection.",
+          "src": "images/kitchen_configurator/clear-b1c3eff1fa78.png",
+          "width": 960,
+          "height": 840
+        },
+        {
+          "id": "cabinet",
+          "variantId": "cabinet",
+          "title": "Shallow cabinet and task light",
+          "room": "Kitchen",
+          "description": "Rendered reference for this selection.",
+          "src": "images/kitchen_configurator/cabinet-f088e2fcffdd.png",
+          "width": 960,
+          "height": 840
+        }
+      ]
+    },
+    {
+      "id": "user_sketch_kitchen",
+      "title": "Earlier sketch - before appliance tower",
       "status": "Sketch interpretation - provisional",
       "description": "Your 3400 x 4580 mm kitchen: longer prep slab, illuminated 230 mm display open on two faces, and a half-depth shutter with counter space in front.",
       "assumptions": [

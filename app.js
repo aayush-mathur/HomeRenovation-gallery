@@ -15,6 +15,116 @@ let modelElement;
 let modelTimeout;
 let viewerModule;
 let modelAttempt = 0;
+let selectedOptions = {};
+let selectedVariant;
+let lastModelView;
+const choices = window.KitchenChoices;
+const favoriteKey = "home-renovation:kitchen-favourite:v1";
+
+function selectedModel() {
+  return selectedVariant?.model || activeCollection.model;
+}
+
+function captureModelView() {
+  if (!modelElement?.loaded) return lastModelView;
+  const orbit = modelElement.getCameraOrbit();
+  const target = modelElement.getCameraTarget();
+  return {
+    orbit: `${orbit.theta}rad ${orbit.phi}rad ${orbit.radius}m`,
+    target: `${target.x}m ${target.y}m ${target.z}m`,
+  };
+}
+
+function updateChoiceSummary() {
+  const model = selectedModel();
+  if (!model) return;
+  byId("model-poster").src = model.poster;
+  byId("model-summary").textContent = `${(model.bytes / 1000000).toFixed(1)} MB selected model · No Blender needed`;
+  byId("configuration-selection").textContent = selectedVariant
+    ? `Selected: ${selectedVariant.description}` : "";
+}
+
+function chooseCombination(next) {
+  const configuration = activeCollection.configuration;
+  let variant;
+  try {
+    variant = choices.variant(configuration, next);
+  } catch (error) {
+    console.error("Kitchen selection failed:", error);
+    byId("configuration-state").textContent = "That combination is unavailable. Your previous selection is unchanged.";
+    document.querySelectorAll("[data-option]").forEach((input) => {
+      input.checked = selectedOptions[input.dataset.option];
+    });
+    return false;
+  }
+  const shouldReload = Boolean(modelElement) || byId("load-model").disabled;
+  lastModelView = captureModelView();
+  selectedOptions = { ...next };
+  selectedVariant = variant;
+  document.querySelectorAll("[data-option]").forEach((input) => {
+    input.checked = selectedOptions[input.dataset.option];
+  });
+  updateChoiceSummary();
+  renderPhotos();
+  byId("configuration-state").textContent = "Selection changed. Save favourite to remember it in this browser.";
+  if (shouldReload) loadModel(lastModelView);
+  else byId("model-state").textContent = "Selected option preview shown. Load 3D to explore it.";
+  return true;
+}
+
+function configureChoices() {
+  const configuration = activeCollection.configuration;
+  byId("configuration-panel").hidden = !configuration;
+  byId("focus-prep-sink").hidden = !configuration;
+  byId("configuration-switches").replaceChildren();
+  selectedOptions = configuration ? { ...configuration.defaults } : {};
+  selectedVariant = configuration ? choices.variant(configuration, selectedOptions) : undefined;
+  if (!configuration) return;
+  byId("configuration-state").textContent = "Favourites are saved in this browser only, not to your Blender file.";
+  for (const option of configuration.options) {
+    const label = node("label", "", "configuration-toggle");
+    const input = node("input");
+    input.type = "checkbox";
+    input.setAttribute("role", "switch");
+    input.dataset.option = option.id;
+    input.checked = selectedOptions[option.id];
+    input.setAttribute("aria-describedby", `option-help-${option.id}`);
+    label.append(input, node("span", option.label));
+    const description = node("p", option.description, "configuration-description");
+    description.id = `option-help-${option.id}`;
+    byId("configuration-switches").append(label, description);
+    input.addEventListener("change", () => chooseCombination({
+      ...selectedOptions, [option.id]: input.checked,
+    }));
+  }
+}
+
+byId("save-favourite").addEventListener("click", () => {
+  try {
+    const serialized = choices.save(activeCollection.configuration, activeCollection.id, selectedOptions);
+    localStorage.setItem(favoriteKey, serialized);
+    byId("configuration-state").textContent = `Favourite saved here: ${selectedVariant.description}. No Blender file was changed.`;
+  } catch (error) {
+    console.error("Saving kitchen favourite failed:", error);
+    byId("configuration-state").textContent = "Your browser could not save the favourite. The current selection is still visible; browser storage may be disabled or full.";
+  }
+});
+byId("load-favourite").addEventListener("click", () => {
+  try {
+    const saved = localStorage.getItem(favoriteKey);
+    if (saved === null) {
+      byId("configuration-state").textContent = "No favourite saved in this browser yet. Choose an option, then select Save favourite.";
+      return;
+    }
+    const selections = choices.restore(activeCollection.configuration, activeCollection.id, saved);
+    if (chooseCombination(selections)) {
+      byId("configuration-state").textContent = `Favourite restored: ${selectedVariant.description}.`;
+    }
+  } catch (error) {
+    console.error("Restoring kitchen favourite failed:", error);
+    byId("configuration-state").textContent = "The favourite could not be restored. Browser storage may be blocked, or the saved options are no longer compatible. Your current selection is unchanged.";
+  }
+});
 
 function releaseModel() {
   ++modelRequest;
@@ -26,17 +136,18 @@ function releaseModel() {
   byId("model-poster").hidden = false;
 }
 
-function configureModel() {
+function configureModel(resetOptions = true) {
   releaseModel();
-  const model = activeCollection.model;
+  lastModelView = undefined;
+  if (resetOptions) configureChoices();
+  const model = selectedModel();
   byId("model-section").hidden = !model;
   byId("load-model").disabled = false;
   byId("load-model").hidden = false;
   byId("load-model").textContent = "Load interactive model";
   byId("model-state").textContent = "";
   if (!model) return;
-  byId("model-poster").src = model.poster;
-  byId("model-summary").textContent = `${(model.bytes / 1000000).toFixed(1)} MB model · Loads only when you choose · No Blender needed`;
+  updateChoiceSummary();
   byId("model-state").textContent = "Rendered preview shown. Load 3D to rotate and zoom.";
 }
 
@@ -51,10 +162,11 @@ function setModelFailure(request, error) {
   byId("load-model").textContent = "Retry 3D";
 }
 
-async function loadModel() {
+async function loadModel(view = lastModelView) {
+  lastModelView = view;
   releaseModel();
   const request = modelRequest;
-  const model = activeCollection.model;
+  const model = selectedModel();
   if (!model) return;
   byId("load-model").disabled = true;
   byId("model-state").textContent = "Loading the local 3D viewer…";
@@ -70,10 +182,11 @@ async function loadModel() {
     customElements.get("model-viewer").modelCacheSize = 0;
     const element = document.createElement("model-viewer");
     modelElement = element;
+    element.dataset.variant = selectedVariant?.id || "";
     const attributes = {
       alt: model.label, "camera-controls": "", "touch-action": "pan-y",
-      "interaction-prompt": "none", "camera-orbit": "35deg 55deg auto",
-      "camera-target": "auto auto auto", "min-camera-orbit": "auto 0deg 1m",
+      "interaction-prompt": "none", "camera-orbit": view?.orbit || "35deg 55deg auto",
+      "camera-target": view?.target || "auto auto auto", "min-camera-orbit": "auto 0deg 1m",
       "max-camera-orbit": "auto 85deg 15m", "shadow-intensity": "1",
       exposure: "1", "environment-image": "neutral", loading: "eager",
       reveal: "auto", "aria-describedby": "model-help",
@@ -93,7 +206,9 @@ async function loadModel() {
       byId("model-poster").hidden = true;
       byId("model-controls").hidden = false;
       byId("load-model").hidden = true;
-      byId("model-state").textContent = "3D ready. Drag the kitchen to rotate.";
+      byId("model-state").textContent = selectedVariant
+        ? `3D ready: ${selectedVariant.description}. Your viewing angle is preserved when switching.`
+        : "3D ready. Drag the kitchen to rotate.";
       byId("fullscreen-model").hidden = !document.fullscreenEnabled;
     }, { once: true });
     const source = new URL(model.src, document.baseURI);
@@ -106,12 +221,12 @@ async function loadModel() {
   }
 }
 
-byId("load-model").addEventListener("click", loadModel);
+byId("load-model").addEventListener("click", () => loadModel());
 document.querySelectorAll("[data-orbit]").forEach((button) => {
   button.addEventListener("click", async () => {
     if (!modelElement) return;
     const element = modelElement;
-    element.cameraTarget = "auto auto auto";
+    element.cameraTarget = button.dataset.target || "auto auto auto";
     element.cameraOrbit = button.dataset.orbit;
     await element.updateComplete;
     if (element === modelElement) element.jumpCameraToGoal();
@@ -129,7 +244,7 @@ async function zoomModel(factor) {
 byId("zoom-in-model").addEventListener("click", () => zoomModel(0.8));
 byId("zoom-out-model").addEventListener("click", () => zoomModel(1.25));
 byId("unload-model").addEventListener("click", () => {
-  configureModel();
+  configureModel(false);
   byId("load-model").focus();
 });
 byId("fullscreen-model").addEventListener("click", async () => {
@@ -171,7 +286,10 @@ function imageLink(view, download = false) {
 }
 
 function renderPhotos() {
-  visibleViews = activeCollection.views.filter((view) => roomSelect.value === "all" || view.room === roomSelect.value);
+  visibleViews = activeCollection.views.filter((view) => (
+    (!view.variantId || view.variantId === selectedVariant?.id)
+    && (roomSelect.value === "all" || view.room === roomSelect.value)
+  ));
   byId("photos").replaceChildren();
   byId("view-count").textContent = `${visibleViews.length} ${visibleViews.length === 1 ? "render" : "renders"} · Tap an image to enlarge`;
   visibleViews.forEach((view, index) => {

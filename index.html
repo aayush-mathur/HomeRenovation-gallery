@@ -16,8 +16,9 @@ local GLB and viewer assets, visible loading/recovery, touch and keyboard contro
   <meta name="referrer" content="no-referrer">
   <title>Home renovation · Render gallery</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=2fdd7c704d32">
+  <script src="configuration.js?v=3981457b456a" defer></script>
+  <script src="app.js?v=649f359b52ab" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#gallery">Skip to renders</a>
@@ -59,6 +60,19 @@ local GLB and viewer assets, visible loading/recovery, touch and keyboard contro
             </div>
             <button id="load-model" type="button">Load interactive model</button>
           </div>
+          <div id="configuration-panel" class="configuration-panel" hidden>
+            <fieldset id="configuration-options">
+              <legend>Try a different combination</legend>
+              <div id="configuration-switches"></div>
+            </fieldset>
+            <p class="configuration-fixed">Fixed in both options: OTG + microwave tower, and drying storage above the primary washing sink.</p>
+            <p id="configuration-selection" class="configuration-selection"></p>
+            <div class="configuration-actions">
+              <button id="save-favourite" type="button">Save favourite</button>
+              <button id="load-favourite" type="button">Load favourite</button>
+            </div>
+            <p id="configuration-state" class="configuration-state" role="status" aria-live="polite">Favourites are saved in this browser only, not to your Blender file.</p>
+          </div>
           <p id="model-state" class="model-state" role="status" aria-live="polite"></p>
           <div id="model-stage" class="model-stage">
             <!-- The section stays hidden until app.js assigns its validated poster URL. -->
@@ -68,6 +82,7 @@ local GLB and viewer assets, visible loading/recovery, touch and keyboard contro
           </div>
           <div id="model-controls" class="model-controls" aria-label="3D view controls" hidden>
             <button type="button" data-orbit="35deg 55deg auto" id="reset-model">Reset view</button>
+            <button type="button" data-orbit="75deg 80deg 3m" data-target="0.2m 1.5m 4.05m" id="focus-prep-sink" hidden>Focus prep sink</button>
             <button type="button" data-orbit="0deg 0deg auto">Top</button>
             <button type="button" data-orbit="0deg 65deg auto">Entry side</button>
             <button type="button" data-orbit="90deg 65deg auto">Right side</button>
