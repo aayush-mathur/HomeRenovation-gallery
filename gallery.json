@@ -104,16 +104,17 @@
       "id": "user_sketch_kitchen",
       "title": "Your sketch kitchen",
       "status": "Sketch interpretation - provisional",
-      "description": "Rotate and zoom the kitchen modeled from your revised sketch. Inside footprint: 3400 x 4350 mm.",
+      "description": "Your 3400 x 4350 mm kitchen, updated with a right-side pantry and the rolling shutter beside the tall unit.",
       "assumptions": [
+        "Latest requested change: pantry replaces the right-side rolling shutter; rolling shutter moves into the former plant position beside the tall unit.",
         "Interactive cutaway, not a photorealistic Cycles render. Ceiling omitted and exterior walls lowered for visibility.",
         "Colors, metallic surfaces and roughness are preserved approximately. Procedural wood/stone textures and scene lighting are simplified for real-time browsing.",
         "Nominal modules follow the revised sketch. OTS partition, heights and appliance installation details remain provisional."
       ],
       "model": {
-        "src": "models/user_sketch_kitchen.glb",
-        "bytes": 1665128,
-        "poster": "images/user_sketch_kitchen/cutaway.png",
+        "src": "models/user_sketch_kitchen-ca3b721c4747.glb",
+        "bytes": 1618388,
+        "poster": "images/user_sketch_kitchen/cutaway-0df28e395dcc.png",
         "label": "Interactive 3D sketch kitchen"
       },
       "views": [
@@ -122,7 +123,7 @@
           "title": "Rendered cutaway",
           "room": "Kitchen",
           "description": "The rendered reference. The interactive model uses simplified real-time materials.",
-          "src": "images/user_sketch_kitchen/cutaway.png",
+          "src": "images/user_sketch_kitchen/cutaway-0df28e395dcc.png",
           "width": 1120,
           "height": 840
         }
