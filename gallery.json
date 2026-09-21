@@ -104,17 +104,18 @@
       "id": "user_sketch_kitchen",
       "title": "Your sketch kitchen",
       "status": "Sketch interpretation - provisional",
-      "description": "Your 3400 x 4350 mm kitchen, updated with a right-side pantry and the rolling shutter beside the tall unit.",
+      "description": "Your 3400 x 4580 mm kitchen: longer prep slab, illuminated 230 mm end display and a half-depth shutter with counter space in front.",
       "assumptions": [
-        "Latest requested change: pantry replaces the right-side rolling shutter; rolling shutter moves into the former plant position beside the tall unit.",
+        "Latest requested change: both runs gain 230 mm; right prep slab is 1130 mm and left has a 230 mm illuminated decorative end section after the small sink.",
+        "Only the shutter garage is reduced to 300 mm depth. Its 600 mm frontage, full-depth worktop and 600 mm-deep upper cabinet remain unchanged, leaving 300 mm clear counter in front.",
         "Interactive cutaway, not a photorealistic Cycles render. Ceiling omitted and exterior walls lowered for visibility.",
         "Colors, metallic surfaces and roughness are preserved approximately. Procedural wood/stone textures and scene lighting are simplified for real-time browsing.",
         "Nominal modules follow the revised sketch. OTS partition, heights and appliance installation details remain provisional."
       ],
       "model": {
-        "src": "models/user_sketch_kitchen-ca3b721c4747.glb",
-        "bytes": 1618388,
-        "poster": "images/user_sketch_kitchen/cutaway-0df28e395dcc.png",
+        "src": "models/user_sketch_kitchen-e54d29e03c7e.glb",
+        "bytes": 1913160,
+        "poster": "images/user_sketch_kitchen/cutaway-fb321e04681d.png",
         "label": "Interactive 3D sketch kitchen"
       },
       "views": [
@@ -123,7 +124,7 @@
           "title": "Rendered cutaway",
           "room": "Kitchen",
           "description": "The rendered reference. The interactive model uses simplified real-time materials.",
-          "src": "images/user_sketch_kitchen/cutaway-0df28e395dcc.png",
+          "src": "images/user_sketch_kitchen/cutaway-fb321e04681d.png",
           "width": 1120,
           "height": 840
         }
