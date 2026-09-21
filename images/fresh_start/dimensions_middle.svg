@@ -1,0 +1,393 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="3948" viewBox="0 0 1800 3948">
+<rect width="1800" height="3948" fill="#ffffff"/>
+<text x="80.00" y="65.00" font-family="Arial, sans-serif" font-size="38" fill="#182e40" text-anchor="start">Family lounge, bedroom 2 and bath 2</text>
+<text x="80.00" y="108.00" font-family="Arial, sans-serif" font-size="23" fill="#182e40" text-anchor="start">FRESH_START PROPOSAL  |  MODEL DIMENSIONS - NOT A SITE SURVEY</text>
+<text x="80.00" y="148.00" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">Feet/inches rounded to 1/8 in; metric rounded to 1 mm. X = plan left/right; Y = plan up/down.</text>
+<text x="80.00" y="180.00" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Room spans describe named bays/zones. Furniture outlines are bounding envelopes. Opening widths are wall openings, not clear passage.</text>
+<polygon points="102.17,239.85 537.47,239.85 537.47,220.00 102.17,220.00" fill="#f7f9fa" stroke="#c6ced5" stroke-width="2"/>
+<polygon points="537.47,239.85 904.63,239.85 904.63,220.00 537.47,220.00" fill="#f7f9fa" stroke="#c6ced5" stroke-width="2"/>
+<polygon points="102.17,1026.19 1171.03,1026.19 1171.03,534.19 1470.09,534.19 1470.09,262.01 904.63,262.01 904.63,239.85 102.17,239.85" fill="#f7f9fa" stroke="#c6ced5" stroke-width="2"/>
+<polygon points="1193.47,1026.19 1470.09,1026.19 1470.09,556.63 1193.47,556.63" fill="#f7f9fa" stroke="#c6ced5" stroke-width="2"/>
+<polygon points="663.40,1290.32 663.40,1048.63 123.80,1048.63 123.80,1290.32" fill="#f7f9fa" stroke="#c6ced5" stroke-width="2"/>
+<polygon points="1465.23,1290.32 1465.23,1048.63 685.02,1048.63 685.02,1290.32" fill="#f7f9fa" stroke="#c6ced5" stroke-width="2"/>
+<rect x="80.00" y="911.10" width="11.08" height="379.21" fill="#45515a" stroke="#45515a"/>
+<rect x="145.60" y="1204.00" width="94.95" height="86.32" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="149.05" y="1060.72" width="258.95" height="94.95" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="269.89" y="1164.29" width="94.95" height="94.95" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="710.11" y="1195.37" width="362.53" height="94.95" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="710.11" y="1091.79" width="94.95" height="94.95" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="701.47" y="427.16" width="155.37" height="492.00" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="934.53" y="608.42" width="120.84" height="181.26" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="1089.89" y="642.95" width="77.68" height="233.05" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="1158.95" y="642.95" width="10.36" height="233.05" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="252.63" y="668.84" width="138.11" height="138.11" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="140.42" y="737.89" width="94.95" height="233.05" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="105.89" y="254.53" width="94.95" height="164.00" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="1202.11" y="565.26" width="93.22" height="120.84" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="1392.00" y="694.74" width="69.05" height="103.58" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="1198.65" y="862.19" width="262.40" height="157.09" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="621.74" y="611.02" width="328.78" height="29.70" fill="#ffffff"/>
+<text x="786.13" y="633.02" font-family="Arial, sans-serif" font-size="22" fill="#182e40" text-anchor="middle">Family living / reading</text>
+<rect x="1202.04" y="769.41" width="259.48" height="29.70" fill="#ffffff"/>
+<text x="1331.78" y="791.41" font-family="Arial, sans-serif" font-size="22" fill="#182e40" text-anchor="middle">Shared shower room</text>
+<line x1="102.17" y1="291.64" x2="1470.09" y2="291.64" stroke="#16738d" stroke-width="2"/>
+<line x1="102.17" y1="284.64" x2="102.17" y2="298.64" stroke="#16738d" stroke-width="2"/>
+<line x1="1470.09" y1="284.64" x2="1470.09" y2="298.64" stroke="#16738d" stroke-width="2"/>
+<rect x="718.76" y="265.64" width="134.74" height="24.30" fill="#ffffff"/>
+<text x="786.13" y="283.64" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">F022 26&#x27; 0&quot;</text>
+<line x1="1435.57" y1="1026.19" x2="1435.57" y2="239.85" stroke="#16738d" stroke-width="2"/>
+<line x1="1428.57" y1="1026.19" x2="1442.57" y2="1026.19" stroke="#16738d" stroke-width="2"/>
+<line x1="1428.57" y1="239.85" x2="1442.57" y2="239.85" stroke="#16738d" stroke-width="2"/>
+<rect x="1355.85" y="607.02" width="191.44" height="24.30" fill="#ffffff"/>
+<text x="1451.57" y="625.02" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">F023 14&#x27; 11 3/8&quot;</text>
+<line x1="1193.47" y1="608.42" x2="1470.09" y2="608.42" stroke="#16738d" stroke-width="2"/>
+<line x1="1193.47" y1="601.42" x2="1193.47" y2="615.42" stroke="#16738d" stroke-width="2"/>
+<line x1="1470.09" y1="601.42" x2="1470.09" y2="615.42" stroke="#16738d" stroke-width="2"/>
+<line x1="1331.78" y1="600.42" x2="1331.78" y2="582.42" stroke="#09667e" stroke-width="1"/>
+<rect x="1247.40" y="564.42" width="168.76" height="24.30" fill="#ffffff"/>
+<text x="1331.78" y="582.42" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">F025 5&#x27; 3 1/8&quot;</text>
+<line x1="1435.57" y1="1026.19" x2="1435.57" y2="556.63" stroke="#16738d" stroke-width="2"/>
+<line x1="1428.57" y1="1026.19" x2="1442.57" y2="1026.19" stroke="#16738d" stroke-width="2"/>
+<line x1="1428.57" y1="556.63" x2="1442.57" y2="556.63" stroke="#16738d" stroke-width="2"/>
+<line x1="1451.57" y1="783.41" x2="1451.57" y2="747.41" stroke="#09667e" stroke-width="1"/>
+<rect x="1361.52" y="729.41" width="180.10" height="24.30" fill="#ffffff"/>
+<text x="1451.57" y="747.41" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">F026 8&#x27; 11 1/8&quot;</text>
+<line x1="123.80" y1="1100.42" x2="663.40" y2="1100.42" stroke="#16738d" stroke-width="2"/>
+<line x1="123.80" y1="1093.42" x2="123.80" y2="1107.42" stroke="#16738d" stroke-width="2"/>
+<line x1="663.40" y1="1093.42" x2="663.40" y2="1107.42" stroke="#16738d" stroke-width="2"/>
+<rect x="326.23" y="1074.42" width="134.74" height="24.30" fill="#ffffff"/>
+<text x="393.60" y="1092.42" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">F028 10&#x27; 3&quot;</text>
+<line x1="685.02" y1="1100.42" x2="1465.23" y2="1100.42" stroke="#16738d" stroke-width="2"/>
+<line x1="685.02" y1="1093.42" x2="685.02" y2="1107.42" stroke="#16738d" stroke-width="2"/>
+<line x1="1465.23" y1="1093.42" x2="1465.23" y2="1107.42" stroke="#16738d" stroke-width="2"/>
+<rect x="985.08" y="1074.42" width="180.10" height="24.30" fill="#ffffff"/>
+<text x="1075.13" y="1092.42" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">F031 14&#x27; 9 7/8&quot;</text>
+<rect x="1458.27" y="677.91" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1480.91" y="691.91" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F040</text>
+<rect x="1458.27" y="391.89" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1480.91" y="405.89" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F041</text>
+<rect x="1455.83" y="1212.92" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1478.47" y="1226.92" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F042</text>
+<rect x="549.36" y="1019.41" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="572.00" y="1033.41" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F048</text>
+<rect x="1049.99" y="1019.41" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1072.63" y="1033.41" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F049</text>
+<rect x="1356.41" y="527.41" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1379.05" y="541.41" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F050</text>
+<line x1="193.07" y1="1286.32" x2="193.07" y2="1268.32" stroke="#81512b" stroke-width="1"/>
+<rect x="170.43" y="1254.32" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="193.07" y="1268.32" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F070</text>
+<rect x="122.96" y="1229.16" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="145.60" y="1243.16" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F071</text>
+<rect x="255.89" y="1137.66" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="278.53" y="1151.66" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F074</text>
+<rect x="126.41" y="1090.19" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="149.05" y="1104.19" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F075</text>
+<rect x="294.73" y="1241.24" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="317.37" y="1255.24" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F076</text>
+<rect x="247.25" y="1193.77" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="269.89" y="1207.77" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F077</text>
+<rect x="734.94" y="1168.74" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="757.58" y="1182.74" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F082</text>
+<rect x="687.47" y="1121.26" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="710.11" y="1135.26" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F083</text>
+<rect x="756.52" y="901.16" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="779.16" y="915.16" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F088</text>
+<rect x="678.83" y="655.16" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="701.47" y="669.16" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F089</text>
+<rect x="972.31" y="771.68" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="994.95" y="785.68" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F090</text>
+<rect x="911.89" y="681.05" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="934.53" y="695.05" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F091</text>
+<rect x="1106.10" y="858.00" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1128.74" y="872.00" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F092</text>
+<rect x="1067.25" y="741.47" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1089.89" y="755.47" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F093</text>
+<line x1="1164.13" y1="872.00" x2="1182.13" y2="872.00" stroke="#81512b" stroke-width="1"/>
+<rect x="1159.49" y="858.00" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1182.13" y="872.00" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F094</text>
+<rect x="1136.31" y="741.47" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1158.95" y="755.47" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F095</text>
+<rect x="299.04" y="788.95" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="321.68" y="802.95" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F096</text>
+<rect x="229.99" y="719.89" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="252.63" y="733.89" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F097</text>
+<rect x="165.25" y="952.95" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="187.89" y="966.95" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F098</text>
+<rect x="117.78" y="836.42" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="140.42" y="850.42" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F099</text>
+<rect x="130.73" y="400.53" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="153.37" y="414.53" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F100</text>
+<rect x="83.25" y="318.53" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="105.89" y="332.53" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F101</text>
+<line x1="813.68" y1="216.00" x2="813.68" y2="252.00" stroke="#81512b" stroke-width="1"/>
+<rect x="791.04" y="238.00" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="813.68" y="252.00" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F102</text>
+<line x1="279.39" y1="216.00" x2="279.39" y2="252.00" stroke="#81512b" stroke-width="1"/>
+<rect x="256.75" y="238.00" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="279.39" y="252.00" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F114</text>
+<rect x="1226.08" y="668.11" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1248.72" y="682.11" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F146</text>
+<rect x="1179.47" y="607.68" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1202.11" y="621.68" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F147</text>
+<line x1="1426.53" y1="794.32" x2="1426.53" y2="830.32" stroke="#81512b" stroke-width="1"/>
+<rect x="1403.89" y="816.32" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1426.53" y="830.32" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F148</text>
+<line x1="1392.00" y1="742.53" x2="1392.00" y2="706.53" stroke="#81512b" stroke-width="1"/>
+<rect x="1369.36" y="692.53" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1392.00" y="706.53" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F149</text>
+<rect x="1307.21" y="1001.28" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1329.85" y="1015.28" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F150</text>
+<rect x="1176.01" y="922.74" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1198.65" y="936.74" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">F151</text>
+<text x="80.00" y="1385.32" font-family="Arial, sans-serif" font-size="27" fill="#182e40" text-anchor="start">MEASUREMENT SCHEDULE</text>
+<text x="80.00" y="1417.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Check the IDs against the plan. Heights are above the model datum; finish build-ups and hardware may reduce clearances.</text>
+<text x="80.00" y="1457.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">ID</text>
+<text x="175.00" y="1457.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">MEASURED SPAN</text>
+<text x="915.00" y="1457.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">FEET / INCHES</text>
+<text x="1160.00" y="1457.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">METRIC</text>
+<text x="1340.00" y="1457.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">BASIS / SOURCE</text>
+<rect x="70" y="1465.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="1487.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F022</text>
+<text x="175.00" y="1487.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Family living / reading envelope width</text>
+<text x="915.00" y="1487.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">26&#x27; 0&quot;</text>
+<text x="1160.00" y="1487.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">7924 mm</text>
+<text x="1340.00" y="1487.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="1541.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F023</text>
+<text x="175.00" y="1541.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Family living / reading envelope depth</text>
+<text x="915.00" y="1541.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">14&#x27; 11 3/8&quot;</text>
+<text x="1160.00" y="1541.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4555 mm</text>
+<text x="1340.00" y="1541.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="1573.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="1595.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F024</text>
+<text x="175.00" y="1595.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Family living / reading ceiling</text>
+<text x="915.00" y="1595.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">9&#x27; 10 1/8&quot;</text>
+<text x="1160.00" y="1595.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3000 mm</text>
+<text x="1340.00" y="1595.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<text x="80.00" y="1649.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F025</text>
+<text x="175.00" y="1649.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Shared shower room width</text>
+<text x="915.00" y="1649.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">5&#x27; 3 1/8&quot;</text>
+<text x="1160.00" y="1649.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1602 mm</text>
+<text x="1340.00" y="1649.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="1681.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="1703.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F026</text>
+<text x="175.00" y="1703.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Shared shower room depth</text>
+<text x="915.00" y="1703.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">8&#x27; 11 1/8&quot;</text>
+<text x="1160.00" y="1703.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2720 mm</text>
+<text x="1340.00" y="1703.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="1757.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F027</text>
+<text x="175.00" y="1757.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Shared shower room ceiling</text>
+<text x="915.00" y="1757.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">9&#x27; 10 1/8&quot;</text>
+<text x="1160.00" y="1757.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3000 mm</text>
+<text x="1340.00" y="1757.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<rect x="70" y="1789.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="1811.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F028</text>
+<text x="175.00" y="1811.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Guest / flexible bedroom width</text>
+<text x="915.00" y="1811.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">10&#x27; 3&quot;</text>
+<text x="1160.00" y="1811.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3126 mm</text>
+<text x="1340.00" y="1811.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="1865.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F031</text>
+<text x="175.00" y="1865.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Primary bedroom envelope width</text>
+<text x="915.00" y="1865.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">14&#x27; 9 7/8&quot;</text>
+<text x="1160.00" y="1865.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4519 mm</text>
+<text x="1340.00" y="1865.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="1897.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="1919.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F040</text>
+<text x="175.00" y="1919.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">W_bedroom_2 wall opening</text>
+<text x="915.00" y="1919.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">5&#x27; 0&quot;</text>
+<text x="1160.00" y="1919.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1525 mm</text>
+<text x="1340.00" y="1919.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="1973.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F041</text>
+<text x="175.00" y="1973.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">W_living_daylight wall opening</text>
+<text x="915.00" y="1973.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 7 1/4&quot;</text>
+<text x="1160.00" y="1973.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1100 mm</text>
+<text x="1340.00" y="1973.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="2005.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2027.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F042</text>
+<text x="175.00" y="2027.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">W_bathroom_2 wall opening</text>
+<text x="915.00" y="2027.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 7/8&quot;</text>
+<text x="1160.00" y="2027.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">608 mm</text>
+<text x="1340.00" y="2027.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="2081.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F048</text>
+<text x="175.00" y="2081.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">D_guest wall opening</text>
+<text x="915.00" y="2081.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 11 3/8&quot;</text>
+<text x="1160.00" y="2081.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">900 mm</text>
+<text x="1340.00" y="2081.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="2113.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2135.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F049</text>
+<text x="175.00" y="2135.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">D_primary wall opening</text>
+<text x="915.00" y="2135.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 11 3/8&quot;</text>
+<text x="1160.00" y="2135.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">900 mm</text>
+<text x="1340.00" y="2135.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="2189.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F050</text>
+<text x="175.00" y="2189.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">D_shared_bath wall opening</text>
+<text x="915.00" y="2189.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9 1/2&quot;</text>
+<text x="1160.00" y="2189.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">850 mm</text>
+<text x="1340.00" y="2189.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="2221.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2243.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F070</text>
+<text x="175.00" y="2243.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">guest bedside r X span</text>
+<text x="915.00" y="2243.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 9 5/8&quot;</text>
+<text x="1160.00" y="2243.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">550 mm</text>
+<text x="1340.00" y="2243.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="2297.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F071</text>
+<text x="175.00" y="2297.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">guest bedside r Y span</text>
+<text x="915.00" y="2297.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 7 5/8&quot;</text>
+<text x="1160.00" y="2297.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">500 mm</text>
+<text x="1340.00" y="2297.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="2329.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2351.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F074</text>
+<text x="175.00" y="2351.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">guest desk X span</text>
+<text x="915.00" y="2351.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4&#x27; 11&quot;</text>
+<text x="1160.00" y="2351.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1500 mm</text>
+<text x="1340.00" y="2351.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="2405.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F075</text>
+<text x="175.00" y="2405.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">guest desk Y span</text>
+<text x="915.00" y="2405.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 9 5/8&quot;</text>
+<text x="1160.00" y="2405.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">550 mm</text>
+<text x="1340.00" y="2405.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="2437.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2459.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F076</text>
+<text x="175.00" y="2459.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">guest chair X span</text>
+<text x="915.00" y="2459.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 9 5/8&quot;</text>
+<text x="1160.00" y="2459.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">550 mm</text>
+<text x="1340.00" y="2459.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="2513.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F077</text>
+<text x="175.00" y="2513.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">guest chair Y span</text>
+<text x="915.00" y="2513.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 9 5/8&quot;</text>
+<text x="1160.00" y="2513.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">550 mm</text>
+<text x="1340.00" y="2513.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="2545.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2567.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F082</text>
+<text x="175.00" y="2567.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">primary bedside r X span</text>
+<text x="915.00" y="2567.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 9 5/8&quot;</text>
+<text x="1160.00" y="2567.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">550 mm</text>
+<text x="1340.00" y="2567.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="2621.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F083</text>
+<text x="175.00" y="2621.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">primary bedside r Y span</text>
+<text x="915.00" y="2621.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 9 5/8&quot;</text>
+<text x="1160.00" y="2621.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">550 mm</text>
+<text x="1340.00" y="2621.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="2653.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2675.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F088</text>
+<text x="175.00" y="2675.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">family sofa X span</text>
+<text x="915.00" y="2675.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 11 3/8&quot;</text>
+<text x="1160.00" y="2675.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">900 mm</text>
+<text x="1340.00" y="2675.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="2729.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F089</text>
+<text x="175.00" y="2729.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">family sofa Y span</text>
+<text x="915.00" y="2729.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">9&#x27; 4 1/4&quot;</text>
+<text x="1160.00" y="2729.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2850 mm</text>
+<text x="1340.00" y="2729.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="2761.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2783.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F090</text>
+<text x="175.00" y="2783.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">family coffee table X span</text>
+<text x="915.00" y="2783.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 3 1/2&quot;</text>
+<text x="1160.00" y="2783.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">700 mm</text>
+<text x="1340.00" y="2783.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="2837.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F091</text>
+<text x="175.00" y="2837.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">family coffee table Y span</text>
+<text x="915.00" y="2837.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 5 3/8&quot;</text>
+<text x="1160.00" y="2837.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1050 mm</text>
+<text x="1340.00" y="2837.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="2869.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2891.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F092</text>
+<text x="175.00" y="2891.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">family media console X span</text>
+<text x="915.00" y="2891.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 5 3/4&quot;</text>
+<text x="1160.00" y="2891.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">450 mm</text>
+<text x="1340.00" y="2891.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="2945.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F093</text>
+<text x="175.00" y="2945.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">family media console Y span</text>
+<text x="915.00" y="2945.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4&#x27; 5 1/8&quot;</text>
+<text x="1160.00" y="2945.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1350 mm</text>
+<text x="1340.00" y="2945.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="2977.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2999.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F094</text>
+<text x="175.00" y="2999.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">family tv X span</text>
+<text x="915.00" y="2999.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">0&#x27; 2 3/8&quot;</text>
+<text x="1160.00" y="2999.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">60 mm</text>
+<text x="1340.00" y="2999.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="3053.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F095</text>
+<text x="175.00" y="3053.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">family tv Y span</text>
+<text x="915.00" y="3053.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4&#x27; 5 1/8&quot;</text>
+<text x="1160.00" y="3053.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1350 mm</text>
+<text x="1340.00" y="3053.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="3085.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3107.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F096</text>
+<text x="175.00" y="3107.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">reading chair X span</text>
+<text x="915.00" y="3107.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 7 1/2&quot;</text>
+<text x="1160.00" y="3107.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">800 mm</text>
+<text x="1340.00" y="3107.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="3161.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F097</text>
+<text x="175.00" y="3161.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">reading chair Y span</text>
+<text x="915.00" y="3161.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 7 1/2&quot;</text>
+<text x="1160.00" y="3161.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">800 mm</text>
+<text x="1340.00" y="3161.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="3193.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3215.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F098</text>
+<text x="175.00" y="3215.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">reading desk X span</text>
+<text x="915.00" y="3215.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 9 5/8&quot;</text>
+<text x="1160.00" y="3215.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">550 mm</text>
+<text x="1340.00" y="3215.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="3269.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F099</text>
+<text x="175.00" y="3269.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">reading desk Y span</text>
+<text x="915.00" y="3269.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4&#x27; 5 1/8&quot;</text>
+<text x="1160.00" y="3269.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1350 mm</text>
+<text x="1340.00" y="3269.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="3301.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3323.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F100</text>
+<text x="175.00" y="3323.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">mandir X span</text>
+<text x="915.00" y="3323.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 9 5/8&quot;</text>
+<text x="1160.00" y="3323.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">550 mm</text>
+<text x="1340.00" y="3323.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="3377.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F101</text>
+<text x="175.00" y="3377.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">mandir Y span</text>
+<text x="915.00" y="3377.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 1 3/8&quot;</text>
+<text x="1160.00" y="3377.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">950 mm</text>
+<text x="1340.00" y="3377.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="3409.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3431.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F102</text>
+<text x="175.00" y="3431.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">arrival storage X span</text>
+<text x="915.00" y="3431.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 11 3/8&quot;</text>
+<text x="1160.00" y="3431.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">900 mm</text>
+<text x="1340.00" y="3431.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="3485.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F114</text>
+<text x="175.00" y="3485.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">dining end X span</text>
+<text x="915.00" y="3485.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 6 1/2&quot;</text>
+<text x="1160.00" y="3485.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">470 mm</text>
+<text x="1340.00" y="3485.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="3517.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3539.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F146</text>
+<text x="175.00" y="3539.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">shared wc X span</text>
+<text x="915.00" y="3539.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 9 1/4&quot;</text>
+<text x="1160.00" y="3539.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">540 mm</text>
+<text x="1340.00" y="3539.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="3593.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F147</text>
+<text x="175.00" y="3593.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">shared wc Y span</text>
+<text x="915.00" y="3593.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 3 1/2&quot;</text>
+<text x="1160.00" y="3593.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">700 mm</text>
+<text x="1340.00" y="3593.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="3625.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3647.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F148</text>
+<text x="175.00" y="3647.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">shared basin X span</text>
+<text x="915.00" y="3647.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 3 3/4&quot;</text>
+<text x="1160.00" y="3647.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">400 mm</text>
+<text x="1340.00" y="3647.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="3701.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F149</text>
+<text x="175.00" y="3701.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">shared basin Y span</text>
+<text x="915.00" y="3701.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="3701.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="3701.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<rect x="70" y="3733.32" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3755.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F150</text>
+<text x="175.00" y="3755.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">shared shower X span</text>
+<text x="915.00" y="3755.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4&#x27; 11 7/8&quot;</text>
+<text x="1160.00" y="3755.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1520 mm</text>
+<text x="1340.00" y="3755.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="3809.32" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">F151</text>
+<text x="175.00" y="3809.32" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">shared shower Y span</text>
+<text x="915.00" y="3809.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 11 7/8&quot;</text>
+<text x="1160.00" y="3809.32" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">910 mm</text>
+<text x="1340.00" y="3809.32" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed design / not surveyed</text>
+<text x="80.00" y="3913.00" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional: elevations, furniture, joinery and finishes. Stair flights/landing are not supplied. Do not scale drawings or use as construction instructions.</text>
+</svg>

@@ -1,0 +1,113 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #262d33;
+  background: #f3f5f7;
+  line-height: 1.5;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+[hidden] { display: none !important; }
+button, select, a, summary { -webkit-tap-highlight-color: #d8e4ec; }
+button, select { font: inherit; color: inherit; }
+button, select, summary, .image-links a, .baseline-link {
+  min-height: 44px;
+}
+button, select {
+  border: 1px solid #8b98a3;
+  border-radius: 6px;
+  background: #fff;
+  padding: 10px 14px;
+}
+button, summary { cursor: pointer; }
+button:hover, select:hover { background: #e8edf1; }
+button:disabled { opacity: .55; cursor: default; }
+a { color: #225673; text-underline-offset: .2em; }
+a:hover { color: #12384e; }
+:focus-visible { outline: 3px solid #226b9b; outline-offset: 4px; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -.025em; line-height: 1.2; }
+h2 { font-size: 1.35rem; line-height: 1.3; }
+h3 { font-size: 1.05rem; }
+.page-header, main { max-width: 1280px; margin: auto; padding-inline: 28px; }
+.page-header { padding-block: 28px 24px; border-bottom: 1px solid #d5dde3; }
+.page-header p { color: #52606b; margin-top: 6px; }
+main { padding-block: 24px; }
+.browse-controls { display: flex; gap: 20px; align-items: end; flex-wrap: wrap; margin-bottom: 32px; }
+.field { display: grid; gap: 6px; flex: 1 1 220px; }
+label { font-size: .9rem; font-weight: 600; }
+select { width: 100%; max-width: 100%; }
+.baseline-link { display: inline-flex; align-items: center; padding: 10px 0; }
+.collection-heading { display: flex; gap: 10px 20px; align-items: baseline; flex-wrap: wrap; }
+.status-label { font-size: .9rem; color: #4d5c67; }
+.description { margin-top: 10px; max-width: 72ch; color: #4d5c67; }
+details { margin-top: 12px; max-width: 75ch; }
+summary { display: list-item; padding-block: 10px; font-weight: 600; }
+details p + p { margin-top: 12px; }
+li + li { margin-top: 6px; }
+.view-count { font-size: .9rem; color: #52606b; margin-block: 24px 12px; }
+.model-section { margin-block: 28px 36px; }
+.model-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.model-state { color: #4d5c67; min-height: 1.5em; margin-block: 12px; }
+.model-stage {
+  position: relative; height: clamp(320px, 62dvh, 680px); overflow: hidden;
+  background: #e2e7eb; border: 1px solid #c0cbd3; border-radius: 4px;
+}
+.model-stage > img { width: 100%; height: 100%; object-fit: contain; display: block; }
+#model-mount { position: absolute; inset: 0; }
+#model-mount:empty { pointer-events: none; }
+model-viewer { display: block; width: 100%; height: 100%; touch-action: pan-y; --poster-color: #e2e7eb; }
+.model-controls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.model-help, .model-note { color: #4d5c67; font-size: .9rem; max-width: 75ch; margin-top: 12px; }
+.model-stage:fullscreen { width: 100%; height: 100%; border: 0; border-radius: 0; }
+.model-stage:fullscreen model-viewer { height: 100dvh; }
+.exit-model-fullscreen { display: none; position: absolute; top: 16px; right: 16px; z-index: 1; }
+.model-stage:fullscreen .exit-model-fullscreen { display: block; }
+.photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
+figure { min-width: 0; margin: 0; }
+.photo-button {
+  position: relative; display: block; width: 100%; border: 0; border-radius: 4px;
+  padding: 0; overflow: hidden; background: #e2e7eb; text-align: left;
+}
+.photo-button:hover { background: #d9e0e6; }
+.photo-button img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 11; object-fit: contain; }
+.image-state { position: absolute; inset: 0; display: grid; place-content: center; padding: 24px; text-align: center; }
+.enlarge-hint {
+  position: absolute; bottom: 12px; right: 12px; padding: 6px 10px;
+  border-radius: 4px; background: #fff; color: #262d33; font-size: .85rem;
+}
+figcaption { padding-top: 12px; }
+figcaption p { margin-top: 4px; color: #4d5c67; max-width: 70ch; }
+.image-links { display: flex; gap: 4px 20px; flex-wrap: wrap; margin-top: 4px; }
+.image-links a { display: inline-flex; align-items: center; padding-block: 10px; font-size: .9rem; }
+footer { border-top: 1px solid #d5dde3; margin-top: 40px; padding-top: 20px; color: #52606b; font-size: .9rem; }
+code { overflow-wrap: anywhere; }
+dialog {
+  width: min(1100px, calc(100% - 32px)); max-height: calc(100dvh - 32px);
+  padding: 0; border: 0; border-radius: 8px; background: #f3f5f7; color: #262d33;
+}
+dialog::backdrop { background: rgb(16 24 30 / .8); }
+body.viewer-open { overflow: hidden; }
+.viewer-toolbar, .viewer-navigation { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 12px 20px; }
+.viewer-toolbar { position: sticky; top: 0; background: #f3f5f7; z-index: 1; }
+.viewer-stage { position: relative; min-height: 120px; background: #e2e7eb; }
+.viewer-stage img { display: block; width: 100%; max-height: 65dvh; object-fit: contain; }
+.dimension-view .viewer-stage img { max-height: none; }
+#open-sheet { display: inline-flex; align-items: center; min-height: 44px; font-size: .9rem; }
+#viewer-image-state { padding: 20px; }
+.viewer-caption { padding: 16px 20px 0; }
+.viewer-caption p { margin-top: 6px; }
+.viewer-navigation { padding-bottom: 20px; }
+.skip-link { position: fixed; z-index: 10; top: 8px; left: 8px; padding: 12px; background: #fff; transform: translateY(-200%); }
+.skip-link:focus { transform: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 600px) {
+  .page-header, main { padding-inline: 16px; }
+  .page-header { padding-block: 20px; }
+  .browse-controls { gap: 12px; margin-bottom: 24px; }
+  .field { flex-basis: 100%; }
+  .photos { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  dialog { width: calc(100% - 16px); max-height: calc(100dvh - 16px); }
+  .viewer-toolbar, .viewer-navigation { padding-inline: 12px; }
+  .viewer-caption { padding-inline: 12px; }
+}

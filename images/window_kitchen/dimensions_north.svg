@@ -1,0 +1,992 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="8741" viewBox="0 0 1800 8741">
+<rect width="1800" height="8741" fill="#ffffff"/>
+<text x="80.00" y="65.00" font-family="Arial, sans-serif" font-size="38" fill="#182e40" text-anchor="start">Kitchen, dining, bedroom 1 and bath 1</text>
+<text x="80.00" y="108.00" font-family="Arial, sans-serif" font-size="23" fill="#182e40" text-anchor="start">WINDOW_KITCHEN PROPOSAL  |  MODEL DIMENSIONS - NOT A SITE SURVEY</text>
+<text x="80.00" y="148.00" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">Feet/inches rounded to 1/8 in; metric rounded to 1 mm. X = plan left/right; Y = plan up/down.</text>
+<text x="80.00" y="180.00" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Room spans describe named bays/zones. Furniture outlines are bounding envelopes. Opening widths are wall openings, not clear passage.</text>
+<polygon points="724.49,293.06 1605.80,293.06 1605.80,836.45 915.89,836.45 915.89,1082.46 724.49,1082.46" fill="#f7f9fa" stroke="#c6ced5" stroke-width="2"/>
+<polygon points="102.17,459.59 702.33,459.59 702.33,1082.46 102.17,1082.46" fill="#f7f9fa" stroke="#c6ced5" stroke-width="2"/>
+<polygon points="102.17,1082.46 496.60,1082.46 496.60,1573.40 102.17,1573.40" fill="#f7f9fa" stroke="#c6ced5" stroke-width="2"/>
+<polygon points="496.60,1104.08 904.54,1104.08 904.54,1586.37 496.60,1586.37" fill="#f7f9fa" stroke="#c6ced5" stroke-width="2"/>
+<polygon points="102.17,1586.37 904.54,1586.37 904.54,1601.05 102.17,1601.05" fill="#f7f9fa" stroke="#c6ced5" stroke-width="2"/>
+<polygon points="938.06,858.61 1241.93,858.61 1241.93,1274.94 1016.46,1274.94 1016.46,1127.87 938.06,1127.87" fill="#f7f9fa" stroke="#c6ced5" stroke-width="2"/>
+<rect x="941.31" y="293.06" width="342.25" height="368.20" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="1500.37" y="293.06" width="105.43" height="543.39" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="260.05" y="1082.46" width="131.39" height="289.26" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="1122.19" y="877.60" width="70.78" height="100.13" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="1122.19" y="863.79" width="70.78" height="29.35" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="1134.35" y="1174.81" width="17.26" height="17.26" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="102.17" y="563.17" width="103.58" height="258.32" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="102.17" y="821.49" width="103.58" height="135.17" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="102.17" y="956.66" width="103.58" height="125.80" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="102.17" y="459.59" width="103.58" height="103.58" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="205.75" y="459.59" width="144.71" height="103.58" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="350.46" y="459.59" width="103.58" height="103.58" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="557.61" y="459.59" width="144.71" height="103.58" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="205.75" y="978.88" width="225.16" height="103.58" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="107.76" y="461.39" width="160.51" height="52.27" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="536.23" y="461.39" width="161.77" height="52.27" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="454.04" y="459.59" width="103.58" height="103.58" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="102.17" y="459.59" width="600.16" height="622.87" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="358.23" y="471.67" width="88.04" height="79.41" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="104.60" y="578.18" width="52.72" height="202.76" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="593.52" y="717.86" width="103.58" height="141.56" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="593.52" y="717.86" width="103.58" height="141.56" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="593.52" y="717.86" width="103.58" height="141.56" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="603.88" y="743.75" width="72.51" height="89.77" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="607.33" y="745.48" width="69.05" height="86.32" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="576.26" y="925.12" width="120.84" height="120.84" fill="#e2e7e9" stroke="#b2bcc4"/>
+<rect x="1225.38" y="511.12" width="134.74" height="29.70" fill="#ffffff"/>
+<text x="1292.75" y="533.12" font-family="Arial, sans-serif" font-size="22" fill="#182e40" text-anchor="middle">Bedroom 1</text>
+<rect x="347.11" y="749.92" width="107.02" height="29.70" fill="#ffffff"/>
+<text x="400.62" y="771.92" font-family="Arial, sans-serif" font-size="22" fill="#182e40" text-anchor="middle">Kitchen</text>
+<rect x="272.94" y="1475.34" width="93.16" height="29.70" fill="#ffffff"/>
+<text x="319.52" y="1497.34" font-family="Arial, sans-serif" font-size="22" fill="#182e40" text-anchor="middle">Dining</text>
+<rect x="667.36" y="1353.69" width="79.30" height="29.70" fill="#ffffff"/>
+<text x="707.01" y="1375.69" font-family="Arial, sans-serif" font-size="22" fill="#182e40" text-anchor="middle">Lobby</text>
+<rect x="1083.97" y="1033.78" width="93.16" height="29.70" fill="#ffffff"/>
+<text x="1130.55" y="1055.78" font-family="Arial, sans-serif" font-size="22" fill="#182e40" text-anchor="middle">Bath 1</text>
+<line x1="724.49" y1="360.65" x2="1605.80" y2="360.65" stroke="#16738d" stroke-width="2"/>
+<line x1="724.49" y1="353.65" x2="724.49" y2="367.65" stroke="#16738d" stroke-width="2"/>
+<line x1="1605.80" y1="353.65" x2="1605.80" y2="367.65" stroke="#16738d" stroke-width="2"/>
+<rect x="1097.78" y="334.65" width="134.74" height="24.30" fill="#ffffff"/>
+<text x="1165.15" y="352.65" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D001 16&#x27; 9&quot;</text>
+<line x1="1560.75" y1="293.06" x2="1560.75" y2="836.45" stroke="#16738d" stroke-width="2"/>
+<line x1="1553.75" y1="293.06" x2="1567.75" y2="293.06" stroke="#16738d" stroke-width="2"/>
+<line x1="1553.75" y1="836.45" x2="1567.75" y2="836.45" stroke="#16738d" stroke-width="2"/>
+<rect x="1486.70" y="538.75" width="180.10" height="24.30" fill="#ffffff"/>
+<text x="1576.75" y="556.75" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D002 10&#x27; 3 7/8&quot;</text>
+<line x1="102.17" y1="527.18" x2="702.33" y2="527.18" stroke="#16738d" stroke-width="2"/>
+<line x1="102.17" y1="520.18" x2="102.17" y2="534.18" stroke="#16738d" stroke-width="2"/>
+<line x1="702.33" y1="520.18" x2="702.33" y2="534.18" stroke="#16738d" stroke-width="2"/>
+<rect x="312.20" y="501.18" width="180.10" height="24.30" fill="#ffffff"/>
+<text x="402.25" y="519.18" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D003 11&#x27; 4 7/8&quot;</text>
+<line x1="657.27" y1="459.59" x2="657.27" y2="1082.46" stroke="#16738d" stroke-width="2"/>
+<line x1="650.27" y1="459.59" x2="664.27" y2="459.59" stroke="#16738d" stroke-width="2"/>
+<line x1="650.27" y1="1082.46" x2="664.27" y2="1082.46" stroke="#16738d" stroke-width="2"/>
+<rect x="600.23" y="745.02" width="146.08" height="24.30" fill="#ffffff"/>
+<text x="673.27" y="763.02" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D004 11&#x27; 10&quot;</text>
+<line x1="102.17" y1="1150.04" x2="496.60" y2="1150.04" stroke="#16738d" stroke-width="2"/>
+<line x1="102.17" y1="1143.04" x2="102.17" y2="1157.04" stroke="#16738d" stroke-width="2"/>
+<line x1="496.60" y1="1143.04" x2="496.60" y2="1157.04" stroke="#16738d" stroke-width="2"/>
+<rect x="237.68" y="1124.04" width="123.40" height="24.30" fill="#ffffff"/>
+<text x="299.38" y="1142.04" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D005 7&#x27; 6&quot;</text>
+<line x1="451.54" y1="1082.46" x2="451.54" y2="1573.40" stroke="#16738d" stroke-width="2"/>
+<line x1="444.54" y1="1082.46" x2="458.54" y2="1082.46" stroke="#16738d" stroke-width="2"/>
+<line x1="444.54" y1="1573.40" x2="458.54" y2="1573.40" stroke="#16738d" stroke-width="2"/>
+<rect x="405.84" y="1301.93" width="123.40" height="24.30" fill="#ffffff"/>
+<text x="467.54" y="1319.93" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D006 9&#x27; 4&quot;</text>
+<line x1="496.60" y1="1171.67" x2="904.54" y2="1171.67" stroke="#16738d" stroke-width="2"/>
+<line x1="496.60" y1="1164.67" x2="496.60" y2="1178.67" stroke="#16738d" stroke-width="2"/>
+<line x1="904.54" y1="1164.67" x2="904.54" y2="1178.67" stroke="#16738d" stroke-width="2"/>
+<rect x="638.87" y="1145.67" width="123.40" height="24.30" fill="#ffffff"/>
+<text x="700.57" y="1163.67" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D007 7&#x27; 9&quot;</text>
+<line x1="859.48" y1="1104.08" x2="859.48" y2="1586.37" stroke="#16738d" stroke-width="2"/>
+<line x1="852.48" y1="1104.08" x2="866.48" y2="1104.08" stroke="#16738d" stroke-width="2"/>
+<line x1="852.48" y1="1586.37" x2="866.48" y2="1586.37" stroke="#16738d" stroke-width="2"/>
+<rect x="813.78" y="1319.23" width="123.40" height="24.30" fill="#ffffff"/>
+<text x="875.48" y="1337.23" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D008 9&#x27; 2&quot;</text>
+<line x1="938.06" y1="926.20" x2="1241.93" y2="926.20" stroke="#16738d" stroke-width="2"/>
+<line x1="938.06" y1="919.20" x2="938.06" y2="933.20" stroke="#16738d" stroke-width="2"/>
+<line x1="1241.93" y1="919.20" x2="1241.93" y2="933.20" stroke="#16738d" stroke-width="2"/>
+<rect x="1005.61" y="900.20" width="168.76" height="24.30" fill="#ffffff"/>
+<text x="1089.99" y="918.20" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D017 5&#x27; 9 1/4&quot;</text>
+<line x1="1196.87" y1="858.61" x2="1196.87" y2="1274.94" stroke="#16738d" stroke-width="2"/>
+<line x1="1189.87" y1="858.61" x2="1203.87" y2="858.61" stroke="#16738d" stroke-width="2"/>
+<line x1="1189.87" y1="1274.94" x2="1203.87" y2="1274.94" stroke="#16738d" stroke-width="2"/>
+<line x1="1212.87" y1="1058.78" x2="1212.87" y2="1094.78" stroke="#09667e" stroke-width="1"/>
+<rect x="1145.50" y="1076.78" width="134.74" height="24.30" fill="#ffffff"/>
+<text x="1212.87" y="1094.78" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D018 7&#x27; 11&quot;</text>
+<line x1="724.49" y1="979.19" x2="915.89" y2="979.19" stroke="#16738d" stroke-width="2"/>
+<line x1="724.49" y1="972.19" x2="724.49" y2="986.19" stroke="#16738d" stroke-width="2"/>
+<line x1="915.89" y1="972.19" x2="915.89" y2="986.19" stroke="#16738d" stroke-width="2"/>
+<rect x="735.81" y="953.19" width="168.76" height="24.30" fill="#ffffff"/>
+<text x="820.19" y="971.19" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D025 3&#x27; 7 5/8&quot;</text>
+<line x1="864.71" y1="836.45" x2="864.71" y2="1082.46" stroke="#16738d" stroke-width="2"/>
+<line x1="857.71" y1="836.45" x2="871.71" y2="836.45" stroke="#16738d" stroke-width="2"/>
+<line x1="857.71" y1="1082.46" x2="871.71" y2="1082.46" stroke="#16738d" stroke-width="2"/>
+<line x1="880.71" y1="951.45" x2="880.71" y2="933.45" stroke="#09667e" stroke-width="1"/>
+<rect x="796.33" y="915.45" width="168.76" height="24.30" fill="#ffffff"/>
+<text x="880.71" y="933.45" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D026 4&#x27; 8 1/8&quot;</text>
+<line x1="1016.46" y1="1199.96" x2="1241.93" y2="1199.96" stroke="#16738d" stroke-width="2"/>
+<line x1="1016.46" y1="1192.96" x2="1016.46" y2="1206.96" stroke="#16738d" stroke-width="2"/>
+<line x1="1241.93" y1="1192.96" x2="1241.93" y2="1206.96" stroke="#16738d" stroke-width="2"/>
+<rect x="1044.81" y="1173.96" width="168.76" height="24.30" fill="#ffffff"/>
+<text x="1129.19" y="1191.96" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D031 4&#x27; 3 3/8&quot;</text>
+<line x1="102.17" y1="361.91" x2="400.08" y2="361.91" stroke="#16738d" stroke-width="2"/>
+<line x1="102.17" y1="354.91" x2="102.17" y2="368.91" stroke="#16738d" stroke-width="2"/>
+<line x1="400.08" y1="354.91" x2="400.08" y2="368.91" stroke="#16738d" stroke-width="2"/>
+<rect x="189.43" y="335.91" width="123.40" height="24.30" fill="#ffffff"/>
+<text x="251.13" y="353.91" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D033 5&#x27; 8&quot;</text>
+<line x1="251.94" y1="293.06" x2="251.94" y2="437.42" stroke="#16738d" stroke-width="2"/>
+<line x1="244.94" y1="293.06" x2="258.94" y2="293.06" stroke="#16738d" stroke-width="2"/>
+<line x1="244.94" y1="437.42" x2="258.94" y2="437.42" stroke="#16738d" stroke-width="2"/>
+<line x1="267.94" y1="357.24" x2="267.94" y2="393.24" stroke="#09667e" stroke-width="1"/>
+<rect x="183.56" y="375.24" width="168.76" height="24.30" fill="#ffffff"/>
+<text x="267.94" y="393.24" font-family="Arial, sans-serif" font-size="18" fill="#09667e" text-anchor="middle">D034 2&#x27; 8 7/8&quot;</text>
+<rect x="1359.59" y="838.18" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1382.23" y="852.18" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D035</text>
+<rect x="1230.10" y="965.51" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1252.74" y="979.51" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D038</text>
+<rect x="892.71" y="1352.64" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="915.35" y="1366.64" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D041</text>
+<rect x="690.77" y="347.24" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="713.41" y="361.24" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D074</text>
+<rect x="379.61" y="430.51" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="402.25" y="444.51" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D077</text>
+<rect x="791.88" y="1075.27" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="814.52" y="1089.27" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D080</text>
+<line x1="926.98" y1="920.31" x2="926.98" y2="902.31" stroke="#81512b" stroke-width="1"/>
+<rect x="904.34" y="888.31" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="926.98" y="902.31" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D082</text>
+<rect x="1089.79" y="643.27" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1112.43" y="657.27" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D084</text>
+<rect x="918.67" y="459.16" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="941.31" y="473.16" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D085</text>
+<rect x="1530.45" y="818.45" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1553.09" y="832.45" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D093</text>
+<line x1="1500.37" y1="560.75" x2="1500.37" y2="596.75" stroke="#81512b" stroke-width="1"/>
+<rect x="1477.73" y="582.75" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1500.37" y="596.75" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D094</text>
+<rect x="303.10" y="1353.72" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="325.74" y="1367.72" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D114</text>
+<rect x="237.41" y="1209.09" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="260.05" y="1223.09" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D115</text>
+<rect x="1134.94" y="959.73" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1157.58" y="973.73" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D126</text>
+<line x1="1122.19" y1="923.67" x2="1122.19" y2="887.67" stroke="#81512b" stroke-width="1"/>
+<rect x="1099.55" y="873.67" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1122.19" y="887.67" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D127</text>
+<line x1="1157.58" y1="889.14" x2="1175.58" y2="889.14" stroke="#81512b" stroke-width="1"/>
+<rect x="1152.94" y="875.14" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1175.58" y="889.14" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D129</text>
+<line x1="1122.19" y1="874.47" x2="1122.19" y2="856.47" stroke="#81512b" stroke-width="1"/>
+<rect x="1099.55" y="842.47" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1122.19" y="856.47" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D130</text>
+<line x1="1142.98" y1="1188.08" x2="1142.98" y2="1224.08" stroke="#81512b" stroke-width="1"/>
+<rect x="1120.34" y="1210.08" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1142.98" y="1224.08" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D132</text>
+<line x1="1134.35" y1="1179.44" x2="1134.35" y2="1161.44" stroke="#81512b" stroke-width="1"/>
+<rect x="1111.71" y="1147.44" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="1134.35" y="1161.44" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D133</text>
+<rect x="131.32" y="803.49" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="153.96" y="817.49" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D135</text>
+<rect x="79.53" y="674.33" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="102.17" y="688.33" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D136</text>
+<rect x="131.32" y="938.66" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="153.96" y="952.66" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D138</text>
+<rect x="79.53" y="871.07" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="102.17" y="885.07" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D139</text>
+<rect x="131.32" y="1064.46" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="153.96" y="1078.46" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D141</text>
+<rect x="79.53" y="1001.56" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="102.17" y="1015.56" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D142</text>
+<rect x="131.32" y="545.17" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="153.96" y="559.17" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D144</text>
+<rect x="79.53" y="493.38" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="102.17" y="507.38" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D145</text>
+<rect x="255.46" y="545.17" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="278.10" y="559.17" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D147</text>
+<rect x="183.11" y="493.38" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="205.75" y="507.38" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D148</text>
+<rect x="379.61" y="545.17" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="402.25" y="559.17" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D150</text>
+<line x1="350.46" y1="507.38" x2="350.46" y2="489.38" stroke="#81512b" stroke-width="1"/>
+<rect x="327.82" y="475.38" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="350.46" y="489.38" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D151</text>
+<rect x="607.33" y="545.17" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="629.97" y="559.17" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D153</text>
+<rect x="534.97" y="493.38" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="557.61" y="507.38" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D154</text>
+<rect x="295.68" y="1064.46" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="318.32" y="1078.46" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D156</text>
+<rect x="183.11" y="1012.67" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="205.75" y="1026.67" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D157</text>
+<line x1="188.01" y1="509.66" x2="188.01" y2="473.66" stroke="#81512b" stroke-width="1"/>
+<rect x="165.37" y="459.66" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="188.01" y="473.66" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D159</text>
+<rect x="85.12" y="469.53" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="107.76" y="483.53" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D160</text>
+<rect x="594.47" y="495.66" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="617.11" y="509.66" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D162</text>
+<rect x="513.59" y="469.53" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="536.23" y="483.53" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D163</text>
+<rect x="483.19" y="545.17" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="505.83" y="559.17" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D165</text>
+<line x1="454.04" y1="507.38" x2="454.04" y2="489.38" stroke="#81512b" stroke-width="1"/>
+<rect x="431.40" y="475.38" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="454.04" y="489.38" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D166</text>
+<rect x="379.61" y="1064.46" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="402.25" y="1078.46" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D168</text>
+<rect x="79.53" y="753.02" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="102.17" y="767.02" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D169</text>
+<line x1="402.25" y1="547.09" x2="402.25" y2="583.09" stroke="#81512b" stroke-width="1"/>
+<rect x="379.61" y="569.09" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="402.25" y="583.09" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D171</text>
+<line x1="358.23" y1="507.38" x2="268.23" y2="507.38" stroke="#81512b" stroke-width="1"/>
+<rect x="245.59" y="493.38" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="268.23" y="507.38" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D172</text>
+<line x1="130.96" y1="776.94" x2="130.96" y2="740.94" stroke="#81512b" stroke-width="1"/>
+<rect x="108.32" y="726.94" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="130.96" y="740.94" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D174</text>
+<line x1="104.60" y1="675.56" x2="104.60" y2="657.56" stroke="#81512b" stroke-width="1"/>
+<rect x="81.96" y="643.56" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="104.60" y="657.56" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D175</text>
+<rect x="622.67" y="841.41" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="645.31" y="855.41" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D177</text>
+<line x1="593.52" y1="784.64" x2="593.52" y2="802.64" stroke="#81512b" stroke-width="1"/>
+<rect x="570.88" y="788.64" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="593.52" y="802.64" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D178</text>
+<line x1="645.31" y1="855.41" x2="645.31" y2="891.41" stroke="#81512b" stroke-width="1"/>
+<rect x="622.67" y="877.41" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="645.31" y="891.41" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D180</text>
+<line x1="593.52" y1="784.64" x2="593.52" y2="838.64" stroke="#81512b" stroke-width="1"/>
+<rect x="570.88" y="824.64" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="593.52" y="838.64" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D181</text>
+<line x1="645.31" y1="855.41" x2="645.31" y2="819.41" stroke="#81512b" stroke-width="1"/>
+<rect x="622.67" y="805.41" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="645.31" y="819.41" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D183</text>
+<line x1="593.52" y1="784.64" x2="593.52" y2="730.64" stroke="#81512b" stroke-width="1"/>
+<rect x="570.88" y="716.64" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="593.52" y="730.64" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D184</text>
+<line x1="640.13" y1="829.52" x2="586.13" y2="883.52" stroke="#81512b" stroke-width="1"/>
+<rect x="563.49" y="869.52" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="586.13" y="883.52" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D186</text>
+<line x1="603.88" y1="784.64" x2="531.88" y2="784.64" stroke="#81512b" stroke-width="1"/>
+<rect x="509.24" y="770.64" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="531.88" y="784.64" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D187</text>
+<line x1="641.86" y1="827.79" x2="695.86" y2="827.79" stroke="#81512b" stroke-width="1"/>
+<rect x="673.22" y="813.79" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="695.86" y="827.79" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D189</text>
+<line x1="607.33" y1="784.64" x2="535.33" y2="856.64" stroke="#81512b" stroke-width="1"/>
+<rect x="512.69" y="842.64" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="535.33" y="856.64" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D190</text>
+<rect x="614.04" y="1027.96" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="636.68" y="1041.96" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D192</text>
+<rect x="553.62" y="967.54" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="576.26" y="981.54" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D193</text>
+<rect x="476.62" y="997.23" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="499.26" y="1011.23" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D206</text>
+<line x1="611.54" y1="727.37" x2="611.54" y2="691.37" stroke="#81512b" stroke-width="1"/>
+<rect x="588.90" y="677.37" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="611.54" y="691.37" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D207</text>
+<line x1="441.18" y1="767.02" x2="441.18" y2="803.02" stroke="#81512b" stroke-width="1"/>
+<rect x="418.54" y="789.02" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="441.18" y="803.02" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D208</text>
+<line x1="399.63" y1="799.46" x2="381.63" y2="799.46" stroke="#81512b" stroke-width="1"/>
+<rect x="358.99" y="785.46" width="45.28" height="18.90" fill="#ffffff"/>
+<text x="381.63" y="799.46" font-family="Arial, sans-serif" font-size="14" fill="#81512b" text-anchor="middle">D209</text>
+<text x="80.00" y="1696.05" font-family="Arial, sans-serif" font-size="27" fill="#182e40" text-anchor="start">MEASUREMENT SCHEDULE</text>
+<text x="80.00" y="1728.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Check the IDs against the plan. Heights are above the model datum; finish build-ups and hardware may reduce clearances.</text>
+<text x="80.00" y="1768.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">ID</text>
+<text x="175.00" y="1768.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">MEASURED SPAN</text>
+<text x="915.00" y="1768.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">FEET / INCHES</text>
+<text x="1160.00" y="1768.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">METRIC</text>
+<text x="1340.00" y="1768.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">BASIS / SOURCE</text>
+<rect x="70" y="1776.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="1798.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D001</text>
+<text x="175.00" y="1798.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 main bay width</text>
+<text x="915.00" y="1798.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">16&#x27; 9&quot;</text>
+<text x="1160.00" y="1798.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">5105 mm</text>
+<text x="1340.00" y="1798.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model vs printed</text>
+<text x="175.00" y="1820.05" font-family="Arial, sans-serif" font-size="15" fill="#655337" text-anchor="start">Source: 16 ft 9 in; model minus source: -0.24 mm. No geometry adjusted to force agreement.</text>
+<text x="80.00" y="1852.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D002</text>
+<text x="175.00" y="1852.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 main bay depth</text>
+<text x="915.00" y="1852.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">10&#x27; 3 7/8&quot;</text>
+<text x="1160.00" y="1852.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3148 mm</text>
+<text x="1340.00" y="1852.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model vs printed</text>
+<text x="175.00" y="1874.05" font-family="Arial, sans-serif" font-size="15" fill="#655337" text-anchor="start">Source: 10 ft 4 in; model minus source: -1.94 mm. No geometry adjusted to force agreement.</text>
+<rect x="70" y="1884.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="1906.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D003</text>
+<text x="175.00" y="1906.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Kitchen width</text>
+<text x="915.00" y="1906.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">11&#x27; 4 7/8&quot;</text>
+<text x="1160.00" y="1906.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3477 mm</text>
+<text x="1340.00" y="1906.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed layout</text>
+<text x="80.00" y="1960.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D004</text>
+<text x="175.00" y="1960.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Kitchen depth</text>
+<text x="915.00" y="1960.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">11&#x27; 10&quot;</text>
+<text x="1160.00" y="1960.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3608 mm</text>
+<text x="1340.00" y="1960.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed layout</text>
+<rect x="70" y="1992.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2014.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D005</text>
+<text x="175.00" y="2014.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Dining zone (not enclosed) width</text>
+<text x="915.00" y="2014.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">7&#x27; 6&quot;</text>
+<text x="1160.00" y="2014.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2285 mm</text>
+<text x="1340.00" y="2014.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<text x="80.00" y="2068.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D006</text>
+<text x="175.00" y="2068.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Dining zone (not enclosed) depth</text>
+<text x="915.00" y="2068.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">9&#x27; 4&quot;</text>
+<text x="1160.00" y="2068.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2844 mm</text>
+<text x="1340.00" y="2068.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model vs printed</text>
+<text x="175.00" y="2090.05" font-family="Arial, sans-serif" font-size="15" fill="#655337" text-anchor="start">Source: 9 ft 4 in; model minus source: -0.94 mm. No geometry adjusted to force agreement.</text>
+<rect x="70" y="2100.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2122.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D007</text>
+<text x="175.00" y="2122.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Lobby zone (not enclosed) width</text>
+<text x="915.00" y="2122.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">7&#x27; 9&quot;</text>
+<text x="1160.00" y="2122.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2363 mm</text>
+<text x="1340.00" y="2122.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<text x="80.00" y="2176.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D008</text>
+<text x="175.00" y="2176.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Lobby zone (not enclosed) depth</text>
+<text x="915.00" y="2176.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">9&#x27; 2&quot;</text>
+<text x="1160.00" y="2176.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2794 mm</text>
+<text x="1340.00" y="2176.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<rect x="70" y="2208.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2230.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D017</text>
+<text x="175.00" y="2230.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 upper bay width</text>
+<text x="915.00" y="2230.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">5&#x27; 9 1/4&quot;</text>
+<text x="1160.00" y="2230.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1760 mm</text>
+<text x="1340.00" y="2230.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model vs printed</text>
+<text x="175.00" y="2252.05" font-family="Arial, sans-serif" font-size="15" fill="#655337" text-anchor="start">Source: 5 ft 9 in; model minus source: +7.58 mm. No geometry adjusted to force agreement.</text>
+<text x="80.00" y="2284.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D018</text>
+<text x="175.00" y="2284.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 depth</text>
+<text x="915.00" y="2284.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">7&#x27; 11&quot;</text>
+<text x="1160.00" y="2284.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2412 mm</text>
+<text x="1340.00" y="2284.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model vs printed</text>
+<text x="175.00" y="2306.05" font-family="Arial, sans-serif" font-size="15" fill="#655337" text-anchor="start">Source: 7 ft 11 in; model minus source: -1.36 mm. No geometry adjusted to force agreement.</text>
+<rect x="70" y="2316.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2338.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D025</text>
+<text x="175.00" y="2338.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 entry recess width</text>
+<text x="915.00" y="2338.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 7 5/8&quot;</text>
+<text x="1160.00" y="2338.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1109 mm</text>
+<text x="1340.00" y="2338.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<text x="80.00" y="2392.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D026</text>
+<text x="175.00" y="2392.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 entry recess depth</text>
+<text x="915.00" y="2392.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4&#x27; 8 1/8&quot;</text>
+<text x="1160.00" y="2392.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1425 mm</text>
+<text x="1340.00" y="2392.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<rect x="70" y="2424.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2446.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D031</text>
+<text x="175.00" y="2446.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 lower WC bay width</text>
+<text x="915.00" y="2446.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4&#x27; 3 3/8&quot;</text>
+<text x="1160.00" y="2446.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1306 mm</text>
+<text x="1340.00" y="2446.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model vs printed</text>
+<text x="175.00" y="2468.05" font-family="Arial, sans-serif" font-size="15" fill="#655337" text-anchor="start">Source: 4 ft 4 in; model minus source: -14.76 mm. No geometry adjusted to force agreement.</text>
+<text x="80.00" y="2500.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D033</text>
+<text x="175.00" y="2500.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Open-to-sky void width</text>
+<text x="915.00" y="2500.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">5&#x27; 8&quot;</text>
+<text x="1160.00" y="2500.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1726 mm</text>
+<text x="1340.00" y="2500.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<rect x="70" y="2532.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2554.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D034</text>
+<text x="175.00" y="2554.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Open-to-sky void depth</text>
+<text x="915.00" y="2554.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 8 7/8&quot;</text>
+<text x="1160.00" y="2554.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">836 mm</text>
+<text x="1340.00" y="2554.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<text x="80.00" y="2608.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D035</text>
+<text x="175.00" y="2608.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Window bedroom 1 wall opening width</text>
+<text x="915.00" y="2608.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 6&quot;</text>
+<text x="1160.00" y="2608.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1068 mm</text>
+<text x="1340.00" y="2608.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<rect x="70" y="2640.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2662.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D036</text>
+<text x="175.00" y="2662.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Window bedroom 1 opening height</text>
+<text x="915.00" y="2662.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4&#x27; 5 1/8&quot;</text>
+<text x="1160.00" y="2662.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1350 mm</text>
+<text x="1340.00" y="2662.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<text x="80.00" y="2716.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D037</text>
+<text x="175.00" y="2716.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Window bedroom 1 sill above model floor</text>
+<text x="915.00" y="2716.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 11 3/8&quot;</text>
+<text x="1160.00" y="2716.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">900 mm</text>
+<text x="1340.00" y="2716.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<rect x="70" y="2748.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2770.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D038</text>
+<text x="175.00" y="2770.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Window bathroom 1 wall opening width</text>
+<text x="915.00" y="2770.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 7 1/8&quot;</text>
+<text x="1160.00" y="2770.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">789 mm</text>
+<text x="1340.00" y="2770.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<text x="80.00" y="2824.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D039</text>
+<text x="175.00" y="2824.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Window bathroom 1 opening height</text>
+<text x="915.00" y="2824.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 3 1/2&quot;</text>
+<text x="1160.00" y="2824.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">700 mm</text>
+<text x="1340.00" y="2824.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<rect x="70" y="2856.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2878.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D040</text>
+<text x="175.00" y="2878.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Window bathroom 1 sill above model floor</text>
+<text x="915.00" y="2878.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">5&#x27; 1&quot;</text>
+<text x="1160.00" y="2878.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1550 mm</text>
+<text x="1340.00" y="2878.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<text x="80.00" y="2932.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D041</text>
+<text x="175.00" y="2932.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Opening stair entry wall opening width</text>
+<text x="915.00" y="2932.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9 1/2&quot;</text>
+<text x="1160.00" y="2932.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">852 mm</text>
+<text x="1340.00" y="2932.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<rect x="70" y="2964.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="2986.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D042</text>
+<text x="175.00" y="2986.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Opening stair entry opening height</text>
+<text x="915.00" y="2986.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">6&#x27; 11 7/8&quot;</text>
+<text x="1160.00" y="2986.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2130 mm</text>
+<text x="1340.00" y="2986.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<text x="80.00" y="3040.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D074</text>
+<text x="175.00" y="3040.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Window bedroom 1 utility wall opening width</text>
+<text x="915.00" y="3040.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 8 7/8&quot;</text>
+<text x="1160.00" y="3040.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">836 mm</text>
+<text x="1340.00" y="3040.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<rect x="70" y="3072.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3094.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D075</text>
+<text x="175.00" y="3094.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Window bedroom 1 utility opening height</text>
+<text x="915.00" y="3094.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 7 1/4&quot;</text>
+<text x="1160.00" y="3094.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1100 mm</text>
+<text x="1340.00" y="3094.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<text x="80.00" y="3148.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D076</text>
+<text x="175.00" y="3148.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Window bedroom 1 utility sill above model floor</text>
+<text x="915.00" y="3148.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 9 1/4&quot;</text>
+<text x="1160.00" y="3148.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1150 mm</text>
+<text x="1340.00" y="3148.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<rect x="70" y="3180.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3202.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D077</text>
+<text x="175.00" y="3202.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Window kitchen ots wall opening width</text>
+<text x="915.00" y="3202.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4&#x27; 11&quot;</text>
+<text x="1160.00" y="3202.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1500 mm</text>
+<text x="1340.00" y="3202.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed</text>
+<text x="80.00" y="3256.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D078</text>
+<text x="175.00" y="3256.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Window kitchen ots opening height</text>
+<text x="915.00" y="3256.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 5 3/8&quot;</text>
+<text x="1160.00" y="3256.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1050 mm</text>
+<text x="1340.00" y="3256.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed</text>
+<rect x="70" y="3288.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3310.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D079</text>
+<text x="175.00" y="3310.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Window kitchen ots sill above model floor</text>
+<text x="915.00" y="3310.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 7 1/4&quot;</text>
+<text x="1160.00" y="3310.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1100 mm</text>
+<text x="1340.00" y="3310.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<text x="80.00" y="3364.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D080</text>
+<text x="175.00" y="3364.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Door bedroom 1 wall opening width</text>
+<text x="915.00" y="3364.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 5&quot;</text>
+<text x="1160.00" y="3364.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1043 mm</text>
+<text x="1340.00" y="3364.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<rect x="70" y="3396.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3418.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D081</text>
+<text x="175.00" y="3418.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Door bedroom 1 opening height</text>
+<text x="915.00" y="3418.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">6&#x27; 11 7/8&quot;</text>
+<text x="1160.00" y="3418.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2130 mm</text>
+<text x="1340.00" y="3418.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<text x="80.00" y="3472.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D082</text>
+<text x="175.00" y="3472.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Door bathroom 1 wall opening width</text>
+<text x="915.00" y="3472.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 6&quot;</text>
+<text x="1160.00" y="3472.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">761 mm</text>
+<text x="1340.00" y="3472.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<rect x="70" y="3504.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3526.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D083</text>
+<text x="175.00" y="3526.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Door bathroom 1 opening height</text>
+<text x="915.00" y="3526.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">6&#x27; 11 7/8&quot;</text>
+<text x="1160.00" y="3526.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2130 mm</text>
+<text x="1340.00" y="3526.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<text x="80.00" y="3580.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D084</text>
+<text x="175.00" y="3580.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 bed base plan X span</text>
+<text x="915.00" y="3580.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">6&#x27; 6&quot;</text>
+<text x="1160.00" y="3580.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1983 mm</text>
+<text x="1340.00" y="3580.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<rect x="70" y="3612.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3634.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D085</text>
+<text x="175.00" y="3634.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 bed base plan Y span</text>
+<text x="915.00" y="3634.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">7&#x27; 0&quot;</text>
+<text x="1160.00" y="3634.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2133 mm</text>
+<text x="1340.00" y="3634.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<text x="80.00" y="3688.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D086</text>
+<text x="175.00" y="3688.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 bed base top above model floor</text>
+<text x="915.00" y="3688.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 2 5/8&quot;</text>
+<text x="1160.00" y="3688.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">370 mm</text>
+<text x="1340.00" y="3688.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<rect x="70" y="3720.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3742.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D093</text>
+<text x="175.00" y="3742.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 wardrobe plan X span</text>
+<text x="915.00" y="3742.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 0&quot;</text>
+<text x="1160.00" y="3742.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">611 mm</text>
+<text x="1340.00" y="3742.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<text x="80.00" y="3796.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D094</text>
+<text x="175.00" y="3796.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 wardrobe plan Y span</text>
+<text x="915.00" y="3796.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">10&#x27; 3 7/8&quot;</text>
+<text x="1160.00" y="3796.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3148 mm</text>
+<text x="1340.00" y="3796.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<rect x="70" y="3828.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3850.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D095</text>
+<text x="175.00" y="3850.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 wardrobe top above model floor</text>
+<text x="915.00" y="3850.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">7&#x27; 10 1/2&quot;</text>
+<text x="1160.00" y="3850.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2400 mm</text>
+<text x="1340.00" y="3850.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<text x="80.00" y="3904.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D114</text>
+<text x="175.00" y="3904.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Dining table plan X span</text>
+<text x="915.00" y="3904.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 6&quot;</text>
+<text x="1160.00" y="3904.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">761 mm</text>
+<text x="1340.00" y="3904.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<rect x="70" y="3936.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="3958.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D115</text>
+<text x="175.00" y="3958.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Dining table plan Y span</text>
+<text x="915.00" y="3958.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">5&#x27; 6&quot;</text>
+<text x="1160.00" y="3958.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1676 mm</text>
+<text x="1340.00" y="3958.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<text x="80.00" y="4012.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D116</text>
+<text x="175.00" y="4012.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Dining table top above model floor</text>
+<text x="915.00" y="4012.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 5 7/8&quot;</text>
+<text x="1160.00" y="4012.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">760 mm</text>
+<text x="1340.00" y="4012.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<rect x="70" y="4044.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="4066.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D126</text>
+<text x="175.00" y="4066.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 WC bowl plan X span</text>
+<text x="915.00" y="4066.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 4 1/8&quot;</text>
+<text x="1160.00" y="4066.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">410 mm</text>
+<text x="1340.00" y="4066.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<text x="80.00" y="4120.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D127</text>
+<text x="175.00" y="4120.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 WC bowl plan Y span</text>
+<text x="915.00" y="4120.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 10 7/8&quot;</text>
+<text x="1160.00" y="4120.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">580 mm</text>
+<text x="1340.00" y="4120.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<rect x="70" y="4152.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="4174.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D128</text>
+<text x="175.00" y="4174.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 WC bowl top above model floor</text>
+<text x="915.00" y="4174.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 7 1/8&quot;</text>
+<text x="1160.00" y="4174.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">485 mm</text>
+<text x="1340.00" y="4174.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<text x="80.00" y="4228.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D129</text>
+<text x="175.00" y="4228.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 WC cistern plan X span</text>
+<text x="915.00" y="4228.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 4 1/8&quot;</text>
+<text x="1160.00" y="4228.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">410 mm</text>
+<text x="1340.00" y="4228.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<rect x="70" y="4260.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="4282.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D130</text>
+<text x="175.00" y="4282.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 WC cistern plan Y span</text>
+<text x="915.00" y="4282.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">0&#x27; 6 3/4&quot;</text>
+<text x="1160.00" y="4282.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">170 mm</text>
+<text x="1340.00" y="4282.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<text x="80.00" y="4336.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D131</text>
+<text x="175.00" y="4336.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 WC cistern top above model floor</text>
+<text x="915.00" y="4336.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9 1/8&quot;</text>
+<text x="1160.00" y="4336.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">840 mm</text>
+<text x="1340.00" y="4336.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<rect x="70" y="4368.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="4390.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D132</text>
+<text x="175.00" y="4390.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 shower drain plan X span</text>
+<text x="915.00" y="4390.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">0&#x27; 3 7/8&quot;</text>
+<text x="1160.00" y="4390.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">100 mm</text>
+<text x="1340.00" y="4390.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<text x="80.00" y="4444.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D133</text>
+<text x="175.00" y="4444.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 shower drain plan Y span</text>
+<text x="915.00" y="4444.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">0&#x27; 3 7/8&quot;</text>
+<text x="1160.00" y="4444.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">100 mm</text>
+<text x="1340.00" y="4444.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<rect x="70" y="4476.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="4498.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D134</text>
+<text x="175.00" y="4498.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 shower drain top above model floor</text>
+<text x="915.00" y="4498.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">0&#x27; 0 3/4&quot;</text>
+<text x="1160.00" y="4498.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">19 mm</text>
+<text x="1340.00" y="4498.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Modeled furniture</text>
+<text x="80.00" y="4552.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D135</text>
+<text x="175.00" y="4552.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">west preparation base cabinet envelope plan X span</text>
+<text x="915.00" y="4552.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="4552.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="4552.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="4584.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="4606.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D136</text>
+<text x="175.00" y="4606.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">west preparation base cabinet envelope plan Y span</text>
+<text x="915.00" y="4606.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4&#x27; 10 7/8&quot;</text>
+<text x="1160.00" y="4606.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1496 mm</text>
+<text x="1340.00" y="4606.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="4660.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D137</text>
+<text x="175.00" y="4660.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">west preparation base cabinet envelope top above model floor</text>
+<text x="915.00" y="4660.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9 7/8&quot;</text>
+<text x="1160.00" y="4660.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">860 mm</text>
+<text x="1340.00" y="4660.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="4692.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="4714.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D138</text>
+<text x="175.00" y="4714.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">west hob base cabinet envelope plan X span</text>
+<text x="915.00" y="4714.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="4714.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="4714.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="4768.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D139</text>
+<text x="175.00" y="4768.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">west hob base cabinet envelope plan Y span</text>
+<text x="915.00" y="4768.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 6 7/8&quot;</text>
+<text x="1160.00" y="4768.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">783 mm</text>
+<text x="1340.00" y="4768.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="4800.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="4822.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D140</text>
+<text x="175.00" y="4822.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">west hob base cabinet envelope top above model floor</text>
+<text x="915.00" y="4822.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9 7/8&quot;</text>
+<text x="1160.00" y="4822.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">860 mm</text>
+<text x="1340.00" y="4822.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="4876.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D141</text>
+<text x="175.00" y="4876.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">west south base cabinet envelope plan X span</text>
+<text x="915.00" y="4876.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="4876.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="4876.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="4908.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="4930.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D142</text>
+<text x="175.00" y="4930.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">west south base cabinet envelope plan Y span</text>
+<text x="915.00" y="4930.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 4 3/4&quot;</text>
+<text x="1160.00" y="4930.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">729 mm</text>
+<text x="1340.00" y="4930.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="4984.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D143</text>
+<text x="175.00" y="4984.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">west south base cabinet envelope top above model floor</text>
+<text x="915.00" y="4984.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9 7/8&quot;</text>
+<text x="1160.00" y="4984.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">860 mm</text>
+<text x="1340.00" y="4984.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="5016.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="5038.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D144</text>
+<text x="175.00" y="5038.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">northwest corner base cabinet envelope plan X span</text>
+<text x="915.00" y="5038.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="5038.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="5038.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="5092.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D145</text>
+<text x="175.00" y="5092.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">northwest corner base cabinet envelope plan Y span</text>
+<text x="915.00" y="5092.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="5092.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="5092.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="5124.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="5146.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D146</text>
+<text x="175.00" y="5146.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">northwest corner base cabinet envelope top above model floor</text>
+<text x="915.00" y="5146.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9 7/8&quot;</text>
+<text x="1160.00" y="5146.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">860 mm</text>
+<text x="1340.00" y="5146.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="5200.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D147</text>
+<text x="175.00" y="5200.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">north preparation base cabinet envelope plan X span</text>
+<text x="915.00" y="5200.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9&quot;</text>
+<text x="1160.00" y="5200.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">838 mm</text>
+<text x="1340.00" y="5200.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="5232.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="5254.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D148</text>
+<text x="175.00" y="5254.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">north preparation base cabinet envelope plan Y span</text>
+<text x="915.00" y="5254.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="5254.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="5254.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="5308.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D149</text>
+<text x="175.00" y="5308.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">north preparation base cabinet envelope top above model floor</text>
+<text x="915.00" y="5308.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9 7/8&quot;</text>
+<text x="1160.00" y="5308.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">860 mm</text>
+<text x="1340.00" y="5308.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="5340.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="5362.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D150</text>
+<text x="175.00" y="5362.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">window sink base cabinet envelope plan X span</text>
+<text x="915.00" y="5362.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="5362.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="5362.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="5416.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D151</text>
+<text x="175.00" y="5416.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">window sink base cabinet envelope plan Y span</text>
+<text x="915.00" y="5416.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="5416.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="5416.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="5448.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="5470.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D152</text>
+<text x="175.00" y="5470.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">window sink base cabinet envelope top above model floor</text>
+<text x="915.00" y="5470.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9 7/8&quot;</text>
+<text x="1160.00" y="5470.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">860 mm</text>
+<text x="1340.00" y="5470.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="5524.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D153</text>
+<text x="175.00" y="5524.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">north east landing base cabinet envelope plan X span</text>
+<text x="915.00" y="5524.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9&quot;</text>
+<text x="1160.00" y="5524.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">838 mm</text>
+<text x="1340.00" y="5524.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="5556.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="5578.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D154</text>
+<text x="175.00" y="5578.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">north east landing base cabinet envelope plan Y span</text>
+<text x="915.00" y="5578.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="5578.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="5578.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="5632.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D155</text>
+<text x="175.00" y="5632.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">north east landing base cabinet envelope top above model floor</text>
+<text x="915.00" y="5632.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9 7/8&quot;</text>
+<text x="1160.00" y="5632.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">860 mm</text>
+<text x="1340.00" y="5632.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="5664.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="5686.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D156</text>
+<text x="175.00" y="5686.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">dining peninsula base cabinet envelope plan X span</text>
+<text x="915.00" y="5686.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4&#x27; 3 3/8&quot;</text>
+<text x="1160.00" y="5686.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1304 mm</text>
+<text x="1340.00" y="5686.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="5740.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D157</text>
+<text x="175.00" y="5740.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">dining peninsula base cabinet envelope plan Y span</text>
+<text x="915.00" y="5740.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="5740.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="5740.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="5772.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="5794.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D158</text>
+<text x="175.00" y="5794.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">dining peninsula base cabinet envelope top above model floor</text>
+<text x="915.00" y="5794.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9 7/8&quot;</text>
+<text x="1160.00" y="5794.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">860 mm</text>
+<text x="1340.00" y="5794.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="5848.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D159</text>
+<text x="175.00" y="5848.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">window west flanking upper (underside 1.56 m) plan X span</text>
+<text x="915.00" y="5848.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 0 5/8&quot;</text>
+<text x="1160.00" y="5848.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">930 mm</text>
+<text x="1340.00" y="5848.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="5880.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="5902.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D160</text>
+<text x="175.00" y="5902.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">window west flanking upper (underside 1.56 m) plan Y span</text>
+<text x="915.00" y="5902.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">0&#x27; 11 7/8&quot;</text>
+<text x="1160.00" y="5902.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">303 mm</text>
+<text x="1340.00" y="5902.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="5956.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D161</text>
+<text x="175.00" y="5956.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">window west flanking upper (underside 1.56 m) top above model floor</text>
+<text x="915.00" y="5956.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">7&#x27; 5 3/4&quot;</text>
+<text x="1160.00" y="5956.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2280 mm</text>
+<text x="1340.00" y="5956.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="5988.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="6010.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D162</text>
+<text x="175.00" y="6010.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">window east flanking upper (underside 1.56 m) plan X span</text>
+<text x="915.00" y="6010.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 0 7/8&quot;</text>
+<text x="1160.00" y="6010.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">937 mm</text>
+<text x="1340.00" y="6010.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="6064.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D163</text>
+<text x="175.00" y="6064.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">window east flanking upper (underside 1.56 m) plan Y span</text>
+<text x="915.00" y="6064.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">0&#x27; 11 7/8&quot;</text>
+<text x="1160.00" y="6064.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">303 mm</text>
+<text x="1340.00" y="6064.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="6096.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="6118.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D164</text>
+<text x="175.00" y="6118.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">window east flanking upper (underside 1.56 m) top above model floor</text>
+<text x="915.00" y="6118.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">7&#x27; 5 3/4&quot;</text>
+<text x="1160.00" y="6118.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2280 mm</text>
+<text x="1340.00" y="6118.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="6172.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D165</text>
+<text x="175.00" y="6172.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Dishwasher generic appliance envelope plan X span</text>
+<text x="915.00" y="6172.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="6172.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="6172.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="6204.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="6226.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D166</text>
+<text x="175.00" y="6226.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Dishwasher generic appliance envelope plan Y span</text>
+<text x="915.00" y="6226.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="6226.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="6226.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="6280.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D167</text>
+<text x="175.00" y="6280.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Dishwasher generic appliance envelope top above model floor</text>
+<text x="915.00" y="6280.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 9 1/4&quot;</text>
+<text x="1160.00" y="6280.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">845 mm</text>
+<text x="1340.00" y="6280.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="6312.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="6334.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D168</text>
+<text x="175.00" y="6334.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Kitchen continuous 600 mm deep worktop plan X span</text>
+<text x="915.00" y="6334.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">11&#x27; 4 7/8&quot;</text>
+<text x="1160.00" y="6334.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3477 mm</text>
+<text x="1340.00" y="6334.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="6388.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D169</text>
+<text x="175.00" y="6388.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Kitchen continuous 600 mm deep worktop plan Y span</text>
+<text x="915.00" y="6388.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">11&#x27; 10&quot;</text>
+<text x="1160.00" y="6388.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3608 mm</text>
+<text x="1340.00" y="6388.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="6420.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="6442.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D170</text>
+<text x="175.00" y="6442.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Kitchen continuous 600 mm deep worktop top above model floor</text>
+<text x="915.00" y="6442.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 11 3/8&quot;</text>
+<text x="1160.00" y="6442.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">900 mm</text>
+<text x="1340.00" y="6442.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="6496.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D171</text>
+<text x="175.00" y="6496.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Primary sink bowl plan X span</text>
+<text x="915.00" y="6496.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 8 1/8&quot;</text>
+<text x="1160.00" y="6496.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">510 mm</text>
+<text x="1340.00" y="6496.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="6528.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="6550.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D172</text>
+<text x="175.00" y="6550.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Primary sink bowl plan Y span</text>
+<text x="915.00" y="6550.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 6 1/8&quot;</text>
+<text x="1160.00" y="6550.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">460 mm</text>
+<text x="1340.00" y="6550.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="6604.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D173</text>
+<text x="175.00" y="6604.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Primary sink bowl top above model floor</text>
+<text x="915.00" y="6604.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 11 3/4&quot;</text>
+<text x="1160.00" y="6604.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">909 mm</text>
+<text x="1340.00" y="6604.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="6636.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="6658.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D174</text>
+<text x="175.00" y="6658.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">west preparation upper (underside 1.56 m) plan X span</text>
+<text x="915.00" y="6658.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 0&quot;</text>
+<text x="1160.00" y="6658.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">305 mm</text>
+<text x="1340.00" y="6658.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="6712.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D175</text>
+<text x="175.00" y="6712.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">west preparation upper (underside 1.56 m) plan Y span</text>
+<text x="915.00" y="6712.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 10 1/4&quot;</text>
+<text x="1160.00" y="6712.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1174 mm</text>
+<text x="1340.00" y="6712.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="6744.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="6766.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D176</text>
+<text x="175.00" y="6766.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">west preparation upper (underside 1.56 m) top above model floor</text>
+<text x="915.00" y="6766.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">7&#x27; 5 3/4&quot;</text>
+<text x="1160.00" y="6766.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2280 mm</text>
+<text x="1340.00" y="6766.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="6820.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D177</text>
+<text x="175.00" y="6820.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Noncombustible open appliance shelf 1 plan X span</text>
+<text x="915.00" y="6820.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="6820.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="6820.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="6852.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="6874.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D178</text>
+<text x="175.00" y="6874.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Noncombustible open appliance shelf 1 plan Y span</text>
+<text x="915.00" y="6874.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 8 1/4&quot;</text>
+<text x="1160.00" y="6874.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">820 mm</text>
+<text x="1340.00" y="6874.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="6928.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D179</text>
+<text x="175.00" y="6928.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Noncombustible open appliance shelf 1 top above model floor</text>
+<text x="915.00" y="6928.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 0 5/8&quot;</text>
+<text x="1160.00" y="6928.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">930 mm</text>
+<text x="1340.00" y="6928.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="6960.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="6982.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D180</text>
+<text x="175.00" y="6982.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Noncombustible open appliance shelf 2 plan X span</text>
+<text x="915.00" y="6982.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="6982.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="6982.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="7036.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D181</text>
+<text x="175.00" y="7036.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Noncombustible open appliance shelf 2 plan Y span</text>
+<text x="915.00" y="7036.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 8 1/4&quot;</text>
+<text x="1160.00" y="7036.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">820 mm</text>
+<text x="1340.00" y="7036.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="7068.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="7090.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D182</text>
+<text x="175.00" y="7090.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Noncombustible open appliance shelf 2 top above model floor</text>
+<text x="915.00" y="7090.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">5&#x27; 3&quot;</text>
+<text x="1160.00" y="7090.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1600 mm</text>
+<text x="1340.00" y="7090.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="7144.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D183</text>
+<text x="175.00" y="7144.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Noncombustible open appliance shelf 3 plan X span</text>
+<text x="915.00" y="7144.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="7144.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="7144.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="7176.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="7198.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D184</text>
+<text x="175.00" y="7198.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Noncombustible open appliance shelf 3 plan Y span</text>
+<text x="915.00" y="7198.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 8 1/4&quot;</text>
+<text x="1160.00" y="7198.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">820 mm</text>
+<text x="1340.00" y="7198.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="7252.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D185</text>
+<text x="175.00" y="7252.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Noncombustible open appliance shelf 3 top above model floor</text>
+<text x="915.00" y="7252.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">7&#x27; 1 7/8&quot;</text>
+<text x="1160.00" y="7252.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2180 mm</text>
+<text x="1340.00" y="7252.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="7284.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="7306.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D186</text>
+<text x="175.00" y="7306.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Otg generic appliance envelope plan X span</text>
+<text x="915.00" y="7306.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 4 1/2&quot;</text>
+<text x="1160.00" y="7306.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">420 mm</text>
+<text x="1340.00" y="7306.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="7360.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D187</text>
+<text x="175.00" y="7360.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Otg generic appliance envelope plan Y span</text>
+<text x="915.00" y="7360.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 8 1/2&quot;</text>
+<text x="1160.00" y="7360.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">520 mm</text>
+<text x="1340.00" y="7360.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="7392.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="7414.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D188</text>
+<text x="175.00" y="7414.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Otg generic appliance envelope top above model floor</text>
+<text x="915.00" y="7414.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">4&#x27; 2 3/8&quot;</text>
+<text x="1160.00" y="7414.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1280 mm</text>
+<text x="1340.00" y="7414.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="7468.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D189</text>
+<text x="175.00" y="7468.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Microwave generic appliance envelope plan X span</text>
+<text x="915.00" y="7468.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 3 3/4&quot;</text>
+<text x="1160.00" y="7468.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">400 mm</text>
+<text x="1340.00" y="7468.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="7500.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="7522.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D190</text>
+<text x="175.00" y="7522.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Microwave generic appliance envelope plan Y span</text>
+<text x="915.00" y="7522.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 7 5/8&quot;</text>
+<text x="1160.00" y="7522.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">500 mm</text>
+<text x="1340.00" y="7522.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="7576.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D191</text>
+<text x="175.00" y="7576.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Microwave generic appliance envelope top above model floor</text>
+<text x="915.00" y="7576.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">6&#x27; 3 1/4&quot;</text>
+<text x="1160.00" y="7576.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1910 mm</text>
+<text x="1340.00" y="7576.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="7608.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="7630.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D192</text>
+<text x="175.00" y="7630.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Fridge generic appliance envelope plan X span</text>
+<text x="915.00" y="7630.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 3 1/2&quot;</text>
+<text x="1160.00" y="7630.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">700 mm</text>
+<text x="1340.00" y="7630.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="7684.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D193</text>
+<text x="175.00" y="7684.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Fridge generic appliance envelope plan Y span</text>
+<text x="915.00" y="7684.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 3 1/2&quot;</text>
+<text x="1160.00" y="7684.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">700 mm</text>
+<text x="1340.00" y="7684.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="7716.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="7738.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D194</text>
+<text x="175.00" y="7738.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Fridge generic appliance envelope top above model floor</text>
+<text x="915.00" y="7738.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">6&#x27; 3 3/4&quot;</text>
+<text x="1160.00" y="7738.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1925 mm</text>
+<text x="1340.00" y="7738.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="7792.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D195</text>
+<text x="175.00" y="7792.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Kitchen worktop top above model floor</text>
+<text x="915.00" y="7792.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 11 3/8&quot;</text>
+<text x="1160.00" y="7792.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">900 mm</text>
+<text x="1340.00" y="7792.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="7824.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="7846.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D196</text>
+<text x="175.00" y="7846.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Wall cabinet underside above model floor</text>
+<text x="915.00" y="7846.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">5&#x27; 1 3/8&quot;</text>
+<text x="1160.00" y="7846.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1560 mm</text>
+<text x="1340.00" y="7846.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="7900.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D197</text>
+<text x="175.00" y="7900.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 mattress top above model floor</text>
+<text x="915.00" y="7900.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1&#x27; 11 5/8&quot;</text>
+<text x="1160.00" y="7900.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">600 mm</text>
+<text x="1340.00" y="7900.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="7932.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="7954.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D200</text>
+<text x="175.00" y="7954.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 headboard top above model floor</text>
+<text x="915.00" y="7954.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3&#x27; 8 1/8&quot;</text>
+<text x="1160.00" y="7954.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">1120 mm</text>
+<text x="1340.00" y="7954.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="8008.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D205</text>
+<text x="175.00" y="8008.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Kitchen worktop to upper-cabinet underside</text>
+<text x="915.00" y="8008.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 2&quot;</text>
+<text x="1160.00" y="8008.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">660 mm</text>
+<text x="1340.00" y="8008.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="8040.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="8062.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D206</text>
+<text x="175.00" y="8062.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Peninsula to refrigerator handle local pinch</text>
+<text x="915.00" y="8062.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2&#x27; 7 1/8&quot;</text>
+<text x="1160.00" y="8062.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">792 mm</text>
+<text x="1340.00" y="8062.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="8116.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D207</text>
+<text x="175.00" y="8116.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">OTG open shelf overhead air gap (provisional)</text>
+<text x="915.00" y="8116.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">0&#x27; 11 3/8&quot;</text>
+<text x="1160.00" y="8116.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">290 mm</text>
+<text x="1340.00" y="8116.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="8148.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="8170.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D208</text>
+<text x="175.00" y="8170.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Kitchen clear internal depth</text>
+<text x="915.00" y="8170.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">11&#x27; 10&quot;</text>
+<text x="1160.00" y="8170.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3608 mm</text>
+<text x="1340.00" y="8170.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<text x="80.00" y="8224.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D209</text>
+<text x="175.00" y="8224.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Main opposing workfront clear aisle</text>
+<text x="915.00" y="8224.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">7&#x27; 2 1/8&quot;</text>
+<text x="1160.00" y="8224.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">2186 mm</text>
+<text x="1340.00" y="8224.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Proposed model</text>
+<rect x="70" y="8256.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="8278.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D210</text>
+<text x="175.00" y="8278.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bedroom 1 ceiling above model floor</text>
+<text x="915.00" y="8278.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">9&#x27; 10 1/8&quot;</text>
+<text x="1160.00" y="8278.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3000 mm</text>
+<text x="1340.00" y="8278.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<text x="80.00" y="8332.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D211</text>
+<text x="175.00" y="8332.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Kitchen ceiling above model floor</text>
+<text x="915.00" y="8332.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">9&#x27; 10 1/8&quot;</text>
+<text x="1160.00" y="8332.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3000 mm</text>
+<text x="1340.00" y="8332.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<rect x="70" y="8364.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="8386.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D212</text>
+<text x="175.00" y="8386.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Dining ceiling above model floor</text>
+<text x="915.00" y="8386.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">9&#x27; 10 1/8&quot;</text>
+<text x="1160.00" y="8386.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3000 mm</text>
+<text x="1340.00" y="8386.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<text x="80.00" y="8440.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D213</text>
+<text x="175.00" y="8440.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Lobby ceiling above model floor</text>
+<text x="915.00" y="8440.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">9&#x27; 10 1/8&quot;</text>
+<text x="1160.00" y="8440.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3000 mm</text>
+<text x="1340.00" y="8440.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<rect x="70" y="8472.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="8494.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D218</text>
+<text x="175.00" y="8494.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">Bath 1 ceiling above model floor</text>
+<text x="915.00" y="8494.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">9&#x27; 10 1/8&quot;</text>
+<text x="1160.00" y="8494.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">3000 mm</text>
+<text x="1340.00" y="8494.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional height</text>
+<text x="80.00" y="8548.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D222</text>
+<text x="175.00" y="8548.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">outer left upper thickness</text>
+<text x="915.00" y="8548.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">0&#x27; 5&quot;</text>
+<text x="1160.00" y="8548.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">128 mm</text>
+<text x="1340.00" y="8548.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<rect x="70" y="8580.05" width="1660" height="54" fill="#f0f4f6"/>
+<text x="80.00" y="8602.05" font-family="Arial, sans-serif" font-size="19" fill="#182e40" text-anchor="start">D224</text>
+<text x="175.00" y="8602.05" font-family="Arial, sans-serif" font-size="18" fill="#182e40" text-anchor="start">kitchen utility divider thickness</text>
+<text x="915.00" y="8602.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">0&#x27; 5&quot;</text>
+<text x="1160.00" y="8602.05" font-family="Arial, sans-serif" font-size="20" fill="#182e40" text-anchor="start">128 mm</text>
+<text x="1340.00" y="8602.05" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Model / inferred</text>
+<text x="80.00" y="8706.00" font-family="Arial, sans-serif" font-size="17" fill="#182e40" text-anchor="start">Provisional: elevations, furniture, joinery and finishes. Stair flights/landing are not supplied. Do not scale drawings or use as construction instructions.</text>
+</svg>

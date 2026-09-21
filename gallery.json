@@ -1,0 +1,749 @@
+{
+  "version": 1,
+  "collections": [
+    {
+      "id": "baseline",
+      "title": "Baseline · existing model",
+      "status": "Baseline reference",
+      "description": "Original model renders for comparison. This is a modeled baseline, not a verified survey of the existing home.",
+      "assumptions": [],
+      "views": [
+        {
+          "id": "00_plan_overhead",
+          "title": "Overhead plan",
+          "room": "Plan",
+          "description": "Overhead plan in the original baseline model.",
+          "src": "images/baseline/00_plan_overhead.png",
+          "width": 1100,
+          "height": 2200
+        },
+        {
+          "id": "01_entry_dining",
+          "title": "Entry & dining",
+          "room": "Entry & dining",
+          "description": "Entry & dining in the original baseline model.",
+          "src": "images/baseline/01_entry_dining.png",
+          "width": 960,
+          "height": 675
+        },
+        {
+          "id": "02_family_lounge",
+          "title": "Family lounge",
+          "room": "Family lounge",
+          "description": "Family lounge in the original baseline model.",
+          "src": "images/baseline/02_family_lounge.png",
+          "width": 960,
+          "height": 675
+        },
+        {
+          "id": "03_kitchen",
+          "title": "Kitchen",
+          "room": "Kitchen",
+          "description": "Kitchen in the original baseline model.",
+          "src": "images/baseline/03_kitchen.png",
+          "width": 960,
+          "height": 675
+        },
+        {
+          "id": "04_bedroom_1",
+          "title": "Bedroom 1",
+          "room": "Bedrooms",
+          "description": "Bedroom 1 in the original baseline model.",
+          "src": "images/baseline/04_bedroom_1.png",
+          "width": 960,
+          "height": 675
+        },
+        {
+          "id": "05_bedroom_2",
+          "title": "Bedroom 2",
+          "room": "Bedrooms",
+          "description": "Bedroom 2 in the original baseline model.",
+          "src": "images/baseline/05_bedroom_2.png",
+          "width": 960,
+          "height": 675
+        },
+        {
+          "id": "06_bedroom_3",
+          "title": "Bedroom 3",
+          "room": "Bedrooms",
+          "description": "Bedroom 3 in the original baseline model.",
+          "src": "images/baseline/06_bedroom_3.png",
+          "width": 960,
+          "height": 675
+        },
+        {
+          "id": "07_drawing_room",
+          "title": "Drawing room",
+          "room": "Drawing room",
+          "description": "Drawing room in the original baseline model.",
+          "src": "images/baseline/07_drawing_room.png",
+          "width": 960,
+          "height": 675
+        },
+        {
+          "id": "08_dressing_bath",
+          "title": "Dressing & bath",
+          "room": "Bathrooms",
+          "description": "Dressing & bath in the original baseline model.",
+          "src": "images/baseline/08_dressing_bath.png",
+          "width": 960,
+          "height": 675
+        },
+        {
+          "id": "09_bathroom_1",
+          "title": "Bathroom 1",
+          "room": "Bathrooms",
+          "description": "Bathroom 1 in the original baseline model.",
+          "src": "images/baseline/09_bathroom_1.png",
+          "width": 960,
+          "height": 675
+        }
+      ]
+    },
+    {
+      "id": "user_sketch_kitchen",
+      "title": "Your sketch kitchen",
+      "status": "Sketch interpretation - provisional",
+      "description": "Rotate and zoom the kitchen modeled from your revised sketch. Inside footprint: 3400 x 4350 mm.",
+      "assumptions": [
+        "Interactive cutaway, not a photorealistic Cycles render. Ceiling omitted and exterior walls lowered for visibility.",
+        "Colors, metallic surfaces and roughness are preserved approximately. Procedural wood/stone textures and scene lighting are simplified for real-time browsing.",
+        "Nominal modules follow the revised sketch. OTS partition, heights and appliance installation details remain provisional."
+      ],
+      "model": {
+        "src": "models/user_sketch_kitchen.glb",
+        "bytes": 1665128,
+        "poster": "images/user_sketch_kitchen/cutaway.png",
+        "label": "Interactive 3D sketch kitchen"
+      },
+      "views": [
+        {
+          "id": "cutaway",
+          "title": "Rendered cutaway",
+          "room": "Kitchen",
+          "description": "The rendered reference. The interactive model uses simplified real-time materials.",
+          "src": "images/user_sketch_kitchen/cutaway.png",
+          "width": 1120,
+          "height": 840
+        }
+      ]
+    },
+    {
+      "id": "fresh_start",
+      "title": "Fresh start - whole-floor concept",
+      "status": "Proposed — not approved",
+      "description": "A new three-bedroom, three-bathroom arrangement: open kitchen/dining, central family living, a mandir/reading corner and a relocated shared shower room. Prior layouts are unchanged.",
+      "assumptions": [
+        "Entirely new interior concept, not a surveyed, structurally assessed or approved construction plan.",
+        "Three bedrooms and three bathrooms retained by assumption while the owner was unavailable.",
+        "Existing outer footprint, external openings, stair-access location and open-to-sky void retained. No floor or roof is invented over the OTS or stair region.",
+        "One new 1.10 m living-room window is proposed on the east facade for direct daylight; structure, permissions and external conditions are unverified. The existing window now serving the common bathroom is frosted for privacy.",
+        "Original internal walls are replaced by the proposed partitions. Load-bearing walls, columns, beams and services are unknown: demolition is NOT authorized by this visualization.",
+        "North/south mean plan-up/down, not surveyed compass directions.",
+        "The guest bedroom uses the former drawing-room zone; former bedroom 2 becomes shared living plus a relocated common shower room.",
+        "Bathroom relocation, drainage gradients, waste-stack connections, ventilation and waterproofing need specialist site design.",
+        "Ceiling height 3.0 m, opening elevations, furnishings and appliance envelopes are provisional. Manufacturer thermal, electrical and maintenance requirements take precedence.",
+        "The mandir's location and empty altar are proposals; deity imagery, religious orientation and ritual requirements are not assumed. Electric lighting only.",
+        "External doors are preserved, but no unprovided balcony, landing or other exterior accommodation is invented.",
+        "This concept preserves no presumed approved interior layout; earlier Blender and CAD versions remain separate and unchanged."
+      ],
+      "views": [
+        {
+          "id": "plan",
+          "title": "Whole-floor cutaway plan",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Plan",
+          "src": "images/fresh_start/plan.png",
+          "width": 1600,
+          "height": 2400
+        },
+        {
+          "id": "living",
+          "title": "Family living and media wall",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Family living",
+          "src": "images/fresh_start/living.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "arrival",
+          "title": "Arrival, dining and open kitchen",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Arrival & dining",
+          "src": "images/fresh_start/arrival.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "kitchen",
+          "title": "Appliance-complete open kitchen",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Kitchen",
+          "src": "images/fresh_start/kitchen.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "kitchen_detail",
+          "title": "Sink, dishwasher and utility access",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Kitchen",
+          "src": "images/fresh_start/kitchen_detail.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "appliance_detail",
+          "title": "Fridge, microwave and OTG",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Utility & appliances",
+          "src": "images/fresh_start/appliance_detail.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "mandir",
+          "title": "Mandir and reading corner",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Mandir",
+          "src": "images/fresh_start/mandir.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bedroom_1",
+          "title": "North bedroom",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Bedroom 1",
+          "src": "images/fresh_start/bedroom_1.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bedroom_2",
+          "title": "Guest bedroom and study",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Bedroom 2",
+          "src": "images/fresh_start/bedroom_2.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bedroom_3",
+          "title": "Primary bedroom",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Bedroom 3",
+          "src": "images/fresh_start/bedroom_3.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bathroom_1",
+          "title": "North en-suite",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Bathroom 1",
+          "src": "images/fresh_start/bathroom_1.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bathroom_2",
+          "title": "Shared shower room",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Bathroom 2",
+          "src": "images/fresh_start/bathroom_2.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bathroom_3",
+          "title": "Primary en-suite",
+          "description": "Fresh-start concept only. Refer to the dimension sheets for measured design geometry; structural and service feasibility is unverified.",
+          "room": "Bathroom 3",
+          "src": "images/fresh_start/bathroom_3.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "dimensions_overview",
+          "title": "Whole-house dimension index",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/fresh_start/dimensions_overview.svg",
+          "width": 1800,
+          "height": 4914
+        },
+        {
+          "id": "dimensions_north",
+          "title": "Kitchen, dining, bedroom 1 and bath 1",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/fresh_start/dimensions_north.svg",
+          "width": 1800,
+          "height": 6311
+        },
+        {
+          "id": "dimensions_middle",
+          "title": "Family lounge, bedroom 2 and bath 2",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/fresh_start/dimensions_middle.svg",
+          "width": 1800,
+          "height": 3948
+        },
+        {
+          "id": "dimensions_south",
+          "title": "Drawing room, bedroom 3, dressing and bath 3",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/fresh_start/dimensions_south.svg",
+          "width": 1800,
+          "height": 3792
+        }
+      ]
+    },
+    {
+      "id": "utility_glass",
+      "title": "Earlier - Kitchen 1 - Glass-door utility",
+      "status": "Proposed — not approved",
+      "description": "A 900 mm partition shift creates a separate sink-and-dishwasher service bay, reached through a sliding glass door. Fridge, microwave and OTG remain inside the kitchen. The original OTS void is retained.",
+      "assumptions": [
+        "Layout proposal, not approved construction. Wall alterations, lintels, services, daylight, extraction and local requirements need site/professional review.",
+        "Appliance envelopes are generic design allowances, not manufacturer installation specifications. Confirm selected models, opening sweeps, heat gaps and servicing space.",
+        "The original open-to-sky void is not floored or roofed. A weather-protection concept covers only the existing right service bay; rain protection, drainage, safety glazing and ventilation are provisional.",
+        "The previously proposed lounge mandir, centred Bedroom 1 bed and en-suite fixture swap are retained; the bed-wall interpretation is still pending owner review.",
+        "Concept dimensions use calibrated PDF linework, not a measured site survey.",
+        "All four appliances are generic envelopes; final models, service connections and manufacturer clearances require approval.",
+        "Open stone/steel OTG station: 150 mm side, 120 mm rear and 290 mm overhead air gaps are provisional, not a thermal certification.",
+        "Microwave shelf is 1.61 m above slab; confirm safe reach and hot-food handling for the household.",
+        "Hob/extractor discharge, electrical protection, plumbing, waterproofing and structural changes require qualified design.",
+        "Existing dining furniture and all non-kitchen interior groups remain unchanged.",
+        "Utility aisle is nominal 1.136 m; handles/skirting reduce standing clearance to approximately 1.089 m.",
+        "Open 600 mm dishwasher door leaves nominal 0.536 m, approximately 0.524 m at opposite skirting: a loading pinch, not an accessible passage.",
+        "Two-panel slider is supplied by the parent; approximately 0.798 m fully-open clearance is not a 1.70 m clear passage.",
+        "Only the right service bay receives a provisional ventilated rain canopy; original OTS remains a true open void.",
+        "Canopy drainage, wind uplift, side-screen safety glazing, 1.10 m OTS guarding and weatherproof appliance suitability require professional approval.",
+        "Utility sink and dishwasher face south on the north counter; no opposing utility counter."
+      ],
+      "views": [
+        {
+          "id": "kitchen",
+          "title": "Kitchen overview",
+          "description": "A 900 mm partition shift creates a separate sink-and-dishwasher service bay, reached through a sliding glass door. Fridge, microwave and OTG remain inside the kitchen. The original OTS void is retained.",
+          "room": "Kitchen",
+          "src": "images/utility_glass/kitchen.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "kitchen_detail",
+          "title": "Sink, daylight and access",
+          "description": "A 900 mm partition shift creates a separate sink-and-dishwasher service bay, reached through a sliding glass door. Fridge, microwave and OTG remain inside the kitchen. The original OTS void is retained.",
+          "room": "Kitchen",
+          "src": "images/utility_glass/kitchen_detail.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "appliance_detail",
+          "title": "Fridge, microwave and OTG",
+          "description": "Generic appliance envelopes and clearances, not manufacturer installation specifications. Review the dimension sheets and assumptions.",
+          "room": "Utility & appliances",
+          "src": "images/utility_glass/appliance_detail.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "utility_detail",
+          "title": "Sink and dishwasher",
+          "description": "Generic appliance envelopes and clearances, not manufacturer installation specifications. Review the dimension sheets and assumptions.",
+          "room": "Utility & appliances",
+          "src": "images/utility_glass/utility_detail.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "mandir",
+          "title": "Mandir beside the lounge sofa",
+          "description": "Reuses the lounge-side cabinet. Deity and ritual details are left for family input.",
+          "room": "Mandir",
+          "src": "images/utility_glass/mandir.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bedroom_1",
+          "title": "Bedroom 1 - centred bed",
+          "description": "Pending wall confirmation: bed rotated to the top wall in the screenshot, centred in the usable bay left of the wardrobe. Original bed and bedside sizes retained.",
+          "room": "Bedroom 1",
+          "src": "images/utility_glass/bedroom_1.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bathroom_1",
+          "title": "En-suite 1 - WC and shower swapped",
+          "description": "WC now at the former shower end; shower and drain at the former WC end. Wide-angle review: use dimension sheets for proportions. Plumbing and waterproofing need site review.",
+          "room": "Bathroom 1",
+          "src": "images/utility_glass/bathroom_1.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "dimensions_overview",
+          "title": "Whole-house dimension index",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/utility_glass/dimensions_overview.svg",
+          "width": 1800,
+          "height": 5778
+        },
+        {
+          "id": "dimensions_north",
+          "title": "Kitchen, dining, bedroom 1 and bath 1",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/utility_glass/dimensions_north.svg",
+          "width": 1800,
+          "height": 8849
+        },
+        {
+          "id": "dimensions_middle",
+          "title": "Family lounge, bedroom 2 and bath 2",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/utility_glass/dimensions_middle.svg",
+          "width": 1800,
+          "height": 4488
+        },
+        {
+          "id": "dimensions_south",
+          "title": "Drawing room, bedroom 3, dressing and bath 3",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/utility_glass/dimensions_south.svg",
+          "width": 1800,
+          "height": 4494
+        }
+      ]
+    },
+    {
+      "id": "window_kitchen",
+      "title": "Earlier - Kitchen 2 - Window-centred kitchen",
+      "status": "Proposed — not approved",
+      "description": "The partition stays in its original position. A proportioned 1.50 m window sits above the sink, with an adjacent dishwasher and framed cabinetry. Fridge, microwave and OTG all remain inside the kitchen; there is no utility door.",
+      "assumptions": [
+        "Layout proposal, not approved construction. Source proportions are retained; the supplied design inspiration is not used as a dimensional reference.",
+        "No door connects this kitchen to the utility/OTS area. Safe maintenance access to that residual area is unresolved and must be established before closing the existing door.",
+        "No sink or powered appliance is stranded in the inaccessible utility strip. All four requested appliances are inside the kitchen.",
+        "Appliance envelopes are generic allowances. Manufacturer ventilation/heat clearances, extraction, services and window installation require site review.",
+        "The previously proposed lounge mandir, centred Bedroom 1 bed and en-suite fixture swap are retained; the bed-wall interpretation is still pending owner review.",
+        "Concept dimensions use calibrated PDF linework, not a measured site survey.",
+        "All four appliances are generic envelopes; final models, service connections and manufacturer clearances require approval.",
+        "Open stone/steel OTG station: 150 mm side, 120 mm rear and 290 mm overhead air gaps are provisional, not a thermal certification.",
+        "Microwave shelf is 1.61 m above slab; confirm safe reach and hot-food handling for the household.",
+        "Hob/extractor discharge, electrical protection, plumbing, waterproofing and structural changes require qualified design.",
+        "Existing dining furniture and all non-kitchen interior groups remain unchanged.",
+        "Window-led interpretation of verbal intent only; the unavailable image2 has not been reproduced.",
+        "No utility door or external access is invented. Maintenance access to residual utility/OTS is unresolved.",
+        "All appliances and the sole sink are inside the kitchen; no utility basin/equipment is stranded outside.",
+        "Retained dining peninsula keeps the existing dining relationship; its local fridge-side pinch is approximately 0.80 m including handle."
+      ],
+      "views": [
+        {
+          "id": "kitchen",
+          "title": "Kitchen overview",
+          "description": "The partition stays in its original position. A proportioned 1.50 m window sits above the sink, with an adjacent dishwasher and framed cabinetry. Fridge, microwave and OTG all remain inside the kitchen; there is no utility door.",
+          "room": "Kitchen",
+          "src": "images/window_kitchen/kitchen.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "kitchen_detail",
+          "title": "Sink, daylight and access",
+          "description": "The partition stays in its original position. A proportioned 1.50 m window sits above the sink, with an adjacent dishwasher and framed cabinetry. Fridge, microwave and OTG all remain inside the kitchen; there is no utility door.",
+          "room": "Kitchen",
+          "src": "images/window_kitchen/kitchen_detail.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "appliance_detail",
+          "title": "Fridge, microwave and OTG",
+          "description": "Generic appliance envelopes and clearances, not manufacturer installation specifications. Review the dimension sheets and assumptions.",
+          "room": "Utility & appliances",
+          "src": "images/window_kitchen/appliance_detail.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "mandir",
+          "title": "Mandir beside the lounge sofa",
+          "description": "Reuses the lounge-side cabinet. Deity and ritual details are left for family input.",
+          "room": "Mandir",
+          "src": "images/window_kitchen/mandir.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bedroom_1",
+          "title": "Bedroom 1 - centred bed",
+          "description": "Pending wall confirmation: bed rotated to the top wall in the screenshot, centred in the usable bay left of the wardrobe. Original bed and bedside sizes retained.",
+          "room": "Bedroom 1",
+          "src": "images/window_kitchen/bedroom_1.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bathroom_1",
+          "title": "En-suite 1 - WC and shower swapped",
+          "description": "WC now at the former shower end; shower and drain at the former WC end. Wide-angle review: use dimension sheets for proportions. Plumbing and waterproofing need site review.",
+          "room": "Bathroom 1",
+          "src": "images/window_kitchen/bathroom_1.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "dimensions_overview",
+          "title": "Whole-house dimension index",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/window_kitchen/dimensions_overview.svg",
+          "width": 1800,
+          "height": 5562
+        },
+        {
+          "id": "dimensions_north",
+          "title": "Kitchen, dining, bedroom 1 and bath 1",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/window_kitchen/dimensions_north.svg",
+          "width": 1800,
+          "height": 8741
+        },
+        {
+          "id": "dimensions_middle",
+          "title": "Family lounge, bedroom 2 and bath 2",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/window_kitchen/dimensions_middle.svg",
+          "width": 1800,
+          "height": 4488
+        },
+        {
+          "id": "dimensions_south",
+          "title": "Drawing room, bedroom 3, dressing and bath 3",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/window_kitchen/dimensions_south.svg",
+          "width": 1800,
+          "height": 4494
+        }
+      ]
+    },
+    {
+      "id": "oak",
+      "title": "Earlier - Option A - Oak and limestone",
+      "status": "Proposed — not approved",
+      "description": "Light oak cabinetry, a pale stone worktop and the existing peninsula. The former kitchen window is replaced by a three-door wall-cabinet run. A timber-framed mandir with a quiet stone backdrop sits beside the lounge sofa.",
+      "assumptions": [
+        "All changes are visualization proposals, not approved construction instructions.",
+        "The kitchen-to-OTS window is removed and its opening infilled in this proposal, making space for an approximately 1.67 m wide, 0.35 m deep three-door wall-cabinet run above the counter.",
+        "Closing the window removes a source of natural light and ventilation. The remaining glazed utility entrance is not assumed to satisfy ventilation requirements; daylight, extraction, wall infill, cabinet fixing and local requirements need professional/site review.",
+        "With user approval, the utility door and narrow adjacent window become one approximately 1.70 m two-panel glazed opening. One panel slides over the fixed panel.",
+        "The slider's approximately 0.77 m fully-open clear width, lintel, wall alterations, safety glazing, ventilation and waterproofing require professional/site review.",
+        "The mandir reuses the lounge-side cabinet footprint marked in the screenshot. Its altar and storage are provisional; no deity, religious orientation or ritual requirements have been assumed.",
+        "Mandir lighting is electric. No flame, incense or heat-source placement is specified beside the timber joinery and upholstered sofa.",
+        "The bed change is a reversible interpretation pending review: Bedroom 1's headboard is centred on the plan-top wall, left of the wardrobe. The existing bed and bedside sizes are retained.",
+        "The WC and shower are swapped within Bedroom 1's en-suite. Soil/waste connections, falls, waterproofing and service access require a plumber/site review; no service routing is designed.",
+        "Existing room geometry and furniture outside the kitchen, mandir, Bedroom 1 bed group and its en-suite WC/shower remain from the v001 baseline."
+      ],
+      "views": [
+        {
+          "id": "kitchen",
+          "title": "Kitchen from dining",
+          "description": "The OTS window is infilled for wall cabinets; the sliding-glass utility connection remains.",
+          "room": "Kitchen",
+          "src": "images/oak/kitchen.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "kitchen_detail",
+          "title": "Wall cabinets and utility slider",
+          "description": "Three-door wall storage replaces the window. The glass slider remains partly open; ventilation and dimensions need site review.",
+          "room": "Kitchen",
+          "src": "images/oak/kitchen_detail.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "mandir",
+          "title": "Mandir beside the lounge sofa",
+          "description": "Reuses the lounge-side cabinet. Deity and ritual details are left for family input.",
+          "room": "Mandir",
+          "src": "images/oak/mandir.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bedroom_1",
+          "title": "Bedroom 1 - centred bed",
+          "description": "Pending wall confirmation: bed rotated to the top wall in the screenshot, centred in the usable bay left of the wardrobe. Original bed and bedside sizes retained.",
+          "room": "Bedroom 1",
+          "src": "images/oak/bedroom_1.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bathroom_1",
+          "title": "En-suite 1 - WC and shower swapped",
+          "description": "WC now at the former shower end; shower and drain at the former WC end. Wide-angle review: use dimension sheets for proportions. Plumbing and waterproofing need site review.",
+          "room": "Bathroom 1",
+          "src": "images/oak/bathroom_1.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "dimensions_overview",
+          "title": "Whole-house dimension index",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/oak/dimensions_overview.svg",
+          "width": 1800,
+          "height": 5562
+        },
+        {
+          "id": "dimensions_north",
+          "title": "Kitchen, dining, bedroom 1 and bath 1",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/oak/dimensions_north.svg",
+          "width": 1800,
+          "height": 6257
+        },
+        {
+          "id": "dimensions_middle",
+          "title": "Family lounge, bedroom 2 and bath 2",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/oak/dimensions_middle.svg",
+          "width": 1800,
+          "height": 4488
+        },
+        {
+          "id": "dimensions_south",
+          "title": "Drawing room, bedroom 3, dressing and bath 3",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/oak/dimensions_south.svg",
+          "width": 1800,
+          "height": 4494
+        }
+      ]
+    },
+    {
+      "id": "sage",
+      "title": "Earlier - Option B - Sage and open entry",
+      "status": "Proposed — not approved",
+      "description": "Muted green cabinetry and pale stone, with the peninsula removed for a more open connection to dining. The former kitchen window is replaced by a three-door wall-cabinet run. The mandir uses a fluted timber backdrop.",
+      "assumptions": [
+        "All changes are visualization proposals, not approved construction instructions.",
+        "The kitchen-to-OTS window is removed and its opening infilled in this proposal, making space for an approximately 1.67 m wide, 0.35 m deep three-door wall-cabinet run above the counter.",
+        "Closing the window removes a source of natural light and ventilation. The remaining glazed utility entrance is not assumed to satisfy ventilation requirements; daylight, extraction, wall infill, cabinet fixing and local requirements need professional/site review.",
+        "With user approval, the utility door and narrow adjacent window become one approximately 1.70 m two-panel glazed opening. One panel slides over the fixed panel.",
+        "The slider's approximately 0.77 m fully-open clear width, lintel, wall alterations, safety glazing, ventilation and waterproofing require professional/site review.",
+        "The mandir reuses the lounge-side cabinet footprint marked in the screenshot. Its altar and storage are provisional; no deity, religious orientation or ritual requirements have been assumed.",
+        "Mandir lighting is electric. No flame, incense or heat-source placement is specified beside the timber joinery and upholstered sofa.",
+        "The bed change is a reversible interpretation pending review: Bedroom 1's headboard is centred on the plan-top wall, left of the wardrobe. The existing bed and bedside sizes are retained.",
+        "The WC and shower are swapped within Bedroom 1's en-suite. Soil/waste connections, falls, waterproofing and service access require a plumber/site review; no service routing is designed.",
+        "Existing room geometry and furniture outside the kitchen, mandir, Bedroom 1 bed group and its en-suite WC/shower remain from the v001 baseline."
+      ],
+      "views": [
+        {
+          "id": "kitchen",
+          "title": "Kitchen from dining",
+          "description": "The OTS window is infilled for wall cabinets; the sliding-glass utility connection remains.",
+          "room": "Kitchen",
+          "src": "images/sage/kitchen.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "kitchen_detail",
+          "title": "Wall cabinets and utility slider",
+          "description": "Three-door wall storage replaces the window. The glass slider remains partly open; ventilation and dimensions need site review.",
+          "room": "Kitchen",
+          "src": "images/sage/kitchen_detail.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "mandir",
+          "title": "Mandir beside the lounge sofa",
+          "description": "Reuses the lounge-side cabinet. Deity and ritual details are left for family input.",
+          "room": "Mandir",
+          "src": "images/sage/mandir.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bedroom_1",
+          "title": "Bedroom 1 - centred bed",
+          "description": "Pending wall confirmation: bed rotated to the top wall in the screenshot, centred in the usable bay left of the wardrobe. Original bed and bedside sizes retained.",
+          "room": "Bedroom 1",
+          "src": "images/sage/bedroom_1.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "bathroom_1",
+          "title": "En-suite 1 - WC and shower swapped",
+          "description": "WC now at the former shower end; shower and drain at the former WC end. Wide-angle review: use dimension sheets for proportions. Plumbing and waterproofing need site review.",
+          "room": "Bathroom 1",
+          "src": "images/sage/bathroom_1.png",
+          "width": 1100,
+          "height": 800
+        },
+        {
+          "id": "dimensions_overview",
+          "title": "Whole-house dimension index",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/sage/dimensions_overview.svg",
+          "width": 1800,
+          "height": 5562
+        },
+        {
+          "id": "dimensions_north",
+          "title": "Kitchen, dining, bedroom 1 and bath 1",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/sage/dimensions_north.svg",
+          "width": 1800,
+          "height": 6095
+        },
+        {
+          "id": "dimensions_middle",
+          "title": "Family lounge, bedroom 2 and bath 2",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/sage/dimensions_middle.svg",
+          "width": 1800,
+          "height": 4488
+        },
+        {
+          "id": "dimensions_south",
+          "title": "Drawing room, bedroom 3, dressing and bath 3",
+          "description": "Dimensioned model plan and measurement schedule. Open the full vector image and zoom for legible values. Inferred and provisional values are labeled; this is not a site survey.",
+          "room": "Dimensions",
+          "src": "images/sage/dimensions_south.svg",
+          "width": 1800,
+          "height": 4494
+        }
+      ]
+    }
+  ]
+}

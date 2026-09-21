@@ -1,0 +1,126 @@
+<!doctype html>
+<!--
+THESIS: Family review through the actual renders, not a marketing page.
+OWN-WORLD: Cool light gray, charcoal system type, quiet borders, generous photo surfaces.
+STORY: Choose a proposal, browse rooms, enlarge a render, compare with the baseline.
+FIRST VIEWPORT: Compact title, collection selector, room filter, then full-width imagery.
+FORM: Familiar photo gallery, explicitly pinned by the brief; no concept randomization.
+3D EXTENSION: A user-initiated, full-width cutaway viewer inherits this quiet gallery;
+local GLB and viewer assets, visible loading/recovery, touch and keyboard controls.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <title>Home renovation · Render gallery</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#gallery">Skip to renders</a>
+  <header class="page-header">
+    <h1>Home renovation</h1>
+    <p>Render gallery <span aria-hidden="true">·</span> <span id="hosting-mode">Public gallery</span></p>
+  </header>
+  <main>
+    <div id="load-state" role="status">Loading the render collections…</div>
+    <button id="retry" type="button" hidden>Try loading again</button>
+    <noscript><p>This gallery needs JavaScript to display the render collections. Enable JavaScript and reload.</p></noscript>
+    <div id="content" hidden>
+      <div class="browse-controls">
+        <div class="field">
+          <label for="collection">Collection / proposal</label>
+          <select id="collection"></select>
+        </div>
+        <div class="field">
+          <label for="room">Room / view</label>
+          <select id="room"></select>
+        </div>
+        <a class="baseline-link" href="#gallery" id="baseline-link">View baseline</a>
+      </div>
+      <section id="gallery" tabindex="-1" aria-labelledby="collection-title">
+        <div class="collection-heading">
+          <h2 id="collection-title"></h2>
+          <p id="collection-status" class="status-label"></p>
+        </div>
+        <p id="collection-description" class="description"></p>
+        <details id="assumptions" hidden>
+          <summary>Assumptions to review</summary>
+          <ul id="assumption-list"></ul>
+        </details>
+        <section id="model-section" class="model-section" aria-labelledby="model-heading" hidden>
+          <div class="model-heading">
+            <div>
+              <h3 id="model-heading">Explore in 3D</h3>
+              <p id="model-summary" class="description"></p>
+            </div>
+            <button id="load-model" type="button">Load interactive model</button>
+          </div>
+          <p id="model-state" class="model-state" role="status" aria-live="polite"></p>
+          <div id="model-stage" class="model-stage">
+            <!-- The section stays hidden until app.js assigns its validated poster URL. -->
+            <img id="model-poster" alt="Rendered cutaway of the sketch kitchen" width="1120" height="840">
+            <div id="model-mount"></div>
+            <button id="exit-model-fullscreen" class="exit-model-fullscreen" type="button">Exit full screen</button>
+          </div>
+          <div id="model-controls" class="model-controls" aria-label="3D view controls" hidden>
+            <button type="button" data-orbit="35deg 55deg auto" id="reset-model">Reset view</button>
+            <button type="button" data-orbit="0deg 0deg auto">Top</button>
+            <button type="button" data-orbit="0deg 65deg auto">Entry side</button>
+            <button type="button" data-orbit="90deg 65deg auto">Right side</button>
+            <button id="zoom-in-model" type="button" aria-label="Zoom in on the model">Zoom in</button>
+            <button id="zoom-out-model" type="button" aria-label="Zoom out from the model">Zoom out</button>
+            <button id="fullscreen-model" type="button">Full screen</button>
+            <button id="unload-model" type="button">Unload 3D</button>
+          </div>
+          <p id="model-help" class="model-help">Drag to rotate; scroll or pinch to zoom. Right-drag or use two fingers to pan. Focus the model and use arrow keys to rotate, or use the view buttons.</p>
+          <p class="model-note">Interactive cutaway: ceilings omitted, exterior walls lowered, materials and lighting simplified. Use the rendered reference below for the finished lighting. This is not a collision-aware walkthrough or a construction model.</p>
+          <p class="model-note"><a href="vendor/third-party-notices.txt" target="_blank" rel="noopener">Viewer open-source notices <span class="sr-only">(new tab)</span></a></p>
+        </section>
+        <p id="view-count" class="view-count" role="status"></p>
+        <div id="photos" class="photos"></div>
+      </section>
+    </div>
+    <footer>
+      <p>Concept renders, not construction drawings. Proposed designs are not approved.</p>
+      <details>
+        <summary>About this gallery &amp; sharing</summary>
+        <p id="access-note">This gallery is public by the owner's choice. Anyone can view and download the published images and interactive 3D geometry. No sign-in is required. Editable Blender scenes, original reference files and private project history are not included in this website.</p>
+        <p>Publish only the generated <code>gallery\dist</code> directory, never the repository, editable Blender scenes, or reference files. The selected web GLB is intentionally included.</p>
+        <p>The interactive viewer is bundled locally; loading it does not contact a model-hosting service. It requires a browser with WebGL support. If unavailable, the rendered reference remains usable.</p>
+        <p>From the repository root on Windows, build with <code>py -3 scripts\build_gallery.py</code>. Preview with <code>py -3 -m http.server 8000 --bind 127.0.0.1 --directory gallery\dist</code>, then open <code>http://127.0.0.1:8000</code>. On other systems, use <code>python3</code> instead of <code>py -3</code>. Rebuild after changing renders or manifests.</p>
+        <p>Missing proposal manifests are omitted. If a manifest reports a generation state, it must be <code>complete</code>; unfinished generations fail the build and leave the previous gallery unchanged.</p>
+        <p>Tap a render to enlarge it. Use Previous / Next or the left / right arrow keys; Escape closes the viewer. Native browser zoom remains available. Open the full image for browser-native zoom or saving.</p>
+      </details>
+    </footer>
+  </main>
+  <dialog id="viewer" aria-labelledby="viewer-title" aria-describedby="viewer-caption">
+    <div class="viewer-toolbar">
+      <p id="viewer-position" role="status"></p>
+      <a id="open-sheet" target="_blank" rel="noopener" hidden>Open full-size sheet</a>
+      <button id="close-viewer" type="button" autofocus>Close <span aria-hidden="true">×</span></button>
+    </div>
+    <div class="viewer-stage">
+      <p id="viewer-image-state" role="status"></p>
+      <!-- Intentionally hidden until the selected image URL has loaded. -->
+      <img id="viewer-image" alt="" hidden>
+    </div>
+    <div class="viewer-caption">
+      <h2 id="viewer-title"></h2>
+      <p id="viewer-status" class="status-label"></p>
+      <p id="viewer-caption"></p>
+      <div class="image-links">
+        <a id="open-image" target="_blank" rel="noopener">Open full image <span class="sr-only">(new tab)</span></a>
+        <a id="download-image" download>Download PNG</a>
+      </div>
+    </div>
+    <div class="viewer-navigation" aria-label="Image navigation">
+      <button id="previous" type="button">← Previous</button>
+      <button id="next" type="button">Next →</button>
+    </div>
+  </dialog>
+</body>
+</html>
