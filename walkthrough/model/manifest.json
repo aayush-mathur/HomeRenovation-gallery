@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "source_sha256": "f29c50cb5de6632916f364cef7eb2c9e3cfc60566d167c8aaa2265d306712579",
+  "model_sha256": "55cf4ee2974739b24935a2c3934f43304d36046b5e713c67fe19eaf5c03284de",
+  "navigation_sha256": "f7fa2f44334e1ec5db668bef6a0f9220254ee6c75fda012dd99e6fd904072895",
+  "bytes": 12331688,
+  "units": "meters",
+  "eye_height": 1.6,
+  "triangles": 231012,
+  "source": "house_furnished_v005.blend",
+  "scope": "Public furnished-house walkthrough, approved by the owner",
+  "limitations": "Visualization only. Simplified lighting and materials; mirrors are not real reflections."
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- THESIS: Stand inside the actual house, not another orbit configurator.
+OWN-WORLD: Inherit the gallery's slate text, cool white controls and blue focus; the house fills the stage.
+STORY: Choose a real room, look around at eye height, then walk safely.
+FIRST VIEWPORT: Compact room toolbar above an uninterrupted full-height interior; quiet help below.
+FORM: Brief-pinned Experience extension, not a new visual identity. No decorative panels over the house. -->
+<html lang="en" data-hosting="public">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>House walkthrough</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css?v=70e898f038f22381">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+  <script type="module" src="./app.js?v=8a1727172d31013b"></script>
+</head>
+<body>
+  <header>
+    <div class="title"><h1>House walkthrough</h1><span id="model-version">Public walkthrough</span></div>
+    <div class="room-field"><label for="room">Jump to room <span class="note">(optional)</span></label><select id="room" disabled><option>Loading rooms…</option></select></div>
+    <button id="reset" disabled>Reset position</button>
+    <button id="capture" disabled>Mouse look</button>
+    <button id="help" aria-expanded="false" aria-controls="instructions">Controls</button>
+  </header>
+  <main id="stage" aria-label="Full-house first-person walkthrough">
+    <canvas id="view" tabindex="0" aria-label="House view. Drag to look. WASD or arrow keys to walk. Q and E turn, R and F look up and down. Escape releases mouse." aria-describedby="quick-help"></canvas>
+    <div id="loading" role="status" aria-live="polite">
+      <h2 id="loading-title">Opening the full house</h2>
+      <p id="loading-detail">Loading the furnished house. Nothing is uploaded.</p>
+      <button id="retry" hidden>Retry loading</button>
+    </div>
+    <div id="instructions" hidden>
+      <h2>Explore at eye level</h2>
+      <p><strong>Look:</strong> drag anywhere in the view. On desktop, Mouse look captures the pointer; <kbd>Esc</kbd> releases it.</p>
+      <p><strong>Walk:</strong> click or tab into the view, then use <kbd>W A S D</kbd> or arrow keys. <kbd>Q E</kbd> turn; <kbd>R F</kbd> look up/down. Touch: drag to look and hold a movement arrow.</p>
+      <p><strong>Walk between rooms:</strong> interior doors are held open on their real hinges, with leaves and handles intact. Walk through doorways normally; the room menu is just an optional shortcut.</p>
+      <p><strong>Narrow aisles:</strong> use sideways steps around beds and furniture. The preview uses a 40 cm round body; the middle bedroom's roughly 45 cm bed-end gap is tight, not an accessible-design approval. Reset position returns to your selected starting room.</p>
+      <p class="note">1.6 m eye height. Simplified real-time materials and lighting, not Cycles. Mirrors are material approximations, not real reflections. Provisional geometry remains unverified. Exterior exits, unmodeled stairs and the floorless rear OTS are blocked.</p>
+      <button id="close-help">Back to house</button>
+    </div>
+    <div id="touch-pad" aria-label="Movement controls">
+      <button data-move="forward" aria-label="Walk forward">↑</button>
+      <button data-move="left" aria-label="Step left">←</button>
+      <button data-move="back" aria-label="Walk backward">↓</button>
+      <button data-move="right" aria-label="Step right">→</button>
+    </div>
+  </main>
+  <footer><p id="quick-help"><span class="desktop-help">Drag to look · WASD / arrows to walk · interior doors held open</span><span class="touch-help">Drag to look · hold arrows to walk · doors open</span></p><p id="status" role="status">Preparing walkthrough</p></footer>
+  <noscript>This walkthrough needs JavaScript and WebGL. No data is uploaded.</noscript>
+</body>
+</html>

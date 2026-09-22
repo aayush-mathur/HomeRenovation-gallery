@@ -2,6 +2,82 @@
   "version": 1,
   "collections": [
     {
+      "id": "furnished-v005",
+      "title": "Furnished house - v005",
+      "status": "Proposed furnishings",
+      "description": "Current house with a middle-room study and mirror, hall TV/home theatre, and room-by-room furnishings. Use Walk inside the furnished house for continuous first-person navigation.",
+      "assumptions": [
+        "Furniture and finishes are visualization proposals, not product or construction specifications.",
+        "Existing kitchen, beams and the corrected dining lightwell are retained.",
+        "The walkthrough uses simplified real-time materials; these renders show Cycles lighting."
+      ],
+      "views": [
+        {
+          "id": "F5_01_middle_study",
+          "title": "Middle room - separate study nook",
+          "description": "Middle room - separate study nook",
+          "room": "Middle room",
+          "src": "images/furnished-v005/F5_01_middle_study-429b8b9b53900e53.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "F5_02_middle_mirror",
+          "title": "Middle room - dressing mirror and wardrobe",
+          "description": "Middle room - dressing mirror and wardrobe",
+          "room": "Middle room",
+          "src": "images/furnished-v005/F5_02_middle_mirror-7ab9f700a5fb7381.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "F5_03_hall_theatre",
+          "title": "Hall - television and home theatre",
+          "description": "Hall - television and home theatre",
+          "room": "Hall",
+          "src": "images/furnished-v005/F5_03_hall_theatre-2bf2c1bbe81cd7c9.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "F5_04_back_bedroom",
+          "title": "Back bedroom - layered textiles and bedside lighting",
+          "description": "Back bedroom - layered textiles and bedside lighting",
+          "room": "Back bedroom",
+          "src": "images/furnished-v005/F5_04_back_bedroom-8a5ad53e3dfe1bc0.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "F5_05_front_bedroom",
+          "title": "Front bedroom - everyday detail",
+          "description": "Front bedroom - everyday detail",
+          "room": "Front bedroom",
+          "src": "images/furnished-v005/F5_05_front_bedroom-62f79c14b30a7082.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "F5_06_drawing",
+          "title": "Drawing room - conversation seating",
+          "description": "Drawing room - conversation seating",
+          "room": "Drawing room",
+          "src": "images/furnished-v005/F5_06_drawing-3c098508c45883c9.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "F5_07_dining",
+          "title": "Dining - table setting below retained lightwell",
+          "description": "Dining - table setting below retained lightwell",
+          "room": "Dining",
+          "src": "images/furnished-v005/F5_07_dining-9b56f83762fe0bba.png",
+          "width": 1120,
+          "height": 840
+        }
+      ]
+    },
+    {
       "id": "baseline",
       "title": "Baseline · existing model",
       "status": "Baseline reference",
@@ -836,5 +912,6 @@
         }
       ]
     }
-  ]
+  ],
+  "walkthrough": "walkthrough/index.html"
 }
