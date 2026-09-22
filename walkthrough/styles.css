@@ -26,6 +26,15 @@ p { margin: 0; }
 #instructions p { margin-bottom: 16px; }
 kbd { font: inherit; font-size: .9em; font-weight: 600; white-space: nowrap; }
 footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 8px 20px max(8px, env(safe-area-inset-bottom)); border-top: 1px solid #c0cbd3; }
+#lens-controls { display: grid; grid-template-columns: auto minmax(90px, 180px) 100px auto; align-items: center; gap: 10px; }
+.lens-equivalent { display: block; font-size: .65rem; font-weight: 400; }
+.lens-track { min-width: 0; }
+#lens { display: block; width: 100%; height: 44px; margin: 0; accent-color: #226b9b; cursor: pointer; }
+#lens:disabled { cursor: default; }
+#lens-hint { display: flex; justify-content: space-between; font-size: .65rem; margin-top: -8px; pointer-events: none; }
+#lens-value { font-variant-numeric: tabular-nums; white-space: nowrap; }
+#reset-lens { font-size: .8rem; padding-inline: 8px; }
+footer > p { align-self: center; }
 #touch-pad { display: none; position: absolute; left: 16px; bottom: 16px; grid-template-columns: repeat(3, 48px); grid-template-rows: repeat(2, 48px); gap: 6px; }
 #touch-pad button { font-size: 1.4rem; padding: 0; touch-action: none; user-select: none; box-shadow: 0 2px 8px #26333f20; }
 #touch-pad button:first-child { grid-column: 2; }
@@ -54,5 +63,6 @@ footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wr
   #instructions { inset: 12px; max-width: none; max-height: calc(100% - 24px); z-index: 2; padding: 18px; }
   footer { padding-inline: 12px; gap: 2px; font-size: .75rem; }
   footer p { flex-basis: 100%; }
+  #lens-controls { width: 100%; grid-template-columns: auto minmax(70px, 1fr) 94px auto; gap: 6px; }
 }
 @media (max-height: 450px) { header { padding-block: 5px; } .title { flex-basis: auto; } footer { padding-block: 3px; } }

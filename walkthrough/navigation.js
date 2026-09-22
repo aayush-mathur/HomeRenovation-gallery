@@ -1,3 +1,23 @@
+// 35 mm-equivalent rectilinear lens: a fixed 36 mm horizontal film gate.
+export function lensProjection(aspect, focalLength = null) {
+  if (!Number.isFinite(aspect) || aspect <= 0) throw new RangeError('Invalid viewport aspect');
+  const auto = focalLength === null;
+  if (!auto && (!Number.isFinite(focalLength) || focalLength < 16 || focalLength > 70)) {
+    throw new RangeError('Lens must be between 16 and 70 mm');
+  }
+  const fov = auto
+    ? Math.min(62, 2 * Math.atan(1 / aspect) * 180 / Math.PI)
+    : 2 * Math.atan(36 / (2 * focalLength * aspect)) * 180 / Math.PI;
+  return { fov, focalLength: auto ? 18 / (aspect * Math.tan(fov * Math.PI / 360)) : focalLength, auto };
+}
+
+export function applyLens(camera, focalLength = null) {
+  const lens = lensProjection(camera.aspect, focalLength);
+  camera.fov = lens.fov;
+  camera.updateProjectionMatrix();
+  return lens;
+}
+
 export function isSafe(nav, x, y) {
   const col = Math.floor((x - nav.origin[0]) / nav.step);
   const row = Math.floor((y - nav.origin[1]) / nav.step);

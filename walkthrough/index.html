@@ -11,9 +11,9 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
   <meta name="color-scheme" content="light">
   <title>House walkthrough</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="./styles.css?v=bda49c14211f6957">
+  <link rel="stylesheet" href="./styles.css?v=dbd078e9a0b1c960">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script type="module" src="./app.js?v=5e934ec5f16afe8c"></script>
+  <script type="module" src="./app.js?v=97c77e4877881a81"></script>
 </head>
 <body>
   <header>
@@ -35,6 +35,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
       <h2>Explore at eye level</h2>
       <p><strong>Look:</strong> drag anywhere in the view. On desktop, Mouse look captures the pointer; <kbd>Esc</kbd> releases it.</p>
       <p><strong>Full screen:</strong> use the toolbar button to expand the walkthrough. Exit full screen or <kbd>Esc</kbd> returns to the normal view.</p>
+      <p id="lens-help"><strong>Lens:</strong> lower millimetres give a wider view without moving you. The 16–70 mm slider uses 35 mm-equivalent focal lengths with a fixed 36 mm horizontal film gate; viewport height follows its aspect ratio. Auto preserves the original 62° vertical view, capped at 90° horizontally. Reset lens restores Auto, not your position. Wide views stretch edges, especially in portrait; this is not a simulation of human eyesight. Release Mouse look with <kbd>Esc</kbd> before using the slider.</p>
       <p><strong>Walk:</strong> click or tab into the view, then use <kbd>W A S D</kbd> or arrow keys. <kbd>Q E</kbd> turn; <kbd>R F</kbd> look up/down. Touch: drag to look and hold a movement arrow.</p>
       <p><strong>Walk between rooms:</strong> interior doors are held open on their real hinges, with leaves and handles intact. Walk through doorways normally; the room menu is just an optional shortcut.</p>
       <p><strong>Storage opening is disabled:</strong> cupboards and drawers stay in their closed, fixed positions while you explore. Click/tap only focuses the view; dragging looks around. Furniture and room layouts are retained.</p>
@@ -49,7 +50,15 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
       <button data-move="right" aria-label="Step right">→</button>
     </div>
   </main>
-  <footer><p id="quick-help"><span class="desktop-help">Drag to look · WASD / arrows to walk · storage opening disabled</span><span class="touch-help">Drag to look · hold arrows to walk · storage stays closed</span></p><p id="status" role="status">Preparing walkthrough</p></footer>
+  <footer>
+    <div id="lens-controls">
+      <label for="lens">Lens <span class="lens-equivalent">35 mm eq.</span></label>
+      <div class="lens-track"><input id="lens" type="range" min="16" max="70" step="0.1" value="18" aria-describedby="lens-hint lens-help" disabled><span id="lens-hint"><span>Wider view</span><span>Closer view</span></span></div>
+      <output id="lens-value" for="lens">Auto</output>
+      <button id="reset-lens" disabled>Reset lens</button>
+    </div>
+    <p id="quick-help"><span class="desktop-help">Drag to look · WASD / arrows to walk · storage opening disabled</span><span class="touch-help">Drag to look · hold arrows to walk · storage stays closed</span></p><p id="status" role="status">Preparing walkthrough</p>
+  </footer>
   <noscript>This walkthrough needs JavaScript and WebGL. No data is uploaded.</noscript>
 </body>
 </html>

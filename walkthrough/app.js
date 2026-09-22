@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
-import { isSafe, move, movementVector, roomAt } from './navigation.js';
+import { isSafe, move, movementVector, roomAt, applyLens } from './navigation.js?lens=1';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';
@@ -15,6 +15,7 @@ let renderer, scene, camera, model, nav, manifest, frame, previous = 0;
 let yaw = 0, pitch = 0, ready = false, dragging = null, loadController, observer;
 let selected = 'kitchen', position = [0, 0], disposed = false, blocked = false, contextLost = false;
 let currentRoom = '';
+let focalLength = null, lens;
 const movementKeys = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'KeyQ', 'KeyE', 'KeyR', 'KeyF']);
 
 function clearInput() {
@@ -69,7 +70,7 @@ function failure(error) {
     ? 'Check your connection and retry. If it persists, the published assets need attention.'
     : 'Check the local export and server, then retry.'}`;
   $('retry').hidden = false;
-  for (const id of ['room', 'reset', 'capture']) $(id).disabled = true;
+  for (const id of ['room', 'reset', 'capture', 'lens', 'reset-lens']) $(id).disabled = true;
   message('Preview unavailable · retry loading');
 }
 async function checkedFetch(path, signal) {
@@ -92,7 +93,7 @@ async function load() {
   $('loading').hidden = false; $('retry').hidden = true;
   $('loading-title').textContent = 'Opening the full house';
   $('loading-detail').textContent = 'Loading full-height house geometry. Nothing is uploaded.';
-  for (const id of ['room', 'reset', 'capture']) $(id).disabled = true;
+  for (const id of ['room', 'reset', 'capture', 'lens', 'reset-lens']) $(id).disabled = true;
   try {
     manifest = await (await checkedFetch('./model/manifest.json', signal)).json();
     if (manifest.layout_revision) $('clearance-note').textContent = 'The middle room keeps its full 2.061 m square bed. Furniture aisles remain tight; the 400 mm preview body is not an accessible-design approval.';
@@ -123,17 +124,22 @@ async function load() {
     ready = true;
     stage.dataset.state = 'ready';
     $('loading').hidden = true;
-    for (const id of ['room', 'reset', 'capture']) $(id).disabled = false;
+    for (const id of ['room', 'reset', 'capture', 'lens', 'reset-lens']) $(id).disabled = false;
   } catch (error) { if (error.name !== 'AbortError') failure(error); }
+}
+function updateLens() {
+  lens = applyLens(camera, focalLength);
+  const value = `${lens.focalLength.toFixed(1)} mm`;
+  $('lens-value').textContent = `${lens.auto ? 'Auto · ' : ''}${value}`;
+  $('lens').value = String(Math.min(70, Math.max(16, lens.focalLength)));
+  $('lens').setAttribute('aria-valuetext', `${lens.auto ? 'Auto, ' : ''}${value}, 35 mm equivalent`);
 }
 function resize() {
   const { width, height } = stage.getBoundingClientRect();
   if (!renderer || !height) return;
   renderer.setSize(width, height, false);
   camera.aspect = width / height;
-  // Cap horizontal FOV on ultrawide displays instead of stretching into fisheye.
-  camera.fov = Math.min(62, THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(45)) / camera.aspect)));
-  camera.updateProjectionMatrix();
+  updateLens();
 }
 function animate(time) {
   if (disposed) return;
@@ -168,6 +174,17 @@ function animate(time) {
 on($('retry'), 'click', () => renderer && !contextLost ? load() : location.reload());
 on(room, 'change', () => teleport(room.value));
 on($('reset'), 'click', () => teleport(selected));
+for (const type of ['pointerdown', 'focusin']) on($('lens-controls'), type, clearInput);
+on($('lens'), 'input', () => {
+  clearInput();
+  focalLength = Number($('lens').value);
+  updateLens();
+});
+on($('reset-lens'), 'click', () => {
+  clearInput();
+  focalLength = null;
+  updateLens();
+});
 on($('fullscreen'), 'click', async () => {
   release();
   $('fullscreen').disabled = true;
@@ -237,6 +254,7 @@ on(document, 'mousemove', event => {
 on(document, 'keydown', event => {
   if (event.code === 'Escape') { release(); if (!$('instructions').hidden) help(false); return; }
   if (!ready || !$('instructions').hidden || event.altKey || event.ctrlKey || event.metaKey) return;
+  if ($('lens-controls').contains(event.target)) return;
   if (document.activeElement !== canvas && document.pointerLockElement !== canvas) return;
   if (event.code === 'Space') {
     event.preventDefault();
@@ -279,7 +297,7 @@ window.walkthrough = { snapshot: () => ({
   safe: nav ? isSafe(nav, ...position) : false,
   pressed: keys.size + touches.size, dragging: Boolean(dragging),
   triangles: renderer?.info.render.triangles, calls: renderer?.info.render.calls,
-  fov: camera?.fov, eyeHeight: camera?.position.y,
+  fov: camera?.fov, aspect: camera?.aspect, lens, eyeHeight: camera?.position.y,
   storage: { enabled: false, mode: 'closed' },
 }), geometrySnapshot: () => {
   const meshes = [];
