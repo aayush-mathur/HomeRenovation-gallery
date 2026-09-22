@@ -2,21 +2,21 @@
   "version": 1,
   "collections": [
     {
-      "id": "layout-v008",
-      "title": "Flush dining wall - v008 draft",
+      "id": "layout-v009",
+      "title": "Flush upper wall, original basin niche - v009 draft",
       "status": "Draft previews",
-      "description": "Continuous dining-facing washbasin wall; entrance and privacy window retained. V007 room arrangement is unchanged. Furniture opening remains disabled.",
+      "description": "Only the upper dining wall is aligned; the basin, tap and mirror stay in their exact original recessed niche. Entrance, privacy window and v007 room arrangement remain unchanged. Furniture opening stays disabled.",
       "assumptions": [
         "800x600, 8-sample draft previews, not final lighting or construction approval.",
         "Static stability fallback; the reported interactive regression cause remains unconfirmed."
       ],
       "views": [
         {
-          "id": "V8_01_dining_wall",
-          "title": "Dining washbasin and entrance - flush wall",
+          "id": "V9_01_dining_upper_wall",
+          "title": "Dining upper wall - flush above retained washbasin niche",
           "description": "8-sample draft preview; not a final render.",
           "room": "Dining and entrance",
-          "src": "images/layout-v008/V8_01_dining_wall-cbbad02e0e370b65.png",
+          "src": "images/layout-v009/V9_01_dining_upper_wall-a4e567398ab862bc.png",
           "width": 800,
           "height": 600
         }
@@ -26,7 +26,7 @@
       "id": "furnished-v005",
       "title": "Furnished house - v005 (historical)",
       "status": "Historical proposal",
-      "description": "Seven preserved historical v005 renders, not the current v008 layout. Use the walkthrough for the current version.",
+      "description": "Seven preserved historical v005 renders, not the current v009 layout. Use the walkthrough for the current version.",
       "assumptions": [
         "Furniture and finishes are visualization proposals, not product or construction specifications.",
         "Existing kitchen, beams and the corrected dining lightwell are retained.",
