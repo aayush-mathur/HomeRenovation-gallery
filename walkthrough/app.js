@@ -165,6 +165,30 @@ function animate(time) {
 on($('retry'), 'click', () => renderer && !contextLost ? load() : location.reload());
 on(room, 'change', () => teleport(room.value));
 on($('reset'), 'click', () => teleport(selected));
+on($('fullscreen'), 'click', async () => {
+  release();
+  $('fullscreen').disabled = true;
+  try {
+    if (document.fullscreenElement) {
+      await document.exitFullscreen();
+    } else {
+      if (!document.documentElement.requestFullscreen) throw new Error('Unavailable');
+      await document.documentElement.requestFullscreen();
+    }
+  } catch {
+    message('Full screen is unavailable here · open the walkthrough in a browser that supports it');
+  } finally {
+    $('fullscreen').disabled = false;
+  }
+});
+on(document, 'fullscreenchange', () => {
+  release();
+  const active = Boolean(document.fullscreenElement);
+  $('fullscreen').textContent = active ? 'Exit full screen' : 'Full screen';
+  $('fullscreen').setAttribute('aria-pressed', String(active));
+  resize();
+  if (ready) canvas.focus({ preventScroll: true });
+});
 function help(open) {
   release();
   $('instructions').hidden = !open;

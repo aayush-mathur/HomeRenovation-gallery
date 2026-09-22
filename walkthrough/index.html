@@ -11,9 +11,9 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
   <meta name="color-scheme" content="light">
   <title>House walkthrough</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="./styles.css?v=70e898f038f22381">
+  <link rel="stylesheet" href="./styles.css?v=40d3df10061fbd48">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script type="module" src="./app.js?v=8a1727172d31013b"></script>
+  <script type="module" src="./app.js?v=b74fc21d3e3b6f9b"></script>
 </head>
 <body>
   <header>
@@ -21,6 +21,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <div class="room-field"><label for="room">Jump to room <span class="note">(optional)</span></label><select id="room" disabled><option>Loading rooms…</option></select></div>
     <button id="reset" disabled>Reset position</button>
     <button id="capture" disabled>Mouse look</button>
+    <button id="fullscreen" aria-pressed="false">Full screen</button>
     <button id="help" aria-expanded="false" aria-controls="instructions">Controls</button>
   </header>
   <main id="stage" aria-label="Full-house first-person walkthrough">
@@ -33,6 +34,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <div id="instructions" hidden>
       <h2>Explore at eye level</h2>
       <p><strong>Look:</strong> drag anywhere in the view. On desktop, Mouse look captures the pointer; <kbd>Esc</kbd> releases it.</p>
+      <p><strong>Full screen:</strong> use the toolbar button to expand the walkthrough. Exit full screen or <kbd>Esc</kbd> returns to the normal view.</p>
       <p><strong>Walk:</strong> click or tab into the view, then use <kbd>W A S D</kbd> or arrow keys. <kbd>Q E</kbd> turn; <kbd>R F</kbd> look up/down. Touch: drag to look and hold a movement arrow.</p>
       <p><strong>Walk between rooms:</strong> interior doors are held open on their real hinges, with leaves and handles intact. Walk through doorways normally; the room menu is just an optional shortcut.</p>
       <p><strong>Narrow aisles:</strong> use sideways steps around beds and furniture. The preview uses a 40 cm round body; the middle bedroom's roughly 45 cm bed-end gap is tight, not an accessible-design approval. Reset position returns to your selected starting room.</p>

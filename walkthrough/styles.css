@@ -37,12 +37,13 @@ footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wr
   header { padding: 10px 12px; gap: 8px; }
   .title { flex: 1 1 100%; display: flex; align-items: baseline; justify-content: space-between; }
   h1 { font-size: 1.05rem; }
-  .room-field { flex: 1; min-width: 0; }
+  .room-field { flex: 1 1 100%; min-width: 0; }
   .room-field label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
   select { width: 100%; min-width: 0; }
   #capture { display: none; }
   #reset { font-size: .8rem; padding-inline: 8px; }
   #help { font-size: .8rem; padding-inline: 8px; }
+  #fullscreen { font-size: .8rem; padding-inline: 8px; }
   #touch-pad { display: grid; }
   .touch-help { display: inline; }
   .desktop-help { display: none; }
