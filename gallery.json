@@ -5,7 +5,7 @@
       "id": "layout-v011",
       "title": "Independent electronics provisions - v011 draft",
       "status": "Draft previews",
-      "description": "Five indoor AC provisions, candidate robot dock, network/recording cabinet, Wi-Fi and entry/media details. Washer remains UNPLACED: no kitchen installation. Inverter/battery, AV receiver and outdoor AC locations remain unresolved. Existing layout stays intact; not installation approval.",
+      "description": "Five indoor AC provisions, candidate robot dock, network/recording cabinet, Wi-Fi and entry/media details. Washer is DEFERRED BY USER, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC locations remain unresolved. Existing layout stays intact; not installation approval.",
       "assumptions": [
         "800x600, 8-sample draft previews, not final lighting or construction approval.",
         "Static stability fallback; the reported interactive regression cause remains unconfirmed."

@@ -13,7 +13,7 @@
   },
   "scope": "Public v011 walkthrough, approved by the owner",
   "storage_mode": "closed",
-  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer, inverter/battery, AV receiver and outdoor AC units are unplaced. No electrical or fire-safety certification.",
+  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification.",
   "electronics": {
     "status": "Schematic proposals, not installed or certified",
     "ac_indoor_units": 5,
@@ -29,7 +29,7 @@
     "unplaced": [
       {
         "id": "front_load_washer",
-        "status": "UNPLACED - user rejects kitchen placement"
+        "status": "DEFERRED BY USER - excluded from the current batch"
       },
       {
         "id": "inverter_battery",
