@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { isSafe, move, movementVector, roomAt } from './navigation.js';
+import { StorageController } from './storage.js';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';
@@ -11,7 +12,7 @@ const canvas = $('view'), stage = $('stage'), room = $('room'), status = $('stat
 const lifetime = new AbortController();
 const on = (target, type, handler, options = {}) => target.addEventListener(type, handler, { ...options, signal: lifetime.signal });
 const keys = new Set(), touches = new Map();
-let renderer, scene, camera, model, nav, manifest, frame, previous = 0;
+let renderer, scene, camera, model, nav, manifest, frame, previous = 0, storage;
 let yaw = 0, pitch = 0, ready = false, dragging = null, loadController, observer;
 let selected = 'kitchen', position = [0, 0], disposed = false, blocked = false, contextLost = false;
 let currentRoom = '';
@@ -36,6 +37,11 @@ function look(dx, dy) {
 function teleport(id) {
   const preset = nav.presets.find(p => p.id === id);
   if (!preset || !isSafe(nav, ...preset.position)) throw new Error('Room has no validated safe position.');
+  if (storage && !storage.canStand(...preset.position)) {
+    room.value = selected;
+    message('Open storage blocks that starting position. Close it or walk to a clear spot.');
+    return;
+  }
   release();
   selected = id;
   position = preset.position.slice(0, 2);
@@ -50,6 +56,8 @@ function teleport(id) {
   message(`${preset.name} · eye height 1.6 m`);
 }
 function disposeModel() {
+  storage = null;
+  $('storage-panel').hidden = true;
   if (!model) return;
   scene.remove(model);
   model.traverse(obj => {
@@ -95,8 +103,9 @@ async function load() {
   for (const id of ['room', 'reset', 'capture']) $(id).disabled = true;
   try {
     manifest = await (await checkedFetch('./model/manifest.json', signal)).json();
+    if (manifest.layout_revision) $('clearance-note').textContent = 'The middle room keeps its full 2.061 m square bed. Its roughly 480 mm wardrobe/bed aisle is tight; the 400 mm preview body is not an accessible-design approval.';
     const navBytes = await (await checkedFetch(`./model/navigation.json?v=${manifest.navigation_sha256}`, signal)).arrayBuffer();
-    $('model-version').textContent = `${hostingLabel} · ${manifest.source.match(/v\d+/)?.[0] || 'house'}`;
+    $('model-version').textContent = `${hostingLabel} · ${manifest.source.split(/[\\/]/).at(-1).match(/v\d+/)?.[0] || 'house'}`;
     await verifyHash(navBytes, manifest.navigation_sha256, 'Navigation');
     nav = JSON.parse(new TextDecoder().decode(navBytes));
     if (!nav.presets?.length || nav.cells.length !== nav.width * nav.height) throw new Error('Navigation export is incomplete.');
@@ -115,6 +124,8 @@ async function load() {
       }
     });
     scene.add(model);
+    storage = new StorageController(model, camera, manifest.storage, () => ({ position, radius: nav.radius }), message);
+    $('storage-panel').hidden = storage.actions.size === 0;
     room.replaceChildren(...nav.presets.map(p => new Option(p.name, p.id)));
     teleport(nav.presets.some(p => p.id === selected) ? selected : nav.presets[0].id);
     ready = true;
@@ -149,7 +160,7 @@ function animate(time) {
     const forward = down('KeyW') + down('ArrowUp') + touch('forward') - down('KeyS') - down('ArrowDown') - touch('back');
     const sideways = down('KeyD') + down('ArrowRight') + touch('right') - down('KeyA') - down('ArrowLeft') - touch('left');
     const [dx, dy] = movementVector(forward, sideways, yaw, dt);
-    const next = move(nav, position, dx, dy);
+    const next = move(nav, position, dx, dy, (x, y) => !storage || storage.canStand(x, y));
     const hit = Math.hypot(dx, dy) > 0 && Math.hypot(next[0] - position[0], next[1] - position[1]) < Math.hypot(dx, dy) * .2;
     const location = roomAt(nav, next);
     if (hit && !blocked) message('Wall or furniture · turn or sidestep to follow the clear aisle');
@@ -158,6 +169,7 @@ function animate(time) {
     blocked = hit;
     position = next;
     camera.position.set(position[0], 1.6, -position[1]);
+    storage?.update(dt);
   }
   renderer.render(scene, camera);
 }
@@ -165,6 +177,7 @@ function animate(time) {
 on($('retry'), 'click', () => renderer && !contextLost ? load() : location.reload());
 on(room, 'change', () => teleport(room.value));
 on($('reset'), 'click', () => teleport(selected));
+on($('storage-action'), 'click', () => storage?.activate());
 on($('fullscreen'), 'click', async () => {
   release();
   $('fullscreen').disabled = true;
@@ -192,6 +205,7 @@ on(document, 'fullscreenchange', () => {
 function help(open) {
   release();
   $('instructions').hidden = !open;
+  $('storage-panel').hidden = open || !storage?.actions.size;
   $('help').setAttribute('aria-expanded', String(open));
   if (open) $('close-help').focus(); else $('help').focus();
 }
@@ -215,25 +229,42 @@ on(canvas, 'pointerdown', event => {
   if (!ready || !$('instructions').hidden || event.button !== 0) return;
   canvas.focus({ preventScroll: true });
   if (document.pointerLockElement !== canvas) {
-    dragging = { id: event.pointerId, x: event.clientX, y: event.clientY };
+    dragging = { id: event.pointerId, x: event.clientX, y: event.clientY, distance: 0 };
     canvas.setPointerCapture(event.pointerId);
   }
 });
 on(canvas, 'pointermove', event => {
+  storage?.pointerAt(event.clientX, event.clientY, canvas.getBoundingClientRect());
   if (!dragging || dragging.id !== event.pointerId) return;
+  dragging.distance += Math.hypot(event.clientX - dragging.x, event.clientY - dragging.y);
   look(event.clientX - dragging.x, event.clientY - dragging.y);
   dragging.x = event.clientX; dragging.y = event.clientY;
 });
-for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) {
+on(canvas, 'pointerup', event => {
+  if (dragging?.id === event.pointerId && dragging.distance < 6) {
+    storage?.pointerAt(event.clientX, event.clientY, canvas.getBoundingClientRect());
+    const action = storage?.pick();
+    if (action) storage.activate(action);
+  } else if (document.pointerLockElement === canvas) {
+    storage?.pointer.set(0, 0); storage?.activate(storage.pick());
+  }
+  dragging = null;
+});
+for (const type of ['pointercancel', 'lostpointercapture']) {
   on(canvas, type, () => { dragging = null; });
 }
 on(document, 'mousemove', event => {
-  if (ready && document.pointerLockElement === canvas) look(event.movementX, event.movementY);
+  if (ready && document.pointerLockElement === canvas) { storage?.pointer.set(0, 0); look(event.movementX, event.movementY); }
 });
 on(document, 'keydown', event => {
   if (event.code === 'Escape') { release(); if (!$('instructions').hidden) help(false); return; }
   if (!ready || !$('instructions').hidden || event.altKey || event.ctrlKey || event.metaKey) return;
   if (document.activeElement !== canvas && document.pointerLockElement !== canvas) return;
+  if (event.code === 'Space') {
+    event.preventDefault();
+    if (!event.repeat) storage?.activate();
+    return;
+  }
   if (movementKeys.has(event.code)) { event.preventDefault(); keys.add(event.code); }
 });
 on(document, 'keyup', event => keys.delete(event.code));
@@ -272,6 +303,7 @@ window.walkthrough = { snapshot: () => ({
   pressed: keys.size + touches.size, dragging: Boolean(dragging),
   triangles: renderer?.info.render.triangles, calls: renderer?.info.render.calls,
   fov: camera?.fov, eyeHeight: camera?.position.y,
+  storage: storage?.snapshot(),
 }) };
 
 try {

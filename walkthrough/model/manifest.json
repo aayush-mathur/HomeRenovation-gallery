@@ -1,13 +1,4543 @@
 {
   "version": 1,
-  "source_sha256": "f29c50cb5de6632916f364cef7eb2c9e3cfc60566d167c8aaa2265d306712579",
-  "model_sha256": "55cf4ee2974739b24935a2c3934f43304d36046b5e713c67fe19eaf5c03284de",
-  "navigation_sha256": "f7fa2f44334e1ec5db668bef6a0f9220254ee6c75fda012dd99e6fd904072895",
-  "bytes": 12331688,
+  "source_sha256": "18e1e70d49b177e842a9212c525d84a0bd4dbbd840f6d828ccdeba2ff58262dd",
+  "model_sha256": "3fad23060dab9500240a120755b82d4f3195e36212f628d7f664f9dc22eb7d5a",
+  "navigation_sha256": "7dc4c4551c03ed4a2cbc690e903dff56a3b4891d7c48eea7a153d638fcc5457f",
+  "bytes": 12729676,
   "units": "meters",
   "eye_height": 1.6,
-  "triangles": 231012,
-  "source": "house_furnished_v005.blend",
-  "scope": "Public furnished-house walkthrough, approved by the owner",
-  "limitations": "Visualization only. Simplified lighting and materials; mirrors are not real reflections."
+  "triangles": 237080,
+  "source": "house_interactive_v006.blend",
+  "layout_revision": {
+    "version": "layout-v006"
+  },
+  "storage": {
+    "version": 1,
+    "proposal": "PROPOSED storage internals, not approved joinery or product specification",
+    "units": [
+      {
+        "id": "middle_wardrobe",
+        "label": "Middle bedroom sliding wardrobe",
+        "interior": "wardrobe",
+        "motion": "slide"
+      },
+      {
+        "id": "middle_study",
+        "label": "Middle study drawers",
+        "interior": "drawers",
+        "motion": "drawer"
+      },
+      {
+        "id": "back_dressing",
+        "label": "Bedroom beside kitchen dressing drawers",
+        "interior": "drawers",
+        "motion": "drawer"
+      },
+      {
+        "id": "803b97e275f4",
+        "label": "Hall left cabinet",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "a42611e4b057",
+        "label": "Hall / drawing divider cabinet",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "91fcc61cec0b",
+        "label": "Bedroom 1 bedside 1",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "6a06929d2266",
+        "label": "Bedroom 1 bedside 2",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "2b8cdb14def0",
+        "label": "Bedroom 1 wardrobe",
+        "interior": "wardrobe",
+        "motion": "hinge"
+      },
+      {
+        "id": "879ac7922208",
+        "label": "Bedroom 3 bedside 1",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "b83164a4d03a",
+        "label": "Bedroom 3 bedside 2",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "8839a753ac46",
+        "label": "En-suite 1 basin vanity",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "892954183816",
+        "label": "Lobby wash niche vanity",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "61a1ab0ac205",
+        "label": "En-suite 2 compact basin vanity",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "3045b9a9e6d9",
+        "label": "En-suite 3 basin vanity",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "814e6ac345e7",
+        "label": "Bedroom 3 dressing vanity",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "98de77280c77",
+        "label": "Bedroom 3 dressing wardrobe",
+        "interior": "wardrobe",
+        "motion": "hinge"
+      },
+      {
+        "id": "4c4c86e891c5",
+        "label": "Kitchen / Main sink",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "900cf5161bf8",
+        "label": "Kitchen / Slab prep drawers",
+        "interior": "drawers",
+        "motion": "drawer"
+      },
+      {
+        "id": "0d9effe61a4a",
+        "label": "Kitchen / RETURN",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "60190b8398ea",
+        "label": "Kitchen / Rolling-shutter base drawers",
+        "interior": "drawers",
+        "motion": "drawer"
+      },
+      {
+        "id": "33d5fa4de1f3",
+        "label": "Kitchen / PREP",
+        "interior": "drawers",
+        "motion": "drawer"
+      },
+      {
+        "id": "772f6a1cc585",
+        "label": "Kitchen / Hob base drawers",
+        "interior": "drawers",
+        "motion": "drawer"
+      },
+      {
+        "id": "e0379de1c69d",
+        "label": "Kitchen / LANDING",
+        "interior": "drawers",
+        "motion": "drawer"
+      },
+      {
+        "id": "f3138d920f09",
+        "label": "Kitchen / Small sink",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "73f83acf188c",
+        "label": "Kitchen / Decorative end base",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "550ac494cad0",
+        "label": "Kitchen / SERVICE COUNTER",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "6523a5a70427",
+        "label": "Kitchen / Above fridge cupboard",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "b40c9237d7cc",
+        "label": "Kitchen / Above shutter cupboard",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "3ba601f679d6",
+        "label": "Kitchen / West upper prep",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "a305c8b66f24",
+        "label": "Kitchen / West upper landing",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "bc9df6add92d",
+        "label": "Kitchen / Right upper dishwasher",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "5329c56a7f2b",
+        "label": "Kitchen / Right upper slab",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "019c2433b5c1",
+        "label": "Hall media console",
+        "interior": "shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "6980e60e8e5e",
+        "label": "Kitchen / Right pantry",
+        "interior": "existing shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "83813ea0592b",
+        "label": "Kitchen / Showcase",
+        "interior": "existing shelves",
+        "motion": "hinge"
+      },
+      {
+        "id": "4349cf5372b0",
+        "label": "Kitchen / Drying",
+        "interior": "existing shelves",
+        "motion": "hinge"
+      }
+    ],
+    "interactions": [
+      {
+        "translation": [
+          0.0,
+          0.46,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_middle_wardrobe_1__front__oak",
+          "storage_middle_wardrobe_1__front__bronze"
+        ],
+        "unit": "middle_wardrobe",
+        "boxes": [
+          [
+            [
+              5.4625244140625,
+              7.851991653442383,
+              0.12999999523162842
+            ],
+            [
+              5.478184700012207,
+              8.332231521606445,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              5.471795558929443,
+              8.269377708435059,
+              1.09499990940094
+            ],
+            [
+              5.489795207977295,
+              8.283377647399902,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Middle bedroom sliding wardrobe / door 1",
+        "id": "storage_middle_wardrobe_1",
+        "type": "slide"
+      },
+      {
+        "translation": [
+          0.0,
+          -0.46,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_middle_wardrobe_2__front__oak",
+          "storage_middle_wardrobe_2__front__bronze"
+        ],
+        "unit": "middle_wardrobe",
+        "boxes": [
+          [
+            [
+              5.402524471282959,
+              8.340583801269531,
+              0.12999999523162842
+            ],
+            [
+              5.418184757232666,
+              8.820823669433594,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              5.411795616149902,
+              8.757969856262207,
+              1.09499990940094
+            ],
+            [
+              5.429795265197754,
+              8.77196979522705,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Middle bedroom sliding wardrobe / door 2",
+        "id": "storage_middle_wardrobe_2",
+        "type": "slide"
+      },
+      {
+        "translation": [
+          0.0,
+          0.46,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_middle_wardrobe_3__front__oak",
+          "storage_middle_wardrobe_3__front__bronze"
+        ],
+        "unit": "middle_wardrobe",
+        "boxes": [
+          [
+            [
+              5.4625244140625,
+              8.82917594909668,
+              0.12999999523162842
+            ],
+            [
+              5.478184700012207,
+              9.309415817260742,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              5.471795558929443,
+              9.246561050415039,
+              1.09499990940094
+            ],
+            [
+              5.489795207977295,
+              9.260560989379883,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Middle bedroom sliding wardrobe / door 3",
+        "id": "storage_middle_wardrobe_3",
+        "type": "slide"
+      },
+      {
+        "translation": [
+          0.0,
+          -0.46,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_middle_wardrobe_4__front__oak",
+          "storage_middle_wardrobe_4__front__bronze"
+        ],
+        "unit": "middle_wardrobe",
+        "boxes": [
+          [
+            [
+              5.402524471282959,
+              9.317767143249512,
+              0.12999999523162842
+            ],
+            [
+              5.418184757232666,
+              9.798007011413574,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              5.411795616149902,
+              9.735153198242188,
+              1.09499990940094
+            ],
+            [
+              5.429795265197754,
+              9.749153137207031,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Middle bedroom sliding wardrobe / door 4",
+        "id": "storage_middle_wardrobe_4",
+        "type": "slide"
+      },
+      {
+        "translation": [
+          0.3199999928474426,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_middle_study_1__front__F5 oak",
+          "storage_middle_study_1__front__bronze",
+          "storage_middle_study_1__interior__F5 oak"
+        ],
+        "unit": "middle_study",
+        "boxes": [
+          [
+            [
+              5.486999988555908,
+              7.277999401092529,
+              0.10000000149011612
+            ],
+            [
+              5.504000186920166,
+              7.511999607086182,
+              0.2680000066757202
+            ]
+          ],
+          [
+            [
+              5.505000114440918,
+              7.34999942779541,
+              0.2200000137090683
+            ],
+            [
+              5.52400016784668,
+              7.434999465942383,
+              0.23499999940395355
+            ]
+          ],
+          [
+            [
+              5.012500286102295,
+              7.295999526977539,
+              0.12000000476837158
+            ],
+            [
+              5.472500324249268,
+              7.493999481201172,
+              0.13199999928474426
+            ]
+          ],
+          [
+            [
+              5.012500286102295,
+              7.295999526977539,
+              0.12000000476837158
+            ],
+            [
+              5.472500324249268,
+              7.307999610900879,
+              0.24300000071525574
+            ]
+          ],
+          [
+            [
+              5.012500286102295,
+              7.481999397277832,
+              0.12000000476837158
+            ],
+            [
+              5.472500324249268,
+              7.493999481201172,
+              0.24300000071525574
+            ]
+          ],
+          [
+            [
+              5.012500286102295,
+              7.295999526977539,
+              0.12000000476837158
+            ],
+            [
+              5.024500370025635,
+              7.493999481201172,
+              0.24300000071525574
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Middle study drawers / drawer 1",
+        "id": "storage_middle_study_1",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.3199999928474426,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_middle_study_2__front__F5 oak",
+          "storage_middle_study_2__front__bronze",
+          "storage_middle_study_2__interior__F5 oak"
+        ],
+        "unit": "middle_study",
+        "boxes": [
+          [
+            [
+              5.486999988555908,
+              7.277999401092529,
+              0.2849999964237213
+            ],
+            [
+              5.504000186920166,
+              7.511999607086182,
+              0.4529999792575836
+            ]
+          ],
+          [
+            [
+              5.505000114440918,
+              7.34999942779541,
+              0.4050000011920929
+            ],
+            [
+              5.52400016784668,
+              7.434999465942383,
+              0.41999998688697815
+            ]
+          ],
+          [
+            [
+              5.012500286102295,
+              7.295999526977539,
+              0.3050000071525574
+            ],
+            [
+              5.472500324249268,
+              7.493999481201172,
+              0.31700000166893005
+            ]
+          ],
+          [
+            [
+              5.012500286102295,
+              7.295999526977539,
+              0.3050000071525574
+            ],
+            [
+              5.472500324249268,
+              7.307999610900879,
+              0.42799997329711914
+            ]
+          ],
+          [
+            [
+              5.012500286102295,
+              7.481999397277832,
+              0.3050000071525574
+            ],
+            [
+              5.472500324249268,
+              7.493999481201172,
+              0.42799997329711914
+            ]
+          ],
+          [
+            [
+              5.012500286102295,
+              7.295999526977539,
+              0.3050000071525574
+            ],
+            [
+              5.024500370025635,
+              7.493999481201172,
+              0.42799997329711914
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Middle study drawers / drawer 2",
+        "id": "storage_middle_study_2",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.3199999928474426,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_middle_study_3__front__F5 oak",
+          "storage_middle_study_3__front__bronze",
+          "storage_middle_study_3__interior__F5 oak"
+        ],
+        "unit": "middle_study",
+        "boxes": [
+          [
+            [
+              5.486999988555908,
+              7.277999401092529,
+              0.4700000286102295
+            ],
+            [
+              5.504000186920166,
+              7.511999607086182,
+              0.6380000114440918
+            ]
+          ],
+          [
+            [
+              5.505000114440918,
+              7.34999942779541,
+              0.5900000333786011
+            ],
+            [
+              5.52400016784668,
+              7.434999465942383,
+              0.6050000190734863
+            ]
+          ],
+          [
+            [
+              5.012500286102295,
+              7.295999526977539,
+              0.49000003933906555
+            ],
+            [
+              5.472500324249268,
+              7.493999481201172,
+              0.5020000338554382
+            ]
+          ],
+          [
+            [
+              5.012500286102295,
+              7.295999526977539,
+              0.49000003933906555
+            ],
+            [
+              5.472500324249268,
+              7.307999610900879,
+              0.6130000352859497
+            ]
+          ],
+          [
+            [
+              5.012500286102295,
+              7.481999397277832,
+              0.49000003933906555
+            ],
+            [
+              5.472500324249268,
+              7.493999481201172,
+              0.6130000352859497
+            ]
+          ],
+          [
+            [
+              5.012500286102295,
+              7.295999526977539,
+              0.49000003933906555
+            ],
+            [
+              5.024500370025635,
+              7.493999481201172,
+              0.6130000352859497
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Middle study drawers / drawer 3",
+        "id": "storage_middle_study_3",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.293250173330307,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_back_dressing_1__front__F5 oak",
+          "storage_back_dressing_1__front__bronze",
+          "storage_back_dressing_1__interior__F5 oak"
+        ],
+        "unit": "back_dressing",
+        "boxes": [
+          [
+            [
+              4.180999755859375,
+              15.067999839782715,
+              0.12999999523162842
+            ],
+            [
+              4.199999809265137,
+              15.372000694274902,
+              0.30000001192092896
+            ]
+          ],
+          [
+            [
+              4.202999591827393,
+              15.170000076293945,
+              0.23999999463558197
+            ],
+            [
+              4.2230000495910645,
+              15.270000457763672,
+              0.257999986410141
+            ]
+          ],
+          [
+            [
+              3.8224995136260986,
+              15.085999488830566,
+              0.14999999105930328
+            ],
+            [
+              4.167500019073486,
+              15.35400104522705,
+              0.16200000047683716
+            ]
+          ],
+          [
+            [
+              3.8224995136260986,
+              15.085999488830566,
+              0.14999999105930328
+            ],
+            [
+              4.167500019073486,
+              15.097999572753906,
+              0.2750000059604645
+            ]
+          ],
+          [
+            [
+              3.8224995136260986,
+              15.342000961303711,
+              0.14999999105930328
+            ],
+            [
+              4.167500019073486,
+              15.35400104522705,
+              0.2750000059604645
+            ]
+          ],
+          [
+            [
+              3.8224995136260986,
+              15.085999488830566,
+              0.14999999105930328
+            ],
+            [
+              3.8344995975494385,
+              15.35400104522705,
+              0.2750000059604645
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom beside kitchen dressing drawers / drawer 1",
+        "id": "storage_back_dressing_1",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.293250173330307,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_back_dressing_2__front__F5 oak",
+          "storage_back_dressing_2__front__bronze",
+          "storage_back_dressing_2__interior__F5 oak"
+        ],
+        "unit": "back_dressing",
+        "boxes": [
+          [
+            [
+              4.180999755859375,
+              15.067999839782715,
+              0.3149999976158142
+            ],
+            [
+              4.199999809265137,
+              15.372000694274902,
+              0.48500001430511475
+            ]
+          ],
+          [
+            [
+              4.202999591827393,
+              15.170000076293945,
+              0.42499998211860657
+            ],
+            [
+              4.2230000495910645,
+              15.270000457763672,
+              0.4429999887943268
+            ]
+          ],
+          [
+            [
+              3.8224995136260986,
+              15.085999488830566,
+              0.33500000834465027
+            ],
+            [
+              4.167500019073486,
+              15.35400104522705,
+              0.34700000286102295
+            ]
+          ],
+          [
+            [
+              3.8224995136260986,
+              15.085999488830566,
+              0.33500000834465027
+            ],
+            [
+              4.167500019073486,
+              15.097999572753906,
+              0.46000000834465027
+            ]
+          ],
+          [
+            [
+              3.8224995136260986,
+              15.342000961303711,
+              0.33500000834465027
+            ],
+            [
+              4.167500019073486,
+              15.35400104522705,
+              0.46000000834465027
+            ]
+          ],
+          [
+            [
+              3.8224995136260986,
+              15.085999488830566,
+              0.33500000834465027
+            ],
+            [
+              3.8344995975494385,
+              15.35400104522705,
+              0.46000000834465027
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom beside kitchen dressing drawers / drawer 2",
+        "id": "storage_back_dressing_2",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.293250173330307,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_back_dressing_3__front__F5 oak",
+          "storage_back_dressing_3__front__bronze",
+          "storage_back_dressing_3__interior__F5 oak"
+        ],
+        "unit": "back_dressing",
+        "boxes": [
+          [
+            [
+              4.180999755859375,
+              15.067999839782715,
+              0.4999999701976776
+            ],
+            [
+              4.199999809265137,
+              15.372000694274902,
+              0.6699999570846558
+            ]
+          ],
+          [
+            [
+              4.202999591827393,
+              15.170000076293945,
+              0.6100000143051147
+            ],
+            [
+              4.2230000495910645,
+              15.270000457763672,
+              0.628000020980835
+            ]
+          ],
+          [
+            [
+              3.8224995136260986,
+              15.085999488830566,
+              0.5199999809265137
+            ],
+            [
+              4.167500019073486,
+              15.35400104522705,
+              0.531999945640564
+            ]
+          ],
+          [
+            [
+              3.8224995136260986,
+              15.085999488830566,
+              0.5199999809265137
+            ],
+            [
+              4.167500019073486,
+              15.097999572753906,
+              0.6449999809265137
+            ]
+          ],
+          [
+            [
+              3.8224995136260986,
+              15.342000961303711,
+              0.5199999809265137
+            ],
+            [
+              4.167500019073486,
+              15.35400104522705,
+              0.6449999809265137
+            ]
+          ],
+          [
+            [
+              3.8224995136260986,
+              15.085999488830566,
+              0.5199999809265137
+            ],
+            [
+              3.8344995975494385,
+              15.35400104522705,
+              0.6449999809265137
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom beside kitchen dressing drawers / drawer 3",
+        "id": "storage_back_dressing_3",
+        "type": "drawer"
+      },
+      {
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_803b97e275f4_1__front__oak",
+          "storage_803b97e275f4_1__front__bronze"
+        ],
+        "unit": "803b97e275f4",
+        "boxes": [
+          [
+            [
+              0.8751329779624939,
+              6.304194450378418,
+              0.12999999523162842
+            ],
+            [
+              0.8907930254936218,
+              6.90501594543457,
+              0.8199999928474426
+            ]
+          ],
+          [
+            [
+              0.8844029903411865,
+              6.353047847747803,
+              0.675000011920929
+            ],
+            [
+              0.9024029970169067,
+              6.3670477867126465,
+              0.76500004529953
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          0.8907930254936218,
+          6.90501594543457,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Hall left cabinet / door 1",
+        "id": "storage_803b97e275f4_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_803b97e275f4_2__front__oak",
+          "storage_803b97e275f4_2__front__bronze"
+        ],
+        "unit": "803b97e275f4",
+        "boxes": [
+          [
+            [
+              0.8751329779624939,
+              5.695019721984863,
+              0.12999999523162842
+            ],
+            [
+              0.8907930254936218,
+              6.295842170715332,
+              0.8199999928474426
+            ]
+          ],
+          [
+            [
+              0.8844029903411865,
+              5.7438740730285645,
+              0.675000011920929
+            ],
+            [
+              0.9024029970169067,
+              5.757874011993408,
+              0.76500004529953
+            ]
+          ]
+        ],
+        "max_open": 0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          0.8907930254936218,
+          6.295842170715332,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Hall left cabinet / door 2",
+        "id": "storage_803b97e275f4_2",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_a42611e4b057_1__front__oak",
+          "storage_a42611e4b057_1__front__bronze"
+        ],
+        "unit": "a42611e4b057",
+        "boxes": [
+          [
+            [
+              0.2578679919242859,
+              5.692148685455322,
+              0.12999999523162842
+            ],
+            [
+              0.8023139834403992,
+              5.707808971405029,
+              0.8199999928474426
+            ]
+          ],
+          [
+            [
+              0.7394599914550781,
+              5.701419353485107,
+              0.675000011920929
+            ],
+            [
+              0.7534600496292114,
+              5.719419002532959,
+              0.76500004529953
+            ]
+          ]
+        ],
+        "max_open": 0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          0.2578679919242859,
+          5.707808971405029,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Hall / drawing divider cabinet / door 1",
+        "id": "storage_a42611e4b057_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_a42611e4b057_2__front__oak",
+          "storage_a42611e4b057_2__front__bronze"
+        ],
+        "unit": "a42611e4b057",
+        "boxes": [
+          [
+            [
+              0.8106659650802612,
+              5.692148685455322,
+              0.12999999523162842
+            ],
+            [
+              1.3551119565963745,
+              5.707808971405029,
+              0.8199999928474426
+            ]
+          ],
+          [
+            [
+              1.2922580242156982,
+              5.701419353485107,
+              0.675000011920929
+            ],
+            [
+              1.306257963180542,
+              5.719419002532959,
+              0.76500004529953
+            ]
+          ]
+        ],
+        "max_open": 0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          0.8106659650802612,
+          5.707808971405029,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Hall / drawing divider cabinet / door 2",
+        "id": "storage_a42611e4b057_2",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_a42611e4b057_3__front__oak",
+          "storage_a42611e4b057_3__front__bronze"
+        ],
+        "unit": "a42611e4b057",
+        "boxes": [
+          [
+            [
+              1.3634639978408813,
+              5.692148685455322,
+              0.12999999523162842
+            ],
+            [
+              1.9079099893569946,
+              5.707808971405029,
+              0.8199999928474426
+            ]
+          ],
+          [
+            [
+              1.8450560569763184,
+              5.701419353485107,
+              0.675000011920929
+            ],
+            [
+              1.859055995941162,
+              5.719419002532959,
+              0.76500004529953
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          1.3634639978408813,
+          5.707808971405029,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Hall / drawing divider cabinet / door 3",
+        "id": "storage_a42611e4b057_3",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_a42611e4b057_4__front__oak",
+          "storage_a42611e4b057_4__front__bronze"
+        ],
+        "unit": "a42611e4b057",
+        "boxes": [
+          [
+            [
+              1.916261911392212,
+              5.692148685455322,
+              0.12999999523162842
+            ],
+            [
+              2.460707902908325,
+              5.707808971405029,
+              0.8199999928474426
+            ]
+          ],
+          [
+            [
+              2.3978540897369385,
+              5.701419353485107,
+              0.675000011920929
+            ],
+            [
+              2.4118540287017822,
+              5.719419002532959,
+              0.76500004529953
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          1.916261911392212,
+          5.707808971405029,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Hall / drawing divider cabinet / door 4",
+        "id": "storage_a42611e4b057_4",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_91fcc61cec0b_1__front__oak",
+          "storage_91fcc61cec0b_1__front__bronze"
+        ],
+        "unit": "91fcc61cec0b",
+        "boxes": [
+          [
+            [
+              6.976008892059326,
+              17.152660369873047,
+              0.1300000101327896
+            ],
+            [
+              7.5752644538879395,
+              17.168319702148438,
+              0.4700000286102295
+            ]
+          ],
+          [
+            [
+              7.024862289428711,
+              17.141048431396484,
+              0.32499998807907104
+            ],
+            [
+              7.038862228393555,
+              17.15904998779297,
+              0.4150000214576721
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          7.5752644538879395,
+          17.152660369873047,
+          0.1300000101327896
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 1 bedside 1 / door 1",
+        "id": "storage_91fcc61cec0b_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_6a06929d2266_1__front__oak",
+          "storage_6a06929d2266_1__front__bronze"
+        ],
+        "unit": "6a06929d2266",
+        "boxes": [
+          [
+            [
+              4.486069202423096,
+              17.152660369873047,
+              0.1300000101327896
+            ],
+            [
+              4.985101222991943,
+              17.168319702148438,
+              0.4700000286102295
+            ]
+          ],
+          [
+            [
+              4.5349225997924805,
+              17.141048431396484,
+              0.32499998807907104
+            ],
+            [
+              4.548922538757324,
+              17.15904998779297,
+              0.4150000214576721
+            ]
+          ]
+        ],
+        "max_open": 0.9555555555555556,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          4.985101222991943,
+          17.152660369873047,
+          0.1300000101327896
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 1 bedside 2 / door 1",
+        "id": "storage_6a06929d2266_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_2b8cdb14def0_1__front__oak",
+          "storage_2b8cdb14def0_1__front__bronze"
+        ],
+        "unit": "2b8cdb14def0",
+        "boxes": [
+          [
+            [
+              8.210799217224121,
+              17.056350708007812,
+              0.12999999523162842
+            ],
+            [
+              8.226458549499512,
+              17.572608947753906,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              8.199189186096191,
+              17.10520362854004,
+              1.09499990940094
+            ],
+            [
+              8.217188835144043,
+              17.119203567504883,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 0.9555555555555556,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          8.210799217224121,
+          17.572608947753906,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 1 wardrobe / door 1",
+        "id": "storage_2b8cdb14def0_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_2b8cdb14def0_2__front__oak",
+          "storage_2b8cdb14def0_2__front__bronze"
+        ],
+        "unit": "2b8cdb14def0",
+        "boxes": [
+          [
+            [
+              8.210799217224121,
+              16.531740188598633,
+              0.12999999523162842
+            ],
+            [
+              8.226458549499512,
+              17.047998428344727,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              8.199189186096191,
+              16.58059310913086,
+              1.09499990940094
+            ],
+            [
+              8.217188835144043,
+              16.594593048095703,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          8.210799217224121,
+          17.047998428344727,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 1 wardrobe / door 2",
+        "id": "storage_2b8cdb14def0_2",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_2b8cdb14def0_3__front__oak",
+          "storage_2b8cdb14def0_3__front__bronze"
+        ],
+        "unit": "2b8cdb14def0",
+        "boxes": [
+          [
+            [
+              8.210799217224121,
+              16.007129669189453,
+              0.12999999523162842
+            ],
+            [
+              8.226458549499512,
+              16.523387908935547,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              8.199189186096191,
+              16.055984497070312,
+              1.09499990940094
+            ],
+            [
+              8.217188835144043,
+              16.069984436035156,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          8.210799217224121,
+          16.523387908935547,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 1 wardrobe / door 3",
+        "id": "storage_2b8cdb14def0_3",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_2b8cdb14def0_4__front__oak",
+          "storage_2b8cdb14def0_4__front__bronze"
+        ],
+        "unit": "2b8cdb14def0",
+        "boxes": [
+          [
+            [
+              8.210799217224121,
+              15.48252010345459,
+              0.12999999523162842
+            ],
+            [
+              8.226458549499512,
+              15.998778343200684,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              8.199189186096191,
+              15.531373977661133,
+              1.09499990940094
+            ],
+            [
+              8.217188835144043,
+              15.545373916625977,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          8.210799217224121,
+          15.998778343200684,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 1 wardrobe / door 4",
+        "id": "storage_2b8cdb14def0_4",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_2b8cdb14def0_5__front__oak",
+          "storage_2b8cdb14def0_5__front__bronze"
+        ],
+        "unit": "2b8cdb14def0",
+        "boxes": [
+          [
+            [
+              8.210799217224121,
+              14.95790958404541,
+              0.12999999523162842
+            ],
+            [
+              8.226458549499512,
+              15.474167823791504,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              8.199189186096191,
+              15.00676441192627,
+              1.09499990940094
+            ],
+            [
+              8.217188835144043,
+              15.020764350891113,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 0.13333333333333333,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          8.210799217224121,
+          15.474167823791504,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 1 wardrobe / door 5",
+        "id": "storage_2b8cdb14def0_5",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_2b8cdb14def0_6__front__oak",
+          "storage_2b8cdb14def0_6__front__bronze"
+        ],
+        "unit": "2b8cdb14def0",
+        "boxes": [
+          [
+            [
+              8.210799217224121,
+              14.433300018310547,
+              0.12999999523162842
+            ],
+            [
+              8.226458549499512,
+              14.94955825805664,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              8.199189186096191,
+              14.48215389251709,
+              1.09499990940094
+            ],
+            [
+              8.217188835144043,
+              14.496153831481934,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 0.022222222222222223,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          8.210799217224121,
+          14.94955825805664,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 1 wardrobe / door 6",
+        "id": "storage_2b8cdb14def0_6",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_879ac7922208_1__front__oak",
+          "storage_879ac7922208_1__front__bronze"
+        ],
+        "unit": "879ac7922208",
+        "boxes": [
+          [
+            [
+              3.9538891315460205,
+              3.499488115310669,
+              0.1300000101327896
+            ],
+            [
+              3.9695489406585693,
+              3.8982961177825928,
+              0.4700000286102295
+            ]
+          ],
+          [
+            [
+              3.9631588459014893,
+              3.548341989517212,
+              0.32499998807907104
+            ],
+            [
+              3.981158971786499,
+              3.5623419284820557,
+              0.4150000214576721
+            ]
+          ]
+        ],
+        "max_open": 0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          3.9695489406585693,
+          3.8982961177825928,
+          0.1300000101327896
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 3 bedside 1 / door 1",
+        "id": "storage_879ac7922208_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_b83164a4d03a_1__front__oak",
+          "storage_b83164a4d03a_1__front__bronze"
+        ],
+        "unit": "b83164a4d03a",
+        "boxes": [
+          [
+            [
+              3.9538891315460205,
+              1.134827971458435,
+              0.1300000101327896
+            ],
+            [
+              3.9695489406585693,
+              1.5336359739303589,
+              0.4700000286102295
+            ]
+          ],
+          [
+            [
+              3.9631588459014893,
+              1.1836820840835571,
+              0.32499998807907104
+            ],
+            [
+              3.981158971786499,
+              1.1976820230484009,
+              0.4150000214576721
+            ]
+          ]
+        ],
+        "max_open": 0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          3.9695489406585693,
+          1.5336359739303589,
+          0.1300000101327896
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 3 bedside 2 / door 1",
+        "id": "storage_b83164a4d03a_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_8839a753ac46_1__front__oak",
+          "storage_8839a753ac46_1__front__bronze"
+        ],
+        "unit": "8839a753ac46",
+        "boxes": [
+          [
+            [
+              5.429060935974121,
+              12.745152473449707,
+              0.12999999523162842
+            ],
+            [
+              5.444721221923828,
+              13.363200187683105,
+              0.7400000095367432
+            ]
+          ],
+          [
+            [
+              5.438331127166748,
+              12.79400634765625,
+              0.5949999690055847
+            ],
+            [
+              5.4563307762146,
+              12.808006286621094,
+              0.6850000023841858
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          5.444721221923828,
+          13.363200187683105,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "En-suite 1 basin vanity / door 1",
+        "id": "storage_8839a753ac46_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_892954183816_1__front__oak",
+          "storage_892954183816_1__front__bronze"
+        ],
+        "unit": "892954183816",
+        "boxes": [
+          [
+            [
+              4.834502696990967,
+              11.893248558044434,
+              0.12999999523162842
+            ],
+            [
+              4.850162982940674,
+              12.60838794708252,
+              0.7400000095367432
+            ]
+          ],
+          [
+            [
+              4.822893142700195,
+              11.942102432250977,
+              0.5949999690055847
+            ],
+            [
+              4.840892791748047,
+              11.95610237121582,
+              0.6850000023841858
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          4.834502696990967,
+          12.60838794708252,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Lobby wash niche vanity / door 1",
+        "id": "storage_892954183816_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_61a1ab0ac205_1__front__oak",
+          "storage_61a1ab0ac205_1__front__bronze"
+        ],
+        "unit": "61a1ab0ac205",
+        "boxes": [
+          [
+            [
+              6.963479995727539,
+              6.131150722503662,
+              0.12999999523162842
+            ],
+            [
+              7.362288475036621,
+              6.146811008453369,
+              0.7400000095367432
+            ]
+          ],
+          [
+            [
+              7.299434185028076,
+              6.119541168212891,
+              0.5949999690055847
+            ],
+            [
+              7.31343412399292,
+              6.137540817260742,
+              0.6850000023841858
+            ]
+          ]
+        ],
+        "max_open": 0.9555555555555556,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          6.963479995727539,
+          6.131150722503662,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "En-suite 2 compact basin vanity / door 1",
+        "id": "storage_61a1ab0ac205_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_3045b9a9e6d9_1__front__oak",
+          "storage_3045b9a9e6d9_1__front__bronze"
+        ],
+        "unit": "3045b9a9e6d9",
+        "boxes": [
+          [
+            [
+              6.5062079429626465,
+              0.5368769764900208,
+              0.12999999523162842
+            ],
+            [
+              7.020900249481201,
+              0.5525370240211487,
+              0.7400000095367432
+            ]
+          ],
+          [
+            [
+              6.958045959472656,
+              0.5461469888687134,
+              0.5949999690055847
+            ],
+            [
+              6.9720458984375,
+              0.5641469955444336,
+              0.6850000023841858
+            ]
+          ]
+        ],
+        "max_open": 0.9555555555555556,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          6.5062079429626465,
+          0.5525370240211487,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "En-suite 3 basin vanity / door 1",
+        "id": "storage_3045b9a9e6d9_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_814e6ac345e7_1__front__oak",
+          "storage_814e6ac345e7_1__front__bronze"
+        ],
+        "unit": "814e6ac345e7",
+        "boxes": [
+          [
+            [
+              6.356654644012451,
+              4.551839828491211,
+              0.12999999523162842
+            ],
+            [
+              6.372314929962158,
+              5.050871849060059,
+              0.7599999904632568
+            ]
+          ],
+          [
+            [
+              6.34504508972168,
+              4.600694179534912,
+              0.6150000095367432
+            ],
+            [
+              6.363044738769531,
+              4.614694118499756,
+              0.7050000429153442
+            ]
+          ]
+        ],
+        "max_open": 0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          6.356654644012451,
+          5.050871849060059,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 3 dressing vanity / door 1",
+        "id": "storage_814e6ac345e7_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_814e6ac345e7_2__front__oak",
+          "storage_814e6ac345e7_2__front__bronze"
+        ],
+        "unit": "814e6ac345e7",
+        "boxes": [
+          [
+            [
+              6.356654644012451,
+              4.0444560050964355,
+              0.12999999523162842
+            ],
+            [
+              6.372314929962158,
+              4.543488025665283,
+              0.7599999904632568
+            ]
+          ],
+          [
+            [
+              6.34504508972168,
+              4.0933098793029785,
+              0.6150000095367432
+            ],
+            [
+              6.363044738769531,
+              4.107309818267822,
+              0.7050000429153442
+            ]
+          ]
+        ],
+        "max_open": 0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          6.356654644012451,
+          4.543488025665283,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 3 dressing vanity / door 2",
+        "id": "storage_814e6ac345e7_2",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_98de77280c77_1__front__oak",
+          "storage_98de77280c77_1__front__bronze"
+        ],
+        "unit": "98de77280c77",
+        "boxes": [
+          [
+            [
+              7.493570804595947,
+              3.357503890991211,
+              0.12999999523162842
+            ],
+            [
+              7.509231090545654,
+              3.9076919555664062,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              7.481961250305176,
+              3.406358003616333,
+              1.09499990940094
+            ],
+            [
+              7.499960899353027,
+              3.4203579425811768,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 0.8444444444444444,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          7.493570804595947,
+          3.9076919555664062,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 3 dressing wardrobe / door 1",
+        "id": "storage_98de77280c77_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_98de77280c77_2__front__oak",
+          "storage_98de77280c77_2__front__bronze"
+        ],
+        "unit": "98de77280c77",
+        "boxes": [
+          [
+            [
+              7.493570804595947,
+              2.798964023590088,
+              0.12999999523162842
+            ],
+            [
+              7.509231090545654,
+              3.349152088165283,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              7.481961250305176,
+              2.84781813621521,
+              1.09499990940094
+            ],
+            [
+              7.499960899353027,
+              2.8618180751800537,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          7.493570804595947,
+          3.349152088165283,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 3 dressing wardrobe / door 2",
+        "id": "storage_98de77280c77_2",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_98de77280c77_3__front__oak",
+          "storage_98de77280c77_3__front__bronze"
+        ],
+        "unit": "98de77280c77",
+        "boxes": [
+          [
+            [
+              7.493570804595947,
+              2.2404239177703857,
+              0.12999999523162842
+            ],
+            [
+              7.509231090545654,
+              2.790611982345581,
+              2.380000114440918
+            ]
+          ],
+          [
+            [
+              7.481961250305176,
+              2.289278030395508,
+              1.09499990940094
+            ],
+            [
+              7.499960899353027,
+              2.3032779693603516,
+              1.2649999856948853
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          7.493570804595947,
+          2.790611982345581,
+          0.12999999523162842
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Bedroom 3 dressing wardrobe / door 3",
+        "id": "storage_98de77280c77_3",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_4c4c86e891c5_1__front__front"
+        ],
+        "unit": "4c4c86e891c5",
+        "boxes": [
+          [
+            [
+              2.9284119606018066,
+              16.528783798217773,
+              0.125
+            ],
+            [
+              2.9474120140075684,
+              17.574785232543945,
+              0.8529999852180481
+            ]
+          ]
+        ],
+        "max_open": 0.8666666666666667,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          2.9284119606018066,
+          16.528783798217773,
+          0.125
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Main sink / door 1",
+        "id": "storage_4c4c86e891c5_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "translation": [
+          -0.37439998984336853,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_900cf5161bf8_1__front__front",
+          "storage_900cf5161bf8_1__interior__carcass"
+        ],
+        "unit": "900cf5161bf8",
+        "boxes": [
+          [
+            [
+              2.9284119606018066,
+              13.3787841796875,
+              0.1250000149011612
+            ],
+            [
+              2.9474120140075684,
+              14.724784851074219,
+              0.44300001859664917
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              13.396783828735352,
+              0.14500001072883606
+            ],
+            [
+              3.4409120082855225,
+              14.706785202026367,
+              0.15700002014636993
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              13.396783828735352,
+              0.14500001072883606
+            ],
+            [
+              3.4409120082855225,
+              13.408783912658691,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              14.694785118103027,
+              0.14500001072883606
+            ],
+            [
+              3.4409120082855225,
+              14.706785202026367,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              3.4289119243621826,
+              13.396783828735352,
+              0.14500001072883606
+            ],
+            [
+              3.4409120082855225,
+              14.706785202026367,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              13.8274507522583,
+              0.15700002014636993
+            ],
+            [
+              3.4409120082855225,
+              13.83945083618164,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              14.264118194580078,
+              0.15700002014636993
+            ],
+            [
+              3.4409120082855225,
+              14.276118278503418,
+              0.4180000126361847
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Slab prep drawers / drawer 1",
+        "id": "storage_900cf5161bf8_1",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          -0.37439998984336853,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_900cf5161bf8_2__front__front",
+          "storage_900cf5161bf8_2__interior__carcass"
+        ],
+        "unit": "900cf5161bf8",
+        "boxes": [
+          [
+            [
+              2.9284119606018066,
+              13.3787841796875,
+              0.44999998807907104
+            ],
+            [
+              2.9474120140075684,
+              14.724784851074219,
+              0.6904999613761902
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              13.396783828735352,
+              0.4699999988079071
+            ],
+            [
+              3.4409120082855225,
+              14.706785202026367,
+              0.4819999933242798
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              13.396783828735352,
+              0.4699999988079071
+            ],
+            [
+              3.4409120082855225,
+              13.408783912658691,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              14.694785118103027,
+              0.4699999988079071
+            ],
+            [
+              3.4409120082855225,
+              14.706785202026367,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              3.4289119243621826,
+              13.396783828735352,
+              0.4699999988079071
+            ],
+            [
+              3.4409120082855225,
+              14.706785202026367,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              13.8274507522583,
+              0.4819999933242798
+            ],
+            [
+              3.4409120082855225,
+              13.83945083618164,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              14.264118194580078,
+              0.4819999933242798
+            ],
+            [
+              3.4409120082855225,
+              14.276118278503418,
+              0.6654999852180481
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Slab prep drawers / drawer 2",
+        "id": "storage_900cf5161bf8_2",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          -0.37439998984336853,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_900cf5161bf8_3__front__front",
+          "storage_900cf5161bf8_3__interior__carcass"
+        ],
+        "unit": "900cf5161bf8",
+        "boxes": [
+          [
+            [
+              2.9284119606018066,
+              13.3787841796875,
+              0.6974999904632568
+            ],
+            [
+              2.9474120140075684,
+              14.724784851074219,
+              0.8530000448226929
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              13.396783828735352,
+              0.7174999713897705
+            ],
+            [
+              3.4409120082855225,
+              14.706785202026367,
+              0.7294999957084656
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              13.396783828735352,
+              0.7174999713897705
+            ],
+            [
+              3.4409120082855225,
+              13.408783912658691,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              14.694785118103027,
+              0.7174999713897705
+            ],
+            [
+              3.4409120082855225,
+              14.706785202026367,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              3.4289119243621826,
+              13.396783828735352,
+              0.7174999713897705
+            ],
+            [
+              3.4409120082855225,
+              14.706785202026367,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              13.8274507522583,
+              0.7294999957084656
+            ],
+            [
+              3.4409120082855225,
+              13.83945083618164,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              2.960911989212036,
+              14.264118194580078,
+              0.7294999957084656
+            ],
+            [
+              3.4409120082855225,
+              14.276118278503418,
+              0.8280000686645508
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Slab prep drawers / drawer 3",
+        "id": "storage_900cf5161bf8_3",
+        "type": "drawer"
+      },
+      {
+        "front_normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_0d9effe61a4a_1__front__front"
+        ],
+        "unit": "0d9effe61a4a",
+        "boxes": [
+          [
+            [
+              0.1304120123386383,
+              15.92678451538086,
+              0.125
+            ],
+            [
+              0.7264120578765869,
+              15.945783615112305,
+              0.8529999852180481
+            ]
+          ]
+        ],
+        "max_open": 0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          0.1304120123386383,
+          15.92678451538086,
+          0.125
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / RETURN / door 1",
+        "id": "storage_0d9effe61a4a_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "translation": [
+          0.0,
+          -0.37439998984336853,
+          0.0
+        ],
+        "front_normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_60190b8398ea_1__front__front",
+          "storage_60190b8398ea_1__interior__carcass"
+        ],
+        "unit": "60190b8398ea",
+        "boxes": [
+          [
+            [
+              0.7304120063781738,
+              15.92678451538086,
+              0.1250000149011612
+            ],
+            [
+              1.3264119625091553,
+              15.945783615112305,
+              0.44300001859664917
+            ]
+          ],
+          [
+            [
+              0.748412013053894,
+              15.959283828735352,
+              0.14500001072883606
+            ],
+            [
+              1.308411955833435,
+              16.43928337097168,
+              0.15700002014636993
+            ]
+          ],
+          [
+            [
+              0.748412013053894,
+              15.959283828735352,
+              0.14500001072883606
+            ],
+            [
+              0.7604119777679443,
+              16.43928337097168,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              1.2964119911193848,
+              15.959283828735352,
+              0.14500001072883606
+            ],
+            [
+              1.308411955833435,
+              16.43928337097168,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              0.748412013053894,
+              16.427284240722656,
+              0.14500001072883606
+            ],
+            [
+              1.308411955833435,
+              16.43928337097168,
+              0.4180000126361847
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Rolling-shutter base drawers / drawer 1",
+        "id": "storage_60190b8398ea_1",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.0,
+          -0.37439998984336853,
+          0.0
+        ],
+        "front_normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_60190b8398ea_2__front__front",
+          "storage_60190b8398ea_2__interior__carcass"
+        ],
+        "unit": "60190b8398ea",
+        "boxes": [
+          [
+            [
+              0.7304120063781738,
+              15.92678451538086,
+              0.44999998807907104
+            ],
+            [
+              1.3264119625091553,
+              15.945783615112305,
+              0.6904999613761902
+            ]
+          ],
+          [
+            [
+              0.748412013053894,
+              15.959283828735352,
+              0.4699999988079071
+            ],
+            [
+              1.308411955833435,
+              16.43928337097168,
+              0.4819999933242798
+            ]
+          ],
+          [
+            [
+              0.748412013053894,
+              15.959283828735352,
+              0.4699999988079071
+            ],
+            [
+              0.7604119777679443,
+              16.43928337097168,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              1.2964119911193848,
+              15.959283828735352,
+              0.4699999988079071
+            ],
+            [
+              1.308411955833435,
+              16.43928337097168,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              0.748412013053894,
+              16.427284240722656,
+              0.4699999988079071
+            ],
+            [
+              1.308411955833435,
+              16.43928337097168,
+              0.6654999852180481
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Rolling-shutter base drawers / drawer 2",
+        "id": "storage_60190b8398ea_2",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.0,
+          -0.37439998984336853,
+          0.0
+        ],
+        "front_normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_60190b8398ea_3__front__front",
+          "storage_60190b8398ea_3__interior__carcass"
+        ],
+        "unit": "60190b8398ea",
+        "boxes": [
+          [
+            [
+              0.7304120063781738,
+              15.92678451538086,
+              0.6974999904632568
+            ],
+            [
+              1.3264119625091553,
+              15.945783615112305,
+              0.8530000448226929
+            ]
+          ],
+          [
+            [
+              0.748412013053894,
+              15.959283828735352,
+              0.7174999713897705
+            ],
+            [
+              1.308411955833435,
+              16.43928337097168,
+              0.7294999957084656
+            ]
+          ],
+          [
+            [
+              0.748412013053894,
+              15.959283828735352,
+              0.7174999713897705
+            ],
+            [
+              0.7604119777679443,
+              16.43928337097168,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              1.2964119911193848,
+              15.959283828735352,
+              0.7174999713897705
+            ],
+            [
+              1.308411955833435,
+              16.43928337097168,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              0.748412013053894,
+              16.427284240722656,
+              0.7174999713897705
+            ],
+            [
+              1.308411955833435,
+              16.43928337097168,
+              0.8280000686645508
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Rolling-shutter base drawers / drawer 3",
+        "id": "storage_60190b8398ea_3",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.37439998984336853,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_33d5fa4de1f3_1__front__front",
+          "storage_33d5fa4de1f3_1__interior__carcass"
+        ],
+        "unit": "33d5fa4de1f3",
+        "boxes": [
+          [
+            [
+              0.7094119787216187,
+              15.3787841796875,
+              0.1250000149011612
+            ],
+            [
+              0.7284120321273804,
+              15.924783706665039,
+              0.44300001859664917
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.396783828735352,
+              0.14500001072883606
+            ],
+            [
+              0.6959120035171509,
+              15.906784057617188,
+              0.15700002014636993
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.396783828735352,
+              0.14500001072883606
+            ],
+            [
+              0.6959120035171509,
+              15.408783912658691,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.894783973693848,
+              0.14500001072883606
+            ],
+            [
+              0.6959120035171509,
+              15.906784057617188,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.396783828735352,
+              0.14500001072883606
+            ],
+            [
+              0.22791200876235962,
+              15.906784057617188,
+              0.4180000126361847
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / PREP / drawer 1",
+        "id": "storage_33d5fa4de1f3_1",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.37439998984336853,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_33d5fa4de1f3_2__front__front",
+          "storage_33d5fa4de1f3_2__interior__carcass"
+        ],
+        "unit": "33d5fa4de1f3",
+        "boxes": [
+          [
+            [
+              0.7094119787216187,
+              15.3787841796875,
+              0.44999998807907104
+            ],
+            [
+              0.7284120321273804,
+              15.924783706665039,
+              0.6904999613761902
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.396783828735352,
+              0.4699999988079071
+            ],
+            [
+              0.6959120035171509,
+              15.906784057617188,
+              0.4819999933242798
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.396783828735352,
+              0.4699999988079071
+            ],
+            [
+              0.6959120035171509,
+              15.408783912658691,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.894783973693848,
+              0.4699999988079071
+            ],
+            [
+              0.6959120035171509,
+              15.906784057617188,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.396783828735352,
+              0.4699999988079071
+            ],
+            [
+              0.22791200876235962,
+              15.906784057617188,
+              0.6654999852180481
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / PREP / drawer 2",
+        "id": "storage_33d5fa4de1f3_2",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.37439998984336853,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_33d5fa4de1f3_3__front__front",
+          "storage_33d5fa4de1f3_3__interior__carcass"
+        ],
+        "unit": "33d5fa4de1f3",
+        "boxes": [
+          [
+            [
+              0.7094119787216187,
+              15.3787841796875,
+              0.6974999904632568
+            ],
+            [
+              0.7284120321273804,
+              15.924783706665039,
+              0.8530000448226929
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.396783828735352,
+              0.7174999713897705
+            ],
+            [
+              0.6959120035171509,
+              15.906784057617188,
+              0.7294999957084656
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.396783828735352,
+              0.7174999713897705
+            ],
+            [
+              0.6959120035171509,
+              15.408783912658691,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.894783973693848,
+              0.7174999713897705
+            ],
+            [
+              0.6959120035171509,
+              15.906784057617188,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.396783828735352,
+              0.7174999713897705
+            ],
+            [
+              0.22791200876235962,
+              15.906784057617188,
+              0.8280000686645508
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / PREP / drawer 3",
+        "id": "storage_33d5fa4de1f3_3",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.37439998984336853,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_772f6a1cc585_1__front__front",
+          "storage_772f6a1cc585_1__interior__carcass"
+        ],
+        "unit": "772f6a1cc585",
+        "boxes": [
+          [
+            [
+              0.7094119787216187,
+              14.6287841796875,
+              0.1250000149011612
+            ],
+            [
+              0.7284120321273804,
+              15.374784469604492,
+              0.44300001859664917
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.646783828735352,
+              0.14500001072883606
+            ],
+            [
+              0.6959120035171509,
+              15.35678482055664,
+              0.15700002014636993
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.646783828735352,
+              0.14500001072883606
+            ],
+            [
+              0.6959120035171509,
+              14.658783912658691,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.3447847366333,
+              0.14500001072883606
+            ],
+            [
+              0.6959120035171509,
+              15.35678482055664,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.646783828735352,
+              0.14500001072883606
+            ],
+            [
+              0.22791200876235962,
+              15.35678482055664,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.877450942993164,
+              0.15700002014636993
+            ],
+            [
+              0.6959120035171509,
+              14.889451026916504,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.114117622375488,
+              0.15700002014636993
+            ],
+            [
+              0.6959120035171509,
+              15.126117706298828,
+              0.4180000126361847
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Hob base drawers / drawer 1",
+        "id": "storage_772f6a1cc585_1",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.37439998984336853,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_772f6a1cc585_2__front__front",
+          "storage_772f6a1cc585_2__interior__carcass"
+        ],
+        "unit": "772f6a1cc585",
+        "boxes": [
+          [
+            [
+              0.7094119787216187,
+              14.6287841796875,
+              0.44999998807907104
+            ],
+            [
+              0.7284120321273804,
+              15.374784469604492,
+              0.6904999613761902
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.646783828735352,
+              0.4699999988079071
+            ],
+            [
+              0.6959120035171509,
+              15.35678482055664,
+              0.4819999933242798
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.646783828735352,
+              0.4699999988079071
+            ],
+            [
+              0.6959120035171509,
+              14.658783912658691,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.3447847366333,
+              0.4699999988079071
+            ],
+            [
+              0.6959120035171509,
+              15.35678482055664,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.646783828735352,
+              0.4699999988079071
+            ],
+            [
+              0.22791200876235962,
+              15.35678482055664,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.877450942993164,
+              0.4819999933242798
+            ],
+            [
+              0.6959120035171509,
+              14.889451026916504,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.114117622375488,
+              0.4819999933242798
+            ],
+            [
+              0.6959120035171509,
+              15.126117706298828,
+              0.6654999852180481
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Hob base drawers / drawer 2",
+        "id": "storage_772f6a1cc585_2",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.37439998984336853,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_772f6a1cc585_3__front__front",
+          "storage_772f6a1cc585_3__interior__carcass"
+        ],
+        "unit": "772f6a1cc585",
+        "boxes": [
+          [
+            [
+              0.7094119787216187,
+              14.6287841796875,
+              0.6974999904632568
+            ],
+            [
+              0.7284120321273804,
+              15.374784469604492,
+              0.8530000448226929
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.646783828735352,
+              0.7174999713897705
+            ],
+            [
+              0.6959120035171509,
+              15.35678482055664,
+              0.7294999957084656
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.646783828735352,
+              0.7174999713897705
+            ],
+            [
+              0.6959120035171509,
+              14.658783912658691,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.3447847366333,
+              0.7174999713897705
+            ],
+            [
+              0.6959120035171509,
+              15.35678482055664,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.646783828735352,
+              0.7174999713897705
+            ],
+            [
+              0.22791200876235962,
+              15.35678482055664,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.877450942993164,
+              0.7294999957084656
+            ],
+            [
+              0.6959120035171509,
+              14.889451026916504,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              15.114117622375488,
+              0.7294999957084656
+            ],
+            [
+              0.6959120035171509,
+              15.126117706298828,
+              0.8280000686645508
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Hob base drawers / drawer 3",
+        "id": "storage_772f6a1cc585_3",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.37439998984336853,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_e0379de1c69d_1__front__front",
+          "storage_e0379de1c69d_1__interior__carcass"
+        ],
+        "unit": "e0379de1c69d",
+        "boxes": [
+          [
+            [
+              0.7094119787216187,
+              13.828783988952637,
+              0.1250000149011612
+            ],
+            [
+              0.7284120321273804,
+              14.624783515930176,
+              0.44300001859664917
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              13.846783638000488,
+              0.14500001072883606
+            ],
+            [
+              0.6959120035171509,
+              14.606783866882324,
+              0.15700002014636993
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              13.846783638000488,
+              0.14500001072883606
+            ],
+            [
+              0.6959120035171509,
+              13.858783721923828,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.594783782958984,
+              0.14500001072883606
+            ],
+            [
+              0.6959120035171509,
+              14.606783866882324,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              13.846783638000488,
+              0.14500001072883606
+            ],
+            [
+              0.22791200876235962,
+              14.606783866882324,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.094117164611816,
+              0.15700002014636993
+            ],
+            [
+              0.6959120035171509,
+              14.106117248535156,
+              0.4180000126361847
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.347450256347656,
+              0.15700002014636993
+            ],
+            [
+              0.6959120035171509,
+              14.359450340270996,
+              0.4180000126361847
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / LANDING / drawer 1",
+        "id": "storage_e0379de1c69d_1",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.37439998984336853,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_e0379de1c69d_2__front__front",
+          "storage_e0379de1c69d_2__interior__carcass"
+        ],
+        "unit": "e0379de1c69d",
+        "boxes": [
+          [
+            [
+              0.7094119787216187,
+              13.828783988952637,
+              0.44999998807907104
+            ],
+            [
+              0.7284120321273804,
+              14.624783515930176,
+              0.6904999613761902
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              13.846783638000488,
+              0.4699999988079071
+            ],
+            [
+              0.6959120035171509,
+              14.606783866882324,
+              0.4819999933242798
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              13.846783638000488,
+              0.4699999988079071
+            ],
+            [
+              0.6959120035171509,
+              13.858783721923828,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.594783782958984,
+              0.4699999988079071
+            ],
+            [
+              0.6959120035171509,
+              14.606783866882324,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              13.846783638000488,
+              0.4699999988079071
+            ],
+            [
+              0.22791200876235962,
+              14.606783866882324,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.094117164611816,
+              0.4819999933242798
+            ],
+            [
+              0.6959120035171509,
+              14.106117248535156,
+              0.6654999852180481
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.347450256347656,
+              0.4819999933242798
+            ],
+            [
+              0.6959120035171509,
+              14.359450340270996,
+              0.6654999852180481
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / LANDING / drawer 2",
+        "id": "storage_e0379de1c69d_2",
+        "type": "drawer"
+      },
+      {
+        "translation": [
+          0.37439998984336853,
+          0.0,
+          0.0
+        ],
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_e0379de1c69d_3__front__front",
+          "storage_e0379de1c69d_3__interior__carcass"
+        ],
+        "unit": "e0379de1c69d",
+        "boxes": [
+          [
+            [
+              0.7094119787216187,
+              13.828783988952637,
+              0.6974999904632568
+            ],
+            [
+              0.7284120321273804,
+              14.624783515930176,
+              0.8530000448226929
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              13.846783638000488,
+              0.7174999713897705
+            ],
+            [
+              0.6959120035171509,
+              14.606783866882324,
+              0.7294999957084656
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              13.846783638000488,
+              0.7174999713897705
+            ],
+            [
+              0.6959120035171509,
+              13.858783721923828,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.594783782958984,
+              0.7174999713897705
+            ],
+            [
+              0.6959120035171509,
+              14.606783866882324,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              13.846783638000488,
+              0.7174999713897705
+            ],
+            [
+              0.22791200876235962,
+              14.606783866882324,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.094117164611816,
+              0.7294999957084656
+            ],
+            [
+              0.6959120035171509,
+              14.106117248535156,
+              0.8280000686645508
+            ]
+          ],
+          [
+            [
+              0.21591199934482574,
+              14.347450256347656,
+              0.7294999957084656
+            ],
+            [
+              0.6959120035171509,
+              14.359450340270996,
+              0.8280000686645508
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / LANDING / drawer 3",
+        "id": "storage_e0379de1c69d_3",
+        "type": "drawer"
+      },
+      {
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_f3138d920f09_1__front__front"
+        ],
+        "unit": "f3138d920f09",
+        "boxes": [
+          [
+            [
+              0.7094119787216187,
+              13.22878360748291,
+              0.125
+            ],
+            [
+              0.7284120321273804,
+              13.824784278869629,
+              0.8529999852180481
+            ]
+          ]
+        ],
+        "max_open": 0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          0.7284120321273804,
+          13.22878360748291,
+          0.125
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Small sink / door 1",
+        "id": "storage_f3138d920f09_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_73f83acf188c_1__front__oak.001"
+        ],
+        "unit": "73f83acf188c",
+        "boxes": [
+          [
+            [
+              0.7094119787216187,
+              12.998784065246582,
+              0.125
+            ],
+            [
+              0.7284120321273804,
+              13.224783897399902,
+              0.8529999852180481
+            ]
+          ]
+        ],
+        "max_open": 0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          0.7284120321273804,
+          12.998784065246582,
+          0.125
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Decorative end base / door 1",
+        "id": "storage_73f83acf188c_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_550ac494cad0_1__front__front"
+        ],
+        "unit": "550ac494cad0",
+        "boxes": [
+          [
+            [
+              0.7304120659828186,
+              13.577784538269043,
+              0.125
+            ],
+            [
+              1.9264121055603027,
+              13.596783638000488,
+              0.8529999852180481
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          0.7304120659828186,
+          13.596783638000488,
+          0.125
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / SERVICE COUNTER / door 1",
+        "id": "storage_550ac494cad0_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_6523a5a70427_1__front__oak.001"
+        ],
+        "unit": "6523a5a70427",
+        "boxes": [
+          [
+            [
+              2.9284119606018066,
+              15.328783988952637,
+              2.0450000762939453
+            ],
+            [
+              2.9474120140075684,
+              15.924784660339355,
+              2.382999897003174
+            ]
+          ]
+        ],
+        "max_open": 0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          2.9284119606018066,
+          15.328783988952637,
+          2.0450000762939453
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Above fridge cupboard / door 1",
+        "id": "storage_6523a5a70427_1",
+        "type": "hinge",
+        "limited_by": [
+          "existing clearance conflict"
+        ]
+      },
+      {
+        "front_normal": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_b40c9237d7cc_1__front__oak.001"
+        ],
+        "unit": "b40c9237d7cc",
+        "boxes": [
+          [
+            [
+              0.7304120063781738,
+              15.92678451538086,
+              1.6449999809265137
+            ],
+            [
+              1.3264119625091553,
+              15.945783615112305,
+              2.382999897003174
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          0.7304120063781738,
+          15.92678451538086,
+          1.6449999809265137
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Above shutter cupboard / door 1",
+        "id": "storage_b40c9237d7cc_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_3ba601f679d6_1__front__front"
+        ],
+        "unit": "3ba601f679d6",
+        "boxes": [
+          [
+            [
+              0.42941197752952576,
+              15.398783683776855,
+              1.6050000190734863
+            ],
+            [
+              0.4484119713306427,
+              15.904784202575684,
+              2.3329999446868896
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          0.4484119713306427,
+          15.398783683776855,
+          1.6050000190734863
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / West upper prep / door 1",
+        "id": "storage_3ba601f679d6_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_a305c8b66f24_1__front__front"
+        ],
+        "unit": "a305c8b66f24",
+        "boxes": [
+          [
+            [
+              0.42941197752952576,
+              13.868783950805664,
+              1.6050000190734863
+            ],
+            [
+              0.4484119713306427,
+              14.594783782958984,
+              2.3329999446868896
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          0.4484119713306427,
+          13.868783950805664,
+          1.6050000190734863
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / West upper landing / door 1",
+        "id": "storage_a305c8b66f24_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_bc9df6add92d_1__front__front"
+        ],
+        "unit": "bc9df6add92d",
+        "boxes": [
+          [
+            [
+              3.208411931991577,
+              15.948783874511719,
+              1.6050000190734863
+            ],
+            [
+              3.227411985397339,
+              16.504783630371094,
+              2.3329999446868896
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          3.208411931991577,
+          15.948783874511719,
+          1.6050000190734863
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Right upper dishwasher / door 1",
+        "id": "storage_bc9df6add92d_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_5329c56a7f2b_1__front__front"
+        ],
+        "unit": "5329c56a7f2b",
+        "boxes": [
+          [
+            [
+              3.208411931991577,
+              13.408784866333008,
+              1.6050000190734863
+            ],
+            [
+              3.227411985397339,
+              14.694784164428711,
+              2.3329999446868896
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          3.208411931991577,
+          13.408784866333008,
+          1.6050000190734863
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Right upper slab / door 1",
+        "id": "storage_5329c56a7f2b_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_019c2433b5c1_1__front__F5 oak"
+        ],
+        "unit": "019c2433b5c1",
+        "boxes": [
+          [
+            [
+              4.354000091552734,
+              7.3989996910095215,
+              0.19299998879432678
+            ],
+            [
+              4.369999885559082,
+              8.000999450683594,
+              0.5349999666213989
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          4.354000091552734,
+          7.3989996910095215,
+          0.19299998879432678
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Hall media console / door 1",
+        "id": "storage_019c2433b5c1_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_019c2433b5c1_2__front__F5 oak"
+        ],
+        "unit": "019c2433b5c1",
+        "boxes": [
+          [
+            [
+              4.354000091552734,
+              8.019000053405762,
+              0.19299998879432678
+            ],
+            [
+              4.369999885559082,
+              8.620999336242676,
+              0.5349999666213989
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          4.354000091552734,
+          8.620999336242676,
+          0.19299998879432678
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Hall media console / door 2",
+        "id": "storage_019c2433b5c1_2",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_019c2433b5c1_3__front__F5 oak"
+        ],
+        "unit": "019c2433b5c1",
+        "boxes": [
+          [
+            [
+              4.354000091552734,
+              8.638999938964844,
+              0.19299998879432678
+            ],
+            [
+              4.369999885559082,
+              9.240999221801758,
+              0.5349999666213989
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          4.354000091552734,
+          8.638999938964844,
+          0.19299998879432678
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Hall media console / door 3",
+        "id": "storage_019c2433b5c1_3",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_6980e60e8e5e_1__front__oak.001",
+          "storage_6980e60e8e5e_1__front__metal"
+        ],
+        "unit": "6980e60e8e5e",
+        "boxes": [
+          [
+            [
+              2.9284119606018066,
+              14.72878360748291,
+              0.125
+            ],
+            [
+              2.9474120140075684,
+              15.324784278869629,
+              1.3949999809265137
+            ]
+          ],
+          [
+            [
+              2.908412218093872,
+              14.784175872802734,
+              1.0
+            ],
+            [
+              2.9244120121002197,
+              14.799392700195312,
+              1.25
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          2.9284119606018066,
+          15.324784278869629,
+          0.125
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Right pantry / door 1",
+        "id": "storage_6980e60e8e5e_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_6980e60e8e5e_2__front__oak.001",
+          "storage_6980e60e8e5e_2__front__metal"
+        ],
+        "unit": "6980e60e8e5e",
+        "boxes": [
+          [
+            [
+              2.9284119606018066,
+              14.72878360748291,
+              1.4049999713897705
+            ],
+            [
+              2.9474120140075684,
+              15.324784278869629,
+              2.3949999809265137
+            ]
+          ],
+          [
+            [
+              2.908412218093872,
+              14.784175872802734,
+              1.5099999904632568
+            ],
+            [
+              2.9244120121002197,
+              14.799392700195312,
+              1.7599999904632568
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          2.9284119606018066,
+          15.324784278869629,
+          1.4049999713897705
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Right pantry / door 2",
+        "id": "storage_6980e60e8e5e_2",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_83813ea0592b_1__front__metal",
+          "storage_83813ea0592b_1__front__display_tinted_glass"
+        ],
+        "unit": "83813ea0592b",
+        "boxes": [
+          [
+            [
+              2.9334120750427246,
+              13.018784523010254,
+              0.1419999599456787
+            ],
+            [
+              2.9394121170043945,
+              13.354784965515137,
+              2.378000020980835
+            ]
+          ],
+          [
+            [
+              2.91241192817688,
+              13.045125961303711,
+              1.0499999523162842
+            ],
+            [
+              2.9264118671417236,
+              13.058441162109375,
+              1.3899999856948853
+            ]
+          ],
+          [
+            [
+              2.9284119606018066,
+              13.356783866882324,
+              0.12000000476837158
+            ],
+            [
+              2.9484119415283203,
+              13.376784324645996,
+              2.4000000953674316
+            ]
+          ],
+          [
+            [
+              2.9284119606018066,
+              12.996784210205078,
+              0.12000000476837158
+            ],
+            [
+              2.9484119415283203,
+              13.01678466796875,
+              2.4000000953674316
+            ]
+          ],
+          [
+            [
+              2.9284119606018066,
+              12.996785163879395,
+              0.11999999731779099
+            ],
+            [
+              2.9484119415283203,
+              13.376784324645996,
+              0.14000000059604645
+            ]
+          ],
+          [
+            [
+              2.9284119606018066,
+              12.996785163879395,
+              2.380000114440918
+            ],
+            [
+              2.9484119415283203,
+              13.376784324645996,
+              2.4000000953674316
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          2.9284119606018066,
+          13.376784324645996,
+          0.11999999731779099
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Showcase / door 1",
+        "id": "storage_83813ea0592b_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_4349cf5372b0_1__front__front"
+        ],
+        "unit": "4349cf5372b0",
+        "boxes": [
+          [
+            [
+              3.208411931991577,
+              17.056785583496094,
+              1.6030000448226929
+            ],
+            [
+              3.227411985397339,
+              17.544784545898438,
+              2.3470001220703125
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": 1.5707963267948966,
+        "pivot": [
+          3.208411931991577,
+          17.056785583496094,
+          1.6030000448226929
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Drying / door 1",
+        "id": "storage_4349cf5372b0_1",
+        "type": "hinge"
+      },
+      {
+        "front_normal": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "nodes": [
+          "storage_4349cf5372b0_2__front__front"
+        ],
+        "unit": "4349cf5372b0",
+        "boxes": [
+          [
+            [
+              3.208411931991577,
+              16.55878257751465,
+              1.6030000448226929
+            ],
+            [
+              3.227411985397339,
+              17.048784255981445,
+              2.3470001220703125
+            ]
+          ]
+        ],
+        "max_open": 1.0,
+        "angle": -1.5707963267948966,
+        "pivot": [
+          3.208411931991577,
+          17.048784255981445,
+          1.6030000448226929
+        ],
+        "proposed": "PROPOSED storage internals, not approved joinery or product specification",
+        "label": "Kitchen / Drying / door 2",
+        "id": "storage_4349cf5372b0_2",
+        "type": "hinge"
+      }
+    ]
+  },
+  "scope": "Public interactive v006 walkthrough, approved by the owner",
+  "limitations": "Proposed interiors: 50 full-opening, 7 limited, 12 disabled fronts. Appliances and tambour fixed. Stairs visual-only. Tight middle-room aisle; not construction approval. Simplified lighting and materials; mirrors are not real reflections."
 }

@@ -3,9 +3,9 @@
   "collections": [
     {
       "id": "furnished-v005",
-      "title": "Furnished house - v005",
-      "status": "Proposed furnishings",
-      "description": "Current house with a middle-room study and mirror, hall TV/home theatre, and room-by-room furnishings. Use Walk inside the furnished house for continuous first-person navigation.",
+      "title": "Furnished house - v005 (historical)",
+      "status": "Historical proposal",
+      "description": "Seven preserved v005 renders, not the current v006 layout. Walk inside the furnished house opens interactive v006 with revised bedrooms, proposed storage interiors and visual-only stairs.",
       "assumptions": [
         "Furniture and finishes are visualization proposals, not product or construction specifications.",
         "Existing kitchen, beams and the corrected dining lightwell are retained.",

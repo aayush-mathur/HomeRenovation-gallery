@@ -5,14 +5,14 @@ export function isSafe(nav, x, y) {
     && nav.cells[row * nav.width + col] === '1';
 }
 
-export function move(nav, position, dx, dy) {
+export function move(nav, position, dx, dy, dynamicSafe = () => true) {
   const count = Math.max(1, Math.ceil(Math.hypot(dx, dy) / (nav.step * .35)));
   let [x, y] = position;
   for (let i = 0; i < count; i++) {
     const nx = x + dx / count, ny = y + dy / count;
     // Axis checks prevent cutting between diagonally touching blocked cells.
-    if (isSafe(nav, nx, y)) x = nx;
-    if (isSafe(nav, x, ny)) y = ny;
+    if (isSafe(nav, nx, y) && dynamicSafe(nx, y)) x = nx;
+    if (isSafe(nav, x, ny) && dynamicSafe(x, ny)) y = ny;
   }
   return [x, y];
 }

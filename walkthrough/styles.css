@@ -33,6 +33,9 @@ footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wr
 #touch-pad button:nth-child(3) { grid-column: 2; grid-row: 2; }
 #touch-pad button:nth-child(4) { grid-column: 3; grid-row: 2; }
 .touch-help { display: none; }
+#storage-panel { position: absolute; right: 16px; bottom: 16px; display: flex; align-items: center; gap: 12px; max-width: min(540px, calc(100% - 32px)); background: #f3f5f7; border: 1px solid #8b98a3; border-radius: 6px; padding: 8px 12px; font-size: .85rem; }
+#storage-name { min-width: 0; }
+#storage-action { flex: 0 0 auto; }
 @media (pointer: coarse), (max-width: 700px) {
   header { padding: 10px 12px; gap: 8px; }
   .title { flex: 1 1 100%; display: flex; align-items: baseline; justify-content: space-between; }
@@ -45,6 +48,7 @@ footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wr
   #help { font-size: .8rem; padding-inline: 8px; }
   #fullscreen { font-size: .8rem; padding-inline: 8px; }
   #touch-pad { display: grid; }
+  #storage-panel { top: 12px; bottom: auto; right: 12px; max-width: calc(100% - 24px); font-size: .8rem; gap: 8px; padding: 6px 8px; }
   .touch-help { display: inline; }
   .desktop-help { display: none; }
   #instructions { inset: 12px; max-width: none; max-height: calc(100% - 24px); z-index: 2; padding: 18px; }
