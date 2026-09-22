@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "source_sha256": "9410adaff9c0755f8efebec6fa6c62d69ba841b6f76412f613b852f085156d51",
-  "model_sha256": "e68634934a6d920ca24745e6c464271772f4849d0da76f9638e23f833782f9af",
-  "navigation_sha256": "1ea6ad2d28c71d0dfb3fba642355381102577e02c7c879e65f3e4ea419a3885a",
-  "bytes": 13786156,
+  "source_sha256": "e314f27d0da5dd709b5be1f2126b77c6a4a4771d1a0f7289e164baeaac969f04",
+  "model_sha256": "8a0e684f6a0a683f9c0cc7ef046e8040d2dee55959c6a67e40271f33472b39a9",
+  "navigation_sha256": "495ca1a880f5e5e9e37cf2722c2608f3791204d7fc34bd85424decdc7ccff16b",
+  "bytes": 13785484,
   "units": "meters",
   "eye_height": 1.6,
-  "triangles": 257756,
-  "source": "house_layout_v011.blend",
+  "triangles": 257740,
+  "source": "house_layout_v012.blend",
   "layout_revision": {
-    "version": "layout-v011"
+    "version": "layout-v012"
   },
-  "scope": "Public v011 walkthrough, approved by the owner",
+  "scope": "Public v012 walkthrough, approved by the owner",
   "storage_mode": "closed",
   "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification.",
   "electronics": {

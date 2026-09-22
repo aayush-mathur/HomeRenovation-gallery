@@ -2,48 +2,30 @@
   "version": 1,
   "collections": [
     {
-      "id": "layout-v011",
-      "title": "Independent electronics provisions - v011 draft",
+      "id": "layout-v012",
+      "title": "Translucent roof to the actual kitchen wall - v012 draft",
       "status": "Draft previews",
-      "description": "Five indoor AC provisions, candidate robot dock, network/recording cabinet, Wi-Fi and entry/media details. Washer is DEFERRED BY USER, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC locations remain unresolved. Existing layout stays intact; not installation approval.",
+      "description": "The narrow translucent roof continues east over the main-sink/cabinet depth to the actual kitchen wall, not just the counter front. Its OTS-width span and the other solid ceiling stay unchanged. V011 electronics remain; washer is deferred by the user. Not construction approval.",
       "assumptions": [
         "800x600, 8-sample draft previews, not final lighting or construction approval.",
         "Static stability fallback; the reported interactive regression cause remains unconfirmed."
       ],
       "views": [
         {
-          "id": "E11_01_service_bay",
-          "title": "Hall service bay - candidate robot dock and open network cabinet",
+          "id": "E12_01_full_roof_strip",
+          "title": "Rear translucent strip continues to actual east kitchen wall",
           "description": "8-sample draft preview; not a final render.",
-          "room": "Electronics provisions",
-          "src": "images/layout-v011/E11_01_service_bay-1266a326b4a60f11.png",
+          "room": "Rear kitchen",
+          "src": "images/layout-v012/E12_01_full_roof_strip-b663603b061126df.png",
           "width": 800,
           "height": 600
         },
         {
-          "id": "E11_02_media",
-          "title": "Existing media setup - set-top box and separate ceiling Wi-Fi",
+          "id": "E12_02_above_main_sink",
+          "title": "Sheet and opening continue above main-sink cabinet depth",
           "description": "8-sample draft preview; not a final render.",
-          "room": "Electronics provisions",
-          "src": "images/layout-v011/E11_02_media-40de262da2b23f92.png",
-          "width": 800,
-          "height": 600
-        },
-        {
-          "id": "E11_03_study_ac",
-          "title": "Middle-bedroom AC provision clear of beam and wardrobe",
-          "description": "8-sample draft preview; not a final render.",
-          "room": "Electronics provisions",
-          "src": "images/layout-v011/E11_03_study_ac-70c9c91689ba2044.png",
-          "width": 800,
-          "height": 600
-        },
-        {
-          "id": "E11_04_entry",
-          "title": "Entry camera, doorbell and emergency-light provisions",
-          "description": "8-sample draft preview; not a final render.",
-          "room": "Electronics provisions",
-          "src": "images/layout-v011/E11_04_entry-27e0c51fe011b726.png",
+          "room": "Rear kitchen",
+          "src": "images/layout-v012/E12_02_above_main_sink-b45df566a0cd8e1e.png",
           "width": 800,
           "height": 600
         }
@@ -53,7 +35,7 @@
       "id": "furnished-v005",
       "title": "Furnished house - v005 (historical)",
       "status": "Historical proposal",
-      "description": "Seven preserved historical v005 renders, not the current v011 layout. Use the walkthrough for the current version.",
+      "description": "Seven preserved historical v005 renders, not the current v012 layout. Use the walkthrough for the current version.",
       "assumptions": [
         "Furniture and finishes are visualization proposals, not product or construction specifications.",
         "Existing kitchen, beams and the corrected dining lightwell are retained.",
