@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "source_sha256": "5fbb05c92947633b070dcf680ef5528aa4aefa5074bfd479b520611a58d5b76d",
-  "model_sha256": "583e8c705435c93922031f90bee4afae7187aad30a75954a1fcc621495755217",
-  "navigation_sha256": "86f7dccba297b203e3ffac82ac253417a062bba74fb271efe80a5e787b42e827",
-  "bytes": 12863964,
+  "source_sha256": "e41757b6634d563e8a495caa09c285280121940d0ef8a5963f6db778bb31ef5e",
+  "model_sha256": "5cbef6df030c443757243cfa6243138e945b89e898c7447fd667a6f839d1a9f4",
+  "navigation_sha256": "f1c3a14d4a74a4c8500e011644c735df9968b89ef45dc6ecf1c33e888beecd3b",
+  "bytes": 12868356,
   "units": "meters",
   "eye_height": 1.6,
-  "triangles": 240456,
-  "source": "house_layout_v009.blend",
+  "triangles": 240492,
+  "source": "house_layout_v010.blend",
   "layout_revision": {
-    "version": "layout-v009"
+    "version": "layout-v010"
   },
-  "scope": "Public v009 walkthrough, approved by the owner",
+  "scope": "Public v010 walkthrough, approved by the owner",
   "storage_mode": "closed",
-  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval."
+  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction."
 }
