@@ -2,10 +2,49 @@
   "version": 1,
   "collections": [
     {
+      "id": "layout-v007",
+      "title": "Middle bedroom - v007 draft",
+      "status": "Draft previews",
+      "description": "Restored bed and wardrobe positions, study beside north cupboards and dressing near the entrance. Current walkthrough uses static closed furniture; opening is disabled.",
+      "assumptions": [
+        "800x600, 8-sample draft previews, not final lighting or construction approval.",
+        "Static stability fallback; the reported interactive regression cause remains unconfirmed."
+      ],
+      "views": [
+        {
+          "id": "V7_01_middle_room",
+          "title": "Middle room - restored bed, study beside cupboards",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Middle bedroom",
+          "src": "images/layout-v007/V7_01_middle_room-c14b138785719c94.png",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "id": "V7_02_study",
+          "title": "Study beside north-wall cupboards",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Middle bedroom",
+          "src": "images/layout-v007/V7_02_study-2f5d2e53fb29737e.png",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "id": "V7_03_dressing",
+          "title": "Dressing station near the entrance",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Middle bedroom",
+          "src": "images/layout-v007/V7_03_dressing-43a4acf613502f63.png",
+          "width": 800,
+          "height": 600
+        }
+      ]
+    },
+    {
       "id": "furnished-v005",
       "title": "Furnished house - v005 (historical)",
       "status": "Historical proposal",
-      "description": "Seven preserved v005 renders, not the current v006 layout. Walk inside the furnished house opens interactive v006 with revised bedrooms, proposed storage interiors and visual-only stairs.",
+      "description": "Seven preserved historical v005 renders, not the current v007 layout. Use the walkthrough for the current version.",
       "assumptions": [
         "Furniture and finishes are visualization proposals, not product or construction specifications.",
         "Existing kitchen, beams and the corrected dining lightwell are retained.",

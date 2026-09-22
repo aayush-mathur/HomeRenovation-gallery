@@ -1,21 +1,21 @@
 {
-  "schema_version": 2,
-  "revision": "v006",
+  "schema_version": 3,
+  "revision": "v007",
   "scope": "approved-public-walkthrough",
-  "source_sha256": "18e1e70d49b177e842a9212c525d84a0bd4dbbd840f6d828ccdeba2ff58262dd",
+  "source_sha256": "42c9f48529cc9fe7b08d5d68fed569a5f81b5444774f32280ce6cc4d35482f91",
   "files": {
-    "app.js": "a01b68d1009da795d438d41f0f1195ac222e6ae90c03dd744e7fde7d57d89fa2",
-    "index.html": "0bc56279358bd2e3dde40834116614539e4ba79871980293ae399a993e1ed4cf",
-    "model/house.glb": "3fad23060dab9500240a120755b82d4f3195e36212f628d7f664f9dc22eb7d5a",
-    "model/manifest.json": "99094b512ea8749a72ee27ca503d2c59cc1e1b638ab8a89e917f8f4a7ecf64c2",
-    "model/navigation.json": "7dc4c4551c03ed4a2cbc690e903dff56a3b4891d7c48eea7a153d638fcc5457f",
+    "app.js": "5e934ec5f16afe8c5bd323d41daf8caf2f38192556519843d1b73996c0bebaa3",
+    "index.html": "4240517028fb2bfd475c576715aa9c129a691f6ba18aea37c70a9f3cdbf776ad",
+    "model/house.glb": "48973b2fd7fe5fee6e417d61942fe9af253d2f88ff7611161c74c4bf54d83c56",
+    "model/manifest.json": "ffa10cf5f633fa7fe2f4dc3dd64e2c58290f0af32607a2aa6d3b6d37816ce7c1",
+    "model/navigation.json": "9d5673c542759a0cd9857b6a36a1ef869926e84a293282077db378ba57ca01cb",
     "navigation.js": "9be246e77f7e0e47fa3f9fa14db1d382e4921696816a12a6f6ec59b898f03e1c",
-    "storage.js": "88f0ac074815683e47580ef83aacbf77f96be6db4077957ba4073d05696c65c9",
     "styles.css": "bda49c14211f6957d5fa0bfd001d94248f75bff0cd3700cbfea7cafc514af8a6",
     "vendor/BufferGeometryUtils.js": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
     "vendor/GLTFLoader.js": "adbbafe8ce40416525b6be0ee5cac0d3782482bcf0122c8ca8ec1ffa77d3440b",
     "vendor/THREE-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
     "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
     "vendor/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
-  }
+  },
+  "storage_mode": "closed"
 }

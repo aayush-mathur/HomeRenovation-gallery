@@ -13,7 +13,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./styles.css?v=bda49c14211f6957">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script type="module" src="./app.js?v=a01b68d1009da795"></script>
+  <script type="module" src="./app.js?v=5e934ec5f16afe8c"></script>
 </head>
 <body>
   <header>
@@ -25,7 +25,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <button id="help" aria-expanded="false" aria-controls="instructions">Controls</button>
   </header>
   <main id="stage" aria-label="Full-house first-person walkthrough">
-    <canvas id="view" tabindex="0" aria-label="House view. Drag to look. WASD or arrow keys to walk. Q and E turn, R and F look up and down. Space opens or closes nearby storage. Escape releases mouse." aria-describedby="quick-help"></canvas>
+    <canvas id="view" tabindex="0" aria-label="House view. Drag to look. WASD or arrow keys to walk. Q and E turn, R and F look up and down. Storage stays closed. Escape releases mouse." aria-describedby="quick-help"></canvas>
     <div id="loading" role="status" aria-live="polite">
       <h2 id="loading-title">Opening the full house</h2>
       <p id="loading-detail">Loading the furnished house. Nothing is uploaded.</p>
@@ -37,7 +37,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
       <p><strong>Full screen:</strong> use the toolbar button to expand the walkthrough. Exit full screen or <kbd>Esc</kbd> returns to the normal view.</p>
       <p><strong>Walk:</strong> click or tab into the view, then use <kbd>W A S D</kbd> or arrow keys. <kbd>Q E</kbd> turn; <kbd>R F</kbd> look up/down. Touch: drag to look and hold a movement arrow.</p>
       <p><strong>Walk between rooms:</strong> interior doors are held open on their real hinges, with leaves and handles intact. Walk through doorways normally; the room menu is just an optional shortcut.</p>
-      <p><strong>Storage:</strong> point at a front or handle within 1.8 m, then click/tap, use the Open/Close button, or press <kbd>Space</kbd> while the view is focused. Dragging still looks around. Step aside if you are in a door or drawer's path. Shelves, rails and drawer layouts are proposals, not approved joinery. Reset position keeps storage states; reloading closes them.</p>
+      <p><strong>Storage opening is disabled:</strong> cupboards and drawers stay in their closed, fixed positions while you explore. Click/tap only focuses the view; dragging looks around. Furniture and room layouts are retained.</p>
       <p><strong>Narrow aisles:</strong> use sideways steps around beds and furniture. <span id="clearance-note">The preview uses a 40 cm round body; narrow furniture aisles are not an accessible-design approval.</span> Reset position returns to your selected starting room.</p>
       <p class="note">1.6 m eye height. Simplified real-time materials and lighting, not Cycles. Mirrors are material approximations, not real reflections. Provisional geometry remains unverified. Walking stays on this floor: stair flights are visual only, not climbable. Exterior exits and the floorless rear OTS remain blocked.</p>
       <button id="close-help">Back to house</button>
@@ -48,12 +48,8 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
       <button data-move="back" aria-label="Walk backward">↓</button>
       <button data-move="right" aria-label="Step right">→</button>
     </div>
-    <div id="storage-panel" hidden>
-      <span id="storage-name">Point at nearby storage · Space or tap to interact</span>
-      <button id="storage-action" disabled>Open storage</button>
-    </div>
   </main>
-  <footer><p id="quick-help"><span class="desktop-help">Drag to look · WASD / arrows to walk · interior doors held open</span><span class="touch-help">Drag to look · hold arrows to walk · doors open</span></p><p id="status" role="status">Preparing walkthrough</p></footer>
+  <footer><p id="quick-help"><span class="desktop-help">Drag to look · WASD / arrows to walk · storage opening disabled</span><span class="touch-help">Drag to look · hold arrows to walk · storage stays closed</span></p><p id="status" role="status">Preparing walkthrough</p></footer>
   <noscript>This walkthrough needs JavaScript and WebGL. No data is uploaded.</noscript>
 </body>
 </html>
