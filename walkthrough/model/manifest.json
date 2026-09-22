@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "source_sha256": "42c9f48529cc9fe7b08d5d68fed569a5f81b5444774f32280ce6cc4d35482f91",
-  "model_sha256": "48973b2fd7fe5fee6e417d61942fe9af253d2f88ff7611161c74c4bf54d83c56",
-  "navigation_sha256": "9d5673c542759a0cd9857b6a36a1ef869926e84a293282077db378ba57ca01cb",
-  "bytes": 12839340,
+  "source_sha256": "c1771820e400a9bb4d161734eb561c4c612d76018a9c02c39a9091b0a021718e",
+  "model_sha256": "97b6839ed12152a69683d500a6bbc479201942a91b32a4e367aa7c5b286a13d3",
+  "navigation_sha256": "785f67c405ca204f24773a076300df8206c310a73bdfd2a14a399c8ad7be5231",
+  "bytes": 12789016,
   "units": "meters",
   "eye_height": 1.6,
-  "triangles": 240000,
-  "source": "house_layout_v007.blend",
+  "triangles": 239068,
+  "source": "house_layout_v008.blend",
   "layout_revision": {
-    "version": "layout-v007"
+    "version": "layout-v008"
   },
-  "scope": "Public v007 walkthrough, approved by the owner",
+  "scope": "Public v008 walkthrough, approved by the owner",
   "storage_mode": "closed",
   "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval."
 }
