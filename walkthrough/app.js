@@ -90,7 +90,23 @@ function setupCeilings() {
     ceilings = createCeilingComparison({
       options: ceilingOptions, model, scene,
       parse: async bytes => {
-        const result = await new GLTFLoader().parseAsync(bytes, '');
+        const loader = new GLTFLoader();
+        loader.register(parser => {
+          // Embedded browsers can expose createImageBitmap while rejecting its
+          // blob-fetch/decode path. Decode verified embedded PNGs as images.
+          const textures = new THREE.TextureLoader(parser.options.manager);
+          textures.setCrossOrigin(parser.options.crossOrigin);
+          return {
+            name: 'EMBEDDED_PNG_COMPATIBILITY',
+            loadTexture(index) {
+              const source = parser.json.textures[index]?.source;
+              const image = parser.json.images?.[source];
+              if (!image || image.mimeType !== 'image/png' || !Number.isInteger(image.bufferView)) return null;
+              return parser.loadTextureImage(index, source, textures);
+            },
+          };
+        });
+        const result = await loader.parseAsync(bytes, '');
         const length = new DataView(bytes).getUint32(12, true);
         const document = JSON.parse(new TextDecoder().decode(new Uint8Array(bytes, 20, length)));
         const images = new Set();
