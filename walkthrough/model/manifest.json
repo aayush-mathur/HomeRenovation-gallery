@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "source_sha256": "e314f27d0da5dd709b5be1f2126b77c6a4a4771d1a0f7289e164baeaac969f04",
-  "model_sha256": "8a0e684f6a0a683f9c0cc7ef046e8040d2dee55959c6a67e40271f33472b39a9",
-  "navigation_sha256": "495ca1a880f5e5e9e37cf2722c2608f3791204d7fc34bd85424decdc7ccff16b",
-  "bytes": 13785484,
+  "source_sha256": "e830f3a6cee6ccf97d26e47edfdbef96dd5e9bc97e3b5e03ac2cdac19563cf78",
+  "model_sha256": "5dfe69e17e485e99c213bc5c32e4a59636bfe1767cfec4f0406a2537a0b475c0",
+  "navigation_sha256": "729e71b1f3a2a845f086097ae38a8edfcfbcca101e662d89095d25fdf702df4d",
+  "bytes": 15062588,
   "units": "meters",
   "eye_height": 1.6,
-  "triangles": 257740,
-  "source": "house_layout_v012.blend",
+  "triangles": 281732,
+  "source": "house_layout_v013.blend",
   "layout_revision": {
-    "version": "layout-v012"
+    "version": "layout-v013"
   },
-  "scope": "Public v012 walkthrough, approved by the owner",
+  "scope": "Public v013 walkthrough, approved by the owner",
   "storage_mode": "closed",
   "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification.",
   "electronics": {
@@ -20,11 +20,12 @@
     "placed": [
       "Five indoor AC provisions",
       "D30 Ultra candidate dock",
-      "Open network cabinet with ONT, router, PoE switch and NVR",
+      "Furniture-finished network cabinet with ONT, router, PoE switch and NVR; concealed ventilation and open dock niche",
       "Primary hall AP and optional rear wired AP",
       "Set-top box",
       "Entry/stair-approach camera",
-      "Doorbell, emergency light, charging/data and smoke-detector provisions"
+      "Doorbell, emergency light, charging/data and smoke-detector provisions",
+      "Compact on-wall hall L/C/R speakers; subwoofer opposite the dock"
     ],
     "unplaced": [
       {
