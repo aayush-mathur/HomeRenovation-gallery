@@ -1,21 +1,30 @@
 {
-  "schema_version": 3,
-  "revision": "v016",
+  "schema_version": 4,
+  "revision": "v017",
   "scope": "approved-public-walkthrough",
-  "source_sha256": "fc10a44fb070df49e1c088cbe9e558ce58f4de5b8b662a7010f777adecb4f972",
+  "source_sha256": "72781b9b9f1eced9297737b7517aef6d89910ba6247c5034f280c897510f1a71",
   "files": {
-    "app.js": "97c77e4877881a81f8edc47359e3646d07d989d69472fe427675986db6f908c3",
-    "index.html": "b89d25ca1cd8cc484b8622b52e22fa90fae401d2939165ef98ccf8298a017e16",
-    "model/house.glb": "63bd95a1b066b0a35946d4adab36024f689200d8a62746525e0e021975d04605",
-    "model/manifest.json": "8990fb4cf799ed48b2f61be9f3f9b9f19248c0bd2c868763fac52106b2588699",
-    "model/navigation.json": "1f324dfd997d14589f3fe7b6ebbc646008b6099240e048bd7f9f628021fb258b",
+    "app.js": "f0663babadac5b24389fd22120792d92489745b6ee89e7effb5d26e91ae886b5",
+    "ceiling-comparison.js": "82fdd828f00569e680e4653089d661c8109836bef9388ffd4723dd5cf343521b",
+    "index.html": "9cf8469cdd7af50eb7e546c6f227ae3ceead0599a6a61eeb47e3be9557f5d8c7",
+    "model/ceilings/linear-242d4caf58d1df4f.glb": "242d4caf58d1df4f59e01ff3d261dfb31237021ee9cd32a82ed8ebc6b0c805cf",
+    "model/ceilings/quiet-dd3bea9b57f51f87.glb": "dd3bea9b57f51f8797f2290f82a1bb9a63af3206000477d94c11e2bc9d92c579",
+    "model/ceilings/warm-18ea31a48c51b4e7.glb": "18ea31a48c51b4e77d7dba11fcc3e4e58d2312a8166e362e0f5ea8edcad36128",
+    "model/house.glb": "cf295a2e48900587965e97295383cac53479a85a6a02d0aedd781ab37788670c",
+    "model/manifest.json": "44d99732a907d6c13bd3ad2b04061d9c2e8816777c173474fcd811d5c901ede9",
+    "model/navigation.json": "8074a367c6a70a766c0a87b1ba9c519114f938c2101639931800a0c635eb1cc4",
     "navigation.js": "65e6f4306b34a320caffa94b4b5b1126a002bed6bbde68f3bd9d08339d1c72eb",
-    "styles.css": "dbd078e9a0b1c96022d32ae16fc8b0775f52e166e1300ed6d7726603cc4dedb4",
+    "styles.css": "c8c6e80155fbc455ad1cb233ac85c6d61b986c75c3d3dd57718f94450d669eec",
     "vendor/BufferGeometryUtils.js": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
     "vendor/GLTFLoader.js": "adbbafe8ce40416525b6be0ee5cac0d3782482bcf0122c8ca8ec1ffa77d3440b",
     "vendor/THREE-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
     "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
     "vendor/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+  },
+  "ceiling_assets": {
+    "quiet": "model/ceilings/quiet-dd3bea9b57f51f87.glb",
+    "linear": "model/ceilings/linear-242d4caf58d1df4f.glb",
+    "warm": "model/ceilings/warm-18ea31a48c51b4e7.glb"
   },
   "storage_mode": "closed"
 }

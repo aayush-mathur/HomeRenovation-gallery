@@ -11,18 +11,20 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
   <meta name="color-scheme" content="light">
   <title>House walkthrough</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="./styles.css?v=dbd078e9a0b1c960">
+  <link rel="stylesheet" href="./styles.css?v=c8c6e80155fbc455">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script type="module" src="./app.js?v=97c77e4877881a81"></script>
+  <script type="module" src="./app.js?v=f0663babadac5b24"></script>
 </head>
 <body>
   <header>
     <div class="title"><h1>House walkthrough</h1><span id="model-version">Public walkthrough</span></div>
     <div class="room-field"><label for="room">Jump to room <span class="note">(optional)</span></label><select id="room" disabled><option>Loading rooms…</option></select></div>
+    <div id="ceiling-controls" hidden><label for="ceiling">Ceiling</label><select id="ceiling" aria-describedby="ceiling-status ceiling-help"><option value="existing">Existing</option></select></div>
     <button id="reset" disabled>Reset position</button>
     <button id="capture" disabled>Mouse look</button>
     <button id="fullscreen" aria-pressed="false">Full screen</button>
     <button id="help" aria-expanded="false" aria-controls="instructions">Controls</button>
+    <div id="ceiling-feedback" hidden><p id="ceiling-status" role="status" aria-live="polite" aria-atomic="true"></p><button id="ceiling-retry" hidden>Retry ceiling</button></div>
   </header>
   <main id="stage" aria-label="Full-house first-person walkthrough">
     <canvas id="view" tabindex="0" aria-label="House view. Drag to look. WASD or arrow keys to walk. Q and E turn, R and F look up and down. Storage stays closed. Escape releases mouse." aria-describedby="quick-help"></canvas>
@@ -36,6 +38,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
       <p><strong>Look:</strong> drag anywhere in the view. On desktop, Mouse look captures the pointer; <kbd>Esc</kbd> releases it.</p>
       <p><strong>Full screen:</strong> use the toolbar button to expand the walkthrough. Exit full screen or <kbd>Esc</kbd> returns to the normal view.</p>
       <p id="lens-help"><strong>Lens:</strong> lower millimetres give a wider view without moving you. The 16–70 mm slider uses 35 mm-equivalent focal lengths with a fixed 36 mm horizontal film gate; viewport height follows its aspect ratio. Auto preserves the original 62° vertical view, capped at 90° horizontally. Reset lens restores Auto, not your position. Wide views stretch edges, especially in portrait; this is not a simulation of human eyesight. Release Mouse look with <kbd>Esc</kbd> before using the slider.</p>
+      <p id="ceiling-help" hidden><strong>Ceiling concepts:</strong> switch the whole floor, including bedrooms, without moving your view. Existing restores the original ceiling fixtures. Fans are static provisions, not rotating. Web lighting and emissive faces are approximate; use Cycles reference previews for lighting comparisons. <span id="ceiling-note"></span></p>
       <p><strong>Walk:</strong> click or tab into the view, then use <kbd>W A S D</kbd> or arrow keys. <kbd>Q E</kbd> turn; <kbd>R F</kbd> look up/down. Touch: drag to look and hold a movement arrow.</p>
       <p><strong>Walk between rooms:</strong> interior doors are held open on their real hinges, with leaves and handles intact. Walk through doorways normally; the room menu is just an optional shortcut.</p>
       <p><strong>Storage opening is disabled:</strong> cupboards and drawers stay in their closed, fixed positions while you explore. Click/tap only focuses the view; dragging looks around. Furniture and room layouts are retained.</p>

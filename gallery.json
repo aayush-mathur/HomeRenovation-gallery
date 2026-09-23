@@ -2,50 +2,77 @@
   "version": 1,
   "collections": [
     {
-      "id": "layout-v016",
-      "title": "Photo-based front joinery and corrected lightwell - v016",
+      "id": "layout-v017",
+      "title": "Three whole-floor ceiling prototypes - v017",
       "status": "Draft previews",
-      "description": "The circled gridded side panel in the dining lightwell is replaced by plain plaster; its roof cover is retained. Both front rooms have mirrored arched timber door/window compositions, full-height sidelights, wider side windows and separate outer glazed leaves. Existing overall widths are retained; fine joinery and heights remain photo-based estimates. Exterior comparison shows joinery only, not an invented outside floor.",
+      "description": "Compare Quiet / beam-led, Linear and Warm gallery from identical viewpoints, or change Ceiling in the walkthrough without moving. All bedrooms and shared areas are included, with fan provisions in three bedrooms, hall and drawing room. Original beams, raised dining daylight and rear kitchen translucent strip stay clear. Existing ceiling remains available; heights, lighting and installation are provisional.",
       "assumptions": [
-        "900x675, 8-sample photo-interpretation previews. Outer screens open only in the exterior inspection image; no cooler or construction clutter modeled.",
+        "Three 720x540, 8-sample views per comparison board; no measured lux, airflow or installation approval. Five static fan provisions; middle room uses a smaller 900 mm sweep to clear its beam bay.",
         "Static stability fallback; the reported interactive regression cause remains unconfirmed."
       ],
       "views": [
         {
-          "id": "F16_01_plain_lightwell",
-          "title": "Dining lightwell - plain side wall below retained roof cover",
-          "description": "8-sample draft preview; not a final render.",
-          "room": "Front joinery and lightwell",
-          "src": "images/layout-v016/F16_01_plain_lightwell-6cd888721267c59f.png",
-          "width": 900,
-          "height": 675
+          "id": "CP_01_hall",
+          "title": "Hall beam bays, fan and coordinated lighting",
+          "description": "Same viewpoint and exposure across Quiet, Linear and Warm; three 8-sample prototype views.",
+          "room": "Ceiling comparisons",
+          "src": "images/layout-v017/CP_01_hall-156d99b05c3983d6.png",
+          "width": 2160,
+          "height": 640
         },
         {
-          "id": "F16_02_bedroom_inside",
-          "title": "Front bedroom - complete arched door and window unit",
-          "description": "8-sample draft preview; not a final render.",
-          "room": "Front joinery and lightwell",
-          "src": "images/layout-v016/F16_02_bedroom_inside-4250345aa2c6ff84.png",
-          "width": 900,
-          "height": 675
+          "id": "CP_02_dining_kitchen",
+          "title": "Dining lightwell retained beside the kitchen approach",
+          "description": "Same viewpoint and exposure across Quiet, Linear and Warm; three 8-sample prototype views.",
+          "room": "Ceiling comparisons",
+          "src": "images/layout-v017/CP_02_dining_kitchen-d93c3e8ba308da93.png",
+          "width": 2160,
+          "height": 640
         },
         {
-          "id": "F16_03_drawing_inside",
-          "title": "Drawing room - mirrored front door and window unit",
-          "description": "8-sample draft preview; not a final render.",
-          "room": "Front joinery and lightwell",
-          "src": "images/layout-v016/F16_03_drawing_inside-194a78bb478dbeaa.png",
-          "width": 900,
-          "height": 675
+          "id": "CP_03_drawing",
+          "title": "Drawing-room ceiling, fan and clear AC band",
+          "description": "Same viewpoint and exposure across Quiet, Linear and Warm; three 8-sample prototype views.",
+          "room": "Ceiling comparisons",
+          "src": "images/layout-v017/CP_03_drawing-ddea64a87b5c49d8.png",
+          "width": 2160,
+          "height": 640
         },
         {
-          "id": "F16_04_joinery_outside",
-          "title": "Exterior joinery comparison only - surroundings unmodeled",
-          "description": "8-sample draft preview; not a final render.",
-          "room": "Front joinery and lightwell",
-          "src": "images/layout-v016/F16_04_joinery_outside-6c58f61e3c485cc0.png",
-          "width": 900,
-          "height": 675
+          "id": "CP_04_bedroom",
+          "title": "Middle bedroom - smaller fan within the beam bay",
+          "description": "Same viewpoint and exposure across Quiet, Linear and Warm; three 8-sample prototype views.",
+          "room": "Ceiling comparisons",
+          "src": "images/layout-v017/CP_04_bedroom-2d133c17039e247c.png",
+          "width": 2160,
+          "height": 640
+        },
+        {
+          "id": "quiet_plan",
+          "title": "Quiet / beam-led - whole-floor ceiling plan",
+          "description": "Equal-scale schematic with original beams, protected daylight openings and fan sweep provisions.",
+          "room": "Ceiling plans",
+          "src": "images/layout-v017/quiet-plan-35362c4d6608e1a6.svg",
+          "width": 650,
+          "height": 1120
+        },
+        {
+          "id": "linear_plan",
+          "title": "Linear - whole-floor ceiling plan",
+          "description": "Equal-scale schematic with original beams, protected daylight openings and fan sweep provisions.",
+          "room": "Ceiling plans",
+          "src": "images/layout-v017/linear-plan-e43bd7b461161822.svg",
+          "width": 650,
+          "height": 1120
+        },
+        {
+          "id": "warm_plan",
+          "title": "Warm gallery - whole-floor ceiling plan",
+          "description": "Equal-scale schematic with original beams, protected daylight openings and fan sweep provisions.",
+          "room": "Ceiling plans",
+          "src": "images/layout-v017/warm-plan-2325d9b5a11b9001.svg",
+          "width": 650,
+          "height": 1120
         }
       ]
     },
@@ -53,7 +80,7 @@
       "id": "furnished-v005",
       "title": "Furnished house - v005 (historical)",
       "status": "Historical proposal",
-      "description": "Seven preserved historical v005 renders, not the current v016 layout. Use the walkthrough for the current version.",
+      "description": "Seven preserved historical v005 renders, not the current v017 layout. Use the walkthrough for the current version.",
       "assumptions": [
         "Furniture and finishes are visualization proposals, not product or construction specifications.",
         "Existing kitchen, beams and the corrected dining lightwell are retained.",

@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { isSafe, move, movementVector, roomAt, applyLens } from './navigation.js?lens=1';
+import { validateCeilingOptions, createCeilingComparison } from './ceiling-comparison.js';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';
@@ -16,6 +17,7 @@ let yaw = 0, pitch = 0, ready = false, dragging = null, loadController, observer
 let selected = 'kitchen', position = [0, 0], disposed = false, blocked = false, contextLost = false;
 let currentRoom = '';
 let focalLength = null, lens;
+let ceilings, ceilingOptions, ceilingUnavailable = '';
 const movementKeys = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'KeyQ', 'KeyE', 'KeyR', 'KeyF']);
 
 function clearInput() {
@@ -51,6 +53,7 @@ function teleport(id) {
   message(`${preset.name} · eye height 1.6 m`);
 }
 function disposeModel() {
+  disposeCeilings();
   if (!model) return;
   scene.remove(model);
   model.traverse(obj => {
@@ -60,7 +63,47 @@ function disposeModel() {
   });
   model = null;
 }
+function disposeCeilings() {
+  ceilings?.dispose(); ceilings = null; ceilingOptions = null; ceilingUnavailable = '';
+  for (const id of ['ceiling-controls', 'ceiling-feedback', 'ceiling-help']) $(id).hidden = true;
+  document.querySelector('header').classList.remove('has-ceilings');
+}
+function renderCeilings(state) {
+  const variant = ceilingOptions?.variants.find(v => v.id === state.selected);
+  const pending = ceilingOptions?.variants.find(v => v.id === state.pending);
+  $('ceiling').value = state.pending || state.selected;
+  $('ceiling').setAttribute('aria-busy', String(Boolean(state.pending)));
+  $('ceiling-status').textContent = state.error || (pending
+    ? `Loading ${pending.label}… Still showing ${variant?.label || 'Existing'}.`
+    : `${variant?.summary || 'Original ceiling and fixtures.'} Concepts only · web lighting is approximate.`);
+  $('ceiling-feedback').dataset.error = String(Boolean(state.error));
+  $('ceiling-retry').hidden = !state.failed;
+}
+function setupCeilings() {
+  try {
+    ceilingOptions = validateCeilingOptions(manifest, document.baseURI);
+    if (!ceilingOptions) return;
+    ceilings = createCeilingComparison({
+      options: ceilingOptions, model, scene,
+      parse: bytes => new GLTFLoader().parseAsync(bytes, ''),
+      onChange: renderCeilings,
+    });
+    $('ceiling').replaceChildren(new Option('Existing', 'existing'),
+      ...ceilingOptions.variants.map(v => new Option(v.label, v.id)));
+    $('ceiling-note').textContent = ceilingOptions.note;
+    for (const id of ['ceiling-controls', 'ceiling-feedback', 'ceiling-help']) $(id).hidden = false;
+    document.querySelector('header').classList.add('has-ceilings');
+    renderCeilings(ceilings.snapshot());
+  } catch (error) {
+    ceilingUnavailable = `${error.message} Showing Existing; walking is unchanged.`;
+    $('ceiling-feedback').hidden = false;
+    $('ceiling-feedback').dataset.error = 'true';
+    $('ceiling-status').textContent = ceilingUnavailable;
+    $('ceiling-retry').hidden = true;
+  }
+}
 function failure(error) {
+  disposeCeilings();
   ready = false;
   release();
   stage.dataset.state = 'error';
@@ -117,6 +160,7 @@ async function load() {
       }
     });
     scene.add(model);
+    setupCeilings();
     // The GLB contains the authored closed pose. Do not instantiate animation,
     // picking or dynamic collision controllers in this stability fallback.
     room.replaceChildren(...nav.presets.map(p => new Option(p.name, p.id)));
@@ -125,7 +169,7 @@ async function load() {
     stage.dataset.state = 'ready';
     $('loading').hidden = true;
     for (const id of ['room', 'reset', 'capture', 'lens', 'reset-lens']) $(id).disabled = false;
-  } catch (error) { if (error.name !== 'AbortError') failure(error); }
+  } catch (error) { if (!disposed && !signal.aborted && error.name !== 'AbortError') failure(error); }
 }
 function updateLens() {
   lens = applyLens(camera, focalLength);
@@ -174,6 +218,11 @@ function animate(time) {
 on($('retry'), 'click', () => renderer && !contextLost ? load() : location.reload());
 on(room, 'change', () => teleport(room.value));
 on($('reset'), 'click', () => teleport(selected));
+for (const id of ['ceiling-controls', 'ceiling-feedback']) {
+  for (const type of ['pointerdown', 'focusin']) on($(id), type, clearInput);
+}
+on($('ceiling'), 'change', () => { clearInput(); ceilings?.select($('ceiling').value); });
+on($('ceiling-retry'), 'click', () => { clearInput(); ceilings?.retry(); });
 for (const type of ['pointerdown', 'focusin']) on($('lens-controls'), type, clearInput);
 on($('lens'), 'input', () => {
   clearInput();
@@ -299,10 +348,11 @@ window.walkthrough = { snapshot: () => ({
   triangles: renderer?.info.render.triangles, calls: renderer?.info.render.calls,
   fov: camera?.fov, aspect: camera?.aspect, lens, eyeHeight: camera?.position.y,
   storage: { enabled: false, mode: 'closed' },
+  ceiling: ceilings?.snapshot() || { selected: 'existing', pending: null, overlayLoaded: false, baselineHidden: false, unavailable: ceilingUnavailable },
 }), geometrySnapshot: () => {
   const meshes = [];
   model?.traverse(obj => {
-    if (obj.isMesh) meshes.push({ name: obj.name, matrix: obj.matrixWorld.toArray() });
+    if (obj.isMesh) meshes.push({ name: obj.name, matrix: obj.matrixWorld.toArray(), visible: obj.visible });
   });
   return meshes;
 } };
