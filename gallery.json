@@ -2,57 +2,48 @@
   "version": 1,
   "collections": [
     {
-      "id": "layout-v015",
-      "title": "Glazed separation and circulation-first layout - v015",
+      "id": "layout-v016",
+      "title": "Photo-based front joinery and corrected lightwell - v016",
       "status": "Draft previews",
-      "description": "Hall-side aquarium replaces divider cabinetry, while the mandir remains intact. A proposed fluted-glass upper partition and matching closable door retain a separation option. A 900 mm furniture-free room route, shallow displays and six-plus-three seating replace the tall cabinet arrangement. Network equipment is in the media console; robot dock is separate on the dining-side wall. Wall alterations require structural review.",
+      "description": "The circled gridded side panel in the dining lightwell is replaced by plain plaster; its roof cover is retained. Both front rooms have mirrored arched timber door/window compositions, full-height sidelights, wider side windows and separate outer glazed leaves. Existing overall widths are retained; fine joinery and heights remain photo-based estimates. Exterior comparison shows joinery only, not an invented outside floor.",
       "assumptions": [
-        "900x675, 8-sample concept previews. Partition view shows the proposed door closed; walkthrough holds it open. Structural, safety-glazing and seal detailing unverified.",
+        "900x675, 8-sample photo-interpretation previews. Outer screens open only in the exterior inspection image; no cooler or construction clutter modeled.",
         "Static stability fallback; the reported interactive regression cause remains unconfirmed."
       ],
       "views": [
         {
-          "id": "G15_01_room",
-          "title": "Drawing room with an open circulation route",
+          "id": "F16_01_plain_lightwell",
+          "title": "Dining lightwell - plain side wall below retained roof cover",
           "description": "8-sample draft preview; not a final render.",
-          "room": "Glazed partition and circulation",
-          "src": "images/layout-v015/G15_01_room-c961268a2abec4c4.png",
+          "room": "Front joinery and lightwell",
+          "src": "images/layout-v016/F16_01_plain_lightwell-6cd888721267c59f.png",
           "width": 900,
           "height": 675
         },
         {
-          "id": "G15_02_partition",
-          "title": "Glazed separation and matching closable door",
+          "id": "F16_02_bedroom_inside",
+          "title": "Front bedroom - complete arched door and window unit",
           "description": "8-sample draft preview; not a final render.",
-          "room": "Glazed partition and circulation",
-          "src": "images/layout-v015/G15_02_partition-7b03fb98440a1d31.png",
+          "room": "Front joinery and lightwell",
+          "src": "images/layout-v016/F16_02_bedroom_inside-4250345aa2c6ff84.png",
           "width": 900,
           "height": 675
         },
         {
-          "id": "G15_03_hall_aquarium",
-          "title": "Aquarium on hall side; original mandir retained",
+          "id": "F16_03_drawing_inside",
+          "title": "Drawing room - mirrored front door and window unit",
           "description": "8-sample draft preview; not a final render.",
-          "room": "Glazed partition and circulation",
-          "src": "images/layout-v015/G15_03_hall_aquarium-9901a519191dd211.png",
+          "room": "Front joinery and lightwell",
+          "src": "images/layout-v016/F16_03_drawing_inside-194a78bb478dbeaa.png",
           "width": 900,
           "height": 675
         },
         {
-          "id": "G15_04_services",
-          "title": "Network equipment concealed within the media console",
+          "id": "F16_04_joinery_outside",
+          "title": "Exterior joinery comparison only - surroundings unmodeled",
           "description": "8-sample draft preview; not a final render.",
-          "room": "Glazed partition and circulation",
-          "src": "images/layout-v015/G15_04_services-68366a0fd3643f6a.png",
-          "width": 900,
-          "height": 675
-        },
-        {
-          "id": "G15_05_dock",
-          "title": "Separate open dock location on dining-side wall",
-          "description": "8-sample draft preview; not a final render.",
-          "room": "Glazed partition and circulation",
-          "src": "images/layout-v015/G15_05_dock-885e9d2558991172.png",
+          "room": "Front joinery and lightwell",
+          "src": "images/layout-v016/F16_04_joinery_outside-6c58f61e3c485cc0.png",
           "width": 900,
           "height": 675
         }
@@ -62,7 +53,7 @@
       "id": "furnished-v005",
       "title": "Furnished house - v005 (historical)",
       "status": "Historical proposal",
-      "description": "Seven preserved historical v005 renders, not the current v015 layout. Use the walkthrough for the current version.",
+      "description": "Seven preserved historical v005 renders, not the current v016 layout. Use the walkthrough for the current version.",
       "assumptions": [
         "Furniture and finishes are visualization proposals, not product or construction specifications.",
         "Existing kitchen, beams and the corrected dining lightwell are retained.",

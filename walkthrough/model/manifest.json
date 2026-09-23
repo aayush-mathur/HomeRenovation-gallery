@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "source_sha256": "314a8b07403c06c7d47e2f63fc5fe791c0b231acbc92337f19001d6e3f044502",
-  "model_sha256": "b231d286e846d9a76f6d9e4215b319475a5387cf246151c67d3cce24a901a570",
-  "navigation_sha256": "4ed09c3580b69f5620f6a50ff2041c06b0fda4f8a6d17b6763a87b8e5efde805",
-  "bytes": 16900308,
+  "source_sha256": "fc10a44fb070df49e1c088cbe9e558ce58f4de5b8b662a7010f777adecb4f972",
+  "model_sha256": "63bd95a1b066b0a35946d4adab36024f689200d8a62746525e0e021975d04605",
+  "navigation_sha256": "1f324dfd997d14589f3fe7b6ebbc646008b6099240e048bd7f9f628021fb258b",
+  "bytes": 18122228,
   "units": "meters",
   "eye_height": 1.6,
-  "triangles": 311684,
-  "source": "house_layout_v015.blend",
+  "triangles": 334506,
+  "source": "house_layout_v016.blend",
   "layout_revision": {
-    "version": "layout-v015"
+    "version": "layout-v016"
   },
-  "scope": "Public v015 walkthrough, approved by the owner",
+  "scope": "Public v016 walkthrough, approved by the owner",
   "storage_mode": "closed",
-  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification. Existing-size aquarium on its own open frame; loaded floor/stand support and installation are not verified. Water/fish are illustrative. Glazed partition is a proposed wall alteration pending structural/site review. No tested AC/acoustic performance or electrical/thermal cabinet approval. Door is closable in the design but held open in the walkthrough.",
+  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification. Existing-size aquarium on its own open frame; loaded floor/stand support and installation are not verified. Water/fish are illustrative. Glazed partition is a proposed wall alteration pending structural/site review. No tested AC/acoustic performance or electrical/thermal cabinet approval. Door is closable in the design but held open in the walkthrough. Front arched door/window assemblies follow user photos with source-plan widths; unmeasured elevations, frame/grille and glazing details are provisional. Exterior surroundings are not modeled.",
   "electronics": {
     "status": "Schematic proposals, not installed or certified",
     "ac_indoor_units": 5,
