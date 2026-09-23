@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { isSafe, move, movementVector, roomAt, applyLens } from './navigation.js?lens=1';
-import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=68e3fc107997f0fc';
+import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=85c9b4e2b91d95f0';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';

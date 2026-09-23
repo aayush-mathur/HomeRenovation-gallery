@@ -123,7 +123,7 @@ export function createCeilingComparison({ options, model, scene, parse, onChange
     abort = controller; pending = id; pendingQuality = wantQuality; emit();
     let loaded = null;
     try {
-      const response = await fetchAsset(variant.url, { signal: controller.signal, cache: 'no-store', redirect: 'error' });
+      const response = await fetchAsset(variant.url, { signal: controller.signal, cache: wantQuality ? 'force-cache' : 'no-store', redirect: 'error' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const bytes = await response.arrayBuffer();
       if (ticket !== generation || disposed) return;

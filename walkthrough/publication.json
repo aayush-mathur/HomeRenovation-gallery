@@ -4,9 +4,9 @@
   "scope": "approved-public-walkthrough",
   "source_sha256": "1319c6daaaf0f9cebe4854f231e0cc5dbe9c99377147b9f6f340c5b5073f901d",
   "files": {
-    "app.js": "498a62d0a1873b46a105298a653151eb6f3afabd11064d9b6280ae9c48ac0543",
-    "ceiling-comparison.js": "68e3fc107997f0fcb2b5d018a8b267058c21c3b05ec2a92ad286660abccbe970",
-    "index.html": "98e173ca1abaf203e28122b81119397fce42779b737491e41b925bb2cf1762b9",
+    "app.js": "27819268d36940d413f207972a551ff6e15e5485acb4b1fb3d0173f8d4d3db7f",
+    "ceiling-comparison.js": "85c9b4e2b91d95f02ef14311f76aa74aba5020f0eb0b4ab55f273cefc9806a25",
+    "index.html": "bbdd4bb780455b478a511ded0c2862b2dd7010f08f1c1ba65ee7ca273a34d8c1",
     "model/ceilings/linear-242d4caf58d1df4f.glb": "242d4caf58d1df4f59e01ff3d261dfb31237021ee9cd32a82ed8ebc6b0c805cf",
     "model/ceilings/quiet-dd3bea9b57f51f87.glb": "dd3bea9b57f51f8797f2290f82a1bb9a63af3206000477d94c11e2bc9d92c579",
     "model/ceilings/sculpted-26b7126f477fde51.glb": "26b7126f477fde51e2c42e003fdb0ce86aaba6d38ec6b2e9f99c69b74deeaacf",
