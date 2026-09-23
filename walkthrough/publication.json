@@ -1,5 +1,5 @@
 {
-  "schema_version": 6,
+  "schema_version": 5,
   "revision": "v018",
   "scope": "approved-public-walkthrough",
   "source_sha256": "1319c6daaaf0f9cebe4854f231e0cc5dbe9c99377147b9f6f340c5b5073f901d",
@@ -12,9 +12,8 @@
     "model/ceilings/sculpted-26b7126f477fde51.glb": "26b7126f477fde51e2c42e003fdb0ce86aaba6d38ec6b2e9f99c69b74deeaacf",
     "model/ceilings/warm-18ea31a48c51b4e7.glb": "18ea31a48c51b4e77d7dba11fcc3e4e58d2312a8166e362e0f5ea8edcad36128",
     "model/house.glb": "cf295a2e48900587965e97295383cac53479a85a6a02d0aedd781ab37788670c",
-    "model/manifest.json": "7af58b8a65a2baac74bfe6e470a4a3527c2b2c83a77843f04a6374997566e110",
+    "model/manifest.json": "fa4e9883935af8b5ee3256184a22504f2f25384ecc1e600cc01f577d5fe46fbb",
     "model/navigation.json": "5e99594eab83ef2b480ef4fa987ef32dbd17b0e3a7189d16a95550202d46d7ac",
-    "model/quality/sculpted-1794d6fed3f51936.glb": "1794d6fed3f519360b702a4f2ab7096991448679f2cb1498cf084248bda7fa64",
     "navigation.js": "65e6f4306b34a320caffa94b4b5b1126a002bed6bbde68f3bd9d08339d1c72eb",
     "styles.css": "faabb0137a199e5249658b6ebc794cf670e6bc012c03a7435f2f354a22ccf86c",
     "vendor/BufferGeometryUtils.js": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
@@ -29,6 +28,5 @@
     "warm": "model/ceilings/warm-18ea31a48c51b4e7.glb",
     "sculpted": "model/ceilings/sculpted-26b7126f477fde51.glb"
   },
-  "quality_asset": "model/quality/sculpted-1794d6fed3f51936.glb",
   "storage_mode": "closed"
 }

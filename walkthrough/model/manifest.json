@@ -103,14 +103,6 @@
         "fan_blade_height_m": 2.52
       }
     ],
-    "note": "Whole-floor concepts with five static fan provisions. Sculpted flow adds formed beam-level finishes and a shaped lightwell while keeping higher fan pockets. Geometry, supports and installation remain provisional; browser lighting is simplified.",
-    "quality": {
-      "id": "sculpted",
-      "label": "Sculpted flow \u00b7 baked pilot",
-      "summary": "Baked lighting and surface colour in hall + dining. Other rooms, glass and metal remain simplified. Fixed lighting for Sculpted flow only.",
-      "src": "./model/quality/sculpted-1794d6fed3f51936.glb",
-      "sha256": "1794d6fed3f519360b702a4f2ab7096991448679f2cb1498cf084248bda7fa64",
-      "bytes": 17659256
-    }
+    "note": "Whole-floor concepts with five static fan provisions. Sculpted flow adds formed beam-level finishes and a shaped lightwell while keeping higher fan pockets. Geometry, supports and installation remain provisional; browser lighting is simplified."
   }
 }
