@@ -2,41 +2,59 @@
   "version": 1,
   "collections": [
     {
-      "id": "layout-v014",
-      "title": "Aquarium and collected drawing room - v014",
+      "id": "layout-v015",
+      "title": "Glazed separation and circulation-first layout - v015",
       "status": "Draft previews",
-      "description": "The existing 142 x 30 x 72 cm aquarium sits on an open 55 cm frame, total height 127 cm. Dry awards/medals shelving and three guest seats are reorganized beside it; six everyday seats and the hall technology redesign remain. Maintenance access is reserved; floor/stand capacity, filtration and electrical detailing require verification.",
+      "description": "Hall-side aquarium replaces divider cabinetry, while the mandir remains intact. A proposed fluted-glass upper partition and matching closable door retain a separation option. A 900 mm furniture-free room route, shallow displays and six-plus-three seating replace the tall cabinet arrangement. Network equipment is in the media console; robot dock is separate on the dining-side wall. Wall alterations require structural review.",
       "assumptions": [
-        "1000x750, 12-sample concept previews; collection sizes and equipment fit provisional.",
+        "900x675, 8-sample concept previews. Partition view shows the proposed door closed; walkthrough holds it open. Structural, safety-glazing and seal detailing unverified.",
         "Static stability fallback; the reported interactive regression cause remains unconfirmed."
       ],
       "views": [
         {
-          "id": "A14_01_room",
-          "title": "Drawing room with the existing-size aquarium",
-          "description": "12-sample design preview; not a final render.",
-          "room": "Drawing room",
-          "src": "images/layout-v014/A14_01_room-e12f5304d94c9f14.png",
-          "width": 1000,
-          "height": 750
+          "id": "G15_01_room",
+          "title": "Drawing room with an open circulation route",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Glazed partition and circulation",
+          "src": "images/layout-v015/G15_01_room-c961268a2abec4c4.png",
+          "width": 900,
+          "height": 675
         },
         {
-          "id": "A14_02_aquarium",
-          "title": "Aquarium on open frame beside dry awards display",
-          "description": "12-sample design preview; not a final render.",
-          "room": "Drawing room",
-          "src": "images/layout-v014/A14_02_aquarium-7d32da7e4ba77322.png",
-          "width": 1000,
-          "height": 750
+          "id": "G15_02_partition",
+          "title": "Glazed separation and matching closable door",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Glazed partition and circulation",
+          "src": "images/layout-v015/G15_02_partition-7b03fb98440a1d31.png",
+          "width": 900,
+          "height": 675
         },
         {
-          "id": "A14_03_display",
-          "title": "Awards, medals and three tucked-away guest seats",
-          "description": "12-sample design preview; not a final render.",
-          "room": "Drawing room",
-          "src": "images/layout-v014/A14_03_display-7b1cad914e3b74b2.png",
-          "width": 1000,
-          "height": 750
+          "id": "G15_03_hall_aquarium",
+          "title": "Aquarium on hall side; original mandir retained",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Glazed partition and circulation",
+          "src": "images/layout-v015/G15_03_hall_aquarium-9901a519191dd211.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "G15_04_services",
+          "title": "Network equipment concealed within the media console",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Glazed partition and circulation",
+          "src": "images/layout-v015/G15_04_services-68366a0fd3643f6a.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "G15_05_dock",
+          "title": "Separate open dock location on dining-side wall",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Glazed partition and circulation",
+          "src": "images/layout-v015/G15_05_dock-885e9d2558991172.png",
+          "width": 900,
+          "height": 675
         }
       ]
     },
@@ -44,7 +62,7 @@
       "id": "furnished-v005",
       "title": "Furnished house - v005 (historical)",
       "status": "Historical proposal",
-      "description": "Seven preserved historical v005 renders, not the current v014 layout. Use the walkthrough for the current version.",
+      "description": "Seven preserved historical v005 renders, not the current v015 layout. Use the walkthrough for the current version.",
       "assumptions": [
         "Furniture and finishes are visualization proposals, not product or construction specifications.",
         "Existing kitchen, beams and the corrected dining lightwell are retained.",
