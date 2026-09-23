@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "source_sha256": "72781b9b9f1eced9297737b7517aef6d89910ba6247c5034f280c897510f1a71",
+  "source_sha256": "1319c6daaaf0f9cebe4854f231e0cc5dbe9c99377147b9f6f340c5b5073f901d",
   "model_sha256": "cf295a2e48900587965e97295383cac53479a85a6a02d0aedd781ab37788670c",
-  "navigation_sha256": "8074a367c6a70a766c0a87b1ba9c519114f938c2101639931800a0c635eb1cc4",
+  "navigation_sha256": "5e99594eab83ef2b480ef4fa987ef32dbd17b0e3a7189d16a95550202d46d7ac",
   "bytes": 18113804,
   "units": "meters",
   "eye_height": 1.6,
   "triangles": 334506,
-  "source": "house_layout_v017.blend",
+  "source": "house_layout_v018.blend",
   "layout_revision": {
-    "version": "layout-v017"
+    "version": "layout-v018"
   },
-  "scope": "Public v017 walkthrough, approved by the owner",
+  "scope": "Public v018 walkthrough, approved by the owner",
   "storage_mode": "closed",
-  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification. Existing-size aquarium on its own open frame; loaded floor/stand support and installation are not verified. Water/fish are illustrative. Glazed partition is a proposed wall alteration pending structural/site review. No tested AC/acoustic performance or electrical/thermal cabinet approval. Door is closable in the design but held open in the walkthrough. Front arched door/window assemblies follow user photos with source-plan widths; unmeasured elevations, frame/grille and glazing details are provisional. Exterior surroundings are not modeled. Three proposed ceiling overlays preserve source beams/daylight and show five fan provisions. Suspension, service/driver access, fan capacity, detector locations, board ratings and actual heights require professional/product verification.",
+  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification. Existing-size aquarium on its own open frame; loaded floor/stand support and installation are not verified. Water/fish are illustrative. Glazed partition is a proposed wall alteration pending structural/site review. No tested AC/acoustic performance or electrical/thermal cabinet approval. Door is closable in the design but held open in the walkthrough. Front arched door/window assemblies follow user photos with source-plan widths; unmeasured elevations, frame/grille and glazing details are provisional. Exterior surroundings are not modeled. Proposed ceiling overlays preserve source beam cores and glazing and show five fan provisions. Suspension, service/driver access, fan capacity, detector locations, formed-profile manufacture and actual heights require professional/product verification.",
   "electronics": {
     "status": "Schematic proposals, not installed or certified",
     "ac_indoor_units": 5,
@@ -47,8 +47,8 @@
     ]
   },
   "ceiling_options": {
-    "version": 1,
-    "base_source_sha256": "72781b9b9f1eced9297737b7517aef6d89910ba6247c5034f280c897510f1a71",
+    "version": 2,
+    "base_source_sha256": "1319c6daaaf0f9cebe4854f231e0cc5dbe9c99377147b9f6f340c5b5073f901d",
     "default": "existing",
     "baseline_nodes": [
       "CEILING_BASELINE_5155462b4771fced",
@@ -91,8 +91,18 @@
         "summary": "Timber-look slatted accents in the hall/drawing room, restrained bedroom headboard bands, and plain easy-clean kitchen/wet-area ceilings.",
         "min_ceiling_m": 2.84,
         "fan_blade_height_m": 2.52
+      },
+      {
+        "id": "sculpted",
+        "label": "Sculpted flow",
+        "src": "./model/ceilings/sculpted-26b7126f477fde51.glb",
+        "sha256": "26b7126f477fde51e2c42e003fdb0ce86aaba6d38ec6b2e9f99c69b74deeaacf",
+        "bytes": 2538904,
+        "summary": "Connected beam-level ribbons with curved transitions, higher fan pockets, a sculpted dining lightwell and one TV-wall return. Original structural cores and glazing remain.",
+        "min_ceiling_m": 2.66,
+        "fan_blade_height_m": 2.52
       }
     ],
-    "note": "Whole-floor ceiling concepts with five static fan provisions. Heights, supports, ventilation and lighting remain provisional. The browser uses simplified lighting; compare the rendered boards."
+    "note": "Whole-floor concepts with five static fan provisions. Sculpted flow adds formed beam-level finishes and a shaped lightwell while keeping higher fan pockets. Geometry, supports and installation remain provisional; browser lighting is simplified."
   }
 }

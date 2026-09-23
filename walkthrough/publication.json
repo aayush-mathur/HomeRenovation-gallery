@@ -1,18 +1,19 @@
 {
-  "schema_version": 4,
-  "revision": "v017",
+  "schema_version": 5,
+  "revision": "v018",
   "scope": "approved-public-walkthrough",
-  "source_sha256": "72781b9b9f1eced9297737b7517aef6d89910ba6247c5034f280c897510f1a71",
+  "source_sha256": "1319c6daaaf0f9cebe4854f231e0cc5dbe9c99377147b9f6f340c5b5073f901d",
   "files": {
-    "app.js": "f0663babadac5b24389fd22120792d92489745b6ee89e7effb5d26e91ae886b5",
-    "ceiling-comparison.js": "82fdd828f00569e680e4653089d661c8109836bef9388ffd4723dd5cf343521b",
-    "index.html": "9cf8469cdd7af50eb7e546c6f227ae3ceead0599a6a61eeb47e3be9557f5d8c7",
+    "app.js": "2641c6e58814aa7c7b552cbb61db07813ec4bba8cb6017a8269b12cc36627e6c",
+    "ceiling-comparison.js": "a847ba2b747412c2bb8a1c3ac8bdbcf4a290e467df12a816f07946adcf7ecee2",
+    "index.html": "eb318faaac01f01c60447a55a5e8391aecaa3193ce3edfe45d960717e97bd023",
     "model/ceilings/linear-242d4caf58d1df4f.glb": "242d4caf58d1df4f59e01ff3d261dfb31237021ee9cd32a82ed8ebc6b0c805cf",
     "model/ceilings/quiet-dd3bea9b57f51f87.glb": "dd3bea9b57f51f8797f2290f82a1bb9a63af3206000477d94c11e2bc9d92c579",
+    "model/ceilings/sculpted-26b7126f477fde51.glb": "26b7126f477fde51e2c42e003fdb0ce86aaba6d38ec6b2e9f99c69b74deeaacf",
     "model/ceilings/warm-18ea31a48c51b4e7.glb": "18ea31a48c51b4e77d7dba11fcc3e4e58d2312a8166e362e0f5ea8edcad36128",
     "model/house.glb": "cf295a2e48900587965e97295383cac53479a85a6a02d0aedd781ab37788670c",
-    "model/manifest.json": "44d99732a907d6c13bd3ad2b04061d9c2e8816777c173474fcd811d5c901ede9",
-    "model/navigation.json": "8074a367c6a70a766c0a87b1ba9c519114f938c2101639931800a0c635eb1cc4",
+    "model/manifest.json": "fa4e9883935af8b5ee3256184a22504f2f25384ecc1e600cc01f577d5fe46fbb",
+    "model/navigation.json": "5e99594eab83ef2b480ef4fa987ef32dbd17b0e3a7189d16a95550202d46d7ac",
     "navigation.js": "65e6f4306b34a320caffa94b4b5b1126a002bed6bbde68f3bd9d08339d1c72eb",
     "styles.css": "c8c6e80155fbc455ad1cb233ac85c6d61b986c75c3d3dd57718f94450d669eec",
     "vendor/BufferGeometryUtils.js": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
@@ -24,7 +25,8 @@
   "ceiling_assets": {
     "quiet": "model/ceilings/quiet-dd3bea9b57f51f87.glb",
     "linear": "model/ceilings/linear-242d4caf58d1df4f.glb",
-    "warm": "model/ceilings/warm-18ea31a48c51b4e7.glb"
+    "warm": "model/ceilings/warm-18ea31a48c51b4e7.glb",
+    "sculpted": "model/ceilings/sculpted-26b7126f477fde51.glb"
   },
   "storage_mode": "closed"
 }

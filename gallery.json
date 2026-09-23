@@ -2,75 +2,131 @@
   "version": 1,
   "collections": [
     {
-      "id": "layout-v017",
-      "title": "Three whole-floor ceiling prototypes - v017",
+      "id": "layout-v018",
+      "title": "Sculpted flow - architectural ceiling concept v018",
       "status": "Draft previews",
-      "description": "Compare Quiet / beam-led, Linear and Warm gallery from identical viewpoints, or change Ceiling in the walkthrough without moving. All bedrooms and shared areas are included, with fan provisions in three bedrooms, hall and drawing room. Original beams, raised dining daylight and rear kitchen translucent strip stay clear. Existing ceiling remains available; heights, lighting and installation are provisional.",
+      "description": "A fourth option uses curved beam junctions, selective beam-level finish bands, a sculpted dining lightwell and one media-wall return. Existing, Quiet, Linear and Warm remain available in the Ceiling selector. Original structural beam cores and the complete central glazed opening are retained. Profiles require a specialist formed or manufacturer-approved finish system; they are not construction details.",
       "assumptions": [
-        "Three 720x540, 8-sample views per comparison board; no measured lux, airflow or installation approval. Five static fan provisions; middle room uses a smaller 900 mm sweep to clear its beam bay.",
+        "900x675, 8-sample concept previews. Specialist formed finishes and support need review; 2.66 m low bands stay outside the fan swept areas, with high pockets around fans and ACs.",
         "Static stability fallback; the reported interactive regression cause remains unconfirmed."
+      ],
+      "views": [
+        {
+          "id": "SC_01_hall",
+          "title": "Rounded hall beam junctions and higher fan pockets",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Sculpted ceiling",
+          "src": "images/layout-v018/SC_01_hall-7377330076141daa.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "SC_02_lightwell",
+          "title": "Rounded dining-lightwell mouth and retained glazing",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Sculpted ceiling",
+          "src": "images/layout-v018/SC_02_lightwell-81b06045bb768a54.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "SC_03_drawing",
+          "title": "Continuous drawing ceiling and soft wall junction",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Sculpted ceiling",
+          "src": "images/layout-v018/SC_03_drawing-1366850ad7df7a53.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "SC_04_bedroom",
+          "title": "Middle-bedroom beam softened on the bed side",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Sculpted ceiling",
+          "src": "images/layout-v018/SC_04_bedroom-5042a596a41845e4.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "SC_05_wall_return",
+          "title": "Ceiling-to-wall return above the media wall",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Sculpted ceiling",
+          "src": "images/layout-v018/SC_05_wall_return-c633eb93cd5156d1.png",
+          "width": 900,
+          "height": 675
+        }
+      ]
+    },
+    {
+      "id": "ceilings-v017",
+      "title": "Earlier ceiling concepts - Quiet, Linear and Warm",
+      "status": "Retained comparison options",
+      "description": "The three previous options remain available beside Sculpted flow in the walkthrough. These are their original equal-view boards and whole-floor plans.",
+      "assumptions": [
+        "Provisional ceiling heights, fan sizes, supports and lighting; not installation drawings."
       ],
       "views": [
         {
           "id": "CP_01_hall",
           "title": "Hall beam bays, fan and coordinated lighting",
-          "description": "Same viewpoint and exposure across Quiet, Linear and Warm; three 8-sample prototype views.",
           "room": "Ceiling comparisons",
-          "src": "images/layout-v017/CP_01_hall-156d99b05c3983d6.png",
+          "src": "images/ceilings-v017/CP_01_hall-156d99b05c3983d6.png",
+          "description": "Earlier Quiet / beam-led, Linear and Warm comparisons; these options remain unchanged.",
           "width": 2160,
           "height": 640
         },
         {
           "id": "CP_02_dining_kitchen",
           "title": "Dining lightwell retained beside the kitchen approach",
-          "description": "Same viewpoint and exposure across Quiet, Linear and Warm; three 8-sample prototype views.",
           "room": "Ceiling comparisons",
-          "src": "images/layout-v017/CP_02_dining_kitchen-d93c3e8ba308da93.png",
+          "src": "images/ceilings-v017/CP_02_dining_kitchen-d93c3e8ba308da93.png",
+          "description": "Earlier Quiet / beam-led, Linear and Warm comparisons; these options remain unchanged.",
           "width": 2160,
           "height": 640
         },
         {
           "id": "CP_03_drawing",
           "title": "Drawing-room ceiling, fan and clear AC band",
-          "description": "Same viewpoint and exposure across Quiet, Linear and Warm; three 8-sample prototype views.",
           "room": "Ceiling comparisons",
-          "src": "images/layout-v017/CP_03_drawing-ddea64a87b5c49d8.png",
+          "src": "images/ceilings-v017/CP_03_drawing-ddea64a87b5c49d8.png",
+          "description": "Earlier Quiet / beam-led, Linear and Warm comparisons; these options remain unchanged.",
           "width": 2160,
           "height": 640
         },
         {
           "id": "CP_04_bedroom",
           "title": "Middle bedroom - smaller fan within the beam bay",
-          "description": "Same viewpoint and exposure across Quiet, Linear and Warm; three 8-sample prototype views.",
           "room": "Ceiling comparisons",
-          "src": "images/layout-v017/CP_04_bedroom-2d133c17039e247c.png",
+          "src": "images/ceilings-v017/CP_04_bedroom-2d133c17039e247c.png",
+          "description": "Earlier Quiet / beam-led, Linear and Warm comparisons; these options remain unchanged.",
           "width": 2160,
           "height": 640
         },
         {
           "id": "quiet_plan",
-          "title": "Quiet / beam-led - whole-floor ceiling plan",
-          "description": "Equal-scale schematic with original beams, protected daylight openings and fan sweep provisions.",
+          "title": "Quiet / beam-led - ceiling plan",
           "room": "Ceiling plans",
-          "src": "images/layout-v017/quiet-plan-35362c4d6608e1a6.svg",
+          "src": "images/ceilings-v017/quiet_ceiling_plan-35362c4d6608e1a6.svg",
+          "description": "Earlier Quiet / beam-led, Linear and Warm comparisons; these options remain unchanged.",
           "width": 650,
           "height": 1120
         },
         {
           "id": "linear_plan",
-          "title": "Linear - whole-floor ceiling plan",
-          "description": "Equal-scale schematic with original beams, protected daylight openings and fan sweep provisions.",
+          "title": "Linear - ceiling plan",
           "room": "Ceiling plans",
-          "src": "images/layout-v017/linear-plan-e43bd7b461161822.svg",
+          "src": "images/ceilings-v017/linear_ceiling_plan-e43bd7b461161822.svg",
+          "description": "Earlier Quiet / beam-led, Linear and Warm comparisons; these options remain unchanged.",
           "width": 650,
           "height": 1120
         },
         {
           "id": "warm_plan",
-          "title": "Warm gallery - whole-floor ceiling plan",
-          "description": "Equal-scale schematic with original beams, protected daylight openings and fan sweep provisions.",
+          "title": "Warm gallery - ceiling plan",
           "room": "Ceiling plans",
-          "src": "images/layout-v017/warm-plan-2325d9b5a11b9001.svg",
+          "src": "images/ceilings-v017/warm_ceiling_plan-2325d9b5a11b9001.svg",
+          "description": "Earlier Quiet / beam-led, Linear and Warm comparisons; these options remain unchanged.",
           "width": 650,
           "height": 1120
         }
@@ -80,7 +136,7 @@
       "id": "furnished-v005",
       "title": "Furnished house - v005 (historical)",
       "status": "Historical proposal",
-      "description": "Seven preserved historical v005 renders, not the current v017 layout. Use the walkthrough for the current version.",
+      "description": "Seven preserved historical v005 renders, not the current v018 layout. Use the walkthrough for the current version.",
       "assumptions": [
         "Furniture and finishes are visualization proposals, not product or construction specifications.",
         "Existing kitchen, beams and the corrected dining lightwell are retained.",

@@ -1,20 +1,25 @@
 const HASH = /^[a-f0-9]{64}$/;
-const IDS = ['quiet', 'linear', 'warm'];
+const IDS = {
+  1: ['quiet', 'linear', 'warm'],
+  2: ['quiet', 'linear', 'warm', 'sculpted'],
+};
 
 export function validateCeilingOptions(manifest, baseURL) {
   if (manifest.ceiling_options === undefined) return null;
   const options = manifest.ceiling_options;
   const invalid = detail => { throw new Error(`Ceiling comparison unavailable: ${detail}.`); };
-  if (!options || options.version !== 1 || options.default !== 'existing') invalid('unsupported descriptor');
+  if (!options || !Number.isInteger(options.version) || !Object.hasOwn(IDS, options.version) ||
+      options.default !== 'existing') invalid('unsupported descriptor');
+  const ids = IDS[options.version];
   if (!HASH.test(manifest.source_sha256) || options.base_source_sha256 !== manifest.source_sha256) invalid('source binding does not match this house');
   if (!Array.isArray(options.baseline_nodes) || !options.baseline_nodes.length ||
       options.baseline_nodes.some(name => typeof name !== 'string' || !name.trim()) ||
       new Set(options.baseline_nodes).size !== options.baseline_nodes.length) invalid('invalid baseline node names');
-  if (!Array.isArray(options.variants) || options.variants.length !== IDS.length ||
-      new Set(options.variants.map(v => v?.id)).size !== IDS.length) invalid('three distinct schemes are required');
+  if (!Array.isArray(options.variants) || options.variants.length !== ids.length ||
+      new Set(options.variants.map(v => v?.id)).size !== ids.length) invalid(`${ids.length} distinct schemes are required`);
   const base = new URL(baseURL);
   const variants = options.variants.map(variant => {
-    if (!variant || !IDS.includes(variant.id) || typeof variant.label !== 'string' || !variant.label.trim() ||
+    if (!variant || !ids.includes(variant.id) || typeof variant.label !== 'string' || !variant.label.trim() ||
         typeof variant.summary !== 'string' || !variant.summary.trim() || !HASH.test(variant.sha256) ||
         !Number.isSafeInteger(variant.bytes) || variant.bytes <= 0 ||
         !Number.isFinite(variant.min_ceiling_m) || variant.min_ceiling_m <= 2.35 ||
