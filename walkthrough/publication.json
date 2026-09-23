@@ -1,19 +1,20 @@
 {
-  "schema_version": 5,
+  "schema_version": 6,
   "revision": "v018",
   "scope": "approved-public-walkthrough",
   "source_sha256": "1319c6daaaf0f9cebe4854f231e0cc5dbe9c99377147b9f6f340c5b5073f901d",
   "files": {
-    "app.js": "164b107d0a1ab57a029ef60612cd26afff431e997540d15ae9a2a4bf12148925",
-    "ceiling-comparison.js": "a847ba2b747412c2bb8a1c3ac8bdbcf4a290e467df12a816f07946adcf7ecee2",
-    "index.html": "3e43b52c38ff2ac51f891cffd02a732732442a8635990c2ac12db67a1c8794c9",
+    "app.js": "498a62d0a1873b46a105298a653151eb6f3afabd11064d9b6280ae9c48ac0543",
+    "ceiling-comparison.js": "68e3fc107997f0fcb2b5d018a8b267058c21c3b05ec2a92ad286660abccbe970",
+    "index.html": "98e173ca1abaf203e28122b81119397fce42779b737491e41b925bb2cf1762b9",
     "model/ceilings/linear-242d4caf58d1df4f.glb": "242d4caf58d1df4f59e01ff3d261dfb31237021ee9cd32a82ed8ebc6b0c805cf",
     "model/ceilings/quiet-dd3bea9b57f51f87.glb": "dd3bea9b57f51f8797f2290f82a1bb9a63af3206000477d94c11e2bc9d92c579",
     "model/ceilings/sculpted-26b7126f477fde51.glb": "26b7126f477fde51e2c42e003fdb0ce86aaba6d38ec6b2e9f99c69b74deeaacf",
     "model/ceilings/warm-18ea31a48c51b4e7.glb": "18ea31a48c51b4e77d7dba11fcc3e4e58d2312a8166e362e0f5ea8edcad36128",
     "model/house.glb": "cf295a2e48900587965e97295383cac53479a85a6a02d0aedd781ab37788670c",
-    "model/manifest.json": "fa4e9883935af8b5ee3256184a22504f2f25384ecc1e600cc01f577d5fe46fbb",
+    "model/manifest.json": "7af58b8a65a2baac74bfe6e470a4a3527c2b2c83a77843f04a6374997566e110",
     "model/navigation.json": "5e99594eab83ef2b480ef4fa987ef32dbd17b0e3a7189d16a95550202d46d7ac",
+    "model/quality/sculpted-1794d6fed3f51936.glb": "1794d6fed3f519360b702a4f2ab7096991448679f2cb1498cf084248bda7fa64",
     "navigation.js": "65e6f4306b34a320caffa94b4b5b1126a002bed6bbde68f3bd9d08339d1c72eb",
     "styles.css": "faabb0137a199e5249658b6ebc794cf670e6bc012c03a7435f2f354a22ccf86c",
     "vendor/BufferGeometryUtils.js": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
@@ -28,5 +29,6 @@
     "warm": "model/ceilings/warm-18ea31a48c51b4e7.glb",
     "sculpted": "model/ceilings/sculpted-26b7126f477fde51.glb"
   },
+  "quality_asset": "model/quality/sculpted-1794d6fed3f51936.glb",
   "storage_mode": "closed"
 }

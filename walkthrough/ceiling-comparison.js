@@ -30,8 +30,22 @@ export function validateCeilingOptions(manifest, baseURL) {
     if (url.origin !== base.origin || !url.pathname.startsWith(new URL('./model/ceilings/', base).pathname)) invalid('unsafe asset origin');
     return { ...variant, url: url.href };
   });
+  let quality = null;
+  if (options.quality !== undefined) {
+    const value = options.quality;
+    if (options.version !== 2 || !value || value.id !== 'sculpted' ||
+        !HASH.test(value.sha256) || !Number.isSafeInteger(value.bytes) || value.bytes <= 0 ||
+        typeof value.label !== 'string' || !value.label.trim() ||
+        typeof value.summary !== 'string' || !value.summary.trim() ||
+        typeof value.src !== 'string' ||
+        !/^\.\/model\/quality\/sculpted-[a-f0-9]{16}\.glb$/.test(value.src) ||
+        !value.src.endsWith(`${value.sha256.slice(0, 16)}.glb`)) invalid('invalid Sculpted quality asset');
+    const url = new URL(value.src, base);
+    if (url.origin !== base.origin || !url.pathname.startsWith(new URL('./model/quality/', base).pathname)) invalid('unsafe quality asset origin');
+    quality = { ...value, url: url.href };
+  }
   if (typeof options.note !== 'string' || !options.note.trim()) invalid('missing concept note');
-  return { ...options, baseline_nodes: [...options.baseline_nodes], variants };
+  return { ...options, quality, baseline_nodes: [...options.baseline_nodes], variants };
 }
 
 export function disposeCeiling(root) {
@@ -76,9 +90,11 @@ export function createCeilingComparison({ options, model, scene, parse, onChange
     baseline.push({ node: matches[0], visible: matches[0].visible });
   }
   let selected = 'existing', pending = null, error = '', failed = null;
+  const originalModelVisible = model.visible;
+  let qualityActive = false, pendingQuality = false, failedQuality = false;
   let overlay = null, abort, generation = 0, disposed = false;
   const snapshot = () => ({
-    selected, pending, overlayLoaded: Boolean(overlay),
+    selected, pending, qualityActive, pendingQuality, overlayLoaded: Boolean(overlay),
     baselineHidden: baseline.some(({ node, visible }) => visible && !node.visible),
     baseline: baseline.map(({ node }) => ({ name: node.name, visible: node.visible })),
     error, failed, disposed,
@@ -87,20 +103,24 @@ export function createCeilingComparison({ options, model, scene, parse, onChange
   const removeOverlay = () => {
     if (overlay) { scene.remove(overlay); disposeCeiling(overlay); overlay = null; }
   };
-  const restore = () => { for (const { node, visible } of baseline) node.visible = visible; };
-  async function select(id) {
+  const restore = () => {
+    model.visible = originalModelVisible;
+    for (const { node, visible } of baseline) node.visible = visible;
+  };
+  async function select(id, { quality = false } = {}) {
     if (disposed) return;
-    const variant = options.variants.find(v => v.id === id);
+    const wantQuality = quality && id === 'sculpted';
+    const variant = wantQuality ? options.quality : options.variants.find(v => v.id === id);
     if (id !== 'existing' && !variant) return;
     const ticket = ++generation;
     abort?.abort(); abort = null;
-    pending = null; error = ''; failed = null;
+    pending = null; pendingQuality = false; error = ''; failed = null; failedQuality = false;
     if (id === 'existing') {
-      removeOverlay(); restore(); selected = id; emit(); return;
+      removeOverlay(); restore(); selected = id; qualityActive = false; emit(); return;
     }
-    if (id === selected) { emit(); return; }
+    if (id === selected && wantQuality === qualityActive) { emit(); return; }
     const controller = new AbortController();
-    abort = controller; pending = id; emit();
+    abort = controller; pending = id; pendingQuality = wantQuality; emit();
     let loaded = null;
     try {
       const response = await fetchAsset(variant.url, { signal: controller.signal, cache: 'no-store', redirect: 'error' });
@@ -124,23 +144,25 @@ export function createCeilingComparison({ options, model, scene, parse, onChange
       });
       scene.add(loaded);
       removeOverlay(); overlay = loaded; loaded = null;
+      model.visible = wantQuality ? false : originalModelVisible;
       for (const { node } of baseline) node.visible = false;
-      selected = id; pending = null; abort = null; emit();
+      selected = id; qualityActive = wantQuality; pending = null; pendingQuality = false; abort = null; emit();
     } catch (cause) {
       if (loaded) { scene.remove(loaded); disposeCeiling(loaded); }
       if (ticket !== generation || disposed) return;
-      pending = null; abort = null; failed = id;
-      error = `Could not load ${variant.label}: ${cause.message}. Still showing ${selected === 'existing' ? 'Existing' : options.variants.find(v => v.id === selected).label}. Retry or choose Existing.`;
+      pending = null; pendingQuality = false; abort = null; failed = id; failedQuality = wantQuality;
+      error = `Could not load ${variant.label}: ${cause.message}. Still showing ${qualityActive ? options.quality.label : selected === 'existing' ? 'Existing' : options.variants.find(v => v.id === selected).label}. Retry or choose Existing.`;
       emit();
     }
   }
   return {
     select, snapshot,
-    retry: () => failed ? select(failed) : Promise.resolve(),
+    retry: () => failed ? select(failed, { quality: failedQuality }) : Promise.resolve(),
     dispose() {
       if (disposed) return;
       disposed = true; ++generation; abort?.abort(); abort = null;
-      removeOverlay(); restore(); selected = 'existing'; pending = null; error = ''; failed = null; emit();
+      removeOverlay(); restore(); selected = 'existing'; qualityActive = false;
+      pending = null; pendingQuality = false; error = ''; failed = null; emit();
     },
   };
 }

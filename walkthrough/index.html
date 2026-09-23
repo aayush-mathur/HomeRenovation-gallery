@@ -13,7 +13,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./styles.css?v=faabb0137a199e52">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script type="module" src="./app.js?v=164b107d0a1ab57a"></script>
+  <script type="module" src="./app.js?v=498a62d0a1873b46"></script>
 </head>
 <body>
   <button id="toggle-controls" aria-expanded="false" aria-controls="walkthrough-controls" hidden>Show controls</button>
@@ -22,6 +22,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <div class="title"><h1>House walkthrough</h1><span id="model-version">Public walkthrough</span></div>
     <div class="room-field"><label for="room">Jump to room <span class="note">(optional)</span></label><select id="room" disabled><option>Loading rooms…</option></select></div>
     <div id="ceiling-controls" hidden><label for="ceiling">Ceiling</label><select id="ceiling" aria-describedby="ceiling-status ceiling-help"><option value="existing">Existing</option></select></div>
+    <button id="quality" aria-pressed="false" aria-describedby="ceiling-status" hidden>Try baked lighting</button>
     <button id="reset" disabled>Reset position</button>
     <button id="capture" disabled>Mouse look</button>
     <button id="fullscreen" aria-pressed="false">Full screen</button>

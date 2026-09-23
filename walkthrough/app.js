@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { isSafe, move, movementVector, roomAt, applyLens } from './navigation.js?lens=1';
-import { validateCeilingOptions, createCeilingComparison } from './ceiling-comparison.js?v=a847ba2b747412c2';
+import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=68e3fc107997f0fc';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';
@@ -65,12 +65,12 @@ function disposeModel() {
 }
 function disposeCeilings() {
   ceilings?.dispose(); ceilings = null; ceilingOptions = null; ceilingUnavailable = '';
-  for (const id of ['ceiling-controls', 'ceiling-feedback', 'ceiling-help']) $(id).hidden = true;
+  for (const id of ['ceiling-controls', 'ceiling-feedback', 'ceiling-help', 'quality']) $(id).hidden = true;
   document.querySelector('header').classList.remove('has-ceilings');
 }
 function renderCeilings(state) {
-  const variant = ceilingOptions?.variants.find(v => v.id === state.selected);
-  const pending = ceilingOptions?.variants.find(v => v.id === state.pending);
+  const variant = state.qualityActive ? ceilingOptions?.quality : ceilingOptions?.variants.find(v => v.id === state.selected);
+  const pending = state.pendingQuality ? ceilingOptions?.quality : ceilingOptions?.variants.find(v => v.id === state.pending);
   $('ceiling').value = state.pending || state.selected;
   $('ceiling').setAttribute('aria-busy', String(Boolean(state.pending)));
   $('ceiling-status').textContent = state.error || (pending
@@ -78,6 +78,10 @@ function renderCeilings(state) {
     : `${variant?.summary || 'Original ceiling and fixtures.'} Concepts only · web lighting is approximate.`);
   $('ceiling-feedback').dataset.error = String(Boolean(state.error));
   $('ceiling-retry').hidden = !state.failed;
+  $('quality').hidden = !ceilingOptions?.quality || state.selected !== 'sculpted';
+  $('quality').disabled = Boolean(state.pending);
+  $('quality').setAttribute('aria-pressed', String(state.qualityActive));
+  $('quality').textContent = state.pendingQuality ? 'Loading baked preview…' : state.qualityActive ? 'Use standard lighting' : 'Try baked lighting';
 }
 function setupCeilings() {
   try {
@@ -85,7 +89,25 @@ function setupCeilings() {
     if (!ceilingOptions) return;
     ceilings = createCeilingComparison({
       options: ceilingOptions, model, scene,
-      parse: bytes => new GLTFLoader().parseAsync(bytes, ''),
+      parse: async bytes => {
+        const result = await new GLTFLoader().parseAsync(bytes, '');
+        const length = new DataView(bytes).getUint32(12, true);
+        const document = JSON.parse(new TextDecoder().decode(new Uint8Array(bytes, 20, length)));
+        const images = new Set();
+        result.scene.traverse(obj => {
+          for (const mat of Array.isArray(obj.material) ? obj.material : [obj.material]) {
+            if (!mat) continue;
+            for (const value of Object.values(mat)) {
+              if (value?.isTexture && value.source?.data?.width > 0) images.add(value.source.data);
+            }
+          }
+        });
+        if (images.size < (document.images?.length || 0)) {
+          disposeCeiling(result.scene);
+          throw new Error('Baked textures could not decode; the existing view has been retained');
+        }
+        return result;
+      },
       onChange: renderCeilings,
     });
     $('ceiling').replaceChildren(new Option('Existing', 'existing'),
@@ -223,6 +245,10 @@ for (const id of ['ceiling-controls', 'ceiling-feedback']) {
 }
 on($('ceiling'), 'change', () => { clearInput(); ceilings?.select($('ceiling').value); });
 on($('ceiling-retry'), 'click', () => { clearInput(); ceilings?.retry(); });
+on($('quality'), 'click', () => {
+  clearInput();
+  if (ceilings) ceilings.select('sculpted', { quality: !ceilings.snapshot().qualityActive });
+});
 for (const type of ['pointerdown', 'focusin']) on($('lens-controls'), type, clearInput);
 on($('lens'), 'input', () => {
   clearInput();
@@ -383,6 +409,7 @@ window.walkthrough = { snapshot: () => ({
   safe: nav ? isSafe(nav, ...position) : false,
   pressed: keys.size + touches.size, dragging: Boolean(dragging),
   triangles: renderer?.info.render.triangles, calls: renderer?.info.render.calls,
+  memory: renderer ? { ...renderer.info.memory } : null, baseVisible: model?.visible,
   fov: camera?.fov, aspect: camera?.aspect, lens, eyeHeight: camera?.position.y,
   storage: { enabled: false, mode: 'closed' },
   ceiling: ceilings?.snapshot() || { selected: 'existing', pending: null, overlayLoaded: false, baselineHidden: false, unavailable: ceilingUnavailable },
