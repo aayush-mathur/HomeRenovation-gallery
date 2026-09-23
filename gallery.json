@@ -2,48 +2,39 @@
   "version": 1,
   "collections": [
     {
-      "id": "layout-v013",
-      "title": "Collected drawing room and discreet technology - v013",
+      "id": "layout-v014",
+      "title": "Aquarium and collected drawing room - v014",
       "status": "Draft previews",
-      "description": "Six everyday seats plus three tucked-away guest poufs; a mixed awards, medals and travel display, layered textiles and lighting. The exposed network rack becomes furniture-finished joinery with an accessible dock niche. Hall front speakers are compact on-wall units; the floor subwoofer moves to the opposite end. Display objects and joinery are provisional; cabinet opening stays off.",
+      "description": "The existing 142 x 30 x 72 cm aquarium sits on an open 55 cm frame, total height 127 cm. Dry awards/medals shelving and three guest seats are reorganized beside it; six everyday seats and the hall technology redesign remain. Maintenance access is reserved; floor/stand capacity, filtration and electrical detailing require verification.",
       "assumptions": [
         "1000x750, 12-sample concept previews; collection sizes and equipment fit provisional.",
         "Static stability fallback; the reported interactive regression cause remains unconfirmed."
       ],
       "views": [
         {
-          "id": "L13_01_drawing",
-          "title": "Collected drawing room - six everyday seats",
+          "id": "A14_01_room",
+          "title": "Drawing room with the existing-size aquarium",
           "description": "12-sample design preview; not a final render.",
           "room": "Drawing room",
-          "src": "images/layout-v013/L13_01_drawing-c8bc8c592a3f9c10.png",
+          "src": "images/layout-v014/A14_01_room-e12f5304d94c9f14.png",
           "width": 1000,
           "height": 750
         },
         {
-          "id": "L13_02_collection",
-          "title": "Awards, medals and travel display with tucked guest seats",
+          "id": "A14_02_aquarium",
+          "title": "Aquarium on open frame beside dry awards display",
           "description": "12-sample design preview; not a final render.",
           "room": "Drawing room",
-          "src": "images/layout-v013/L13_02_collection-1f8a961e92d4eab1.png",
+          "src": "images/layout-v014/A14_02_aquarium-7d32da7e4ba77322.png",
           "width": 1000,
           "height": 750
         },
         {
-          "id": "L13_03_hall",
-          "title": "Compact hall audio and discreet service furniture",
+          "id": "A14_03_display",
+          "title": "Awards, medals and three tucked-away guest seats",
           "description": "12-sample design preview; not a final render.",
-          "room": "Hall and service",
-          "src": "images/layout-v013/L13_03_hall-1251e429af108ef5.png",
-          "width": 1000,
-          "height": 750
-        },
-        {
-          "id": "L13_04_service",
-          "title": "Concealed network equipment and accessible dock niche",
-          "description": "12-sample design preview; not a final render.",
-          "room": "Hall and service",
-          "src": "images/layout-v013/L13_04_service-9e212d0529ffa681.png",
+          "room": "Drawing room",
+          "src": "images/layout-v014/A14_03_display-7b1cad914e3b74b2.png",
           "width": 1000,
           "height": 750
         }
@@ -53,7 +44,7 @@
       "id": "furnished-v005",
       "title": "Furnished house - v005 (historical)",
       "status": "Historical proposal",
-      "description": "Seven preserved historical v005 renders, not the current v013 layout. Use the walkthrough for the current version.",
+      "description": "Seven preserved historical v005 renders, not the current v014 layout. Use the walkthrough for the current version.",
       "assumptions": [
         "Furniture and finishes are visualization proposals, not product or construction specifications.",
         "Existing kitchen, beams and the corrected dining lightwell are retained.",

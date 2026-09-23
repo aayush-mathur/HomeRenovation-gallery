@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "source_sha256": "e830f3a6cee6ccf97d26e47edfdbef96dd5e9bc97e3b5e03ac2cdac19563cf78",
-  "model_sha256": "5dfe69e17e485e99c213bc5c32e4a59636bfe1767cfec4f0406a2537a0b475c0",
-  "navigation_sha256": "729e71b1f3a2a845f086097ae38a8edfcfbcca101e662d89095d25fdf702df4d",
-  "bytes": 15062588,
+  "source_sha256": "866c19ddbd4d7016130f006e0bf2219539fd6c47d71c97f700dac3c2dd23bd40",
+  "model_sha256": "cd226481b454e37a9d0b2cfd74f2278d1bbe9cfeb2f26fcb4eb2ad276d72fd27",
+  "navigation_sha256": "44856b083cdc92b2b6d71a5482c3a15f92cc6ac040adcec6ca4a9c29c6785026",
+  "bytes": 15785000,
   "units": "meters",
   "eye_height": 1.6,
-  "triangles": 281732,
-  "source": "house_layout_v013.blend",
+  "triangles": 294340,
+  "source": "house_layout_v014.blend",
   "layout_revision": {
-    "version": "layout-v013"
+    "version": "layout-v014"
   },
-  "scope": "Public v013 walkthrough, approved by the owner",
+  "scope": "Public v014 walkthrough, approved by the owner",
   "storage_mode": "closed",
-  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification.",
+  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification. Existing-size aquarium on its own open frame; loaded floor/stand support and installation are not verified. Water/fish are illustrative.",
   "electronics": {
     "status": "Schematic proposals, not installed or certified",
     "ac_indoor_units": 5,
