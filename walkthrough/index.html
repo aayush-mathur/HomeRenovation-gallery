@@ -11,11 +11,13 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
   <meta name="color-scheme" content="light">
   <title>House walkthrough</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="./styles.css?v=c8c6e80155fbc455">
+  <link rel="stylesheet" href="./styles.css?v=faabb0137a199e52">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script type="module" src="./app.js?v=2641c6e58814aa7c"></script>
+  <script type="module" src="./app.js?v=164b107d0a1ab57a"></script>
 </head>
 <body>
+  <button id="toggle-controls" aria-expanded="false" aria-controls="walkthrough-controls" hidden>Show controls</button>
+  <div id="walkthrough-controls">
   <header>
     <div class="title"><h1>House walkthrough</h1><span id="model-version">Public walkthrough</span></div>
     <div class="room-field"><label for="room">Jump to room <span class="note">(optional)</span></label><select id="room" disabled><option>Loading rooms…</option></select></div>
@@ -23,9 +25,19 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <button id="reset" disabled>Reset position</button>
     <button id="capture" disabled>Mouse look</button>
     <button id="fullscreen" aria-pressed="false">Full screen</button>
-    <button id="help" aria-expanded="false" aria-controls="instructions">Controls</button>
+    <button id="help" aria-expanded="false" aria-controls="instructions">Help</button>
     <div id="ceiling-feedback" hidden><p id="ceiling-status" role="status" aria-live="polite" aria-atomic="true"></p><button id="ceiling-retry" hidden>Retry ceiling</button></div>
   </header>
+  <footer>
+    <div id="lens-controls">
+      <label for="lens">Lens <span class="lens-equivalent">35 mm eq.</span></label>
+      <div class="lens-track"><input id="lens" type="range" min="16" max="70" step="0.1" value="18" aria-describedby="lens-hint lens-help" disabled><span id="lens-hint"><span>Wider view</span><span>Closer view</span></span></div>
+      <output id="lens-value" for="lens">Auto</output>
+      <button id="reset-lens" disabled>Reset lens</button>
+    </div>
+    <p id="quick-help"><span class="desktop-help">Drag to look · WASD / arrows to walk · storage opening disabled</span><span class="touch-help">Drag to look · hold arrows to walk · storage stays closed</span></p><p id="status" role="status">Preparing walkthrough</p>
+  </footer>
+  </div>
   <main id="stage" aria-label="Full-house first-person walkthrough">
     <canvas id="view" tabindex="0" aria-label="House view. Drag to look. WASD or arrow keys to walk. Q and E turn, R and F look up and down. Storage stays closed. Escape releases mouse." aria-describedby="quick-help"></canvas>
     <div id="loading" role="status" aria-live="polite">
@@ -36,7 +48,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <div id="instructions" hidden>
       <h2>Explore at eye level</h2>
       <p><strong>Look:</strong> drag anywhere in the view. On desktop, Mouse look captures the pointer; <kbd>Esc</kbd> releases it.</p>
-      <p><strong>Full screen:</strong> use the toolbar button to expand the walkthrough. Exit full screen or <kbd>Esc</kbd> returns to the normal view.</p>
+      <p><strong>Full screen:</strong> controls tuck away so the house fills the screen. Tap Show controls for rooms, ceilings, lens and Exit full screen. Hide controls or tap the house to tuck them away again. <kbd>Esc</kbd> also exits full screen in supported browsers.</p>
       <p id="lens-help"><strong>Lens:</strong> lower millimetres give a wider view without moving you. The 16–70 mm slider uses 35 mm-equivalent focal lengths with a fixed 36 mm horizontal film gate; viewport height follows its aspect ratio. Auto preserves the original 62° vertical view, capped at 90° horizontally. Reset lens restores Auto, not your position. Wide views stretch edges, especially in portrait; this is not a simulation of human eyesight. Release Mouse look with <kbd>Esc</kbd> before using the slider.</p>
       <p id="ceiling-help" hidden><strong>Ceiling concepts:</strong> switch the whole floor, including bedrooms, without moving your view. Existing restores the original ceiling fixtures. Fans are static provisions, not rotating. Web lighting and emissive faces are approximate; use Cycles reference previews for lighting comparisons. <span id="ceiling-note"></span></p>
       <p><strong>Walk:</strong> click or tab into the view, then use <kbd>W A S D</kbd> or arrow keys. <kbd>Q E</kbd> turn; <kbd>R F</kbd> look up/down. Touch: drag to look and hold a movement arrow.</p>
@@ -53,15 +65,6 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
       <button data-move="right" aria-label="Step right">→</button>
     </div>
   </main>
-  <footer>
-    <div id="lens-controls">
-      <label for="lens">Lens <span class="lens-equivalent">35 mm eq.</span></label>
-      <div class="lens-track"><input id="lens" type="range" min="16" max="70" step="0.1" value="18" aria-describedby="lens-hint lens-help" disabled><span id="lens-hint"><span>Wider view</span><span>Closer view</span></span></div>
-      <output id="lens-value" for="lens">Auto</output>
-      <button id="reset-lens" disabled>Reset lens</button>
-    </div>
-    <p id="quick-help"><span class="desktop-help">Drag to look · WASD / arrows to walk · storage opening disabled</span><span class="touch-help">Drag to look · hold arrows to walk · storage stays closed</span></p><p id="status" role="status">Preparing walkthrough</p>
-  </footer>
   <noscript>This walkthrough needs JavaScript and WebGL. No data is uploaded.</noscript>
 </body>
 </html>

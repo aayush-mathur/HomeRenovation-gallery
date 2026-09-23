@@ -255,19 +255,47 @@ on(document, 'fullscreenchange', () => {
   const active = Boolean(document.fullscreenElement);
   $('fullscreen').textContent = active ? 'Exit full screen' : 'Full screen';
   $('fullscreen').setAttribute('aria-pressed', String(active));
+  document.body.classList.toggle('immersive', active);
+  $('toggle-controls').hidden = !active;
+  showControls(false);
   resize();
   if (ready) canvas.focus({ preventScroll: true });
+});
+function showControls(open) {
+  release();
+  const expanded = Boolean(document.fullscreenElement) && open;
+  document.body.classList.toggle('controls-open', expanded);
+  $('toggle-controls').setAttribute('aria-expanded', String(expanded));
+  $('toggle-controls').textContent = expanded ? 'Hide controls' : 'Show controls';
+}
+on($('toggle-controls'), 'click', () => {
+  const open = !document.body.classList.contains('controls-open');
+  showControls(open);
+  if (open) {
+    help(false);
+    $('room').focus({ preventScroll: true });
+  } else {
+    $('toggle-controls').focus({ preventScroll: true });
+  }
 });
 function help(open) {
   release();
   $('instructions').hidden = !open;
   $('help').setAttribute('aria-expanded', String(open));
-  if (open) $('close-help').focus(); else $('help').focus();
+  if (open) {
+    showControls(false);
+    $('close-help').focus();
+  } else if (document.fullscreenElement && !document.body.classList.contains('controls-open')) {
+    $('toggle-controls').focus();
+  } else {
+    $('help').focus();
+  }
 }
 on($('help'), 'click', () => help($('instructions').hidden));
 on($('close-help'), 'click', () => help(false));
 on($('capture'), 'click', async () => {
   if (document.pointerLockElement === canvas) { release(); return; }
+  showControls(false);
   canvas.focus();
   try {
     if (!canvas.requestPointerLock) throw new Error('Unavailable');
@@ -282,6 +310,7 @@ on(document, 'pointerlockchange', () => {
 on(document, 'pointerlockerror', () => message('Mouse capture unavailable here · drag to look instead'));
 on(canvas, 'pointerdown', event => {
   if (!ready || !$('instructions').hidden || event.button !== 0) return;
+  if (document.body.classList.contains('controls-open')) showControls(false);
   canvas.focus({ preventScroll: true });
   if (document.pointerLockElement !== canvas) {
     dragging = { id: event.pointerId, x: event.clientX, y: event.clientY };
@@ -301,7 +330,15 @@ on(document, 'mousemove', event => {
   if (ready && document.pointerLockElement === canvas) look(event.movementX, event.movementY);
 });
 on(document, 'keydown', event => {
-  if (event.code === 'Escape') { release(); if (!$('instructions').hidden) help(false); return; }
+  if (event.code === 'Escape') {
+    release();
+    if (!$('instructions').hidden) help(false);
+    if (document.body.classList.contains('controls-open')) {
+      showControls(false);
+      $('toggle-controls').focus({ preventScroll: true });
+    }
+    return;
+  }
   if (!ready || !$('instructions').hidden || event.altKey || event.ctrlKey || event.metaKey) return;
   if ($('lens-controls').contains(event.target)) return;
   if (document.activeElement !== canvas && document.pointerLockElement !== canvas) return;
