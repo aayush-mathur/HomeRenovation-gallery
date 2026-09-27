@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "release": "bf2db321b5f8cb63ac71620c258f345f9de3809e3bec0b05097de33e6c58ece7",
+  "totalBytes": 34351495,
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 22863,
+      "sha256": "92f1c553200a9776175c63bd71eeff7145a2217110624cbddd7401ed2b0f8b6f"
+    },
+    {
+      "path": "ceiling-comparison.js",
+      "bytes": 9756,
+      "sha256": "af08ba77bada265e341b85effd8252a41e3cb4bf20f3c56f73447bf4e4c8f09b"
+    },
+    {
+      "path": "fixture-lighting.js",
+      "bytes": 13871,
+      "sha256": "efbf677d6abceedc03eb5e5ca72eb2b21299c4a05c36d9bca4cb75f41180a6c6"
+    },
+    {
+      "path": "index.html",
+      "bytes": 7030,
+      "sha256": "18de087f2e00b4e59aff7ab6a5f1e4d5b284c37a52eb5ec19fbdff452645053b"
+    },
+    {
+      "path": "model/ceilings/linear-242d4caf58d1df4f.glb",
+      "bytes": 1080620,
+      "sha256": "242d4caf58d1df4f59e01ff3d261dfb31237021ee9cd32a82ed8ebc6b0c805cf"
+    },
+    {
+      "path": "model/ceilings/luxe-2fc0001646f3b8a7.glb",
+      "bytes": 4580548,
+      "sha256": "2fc0001646f3b8a7005af317dac1d009fb735447625672566814cd5081b754b4"
+    },
+    {
+      "path": "model/ceilings/quiet-dd3bea9b57f51f87.glb",
+      "bytes": 1754472,
+      "sha256": "dd3bea9b57f51f8797f2290f82a1bb9a63af3206000477d94c11e2bc9d92c579"
+    },
+    {
+      "path": "model/ceilings/sculpted-26b7126f477fde51.glb",
+      "bytes": 2538904,
+      "sha256": "26b7126f477fde51e2c42e003fdb0ce86aaba6d38ec6b2e9f99c69b74deeaacf"
+    },
+    {
+      "path": "model/ceilings/warm-18ea31a48c51b4e7.glb",
+      "bytes": 1753496,
+      "sha256": "18ea31a48c51b4e77d7dba11fcc3e4e58d2312a8166e362e0f5ea8edcad36128"
+    },
+    {
+      "path": "model/house.glb",
+      "bytes": 18113804,
+      "sha256": "cf295a2e48900587965e97295383cac53479a85a6a02d0aedd781ab37788670c"
+    },
+    {
+      "path": "model/manifest.json",
+      "bytes": 6458,
+      "sha256": "02064c8949be12b7c5e0bcdd3b2fc14f73fd458aecc855f0dc5667dd5ac00b2e"
+    },
+    {
+      "path": "model/navigation.json",
+      "bytes": 1961155,
+      "sha256": "5e99594eab83ef2b480ef4fa987ef32dbd17b0e3a7189d16a95550202d46d7ac"
+    },
+    {
+      "path": "navigation.js",
+      "bytes": 2507,
+      "sha256": "65e6f4306b34a320caffa94b4b5b1126a002bed6bbde68f3bd9d08339d1c72eb"
+    },
+    {
+      "path": "offline-client.js",
+      "bytes": 8208,
+      "sha256": "2355280d64856098787b7159699d26ef23c308d9cbf626a38ea4b4724fb38e3e"
+    },
+    {
+      "path": "offline-worker.js",
+      "bytes": 14881,
+      "sha256": "d150fb13e83769cf954f7b6e801af03a5da4d9d214685ed745cac5fc34956779"
+    },
+    {
+      "path": "offline.css",
+      "bytes": 1899,
+      "sha256": "1ab711a3c58028b60eb748f19d9066330a45f467689bc1702b5ba006ad5c4874"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 7319,
+      "sha256": "faabb0137a199e5249658b6ebc794cf670e6bc012c03a7435f2f354a22ccf86c"
+    },
+    {
+      "path": "vendor/BufferGeometryUtils.js",
+      "bytes": 35539,
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751"
+    },
+    {
+      "path": "vendor/GLTFLoader.js",
+      "bytes": 114732,
+      "sha256": "adbbafe8ce40416525b6be0ee5cac0d3782482bcf0122c8ca8ec1ffa77d3440b"
+    },
+    {
+      "path": "vendor/RectAreaLightTexturesLib.js",
+      "bytes": 314770,
+      "sha256": "8acc50043aebc3ff0f63e21607ef2394cda41d634f92093bcb7ad6f1d1e2eb11"
+    },
+    {
+      "path": "vendor/RectAreaLightUniformsLib.js",
+      "bytes": 1014,
+      "sha256": "494fef2d731ff1689050cc6040ad78d927c22b9125a12f532beb0374c2811c6e"
+    },
+    {
+      "path": "vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    }
+  ]
+}

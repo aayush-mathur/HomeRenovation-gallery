@@ -7,7 +7,7 @@
     "app.js": "92f1c553200a9776175c63bd71eeff7145a2217110624cbddd7401ed2b0f8b6f",
     "ceiling-comparison.js": "af08ba77bada265e341b85effd8252a41e3cb4bf20f3c56f73447bf4e4c8f09b",
     "fixture-lighting.js": "efbf677d6abceedc03eb5e5ca72eb2b21299c4a05c36d9bca4cb75f41180a6c6",
-    "index.html": "67d0032908923393d84dca33f6a520f6ce485128380a81034176563c6720ddaf",
+    "index.html": "18de087f2e00b4e59aff7ab6a5f1e4d5b284c37a52eb5ec19fbdff452645053b",
     "model/ceilings/linear-242d4caf58d1df4f.glb": "242d4caf58d1df4f59e01ff3d261dfb31237021ee9cd32a82ed8ebc6b0c805cf",
     "model/ceilings/luxe-2fc0001646f3b8a7.glb": "2fc0001646f3b8a7005af317dac1d009fb735447625672566814cd5081b754b4",
     "model/ceilings/quiet-dd3bea9b57f51f87.glb": "dd3bea9b57f51f8797f2290f82a1bb9a63af3206000477d94c11e2bc9d92c579",
@@ -17,6 +17,10 @@
     "model/manifest.json": "02064c8949be12b7c5e0bcdd3b2fc14f73fd458aecc855f0dc5667dd5ac00b2e",
     "model/navigation.json": "5e99594eab83ef2b480ef4fa987ef32dbd17b0e3a7189d16a95550202d46d7ac",
     "navigation.js": "65e6f4306b34a320caffa94b4b5b1126a002bed6bbde68f3bd9d08339d1c72eb",
+    "offline-client.js": "2355280d64856098787b7159699d26ef23c308d9cbf626a38ea4b4724fb38e3e",
+    "offline-manifest.json": "946c3899e4895820633cb3054ad96fa3854a1fb44af2a77afdacc310abbd3810",
+    "offline-worker.js": "d150fb13e83769cf954f7b6e801af03a5da4d9d214685ed745cac5fc34956779",
+    "offline.css": "1ab711a3c58028b60eb748f19d9066330a45f467689bc1702b5ba006ad5c4874",
     "styles.css": "faabb0137a199e5249658b6ebc794cf670e6bc012c03a7435f2f354a22ccf86c",
     "vendor/BufferGeometryUtils.js": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
     "vendor/GLTFLoader.js": "adbbafe8ce40416525b6be0ee5cac0d3782482bcf0122c8ca8ec1ffa77d3440b",
@@ -34,5 +38,6 @@
     "luxe": "model/ceilings/luxe-2fc0001646f3b8a7.glb"
   },
   "storage_mode": "closed",
-  "lighting_revision": "distributed-fixtures-v1"
+  "lighting_revision": "distributed-fixtures-v1",
+  "offline_revision": 1
 }

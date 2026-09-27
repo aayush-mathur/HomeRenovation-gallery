@@ -14,6 +14,10 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
   <link rel="stylesheet" href="./styles.css?v=faabb0137a199e52">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
   <script type="module" src="./app.js?v=92f1c553200a9776"></script>
+  <!-- offline-runtime -->
+  <link rel="stylesheet" href="./offline.css">
+  <script type="module" src="./offline-client.js"></script>
+  <!-- /offline-runtime -->
 </head>
 <body>
   <button id="toggle-controls" aria-expanded="false" aria-controls="walkthrough-controls" hidden>Show controls</button>
@@ -28,6 +32,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <button id="fullscreen" aria-pressed="false">Full screen</button>
     <button id="help" aria-expanded="false" aria-controls="instructions">Help</button>
     <div id="ceiling-feedback" hidden><p id="ceiling-status" role="status" aria-live="polite" aria-atomic="true"></p><button id="ceiling-retry" hidden>Retry ceiling</button></div>
+  <div data-offline-host></div>
   </header>
   <footer>
     <div id="lens-controls">
