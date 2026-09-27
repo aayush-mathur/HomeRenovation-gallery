@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { isSafe, move, movementVector, roomAt, applyLens } from './navigation.js?lens=1';
 import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=af08ba77bada265e';
-import { createFixtureLighting } from './fixture-lighting.js?v=b98d0f4f3bbb9b3a';
+import { createFixtureLighting } from './fixture-lighting.js?v=efbf677d6abceedc';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';

@@ -105,14 +105,14 @@
       {
         "id": "luxe",
         "label": "Sculpted Luxe",
-        "src": "./model/ceilings/luxe-b7a0d7dbeb592b66.glb",
-        "sha256": "b7a0d7dbeb592b665f3e13905d15c7eb3197e5f6f557fbd9bc35c10c1d1e1269",
-        "bytes": 3387912,
-        "summary": "Floating rounded layers, shallow arched beam casings, warm coves and fine brass inlays. Selective hall/bedroom arches preserve the actual beam cores, fan pockets, wardrobe access and daylight.",
+        "src": "./model/ceilings/luxe-2fc0001646f3b8a7.glb",
+        "sha256": "2fc0001646f3b8a7005af317dac1d009fb735447625672566814cd5081b754b4",
+        "bytes": 4580548,
+        "summary": "Continuous mineral-plaster ceiling fields with broad elliptical recesses, concealed curved coves and closed, softly arched beam returns. No floating frames or brass outlines; structure, fan pockets and daylight remain.",
         "min_ceiling_m": 2.56,
         "fan_blade_height_m": 2.52
       }
     ],
-    "note": "Whole-floor concepts with five static fan provisions. Sculpted Luxe adds floating curved layers and selective nonstructural beam casings without changing beam cores, fan pockets or the lightwell. Geometry, supports and installation remain provisional; browser lighting is simplified."
+    "note": "Five whole-floor ceiling concepts; Luxe v002 integrates broad sculpted plaster, curved concealed coves and closed beam returns. Construction and lighting remain provisional."
   }
 }

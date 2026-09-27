@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { RectAreaLightUniformsLib } from './vendor/RectAreaLightUniformsLib.js';
 
 export const FIXTURE_BUDGET = 8;
+export const CURVED_COVE_RADIANCE = 4;
 const MAX_ROOM_VERTICES = 8;
 export function isDiffuser(material) {
   return Boolean(material?.emissive && /(?:\bled\b|diffuser)/i.test(material.name));
@@ -89,11 +90,61 @@ export function rectangleForTriangles(triangles) {
 }
 
 export function distanceToFixture(fixture, point) {
+  if (fixture.patches) return Math.min(...fixture.patches.map(p => distanceToFixture(p, point)));
   const offset = point.clone().sub(fixture.center);
   return Math.hypot(
     Math.max(0, Math.abs(offset.dot(fixture.u)) - fixture.width / 2),
     Math.max(0, Math.abs(offset.dot(fixture.v)) - fixture.height / 2),
     offset.dot(fixture.normal));
+}
+
+// Only the authored v002 material opts into curved-source quadrature. A closed
+// ribbon is one fixture, not a giant luminous rectangle spanning its empty eye.
+export function curvedFixture(triangles) {
+  const upward = triangles.filter(([a,b,c]) =>
+    b.clone().sub(a).cross(c.clone().sub(a)).normalize().y > .99);
+  if (!upward.length) throw new Error('Curved cove has no upward emitting surface');
+  const center = new THREE.Box3().setFromPoints(upward.flat()).getCenter(new THREE.Vector3());
+  const sectors = Array.from({ length: 24 }, () => []);
+  for (const tri of upward) {
+    const p = tri.reduce((sum,v) => sum.add(v), new THREE.Vector3()).multiplyScalar(1/3);
+    const angle = (Math.atan2(p.z-center.z,p.x-center.x)+Math.PI*2) % (Math.PI*2);
+    sectors[Math.min(23,Math.floor(angle/(Math.PI/12)))].push(tri);
+  }
+  const patches = sectors.filter(part => part.length).map(part => {
+    const patch = rectangleForTriangles(part);
+    if (!patch) throw new Error('Invalid curved cove source patch');
+    if (patch.normal.y < 0) { patch.normal.negate(); patch.v.negate(); }
+    patch.kind = 'curved-cove';
+    return patch;
+  });
+  if (patches.length < 12) throw new Error('Curved cove must cover its complete perimeter');
+  return { ...patches[0], center, patches, radiance: CURVED_COVE_RADIANCE,
+    area: patches.reduce((sum,p) => sum+p.area,0) };
+}
+
+export function distributeFixtureSources(fixtures, budget) {
+  const selected = [];
+  let remaining = budget;
+  for (const fixture of fixtures) {
+    const slots = fixture.patches ? 2 : 1;
+    if (slots > remaining) continue;
+    selected.push({ fixture, slots }); remaining -= slots;
+  }
+  for (let i = 0; remaining && selected.some(s => s.fixture.patches && s.slots < 8); i++) {
+    const item = selected[i % selected.length];
+    if (item.fixture.patches && item.slots < 8) { item.slots++; remaining--; }
+  }
+  return selected.flatMap(({ fixture, slots }, source) => {
+    if (!fixture.patches) return [fixture];
+    // Equal-angle samples surround the complete source, rather than clustering
+    // nearest the camera. Area weights conserve its total authored radiance.
+    const samples = Array.from({ length: slots }, (_,i) =>
+      fixture.patches[Math.floor((i+.5)*fixture.patches.length/slots)]);
+    const sampledArea = samples.reduce((sum,p) => sum+p.area,0);
+    return samples.map(p => ({ ...fixture, ...p, patches: undefined,
+      radianceWeight: fixture.area/sampledArea, source, sourceArea: fixture.area }));
+  });
 }
 
 export function containsPoint(polygon, x, z) {
@@ -182,12 +233,14 @@ float fixtureRoomMask() {
         const mat = materials[0];
         if (!diffusers.has(mat)) {
           diffusers.add(mat);
-          mat.emissive.copy(mat.color); mat.emissiveIntensity = 3;
+          mat.emissive.copy(mat.color);
+          mat.emissiveIntensity = /LX2 curved cove LED/.test(mat.name) ? .65 : 3;
           mat.color.setRGB(0, 0, 0);
           mat.metalness = 0; mat.roughness = 1;
         }
         for (const triangles of fixtureComponents(mesh)) {
-          const fixture = rectangleForTriangles(triangles);
+          const fixture = /LX2 curved cove LED/.test(mat.name)
+            ? curvedFixture(triangles) : rectangleForTriangles(triangles);
           if (!fixture || fixture.area < .0003) continue;
           fixture.mesh = mesh;
           fixture.root = root;
@@ -202,7 +255,7 @@ float fixtureRoomMask() {
       // sources, so switching schemes never leaves hidden lights in the budget.
       for (let i = fixtures.length - 1; i >= 0; i--) if (!fixtures[i].root.parent) fixtures.splice(i, 1);
       const room = rooms.find(r => containsPoint(r.room_polygon, point.x, point.z));
-      active = selectFixtures(fixtures.filter(f => f.room === room), point, budget);
+      active = distributeFixtureSources(selectFixtures(fixtures.filter(f => f.room === room), point, budget), budget);
       roomCount.value = room?.room_polygon.length || 0;
       room?.room_polygon.forEach((p, j) => roomVertices[j].set(...p));
       for (let i = 0; i < budget; i++) {
@@ -214,12 +267,13 @@ float fixtureRoomMask() {
         // RectAreaLight emits along -Z, whereas f.normal points out of diffuser.
         light.rotateY(Math.PI);
         light.width = f.width; light.height = f.height; light.color.copy(f.color);
-        light.intensity = 28 * f.area / (f.width * f.height);
+        light.intensity = (f.radiance ?? 28) * f.area * (f.radianceWeight || 1) / (f.width * f.height);
       }
     },
     snapshot: () => ({ budget, total: fixtures.length, active: active.map(f => ({
       kind: f.kind, room: f.room.id, center: f.center.toArray(), width: f.width, height: f.height,
-      normal: f.normal.toArray(), area: f.area, power: 28 * f.area * Math.PI,
+      normal: f.normal.toArray(), area: f.area, power: (f.radiance ?? 28) * f.area * (f.radianceWeight || 1) * Math.PI,
+      ...(f.sourceArea ? { source: f.source, sourceArea: f.sourceArea } : {}),
     })) }),
     dispose() { for (const light of lights) scene.remove(light); fixtures.length = 0; },
   };
