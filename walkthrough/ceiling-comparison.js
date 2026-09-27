@@ -2,6 +2,7 @@ const HASH = /^[a-f0-9]{64}$/;
 const IDS = {
   1: ['quiet', 'linear', 'warm'],
   2: ['quiet', 'linear', 'warm', 'sculpted'],
+  3: ['quiet', 'linear', 'warm', 'sculpted', 'luxe'],
 };
 
 export function validateCeilingOptions(manifest, baseURL) {
