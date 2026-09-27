@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { isSafe, move, movementVector, roomAt, applyLens } from './navigation.js?lens=1';
 import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=85c9b4e2b91d95f0';
+import { createFixtureLighting } from './fixture-lighting.js?v=b98d0f4f3bbb9b3a';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';
@@ -18,6 +19,7 @@ let selected = 'kitchen', position = [0, 0], disposed = false, blocked = false, 
 let currentRoom = '';
 let focalLength = null, lens;
 let ceilings, ceilingOptions, ceilingUnavailable = '';
+let fixtureLighting;
 const movementKeys = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'KeyQ', 'KeyE', 'KeyR', 'KeyF']);
 
 function clearInput() {
@@ -122,6 +124,8 @@ function setupCeilings() {
           disposeCeiling(result.scene);
           throw new Error('Baked textures could not decode; the existing view has been retained');
         }
+        // Baked display surfaces are not authored diffusers or live fixtures.
+        if (!(document.images?.length)) fixtureLighting.register(result.scene);
         return result;
       },
       onChange: renderCeilings,
@@ -198,6 +202,8 @@ async function load() {
       }
     });
     scene.add(model);
+    fixtureLighting.setRooms(nav.rooms);
+    fixtureLighting.register(model);
     setupCeilings();
     // The GLB contains the authored closed pose. Do not instantiate animation,
     // picking or dynamic collision controllers in this stability fallback.
@@ -229,6 +235,7 @@ function animate(time) {
   const dt = previous ? THREE.MathUtils.clamp((time - previous) / 1000, 0, .05) : 0;
   previous = time;
   if (document.hidden) return;
+  if (ready) fixtureLighting.update(camera.position);
   if (ready) {
     const down = code => keys.has(code) ? 1 : 0;
     const touch = name => [...touches.values()].includes(name) ? 1 : 0;
@@ -414,7 +421,7 @@ on(canvas, 'webglcontextrestored', () => location.reload());
 function cleanup() {
   disposed = true; ready = false; release(); loadController?.abort();
   cancelAnimationFrame(frame); observer?.disconnect(); lifetime.abort();
-  disposeModel(); renderer?.dispose();
+  disposeModel(); fixtureLighting?.dispose(); renderer?.dispose();
 }
 on(window, 'pagehide', cleanup);
 // A restored bfcache page needs a fresh renderer after pagehide disposal.
@@ -428,6 +435,7 @@ window.walkthrough = { snapshot: () => ({
   memory: renderer ? { ...renderer.info.memory } : null, baseVisible: model?.visible,
   fov: camera?.fov, aspect: camera?.aspect, lens, eyeHeight: camera?.position.y,
   storage: { enabled: false, mode: 'closed' },
+  fixtures: fixtureLighting?.snapshot(),
   ceiling: ceilings?.snapshot() || { selected: 'existing', pending: null, overlayLoaded: false, baselineHidden: false, unavailable: ceilingUnavailable },
 }), geometrySnapshot: () => {
   const meshes = [];
@@ -446,17 +454,15 @@ try {
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   scene = new THREE.Scene();
+  fixtureLighting = createFixtureLighting(scene, {
+    budget: window.matchMedia('(max-width: 700px), (pointer: coarse)').matches ? 4 : 8,
+  });
   scene.background = new THREE.Color('#dce6eb');
   camera = new THREE.PerspectiveCamera(62, 1, .06, 80);
   scene.add(new THREE.HemisphereLight(0xf3f5ff, 0xc6b9a6, 2.1));
   const sun = new THREE.DirectionalLight(0xfff2de, 2.5);
   sun.position.set(5, 10, -8); sun.target.position.set(3, 0, -10);
   scene.add(sun, sun.target);
-  // Soft fill keeps enclosed rooms readable; these are not lighting-design fixtures.
-  for (const [x, y] of [[2, 15], [1.3, 11.6], [3, 7.8], [6.5, 16], [6.5, 8], [5, 2.5], [1.6, 2.5]]) {
-    const fill = new THREE.PointLight(0xfff5e9, 11, 7, 2);
-    fill.position.set(x, 2.6, -y); scene.add(fill);
-  }
   observer = new ResizeObserver(resize); observer.observe(stage);
   resize(); frame = requestAnimationFrame(animate); load();
 } catch (error) { failure(new Error(`WebGL initialization failed: ${error.message}`)); }

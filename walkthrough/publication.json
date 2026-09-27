@@ -4,9 +4,9 @@
   "scope": "approved-public-walkthrough",
   "source_sha256": "1319c6daaaf0f9cebe4854f231e0cc5dbe9c99377147b9f6f340c5b5073f901d",
   "files": {
-    "app.js": "40a3f7682da30c77341bef7986ebf7bb6f24ceb0880d597d1cd00d6d92c7aaf9",
+    "app.js": "33e221dc9b16208e4040d27af94625868907436877f5c94956e0337831b70e9c",
     "ceiling-comparison.js": "85c9b4e2b91d95f02ef14311f76aa74aba5020f0eb0b4ab55f273cefc9806a25",
-    "index.html": "ec0ca0302c27993b18f36baf798c990916390c5776d4f1a5207eff302955c80f",
+    "index.html": "ded8f39d43376698eae1167ffd9916d85eedf220a0dd3582af1cc233d3afc030",
     "model/ceilings/linear-242d4caf58d1df4f.glb": "242d4caf58d1df4f59e01ff3d261dfb31237021ee9cd32a82ed8ebc6b0c805cf",
     "model/ceilings/quiet-dd3bea9b57f51f87.glb": "dd3bea9b57f51f8797f2290f82a1bb9a63af3206000477d94c11e2bc9d92c579",
     "model/ceilings/sculpted-26b7126f477fde51.glb": "26b7126f477fde51e2c42e003fdb0ce86aaba6d38ec6b2e9f99c69b74deeaacf",
@@ -20,7 +20,10 @@
     "vendor/GLTFLoader.js": "adbbafe8ce40416525b6be0ee5cac0d3782482bcf0122c8ca8ec1ffa77d3440b",
     "vendor/THREE-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
     "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
-    "vendor/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    "vendor/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+    "vendor/RectAreaLightUniformsLib.js": "494fef2d731ff1689050cc6040ad78d927c22b9125a12f532beb0374c2811c6e",
+    "vendor/RectAreaLightTexturesLib.js": "8acc50043aebc3ff0f63e21607ef2394cda41d634f92093bcb7ad6f1d1e2eb11",
+    "fixture-lighting.js": "b98d0f4f3bbb9b3a53ea3de18252ab0911e027b84de0c16b0cd9af92c83e9db6"
   },
   "ceiling_assets": {
     "quiet": "model/ceilings/quiet-dd3bea9b57f51f87.glb",
@@ -28,5 +31,6 @@
     "warm": "model/ceilings/warm-18ea31a48c51b4e7.glb",
     "sculpted": "model/ceilings/sculpted-26b7126f477fde51.glb"
   },
-  "storage_mode": "closed"
+  "storage_mode": "closed",
+  "lighting_revision": "distributed-fixtures-v1"
 }
