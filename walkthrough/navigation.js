@@ -37,7 +37,14 @@ export function move(nav, position, dx, dy, dynamicSafe = () => true) {
   return [x, y];
 }
 
-export function movementVector(forward, sideways, yaw, dt, speed = 1.35) {
+export const WALK_SPEED = 1.35;
+export const FAST_SPEED = 2;
+
+export function movementSpeed(faster = false, shift = false) {
+  return faster || shift ? FAST_SPEED : WALK_SPEED;
+}
+
+export function movementVector(forward, sideways, yaw, dt, speed = WALK_SPEED) {
   const length = Math.hypot(forward, sideways);
   if (!length) return [0, 0];
   const scale = speed * Math.min(Math.max(dt, 0), .05) / Math.max(1, length);

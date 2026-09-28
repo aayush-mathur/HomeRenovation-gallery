@@ -41,6 +41,12 @@ select { width: 100%; max-width: 100%; }
 .collection-heading { display: flex; gap: 10px 20px; align-items: baseline; flex-wrap: wrap; }
 .status-label { font-size: .9rem; color: #4d5c67; }
 .description { margin-top: 10px; max-width: 72ch; color: #4d5c67; }
+.version-context { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 24px; margin-top: 14px; padding-block: 12px; border-block: 1px solid #c0cbd3; font-size: .9rem; }
+.version-context a { display: inline-flex; align-items: center; min-height: 44px; }
+.version-branches { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 12px; }
+.version-branches a { display: inline-flex; align-items: center; min-height: 44px; }
+.version-branches > p { flex-basis: 100%; font-weight: 600; }
+#version-notice { margin-bottom: 20px; }
 details { margin-top: 12px; max-width: 75ch; }
 summary { display: list-item; padding-block: 10px; font-weight: 600; }
 details p + p { margin-top: 12px; }

@@ -5,6 +5,7 @@ const collectionSelect = byId("collection");
 const roomSelect = byId("room");
 const viewer = byId("viewer");
 let collections = [];
+let defaultCollection = "baseline";
 let activeCollection;
 let visibleViews = [];
 let activeIndex = 0;
@@ -328,7 +329,37 @@ function renderPhotos() {
   });
 }
 
-function selectCollection() {
+function versionURL(id, room = "all") {
+  const url = new URL(location.href);
+  url.searchParams.set("version", id);
+  if (room === "all") url.searchParams.delete("room");
+  else url.searchParams.set("room", room);
+  url.hash = "";
+  return url;
+}
+
+function saveLocation(mode) {
+  const url = versionURL(activeCollection.id, roomSelect.value);
+  if (mode === "push" && url.href !== location.href) history.pushState(null, "", url);
+  if (mode === "replace") history.replaceState(null, "", url);
+  byId("version-link").href = url.href;
+}
+
+function branchLink(collection) {
+  const link = node("a", collection.design?.label || collection.title);
+  link.href = versionURL(collection.id);
+  link.addEventListener("click", event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    collectionSelect.value = collection.id;
+    selectCollection();
+    byId("gallery").focus();
+  });
+  return link;
+}
+
+function selectCollection({ urlMode = "push", selectedRoom = "all" } = {}) {
+  if (viewer.open) viewer.close();
   activeCollection = collections.find((collection) => collection.id === collectionSelect.value);
   byId("collection-title").textContent = activeCollection.title;
   byId("collection-status").textContent = activeCollection.status;
@@ -341,8 +372,30 @@ function selectCollection() {
   [...new Set(activeCollection.views.map((view) => view.room))].forEach((room) => {
     roomSelect.add(new Option(room, room));
   });
+  roomSelect.value = [...roomSelect.options].some(option => option.value === selectedRoom) ? selectedRoom : "all";
+  const design = activeCollection.design;
+  byId("version-notice").hidden = true;
+  byId("version-context").hidden = !design;
+  byId("version-format").textContent = design ? `${design.branch} · ${design.format}` : "";
+  const parent = collections.find(collection => collection.id === design?.parent_id);
+  byId("version-parent").hidden = !parent && !design?.parent_note;
+  byId("parent-version").hidden = !parent;
+  byId("parent-note").textContent = design?.parent_note || "";
+  if (parent) {
+    byId("parent-version").textContent = parent.design?.label || parent.title;
+    byId("parent-version").href = versionURL(parent.id);
+    byId("parent-version").dataset.version = parent.id;
+  }
+  const branches = collections.filter(collection => collection.design?.parent_id === activeCollection.id && collection.design.stage === "experiment");
+  byId("version-branches").hidden = !branches.length;
+  byId("version-branches").replaceChildren();
+  if (branches.length) {
+    byId("version-branches").append(node("p", "Explore alternatives from this version"));
+    byId("version-branches").append(...branches.map(branchLink));
+  }
   configureModel();
   renderPhotos();
+  saveLocation(urlMode);
 }
 
 function showImage() {
@@ -414,13 +467,33 @@ viewer.addEventListener("keydown", (event) => {
 });
 byId("previous").addEventListener("click", () => moveImage(-1));
 byId("next").addEventListener("click", () => moveImage(1));
-collectionSelect.addEventListener("change", selectCollection);
-roomSelect.addEventListener("change", renderPhotos);
+collectionSelect.addEventListener("change", () => selectCollection());
+roomSelect.addEventListener("change", () => { renderPhotos(); saveLocation("push"); });
+byId("parent-version").addEventListener("click", event => {
+  if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  collectionSelect.value = event.currentTarget.dataset.version;
+  selectCollection();
+  byId("gallery").focus();
+});
 byId("baseline-link").addEventListener("click", () => {
   collectionSelect.value = "baseline";
   selectCollection();
   byId("gallery").focus();
 });
+
+function restoreLocation(mode = "none") {
+  const params = new URLSearchParams(location.search);
+  const requested = params.get("version");
+  const available = collections.some(collection => collection.id === requested);
+  collectionSelect.value = available ? requested : defaultCollection;
+  selectCollection({ urlMode: requested && !available ? "none" : mode, selectedRoom: params.get("room") || "all" });
+  if (requested && !available) {
+    byId("version-notice").textContent = "That version is not available in this archive. Showing the current collection; choose another version above.";
+    byId("version-notice").hidden = false;
+  }
+}
+window.addEventListener("popstate", () => { if (collections.length) restoreLocation(); });
 
 async function loadGallery() {
   byId("retry").hidden = true;
@@ -436,12 +509,26 @@ async function loadGallery() {
       throw new Error("Invalid gallery data");
     }
     collections = data.collections;
-    collectionSelect.replaceChildren(...collections.map((collection) => new Option(collection.title, collection.id)));
-    collectionSelect.value = collections.find((collection) => collection.id !== "baseline")?.id || "baseline";
-    selectCollection();
+    if (new Set(collections.map(collection => collection.id)).size !== collections.length) throw new Error("Duplicate collection IDs");
+    collectionSelect.replaceChildren();
+    const groups = new Map();
+    for (const collection of collections) {
+      const branch = collection.design?.branch || "Collections";
+      if (!groups.has(branch)) {
+        const group = document.createElement("optgroup");
+        group.label = branch;
+        groups.set(branch, group);
+        collectionSelect.append(group);
+      }
+      groups.get(branch).append(new Option(collection.design?.label || collection.title, collection.id));
+    }
+    defaultCollection = collections.some(collection => collection.id === data.design_archive?.default)
+      ? data.design_archive.default : collections.find(collection => collection.id !== "baseline")?.id || "baseline";
+    restoreLocation("replace");
     byId("content").hidden = false;
     byId("load-state").hidden = true;
-  } catch {
+  } catch (error) {
+    console.error("Render archive failed to load:", error);
     byId("content").hidden = true;
     byId("load-state").textContent = "The gallery could not load. Check your connection and try again. For a local preview, build the gallery and open it through the local server described below, not as a file.";
     byId("retry").hidden = false;

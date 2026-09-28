@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760">
+<rect width="1100" height="760" fill="#f6f3ed"/>
+<g font-family="Arial,sans-serif" fill="#24372d"><text x="45" y="40" font-size="25">Drawing room: before / after measured furniture bounds</text>
+<g transform="translate(80 105)"><text x="0" y="-20" font-size="18">v020 - facing compact sofas</text>
+<rect x="0" y="0" width="310" height="468" fill="#e6e1d5" stroke="#31453b"/>
+<rect x="216.00" y="99.00" width="81.00" height="342.00" fill="#c4d8c7" stroke="#31453b"/>
+<rect x="31.95" y="342.45" width="180.00" height="71.10" fill="#c3b69e" stroke="#31453b"/>
+<rect x="31.95" y="117.45" width="180.00" height="71.10" fill="#c3b69e" stroke="#31453b"/>
+<rect x="103.95" y="229.50" width="53.10" height="72.00" fill="#a78660" stroke="#31453b"/>
+<rect x="26.10" y="207.00" width="18.00" height="117.00" fill="#6d8577" stroke="#31453b"/>
+<rect x="45.00" y="208.80" width="54.00" height="113.40" fill="none" stroke="#31453b"/>
+<text x="219" y="110" font-size="14" transform="rotate(90 219 110)">900 mm reserved lane</text></g>
+<g transform="translate(610 105)"><text x="0" y="-20" font-size="18">v021 - compact L and resized display</text>
+<rect x="0" y="0" width="310" height="468" fill="#e6e1d5" stroke="#31453b"/>
+<rect x="216.00" y="99.00" width="81.00" height="342.00" fill="#c4d8c7" stroke="#31453b"/>
+<rect x="31.95" y="342.45" width="180.00" height="71.10" fill="#c3b69e" stroke="#31453b"/>
+<rect x="31.95" y="117.45" width="180.00" height="71.10" fill="#c3b69e" stroke="#31453b"/>
+<rect x="126.45" y="229.50" width="53.10" height="72.00" fill="#a78660" stroke="#31453b"/>
+<rect x="31.95" y="279.00" width="63.00" height="63.45" fill="#c3b69e" stroke="#31453b"/>
+<rect x="26.10" y="205.20" width="18.00" height="63.00" fill="#6d8577" stroke="#31453b"/>
+<rect x="45.00" y="208.80" width="54.00" height="56.70" fill="none" stroke="#31453b"/>
+<text x="96" y="290" font-size="15">350</text><text x="157" y="221" font-size="15">455</text><text x="154" y="343" font-size="15">455</text>
+<text x="219" y="110" font-size="14" transform="rotate(90 219 110)">900 mm reserved lane</text></g>
+<text x="45" y="620" font-size="18">Same 590 x 800 mm table, translated 250 mm east. Facing-seat gaps remain 455 mm.</text>
+<text x="45" y="651" font-size="18">Compact chaise: 700 mm return width / 1495 mm total depth; 350 mm side gap is not a walking route.</text>
+<text x="45" y="682" font-size="18">Display: 1300 to 700 mm frontage (about 46% less), bypass fronts; 600 x 630 mm standing zone.</text>
+<text x="45" y="713" font-size="18">Opposite sofa, stool retrieval and east route retained. Model dimensions, not product/code certification.</text></g></svg>

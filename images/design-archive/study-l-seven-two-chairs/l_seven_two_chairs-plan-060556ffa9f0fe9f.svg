@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="800" viewBox="0 0 1000 800">
+<rect width="1000" height="800" fill="#faf8f2"/>
+<text x="55" y="35" font-family="sans-serif" font-size="22">L Seven Two Chairs - nine occupied places</text>
+<text x="55" y="58" font-family="sans-serif" font-size="13">Scaled model study, not fabrication or egress approval. North / hall at top.</text>
+<rect x="65.0" y="80.0" width="390.717" height="615.8295" fill="#fff" stroke="#333" stroke-width="5"/>
+<rect x="343.524" y="76.0" width="110.068" height="8" fill="#faf8f2"/>
+<rect x="313.9515" y="691.8295" width="143.76549999999997" height="8" fill="#faf8f2"/>
+<path d="M345.524,80.0 A106.068,106.068 0 0 0 451.592,186.06800000000004 M451.592,80.0 L451.592,186.06800000000004" fill="none" stroke="#687780" stroke-width="2"/>
+<text x="426.592" y="68.0" font-family="sans-serif" font-size="12">To hall</text>
+<text x="320.7885" y="719.8295" font-family="sans-serif" font-size="12">Front entrance</text>
+<rect x="333.2885" y="199.38100000000009" width="112.5" height="475.0" fill="#c9e4d4" opacity=".8"/>
+<rect x="333.2885" y="93.131" width="100.0" height="106.25" fill="#c9e4d4" opacity=".8"/>
+<rect x="70.7885" y="89.38099999999997" width="97.5" height="423.75000000000006" rx="5" fill="#ddd1b8" stroke="#8b775b"/>
+<rect x="168.2885" y="89.38099999999997" width="158.75" height="100.00000000000009" rx="5" fill="#ddd1b8" stroke="#8b775b"/>
+<rect x="87.0385" y="549.3810000000001" width="72.50000000000001" height="78.75000000000001" rx="5" fill="#ddd1b8" stroke="#8b775b"/>
+<rect x="203.28849999999997" y="549.3810000000001" width="72.50000000000001" height="78.75000000000001" rx="5" fill="#ddd1b8" stroke="#8b775b"/>
+<path d="M123.2885,468.13100000000003 L192.0385,468.13100000000003" stroke="#597482" stroke-width="17" opacity=".35"/>
+<circle cx="123.2885" cy="468.13100000000003" r="18" fill="#486878"/><text x="123.2885" y="473.13100000000003" text-anchor="middle" font-family="sans-serif" font-size="15" fill="white">1</text>
+<path d="M123.2885,396.88100000000003 L192.0385,396.88100000000003" stroke="#597482" stroke-width="17" opacity=".35"/>
+<circle cx="123.2885" cy="396.88100000000003" r="18" fill="#486878"/><text x="123.2885" y="401.88100000000003" text-anchor="middle" font-family="sans-serif" font-size="15" fill="white">2</text>
+<path d="M123.2885,325.6310000000001 L192.0385,325.6310000000001" stroke="#597482" stroke-width="17" opacity=".35"/>
+<circle cx="123.2885" cy="325.6310000000001" r="18" fill="#486878"/><text x="123.2885" y="330.6310000000001" text-anchor="middle" font-family="sans-serif" font-size="15" fill="white">3</text>
+<path d="M123.2885,254.381 L192.0385,254.381" stroke="#597482" stroke-width="17" opacity=".35"/>
+<circle cx="123.2885" cy="254.381" r="18" fill="#486878"/><text x="123.2885" y="259.381" text-anchor="middle" font-family="sans-serif" font-size="15" fill="white">4</text>
+<path d="M125.7885,143.13100000000006 L174.4020912065751,191.7445912065752" stroke="#597482" stroke-width="17" opacity=".35"/>
+<circle cx="125.7885" cy="143.13100000000006" r="18" fill="#486878"/><text x="125.7885" y="148.13100000000006" text-anchor="middle" font-family="sans-serif" font-size="15" fill="white">5</text>
+<path d="M215.7885,134.38100000000003 L215.7885,203.13099999999997" stroke="#597482" stroke-width="17" opacity=".35"/>
+<circle cx="215.7885" cy="134.38100000000003" r="18" fill="#486878"/><text x="215.7885" y="139.38100000000003" text-anchor="middle" font-family="sans-serif" font-size="15" fill="white">6</text>
+<path d="M288.2885,134.38100000000003 L288.2885,203.13099999999997" stroke="#597482" stroke-width="17" opacity=".35"/>
+<circle cx="288.2885" cy="134.38100000000003" r="18" fill="#486878"/><text x="288.2885" y="139.38100000000003" text-anchor="middle" font-family="sans-serif" font-size="15" fill="white">7</text>
+<path d="M123.2885,589.3810000000001 L123.28850000000001,520.631" stroke="#597482" stroke-width="17" opacity=".35"/>
+<circle cx="123.2885" cy="589.3810000000001" r="18" fill="#486878"/><text x="123.2885" y="594.3810000000001" text-anchor="middle" font-family="sans-serif" font-size="15" fill="white">8</text>
+<path d="M239.5385,589.3810000000001 L239.5385,520.631" stroke="#597482" stroke-width="17" opacity=".35"/>
+<circle cx="239.5385" cy="589.3810000000001" r="18" fill="#486878"/><text x="239.5385" y="594.3810000000001" text-anchor="middle" font-family="sans-serif" font-size="15" fill="white">9</text>
+<text x="495" y="105" font-family="sans-serif" font-size="15">Room: about 3.13 x 4.93 m</text>
+<text x="495" y="135" font-family="sans-serif" font-size="15">9 labelled seats; corner counted once</text>
+<text x="495" y="165" font-family="sans-serif" font-size="15">Back-supported places: 9</text>
+<text x="495" y="195" font-family="sans-serif" font-size="15">Typical straight cushion: 560 mm</text>
+<text x="495" y="225" font-family="sans-serif" font-size="15">Neutral seated shoulder proxy: 470 mm</text>
+<text x="495" y="255" font-family="sans-serif" font-size="15">Green: protected main lane / approach</text>
+<text x="495" y="285" font-family="sans-serif" font-size="15">Main lane: 900 mm; approach: 800 mm</text>
+<text x="495" y="315" font-family="sans-serif" font-size="15">Existing doorway is not enlarged</text>
+<text x="495" y="345" font-family="sans-serif" font-size="15">Large coffee table removed in guest mode</text>
+<text x="495" y="375" font-family="sans-serif" font-size="15">No new cabinet in the walking lane</text>
+<text x="495" y="405" font-family="sans-serif" font-size="15">Door sweeps and occupied volumes checked</text>
+<text x="495" y="435" font-family="sans-serif" font-size="15">This is compact hosting, not lounge luxury</text>
+<text x="55" y="744" font-family="sans-serif" font-size="14">Tradeoff: more people means less personal space and fewer tables. Test with real furniture/users.</text></svg>

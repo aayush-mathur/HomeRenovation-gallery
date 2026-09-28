@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "source_sha256": "d7631a39511ed859889c6077f13b517460d6cda4164750ec54b2c920fad3eaf3",
-  "model_sha256": "7eaae5bcf08e489ce53f4c5538651d1d95355fe815a59ea08a4eec2f7931c3c5",
-  "navigation_sha256": "eefe1bf4afd798f5d65c15114fc631d72150ea79d9b4addbe06b172fec5daac6",
-  "bytes": 18010028,
+  "source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
+  "model_sha256": "e62bda4a91758ef4c394f274b958dd2b19f4df57116117e60db94c55facdf577",
+  "navigation_sha256": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
+  "bytes": 18622920,
   "units": "meters",
   "eye_height": 1.6,
-  "triangles": 332518,
-  "source": "house_layout_v020.blend",
+  "triangles": 344798,
+  "source": "house_layout_v021.blend",
   "layout_revision": {
-    "version": "layout-v020"
+    "version": "layout-v021"
   },
-  "scope": "Public v020 walkthrough, approved by the owner",
+  "scope": "Public v021 walkthrough, approved by the owner",
   "storage_mode": "closed",
-  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification. Existing-size aquarium on its own open frame; loaded floor/stand support and installation are not verified. Water/fish are illustrative. Glazed partition is a proposed wall alteration pending structural/site review. No tested AC/acoustic performance or electrical/thermal cabinet approval. Door is closable in the design but held open in the walkthrough. Front arched door/window assemblies follow user photos with source-plan widths; unmeasured elevations, frame/grille and glazing details are provisional. Exterior surroundings are not modeled. Proposed ceiling overlays preserve source beam cores and glazing and show five fan provisions. Suspension, service/driver access, fan capacity, detector locations, formed-profile manufacture and actual heights require professional/product verification. RO body and service envelopes are provisional, not certified product fit. No plumbing/electrical routes designed. Intermediate stair landing is a separate study, not connected to this floor.",
+  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification. Existing-size aquarium on its own open frame; loaded floor/stand support and installation are not verified. Water/fish are illustrative. Glazed partition is a proposed wall alteration pending structural/site review. No tested AC/acoustic performance or electrical/thermal cabinet approval. Door is closable in the design but held open in the walkthrough. Front arched door/window assemblies follow user photos with source-plan widths; unmeasured elevations, frame/grille and glazing details are provisional. Exterior surroundings are not modeled. Proposed ceiling overlays preserve source beam cores and glazing and show five fan provisions. Suspension, service/driver access, fan capacity, detector locations, formed-profile manufacture and actual heights require professional/product verification. RO body and service envelopes are provisional, not certified product fit. No plumbing/electrical routes designed. Intermediate stair landing is a separate study, not connected to this floor. All bath-window elevations remain assumed. Opaque preview materials are not certified night/high-angle privacy. Fixed inserts and three exhaust/electric-geyser concepts require site/product/professional review; no service routes or structural openings are authorized.",
   "electronics": {
     "status": "Schematic proposals, not installed or certified",
     "ac_indoor_units": 5,
@@ -25,7 +25,9 @@
       "Set-top box",
       "Entry/stair-approach camera",
       "Doorbell, emergency light, charging/data and smoke-detector provisions",
-      "Compact on-wall hall L/C/R speakers; subwoofer opposite the dock"
+      "Compact on-wall hall L/C/R speakers; subwoofer opposite the dock",
+      "Three generic wall-mounted electric geyser provisions; capacity and installation unresolved",
+      "Three window-panel exhaust provisions; sizing, discharge and makeup air unresolved"
     ],
     "unplaced": [
       {
@@ -48,7 +50,7 @@
   },
   "ceiling_options": {
     "version": 3,
-    "base_source_sha256": "d7631a39511ed859889c6077f13b517460d6cda4164750ec54b2c920fad3eaf3",
+    "base_source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
     "default": "existing",
     "baseline_nodes": [
       "CEILING_BASELINE_5155462b4771fced",
@@ -121,5 +123,177 @@
     "storage_cost": "600 mm service-counter base bay reassigned; remaining approximately 600 mm stays general storage",
     "connections": "Isolation valve, leak tray and sensor provisions only. Water, reject-water, drain and electrical connections terminate unconnected; routes are not designed.",
     "access": "Two removable lift-off service fronts; removal and 600 mm front work zone are a maintenance-only reservation, not a permanently clear route."
-  }
+  },
+  "drawing_l_sofa": {
+    "overall_size_m": [
+      2.0,
+      1.495
+    ],
+    "chaise_usable_cushion_m": [
+      0.54,
+      1.3
+    ],
+    "display_capacity": "Width reduced from 1300 to 700 mm (about 46 percent less frontage); two selected pieces shown instead of four. Entire collection fit not claimed.",
+    "display_fronts": "Two bypass-sliding glazing fronts; no outward swing into standing space. Approximately 315 mm clear retrieval aperture per half, product detailing pending.",
+    "comfort": "Compact 1495 mm overall chaise, not a full-length daybed. Opposing sofa and 590 x 800 mm table size retained; entire table moves 250 mm east, preserving 455 mm facing-seat gaps and the east lane/stool retrieval."
+  },
+  "bathroom_privacy": {
+    "status": "Proposed fixed infill within existing apertures; site elevations, glazing specification and neighbor sightlines unmeasured",
+    "opaque_top_m": 2.017,
+    "upper_light_sill_m": 2.037,
+    "fan_panel_width_m": 0.28,
+    "fan_panel_height_m": 0.3,
+    "fan_bore_diameter_m": 0.21,
+    "caveats": [
+      "All three apertures are treated as potentially overlooked from neighboring houses or roofs.",
+      "Existing modeled sill 1550 mm and head 2250 mm are provisional original defaults, not surveyed elevations. Structural opening sizes are not enlarged.",
+      "Fixed lower opaque infill protects direct body-height views. Small upper light-diffusing inserts are not clear glazing and must be selected/reviewed for night and high-angle privacy; frosted glass alone is not an absolute privacy guarantee.",
+      "Public GLB deliberately renders all privacy inserts OPAQUE, alpha 1, without transmission. This preview behavior is not a certified glazing performance test.",
+      "No opening window mode exposes bathers. Static exhaust concepts have closed sight-blocking dampers; airflow while running is not simulated.",
+      "Fans require product sizing for room volume, duct pressure loss, duty, noise, humidity/timer controls and maintenance. No verified outdoor outlet or shaft route is invented.",
+      "Short outward weatherhood/sleeve concepts require neighbor-opening, fire-separation, weather and site review. Never discharge into the ceiling void.",
+      "Makeup air must be designed with extraction. No unverified door undercut, fire-rated-door alteration or transfer grille is cut into existing geometry."
+    ]
+  },
+  "bathroom_inventory": [
+    {
+      "id": "W_bathroom_1",
+      "source_glass_bounds_m": [
+        6.785307884216309,
+        13.215587615966797,
+        1.5829999446868896,
+        6.801307678222656,
+        13.938852310180664,
+        2.2170000076293945
+      ],
+      "source_glass_size_mm": [
+        723,
+        634
+      ],
+      "source_frame_sill_head_m": [
+        1.55,
+        2.25
+      ],
+      "source_frame_opening_mm": [
+        789,
+        700
+      ],
+      "elevation_basis": "Original assumed defaults, not user measurements",
+      "opaque_lower_top_m": 2.017,
+      "upper_light_bounds_m": [
+        6.785307884216309,
+        13.515586853027344,
+        2.0370001792907715,
+        6.801307678222656,
+        13.938852310180664,
+        2.2170000076293945
+      ],
+      "upper_light_size_mm": [
+        423,
+        180
+      ],
+      "exhaust_panel_mm": [
+        280,
+        300
+      ],
+      "exhaust_bore_mm": 210,
+      "exhaust_status": "Generic fan provision, closed damper; no rated duty, route or active airflow",
+      "public_privacy_mode": "OPAQUE alpha1, no transmission; not an installed-glazing privacy certification"
+    },
+    {
+      "id": "W_bathroom_2",
+      "source_glass_bounds_m": [
+        8.092917442321777,
+        4.073279857635498,
+        1.5829999446868896,
+        8.108918190002441,
+        4.614887714385986,
+        2.2170000076293945
+      ],
+      "source_glass_size_mm": [
+        542,
+        634
+      ],
+      "source_frame_sill_head_m": [
+        1.55,
+        2.25
+      ],
+      "source_frame_opening_mm": [
+        608,
+        700
+      ],
+      "elevation_basis": "Original assumed defaults, not user measurements",
+      "opaque_lower_top_m": 2.017,
+      "upper_light_bounds_m": [
+        8.092917442321777,
+        4.373280048370361,
+        2.0370001792907715,
+        8.108918190002441,
+        4.614887714385986,
+        2.2170000076293945
+      ],
+      "upper_light_size_mm": [
+        242,
+        180
+      ],
+      "exhaust_panel_mm": [
+        280,
+        300
+      ],
+      "exhaust_bore_mm": 210,
+      "exhaust_status": "Generic fan provision, closed damper; no rated duty, route or active airflow",
+      "public_privacy_mode": "OPAQUE alpha1, no transmission; not an installed-glazing privacy certification"
+    },
+    {
+      "id": "W_bathroom_3",
+      "source_glass_bounds_m": [
+        8.092917442321777,
+        0.16141200065612793,
+        1.5829999446868896,
+        8.108918190002441,
+        0.7030199766159058,
+        2.2170000076293945
+      ],
+      "source_glass_size_mm": [
+        542,
+        634
+      ],
+      "source_frame_sill_head_m": [
+        1.55,
+        2.25
+      ],
+      "source_frame_opening_mm": [
+        608,
+        700
+      ],
+      "elevation_basis": "Original assumed defaults, not user measurements",
+      "opaque_lower_top_m": 2.017,
+      "upper_light_bounds_m": [
+        8.092917442321777,
+        0.4614119827747345,
+        2.0370001792907715,
+        8.108918190002441,
+        0.7030199766159058,
+        2.2170000076293945
+      ],
+      "upper_light_size_mm": [
+        242,
+        180
+      ],
+      "exhaust_panel_mm": [
+        280,
+        300
+      ],
+      "exhaust_bore_mm": 210,
+      "exhaust_status": "Generic fan provision, closed damper; no rated duty, route or active airflow",
+      "public_privacy_mode": "OPAQUE alpha1, no transmission; not an installed-glazing privacy certification"
+    }
+  ],
+  "geyser_notes": [
+    "Three generic wall-mounted electric storage-water-heater envelopes, 380 W x 320 D x 560 H mm. Capacity, product, ratings and manufacturer installation clearances are not selected or certified.",
+    "No gas unit, fictional socket, live indicator, energized connection, hot-water route, concealed circuit or discharge pipe is modeled.",
+    "Capped hot/cold terminals and mounting-bracket concepts only. Safety-valve discharge, isolation, RCD protection, earthing and full wet-weight wall support require qualified design.",
+    "Body bottom 2130 mm; lowest capped terminals 2075 mm. Service envelopes are provisional maintenance reservations, not an accessible-installation or wet-zone compliance claim.",
+    "Shower keepouts are conservative spatial review aids based on current fixture positions, not measured spray envelopes or statutory electrical zones."
+  ]
 }

@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
-import { isSafe, move, movementVector, joystickVector, roomAt, applyLens } from './navigation.js?lens=1&controls=2';
+import { isSafe, move, movementVector, movementSpeed, joystickVector, roomAt, applyLens } from './navigation.js?lens=1&controls=3';
 import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=3868c82db2f0f29b';
 import { createFixtureLighting } from './fixture-lighting.js?v=07ea12a8efadecfe';
 
@@ -15,6 +15,7 @@ const on = (target, type, handler, options = {}) => target.addEventListener(type
 const keys = new Set();
 const stick = $('touch-stick');
 let stickPointer = null, stickOrigin = null, stickInput = [0, 0];
+let fasterPace = false;
 let renderer, scene, camera, model, nav, manifest, frame, previous = 0;
 let yaw = 0, pitch = 0, ready = false, dragging = null, loadController, observer;
 let selected = 'kitchen', position = [0, 0], disposed = false, blocked = false, contextLost = false;
@@ -23,9 +24,16 @@ let focalLength = null, lens;
 let ceilings, ceilingOptions, ceilingUnavailable = '';
 let fixtureLighting;
 const movementKeys = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'KeyQ', 'KeyE', 'KeyR', 'KeyF']);
+const shiftHeld = () => keys.has('ShiftLeft') || keys.has('ShiftRight');
+function renderPace() {
+  const fast = fasterPace || shiftHeld();
+  $('pace').textContent = `Pace: ${fast ? 'Faster' : 'Walk'}${shiftHeld() && !fasterPace ? ' (Shift)' : ''}`;
+  $('pace').setAttribute('aria-pressed', String(fast));
+}
 
 function clearInput() {
   keys.clear();
+  renderPace();
   resetStick();
   const pointer = dragging?.id;
   dragging = null;
@@ -36,6 +44,7 @@ function resetStick() {
   stickPointer = null; stickOrigin = null; stickInput = [0, 0];
   stick.firstElementChild.style.transform = '';
   stick.removeAttribute('data-active');
+  keys.delete('ShiftLeft'); keys.delete('ShiftRight'); renderPace();
   if (pointer !== null && stick.hasPointerCapture(pointer)) stick.releasePointerCapture(pointer);
 }
 function release() {
@@ -259,7 +268,7 @@ function animate(time) {
     }
     const forward = down('KeyW') + down('ArrowUp') - down('KeyS') - down('ArrowDown') + stickInput[1];
     const sideways = down('KeyD') + down('ArrowRight') - down('KeyA') - down('ArrowLeft') + stickInput[0];
-    const [dx, dy] = movementVector(forward, sideways, yaw, dt);
+    const [dx, dy] = movementVector(forward, sideways, yaw, dt, movementSpeed(fasterPace, shiftHeld()));
     const next = move(nav, position, dx, dy);
     const hit = Math.hypot(dx, dy) > 0 && Math.hypot(next[0] - position[0], next[1] - position[1]) < Math.hypot(dx, dy) * .2;
     const location = roomAt(nav, next);
@@ -276,6 +285,12 @@ function animate(time) {
 on($('retry'), 'click', () => renderer && !contextLost ? load() : location.reload());
 on(room, 'change', () => teleport(room.value));
 on($('reset'), 'click', () => teleport(selected));
+on($('pace'), 'click', () => {
+  clearInput();
+  fasterPace = !fasterPace;
+  renderPace();
+  if (ready) canvas.focus({ preventScroll: true });
+});
 for (const id of ['ceiling-controls', 'ceiling-feedback']) {
   for (const type of ['pointerdown', 'focusin']) on($(id), type, clearInput);
 }
@@ -385,7 +400,13 @@ on(canvas, 'pointermove', event => {
   dragging.x = event.clientX; dragging.y = event.clientY;
 });
 for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) {
-  on(canvas, type, event => { if (dragging?.id === event.pointerId) dragging = null; });
+  on(canvas, type, event => {
+    if (dragging?.id !== event.pointerId) return;
+    dragging = null;
+    if (type !== 'pointerup') {
+      keys.delete('ShiftLeft'); keys.delete('ShiftRight'); renderPace();
+    }
+  });
 }
 on(document, 'mousemove', event => {
   if (ready && document.pointerLockElement === canvas) look(event.movementX, event.movementY);
@@ -407,11 +428,17 @@ on(document, 'keydown', event => {
     event.preventDefault();
     return;
   }
+  if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
+    keys.add(event.code); renderPace(); return;
+  }
   if (movementKeys.has(event.code)) { event.preventDefault(); keys.add(event.code); }
 });
-on(document, 'keyup', event => keys.delete(event.code));
+on(document, 'keyup', event => { keys.delete(event.code); renderPace(); });
 on(canvas, 'blur', event => { if (event.relatedTarget !== stick) clearInput(); });
-on(stick, 'blur', event => { if (event.relatedTarget !== canvas) clearInput(); else keys.clear(); });
+on(stick, 'blur', event => {
+  if (event.relatedTarget !== canvas) clearInput();
+  else { keys.clear(); renderPace(); }
+});
 on(window, 'blur', release);
 on(window, 'resize', release);
 on(document, 'visibilitychange', () => { release(); previous = 0; });
@@ -463,6 +490,7 @@ window.walkthrough = { snapshot: () => ({
   safe: nav ? isSafe(nav, ...position) : false,
   pressed: keys.size + (stickPointer !== null ? 1 : 0), dragging: Boolean(dragging),
   joystick: { active: stickPointer !== null, sideways: stickInput[0], forward: stickInput[1] },
+  pace: { faster: fasterPace, shift: shiftHeld(), speed: movementSpeed(fasterPace, shiftHeld()) },
   triangles: renderer?.info.render.triangles, calls: renderer?.info.render.calls,
   memory: renderer ? { ...renderer.info.memory } : null, baseVisible: model?.visible,
   fov: camera?.fov, aspect: camera?.aspect, lens, eyeHeight: camera?.position.y,

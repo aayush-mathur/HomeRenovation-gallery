@@ -2,61 +2,1259 @@
   "version": 1,
   "collections": [
     {
-      "id": "layout-v018",
-      "title": "Sculpted flow - architectural ceiling concept v018",
+      "id": "layout-v021",
+      "title": "Compact L sofa and bathroom privacy / exhaust / geysers - v021",
       "status": "Draft previews",
-      "description": "A fourth option uses curved beam junctions, selective beam-level finish bands, a sculpted dining lightwell and one media-wall return. Existing, Quiet, Linear and Warm remain available in the Ceiling selector. Original structural beam cores and the complete central glazed opening are retained. Profiles require a specialist formed or manufacturer-approved finish system; they are not construction details.",
+      "description": "The window-side sofa gains a compact L return; the opposite sofa stays. The unchanged-size table moves 250 mm east, and the west display shrinks from 1300 to 700 mm with recessed bypass fronts and its own standing space. Three bathroom apertures receive opaque lower inserts, small diffuse upper inserts and exhaust provisions; generic electric geysers are unconnected concepts. Two thin decorative curtain rods above the front door assemblies are removed, not frames or beams. RO, independent landing and all six ceilings remain.",
       "assumptions": [
-        "900x675, 8-sample concept previews. Specialist formed finishes and support need review; 2.66 m low bands stay outside the fan swept areas, with high pockets around fans and ACs.",
+        "900x675, 8-sample concepts. About46% less display frontage. Original1550/2250mm window sill/head assumptions are not measurements. Neighbor roofs/night silhouettes, fan duty/discharge/makeup air, geyser capacity/wet-zone rating/weight/support/protection and service routes require site/installer review; no absolute privacy or installation safety claim.",
         "Static stability fallback; the reported interactive regression cause remains unconfirmed."
+      ],
+      "views": [
+        {
+          "id": "D21_01_conversation",
+          "title": "Compact L and facing sofa - same v019 conversation camera",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Drawing room",
+          "src": "images/layout-v021/D21_01_conversation-aa2ca354161f4e8a.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "D21_02_from_hall",
+          "title": "Compact L and resized accessible sliding display",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Drawing room",
+          "src": "images/layout-v021/D21_02_from_hall-8bc226b52bd6d177.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "D21_03_plan",
+          "title": "Drawing room overhead - compact L footprint and retained routes",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Drawing room",
+          "src": "images/layout-v021/D21_03_plan-ad1ff9dbdd1823f2.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "B21_01_bath1",
+          "title": "Rear bathroom - privacy inserts, exhaust and electric geyser concept",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Bathrooms",
+          "src": "images/layout-v021/B21_01_bath1-5b0d00c4c0dfa0f0.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "B21_02_bath2",
+          "title": "Middle bathroom - privacy inserts, exhaust and electric geyser concept",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Bathrooms",
+          "src": "images/layout-v021/B21_02_bath2-a026337b59f78002.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "B21_03_bath3",
+          "title": "Front bathroom - privacy inserts, exhaust and electric geyser concept",
+          "description": "8-sample draft preview; not a final render.",
+          "room": "Bathrooms",
+          "src": "images/layout-v021/B21_03_bath3-0e44d56c04240ced.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "D21_clearance_plan",
+          "title": "Before/after footprint and actual clearances",
+          "description": "Measured exported furniture bounds; 350 mm is a furniture comfort gap, not a walking-passage or code claim.",
+          "room": "Drawing room plan",
+          "src": "images/layout-v021/D21_clearance_plan-493b9c2cbf8dcf19.svg",
+          "width": 1100,
+          "height": 760
+        }
+      ],
+      "design": {
+        "branch": "Current house",
+        "label": "v021 · Current house — compact L and bath privacy",
+        "format": "Renders + separate whole-floor walkthrough",
+        "stage": "current",
+        "parent_id": "layout-v020"
+      }
+    },
+    {
+      "id": "study-long-l-nine",
+      "title": "Long L · nine backed places",
+      "status": "Experimental branch · not selected",
+      "description": "Capacity-first; long straight seating row, no central table in guest mode.",
+      "assumptions": [
+        "A separate alternative based on v019, not a change to the current whole-floor walkthrough.",
+        "Compact seat comfort, real furniture and collection fit still need review.",
+        "Rendered images and plans only. No separate walkable build exists for this branch."
+      ],
+      "views": [
+        {
+          "id": "long_l_nine-room",
+          "title": "Long L · nine backed places — occupied room",
+          "room": "Drawing room",
+          "description": "Experimental 8-sample render, not a walkable variant or construction approval.",
+          "src": "images/design-archive/study-long-l-nine/long_l_nine-room-131e9fd12570ab2f.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "long_l_nine-plan",
+          "title": "Long L · nine backed places — numbered plan",
+          "room": "Numbered plan",
+          "description": "Nine occupied places; green marks the preserved circulation lane.",
+          "src": "images/design-archive/study-long-l-nine/long_l_nine-plan-65e9180385453e22.svg",
+          "width": 1000,
+          "height": 800
+        }
+      ],
+      "design": {
+        "branch": "Nine-seat alternatives",
+        "parent_id": "layout-v019",
+        "format": "Renders + numbered plan",
+        "label": "Long L · nine backed places",
+        "stage": "experiment"
+      }
+    },
+    {
+      "id": "study-l-seven-two-chairs",
+      "title": "Seven-place L + two backed chairs",
+      "status": "Experimental branch · not selected",
+      "description": "Nine occupied places, all with backs; loose chairs can move between gatherings.",
+      "assumptions": [
+        "A separate alternative based on v019, not a change to the current whole-floor walkthrough.",
+        "Compact seat comfort, real furniture and collection fit still need review.",
+        "Rendered images and plans only. No separate walkable build exists for this branch."
+      ],
+      "views": [
+        {
+          "id": "l_seven_two_chairs-room",
+          "title": "Seven-place L + two backed chairs — occupied room",
+          "room": "Drawing room",
+          "description": "Experimental 8-sample render, not a walkable variant or construction approval.",
+          "src": "images/design-archive/study-l-seven-two-chairs/l_seven_two_chairs-room-2b2a3476f8f371d7.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "l_seven_two_chairs-plan",
+          "title": "Seven-place L + two backed chairs — numbered plan",
+          "room": "Numbered plan",
+          "description": "Nine occupied places; green marks the preserved circulation lane.",
+          "src": "images/design-archive/study-l-seven-two-chairs/l_seven_two_chairs-plan-060556ffa9f0fe9f.svg",
+          "width": 1000,
+          "height": 800
+        }
+      ],
+      "design": {
+        "branch": "Nine-seat alternatives",
+        "parent_id": "layout-v019",
+        "format": "Renders + numbered plan",
+        "label": "Seven-place L + two backed chairs",
+        "stage": "experiment"
+      }
+    },
+    {
+      "id": "study-l-seven-two-poufs",
+      "title": "Seven-place L + two poufs",
+      "status": "Experimental branch · not selected",
+      "description": "Nine occupied places; two guests use backless seats. A flexible occasional layout.",
+      "assumptions": [
+        "A separate alternative based on v019, not a change to the current whole-floor walkthrough.",
+        "Compact seat comfort, real furniture and collection fit still need review.",
+        "Rendered images and plans only. No separate walkable build exists for this branch."
+      ],
+      "views": [
+        {
+          "id": "l_seven_two_poufs-room",
+          "title": "Seven-place L + two poufs — occupied room",
+          "room": "Drawing room",
+          "description": "Experimental 8-sample render, not a walkable variant or construction approval.",
+          "src": "images/design-archive/study-l-seven-two-poufs/l_seven_two_poufs-room-a0614203535e1fda.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "l_seven_two_poufs-plan",
+          "title": "Seven-place L + two poufs — numbered plan",
+          "room": "Numbered plan",
+          "description": "Nine occupied places; green marks the preserved circulation lane.",
+          "src": "images/design-archive/study-l-seven-two-poufs/l_seven_two_poufs-plan-d9c94b6e5387f7b6.svg",
+          "width": 1000,
+          "height": 800
+        }
+      ],
+      "design": {
+        "branch": "Nine-seat alternatives",
+        "parent_id": "layout-v019",
+        "format": "Renders + numbered plan",
+        "label": "Seven-place L + two poufs",
+        "stage": "experiment"
+      }
+    },
+    {
+      "id": "study-luminous-frames",
+      "title": "Luminous Frames",
+      "status": "Experimental branch · not selected",
+      "description": "Fine warm-metal outlines, pale beam bays and a framed dining opening.",
+      "assumptions": [
+        "A separate alternative based on v019, not a change to the current whole-floor walkthrough.",
+        "Representative hall/dining study only; supports, moisture suitability and real lighting need detailing.",
+        "Rendered images and plans only. No separate walkable build exists for this branch."
+      ],
+      "views": [
+        {
+          "id": "luminous_frames-hall",
+          "title": "Luminous Frames — hall",
+          "room": "Hall",
+          "description": "Experimental 8-sample render, not a walkable variant or construction approval.",
+          "src": "images/design-archive/study-luminous-frames/luminous_frames-hall-0a3ae83b6c884c87.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "luminous_frames-lightwell",
+          "title": "Luminous Frames — lightwell",
+          "room": "Dining lightwell",
+          "description": "Experimental 8-sample render, not a walkable variant or construction approval.",
+          "src": "images/design-archive/study-luminous-frames/luminous_frames-lightwell-62fec6bedff77dfd.png",
+          "width": 900,
+          "height": 675
+        }
+      ],
+      "design": {
+        "branch": "Ceiling & lightwell alternatives",
+        "parent_id": "layout-v019",
+        "format": "Hall + lightwell renders",
+        "label": "Luminous Frames",
+        "stage": "experiment"
+      }
+    },
+    {
+      "id": "study-timber-lantern",
+      "title": "Timber Lantern",
+      "status": "Experimental branch · not selected",
+      "description": "Selective timber beam accent and fins along the raised dining reveal.",
+      "assumptions": [
+        "A separate alternative based on v019, not a change to the current whole-floor walkthrough.",
+        "Representative hall/dining study only; supports, moisture suitability and real lighting need detailing.",
+        "Rendered images and plans only. No separate walkable build exists for this branch."
+      ],
+      "views": [
+        {
+          "id": "timber_lantern-hall",
+          "title": "Timber Lantern — hall",
+          "room": "Hall",
+          "description": "Experimental 8-sample render, not a walkable variant or construction approval.",
+          "src": "images/design-archive/study-timber-lantern/timber_lantern-hall-651fcd45cd7e2301.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "timber_lantern-lightwell",
+          "title": "Timber Lantern — lightwell",
+          "room": "Dining lightwell",
+          "description": "Experimental 8-sample render, not a walkable variant or construction approval.",
+          "src": "images/design-archive/study-timber-lantern/timber_lantern-lightwell-5336ba7cf98b6408.png",
+          "width": 900,
+          "height": 675
+        }
+      ],
+      "design": {
+        "branch": "Ceiling & lightwell alternatives",
+        "parent_id": "layout-v019",
+        "format": "Hall + lightwell renders",
+        "label": "Timber Lantern",
+        "stage": "experiment"
+      }
+    },
+    {
+      "id": "study-stepped-lightwell",
+      "title": "Stepped Lightwell",
+      "status": "Experimental branch · not selected",
+      "description": "Shallow nested dining frames with a restrained linear hall ceiling.",
+      "assumptions": [
+        "A separate alternative based on v019, not a change to the current whole-floor walkthrough.",
+        "Representative hall/dining study only; supports, moisture suitability and real lighting need detailing.",
+        "Rendered images and plans only. No separate walkable build exists for this branch."
+      ],
+      "views": [
+        {
+          "id": "stepped_lightwell-hall",
+          "title": "Stepped Lightwell — hall",
+          "room": "Hall",
+          "description": "Experimental 8-sample render, not a walkable variant or construction approval.",
+          "src": "images/design-archive/study-stepped-lightwell/stepped_lightwell-hall-ccce6f633c8f9232.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "stepped_lightwell-lightwell",
+          "title": "Stepped Lightwell — lightwell",
+          "room": "Dining lightwell",
+          "description": "Experimental 8-sample render, not a walkable variant or construction approval.",
+          "src": "images/design-archive/study-stepped-lightwell/stepped_lightwell-lightwell-d58042b37593f707.png",
+          "width": 900,
+          "height": 675
+        }
+      ],
+      "design": {
+        "branch": "Ceiling & lightwell alternatives",
+        "parent_id": "layout-v019",
+        "format": "Hall + lightwell renders",
+        "label": "Stepped Lightwell",
+        "stage": "experiment"
+      }
+    },
+    {
+      "id": "layout-v020",
+      "title": "v020 · RO provision and independent landing",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "R20_01_drinking_tap",
+          "title": "Dedicated drinking tap beside the prep sink",
+          "room": "Dedicated drinking tap beside the prep sink",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v020/R20_01_drinking_tap-49cdba96841ea8c3.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "R20_02_service_cutaway",
+          "title": "RO provision - service fronts removed for inspection only",
+          "room": "RO provision",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v020/R20_02_service_cutaway-4ea59a01deed90c4.png",
+          "width": 900,
+          "height": 675
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v020 · RO provision and independent landing",
+        "parent_id": "layout-v019",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v019",
+      "title": "v019 · Facing-sofa drawing room",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "D19_01_conversation",
+          "title": "Facing sofas and a separate doorway-side lane",
+          "room": "Facing sofas and a separate doorway-side lane",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v019/D19_01_conversation-e3f13f38e83a5a27.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "D19_02_from_hall",
+          "title": "Drawing room from the hall entrance",
+          "room": "Drawing room from the hall entrance",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v019/D19_02_from_hall-4a4ad9de8b6a2d57.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "D19_03_display",
+          "title": "Curated display inside the seating zone, not the passage",
+          "room": "Curated display inside the seating zone, not the passage",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v019/D19_03_display-2a82182eeb9a2d77.png",
+          "width": 900,
+          "height": 675
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v019 · Facing-sofa drawing room",
+        "parent_id": "layout-v018",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v018",
+      "title": "v018 · Sculpted flow",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
       ],
       "views": [
         {
           "id": "SC_01_hall",
           "title": "Rounded hall beam junctions and higher fan pockets",
-          "description": "8-sample draft preview; not a final render.",
-          "room": "Sculpted ceiling",
-          "src": "images/layout-v018/SC_01_hall-7377330076141daa.png",
+          "room": "Rounded hall beam junctions and higher fan pockets",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v018/SC_01_hall-7377330076141daa.png",
           "width": 900,
           "height": 675
         },
         {
           "id": "SC_02_lightwell",
           "title": "Rounded dining-lightwell mouth and retained glazing",
-          "description": "8-sample draft preview; not a final render.",
-          "room": "Sculpted ceiling",
-          "src": "images/layout-v018/SC_02_lightwell-81b06045bb768a54.png",
+          "room": "Rounded dining-lightwell mouth and retained glazing",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v018/SC_02_lightwell-81b06045bb768a54.png",
           "width": 900,
           "height": 675
         },
         {
           "id": "SC_03_drawing",
           "title": "Continuous drawing ceiling and soft wall junction",
-          "description": "8-sample draft preview; not a final render.",
-          "room": "Sculpted ceiling",
-          "src": "images/layout-v018/SC_03_drawing-1366850ad7df7a53.png",
+          "room": "Continuous drawing ceiling and soft wall junction",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v018/SC_03_drawing-1366850ad7df7a53.png",
           "width": 900,
           "height": 675
         },
         {
           "id": "SC_04_bedroom",
           "title": "Middle-bedroom beam softened on the bed side",
-          "description": "8-sample draft preview; not a final render.",
-          "room": "Sculpted ceiling",
-          "src": "images/layout-v018/SC_04_bedroom-5042a596a41845e4.png",
+          "room": "Middle-bedroom beam softened on the bed side",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v018/SC_04_bedroom-5042a596a41845e4.png",
           "width": 900,
           "height": 675
         },
         {
           "id": "SC_05_wall_return",
           "title": "Ceiling-to-wall return above the media wall",
-          "description": "8-sample draft preview; not a final render.",
-          "room": "Sculpted ceiling",
-          "src": "images/layout-v018/SC_05_wall_return-c633eb93cd5156d1.png",
+          "room": "Ceiling-to-wall return above the media wall",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v018/SC_05_wall_return-c633eb93cd5156d1.png",
           "width": 900,
           "height": 675
         }
-      ]
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v018 · Sculpted flow",
+        "parent_id": "layout-v017",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v017",
+      "title": "v017 · Three ceiling comparisons",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "CP_01_hall",
+          "title": "Hall beam bays, fan and coordinated lighting",
+          "room": "Hall beam bays, fan and coordinated lighting",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v017/CP_01_hall-156d99b05c3983d6.png",
+          "width": 2160,
+          "height": 640
+        },
+        {
+          "id": "CP_02_dining_kitchen",
+          "title": "Dining lightwell retained beside the kitchen approach",
+          "room": "Dining lightwell retained beside the kitchen approach",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v017/CP_02_dining_kitchen-d93c3e8ba308da93.png",
+          "width": 2160,
+          "height": 640
+        },
+        {
+          "id": "CP_03_drawing",
+          "title": "Drawing-room ceiling, fan and clear AC band",
+          "room": "Drawing-room ceiling, fan and clear AC band",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v017/CP_03_drawing-ddea64a87b5c49d8.png",
+          "width": 2160,
+          "height": 640
+        },
+        {
+          "id": "CP_04_bedroom",
+          "title": "Middle bedroom - smaller fan within the beam bay",
+          "room": "Middle bedroom",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v017/CP_04_bedroom-2d133c17039e247c.png",
+          "width": 2160,
+          "height": 640
+        },
+        {
+          "id": "quiet_ceiling_plan",
+          "title": "Quiet ceiling plan",
+          "room": "Ceiling plans",
+          "description": "Preserved whole-floor ceiling concept plan.",
+          "src": "images/design-archive/layout-v017/quiet_ceiling_plan-35362c4d6608e1a6.svg",
+          "width": 650,
+          "height": 1120
+        },
+        {
+          "id": "linear_ceiling_plan",
+          "title": "Linear ceiling plan",
+          "room": "Ceiling plans",
+          "description": "Preserved whole-floor ceiling concept plan.",
+          "src": "images/design-archive/layout-v017/linear_ceiling_plan-e43bd7b461161822.svg",
+          "width": 650,
+          "height": 1120
+        },
+        {
+          "id": "warm_ceiling_plan",
+          "title": "Warm ceiling plan",
+          "room": "Ceiling plans",
+          "description": "Preserved whole-floor ceiling concept plan.",
+          "src": "images/design-archive/layout-v017/warm_ceiling_plan-2325d9b5a11b9001.svg",
+          "width": 650,
+          "height": 1120
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v017 · Three ceiling comparisons",
+        "parent_id": "layout-v016",
+        "parent_note": "",
+        "format": "Comparison renders + plans",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v016",
+      "title": "v016 · Photo-based front joinery",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "F16_01_plain_lightwell",
+          "title": "Dining lightwell - plain side wall below retained roof cover",
+          "room": "Dining lightwell",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v016/F16_01_plain_lightwell-6cd888721267c59f.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "F16_02_bedroom_inside",
+          "title": "Front bedroom - complete arched door and window unit",
+          "room": "Front bedroom",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v016/F16_02_bedroom_inside-4250345aa2c6ff84.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "F16_03_drawing_inside",
+          "title": "Drawing room - mirrored front door and window unit",
+          "room": "Drawing room",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v016/F16_03_drawing_inside-194a78bb478dbeaa.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "F16_04_joinery_outside",
+          "title": "Exterior joinery comparison only - surroundings unmodeled",
+          "room": "Exterior joinery comparison only",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v016/F16_04_joinery_outside-6c58f61e3c485cc0.png",
+          "width": 900,
+          "height": 675
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v016 · Photo-based front joinery",
+        "parent_id": "layout-v015",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v015",
+      "title": "v015 · Glazed partition and circulation",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "G15_01_room",
+          "title": "Drawing room with an open circulation route",
+          "room": "Drawing room with an open circulation route",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v015/G15_01_room-c961268a2abec4c4.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "G15_02_partition",
+          "title": "Glazed separation and matching closable door",
+          "room": "Glazed separation and matching closable door",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v015/G15_02_partition-7b03fb98440a1d31.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "G15_03_hall_aquarium",
+          "title": "Aquarium on hall side; original mandir retained",
+          "room": "Aquarium on hall side; original mandir retained",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v015/G15_03_hall_aquarium-9901a519191dd211.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "G15_04_services",
+          "title": "Network equipment concealed within the media console",
+          "room": "Network equipment concealed within the media console",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v015/G15_04_services-68366a0fd3643f6a.png",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "G15_05_dock",
+          "title": "Separate open dock location on dining-side wall",
+          "room": "Separate open dock location on dining-side wall",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v015/G15_05_dock-885e9d2558991172.png",
+          "width": 900,
+          "height": 675
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v015 · Glazed partition and circulation",
+        "parent_id": "layout-v014",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v014",
+      "title": "v014 · Measured aquarium",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "A14_01_room",
+          "title": "Drawing room with the existing-size aquarium",
+          "room": "Drawing room with the existing-size aquarium",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v014/A14_01_room-e12f5304d94c9f14.png",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "id": "A14_02_aquarium",
+          "title": "Aquarium on open frame beside dry awards display",
+          "room": "Aquarium on open frame beside dry awards display",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v014/A14_02_aquarium-7d32da7e4ba77322.png",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "id": "A14_03_display",
+          "title": "Awards, medals and three tucked-away guest seats",
+          "room": "Awards, medals and three tucked-away guest seats",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v014/A14_03_display-7b1cad914e3b74b2.png",
+          "width": 1000,
+          "height": 750
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v014 · Measured aquarium",
+        "parent_id": "layout-v013",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v013",
+      "title": "v013 · Drawing-room display and seating",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "L13_01_drawing",
+          "title": "Collected drawing room - six everyday seats",
+          "room": "Collected drawing room",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v013/L13_01_drawing-c8bc8c592a3f9c10.png",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "id": "L13_02_collection",
+          "title": "Awards, medals and travel display with tucked guest seats",
+          "room": "Awards, medals and travel display with tucked guest seats",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v013/L13_02_collection-1f8a961e92d4eab1.png",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "id": "L13_03_hall",
+          "title": "Compact hall audio and discreet service furniture",
+          "room": "Compact hall audio and discreet service furniture",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v013/L13_03_hall-1251e429af108ef5.png",
+          "width": 1000,
+          "height": 750
+        },
+        {
+          "id": "L13_04_service",
+          "title": "Concealed network equipment and accessible dock niche",
+          "room": "Concealed network equipment and accessible dock niche",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v013/L13_04_service-9e212d0529ffa681.png",
+          "width": 1000,
+          "height": 750
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v013 · Drawing-room display and seating",
+        "parent_id": "layout-v012",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v012",
+      "title": "v012 · Kitchen daylight strip",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "E12_01_full_roof_strip",
+          "title": "Rear translucent strip continues to actual east kitchen wall",
+          "room": "Rear translucent strip continues to actual east kitchen wall",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v012/E12_01_full_roof_strip-b663603b061126df.png",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "id": "E12_02_above_main_sink",
+          "title": "Sheet and opening continue above main-sink cabinet depth",
+          "room": "Sheet and opening continue above main-sink cabinet depth",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v012/E12_02_above_main_sink-b45df566a0cd8e1e.png",
+          "width": 800,
+          "height": 600
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v012 · Kitchen daylight strip",
+        "parent_id": "layout-v011",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v011",
+      "title": "v011 · Electronics provisions",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "E11_01_service_bay",
+          "title": "Hall service bay - candidate robot dock and open network cabinet",
+          "room": "Hall service bay",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v011/E11_01_service_bay-1266a326b4a60f11.png",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "id": "E11_02_media",
+          "title": "Existing media setup - set-top box and separate ceiling Wi-Fi",
+          "room": "Existing media setup",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v011/E11_02_media-40de262da2b23f92.png",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "id": "E11_03_study_ac",
+          "title": "Middle-bedroom AC provision clear of beam and wardrobe",
+          "room": "Middle-bedroom AC provision clear of beam and wardrobe",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v011/E11_03_study_ac-70c9c91689ba2044.png",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "id": "E11_04_entry",
+          "title": "Entry camera, doorbell and emergency-light provisions",
+          "room": "Entry camera, doorbell and emergency-light provisions",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v011/E11_04_entry-27e0c51fe011b726.png",
+          "width": 800,
+          "height": 600
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v011 · Electronics provisions",
+        "parent_id": "layout-v010",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v010",
+      "title": "v010 · Rear glass door and grating",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "V10_01_rear_access",
+          "title": "Rear kitchen glass door and open metal grate",
+          "room": "Rear kitchen glass door and open metal grate",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v010/V10_01_rear_access-bb781fc1f8dd9d78.png",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "id": "V10_02_roof_strip",
+          "title": "OTS-width translucent strip toward the main sink",
+          "room": "OTS-width translucent strip toward the main sink",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v010/V10_02_roof_strip-89ffef4272c1237a.png",
+          "width": 800,
+          "height": 600
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v010 · Rear glass door and grating",
+        "parent_id": "layout-v009",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v009",
+      "title": "v009 · Recessed basin correction",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "V9_01_dining_upper_wall",
+          "title": "Dining upper wall - flush above retained washbasin niche",
+          "room": "Dining upper wall",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v009/V9_01_dining_upper_wall-a4e567398ab862bc.png",
+          "width": 800,
+          "height": 600
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v009 · Recessed basin correction",
+        "parent_id": "layout-v007",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v008",
+      "title": "v008 · Earlier basin interpretation — superseded",
+      "status": "Superseded interpretation",
+      "description": "Preserved for comparison, not the current design. The basin move was rejected and corrected in v009.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "V8_01_dining_wall",
+          "title": "Dining washbasin and entrance - flush wall",
+          "room": "Dining washbasin and entrance",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v008/V8_01_dining_wall-cbbad02e0e370b65.png",
+          "width": 800,
+          "height": 600
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v008 · Earlier basin interpretation — superseded",
+        "parent_id": "layout-v007",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v007",
+      "title": "v007 · Static furniture and bedroom layout",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "V7_01_middle_room",
+          "title": "Middle room - restored bed, study beside cupboards",
+          "room": "Middle room",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v007/V7_01_middle_room-c14b138785719c94.png",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "id": "V7_02_study",
+          "title": "Study beside north-wall cupboards",
+          "room": "Study beside north-wall cupboards",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v007/V7_02_study-2f5d2e53fb29737e.png",
+          "width": 800,
+          "height": 600
+        },
+        {
+          "id": "V7_03_dressing",
+          "title": "Dressing station near the entrance",
+          "room": "Dressing station near the entrance",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v007/V7_03_dressing-43a4acf613502f63.png",
+          "width": 800,
+          "height": 600
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v007 · Static furniture and bedroom layout",
+        "parent_id": null,
+        "parent_note": "v006 (draft renders not published as a verified set).",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v004",
+      "title": "v004 · Dining lightwell",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "IC_01_dining_daylight",
+          "title": "IC 01 dining daylight",
+          "room": "IC 01 dining daylight",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v004/IC_01_dining_daylight-92f4592c733873c2.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IC_02_lightwell_up",
+          "title": "IC 02 lightwell up",
+          "room": "IC 02 lightwell up",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v004/IC_02_lightwell_up-a1dd52f9159d8c74.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IC_03_dining_from_kitchen",
+          "title": "IC 03 dining from kitchen",
+          "room": "IC 03 dining from kitchen",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v004/IC_03_dining_from_kitchen-a62dbe5d35d9d7de.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_00_whole_house",
+          "title": "IK 00 whole house",
+          "room": "IK 00 whole house",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v004/IK_00_whole_house-66a256fea7dbf465.png",
+          "width": 1000,
+          "height": 2000
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v004 · Dining lightwell",
+        "parent_id": "layout-v003",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v003",
+      "title": "v003 · Aligned beams",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "IK_04_hall_beams",
+          "title": "IK 04 hall beams",
+          "room": "IK 04 hall beams",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v003/IK_04_hall_beams-76e7f7fda92c6b4c.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_05_back_bedroom",
+          "title": "IK 05 back bedroom",
+          "room": "IK 05 back bedroom",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v003/IK_05_back_bedroom-b32ddda1821405fd.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_06_middle_room",
+          "title": "IK 06 middle room",
+          "room": "IK 06 middle room",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v003/IK_06_middle_room-f9442b31cb77050a.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_00_whole_house",
+          "title": "IK 00 whole house",
+          "room": "IK 00 whole house",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v003/IK_00_whole_house-98f79f0beb028c00.png",
+          "width": 1000,
+          "height": 2000
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v003 · Aligned beams",
+        "parent_id": "layout-v002",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v002",
+      "title": "v002 · Whole-house beam study",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "IK_01_from_dining",
+          "title": "IK 01 from dining",
+          "room": "IK 01 from dining",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v002/IK_01_from_dining-b5c89e98be7f291c.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_02_beam_to_dining",
+          "title": "IK 02 beam to dining",
+          "room": "IK 02 beam to dining",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v002/IK_02_beam_to_dining-f7710123d2282a79.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_03_rear_shaft",
+          "title": "IK 03 rear shaft",
+          "room": "IK 03 rear shaft",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v002/IK_03_rear_shaft-5da79bcb13e3179a.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_04_hall_beams",
+          "title": "IK 04 hall beams",
+          "room": "IK 04 hall beams",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v002/IK_04_hall_beams-1a470aefe7c23c60.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_05_back_bedroom",
+          "title": "IK 05 back bedroom",
+          "room": "IK 05 back bedroom",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v002/IK_05_back_bedroom-c5adbf7dff08f4a2.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_06_middle_room",
+          "title": "IK 06 middle room",
+          "room": "IK 06 middle room",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v002/IK_06_middle_room-1a80122fee4ec110.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_00_whole_house",
+          "title": "IK 00 whole house",
+          "room": "IK 00 whole house",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v002/IK_00_whole_house-96803e3e547ab53e.png",
+          "width": 1000,
+          "height": 2000
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v002 · Whole-house beam study",
+        "parent_id": "layout-v001",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
+    },
+    {
+      "id": "layout-v001",
+      "title": "v001 · Integrated oak kitchen",
+      "status": "Historical version",
+      "description": "Preserved for comparison, not the current design.",
+      "assumptions": [
+        "Original preview quality retained; not regenerated or certified construction drawings.",
+        "Historical render collection only; no walkable build is implied."
+      ],
+      "views": [
+        {
+          "id": "IK_01_from_dining",
+          "title": "IK 01 from dining",
+          "room": "IK 01 from dining",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v001/IK_01_from_dining-c2038016f14877d5.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_02_beam_to_dining",
+          "title": "IK 02 beam to dining",
+          "room": "IK 02 beam to dining",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v001/IK_02_beam_to_dining-094d99e6a2b352f1.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_03_rear_shaft",
+          "title": "IK 03 rear shaft",
+          "room": "IK 03 rear shaft",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v001/IK_03_rear_shaft-13ec36ab13d4e216.png",
+          "width": 1120,
+          "height": 840
+        },
+        {
+          "id": "IK_00_whole_house",
+          "title": "IK 00 whole house",
+          "room": "IK 00 whole house",
+          "description": "Preserved historical render. Furniture and details may differ from the current house.",
+          "src": "images/design-archive/layout-v001/IK_00_whole_house-ad4265961dfec425.png",
+          "width": 1000,
+          "height": 2000
+        }
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "v001 · Integrated oak kitchen",
+        "parent_id": "oak",
+        "parent_note": "",
+        "format": "Historical renders",
+        "stage": "history"
+      }
     },
     {
       "id": "ceilings-v017",
@@ -129,14 +1327,66 @@
           "description": "Earlier Quiet / beam-led, Linear and Warm comparisons; these options remain unchanged.",
           "width": 650,
           "height": 1120
+        },
+        {
+          "id": "SC_01_hall",
+          "title": "Rounded hall beam junctions and higher fan pockets",
+          "room": "Sculpted ceiling",
+          "src": "images/ceilings-v018/SC_01_hall-7377330076141daa.png",
+          "description": "Preserved v018 ceiling study; drawing furniture predates the v019 conversation layout.",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "SC_02_lightwell",
+          "title": "Rounded dining-lightwell mouth and retained glazing",
+          "room": "Sculpted ceiling",
+          "src": "images/ceilings-v018/SC_02_lightwell-81b06045bb768a54.png",
+          "description": "Preserved v018 ceiling study; drawing furniture predates the v019 conversation layout.",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "SC_03_drawing",
+          "title": "Continuous drawing ceiling and soft wall junction",
+          "room": "Sculpted ceiling",
+          "src": "images/ceilings-v018/SC_03_drawing-1366850ad7df7a53.png",
+          "description": "Preserved v018 ceiling study; drawing furniture predates the v019 conversation layout.",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "SC_04_bedroom",
+          "title": "Middle-bedroom beam softened on the bed side",
+          "room": "Sculpted ceiling",
+          "src": "images/ceilings-v018/SC_04_bedroom-5042a596a41845e4.png",
+          "description": "Preserved v018 ceiling study; drawing furniture predates the v019 conversation layout.",
+          "width": 900,
+          "height": 675
+        },
+        {
+          "id": "SC_05_wall_return",
+          "title": "Ceiling-to-wall return above the media wall",
+          "room": "Sculpted ceiling",
+          "src": "images/ceilings-v018/SC_05_wall_return-c633eb93cd5156d1.png",
+          "description": "Preserved v018 ceiling study; drawing furniture predates the v019 conversation layout.",
+          "width": 900,
+          "height": 675
         }
-      ]
+      ],
+      "design": {
+        "branch": "Ceiling comparisons",
+        "label": "Earlier ceiling concepts - Quiet, Linear and Warm",
+        "format": "Renders",
+        "stage": "alternative",
+        "parent_id": null
+      }
     },
     {
       "id": "furnished-v005",
       "title": "Furnished house - v005 (historical)",
       "status": "Historical proposal",
-      "description": "Seven preserved historical v005 renders, not the current v018 layout. Use the walkthrough for the current version.",
+      "description": "Seven preserved historical v005 renders, not the current v021 layout. Use the walkthrough for the current version.",
       "assumptions": [
         "Furniture and finishes are visualization proposals, not product or construction specifications.",
         "Existing kitchen, beams and the corrected dining lightwell are retained.",
@@ -206,7 +1456,14 @@
           "width": 1120,
           "height": 840
         }
-      ]
+      ],
+      "design": {
+        "branch": "House history",
+        "label": "Furnished house - v005 (historical)",
+        "format": "Renders",
+        "stage": "history",
+        "parent_id": "layout-v004"
+      }
     },
     {
       "id": "baseline",
@@ -305,7 +1562,14 @@
           "width": 960,
           "height": 675
         }
-      ]
+      ],
+      "design": {
+        "branch": "Original baseline",
+        "label": "Baseline · existing model",
+        "format": "Renders",
+        "stage": "alternative",
+        "parent_id": null
+      }
     },
     {
       "id": "kitchen_configurator",
@@ -392,7 +1656,14 @@
           "width": 960,
           "height": 840
         }
-      ]
+      ],
+      "design": {
+        "branch": "Kitchen alternatives",
+        "label": "Your sketch kitchen",
+        "format": "Renders + interactive cutaway",
+        "stage": "alternative",
+        "parent_id": null
+      }
     },
     {
       "id": "user_sketch_kitchen",
@@ -424,7 +1695,14 @@
           "width": 1120,
           "height": 840
         }
-      ]
+      ],
+      "design": {
+        "branch": "Kitchen alternatives",
+        "label": "Earlier sketch - before appliance tower",
+        "format": "Renders + interactive cutaway",
+        "stage": "alternative",
+        "parent_id": null
+      }
     },
     {
       "id": "fresh_start",
@@ -599,7 +1877,14 @@
           "width": 1800,
           "height": 3792
         }
-      ]
+      ],
+      "design": {
+        "branch": "Kitchen alternatives",
+        "label": "Fresh start - whole-floor concept",
+        "format": "Renders",
+        "stage": "alternative",
+        "parent_id": null
+      }
     },
     {
       "id": "utility_glass",
@@ -724,7 +2009,14 @@
           "width": 1800,
           "height": 4494
         }
-      ]
+      ],
+      "design": {
+        "branch": "Kitchen alternatives",
+        "label": "Earlier - Kitchen 1 - Glass-door utility",
+        "format": "Renders",
+        "stage": "alternative",
+        "parent_id": null
+      }
     },
     {
       "id": "window_kitchen",
@@ -839,7 +2131,14 @@
           "width": 1800,
           "height": 4494
         }
-      ]
+      ],
+      "design": {
+        "branch": "Kitchen alternatives",
+        "label": "Earlier - Kitchen 2 - Window-centred kitchen",
+        "format": "Renders",
+        "stage": "alternative",
+        "parent_id": null
+      }
     },
     {
       "id": "oak",
@@ -940,7 +2239,14 @@
           "width": 1800,
           "height": 4494
         }
-      ]
+      ],
+      "design": {
+        "branch": "Kitchen alternatives",
+        "label": "Earlier - Option A - Oak and limestone",
+        "format": "Renders",
+        "stage": "alternative",
+        "parent_id": null
+      }
     },
     {
       "id": "sage",
@@ -1041,8 +2347,55 @@
           "width": 1800,
           "height": 4494
         }
-      ]
+      ],
+      "design": {
+        "branch": "Kitchen alternatives",
+        "label": "Earlier - Option B - Sage and open entry",
+        "format": "Renders",
+        "stage": "alternative",
+        "parent_id": null
+      }
     }
   ],
-  "walkthrough": "walkthrough/index.html"
+  "walkthrough": "walkthrough/index.html",
+  "design_archive": {
+    "version": 1,
+    "default": "layout-v021",
+    "description": "Current house, preserved revisions and independent experiments. Selecting a branch does not change the house.",
+    "new_studies": [
+      "study-long-l-nine",
+      "study-l-seven-two-chairs",
+      "study-l-seven-two-poufs",
+      "study-luminous-frames",
+      "study-timber-lantern",
+      "study-stepped-lightwell"
+    ]
+  },
+  "legacy_image_aliases": [
+    {
+      "path": "images/layout-v018/SC_01_hall-7377330076141daa.png",
+      "source": "images/ceilings-v018/SC_01_hall-7377330076141daa.png",
+      "sha256": "7377330076141daa9bca2882f4f0f72807dcbf6b2ed013d2dc3188b836a14f87"
+    },
+    {
+      "path": "images/layout-v018/SC_02_lightwell-81b06045bb768a54.png",
+      "source": "images/ceilings-v018/SC_02_lightwell-81b06045bb768a54.png",
+      "sha256": "81b06045bb768a54ac4a837dbff9942bea9a25bce4ec7dff48099d2cc9864ec9"
+    },
+    {
+      "path": "images/layout-v018/SC_03_drawing-1366850ad7df7a53.png",
+      "source": "images/ceilings-v018/SC_03_drawing-1366850ad7df7a53.png",
+      "sha256": "1366850ad7df7a5304f641b4b9175b776c0a0a2cd11891a5b510ee2710fe6aca"
+    },
+    {
+      "path": "images/layout-v018/SC_04_bedroom-5042a596a41845e4.png",
+      "source": "images/ceilings-v018/SC_04_bedroom-5042a596a41845e4.png",
+      "sha256": "5042a596a41845e43fb40ab40f9a33aedbe37794fe2517b610f9e115a08ae9e0"
+    },
+    {
+      "path": "images/layout-v018/SC_05_wall_return-c633eb93cd5156d1.png",
+      "source": "images/ceilings-v018/SC_05_wall_return-c633eb93cd5156d1.png",
+      "sha256": "c633eb93cd5156d177ce6cf1e40bf8902b9f54bfb072715fcd2925169da87564"
+    }
+  ]
 }

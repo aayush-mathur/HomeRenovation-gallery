@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "release": "9bae6f13f02dd42bad20e399dcb5faf1cb934cf626d00d9e480921188eb3dd66",
-  "totalBytes": 34250450,
+  "release": "9cafb5e33f60bb3f4e6fd7dcd2b69c510438483b289d87753e7a17775328a34d",
+  "totalBytes": 34872375,
   "files": [
     {
       "path": "app.js",
-      "bytes": 23941,
-      "sha256": "22219a0573a59668ff9c513101349954956a77daaff68b87c209b2203d2c0aa4"
+      "bytes": 24947,
+      "sha256": "761f102ed576176ade070c3c2ce67c935ddcb1a05f1338f699ca5b539ad81573"
     },
     {
       "path": "ceiling-comparison.js",
@@ -20,8 +20,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 7225,
-      "sha256": "ea9948582887d38d3c6ec18f771e1ff81d2fba554fd4d757c464ccd22b314a65"
+      "bytes": 7709,
+      "sha256": "60edb39d67cd373dc621fa4c382d55856638eced45984a848ec1ab3e175c759e"
     },
     {
       "path": "model/ceilings/linear-242d4caf58d1df4f.glb",
@@ -50,23 +50,23 @@
     },
     {
       "path": "model/house.glb",
-      "bytes": 18010028,
-      "sha256": "7eaae5bcf08e489ce53f4c5538651d1d95355fe815a59ea08a4eec2f7931c3c5"
+      "bytes": 18622920,
+      "sha256": "e62bda4a91758ef4c394f274b958dd2b19f4df57116117e60db94c55facdf577"
     },
     {
       "path": "model/manifest.json",
-      "bytes": 7453,
-      "sha256": "82fd134391aac7f3b5b2050ecb27599d466c009d2cf01f1ac84ea8e6ee0f30ac"
+      "bytes": 14663,
+      "sha256": "9f6c13b8a702b5dea1a87ab9bb33c3becd709f60b859b385ed4730e068fddab6"
     },
     {
       "path": "model/navigation.json",
-      "bytes": 1961160,
-      "sha256": "eefe1bf4afd798f5d65c15114fc631d72150ea79d9b4addbe06b172fec5daac6"
+      "bytes": 1961181,
+      "sha256": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e"
     },
     {
       "path": "navigation.js",
-      "bytes": 2782,
-      "sha256": "de6811d38337cc224bb7c125049a5bd453f611c5bcd02d4374c2ea354df73b87"
+      "bytes": 2968,
+      "sha256": "80f2ff89bbb463d7df8ed64f9a02aa3e8f3bb11c2025d022132ced0a194d40eb"
     },
     {
       "path": "offline-client.js",
@@ -85,8 +85,8 @@
     },
     {
       "path": "styles.css",
-      "bytes": 7565,
-      "sha256": "3158a79303b31a624ff3c165853c6287ab65f3544bca87cd800ebd979ba5123e"
+      "bytes": 7691,
+      "sha256": "e8416fa69f5b9606d36f6e64ccafe57efba21d2e5dc7411d9425ab7af8db52af"
     },
     {
       "path": "vendor/BufferGeometryUtils.js",

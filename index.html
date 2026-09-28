@@ -16,17 +16,18 @@ local GLB and viewer assets, visible loading/recovery, touch and keyboard contro
   <meta name="referrer" content="no-referrer">
   <title>Home renovation · Render gallery</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=2fdd7c704d32">
+  <link rel="stylesheet" href="styles.css?v=c18b6c55ef6a">
   <script src="configuration.js?v=3981457b456a" defer></script>
-  <script src="app.js?v=649f359b52ab" defer></script>
+  <script src="app.js?v=4798ff102f90" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#gallery">Skip to renders</a>
   <header class="page-header">
     <h1>Home renovation</h1>
-    <p>Render gallery <span aria-hidden="true">·</span> <span id="hosting-mode">Public gallery</span></p>
+    <p>Versions &amp; design experiments <span aria-hidden="true">·</span> <span id="hosting-mode">Public gallery</span></p>
     <!-- optional-walkthrough -->
     <p><a class="baseline-link" href="walkthrough/">Walk inside the furnished house</a></p>
+    <p class="godot-walkthrough-link"><a href="/godot/v019-floor/index.html">Explore the v019 full-floor walkthrough (Godot)</a></p>
   </header>
   <main>
     <div id="load-state" role="status">Loading the render collections…</div>
@@ -35,7 +36,7 @@ local GLB and viewer assets, visible loading/recovery, touch and keyboard contro
     <div id="content" hidden>
       <div class="browse-controls">
         <div class="field">
-          <label for="collection">Collection / proposal</label>
+          <label for="collection">Version / design branch</label>
           <select id="collection"></select>
         </div>
         <div class="field">
@@ -44,12 +45,19 @@ local GLB and viewer assets, visible loading/recovery, touch and keyboard contro
         </div>
         <a class="baseline-link" href="#gallery" id="baseline-link">View baseline</a>
       </div>
+      <p id="version-notice" role="status" class="description" hidden></p>
       <section id="gallery" tabindex="-1" aria-labelledby="collection-title">
         <div class="collection-heading">
           <h2 id="collection-title"></h2>
           <p id="collection-status" class="status-label"></p>
         </div>
         <p id="collection-description" class="description"></p>
+        <div id="version-context" class="version-context" hidden>
+          <p id="version-format"></p>
+          <p id="version-parent" hidden>Based on <a id="parent-version" href="#gallery"></a><span id="parent-note"></span></p>
+          <a id="version-link" href="#gallery">Link to this version</a>
+        </div>
+        <nav id="version-branches" class="version-branches" aria-label="Design alternatives based on this version" hidden></nav>
         <details id="assumptions" hidden>
           <summary>Assumptions to review</summary>
           <ul id="assumption-list"></ul>

@@ -11,9 +11,9 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
   <meta name="color-scheme" content="light">
   <title>House walkthrough</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="./styles.css?v=3158a79303b31a62">
+  <link rel="stylesheet" href="./styles.css?v=e8416fa69f5b9606">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script type="module" src="./app.js?v=22219a0573a59668"></script>
+  <script type="module" src="./app.js?v=761f102ed576176a"></script>
   <!-- offline-runtime -->
   <link rel="stylesheet" href="./offline.css">
   <script type="module" src="./offline-client.js"></script>
@@ -28,6 +28,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <div id="ceiling-controls" hidden><label for="ceiling">Ceiling</label><select id="ceiling" aria-describedby="ceiling-status ceiling-help"><option value="existing">Existing</option></select></div>
     <button id="quality" aria-pressed="false" aria-describedby="ceiling-status" hidden>Try baked lighting</button>
     <button id="reset" disabled>Reset position</button>
+    <button id="pace" type="button" aria-pressed="false" aria-describedby="pace-help">Pace: Walk</button>
     <button id="capture" disabled>Mouse look</button>
     <button id="fullscreen" aria-pressed="false">Full screen</button>
     <button id="help" aria-expanded="false" aria-controls="instructions">Help</button>
@@ -59,6 +60,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
       <p id="lens-help"><strong>Lens:</strong> lower millimetres give a wider view without moving you. The 16–70 mm slider uses 35 mm-equivalent focal lengths with a fixed 36 mm horizontal film gate; viewport height follows its aspect ratio. Auto preserves the original 62° vertical view, capped at 90° horizontally. Reset lens restores Auto, not your position. Wide views stretch edges, especially in portrait; this is not a simulation of human eyesight. Release Mouse look with <kbd>Esc</kbd> before using the slider.</p>
       <p id="ceiling-help" hidden><strong>Ceiling concepts:</strong> switch the whole floor, including bedrooms, without moving your view. Existing restores the original ceiling fixtures. Fans are static provisions, not rotating. Web lighting and emissive faces are approximate; use Cycles reference previews for lighting comparisons. <span id="ceiling-note"></span></p>
       <p><strong>Walk:</strong> click or tab into the view or movement pad, then use <kbd>W A S D</kbd> or arrow keys. <kbd>Q E</kbd> turn; <kbd>R F</kbd> look up/down. Touch: hold and drag the thumbstick to walk; drag farther to walk faster. Release to stop. Use a second finger on the house to look while moving.</p>
+      <p id="pace-help"><strong>Pace:</strong> switch Walk (1.35 m/s) to Faster (2 m/s) with the pace button. The thumbstick still gives fine control near its centre. On desktop, hold <kbd>Shift</kbd> while walking for temporary Faster pace; release it to return to your selected pace. Faster does not climb stairs or pass through furniture. Each page visit starts in Walk.</p>
       <p><strong>Walk between rooms:</strong> interior doors are held open on their real hinges, with leaves and handles intact. Walk through doorways normally; the room menu is just an optional shortcut.</p>
       <p><strong>Storage opening is disabled:</strong> cupboards and drawers stay in their closed, fixed positions while you explore. Click/tap only focuses the view; dragging looks around. Furniture and room layouts are retained.</p>
       <p><strong>Narrow aisles:</strong> use sideways steps around beds and furniture. <span id="clearance-note">The preview uses a 40 cm round body; narrow furniture aisles are not an accessible-design approval.</span> Reset position returns to your selected starting room.</p>
