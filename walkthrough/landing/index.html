@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Intermediate landing study</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+  <!-- offline-runtime -->
+  <link rel="stylesheet" href="./offline.css">
+  <script type="module" src="./offline-client.js"></script>
+  <!-- /offline-runtime -->
+</head>
+<body>
+  <!-- Extension of the house viewer: a measured artifact leads, controls recede.
+       Existing mineral/sage materials, system type and explicit design limitations.
+       Understand the independent intermediate level; inspect storage and opening.
+       Large model beside compact dimensions, with drawings below on narrow screens.
+       Fixed inspection viewpoints, not a fictional connected stair walkthrough. -->
+  <header>
+    <a href="../">Back to house</a>
+    <h1>Intermediate landing</h1>
+    <span>Independent study v001</span>
+    <div data-offline-host data-offline-kind="study"></div>
+  </header>
+  <main>
+    <section aria-label="Landing model">
+      <div class="toolbar" aria-label="Inspection views">
+        <button type="button" data-view="front" aria-pressed="true">Storage &amp; window</button>
+        <button type="button" data-view="window" aria-pressed="false">Window detail</button>
+        <button type="button" data-view="plan" aria-pressed="false">Overhead</button>
+        <button type="button" id="interior" aria-pressed="false">Inspect inside storage</button>
+      </div>
+      <div id="stage">
+        <img id="fallback" src="./preview.png" alt="Proposed sage dry-storage bays and replacement left window on the intermediate landing; the right-hand area stays free.">
+        <canvas id="model" aria-label="3D landing study; use the inspection buttons above" hidden></canvas>
+      </div>
+      <p id="status" role="status">Loading the independent landing model...</p>
+      <button type="button" id="retry" hidden>Retry 3D model</button>
+      <p class="caption">No flights are modeled. Front and right context walls are omitted for inspection, not proposed for demolition.</p>
+    </section>
+    <aside aria-label="Measured dimensions and design limits">
+      <h2>Measured, not guessed</h2>
+      <dl>
+        <dt>Intermediate landing</dt><dd>2200 &times; 2200 mm</dd>
+        <dt>Stair width</dt><dd>820 mm</dd>
+        <dt>Entrance landing</dt><dd>800 &times; 800 mm</dd>
+      </dl>
+      <p>The entrance landing is 20 mm narrower than the stair width. These are separate user measurements, not corrected to match.</p>
+      <p>Ground floor &rarr; this landing &rarr; a turn &rarr; the user's floor. Heights, step counts and flight directions remain unmeasured; this study is <strong>not connected to the house model</strong>.</p>
+      <h2>Dry storage, not equipment storage</h2>
+      <p><strong>Folded ladder:</strong> 500 mm nominal bay, approximately 460 W &times; 410 D &times; 1960 H mm clear inside. The folded ladder and its insertion/tilting envelope must be measured before joinery. <strong>General storage:</strong> 600 mm nominal bay. The right-hand area stays free and unassigned.</p>
+      <p><strong>No inverter or battery is proposed here.</strong> Equipment location is deferred to rooftop-solar and electrical planning. This dry-storage-only study remains provisional while that decision is made. No equipment bay, wiring or roof geometry is modeled.</p>
+      <h2>Window &amp; clearance</h2>
+      <p>Replacement glazing, separate fixed lower protection and a closed upper vent concept. Opening dimensions and left-wall orientation are provisional. <strong>Glass is not claimed to be a certified guard.</strong></p>
+      <p>Storage envelope: 1100 W &times; 450 D &times; 2100 H mm. Closed clearance: 1750 mm; maximum 500 mm door projection leaves 1250 mm to the front edge. The marked 820 mm strip is a design reservation, not a surveyed approach or code approval.</p>
+    </aside>
+    <section class="drawing" aria-label="Dimensioned plan">
+      <h2>Dimensioned plan and separate references</h2>
+      <a href="./plan.svg">Open full-size plan</a>
+      <img src="./plan.svg" alt="2200 mm square landing plan with 1100 by 450 mm dry storage, open-door envelope, 820 mm reserved strip, and separate 800 mm entrance landing and 820 mm stair-width references." loading="lazy">
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

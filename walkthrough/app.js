@@ -1,8 +1,8 @@
 import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
-import { isSafe, move, movementVector, roomAt, applyLens } from './navigation.js?lens=1';
-import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=af08ba77bada265e';
-import { createFixtureLighting } from './fixture-lighting.js?v=efbf677d6abceedc';
+import { isSafe, move, movementVector, joystickVector, roomAt, applyLens } from './navigation.js?lens=1&controls=2';
+import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=3868c82db2f0f29b';
+import { createFixtureLighting } from './fixture-lighting.js?v=07ea12a8efadecfe';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';
@@ -12,7 +12,9 @@ document.title = `House walkthrough · ${publicSite ? 'Furnished home' : 'Local 
 const canvas = $('view'), stage = $('stage'), room = $('room'), status = $('status');
 const lifetime = new AbortController();
 const on = (target, type, handler, options = {}) => target.addEventListener(type, handler, { ...options, signal: lifetime.signal });
-const keys = new Set(), touches = new Map();
+const keys = new Set();
+const stick = $('touch-stick');
+let stickPointer = null, stickOrigin = null, stickInput = [0, 0];
 let renderer, scene, camera, model, nav, manifest, frame, previous = 0;
 let yaw = 0, pitch = 0, ready = false, dragging = null, loadController, observer;
 let selected = 'kitchen', position = [0, 0], disposed = false, blocked = false, contextLost = false;
@@ -23,7 +25,18 @@ let fixtureLighting;
 const movementKeys = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'KeyQ', 'KeyE', 'KeyR', 'KeyF']);
 
 function clearInput() {
-  keys.clear(); touches.clear(); dragging = null;
+  keys.clear();
+  resetStick();
+  const pointer = dragging?.id;
+  dragging = null;
+  if (pointer !== undefined && canvas.hasPointerCapture(pointer)) canvas.releasePointerCapture(pointer);
+}
+function resetStick() {
+  const pointer = stickPointer;
+  stickPointer = null; stickOrigin = null; stickInput = [0, 0];
+  stick.firstElementChild.style.transform = '';
+  stick.removeAttribute('data-active');
+  if (pointer !== null && stick.hasPointerCapture(pointer)) stick.releasePointerCapture(pointer);
 }
 function release() {
   clearInput();
@@ -235,17 +248,17 @@ function animate(time) {
   const dt = previous ? THREE.MathUtils.clamp((time - previous) / 1000, 0, .05) : 0;
   previous = time;
   if (document.hidden) return;
+  if (stickPointer !== null && !stick.hasPointerCapture(stickPointer)) resetStick();
   if (ready) fixtureLighting.update(camera.position);
   if (ready) {
     const down = code => keys.has(code) ? 1 : 0;
-    const touch = name => [...touches.values()].includes(name) ? 1 : 0;
     if (keys.size) {
       yaw += (down('KeyQ') - down('KeyE')) * dt * 1.3;
       pitch = THREE.MathUtils.clamp(pitch + (down('KeyR') - down('KeyF')) * dt, -1.35, 1.35);
       orientation();
     }
-    const forward = down('KeyW') + down('ArrowUp') + touch('forward') - down('KeyS') - down('ArrowDown') - touch('back');
-    const sideways = down('KeyD') + down('ArrowRight') + touch('right') - down('KeyA') - down('ArrowLeft') - touch('left');
+    const forward = down('KeyW') + down('ArrowUp') - down('KeyS') - down('ArrowDown') + stickInput[1];
+    const sideways = down('KeyD') + down('ArrowRight') - down('KeyA') - down('ArrowLeft') + stickInput[0];
     const [dx, dy] = movementVector(forward, sideways, yaw, dt);
     const next = move(nav, position, dx, dy);
     const hit = Math.hypot(dx, dy) > 0 && Math.hypot(next[0] - position[0], next[1] - position[1]) < Math.hypot(dx, dy) * .2;
@@ -358,7 +371,7 @@ on(document, 'pointerlockchange', () => {
 });
 on(document, 'pointerlockerror', () => message('Mouse capture unavailable here · drag to look instead'));
 on(canvas, 'pointerdown', event => {
-  if (!ready || !$('instructions').hidden || event.button !== 0) return;
+  if (!ready || !$('instructions').hidden || event.button !== 0 || dragging) return;
   if (document.body.classList.contains('controls-open')) showControls(false);
   canvas.focus({ preventScroll: true });
   if (document.pointerLockElement !== canvas) {
@@ -371,9 +384,8 @@ on(canvas, 'pointermove', event => {
   look(event.clientX - dragging.x, event.clientY - dragging.y);
   dragging.x = event.clientX; dragging.y = event.clientY;
 });
-on(canvas, 'pointerup', () => { dragging = null; });
-for (const type of ['pointercancel', 'lostpointercapture']) {
-  on(canvas, type, () => { dragging = null; });
+for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) {
+  on(canvas, type, event => { if (dragging?.id === event.pointerId) dragging = null; });
 }
 on(document, 'mousemove', event => {
   if (ready && document.pointerLockElement === canvas) look(event.movementX, event.movementY);
@@ -390,7 +402,7 @@ on(document, 'keydown', event => {
   }
   if (!ready || !$('instructions').hidden || event.altKey || event.ctrlKey || event.metaKey) return;
   if ($('lens-controls').contains(event.target)) return;
-  if (document.activeElement !== canvas && document.pointerLockElement !== canvas) return;
+  if (document.activeElement !== canvas && document.activeElement !== stick && document.pointerLockElement !== canvas) return;
   if (event.code === 'Space') {
     event.preventDefault();
     return;
@@ -398,22 +410,41 @@ on(document, 'keydown', event => {
   if (movementKeys.has(event.code)) { event.preventDefault(); keys.add(event.code); }
 });
 on(document, 'keyup', event => keys.delete(event.code));
-on(canvas, 'blur', clearInput);
+on(canvas, 'blur', event => { if (event.relatedTarget !== stick) clearInput(); });
+on(stick, 'blur', event => { if (event.relatedTarget !== canvas) clearInput(); else keys.clear(); });
 on(window, 'blur', release);
+on(window, 'resize', release);
 on(document, 'visibilitychange', () => { release(); previous = 0; });
-for (const button of document.querySelectorAll('[data-move]')) {
-  on(button, 'pointerdown', event => {
-    if (!ready || !$('instructions').hidden) return;
-    event.preventDefault();
-    button.setPointerCapture(event.pointerId);
-    touches.set(event.pointerId, button.dataset.move);
-  });
-  for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) on(button, type, event => touches.delete(event.pointerId));
-  on(button, 'keydown', event => {
-    if (ready && ['Space', 'Enter'].includes(event.code)) { event.preventDefault(); touches.set(button.dataset.move, button.dataset.move); }
-  });
-  on(button, 'keyup', () => touches.delete(button.dataset.move));
-  on(button, 'blur', () => touches.delete(button.dataset.move));
+on(document, 'pointerdown', event => {
+  if (event.target.closest('header, footer, #instructions, .offline-panel')) clearInput();
+});
+on(document, 'focusin', event => {
+  if (event.target.closest('header, footer, #instructions, .offline-panel')) clearInput();
+});
+function updateStick(event) {
+  const x = event.clientX - stickOrigin.x, y = event.clientY - stickOrigin.y;
+  stickInput = joystickVector(x, y);
+  const extent = Math.max(40, Math.hypot(x, y));
+  stick.firstElementChild.style.transform = `translate(${x / extent * 28}px, ${y / extent * 28}px)`;
+}
+on(stick, 'pointerdown', event => {
+  if (!ready || !$('instructions').hidden || event.button !== 0 || stickPointer !== null) return;
+  event.preventDefault();
+  if (document.body.classList.contains('controls-open')) showControls(false);
+  const rect = stick.getBoundingClientRect();
+  stickOrigin = { x: rect.x + rect.width / 2, y: rect.y + rect.height / 2 };
+  stickPointer = event.pointerId;
+  stick.setPointerCapture(event.pointerId);
+  stick.setAttribute('data-active', '');
+  updateStick(event);
+});
+on(stick, 'pointermove', event => {
+  if (event.pointerId !== stickPointer) return;
+  if (!stick.hasPointerCapture(event.pointerId)) { resetStick(); return; }
+  updateStick(event);
+});
+for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) {
+  on(stick, type, event => { if (event.pointerId === stickPointer) resetStick(); });
 }
 on(canvas, 'webglcontextlost', event => { event.preventDefault(); contextLost = true; failure(new Error('WebGL context was lost. Retry will reload this page.')); });
 on(canvas, 'webglcontextrestored', () => location.reload());
@@ -430,7 +461,8 @@ window.addEventListener('pageshow', event => { if (event.persisted) location.rel
 window.walkthrough = { snapshot: () => ({
   ready, position: [...position], yaw, pitch, selected, currentRoom,
   safe: nav ? isSafe(nav, ...position) : false,
-  pressed: keys.size + touches.size, dragging: Boolean(dragging),
+  pressed: keys.size + (stickPointer !== null ? 1 : 0), dragging: Boolean(dragging),
+  joystick: { active: stickPointer !== null, sideways: stickInput[0], forward: stickInput[1] },
   triangles: renderer?.info.render.triangles, calls: renderer?.info.render.calls,
   memory: renderer ? { ...renderer.info.memory } : null, baseVisible: model?.visible,
   fov: camera?.fov, aspect: camera?.aspect, lens, eyeHeight: camera?.position.y,

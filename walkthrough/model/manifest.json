@@ -1,19 +1,19 @@
 {
   "version": 1,
-  "source_sha256": "1319c6daaaf0f9cebe4854f231e0cc5dbe9c99377147b9f6f340c5b5073f901d",
-  "model_sha256": "cf295a2e48900587965e97295383cac53479a85a6a02d0aedd781ab37788670c",
-  "navigation_sha256": "5e99594eab83ef2b480ef4fa987ef32dbd17b0e3a7189d16a95550202d46d7ac",
-  "bytes": 18113804,
+  "source_sha256": "d7631a39511ed859889c6077f13b517460d6cda4164750ec54b2c920fad3eaf3",
+  "model_sha256": "7eaae5bcf08e489ce53f4c5538651d1d95355fe815a59ea08a4eec2f7931c3c5",
+  "navigation_sha256": "eefe1bf4afd798f5d65c15114fc631d72150ea79d9b4addbe06b172fec5daac6",
+  "bytes": 18010028,
   "units": "meters",
   "eye_height": 1.6,
-  "triangles": 334506,
-  "source": "house_layout_v018.blend",
+  "triangles": 332518,
+  "source": "house_layout_v020.blend",
   "layout_revision": {
-    "version": "layout-v018"
+    "version": "layout-v020"
   },
-  "scope": "Public v018 walkthrough, approved by the owner",
+  "scope": "Public v020 walkthrough, approved by the owner",
   "storage_mode": "closed",
-  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification. Existing-size aquarium on its own open frame; loaded floor/stand support and installation are not verified. Water/fish are illustrative. Glazed partition is a proposed wall alteration pending structural/site review. No tested AC/acoustic performance or electrical/thermal cabinet approval. Door is closable in the design but held open in the walkthrough. Front arched door/window assemblies follow user photos with source-plan widths; unmeasured elevations, frame/grille and glazing details are provisional. Exterior surroundings are not modeled. Proposed ceiling overlays preserve source beam cores and glazing and show five fan provisions. Suspension, service/driver access, fan capacity, detector locations, formed-profile manufacture and actual heights require professional/product verification.",
+  "limitations": "Furniture opening disabled after reported instability. Static closed-furniture fallback; regression cause unconfirmed, not an interactive-storage fix. Stairs visual-only. Simplified materials; not construction approval. Rear OTS has provisional open metal grating at floor level with a shaft void below. Grating, supports, glass and roofing are not certified construction. Electronics are schematic proposals only. Washer is deferred by the user, not a batch blocker; no washer is modeled. Inverter/battery, AV receiver and outdoor AC units remain unplaced. No electrical or fire-safety certification. Existing-size aquarium on its own open frame; loaded floor/stand support and installation are not verified. Water/fish are illustrative. Glazed partition is a proposed wall alteration pending structural/site review. No tested AC/acoustic performance or electrical/thermal cabinet approval. Door is closable in the design but held open in the walkthrough. Front arched door/window assemblies follow user photos with source-plan widths; unmeasured elevations, frame/grille and glazing details are provisional. Exterior surroundings are not modeled. Proposed ceiling overlays preserve source beam cores and glazing and show five fan provisions. Suspension, service/driver access, fan capacity, detector locations, formed-profile manufacture and actual heights require professional/product verification. RO body and service envelopes are provisional, not certified product fit. No plumbing/electrical routes designed. Intermediate stair landing is a separate study, not connected to this floor.",
   "electronics": {
     "status": "Schematic proposals, not installed or certified",
     "ac_indoor_units": 5,
@@ -48,7 +48,7 @@
   },
   "ceiling_options": {
     "version": 3,
-    "base_source_sha256": "1319c6daaaf0f9cebe4854f231e0cc5dbe9c99377147b9f6f340c5b5073f901d",
+    "base_source_sha256": "d7631a39511ed859889c6077f13b517460d6cda4164750ec54b2c920fad3eaf3",
     "default": "existing",
     "baseline_nodes": [
       "CEILING_BASELINE_5155462b4771fced",
@@ -113,6 +113,13 @@
         "fan_blade_height_m": 2.52
       }
     ],
-    "note": "Five whole-floor ceiling concepts; Luxe v002 integrates broad sculpted plaster, curved concealed coves and closed beam returns. Construction and lighting remain provisional."
+    "note": "Whole-floor concepts with five static fan provisions. Sculpted Luxe adds floating curved layers and selective nonstructural beam casings without changing beam cores, fan pockets or the lightwell. Geometry, supports and installation remain provisional; browser lighting is simplified."
+  },
+  "drinking_water": {
+    "status": "Generic compact undercounter purifier provision; product and water treatment selection pending",
+    "location": "First 600 mm of service counter beside the prep sink; NOT beneath the sink bowl",
+    "storage_cost": "600 mm service-counter base bay reassigned; remaining approximately 600 mm stays general storage",
+    "connections": "Isolation valve, leak tray and sensor provisions only. Water, reject-water, drain and electrical connections terminate unconnected; routes are not designed.",
+    "access": "Two removable lift-off service fronts; removal and 600 mm front work zone are a maintenance-only reservation, not a permanently clear route."
   }
 }

@@ -1,27 +1,27 @@
 {
   "schema": 1,
-  "release": "bf2db321b5f8cb63ac71620c258f345f9de3809e3bec0b05097de33e6c58ece7",
-  "totalBytes": 34351495,
+  "release": "9bae6f13f02dd42bad20e399dcb5faf1cb934cf626d00d9e480921188eb3dd66",
+  "totalBytes": 34250450,
   "files": [
     {
       "path": "app.js",
-      "bytes": 22863,
-      "sha256": "92f1c553200a9776175c63bd71eeff7145a2217110624cbddd7401ed2b0f8b6f"
+      "bytes": 23941,
+      "sha256": "22219a0573a59668ff9c513101349954956a77daaff68b87c209b2203d2c0aa4"
     },
     {
       "path": "ceiling-comparison.js",
-      "bytes": 9756,
-      "sha256": "af08ba77bada265e341b85effd8252a41e3cb4bf20f3c56f73447bf4e4c8f09b"
+      "bytes": 9587,
+      "sha256": "3868c82db2f0f29b3cb5f093f7f73fa3da669ce9e55a4c3caf5fd9dd5115ee72"
     },
     {
       "path": "fixture-lighting.js",
-      "bytes": 13871,
-      "sha256": "efbf677d6abceedc03eb5e5ca72eb2b21299c4a05c36d9bca4cb75f41180a6c6"
+      "bytes": 13591,
+      "sha256": "07ea12a8efadecfef05558c590b7f57686e27c8dc491c7731353be52c5e2ebcb"
     },
     {
       "path": "index.html",
-      "bytes": 7030,
-      "sha256": "18de087f2e00b4e59aff7ab6a5f1e4d5b284c37a52eb5ec19fbdff452645053b"
+      "bytes": 7225,
+      "sha256": "ea9948582887d38d3c6ec18f771e1ff81d2fba554fd4d757c464ccd22b314a65"
     },
     {
       "path": "model/ceilings/linear-242d4caf58d1df4f.glb",
@@ -50,33 +50,33 @@
     },
     {
       "path": "model/house.glb",
-      "bytes": 18113804,
-      "sha256": "cf295a2e48900587965e97295383cac53479a85a6a02d0aedd781ab37788670c"
+      "bytes": 18010028,
+      "sha256": "7eaae5bcf08e489ce53f4c5538651d1d95355fe815a59ea08a4eec2f7931c3c5"
     },
     {
       "path": "model/manifest.json",
-      "bytes": 6458,
-      "sha256": "02064c8949be12b7c5e0bcdd3b2fc14f73fd458aecc855f0dc5667dd5ac00b2e"
+      "bytes": 7453,
+      "sha256": "82fd134391aac7f3b5b2050ecb27599d466c009d2cf01f1ac84ea8e6ee0f30ac"
     },
     {
       "path": "model/navigation.json",
-      "bytes": 1961155,
-      "sha256": "5e99594eab83ef2b480ef4fa987ef32dbd17b0e3a7189d16a95550202d46d7ac"
+      "bytes": 1961160,
+      "sha256": "eefe1bf4afd798f5d65c15114fc631d72150ea79d9b4addbe06b172fec5daac6"
     },
     {
       "path": "navigation.js",
-      "bytes": 2507,
-      "sha256": "65e6f4306b34a320caffa94b4b5b1126a002bed6bbde68f3bd9d08339d1c72eb"
+      "bytes": 2782,
+      "sha256": "de6811d38337cc224bb7c125049a5bd453f611c5bcd02d4374c2ea354df73b87"
     },
     {
       "path": "offline-client.js",
-      "bytes": 8208,
-      "sha256": "2355280d64856098787b7159699d26ef23c308d9cbf626a38ea4b4724fb38e3e"
+      "bytes": 8492,
+      "sha256": "3eeb81982fb3e9640b72dc00a9851ab1290c5a9830e7a9d5428428736b7dc43d"
     },
     {
       "path": "offline-worker.js",
-      "bytes": 14881,
-      "sha256": "d150fb13e83769cf954f7b6e801af03a5da4d9d214685ed745cac5fc34956779"
+      "bytes": 14983,
+      "sha256": "a4190b79d4c0a5ed48c2b570aca0b7b3c43424eb994c1dc6d2f943a7dd8f7e77"
     },
     {
       "path": "offline.css",
@@ -85,8 +85,8 @@
     },
     {
       "path": "styles.css",
-      "bytes": 7319,
-      "sha256": "faabb0137a199e5249658b6ebc794cf670e6bc012c03a7435f2f354a22ccf86c"
+      "bytes": 7565,
+      "sha256": "3158a79303b31a624ff3c165853c6287ab65f3544bca87cd800ebd979ba5123e"
     },
     {
       "path": "vendor/BufferGeometryUtils.js",

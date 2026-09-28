@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "release": "a946c72caf68e97c035f48713f269485400760abbaf3e36328cc3dcec5da5d91",
+  "totalBytes": 2917797,
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 4837,
+      "sha256": "428a0c8633c7d4f2bc1789cfc8b94f0533f994490d77eefc600249bf60a6212b"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4516,
+      "sha256": "1bf33b93974f6e3cadea69a84ebb3da43e2272a55b1d9a11ab04a7a46339d888"
+    },
+    {
+      "path": "landing-52b0ed7fa6daa1b2.glb",
+      "bytes": 61592,
+      "sha256": "52b0ed7fa6daa1b261896b6b611075254022ecbdb2a867aab47162eb70069398"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 2337,
+      "sha256": "5242322d11eb09d4306a9d15da3d9e85ee7af7662477231c4dc84b43ac5dc971"
+    },
+    {
+      "path": "offline-client.js",
+      "bytes": 8492,
+      "sha256": "3eeb81982fb3e9640b72dc00a9851ab1290c5a9830e7a9d5428428736b7dc43d"
+    },
+    {
+      "path": "offline-worker.js",
+      "bytes": 14983,
+      "sha256": "a4190b79d4c0a5ed48c2b570aca0b7b3c43424eb994c1dc6d2f943a7dd8f7e77"
+    },
+    {
+      "path": "offline.css",
+      "bytes": 1899,
+      "sha256": "1ab711a3c58028b60eb748f19d9066330a45f467689bc1702b5ba006ad5c4874"
+    },
+    {
+      "path": "plan.svg",
+      "bytes": 3095,
+      "sha256": "5a63678d3c3060220b201aeea199f529c3ed3006ddd65bc26e48a32f57c965e1"
+    },
+    {
+      "path": "preview.png",
+      "bytes": 656140,
+      "sha256": "8f2572d7f212331b69db2f9611d8d49c9104f98d539fc1fdd08d8af048834646"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 1986,
+      "sha256": "72798652a0716362849c4d7f5128ee2a28393cf329cf1860418c13d122f2a1bd"
+    },
+    {
+      "path": "vendor/BufferGeometryUtils.js",
+      "bytes": 35539,
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751"
+    },
+    {
+      "path": "vendor/GLTFLoader.js",
+      "bytes": 114732,
+      "sha256": "adbbafe8ce40416525b6be0ee5cac0d3782482bcf0122c8ca8ec1ffa77d3440b"
+    },
+    {
+      "path": "vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    }
+  ]
+}

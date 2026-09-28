@@ -45,6 +45,13 @@ export function movementVector(forward, sideways, yaw, dt, speed = 1.35) {
     (forward * Math.cos(yaw) + sideways * Math.sin(yaw)) * scale];
 }
 
+export function joystickVector(x, y, radius = 40, deadzone = .12) {
+  const length = Math.hypot(x, y) / radius;
+  if (!Number.isFinite(length) || length <= deadzone) return [0, 0];
+  const strength = (Math.min(1, length) - deadzone) / (1 - deadzone);
+  return [x / (length * radius) * strength, -y / (length * radius) * strength];
+}
+
 export function roomAt(nav, position) {
   const [x, y] = position;
   return (nav.rooms || nav.presets).find(room => {

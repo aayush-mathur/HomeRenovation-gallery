@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="880" viewBox="0 0 1100 880">
+<rect width="1100" height="880" fill="#f5f4ef"/>
+<g font-family="Arial,sans-serif" fill="#233631">
+<text x="50" y="45" font-size="27">Intermediate landing / independent measured study</text>
+<text x="50" y="78" font-size="17">User dimensions in mm. Storage, opening and protection details are provisional.</text>
+<g transform="translate(100 145)">
+<rect width="440" height="440" fill="#dfded5" stroke="#233631" stroke-width="2"/>
+<rect x="40" width="220" height="90" fill="#788c80" stroke="#233631"/>
+<line x1="140" y1="0" x2="140" y2="90" stroke="#233631"/>
+<text x="50" y="34" font-size="15">Ladder</text><text x="151" y="34" font-size="15">Storage</text>
+<text x="287" y="31" font-size="14">Free area</text><text x="287" y="51" font-size="14">No equipment</text>
+<rect x="40" y="90" width="100" height="100" fill="none" stroke="#685025"/>
+<rect x="140" y="90" width="120" height="60" fill="none" stroke="#685025"/>
+<text x="45" y="211" font-size="15">Maximum open-door envelope</text>
+<rect y="276" width="440" height="164" fill="#d1dfd3" stroke="#41695c"/>
+<text x="22" y="348" font-size="17">820 deep reserved strip</text>
+<text x="22" y="374" font-size="14">Not a surveyed flight approach</text>
+<line x1="-8" y1="130" x2="-8" y2="370" stroke="#3c7477" stroke-width="10"/>
+<text transform="translate(-28 353) rotate(-90)" font-size="15">Left replacement window (provisional)</text>
+<path d="M0 -20H440 M0 -28V-12 M440 -28V-12 M465 0V440 M458 0H472 M458 440H472" fill="none" stroke="#233631"/>
+<text x="192" y="-28" font-size="20">2200</text><text x="480" y="230" font-size="20">2200</text>
+</g>
+<text x="685" y="140" font-size="19">Separate references, same scale</text>
+<rect x="685" y="168" width="160" height="160" fill="#dfded5" stroke="#233631"/>
+<text x="700" y="220" font-size="17">800 x 800</text><text x="700" y="247" font-size="15">Near entrance</text>
+<text x="700" y="272" font-size="15">landing</text>
+<rect x="685" y="365" width="164" height="80" fill="none" stroke="#41695c"/>
+<text x="700" y="398" font-size="17">820 stair width</text>
+<text x="685" y="478" font-size="15">20 mm difference retained.</text>
+<text x="685" y="503" font-size="15">No compliance or fit certification.</text>
+<text x="50" y="650" font-size="20">Closed front clearance 1750 / maximum door projection 500 / remainder 1250</text>
+<text x="50" y="685" font-size="17">1100 W x 450 D x 2100 H dry-unit envelope. The remaining right-hand area is unassigned.</text>
+<text x="50" y="720" font-size="17">NO INVERTER OR BATTERY HERE. Location deferred to rooftop-solar/electrical planning.</text>
+<text x="50" y="755" font-size="17">Glazing is not a certified guard. Lower protection, opening and upper vent require qualified approval.</text>
+<text x="50" y="790" font-size="17">Ground flight rises here, turns, then rises to user's floor. Heights/counts/directions not measured.</text>
+<text x="50" y="825" font-size="17">This diagram does not connect landings or prescribe structural alterations.</text>
+</g></svg>

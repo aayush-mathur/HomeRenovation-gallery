@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "id": "landing-v001",
+  "model": "landing-52b0ed7fa6daa1b2.glb",
+  "sha256": "52b0ed7fa6daa1b261896b6b611075254022ecbdb2a867aab47162eb70069398",
+  "bytes": 61592,
+  "source_sha256": "a7dfc83c5fbecca784c3feb0950493f5572a05724f2762c5feef8775d234c8b9",
+  "units": "metres",
+  "measured_user_mm": {
+    "stair_width": 820,
+    "near_entrance_landing": [
+      800,
+      800
+    ],
+    "intermediate_landing": [
+      2200,
+      2200
+    ]
+  },
+  "topology": "Ground floor flight rises to this intermediate landing, turns, then rises to the user's floor.",
+  "connected_to_house": false,
+  "notes": [
+    "2200 x 2200 mm landing and 820 mm stair width are user measurements; 800 x 800 mm entrance landing is a distinct measurement and is NOT widened to 820.",
+    "No stairs or false continuous connection modeled. Near landing and stair width appear only as independent reference diagrams.",
+    "Storage footprint, height, window dimensions/orientation, wall thickness and guard details are provisional design choices.",
+    "Old almirah removed conceptually. Ladder bay contains no guessed ladder: folded product dimensions pending.",
+    "NO INVERTER OR BATTERY ON THIS LANDING. Equipment location is deferred to rooftop-solar/electrical planning. No equipment bay, wiring or roof geometry is proposed.",
+    "Right-hand area remains free and unassigned, not reserved for electrical equipment. Dry-storage-only study is provisional pending the owner's equipment-location decision.",
+    "Separate lower fixed infill/grille concept; glazing is NOT claimed to be a required guard. Structural opening and fall protection require qualified approval.",
+    "Upper vent concept is closed in the model. Opening mechanism, weathering and safe maintenance are unresolved.",
+    "Front 820 mm depth is a design reservation, not a surveyed flight approach. Door envelope leaves 1250 mm to front edge but does not certify a real turning or escape route."
+  ],
+  "unknown": [
+    "flight directions in plan",
+    "intermediate rise",
+    "riser and tread dimensions",
+    "step counts",
+    "floor-to-floor height",
+    "opening width/sill/head",
+    "wall structural status",
+    "inverter product and clearances",
+    "battery chemistry and size",
+    "folded ladder dimensions",
+    "local fire and egress requirements"
+  ]
+}
