@@ -1,9 +1,9 @@
 import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { isSafe, move, movementVector, movementSpeed, joystickVector, roomAt, applyLens } from './navigation.js?lens=1&controls=3';
-import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=3868c82db2f0f29b';
+import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=385a64a657a99098';
 import { createFixtureLighting } from './fixture-lighting.js?v=07ea12a8efadecfe';
-import { initElectricalPlanning } from './electrical-planning.js?v=06665b9159f30b73';
+import { initElectricalPlanning } from './electrical-planning.js?v=8f4f385b1c0e83b4';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';
@@ -28,6 +28,8 @@ let focalLength = null, lens;
 let ceilings, ceilingOptions, ceilingUnavailable = '';
 let fixtureLighting;
 let electrical;
+const STARTUP_VIEW = Object.freeze({ ceiling: 'luxe', electricalPlates: true, timeoutMs: 15000 });
+let ceilingRequest = Promise.resolve();
 const movementKeys = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'KeyQ', 'KeyE', 'KeyR', 'KeyF']);
 const shiftHeld = () => keys.has('ShiftLeft') || keys.has('ShiftRight');
 function renderPace() {
@@ -106,8 +108,13 @@ function disposeModel() {
   });
   model = null;
 }
+function selectCeiling(id, options) {
+  ceilingRequest = ceilings ? ceilings.select(id, options) : Promise.resolve();
+  return ceilingRequest;
+}
 function disposeCeilings() {
   ceilings?.dispose(); ceilings = null; ceilingOptions = null; ceilingUnavailable = '';
+  ceilingRequest = Promise.resolve();
   for (const id of ['ceiling-controls', 'ceiling-feedback', 'ceiling-help', 'quality']) $(id).hidden = true;
   document.querySelector('header').classList.remove('has-ceilings');
 }
@@ -246,14 +253,40 @@ async function load() {
     fixtureLighting.setRooms(nav.rooms);
     fixtureLighting.register(model);
     setupCeilings();
+    if (ceilingOptions?.variants.some(variant => variant.id === STARTUP_VIEW.ceiling)) {
+      selectCeiling(STARTUP_VIEW.ceiling);
+    }
     electrical = initElectricalPlanning({
       THREE, scene, camera, renderer, container: document.querySelector('[data-electrical-host]'),
-      houseDescriptor: manifest, releaseInput: clearInput,
+      houseDescriptor: manifest, releaseInput: clearInput, initialPlates: STARTUP_VIEW.electricalPlates,
     });
     // The GLB contains the authored closed pose. Do not instantiate animation,
     // picking or dynamic collision controllers in this stability fallback.
     room.replaceChildren(...nav.presets.map(p => new Option(p.name, p.id)));
     teleport(nav.presets.some(p => p.id === selected) ? selected : nav.presets[0].id);
+    $('loading-detail').textContent = 'Preparing Sculpted Luxe and suggested electrical plates…';
+    const initialElectrical = electrical;
+    let startupTimer;
+    const optionalReady = async () => {
+      await initialElectrical.ready;
+      let awaited;
+      do {
+        awaited = ceilingRequest;
+        await awaited;
+      } while (awaited !== ceilingRequest && !signal.aborted);
+    };
+    try {
+      await Promise.race([optionalReady(), new Promise(resolve => {
+        startupTimer = setTimeout(() => {
+          if (!signal.aborted && !disposed) {
+            ceilings?.cancelPending('Initial ceiling loading timed out.');
+            initialElectrical.cancelPending('Initial electrical loading timed out.');
+          }
+          resolve();
+        }, STARTUP_VIEW.timeoutMs);
+      })]);
+    } finally { clearTimeout(startupTimer); }
+    if (disposed || signal.aborted) return;
     ready = true;
     stage.dataset.state = 'ready';
     $('loading').hidden = true;
@@ -320,11 +353,11 @@ on($('pace'), 'click', () => {
 for (const id of ['ceiling-controls', 'ceiling-feedback']) {
   for (const type of ['pointerdown', 'focusin']) on($(id), type, clearInput);
 }
-on($('ceiling'), 'change', () => { clearInput(); ceilings?.select($('ceiling').value); });
-on($('ceiling-retry'), 'click', () => { clearInput(); ceilings?.retry(); });
+on($('ceiling'), 'change', () => { clearInput(); selectCeiling($('ceiling').value); });
+on($('ceiling-retry'), 'click', () => { clearInput(); ceilingRequest = ceilings?.retry() || Promise.resolve(); });
 on($('quality'), 'click', () => {
   clearInput();
-  if (ceilings) ceilings.select('sculpted', { quality: !ceilings.snapshot().qualityActive });
+  if (ceilings) selectCeiling('sculpted', { quality: !ceilings.snapshot().qualityActive });
 });
 for (const type of ['pointerdown', 'focusin']) on($('lens-controls'), type, clearInput);
 on($('lens'), 'input', () => {

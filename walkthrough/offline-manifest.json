@@ -1,17 +1,17 @@
 {
   "schema": 1,
-  "release": "4ec9400e9f056d9724423d548d8bfce981b5e37a684870b03162a86b0b9ff62b",
-  "totalBytes": 37502709,
+  "release": "75223e08032e087b4aed161cf0f9a7ddf3fb1737c891114f82630bb29c6c704c",
+  "totalBytes": 37509403,
   "files": [
     {
       "path": "app.js",
-      "bytes": 28465,
-      "sha256": "d74daaf740bb6a948b5e8a92405eabae08422e7c62b916fc69cf3903638344e8"
+      "bytes": 29900,
+      "sha256": "716a7cb72eec7cda245ca50216fd0f6c65259bd5065cae61bc42146dd625bd4f"
     },
     {
       "path": "ceiling-comparison.js",
-      "bytes": 9587,
-      "sha256": "3868c82db2f0f29b3cb5f093f7f73fa3da669ce9e55a4c3caf5fd9dd5115ee72"
+      "bytes": 9910,
+      "sha256": "385a64a657a990981c3d18a979ff5951196c11d87a6bd3322604d244173e929e"
     },
     {
       "path": "electrical-planning.css",
@@ -20,8 +20,8 @@
     },
     {
       "path": "electrical-planning.js",
-      "bytes": 17508,
-      "sha256": "06665b9159f30b73c3cd646311233d0e8a8d58c7e73a10955a1d70225f7ccba2"
+      "bytes": 22094,
+      "sha256": "8f4f385b1c0e83b4a19ff1235dcd8afaebe055760b93c93b069af083a9cb9c19"
     },
     {
       "path": "fixture-lighting.js",
@@ -30,8 +30,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 8740,
-      "sha256": "5fcf3fb58285196ccc3ffd78b1713a51eb125566a654530882005df02b8ee35b"
+      "bytes": 9090,
+      "sha256": "dbc5f5b1e5886c88ca10cf73cae5d86ac9645b5f4f65a721aae37c106f926ff1"
     },
     {
       "path": "model/ceilings/linear-242d4caf58d1df4f.glb",

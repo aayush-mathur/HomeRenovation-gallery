@@ -159,6 +159,13 @@ export function createCeilingComparison({ options, model, scene, parse, onChange
   return {
     select, snapshot,
     retry: () => failed ? select(failed, { quality: failedQuality }) : Promise.resolve(),
+    cancelPending(message) {
+      if (!pending || disposed) return;
+      failed = pending; failedQuality = pendingQuality;
+      ++generation; abort?.abort(); abort = null; pending = null; pendingQuality = false;
+      error = `${message} The current ceiling is retained. Retry or choose Existing.`;
+      emit();
+    },
     dispose() {
       if (disposed) return;
       disposed = true; ++generation; abort?.abort(); abort = null;
