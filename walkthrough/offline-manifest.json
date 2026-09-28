@@ -1,17 +1,27 @@
 {
   "schema": 1,
-  "release": "9cafb5e33f60bb3f4e6fd7dcd2b69c510438483b289d87753e7a17775328a34d",
-  "totalBytes": 34872375,
+  "release": "4ec9400e9f056d9724423d548d8bfce981b5e37a684870b03162a86b0b9ff62b",
+  "totalBytes": 37502709,
   "files": [
     {
       "path": "app.js",
-      "bytes": 24947,
-      "sha256": "761f102ed576176ade070c3c2ce67c935ddcb1a05f1338f699ca5b539ad81573"
+      "bytes": 28465,
+      "sha256": "d74daaf740bb6a948b5e8a92405eabae08422e7c62b916fc69cf3903638344e8"
     },
     {
       "path": "ceiling-comparison.js",
       "bytes": 9587,
       "sha256": "3868c82db2f0f29b3cb5f093f7f73fa3da669ce9e55a4c3caf5fd9dd5115ee72"
+    },
+    {
+      "path": "electrical-planning.css",
+      "bytes": 2336,
+      "sha256": "831b2e16568db094e822bbc207599160b401bf07e90d6a2f08d648510229c789"
+    },
+    {
+      "path": "electrical-planning.js",
+      "bytes": 17508,
+      "sha256": "06665b9159f30b73c3cd646311233d0e8a8d58c7e73a10955a1d70225f7ccba2"
     },
     {
       "path": "fixture-lighting.js",
@@ -20,8 +30,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 7709,
-      "sha256": "60edb39d67cd373dc621fa4c382d55856638eced45984a848ec1ab3e175c759e"
+      "bytes": 8740,
+      "sha256": "5fcf3fb58285196ccc3ffd78b1713a51eb125566a654530882005df02b8ee35b"
     },
     {
       "path": "model/ceilings/linear-242d4caf58d1df4f.glb",
@@ -47,6 +57,16 @@
       "path": "model/ceilings/warm-18ea31a48c51b4e7.glb",
       "bytes": 1753496,
       "sha256": "18ea31a48c51b4e77d7dba11fcc3e4e58d2312a8166e362e0f5ea8edcad36128"
+    },
+    {
+      "path": "model/electrical/manifest.json",
+      "bytes": 25160,
+      "sha256": "2b20811a4433ed3563353ce13e46e66213c4cc62b325d749196911869deedc2b"
+    },
+    {
+      "path": "model/electrical/plates-47bcfb8ba5ecfb10.glb",
+      "bytes": 2580652,
+      "sha256": "47bcfb8ba5ecfb10d9323a2a4480ad0533327988b53ec2f60bb6948ee5cc549f"
     },
     {
       "path": "model/house.glb",
@@ -85,8 +105,8 @@
     },
     {
       "path": "styles.css",
-      "bytes": 7691,
-      "sha256": "e8416fa69f5b9606d36f6e64ccafe57efba21d2e5dc7411d9425ab7af8db52af"
+      "bytes": 7820,
+      "sha256": "74b6f73ab0663360cf9989f3a088aa19a692015b6074bc238630ff26251d61ca"
     },
     {
       "path": "vendor/BufferGeometryUtils.js",

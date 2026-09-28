@@ -1,0 +1,921 @@
+{
+  "version": 1,
+  "id": "electrical-v002",
+  "base_source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
+  "base_navigation_sha256": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
+  "ceiling_compatibility": [
+    "existing",
+    "quiet",
+    "linear",
+    "warm",
+    "sculpted",
+    "luxe"
+  ],
+  "model": {
+    "src": "./model/electrical/plates-47bcfb8ba5ecfb10.glb",
+    "sha256": "47bcfb8ba5ecfb10d9323a2a4480ad0533327988b53ec2f60bb6948ee5cc549f",
+    "bytes": 2580652
+  },
+  "points": [
+    {
+      "id": "E-B1-01",
+      "label": "West bedside charging",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "bedroom_1",
+      "height_aff_mm": 600,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B1-02",
+      "label": "West bedside light control",
+      "function": "selected lighting",
+      "room": "bedroom_1",
+      "height_aff_mm": 600,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B1-03",
+      "label": "East bedside charging",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "bedroom_1",
+      "height_aff_mm": 600,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B1-04",
+      "label": "East bedside light control",
+      "function": "selected lighting",
+      "room": "bedroom_1",
+      "height_aff_mm": 600,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B1-05",
+      "label": "Room lights / fan board",
+      "function": "selected lights and fan",
+      "room": "bedroom_1",
+      "height_aff_mm": 1150,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B1-06",
+      "label": "Dressing / laptop allowance",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "bedroom_1",
+      "height_aff_mm": 1000,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B1-07",
+      "label": "Dressing data allowance",
+      "function": "workstation data",
+      "room": "bedroom_1",
+      "height_aff_mm": 1000,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B1-08",
+      "label": "General cleaning outlet",
+      "function": "cleaning",
+      "room": "bedroom_1",
+      "height_aff_mm": 350,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B1-09",
+      "label": "AC maintenance control",
+      "function": "AC isolation control",
+      "room": "bedroom_1",
+      "height_aff_mm": 1350,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B1-10",
+      "label": "AC connection provision",
+      "function": "AC connection",
+      "room": "bedroom_1",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B1-11",
+      "label": "Selected bedroom light feed",
+      "function": "selected lighting",
+      "room": "bedroom_1",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B1-12",
+      "label": "Existing fan provision feed",
+      "function": "fan",
+      "room": "bedroom_1",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B1-13",
+      "label": "Optional rear Wi-Fi data feed",
+      "function": "Wi-Fi",
+      "room": "bedroom_1",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B2-01",
+      "label": "South pillow charging",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "bedroom_2",
+      "height_aff_mm": 1250,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B2-02",
+      "label": "South pillow light control",
+      "function": "selected lighting",
+      "room": "bedroom_2",
+      "height_aff_mm": 1250,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B2-03",
+      "label": "North pillow charging",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "bedroom_2",
+      "height_aff_mm": 1250,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B2-04",
+      "label": "North pillow light control",
+      "function": "selected lighting",
+      "room": "bedroom_2",
+      "height_aff_mm": 1250,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B2-05",
+      "label": "Room lights / fan board",
+      "function": "selected lights and fan",
+      "room": "bedroom_2",
+      "height_aff_mm": 1150,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B2-06",
+      "label": "Study equipment power",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "bedroom_2",
+      "height_aff_mm": 950,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B2-07",
+      "label": "Study wired data",
+      "function": "workstation data",
+      "room": "bedroom_2",
+      "height_aff_mm": 1300,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B2-08",
+      "label": "General cleaning outlet",
+      "function": "cleaning",
+      "room": "bedroom_2",
+      "height_aff_mm": 350,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B2-09",
+      "label": "AC maintenance control",
+      "function": "AC isolation control",
+      "room": "bedroom_2",
+      "height_aff_mm": 1350,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B2-10",
+      "label": "AC connection provision",
+      "function": "AC connection",
+      "room": "bedroom_2",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B2-11",
+      "label": "Selected bedroom light feed",
+      "function": "selected lighting",
+      "room": "bedroom_2",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B2-12",
+      "label": "Existing fan provision feed",
+      "function": "fan",
+      "room": "bedroom_2",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B3-01",
+      "label": "North bedside charging",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "bedroom_3",
+      "height_aff_mm": 600,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B3-02",
+      "label": "North bedside light control",
+      "function": "selected lighting",
+      "room": "bedroom_3",
+      "height_aff_mm": 600,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B3-03",
+      "label": "South bedside charging",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "bedroom_3",
+      "height_aff_mm": 600,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B3-04",
+      "label": "South bedside light control",
+      "function": "selected lighting",
+      "room": "bedroom_3",
+      "height_aff_mm": 1080,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B3-05",
+      "label": "Room lights / fan board",
+      "function": "selected lights and fan",
+      "room": "bedroom_3",
+      "height_aff_mm": 1150,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B3-06",
+      "label": "Vanity / laptop allowance",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "bedroom_3",
+      "height_aff_mm": 1050,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B3-07",
+      "label": "Vanity-side data allowance",
+      "function": "workstation data",
+      "room": "bedroom_3",
+      "height_aff_mm": 1050,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B3-08",
+      "label": "General cleaning outlet",
+      "function": "cleaning",
+      "room": "bedroom_3",
+      "height_aff_mm": 350,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B3-09",
+      "label": "AC maintenance control",
+      "function": "AC isolation control",
+      "room": "bedroom_3",
+      "height_aff_mm": 1350,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B3-10",
+      "label": "AC connection provision",
+      "function": "AC connection",
+      "room": "bedroom_3",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-B3-11",
+      "label": "Selected bedroom light feed",
+      "function": "selected lighting",
+      "room": "bedroom_3",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-B3-12",
+      "label": "Existing fan provision feed",
+      "function": "fan",
+      "room": "bedroom_3",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-DR-01",
+      "label": "Room lights / fan board",
+      "function": "selected lights and fan",
+      "room": "drawing",
+      "height_aff_mm": 1150,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-DR-02",
+      "label": "Seated charging allowance",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "drawing",
+      "height_aff_mm": 950,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-DR-03",
+      "label": "General cleaning outlet",
+      "function": "cleaning",
+      "room": "drawing",
+      "height_aff_mm": 350,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-DR-04",
+      "label": "AC maintenance control",
+      "function": "AC isolation control",
+      "room": "drawing",
+      "height_aff_mm": 1150,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-DR-05",
+      "label": "AC connection provision",
+      "function": "AC connection",
+      "room": "drawing",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-DR-06",
+      "label": "Selected room light feed",
+      "function": "selected lighting",
+      "room": "drawing",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-DR-07",
+      "label": "Existing fan provision feed",
+      "function": "fan",
+      "room": "drawing",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-DR-08",
+      "label": "Second TV / AV allowance",
+      "function": "TV/AV",
+      "room": "drawing",
+      "height_aff_mm": null,
+      "state": "unplaced",
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "E-HA-01",
+      "label": "Hall lights / fan board",
+      "function": "selected lights and fan",
+      "room": "lounge",
+      "height_aff_mm": 1150,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-HA-02",
+      "label": "Sofa-side charging",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "lounge",
+      "height_aff_mm": 750,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-HA-03",
+      "label": "General cleaning outlet",
+      "function": "cleaning",
+      "room": "lounge",
+      "height_aff_mm": 350,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-HA-04",
+      "label": "Mandir electric-light control",
+      "function": "mandir light",
+      "room": "lounge",
+      "height_aff_mm": 1150,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-HA-05",
+      "label": "TV / set-top / AV power",
+      "function": "TV/AV",
+      "room": "lounge",
+      "height_aff_mm": 750,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-HA-06",
+      "label": "Wi-Fi / ONT power only",
+      "function": "Wi-Fi",
+      "room": "lounge",
+      "height_aff_mm": 1250,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-HA-07",
+      "label": "Media wired-data termination",
+      "function": "TV/router data",
+      "room": "lounge",
+      "height_aff_mm": 1000,
+      "state": "proposed",
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "E-HA-08",
+      "label": "Hall Wi-Fi AP data feed",
+      "function": "Wi-Fi",
+      "room": "lounge",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-HA-09",
+      "label": "AC maintenance control",
+      "function": "AC isolation control",
+      "room": "lounge",
+      "height_aff_mm": 1450,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-HA-10",
+      "label": "AC connection provision",
+      "function": "AC connection",
+      "room": "lounge",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-HA-11",
+      "label": "Selected hall light feed",
+      "function": "selected lighting",
+      "room": "lounge",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-HA-12",
+      "label": "Existing fan provision feed",
+      "function": "fan",
+      "room": "lounge",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-HA-13",
+      "label": "Aquarium filter / aerator / light",
+      "function": "aquarium",
+      "room": "lounge",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-HA-14",
+      "label": "Aquarium dry isolation control",
+      "function": "aquarium isolation control",
+      "room": "lounge",
+      "height_aff_mm": null,
+      "state": "unplaced",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-DI-01",
+      "label": "Dining light control",
+      "function": "selected lighting",
+      "room": "dining",
+      "height_aff_mm": 1150,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-DI-02",
+      "label": "Dining utility outlet",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "dining",
+      "height_aff_mm": 350,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-DI-03",
+      "label": "Robot dock power",
+      "function": "robot dock",
+      "room": "dining",
+      "height_aff_mm": 450,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-DI-04",
+      "label": "Selected dining light feed",
+      "function": "selected lighting",
+      "room": "dining",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-KI-01",
+      "label": "Fridge connection provision",
+      "function": "fridge",
+      "room": "kitchen",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-02",
+      "label": "Microwave connection provision",
+      "function": "microwave",
+      "room": "kitchen",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-03",
+      "label": "OTG connection provision",
+      "function": "OTG",
+      "room": "kitchen",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-04",
+      "label": "Dishwasher connection provision",
+      "function": "dishwasher",
+      "room": "kitchen",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-05",
+      "label": "Undercounter RO power provision",
+      "function": "RO",
+      "room": "kitchen",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-06",
+      "label": "Potential hob ignition supply",
+      "function": "hob ignition",
+      "room": "kitchen",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-07",
+      "label": "Potential extractor supply",
+      "function": "extractor",
+      "room": "kitchen",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-08",
+      "label": "Dry prep-counter utility outlet",
+      "function": "Ordinary socket + USB-C module (output unspecified)",
+      "room": "kitchen",
+      "height_aff_mm": 1200,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-09",
+      "label": "Fridge remote isolation control",
+      "function": "appliance isolation control",
+      "room": "kitchen",
+      "height_aff_mm": 1200,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-10",
+      "label": "Microwave remote control",
+      "function": "appliance isolation control",
+      "room": "kitchen",
+      "height_aff_mm": 1200,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-11",
+      "label": "OTG remote isolation control",
+      "function": "appliance isolation control",
+      "room": "kitchen",
+      "height_aff_mm": 1200,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-12",
+      "label": "Dishwasher remote control",
+      "function": "appliance isolation control",
+      "room": "kitchen",
+      "height_aff_mm": 1420,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-13",
+      "label": "RO remote isolation control",
+      "function": "appliance isolation control",
+      "room": "kitchen",
+      "height_aff_mm": 1420,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-KI-14",
+      "label": "Kitchen light control",
+      "function": "selected lighting",
+      "room": "kitchen",
+      "height_aff_mm": 1420,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-KI-15",
+      "label": "Selected kitchen light feed",
+      "function": "selected lighting",
+      "room": "kitchen",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-EN-01",
+      "label": "Entry selected-light control",
+      "function": "selected lighting",
+      "room": "lobby",
+      "height_aff_mm": 1550,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-EN-02",
+      "label": "Entry / circulation light feed",
+      "function": "selected lighting",
+      "room": "lobby",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-BA1-01",
+      "label": "Rear bath light / exhaust control",
+      "function": "bath light and exhaust control",
+      "room": "bathroom_1",
+      "height_aff_mm": 1150,
+      "state": "proposed",
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "E-BA1-02",
+      "label": "Rear geyser dry-side isolation",
+      "function": "geyser isolation control",
+      "room": "bathroom_1",
+      "height_aff_mm": 1350,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-BA1-03",
+      "label": "Rear geyser connection",
+      "function": "geyser",
+      "room": "bathroom_1",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-BA1-04",
+      "label": "Rear exhaust connection",
+      "function": "bath exhaust",
+      "room": "bathroom_1",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "E-BA1-05",
+      "label": "Rear bath essential light feed",
+      "function": "selected lighting",
+      "room": "bathroom_1",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-BA1-06",
+      "label": "Rear mirror / grooming power",
+      "function": "bath grooming",
+      "room": "bathroom_1",
+      "height_aff_mm": null,
+      "state": "unplaced",
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "E-BA2-01",
+      "label": "Middle bath light / exhaust control",
+      "function": "bath light and exhaust control",
+      "room": "bathroom_2",
+      "height_aff_mm": 1150,
+      "state": "proposed",
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "E-BA2-02",
+      "label": "Middle geyser dry-side isolation",
+      "function": "geyser isolation control",
+      "room": "bathroom_2",
+      "height_aff_mm": 1350,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-BA2-03",
+      "label": "Middle geyser connection",
+      "function": "geyser",
+      "room": "bathroom_2",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-BA2-04",
+      "label": "Middle exhaust connection",
+      "function": "bath exhaust",
+      "room": "bathroom_2",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "E-BA2-05",
+      "label": "Middle bath essential light feed",
+      "function": "selected lighting",
+      "room": "bathroom_2",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-BA2-06",
+      "label": "Middle mirror / grooming power",
+      "function": "bath grooming",
+      "room": "bathroom_2",
+      "height_aff_mm": null,
+      "state": "unplaced",
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "E-BA3-01",
+      "label": "Front bath light / exhaust control",
+      "function": "bath light and exhaust control",
+      "room": "bathroom_3",
+      "height_aff_mm": 1150,
+      "state": "proposed",
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "E-BA3-02",
+      "label": "Front geyser dry-side isolation",
+      "function": "geyser isolation control",
+      "room": "bathroom_3",
+      "height_aff_mm": 1400,
+      "state": "proposed",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-BA3-03",
+      "label": "Front geyser connection",
+      "function": "geyser",
+      "room": "bathroom_3",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "E-BA3-04",
+      "label": "Front exhaust connection",
+      "function": "bath exhaust",
+      "room": "bathroom_3",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "E-BA3-05",
+      "label": "Front bath essential light feed",
+      "function": "selected lighting",
+      "room": "bathroom_3",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-BA3-06",
+      "label": "Front mirror / grooming power",
+      "function": "bath grooming",
+      "room": "bathroom_3",
+      "height_aff_mm": null,
+      "state": "unplaced",
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "E-DE-01",
+      "label": "Dressing selected-light control",
+      "function": "selected lighting",
+      "room": "dressing_3",
+      "height_aff_mm": 1150,
+      "state": "proposed",
+      "backup_preference": "requested"
+    },
+    {
+      "id": "E-DE-02",
+      "label": "Dressing light feed",
+      "function": "selected lighting",
+      "room": "dressing_3",
+      "height_aff_mm": null,
+      "state": "reference-only",
+      "backup_preference": "requested"
+    }
+  ]
+}
