@@ -3,7 +3,7 @@ import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { isSafe, move, movementVector, movementSpeed, joystickVector, roomAt, applyLens } from './navigation.js?lens=1&controls=3';
 import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=385a64a657a99098';
 import { createFixtureLighting } from './fixture-lighting.js?v=07ea12a8efadecfe';
-import { initElectricalPlanning } from './electrical-planning.js?v=8f4f385b1c0e83b4';
+import { initBoardPlanning } from './electrical-board-planning.js?v=365d86c924ce5e04';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';
@@ -256,15 +256,17 @@ async function load() {
     if (ceilingOptions?.variants.some(variant => variant.id === STARTUP_VIEW.ceiling)) {
       selectCeiling(STARTUP_VIEW.ceiling);
     }
-    electrical = initElectricalPlanning({
-      THREE, scene, camera, renderer, container: document.querySelector('[data-electrical-host]'),
+    electrical = initBoardPlanning({
+      THREE, scene, camera, stage, model, container: document.querySelector('[data-electrical-host]'),
       houseDescriptor: manifest, releaseInput: clearInput, initialPlates: STARTUP_VIEW.electricalPlates,
+      isInputBusy: () => stickPointer !== null || Boolean(dragging) || keys.size > 0 || document.pointerLockElement === canvas,
+      revealControls: () => { if (document.fullscreenElement) showControls(true); },
     });
     // The GLB contains the authored closed pose. Do not instantiate animation,
     // picking or dynamic collision controllers in this stability fallback.
     room.replaceChildren(...nav.presets.map(p => new Option(p.name, p.id)));
     teleport(nav.presets.some(p => p.id === selected) ? selected : nav.presets[0].id);
-    $('loading-detail').textContent = 'Preparing Sculpted Luxe and suggested electrical plates…';
+    $('loading-detail').textContent = 'Preparing Sculpted Luxe and proposed switchboards…';
     const initialElectrical = electrical;
     let startupTimer;
     const optionalReady = async () => {
@@ -338,6 +340,8 @@ function animate(time) {
     position = next;
     camera.position.set(position[0], 1.6, -position[1]);
   }
+  electrical?.update({ time, currentRoom, paused: !ready || !$('instructions').hidden ||
+    document.body.classList.contains('controls-open') || document.pointerLockElement === canvas });
   renderer.render(scene, camera);
 }
 
@@ -452,7 +456,9 @@ on(canvas, 'pointerdown', event => {
   if (document.body.classList.contains('controls-open')) showControls(false);
   if (stickPointer === null || event.pointerType === 'mouse') canvas.focus({ preventScroll: true });
   if (document.pointerLockElement !== canvas) {
-    dragging = { id: event.pointerId, kind: event.pointerType, x: event.clientX, y: event.clientY };
+    dragging = { id: event.pointerId, kind: event.pointerType, x: event.clientX, y: event.clientY,
+      startX: event.clientX, startY: event.clientY, startedAt: performance.now(),
+      label: electrical?.pickLabel(event.clientX, event.clientY) || null };
     canvas.setPointerCapture(event.pointerId);
     traceInput('start', event, 'look');
   }
@@ -460,8 +466,13 @@ on(canvas, 'pointerdown', event => {
 on(canvas, 'pointermove', event => {
   if (!dragging || !ownsPointer(dragging.id, dragging.kind, event)) return;
   if (event.pointerType === 'pen' && !(event.buttons & 1)) {
+    dragging.label = null;
     dragging.x = event.clientX; dragging.y = event.clientY;
     return;
+  }
+  if (dragging.label) {
+    if (Math.hypot(event.clientX - dragging.startX, event.clientY - dragging.startY) < 6 && !(event.buttons & ~1)) return;
+    dragging.label = null;
   }
   look(event.clientX - dragging.x, event.clientY - dragging.y);
   dragging.x = event.clientX; dragging.y = event.clientY;
@@ -470,15 +481,19 @@ for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) {
   on(canvas, type, event => {
     if (!dragging || !ownsPointer(dragging.id, dragging.kind, event)) return;
     traceInput(type, event, 'look');
+    const label = type === 'pointerup' && event.button === 0 && stickPointer === null && keys.size === 0 &&
+      performance.now() - dragging.startedAt <= 500 &&
+      Math.hypot(event.clientX - dragging.startX, event.clientY - dragging.startY) < 6 ? dragging.label : null;
     dragging = null;
     if (type !== 'pointerup') {
       keys.delete('ShiftLeft'); keys.delete('ShiftRight'); renderPace();
     }
-  });
-  on(canvas, 'contextmenu', event => {
-    if (event.pointerType === 'pen' || dragging?.kind === 'pen') event.preventDefault();
+    if (label) electrical?.selectLabel(label);
   });
 }
+on(canvas, 'contextmenu', event => {
+  if (event.pointerType === 'pen' || dragging?.kind === 'pen') event.preventDefault();
+});
 on(document, 'mousemove', event => {
   if (ready && document.pointerLockElement === canvas) look(event.movementX, event.movementY);
 });
@@ -502,7 +517,11 @@ on(document, 'keydown', event => {
   if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
     keys.add(event.code); renderPace(); return;
   }
-  if (movementKeys.has(event.code)) { event.preventDefault(); keys.add(event.code); }
+  if (movementKeys.has(event.code)) {
+    event.preventDefault();
+    if (dragging) dragging.label = null;
+    keys.add(event.code);
+  }
 });
 on(document, 'keyup', event => { keys.delete(event.code); renderPace(); });
 // Element focus can change during pen use without ending the finger stream.
@@ -542,6 +561,7 @@ function updateStick(event) {
 on(stick, 'pointerdown', event => {
   if (!ready || !$('instructions').hidden || event.button !== 0 || stickPointer !== null) return;
   event.preventDefault();
+  if (dragging) dragging.label = null;
   if (document.body.classList.contains('controls-open')) showControls(false);
   const rect = stick.getBoundingClientRect();
   stickOrigin = { x: rect.x + rect.width / 2, y: rect.y + rect.height / 2 };

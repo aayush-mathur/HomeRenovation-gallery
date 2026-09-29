@@ -5,12 +5,16 @@
   "source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
   "lighting_revision": "distributed-fixtures-v1",
   "files": {
-    "app.js": "716a7cb72eec7cda245ca50216fd0f6c65259bd5065cae61bc42146dd625bd4f",
+    "app.js": "779daf2a051c8a59620e57b650c2b9f376de7306d17ce45abc6125f7be04b687",
     "ceiling-comparison.js": "385a64a657a990981c3d18a979ff5951196c11d87a6bd3322604d244173e929e",
+    "electrical-board-descriptor.js": "d27cd293eda215a6d5a9ce8e9ce0aedaa61fe9cbb2043ccf11c6aba45435e549",
+    "electrical-board-labels.css": "12dd7f4c9b1aa00df42e51645e34b3586fe5b81066317db5ce8e2f0c48d5d347",
+    "electrical-board-labels.js": "5a036b5e030f707f72ea54667ec4c39dd4445e85d403f13eb8ec4d5415fd69b0",
+    "electrical-board-overlay.js": "b59d20a148989792c4cf9534fa0ca5fe824a02c33b9a5868fe4d99f4f2ee1030",
+    "electrical-board-planning.js": "365d86c924ce5e04340f39370f8a6d0a722b17447e0491096ac703ac6d0027c2",
     "electrical-planning.css": "831b2e16568db094e822bbc207599160b401bf07e90d6a2f08d648510229c789",
-    "electrical-planning.js": "8f4f385b1c0e83b4a19ff1235dcd8afaebe055760b93c93b069af083a9cb9c19",
     "fixture-lighting.js": "07ea12a8efadecfef05558c590b7f57686e27c8dc491c7731353be52c5e2ebcb",
-    "index.html": "dbc5f5b1e5886c88ca10cf73cae5d86ac9645b5f4f65a721aae37c106f926ff1",
+    "index.html": "3426cbd474a18e404cafa310510d62cd772e28ef5e39c945546447246ad83458",
     "landing/app.js": "428a0c8633c7d4f2bc1789cfc8b94f0533f994490d77eefc600249bf60a6212b",
     "landing/index.html": "1bf33b93974f6e3cadea69a84ebb3da43e2272a55b1d9a11ab04a7a46339d888",
     "landing/landing-52b0ed7fa6daa1b2.glb": "52b0ed7fa6daa1b261896b6b611075254022ecbdb2a867aab47162eb70069398",
@@ -32,14 +36,14 @@
     "model/ceilings/quiet-dd3bea9b57f51f87.glb": "dd3bea9b57f51f8797f2290f82a1bb9a63af3206000477d94c11e2bc9d92c579",
     "model/ceilings/sculpted-26b7126f477fde51.glb": "26b7126f477fde51e2c42e003fdb0ce86aaba6d38ec6b2e9f99c69b74deeaacf",
     "model/ceilings/warm-18ea31a48c51b4e7.glb": "18ea31a48c51b4e77d7dba11fcc3e4e58d2312a8166e362e0f5ea8edcad36128",
-    "model/electrical/manifest.json": "2b20811a4433ed3563353ce13e46e66213c4cc62b325d749196911869deedc2b",
-    "model/electrical/plates-47bcfb8ba5ecfb10.glb": "47bcfb8ba5ecfb10d9323a2a4480ad0533327988b53ec2f60bb6948ee5cc549f",
+    "model/electrical/boards-96f260b115b955f9.glb": "96f260b115b955f97ceb7b1580ec3d7f696058f2d391670528abd6cc4285dc07",
+    "model/electrical/manifest.json": "8c43d2c7167a424d8ca0d175d4580396771f412902549d7cdbed0ee8c31c5e34",
     "model/house.glb": "e62bda4a91758ef4c394f274b958dd2b19f4df57116117e60db94c55facdf577",
     "model/manifest.json": "9f6c13b8a702b5dea1a87ab9bb33c3becd709f60b859b385ed4730e068fddab6",
     "model/navigation.json": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
     "navigation.js": "80f2ff89bbb463d7df8ed64f9a02aa3e8f3bb11c2025d022132ced0a194d40eb",
     "offline-client.js": "3eeb81982fb3e9640b72dc00a9851ab1290c5a9830e7a9d5428428736b7dc43d",
-    "offline-manifest.json": "2a58c32f0f9cadc20dbc66009f226396ec250e5d94a2a351354fba7d05085cf7",
+    "offline-manifest.json": "9ec5c88b376ea16b26d28dfc09991c17001b4af5c99ae141a7a49d0be138c38c",
     "offline-worker.js": "a4190b79d4c0a5ed48c2b570aca0b7b3c43424eb994c1dc6d2f943a7dd8f7e77",
     "offline.css": "1ab711a3c58028b60eb748f19d9066330a45f467689bc1702b5ba006ad5c4874",
     "styles.css": "74b6f73ab0663360cf9989f3a088aa19a692015b6074bc238630ff26251d61ca",
@@ -64,10 +68,24 @@
     "model": "landing/landing-52b0ed7fa6daa1b2.glb"
   },
   "electrical_planning": {
-    "version": 1,
-    "id": "electrical-v002",
-    "model": "model/electrical/plates-47bcfb8ba5ecfb10.glb"
+    "version": 2,
+    "id": "electrical-v003",
+    "model": "model/electrical/boards-96f260b115b955f9.glb"
   },
   "storage_mode": "closed",
-  "offline_revision": 1
+  "offline_revision": 1,
+  "runtime_compatibility": {
+    "version": 1,
+    "id": "electrical-v002-online",
+    "files": {
+      "electrical-planning.js": {
+        "bytes": 22094,
+        "sha256": "8f4f385b1c0e83b4a19ff1235dcd8afaebe055760b93c93b069af083a9cb9c19"
+      },
+      "model/electrical/plates-47bcfb8ba5ecfb10.glb": {
+        "bytes": 2580652,
+        "sha256": "47bcfb8ba5ecfb10d9323a2a4480ad0533327988b53ec2f60bb6948ee5cc549f"
+      }
+    }
+  }
 }
