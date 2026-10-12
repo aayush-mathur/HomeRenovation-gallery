@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>First-floor services inspection</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
+</head>
+<body>
+  <!-- THESIS: Inspect proposed hidden services in space, not in a static drawing.
+       OWN-WORLD: Extend the existing house viewer's slate, system type and plain controls.
+       STORY: Orbit, look straight down, remove walls, isolate a service, pick a route.
+       FIRST VIEWPORT: Floor occupies the canvas; compact views above, layer controls beside it.
+       FORM: Precisely scoped inspection extension of the existing walkthrough. -->
+  <header>
+    <a href="../">House walkthrough</a>
+    <div class="title"><h1>First-floor services</h1><span>Proposed layout · v002</span></div>
+    <nav aria-label="Camera views">
+      <button type="button" data-view="orbit" aria-pressed="true">3D overview</button>
+      <button type="button" data-view="plan" aria-pressed="false">Bird’s-eye</button>
+      <button type="button" data-view="walk" aria-pressed="false">Eye-level / WASD</button>
+      <button type="button" id="fit">Fit view</button>
+    </nav>
+    <button type="button" id="panel-toggle" aria-expanded="true" aria-controls="panel">Layers &amp; details</button>
+  </header>
+  <main>
+    <section id="stage" aria-label="Interactive services model">
+      <canvas id="model" tabindex="0" aria-label="3D services. Overview: drag to orbit, scroll to zoom. Eye-level: drag to look, WASD or arrow keys move. Free inspection passes through walls."></canvas>
+      <div id="loading"><h2>Opening the services model</h2><p id="load-status" role="status">Loading and verifying geometry…</p><button id="retry" type="button" hidden>Retry model</button></div>
+      <div class="view-note" id="view-note">Drag to rotate · right-drag to pan · scroll to zoom</div>
+      <div id="movement" aria-label="Eye-level movement" hidden>
+        <button type="button" data-move="w" aria-label="Move forward">Forward</button>
+        <button type="button" data-move="a" aria-label="Move left">Left</button>
+        <button type="button" data-move="s" aria-label="Move backward">Back</button>
+        <button type="button" data-move="d" aria-label="Move right">Right</button>
+      </div>
+    </section>
+    <aside id="panel">
+      <h2>See through the floor</h2>
+      <label class="field">Walls <select id="walls"><option value="ghost">Transparent</option><option value="hidden">Hidden</option><option value="solid">Solid</option></select></label>
+      <label class="field">Focus room <select id="room"><option value="">Entire floor</option></select></label>
+      <h2>Service layers</h2>
+      <div id="layers">
+        <label><input type="checkbox" value="normal" checked><i class="swatch normal"></i>Normal supply</label>
+        <label><input type="checkbox" value="backup" checked><i class="swatch backup"></i>Requested backup</label>
+        <label><input type="checkbox" value="data" checked><i class="swatch data"></i>Data</label>
+        <label><input type="checkbox" value="cold" checked><i class="swatch cold"></i>Cold water</label>
+        <label><input type="checkbox" value="hot" checked><i class="swatch hot"></i>Hot water</label>
+        <label><input type="checkbox" value="waste" checked><i class="swatch waste"></i>Waste</label>
+        <label><input type="checkbox" value="vent" checked><i class="swatch vent"></i>Drain vents</label>
+      </div>
+      <div class="presets">
+        <button type="button" data-preset="all">All services</button>
+        <button type="button" data-preset="lighting">Ceiling lights</button>
+        <button type="button" data-preset="water">Water &amp; waste</button>
+      </div>
+      <details open>
+        <summary>Inspection options</summary>
+        <label><input id="carriers" type="checkbox" checked>Conduit / pipe envelopes</label>
+        <label><input id="cables" type="checkbox">Cable-path reservations</label>
+        <label><input id="access" type="checkbox" checked>Driver &amp; service access</label>
+        <label><input id="crossings" type="checkbox">Wall-crossing review markers</label>
+      </details>
+      <section class="selection" aria-label="Selected element">
+        <h2 id="selection-title">Pick a route or fitting</h2>
+        <p id="selection-text">Tap the visible model to inspect a segment. Transparent walls do not block selection.</p>
+        <button id="clear" type="button" hidden>Clear selection</button>
+      </section>
+      <details class="limits"><summary>What is still provisional?</summary><ul id="limits"></ul></details>
+    </aside>
+  </main>
+  <footer><p id="status" role="status">Not for installation. Lines are proposed routes, not verified wiring circuits.</p><span>Touch: one finger rotates · two fingers pan / zoom</span></footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
