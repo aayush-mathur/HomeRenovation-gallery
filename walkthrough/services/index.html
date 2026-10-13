@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>First-floor services inspection</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=c7250f7186ab4b35">
   <script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
 </head>
 <body>
@@ -21,12 +21,13 @@
       <button type="button" data-view="plan" aria-label="Bird’s-eye" aria-pressed="false"><span class="wide-label">Bird’s-eye</span><span class="compact-label">Plan</span></button>
       <button type="button" data-view="walk" aria-label="Eye-level / WASD" aria-pressed="false"><span class="wide-label">Eye-level / WASD</span><span class="compact-label">Walk</span></button>
       <button type="button" id="fit" aria-label="Fit view"><span class="wide-label">Fit view</span><span class="compact-label" id="fit-compact">Fit</span></button>
+      <button type="button" id="fullscreen" aria-label="Enter full screen" aria-pressed="false"><span class="wide-label">Full screen</span><span class="compact-label" id="fullscreen-compact">Full</span></button>
     </nav>
     <button type="button" id="panel-toggle" aria-expanded="false" aria-controls="panel">Settings</button>
   </header>
   <main>
     <section id="stage" aria-label="Interactive services model">
-      <canvas id="model" tabindex="0" aria-label="3D services. Overview: drag to orbit, scroll to zoom. Eye-level: drag to look, WASD or arrow keys move. Free inspection passes through walls."></canvas>
+      <canvas id="model" tabindex="0" aria-label="3D services. Overview: drag to orbit, scroll to zoom. Eye-level: drag to look, WASD or arrow keys move, Page Up/Down raises and lowers the camera. Free inspection passes through walls."></canvas>
       <div id="loading"><h2>Opening the services model</h2><p id="load-status" role="status">Loading and verifying geometry…</p><button id="retry" type="button" hidden>Retry model</button></div>
       <div class="view-note" id="view-note">Drag to rotate · right-drag to pan · scroll to zoom</div>
       <div id="movement" aria-label="Eye-level movement" hidden>
@@ -34,6 +35,8 @@
         <button type="button" data-move="a" aria-label="Move left">Left</button>
         <button type="button" data-move="s" aria-label="Move backward">Back</button>
         <button type="button" data-move="d" aria-label="Move right">Right</button>
+        <button type="button" data-move="PageUp" aria-label="Raise eye-level camera">Rise</button>
+        <button type="button" data-move="PageDown" aria-label="Lower eye-level camera">Lower</button>
       </div>
     </section>
     <button type="button" id="panel-backdrop" aria-label="Close settings" hidden></button>
@@ -64,15 +67,18 @@
         <label><input id="access" type="checkbox" checked>Driver &amp; service access</label>
         <label><input id="crossings" type="checkbox">Wall-crossing review markers</label>
       </details>
-      <section class="selection" aria-label="Selected element">
+      <section id="selection" class="selection" aria-label="Selected element">
         <h2 id="selection-title">Pick a route or fitting</h2>
         <p id="selection-text">Tap the visible model to inspect a segment. Transparent walls do not block selection.</p>
+        <button id="trace-route" type="button" hidden>Trace entire run</button>
+        <p id="trace-status" role="status" aria-live="polite"></p>
+        <button id="clear-trace" type="button" hidden>Clear trace</button>
         <button id="clear" type="button" hidden>Clear selection</button>
       </section>
       <details class="limits"><summary>What is still provisional?</summary><ul id="limits"></ul></details>
     </aside>
   </main>
   <footer><p id="status" role="status">Not for installation. Lines are proposed routes, not verified wiring circuits.</p><span>Touch: one finger rotates · two fingers pan / zoom</span></footer>
-  <script type="module" src="./app.js"></script>
+  <script type="module" src="./app.js?v=ccf589f60abe48ee"></script>
 </body>
 </html>

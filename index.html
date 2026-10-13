@@ -16,18 +16,17 @@ local GLB and viewer assets, visible loading/recovery, touch and keyboard contro
   <meta name="referrer" content="no-referrer">
   <title>Home renovation · Render gallery</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="styles.css?v=c18b6c55ef6a">
+  <link rel="stylesheet" href="styles.css?v=a1551ac7af78">
   <script src="configuration.js?v=3981457b456a" defer></script>
-  <script src="app.js?v=4798ff102f90" defer></script>
+  <script src="app.js?v=03d063d341f8" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#gallery">Skip to renders</a>
   <header class="page-header">
     <h1>Home renovation</h1>
-    <p>Versions &amp; design experiments <span aria-hidden="true">·</span> <span id="hosting-mode">Public gallery</span></p>
+    <p>Plan, renders &amp; walkthroughs <span aria-hidden="true">·</span> <span id="hosting-mode">Public gallery</span></p>
     <!-- optional-walkthrough -->
-    <p><a class="baseline-link" href="walkthrough/">Walk inside the furnished house</a></p>
-    <p class="godot-walkthrough-link"><a href="/godot/v019-floor/index.html">Explore the v019 full-floor walkthrough (Godot)</a></p>
+    <nav class="site-links" aria-label="Explore the house"><a href="walkthrough/">House walkthrough</a><a href="walkthrough/landing/">Landing study</a><a href="walkthrough/services/">Services 3D</a></nav>
   </header>
   <main>
     <div id="load-state" role="status">Loading the render collections…</div>
@@ -45,6 +44,14 @@ local GLB and viewer assets, visible loading/recovery, touch and keyboard contro
         </div>
         <a class="baseline-link" href="#gallery" id="baseline-link">View baseline</a>
       </div>
+      <details id="archive-browser" class="archive-browser">
+        <summary id="archive-summary">Browse archived versions, experiments &amp; kitchen concepts</summary>
+        <p class="description">Older work is kept here for reference; nothing has been deleted.</p>
+        <div class="field">
+          <label for="archived-collection">Archived version or study</label>
+          <select id="archived-collection"><option value="">Choose an archived item</option></select>
+        </div>
+      </details>
       <p id="version-notice" role="status" class="description" hidden></p>
       <section id="gallery" tabindex="-1" aria-labelledby="collection-title">
         <div class="collection-heading">

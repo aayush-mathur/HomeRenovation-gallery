@@ -11,7 +11,8 @@ const labels = { normal: 'Normal supply', backup: 'Requested backup', data: 'Dat
   hot: 'Hot water', waste: 'Waste', vent: 'Drain vent', access: 'Service access', context: 'Context' };
 const palette = { normal: '#1447cc', backup: '#b96806', data: '#24713f', cold: '#008898',
   hot: '#b92520', waste: '#782da0', vent: '#97388d', access: '#317553', context: '#758793' };
-let renderer, scene, camera, controls, model, manifest, highlight, loading = false;
+const traceableRoles = new Set(['service', 'cable', 'lighting-feed', 'equipment-feed']);
+let renderer, scene, camera, controls, model, manifest, highlight, traced, traceSelection, loading = false;
 let mode = 'orbit', preset = 'all', selectedRoom = '';
 const buckets = [];
 const center = new THREE.Vector3(4.5, 1.2, -8.8);
@@ -21,7 +22,7 @@ let down;
 let lookPointer = null, yaw = 0, pitch = 0, motionFrame = null, lastMotion = 0;
 const held = new Set();
 const movePointers = new Map();
-const movementKeys = new Set(['w','a','s','d','ArrowUp','ArrowDown','ArrowLeft','ArrowRight','q','e','r','f']);
+const movementKeys = new Set(['w','a','s','d','ArrowUp','ArrowDown','ArrowLeft','ArrowRight','q','e','r','f','PageUp','PageDown']);
 
 function stopMotion() {
   held.clear();
@@ -47,6 +48,9 @@ function moveFrame(now) {
   const length = Math.hypot(forward, side) || 1;
   yaw += (Number(keys.has('q')) - Number(keys.has('e'))) * dt * 1.3;
   pitch = THREE.MathUtils.clamp(pitch + (Number(keys.has('r')) - Number(keys.has('f'))) * dt, -1.45, 1.45);
+  camera.position.y = THREE.MathUtils.clamp(
+    camera.position.y + (Number(keys.has('PageUp')) - Number(keys.has('PageDown'))) * dt * .8,
+    .814, 3.014);
   const speed = dt * 1.35 / length;
   camera.position.x += (-Math.sin(yaw) * forward + Math.cos(yaw) * side) * speed;
   camera.position.z += (-Math.cos(yaw) * forward - Math.sin(yaw) * side) * speed;
@@ -88,6 +92,7 @@ function setView(id, reset = true) {
   stopMotion();
   lookPointer = null;
   mode = id;
+  document.body.classList.toggle('walk-mode', id === 'walk');
   const oldZoom = camera?.zoom ?? 1;
   controls?.dispose();
   controls = null;
@@ -103,7 +108,7 @@ function setView(id, reset = true) {
     for (const button of viewButtons) button.setAttribute('aria-pressed', String(button.dataset.view === id));
     $('#movement').hidden = false;
     setFitLabel('Reset position');
-    $('#view-note').textContent = 'Click view · WASD / arrows move · drag to look · Q/E turn · R/F look up/down · passes through walls';
+    $('#view-note').textContent = 'Drag to look · Page Up/Down or Rise/Lower changes height · passes through walls';
     resize();
     canvas.focus({ preventScroll: true });
     return;
@@ -152,6 +157,117 @@ function setFitLabel(label) {
   $('#fit-compact').textContent = label === 'Reset position' ? 'Reset' : 'Fit';
 }
 
+function setFullscreenLabel(active) {
+  $('#fullscreen').setAttribute('aria-pressed', String(active));
+  $('#fullscreen').setAttribute('aria-label', active ? 'Exit full screen' : 'Enter full screen');
+  $('#fullscreen').querySelector('.wide-label').textContent = active ? 'Exit full screen' : 'Full screen';
+  $('#fullscreen-compact').textContent = active ? 'Exit' : 'Full';
+}
+
+function syncFullscreen() {
+  const active = Boolean(document.fullscreenElement) || document.body.classList.contains('pseudo-fullscreen');
+  setFullscreenLabel(active);
+  resize();
+}
+
+async function toggleFullscreen() {
+  if (document.fullscreenElement) {
+    try {
+      await document.exitFullscreen();
+    } catch (error) {
+      $('#status').textContent = `Could not exit browser full screen (${error.message}). Press Escape or use the viewer control again.`;
+    }
+    return;
+  }
+  if (document.body.classList.contains('pseudo-fullscreen')) {
+    document.body.classList.remove('pseudo-fullscreen');
+    syncFullscreen();
+    return;
+  }
+  if (!document.documentElement.requestFullscreen) {
+    document.body.classList.add('pseudo-fullscreen');
+    syncFullscreen();
+    return;
+  }
+  try {
+    await document.documentElement.requestFullscreen();
+  } catch (error) {
+    document.body.classList.add('pseudo-fullscreen');
+    $('#status').textContent = `Browser full screen was unavailable (${error.message}); using expanded view instead.`;
+    syncFullscreen();
+  }
+}
+
+function routeName(label) {
+  return label.replace(/\s+bend\s+\d+$/i, '').replace(/\s+\/\s+\d+$/, '').trim();
+}
+
+function clearTrace(resetSelection = false) {
+  if (traced) {
+    scene.remove(traced);
+    for (const mesh of traced.children) {
+      mesh.geometry.dispose();
+      mesh.material.dispose();
+    }
+    traced = null;
+  }
+  if (resetSelection || !traced) {
+    for (const { mesh, descriptor } of buckets) {
+      if (['walls','floor'].includes(descriptor.role)) continue;
+      mesh.material.transparent = false;
+      mesh.material.opacity = 1;
+      mesh.material.depthWrite = true;
+    }
+  }
+  if (resetSelection) traceSelection = null;
+  $('#trace-status').textContent = '';
+  $('#clear-trace').hidden = true;
+}
+
+function traceRoute() {
+  if (!traceSelection) return;
+  if (traced) clearTrace(false);
+  traced = new THREE.Group();
+  model.updateMatrixWorld(true);
+  let pieces = 0;
+  for (const { mesh, descriptor } of buckets) {
+    if (descriptor.system !== traceSelection.system || descriptor.role !== traceSelection.role) continue;
+    const source = mesh.geometry;
+    const positions = source.getAttribute('position');
+    const indices = source.getIndex();
+    const worldPositions = [];
+    for (const item of descriptor.items) {
+      if (routeName(item.label) !== traceSelection.name) continue;
+      for (let face = item.first; face < item.first + item.count; face++) {
+        for (let corner = 0; corner < 3; corner++) {
+          const index = indices ? indices.getX(face * 3 + corner) : face * 3 + corner;
+          const point = new THREE.Vector3().fromBufferAttribute(positions, index).applyMatrix4(mesh.matrixWorld);
+          worldPositions.push(point.x, point.y, point.z);
+        }
+      }
+      pieces++;
+    }
+    if (!worldPositions.length) continue;
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(worldPositions, 3));
+    traced.add(new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
+      color: '#ffe052', side: THREE.DoubleSide, depthTest: false, depthWrite: false
+    })));
+  }
+  traced.renderOrder = 20;
+  for (const mesh of traced.children) mesh.renderOrder = 20;
+  scene.add(traced);
+  for (const { mesh, descriptor } of buckets) {
+    if (['walls','floor'].includes(descriptor.role) || ['context','access'].includes(descriptor.system)) continue;
+    mesh.material.transparent = true;
+    mesh.material.opacity = .14;
+    mesh.material.depthWrite = false;
+  }
+  $('#trace-status').textContent = `Highlighted ${pieces} connected-looking route pieces named “${traceSelection.name}”. This follows the proposed model path; it does not prove an electrically connected circuit.`;
+  $('#clear-trace').hidden = false;
+  render();
+}
+
 function updateLayers() {
   const enabled = new Set(layerInputs.filter(i => i.checked).map(i => i.value));
   const walls = $('#walls').value;
@@ -181,9 +297,11 @@ function updateLayers() {
 }
 
 function clearSelection(draw = true) {
+  clearTrace(true);
   if (highlight) { scene.remove(highlight); highlight.geometry.dispose(); highlight.material.dispose(); highlight = null; }
   $('#selection-title').textContent = 'Pick a route or fitting';
   $('#selection-text').textContent = 'Tap the visible model to inspect a segment. Transparent walls do not block selection.';
+  $('#trace-route').hidden = true;
   $('#clear').hidden = true;
   if (draw) render();
 }
@@ -219,7 +337,13 @@ function pick(event) {
   scene.add(highlight);
   $('#selection-title').textContent = item.label;
   $('#selection-text').textContent = `${labels[bucket.descriptor.system] || 'Proposed provision'} · ${bucket.descriptor.role.replaceAll('-', ' ')}. Review geometry only; no approved sizing, energized connection or installation permission.`;
+  if (traceableRoles.has(bucket.descriptor.role)) {
+    traceSelection = { system: bucket.descriptor.system, role: bucket.descriptor.role, name: routeName(item.label) };
+    $('#trace-route').hidden = false;
+  }
   $('#clear').hidden = false;
+  setPanel(true);
+  $('#selection').scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   render();
 }
 
@@ -283,6 +407,10 @@ async function load() {
 
 for (const button of viewButtons) button.addEventListener('click', () => model && setView(button.dataset.view));
 $('#fit').addEventListener('click', () => model && setView(mode));
+$('#fullscreen').addEventListener('click', () => { void toggleFullscreen(); });
+document.addEventListener('fullscreenchange', syncFullscreen);
+$('#trace-route').addEventListener('click', traceRoute);
+$('#clear-trace').addEventListener('click', () => { clearTrace(false); render(); });
 $('#room').addEventListener('change', () => { selectedRoom = $('#room').value; if (model) setView(mode); });
 for (const input of layerInputs) input.addEventListener('change', () => { preset = 'all'; updateLayers(); });
 for (const id of ['walls','carriers','cables','access','crossings']) $(`#${id}`).addEventListener('change', updateLayers);
@@ -305,6 +433,10 @@ $('#panel-close').addEventListener('click', () => setPanel(false));
 $('#panel-backdrop').addEventListener('click', () => setPanel(false));
 window.addEventListener('keydown', event => {
   if (event.key === 'Escape' && !$('#panel').hidden) setPanel(false);
+  else if (event.key === 'Escape' && document.body.classList.contains('pseudo-fullscreen')) {
+    document.body.classList.remove('pseudo-fullscreen');
+    syncFullscreen();
+  }
 });
 $('#retry').addEventListener('click', load);
 $('#clear').addEventListener('click', () => clearSelection());

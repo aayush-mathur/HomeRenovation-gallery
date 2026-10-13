@@ -6,6 +6,7 @@ a{color:#175a88}h1{font-size:1.15rem;margin:0;letter-spacing:-.025em}h2{font-siz
 button,select{font:inherit;font-size:.88rem;color:inherit;background:white;border:1px solid #8b98a3;border-radius:6px;padding:9px 12px;min-height:44px}
 button{cursor:pointer}button:hover,select:hover{background:#e8edf1}button[aria-pressed=true]{background:#d8e4ec;border-color:#226b9b}
 button:disabled{opacity:.55;cursor:default}:focus-visible{outline:3px solid #226b9b;outline-offset:2px}
+body.pseudo-fullscreen{position:fixed;inset:0;width:100vw;height:100dvh;z-index:10000}
 main{display:grid;grid-template-columns:minmax(0,1fr);min-height:0;position:relative}
 #stage{position:relative;min-width:0;min-height:0;background:#e1e7eb}canvas{width:100%;height:100%;display:block;touch-action:none;cursor:grab}
 canvas:active{cursor:grabbing}.view-note{position:absolute;bottom:14px;left:16px;background:#f3f5f7;padding:6px 10px;border:1px solid #c0cbd3;pointer-events:none;max-width:calc(100% - 32px)}
@@ -29,6 +30,9 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;bo
 #movement{position:absolute;bottom:64px;left:16px;display:flex;flex-wrap:wrap;gap:6px;max-width:calc(100% - 32px)}
 #movement button{touch-action:none;user-select:none;min-width:56px}
 #movement button[aria-pressed=true]{background:#d8e4ec;border-color:#226b9b}
+.walk-mode #view-note{left:auto;right:12px;max-width:42%}
+#trace-route,#clear-trace,#clear{margin:6px 6px 0 0}
+#trace-status{font-size:.8rem;line-height:1.45}
 @media(max-width:760px){
   header{gap:8px;padding:8px 10px;display:grid;grid-template-columns:minmax(0,1fr) auto}
   header>a{font-size:.78rem;grid-column:1;grid-row:1}
@@ -50,5 +54,6 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;bo
   footer{padding:6px 10px;font-size:.73rem}
   footer span{display:none}
   .view-note{font-size:.72rem;bottom:8px}
-  #movement{bottom:52px;left:10px}
+  .walk-mode .view-note{right:8px;max-width:45%;font-size:.66rem;line-height:1.35}
+  #movement{bottom:52px;left:10px;display:grid;grid-template-columns:repeat(4,minmax(56px,auto));width:max-content}
 }

@@ -2,10 +2,14 @@
 
 const byId = (id) => document.getElementById(id);
 const collectionSelect = byId("collection");
+const archivedCollectionSelect = byId("archived-collection");
+const archiveBrowser = byId("archive-browser");
+const archiveSummary = byId("archive-summary");
 const roomSelect = byId("room");
 const viewer = byId("viewer");
 let collections = [];
 let defaultCollection = "baseline";
+let activeCollectionIds = new Set();
 let activeCollection;
 let visibleViews = [];
 let activeIndex = 0;
@@ -351,16 +355,20 @@ function branchLink(collection) {
   link.addEventListener("click", event => {
     if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
-    collectionSelect.value = collection.id;
-    selectCollection();
+    selectCollection({ collectionId: collection.id });
     byId("gallery").focus();
   });
   return link;
 }
 
-function selectCollection({ urlMode = "push", selectedRoom = "all" } = {}) {
+function selectCollection({ collectionId, urlMode = "push", selectedRoom = "all" } = {}) {
   if (viewer.open) viewer.close();
-  activeCollection = collections.find((collection) => collection.id === collectionSelect.value);
+  activeCollection = collections.find((collection) => collection.id === (collectionId || archivedCollectionSelect.value || collectionSelect.value));
+  if (!activeCollection) throw new Error("The selected render collection is unavailable.");
+  const isActive = activeCollectionIds.has(activeCollection.id);
+  collectionSelect.value = isActive ? activeCollection.id : defaultCollection;
+  archivedCollectionSelect.value = isActive ? "" : activeCollection.id;
+  if (!isActive) archiveBrowser.open = true;
   byId("collection-title").textContent = activeCollection.title;
   byId("collection-status").textContent = activeCollection.status;
   byId("collection-description").textContent = activeCollection.description;
@@ -467,18 +475,19 @@ viewer.addEventListener("keydown", (event) => {
 });
 byId("previous").addEventListener("click", () => moveImage(-1));
 byId("next").addEventListener("click", () => moveImage(1));
-collectionSelect.addEventListener("change", () => selectCollection());
+collectionSelect.addEventListener("change", () => selectCollection({ collectionId: collectionSelect.value }));
+archivedCollectionSelect.addEventListener("change", () => {
+  if (archivedCollectionSelect.value) selectCollection({ collectionId: archivedCollectionSelect.value });
+});
 roomSelect.addEventListener("change", () => { renderPhotos(); saveLocation("push"); });
 byId("parent-version").addEventListener("click", event => {
   if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
   event.preventDefault();
-  collectionSelect.value = event.currentTarget.dataset.version;
-  selectCollection();
+  selectCollection({ collectionId: event.currentTarget.dataset.version });
   byId("gallery").focus();
 });
 byId("baseline-link").addEventListener("click", () => {
-  collectionSelect.value = "baseline";
-  selectCollection();
+  selectCollection({ collectionId: "baseline" });
   byId("gallery").focus();
 });
 
@@ -486,10 +495,13 @@ function restoreLocation(mode = "none") {
   const params = new URLSearchParams(location.search);
   const requested = params.get("version");
   const available = collections.some(collection => collection.id === requested);
-  collectionSelect.value = available ? requested : defaultCollection;
-  selectCollection({ urlMode: requested && !available ? "none" : mode, selectedRoom: params.get("room") || "all" });
+  selectCollection({
+    collectionId: available ? requested : defaultCollection,
+    urlMode: requested && !available ? "none" : mode,
+    selectedRoom: params.get("room") || "all",
+  });
   if (requested && !available) {
-    byId("version-notice").textContent = "That version is not available in this archive. Showing the current collection; choose another version above.";
+    byId("version-notice").textContent = "That version is not available. Showing the current collection; choose another version or browse the archive below.";
     byId("version-notice").hidden = false;
   }
 }
@@ -510,20 +522,38 @@ async function loadGallery() {
     }
     collections = data.collections;
     if (new Set(collections.map(collection => collection.id)).size !== collections.length) throw new Error("Duplicate collection IDs");
-    collectionSelect.replaceChildren();
-    const groups = new Map();
-    for (const collection of collections) {
-      const branch = collection.design?.branch || "Collections";
-      if (!groups.has(branch)) {
-        const group = document.createElement("optgroup");
-        group.label = branch;
-        groups.set(branch, group);
-        collectionSelect.append(group);
-      }
-      groups.get(branch).append(new Option(collection.design?.label || collection.title, collection.id));
-    }
     defaultCollection = collections.some(collection => collection.id === data.design_archive?.default)
       ? data.design_archive.default : collections.find(collection => collection.id !== "baseline")?.id || "baseline";
+    activeCollectionIds = new Set([defaultCollection, "baseline", "kitchen_configurator"]
+      .filter(id => collections.some(collection => collection.id === id)));
+    const activeCollections = collections.filter(collection => activeCollectionIds.has(collection.id));
+    const archivedCollections = collections.filter(collection => !activeCollectionIds.has(collection.id));
+    collectionSelect.replaceChildren();
+    const groups = new Map();
+    for (const collection of activeCollections) {
+      const category = collection.id === defaultCollection ? "Current floor"
+        : collection.id === "baseline" ? "Baseline reference" : "Kitchen configurator";
+      if (!groups.has(category)) {
+        const group = document.createElement("optgroup");
+        group.label = category;
+        groups.set(category, group);
+        collectionSelect.append(group);
+      }
+      groups.get(category).append(new Option(collection.design?.label || collection.title, collection.id));
+    }
+    archivedCollectionSelect.replaceChildren(new Option("Choose an archived item", ""));
+    const archivedGroups = new Map();
+    for (const collection of archivedCollections) {
+      const branch = collection.design?.branch || "Collections";
+      if (!archivedGroups.has(branch)) {
+        const group = document.createElement("optgroup");
+        group.label = branch;
+        archivedGroups.set(branch, group);
+        archivedCollectionSelect.append(group);
+      }
+      archivedGroups.get(branch).append(new Option(collection.design?.label || collection.title, collection.id));
+    }
+    archiveSummary.textContent = `Browse archive · ${archivedCollections.length} preserved items`;
     restoreLocation("replace");
     byId("content").hidden = false;
     byId("load-state").hidden = true;
