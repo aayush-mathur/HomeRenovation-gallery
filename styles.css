@@ -10,7 +10,7 @@ body { margin: 0; }
 [hidden] { display: none !important; }
 button, select, a, summary { -webkit-tap-highlight-color: #d8e4ec; }
 button, select { font: inherit; color: inherit; }
-button, select, summary, .image-links a, .baseline-link {
+button, select, summary, .image-links a {
   min-height: 44px;
 }
 button, select {
@@ -39,7 +39,6 @@ main { padding-block: 24px; }
 .field { display: grid; gap: 6px; flex: 1 1 220px; }
 label { font-size: .9rem; font-weight: 600; }
 select { width: 100%; max-width: 100%; }
-.baseline-link { display: inline-flex; align-items: center; padding: 10px 0; }
 .collection-heading { display: flex; gap: 10px 20px; align-items: baseline; flex-wrap: wrap; }
 .status-label { font-size: .9rem; color: #4d5c67; }
 .description { margin-top: 10px; max-width: 72ch; color: #4d5c67; }

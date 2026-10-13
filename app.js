@@ -375,7 +375,6 @@ function selectCollection({ collectionId, urlMode = "push", selectedRoom = "all"
   byId("assumptions").hidden = !activeCollection.assumptions.length;
   byId("assumptions").open = false;
   byId("assumption-list").replaceChildren(...activeCollection.assumptions.map((text) => node("li", text)));
-  byId("baseline-link").hidden = activeCollection.id === "baseline";
   roomSelect.replaceChildren(new Option("All views", "all"));
   [...new Set(activeCollection.views.map((view) => view.room))].forEach((room) => {
     roomSelect.add(new Option(room, room));
@@ -486,11 +485,6 @@ byId("parent-version").addEventListener("click", event => {
   selectCollection({ collectionId: event.currentTarget.dataset.version });
   byId("gallery").focus();
 });
-byId("baseline-link").addEventListener("click", () => {
-  selectCollection({ collectionId: "baseline" });
-  byId("gallery").focus();
-});
-
 function restoreLocation(mode = "none") {
   const params = new URLSearchParams(location.search);
   const requested = params.get("version");
