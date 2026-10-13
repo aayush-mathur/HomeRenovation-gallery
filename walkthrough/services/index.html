@@ -17,12 +17,12 @@
     <a href="../">House walkthrough</a>
     <div class="title"><h1>First-floor services</h1><span>Proposed layout · v002</span></div>
     <nav aria-label="Camera views">
-      <button type="button" data-view="orbit" aria-pressed="true">3D overview</button>
-      <button type="button" data-view="plan" aria-pressed="false">Bird’s-eye</button>
-      <button type="button" data-view="walk" aria-pressed="false">Eye-level / WASD</button>
-      <button type="button" id="fit">Fit view</button>
+      <button type="button" data-view="orbit" aria-label="3D overview" aria-pressed="true"><span class="wide-label">3D overview</span><span class="compact-label">3D</span></button>
+      <button type="button" data-view="plan" aria-label="Bird’s-eye" aria-pressed="false"><span class="wide-label">Bird’s-eye</span><span class="compact-label">Plan</span></button>
+      <button type="button" data-view="walk" aria-label="Eye-level / WASD" aria-pressed="false"><span class="wide-label">Eye-level / WASD</span><span class="compact-label">Walk</span></button>
+      <button type="button" id="fit" aria-label="Fit view"><span class="wide-label">Fit view</span><span class="compact-label" id="fit-compact">Fit</span></button>
     </nav>
-    <button type="button" id="panel-toggle" aria-expanded="true" aria-controls="panel">Layers &amp; details</button>
+    <button type="button" id="panel-toggle" aria-expanded="false" aria-controls="panel">Settings</button>
   </header>
   <main>
     <section id="stage" aria-label="Interactive services model">
@@ -36,7 +36,9 @@
         <button type="button" data-move="d" aria-label="Move right">Right</button>
       </div>
     </section>
-    <aside id="panel">
+    <button type="button" id="panel-backdrop" aria-label="Close settings" hidden></button>
+    <aside id="panel" aria-label="Services settings" hidden>
+      <div class="panel-heading"><h2>Settings</h2><button type="button" id="panel-close" aria-label="Close settings">Close</button></div>
       <h2>See through the floor</h2>
       <label class="field">Walls <select id="walls"><option value="ghost">Transparent</option><option value="hidden">Hidden</option><option value="solid">Solid</option></select></label>
       <label class="field">Focus room <select id="room"><option value="">Entire floor</option></select></label>

@@ -102,14 +102,14 @@ function setView(id, reset = true) {
     updateLook();
     for (const button of viewButtons) button.setAttribute('aria-pressed', String(button.dataset.view === id));
     $('#movement').hidden = false;
-    $('#fit').textContent = 'Reset position';
+    setFitLabel('Reset position');
     $('#view-note').textContent = 'Click view · WASD / arrows move · drag to look · Q/E turn · R/F look up/down · passes through walls';
     resize();
     canvas.focus({ preventScroll: true });
     return;
   }
   $('#movement').hidden = true;
-  $('#fit').textContent = 'Fit view';
+  setFitLabel('Fit view');
   if (id === 'plan') {
     camera.up.set(0, 0, -1);
     camera.position.copy(target).add(new THREE.Vector3(0, 30, 0));
@@ -145,6 +145,11 @@ function setView(id, reset = true) {
     camera.position.copy(target).addScaledVector(direction, distance * 1.08);
     controls.update(); render();
   }
+}
+
+function setFitLabel(label) {
+  $('#fit').setAttribute('aria-label', label);
+  $('#fit-compact').textContent = label === 'Reset position' ? 'Reset' : 'Fit';
 }
 
 function updateLayers() {
@@ -288,11 +293,19 @@ for (const button of document.querySelectorAll('[data-preset]')) button.addEvent
   updateLayers();
 });
 $('#panel-toggle').addEventListener('click', () => {
-  const open = $('#panel').hidden;
-  $('#panel').hidden = !open; document.body.classList.toggle('panel-closed', !open);
-  $('#panel-toggle').setAttribute('aria-expanded', String(open)); resize();
+  setPanel($('#panel').hidden);
 });
-if (matchMedia('(max-width:760px)').matches) $('#panel-toggle').click();
+function setPanel(open) {
+  $('#panel').hidden = !open;
+  $('#panel-backdrop').hidden = !open;
+  $('#panel-toggle').setAttribute('aria-expanded', String(open));
+  $('#panel-toggle').textContent = open ? 'Close settings' : 'Settings';
+}
+$('#panel-close').addEventListener('click', () => setPanel(false));
+$('#panel-backdrop').addEventListener('click', () => setPanel(false));
+window.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && !$('#panel').hidden) setPanel(false);
+});
 $('#retry').addEventListener('click', load);
 $('#clear').addEventListener('click', () => clearSelection());
 canvas.addEventListener('pointerdown', e => {
