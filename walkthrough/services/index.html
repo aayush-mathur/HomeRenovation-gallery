@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>First-floor services inspection</title>
-  <link rel="stylesheet" href="./styles.css?v=68b52492107fe259">
+  <link rel="stylesheet" href="./styles.css?v=cc67cb3613164336">
   <script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
 </head>
 <body>
@@ -28,6 +28,11 @@
   <main>
     <section id="stage" aria-label="Interactive services model">
       <canvas id="model" tabindex="0" aria-label="3D services. Overview: drag to orbit, scroll to zoom. Eye-level: drag to look, WASD or arrow keys move, Page Up/Down raises and lowers the camera. Free inspection passes through walls."></canvas>
+      <div id="trace-banner" hidden>
+        <p id="trace-summary" role="status"></p>
+        <button id="trace-details" type="button">Details</button>
+        <button id="stop-trace" type="button">Clear trace</button>
+      </div>
       <div id="loading"><h2>Opening the services model</h2><p id="load-status" role="status">Loading and verifying geometry…</p><button id="retry" type="button" hidden>Retry model</button></div>
       <div id="movement" aria-label="Eye-level movement" hidden>
         <button type="button" id="services-stick" aria-label="Movement joystick. Hold and drag to move; release to stop. Keyboard: WASD or arrows." aria-pressed="false"><span class="stick-knob" aria-hidden="true"></span><span class="stick-label" aria-hidden="true">Move</span></button>
@@ -72,7 +77,7 @@
       <section id="selection" class="selection" aria-label="Selected element">
         <h2 id="selection-title">Pick a route or fitting</h2>
         <p id="selection-text">Tap the visible model to inspect a segment. Transparent walls do not block selection.</p>
-        <button id="trace-route" type="button" hidden>Trace entire run</button>
+        <button id="trace-route" type="button" hidden>Trace model route</button>
         <p id="trace-status" role="status" aria-live="polite"></p>
         <button id="clear-trace" type="button" hidden>Clear trace</button>
         <button id="clear" type="button" hidden>Clear selection</button>
@@ -81,6 +86,6 @@
     </aside>
   </main>
   <footer><p id="status" role="status">Not for installation. Lines are proposed routes, not verified wiring circuits.</p></footer>
-  <script type="module" src="./app.js?v=970be1919f26ac6d"></script>
+  <script type="module" src="./app.js?v=f60a4c71bc19b8b4"></script>
 </body>
 </html>

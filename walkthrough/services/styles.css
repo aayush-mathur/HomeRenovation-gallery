@@ -66,6 +66,9 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;bo
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 #view-note,.touch-instructions{font-size:.8rem;color:#4d5c67;margin:8px 0}
 #restore-controls{display:none}
+#trace-banner{position:absolute;z-index:2;top:12px;left:12px;max-width:min(560px,calc(100% - 24px));display:flex;flex-wrap:wrap;gap:8px;padding:10px;background:#f3f5f7;border:1px solid #8b98a3;border-radius:6px}
+#trace-summary{flex-basis:100%;margin:0;font-size:.85rem;overflow-wrap:anywhere}
+@media(max-width:760px){#trace-banner{top:124px}.phone-exploring #trace-banner{top:64px}}
 .viewer-nav a{display:flex;align-items:center;min-height:44px;text-decoration:none}
 .viewer-nav a[aria-current]{color:#262d33;font-weight:700;border-bottom:2px solid #226b9b}
 #panel #fit{margin:16px 0 4px}

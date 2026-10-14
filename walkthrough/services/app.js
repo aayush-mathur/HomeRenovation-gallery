@@ -235,6 +235,8 @@ function clearTrace(resetSelection = false) {
   if (resetSelection) traceSelection = null;
   $('#trace-status').textContent = '';
   $('#clear-trace').hidden = true;
+  $('#trace-banner').hidden = true;
+  $('#trace-summary').textContent = '';
 }
 
 function traceRoute() {
@@ -264,11 +266,17 @@ function traceRoute() {
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(worldPositions, 3));
     traced.add(new THREE.Mesh(geometry, new THREE.MeshBasicMaterial({
-      color: '#ffe052', side: THREE.DoubleSide, depthTest: false, depthWrite: false
+      color: '#ffe052', side: THREE.DoubleSide, depthTest: false, depthWrite: false,
+      transparent: true, opacity: 1, toneMapped: false
     })));
   }
   traced.renderOrder = 20;
   for (const mesh of traced.children) mesh.renderOrder = 20;
+  if (!pieces) {
+    clearTrace(false);
+    $('#trace-status').textContent = 'No model pieces matched this route. Select another visible route and try again.';
+    return;
+  }
   scene.add(traced);
   for (const { mesh, descriptor } of buckets) {
     if (['walls','floor'].includes(descriptor.role) || ['context','access'].includes(descriptor.system)) continue;
@@ -276,8 +284,12 @@ function traceRoute() {
     mesh.material.opacity = .14;
     mesh.material.depthWrite = false;
   }
-  $('#trace-status').textContent = `Highlighted ${pieces} connected-looking route pieces named “${traceSelection.name}”. This follows the proposed model path; it does not prove an electrically connected circuit.`;
+  $('#trace-status').textContent = `Highlighted ${pieces} model pieces named “${traceSelection.name}”. Only this named route is traced, not upstream supplies or other branches. The model does not define verified circuit connectivity.`;
+  $('#trace-summary').textContent = `${traceSelection.name} · ${pieces} pieces in yellow`;
+  $('#trace-banner').hidden = false;
   $('#clear-trace').hidden = false;
+  setPanel(false);
+  canvas.focus({ preventScroll: true });
   render();
 }
 
@@ -326,7 +338,7 @@ function pick(event) {
   raycaster.setFromCamera(pointer, camera);
   const pickable = buckets.filter(b => b.mesh.visible && !['floor','walls'].includes(b.descriptor.role));
   const hit = raycaster.intersectObjects(pickable.map(b => b.mesh), false)[0];
-  if (!hit) { clearSelection(); return; }
+  if (!hit) { if (!traced) clearSelection(); return; }
   const bucket = pickable.find(b => b.mesh === hit.object);
   const item = bucket.descriptor.items.find(i => hit.faceIndex >= i.first && hit.faceIndex < i.first + i.count);
   if (!item) return;
@@ -424,6 +436,12 @@ $('#fullscreen').addEventListener('click', () => { void toggleFullscreen(); });
 document.addEventListener('fullscreenchange', syncFullscreen);
 $('#trace-route').addEventListener('click', traceRoute);
 $('#clear-trace').addEventListener('click', () => { clearTrace(false); render(); });
+$('#stop-trace').addEventListener('click', () => { clearTrace(false); render(); canvas.focus({ preventScroll: true }); });
+$('#trace-details').addEventListener('click', () => {
+  setPanel(true);
+  $('#selection').scrollIntoView({ block: 'nearest' });
+  $('#clear-trace').focus({ preventScroll: true });
+});
 $('#room').addEventListener('change', () => { selectedRoom = $('#room').value; if (model) setView(mode); });
 for (const input of layerInputs) input.addEventListener('change', () => { preset = 'all'; updateLayers(); });
 for (const id of ['walls','carriers','cables','access','crossings']) $(`#${id}`).addEventListener('change', updateLayers);
@@ -573,5 +591,8 @@ new ResizeObserver(resize).observe(stage);
 window.servicesViewer = { snapshot: () => ({
   mode, position: camera?.position.toArray(), yaw, pitch,
   joystick: { active: stickPointer !== null, input: [...stickInput] },
+  trace: { active: Boolean(traced), route: traceSelection?.name || null,
+    system: traceSelection?.system || null, role: traceSelection?.role || null,
+    triangles: traced ? traced.children.reduce((sum, mesh) => sum + mesh.geometry.getAttribute('position').count / 3, 0) : 0 },
 }) };
 load();
