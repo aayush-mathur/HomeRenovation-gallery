@@ -25,6 +25,15 @@ export function isSafe(nav, x, y) {
     && nav.cells[row * nav.width + col] === '1';
 }
 
+export function inspectionNavigation(nav) {
+  if (typeof nav.inspection_cells !== 'string' ||
+      nav.inspection_cells.length !== nav.width * nav.height ||
+      /[^01]/.test(nav.inspection_cells)) {
+    throw new Error('Furniture-pass-through navigation is missing or invalid. Reload the updated walkthrough.');
+  }
+  return { ...nav, cells: nav.inspection_cells };
+}
+
 export function move(nav, position, dx, dy, dynamicSafe = () => true) {
   const count = Math.max(1, Math.ceil(Math.hypot(dx, dy) / (nav.step * .35)));
   let [x, y] = position;

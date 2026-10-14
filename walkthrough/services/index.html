@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>First-floor services inspection</title>
-  <link rel="stylesheet" href="./styles.css?v=c7250f7186ab4b35">
+  <link rel="stylesheet" href="./styles.css?v=31087e29cdbbf88d">
   <script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
 </head>
 <body>
@@ -31,12 +31,11 @@
       <div id="loading"><h2>Opening the services model</h2><p id="load-status" role="status">Loading and verifying geometry…</p><button id="retry" type="button" hidden>Retry model</button></div>
       <div class="view-note" id="view-note">Drag to rotate · right-drag to pan · scroll to zoom</div>
       <div id="movement" aria-label="Eye-level movement" hidden>
-        <button type="button" data-move="w" aria-label="Move forward">Forward</button>
-        <button type="button" data-move="a" aria-label="Move left">Left</button>
-        <button type="button" data-move="s" aria-label="Move backward">Back</button>
-        <button type="button" data-move="d" aria-label="Move right">Right</button>
+        <button type="button" id="services-stick" aria-label="Movement joystick. Hold and drag to move; release to stop. Keyboard: WASD or arrows." aria-pressed="false"><span class="stick-knob" aria-hidden="true"></span><span class="stick-label" aria-hidden="true">Move</span></button>
+        <div class="height-controls">
         <button type="button" data-move="PageUp" aria-label="Raise eye-level camera">Rise</button>
         <button type="button" data-move="PageDown" aria-label="Lower eye-level camera">Lower</button>
+        </div>
       </div>
     </section>
     <button type="button" id="panel-backdrop" aria-label="Close settings" hidden></button>
@@ -79,6 +78,6 @@
     </aside>
   </main>
   <footer><p id="status" role="status">Not for installation. Lines are proposed routes, not verified wiring circuits.</p><span>Touch: one finger rotates · two fingers pan / zoom</span></footer>
-  <script type="module" src="./app.js?v=ccf589f60abe48ee"></script>
+  <script type="module" src="./app.js?v=70bc3b56e98b5039"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@
   "units": "meters",
   "eye_height": 1.6,
   "triangles": 344798,
+  "inspection_navigation_sha256": "ec4b4ccfb542d01ab8ec85153a00faa43e844511fe07fb0b1e6c5ba032e1d8c5",
   "source": "house_layout_v021.blend",
   "layout_revision": {
     "version": "layout-v021"

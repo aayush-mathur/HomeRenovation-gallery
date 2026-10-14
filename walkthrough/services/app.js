@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from '../vendor/GLTFLoader.js';
 import { OrbitControls } from './vendor/OrbitControls.js';
+import { joystickVector } from '../navigation.js?controls=4';
 
 const $ = selector => document.querySelector(selector);
 const canvas = $('#model');
@@ -22,14 +23,25 @@ let down;
 let lookPointer = null, yaw = 0, pitch = 0, motionFrame = null, lastMotion = 0;
 const held = new Set();
 const movePointers = new Map();
+const stick = $('#services-stick');
+let stickPointer = null, stickOrigin = null, stickInput = [0, 0];
 const movementKeys = new Set(['w','a','s','d','ArrowUp','ArrowDown','ArrowLeft','ArrowRight','q','e','r','f','PageUp','PageDown']);
 
 function stopMotion() {
   held.clear();
   movePointers.clear();
+  resetStick();
   if (motionFrame !== null) cancelAnimationFrame(motionFrame);
   motionFrame = null;
   for (const button of document.querySelectorAll('[data-move]')) button.setAttribute('aria-pressed', 'false');
+}
+
+function resetStick() {
+  const pointerId = stickPointer;
+  stickPointer = null; stickOrigin = null; stickInput = [0, 0];
+  stick.firstElementChild.style.transform = '';
+  stick.setAttribute('aria-pressed', 'false');
+  if (pointerId !== null && stick.hasPointerCapture(pointerId)) stick.releasePointerCapture(pointerId);
 }
 
 function updateLook() {
@@ -39,13 +51,14 @@ function updateLook() {
 
 function moveFrame(now) {
   motionFrame = null;
-  if (mode !== 'walk' || (!held.size && !movePointers.size)) return;
+  if (stickPointer !== null && !stick.hasPointerCapture(stickPointer)) resetStick();
+  if (mode !== 'walk' || (!held.size && !movePointers.size && stickPointer === null)) return;
   const dt = Math.min((now - lastMotion) / 1000, .05);
   lastMotion = now;
   const keys = new Set([...held, ...movePointers.values()]);
-  const forward = Number(keys.has('w') || keys.has('ArrowUp')) - Number(keys.has('s') || keys.has('ArrowDown'));
-  const side = Number(keys.has('d') || keys.has('ArrowRight')) - Number(keys.has('a') || keys.has('ArrowLeft'));
-  const length = Math.hypot(forward, side) || 1;
+  const forward = Number(keys.has('w') || keys.has('ArrowUp')) - Number(keys.has('s') || keys.has('ArrowDown')) + stickInput[1];
+  const side = Number(keys.has('d') || keys.has('ArrowRight')) - Number(keys.has('a') || keys.has('ArrowLeft')) + stickInput[0];
+  const length = Math.max(1, Math.hypot(forward, side));
   yaw += (Number(keys.has('q')) - Number(keys.has('e'))) * dt * 1.3;
   pitch = THREE.MathUtils.clamp(pitch + (Number(keys.has('r')) - Number(keys.has('f'))) * dt, -1.45, 1.45);
   camera.position.y = THREE.MathUtils.clamp(
@@ -108,7 +121,7 @@ function setView(id, reset = true) {
     for (const button of viewButtons) button.setAttribute('aria-pressed', String(button.dataset.view === id));
     $('#movement').hidden = false;
     setFitLabel('Reset position');
-    $('#view-note').textContent = 'Drag to look · Page Up/Down or Rise/Lower changes height · passes through walls';
+    $('#view-note').textContent = 'Thumbstick or WASD to move · drag to look · Rise/Lower changes height · passes through walls';
     resize();
     canvas.focus({ preventScroll: true });
     return;
@@ -424,6 +437,11 @@ $('#panel-toggle').addEventListener('click', () => {
   setPanel($('#panel').hidden);
 });
 function setPanel(open) {
+  if (open) {
+    stopMotion();
+    if (lookPointer && canvas.hasPointerCapture(lookPointer.id)) canvas.releasePointerCapture(lookPointer.id);
+    lookPointer = null; down = null;
+  }
   $('#panel').hidden = !open;
   $('#panel-backdrop').hidden = !open;
   $('#panel-toggle').setAttribute('aria-expanded', String(open));
@@ -486,6 +504,32 @@ window.addEventListener('keyup', e => held.delete(e.key.length === 1 ? e.key.toL
 canvas.addEventListener('blur', () => { held.clear(); });
 window.addEventListener('blur', stopMotion);
 document.addEventListener('visibilitychange', () => { if (document.hidden) stopMotion(); });
+stick.addEventListener('pointerdown', event => {
+  if (mode !== 'walk' || loading || stickPointer !== null || event.button !== 0) return;
+  event.preventDefault();
+  stick.focus({ preventScroll: true });
+  stickPointer = event.pointerId;
+  stickOrigin = [event.clientX, event.clientY];
+  stick.setPointerCapture(event.pointerId);
+  stick.setAttribute('aria-pressed', 'true');
+  startMotion();
+});
+stick.addEventListener('pointermove', event => {
+  if (event.pointerId !== stickPointer) return;
+  const x = event.clientX - stickOrigin[0], y = event.clientY - stickOrigin[1];
+  stickInput = joystickVector(x, y);
+  const scale = Math.min(1, 40 / (Math.hypot(x, y) || 1));
+  stick.firstElementChild.style.transform = `translate(${x * scale}px, ${y * scale}px)`;
+});
+for (const name of ['pointerup', 'pointercancel', 'lostpointercapture']) {
+  stick.addEventListener(name, event => { if (event.pointerId === stickPointer) resetStick(); });
+}
+stick.addEventListener('keydown', event => {
+  const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+  if (mode !== 'walk' || !movementKeys.has(key)) return;
+  event.preventDefault(); held.add(key); startMotion();
+});
+stick.addEventListener('blur', () => held.clear());
 for (const button of document.querySelectorAll('[data-move]')) {
   button.setAttribute('aria-pressed','false');
   button.addEventListener('pointerdown', event => {
@@ -511,8 +555,13 @@ for (const button of document.querySelectorAll('[data-move]')) {
   button.addEventListener('blur', () => held.delete(button.dataset.move));
 }
 canvas.addEventListener('webglcontextlost', event => {
+  stopMotion();
   event.preventDefault(); $('#loading').hidden = false;
   $('#load-status').textContent = 'Graphics context lost. Reload this page to restore the model.';
 });
 new ResizeObserver(resize).observe(stage);
+window.servicesViewer = { snapshot: () => ({
+  mode, position: camera?.position.toArray(), yaw, pitch,
+  joystick: { active: stickPointer !== null, input: [...stickInput] },
+}) };
 load();

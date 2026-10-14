@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
-import { isSafe, move, movementVector, movementSpeed, joystickVector, roomAt, applyLens } from './navigation.js?lens=1&controls=3';
+import { isSafe, move, movementVector, movementSpeed, joystickVector, roomAt, applyLens, inspectionNavigation } from './navigation.js?lens=1&controls=4';
 import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=385a64a657a99098';
 import { createFixtureLighting } from './fixture-lighting.js?v=07ea12a8efadecfe';
 import { initBoardPlanning } from './electrical-board-planning.js?v=365d86c924ce5e04';
@@ -235,6 +235,17 @@ async function load() {
     await verifyHash(navBytes, manifest.navigation_sha256, 'Navigation');
     nav = JSON.parse(new TextDecoder().decode(navBytes));
     if (!nav.presets?.length || nav.cells.length !== nav.width * nav.height) throw new Error('Navigation export is incomplete.');
+    const inspectionBytes = await (await checkedFetch(
+      `./model/inspection.json?v=${manifest.inspection_navigation_sha256}`, signal)).arrayBuffer();
+    await verifyHash(inspectionBytes, manifest.inspection_navigation_sha256, 'Inspection navigation');
+    const inspection = JSON.parse(new TextDecoder().decode(inspectionBytes));
+    if (inspection.base_navigation_sha256 !== manifest.navigation_sha256 ||
+        inspection.step !== nav.step || inspection.width !== nav.width || inspection.height !== nav.height ||
+        JSON.stringify(inspection.origin) !== JSON.stringify(nav.origin)) {
+      throw new Error('Inspection navigation does not match this house.');
+    }
+    nav.inspection_cells = inspection.cells;
+    nav = inspectionNavigation(nav);
     $('loading-detail').textContent = `Opening ${(manifest.bytes / 1e6).toFixed(1)} MB of house geometry…`;
     const bytes = await (await checkedFetch(`./model/house.glb?v=${manifest.model_sha256}`, signal)).arrayBuffer();
     await verifyHash(bytes, manifest.model_sha256, 'Model');
@@ -333,7 +344,7 @@ function animate(time) {
     const next = move(nav, position, dx, dy);
     const hit = Math.hypot(dx, dy) > 0 && Math.hypot(next[0] - position[0], next[1] - position[1]) < Math.hypot(dx, dy) * .2;
     const location = roomAt(nav, next);
-    if (!inputNotice && hit && !blocked) message('Wall or furniture · turn or sidestep to follow the clear aisle');
+    if (!inputNotice && hit && !blocked) message('Wall or floor boundary · turn or sidestep. Furniture is pass-through.');
     if (!inputNotice && !hit && (blocked || currentRoom !== location?.id)) message(`${location?.name || 'Passage'} · eye height 1.6 m`);
     currentRoom = location?.id;
     blocked = hit;

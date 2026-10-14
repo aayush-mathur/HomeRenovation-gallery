@@ -15,7 +15,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
   <link rel="stylesheet" href="./electrical-planning.css?v=831b2e16568db094">
   <link rel="stylesheet" href="./electrical-board-labels.css?v=12dd7f4c9b1aa00d">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script type="module" src="./app.js?v=779daf2a051c8a59"></script>
+  <script type="module" src="./app.js?v=4cf813fcaa75d9c1"></script>
   <!-- offline-runtime -->
   <link rel="stylesheet" href="./offline.css">
   <script type="module" src="./offline-client.js"></script>
@@ -36,9 +36,9 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <button id="help" aria-expanded="false" aria-controls="instructions">Help</button>
     <div data-offline-host></div>
     <div data-electrical-host></div>
+    <a href="./services/" title="Bird’s-eye and see-through inspection of proposed routes">Services 3D</a>
     <div id="ceiling-feedback" hidden><p id="ceiling-status" role="status" aria-live="polite" aria-atomic="true"></p><button id="ceiling-retry" hidden>Retry ceiling</button></div>
   <a href="./landing/" title="Separate intermediate landing; not connected to this floor">Landing study</a>
-  <a href="./services/" title="Bird's-eye and see-through inspection of proposed routes">Services 3D</a>
   </header>
   <footer>
     <div id="lens-controls">
@@ -65,14 +65,14 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
       <p id="ceiling-help" hidden><strong>Ceiling concepts:</strong> switch the whole floor, including bedrooms, without moving your view. Existing restores the original ceiling fixtures. Fans are static provisions, not rotating. Web lighting and emissive faces are approximate; use Cycles reference previews for lighting comparisons. <span id="ceiling-note"></span></p>
       <p><strong>Starting view:</strong> each fresh visit opens Sculpted Luxe with proposed switchboards and nearby board labels. Tap a label without dragging to read each control and why the board is there, or use the Switchboards list. Labels respect walls, distance and your view; unresolved equipment needs stay list-only. Hide labels or boards for a clean view. Choose another ceiling at any time; loading will not overwrite your choice. Saving an offline copy still requires the Download button.</p>
       <p><strong>Walk:</strong> click or tab into the view or movement pad, then use <kbd>W A S D</kbd> or arrow keys. <kbd>Q E</kbd> turn; <kbd>R F</kbd> look up/down. Touch: hold and drag the thumbstick to walk; drag farther to walk faster. Release to stop. Use a second finger on the house to look while moving.</p>
-      <p id="pace-help"><strong>Pace:</strong> switch Walk (1.35 m/s) to Faster (2 m/s) with the pace button. The thumbstick still gives fine control near its centre. On desktop, hold <kbd>Shift</kbd> while walking for temporary Faster pace; release it to return to your selected pace. Faster does not climb stairs or pass through furniture. Each page visit starts in Walk.</p>
+      <p id="pace-help"><strong>Pace:</strong> switch Walk (1.35 m/s) to Faster (2 m/s) with the pace button. The thumbstick still gives fine control near its centre. On desktop, hold <kbd>Shift</kbd> while walking for temporary Faster pace; release it to return to your selected pace. Both paces pass through furniture for inspection, but not walls or floor boundaries. Each page visit starts in Walk.</p>
       <p><strong>Finger + pen:</strong> hold the movement pad with a finger and drag the house with the pen tip, in either order. Pen hover does not turn the view. Some tablets reject finger input when a pen is nearby; a website cannot override that device behavior. If movement stops, lift the pen and touch the pad again, or use two fingers. Cancelled finger input always stops walking safely.</p>
       <button id="input-diagnostics" type="button" aria-pressed="false" aria-controls="input-diagnostics-log">Record input diagnostics</button>
       <p class="note">Optional troubleshooting: records only pointer type/ID and start/stop/focus reasons in this page's memory. No coordinates, personal data, storage or upload. Reopen Help after reproducing the problem to read the last 20 events; turn recording off to clear them.</p>
       <pre id="input-diagnostics-log" role="status" aria-live="polite" hidden></pre>
       <p><strong>Walk between rooms:</strong> interior doors are held open on their real hinges, with leaves and handles intact. Walk through doorways normally; the room menu is just an optional shortcut.</p>
       <p><strong>Storage opening is disabled:</strong> cupboards and drawers stay in their closed, fixed positions while you explore. Click/tap only focuses the view; dragging looks around. Furniture and room layouts are retained.</p>
-      <p><strong>Narrow aisles:</strong> use sideways steps around beds and furniture. <span id="clearance-note">The preview uses a 40 cm round body; narrow furniture aisles are not an accessible-design approval.</span> Reset position returns to your selected starting room.</p>
+      <p><strong>Furniture pass-through:</strong> beds, sofas, tables, cabinetry and fixtures no longer block navigation. Their geometry and positions are unchanged. Walls, doors, fixed glazing, partitions, guards and floor boundaries remain solid. <span id="clearance-note">The preview retains a 40 cm round body against structural barriers; passing through furniture is an inspection aid, not proof of usable aisles or accessibility.</span> Reset position returns to your selected starting room.</p>
       <p class="note">1.6 m eye height. Simplified real-time materials and lighting, not Cycles. Mirrors are material approximations, not real reflections. Walking stays on this floor: stair flights are visual only, not climbable. The rear OTS has a provisional open metal grate at floor level with the shaft void below; grating, supports and glazing are visualization only, not certified load-bearing construction. Other exterior exits remain blocked.</p>
       <button id="close-help">Back to house</button>
     </div>
