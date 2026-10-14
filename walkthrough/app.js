@@ -115,6 +115,8 @@ function selectCeiling(id, options) {
 function disposeCeilings() {
   ceilings?.dispose(); ceilings = null; ceilingOptions = null; ceilingUnavailable = '';
   ceilingRequest = Promise.resolve();
+  $('ceiling-alert').hidden = true;
+  $('ceiling-alert').textContent = '';
   for (const id of ['ceiling-controls', 'ceiling-feedback', 'ceiling-help', 'quality']) $(id).hidden = true;
   document.querySelector('header').classList.remove('has-ceilings');
 }
@@ -127,6 +129,8 @@ function renderCeilings(state) {
     ? `Loading ${pending.label}… Still showing ${variant?.label || 'Existing'}.`
     : `${variant?.summary || 'Original ceiling and fixtures.'} Concepts only · web lighting is approximate.`);
   $('ceiling-feedback').dataset.error = String(Boolean(state.error));
+  $('ceiling-alert').hidden = !state.error;
+  $('ceiling-alert').textContent = state.error ? `${state.error} Open Settings for ceiling recovery.` : '';
   $('ceiling-retry').hidden = !state.failed;
   $('quality').hidden = !ceilingOptions?.quality || state.selected !== 'sculpted';
   $('quality').disabled = Boolean(state.pending);
@@ -189,6 +193,8 @@ function setupCeilings() {
     $('ceiling-feedback').hidden = false;
     $('ceiling-feedback').dataset.error = 'true';
     $('ceiling-status').textContent = ceilingUnavailable;
+    $('ceiling-alert').textContent = ceilingUnavailable;
+    $('ceiling-alert').hidden = false;
     $('ceiling-retry').hidden = true;
   }
 }
@@ -271,7 +277,7 @@ async function load() {
       THREE, scene, camera, stage, model, container: document.querySelector('[data-electrical-host]'),
       houseDescriptor: manifest, releaseInput: clearInput, initialPlates: STARTUP_VIEW.electricalPlates,
       isInputBusy: () => stickPointer !== null || Boolean(dragging) || keys.size > 0 || document.pointerLockElement === canvas,
-      revealControls: () => { if (document.fullscreenElement) showControls(true); },
+      revealControls: () => showControls(true),
     });
     // The GLB contains the authored closed pose. Do not instantiate animation,
     // picking or dynamic collision controllers in this stability fallback.
@@ -406,28 +412,36 @@ on(document, 'fullscreenchange', () => {
   const active = Boolean(document.fullscreenElement);
   $('fullscreen').textContent = active ? 'Exit full screen' : 'Full screen';
   $('fullscreen').setAttribute('aria-pressed', String(active));
-  document.body.classList.toggle('immersive', active);
-  $('toggle-controls').hidden = !active;
   showControls(false);
   resize();
   if (ready) canvas.focus({ preventScroll: true });
 });
 function showControls(open) {
   release();
-  const expanded = Boolean(document.fullscreenElement) && open;
+  if (open) document.body.classList.remove('phone-exploring');
+  const expanded = open;
   document.body.classList.toggle('controls-open', expanded);
   $('toggle-controls').setAttribute('aria-expanded', String(expanded));
-  $('toggle-controls').textContent = expanded ? 'Hide controls' : 'Show controls';
+  $('toggle-controls').textContent = expanded ? 'Close settings' : 'Settings';
 }
 on($('toggle-controls'), 'click', () => {
   const open = !document.body.classList.contains('controls-open');
   showControls(open);
   if (open) {
     help(false);
-    $('room').focus({ preventScroll: true });
+    $('close-settings').focus({ preventScroll: true });
   } else {
     $('toggle-controls').focus({ preventScroll: true });
   }
+});
+on($('close-settings'), 'click', () => {
+  showControls(false);
+  $('toggle-controls').focus({ preventScroll: true });
+});
+on($('restore-controls'), 'click', () => {
+  release();
+  document.body.classList.remove('phone-exploring');
+  $('toggle-controls').focus({ preventScroll: true });
 });
 function help(open) {
   release();
@@ -436,7 +450,7 @@ function help(open) {
   if (open) {
     showControls(false);
     $('close-help').focus();
-  } else if (document.fullscreenElement && !document.body.classList.contains('controls-open')) {
+  } else if (!document.body.classList.contains('controls-open')) {
     $('toggle-controls').focus();
   } else {
     $('help').focus();
@@ -545,12 +559,12 @@ on(window, 'blur', event => { traceInput('window-blur', event, 'all'); release()
 on(window, 'resize', event => { traceInput('resize', event, 'all'); release(); });
 on(document, 'visibilitychange', event => { traceInput('visibilitychange', event, 'all'); release(); previous = 0; });
 on(document, 'pointerdown', event => {
-  if (event.target.closest('header, footer, #instructions, .offline-panel, .electrical-planning')) {
+  if (event.target.closest('header, footer, #walkthrough-controls, #instructions, .offline-panel, .electrical-planning')) {
     traceInput('control interaction', event, 'all'); clearInput();
   }
 });
 on(document, 'focusin', event => {
-  if (event.target.closest('header, footer, #instructions, .offline-panel, .electrical-planning')) {
+  if (event.target.closest('header, footer, #walkthrough-controls, #instructions, .offline-panel, .electrical-planning')) {
     traceInput('control focus', event, 'all'); clearInput();
   }
 });
@@ -574,6 +588,9 @@ on(stick, 'pointerdown', event => {
   event.preventDefault();
   if (dragging) dragging.label = null;
   if (document.body.classList.contains('controls-open')) showControls(false);
+  if (matchMedia('(any-pointer: coarse), (max-width: 700px)').matches) {
+    document.body.classList.add('phone-exploring');
+  }
   const rect = stick.getBoundingClientRect();
   stickOrigin = { x: rect.x + rect.width / 2, y: rect.y + rect.height / 2 };
   stickPointer = event.pointerId;

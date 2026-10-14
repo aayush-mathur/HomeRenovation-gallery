@@ -11,45 +11,52 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
   <meta name="color-scheme" content="light">
   <title>House walkthrough</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="./styles.css?v=74b6f73ab0663360">
+  <link rel="stylesheet" href="./styles.css?v=7d106b56a99c3320">
   <link rel="stylesheet" href="./electrical-planning.css?v=831b2e16568db094">
   <link rel="stylesheet" href="./electrical-board-labels.css?v=12dd7f4c9b1aa00d">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script type="module" src="./app.js?v=4cf813fcaa75d9c1"></script>
+  <script type="module" src="./app.js?v=de357ed284110e77"></script>
   <!-- offline-runtime -->
   <link rel="stylesheet" href="./offline.css">
   <script type="module" src="./offline-client.js"></script>
   <!-- /offline-runtime -->
 </head>
 <body>
-  <button id="toggle-controls" aria-expanded="false" aria-controls="walkthrough-controls" hidden>Show controls</button>
-  <div id="walkthrough-controls">
-  <header>
-    <div class="title"><h1>House walkthrough</h1><span id="model-version">Public walkthrough</span></div>
-    <div class="room-field"><label for="room">Jump to room <span class="note">(optional)</span></label><select id="room" disabled><option>Loading rooms…</option></select></div>
+  <button id="restore-controls" type="button">Show controls</button>
+  <header class="main-toolbar">
+    <h1 class="visually-hidden">House walkthrough</h1>
+    <nav class="viewer-nav" aria-label="Explore"><a href="./" aria-current="page">House</a><a href="./services/">Services</a><a href="../">Gallery</a></nav>
+    <div class="room-field"><label for="room">Room</label><select id="room" disabled><option>Loading rooms…</option></select></div>
+    <button id="fullscreen" aria-pressed="false">Full screen</button>
+    <button id="toggle-controls" aria-expanded="false" aria-controls="walkthrough-controls">Settings</button>
+  </header>
+  <aside id="walkthrough-controls" aria-label="House settings">
+  <section class="settings-section">
+    <div class="settings-heading"><h2>House settings</h2><button id="close-settings" type="button">Close</button></div>
+    <span id="model-version" class="note">Local only</span>
+    <h3>Appearance</h3>
     <div id="ceiling-controls" hidden><label for="ceiling">Ceiling</label><select id="ceiling" aria-describedby="ceiling-status ceiling-help"><option value="existing">Existing</option></select></div>
     <button id="quality" aria-pressed="false" aria-describedby="ceiling-status" hidden>Try baked lighting</button>
+    <div id="ceiling-feedback" hidden><p id="ceiling-status" role="status" aria-live="polite" aria-atomic="true"></p><button id="ceiling-retry" hidden>Retry ceiling</button></div>
+    <div data-electrical-host></div>
+    <h3>Movement</h3>
     <button id="reset" disabled>Reset position</button>
     <button id="pace" type="button" aria-pressed="false" aria-describedby="pace-help">Pace: Walk</button>
     <button id="capture" disabled>Mouse look</button>
-    <button id="fullscreen" aria-pressed="false">Full screen</button>
     <button id="help" aria-expanded="false" aria-controls="instructions">Help</button>
-    <div data-offline-host></div>
-    <div data-electrical-host></div>
-    <a href="./services/" title="Bird’s-eye and see-through inspection of proposed routes">Services 3D</a>
-    <div id="ceiling-feedback" hidden><p id="ceiling-status" role="status" aria-live="polite" aria-atomic="true"></p><button id="ceiling-retry" hidden>Retry ceiling</button></div>
-  <a href="./landing/" title="Separate intermediate landing; not connected to this floor">Landing study</a>
-  </header>
-  <footer>
+    <h3>View</h3>
     <div id="lens-controls">
       <label for="lens">Lens <span class="lens-equivalent">35 mm eq.</span></label>
       <div class="lens-track"><input id="lens" type="range" min="16" max="70" step="0.1" value="18" aria-describedby="lens-hint lens-help" disabled><span id="lens-hint"><span>Wider view</span><span>Closer view</span></span></div>
       <output id="lens-value" for="lens">Auto</output>
       <button id="reset-lens" disabled>Reset lens</button>
     </div>
-    <p id="quick-help"><span class="desktop-help">Drag to look · WASD / arrows to walk · storage opening disabled</span><span class="touch-help">Drag to look · thumbstick to walk · storage stays closed</span></p><p id="status" role="status">Preparing walkthrough</p>
-  </footer>
-  </div>
+    <h3>Saved copy &amp; studies</h3>
+    <div data-offline-host></div>
+    <div id="study-links"><a href="./landing/" title="Separate intermediate landing; not connected to this floor">Landing study</a></div>
+  </section>
+  </aside>
+  <footer><p id="quick-help"><span class="desktop-help">Drag to look · WASD to move</span><span class="touch-help">Thumbstick to move · drag to look</span></p><p id="status" role="status">Preparing walkthrough</p><p id="ceiling-alert" role="alert" hidden></p></footer>
   <main id="stage" aria-label="Full-house first-person walkthrough">
     <canvas id="view" tabindex="0" aria-label="House view. Drag to look. WASD or arrow keys to walk. Q and E turn, R and F look up and down. Storage stays closed. Escape releases mouse." aria-describedby="quick-help"></canvas>
     <div id="loading" role="status" aria-live="polite">
@@ -60,7 +67,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <div id="instructions" hidden>
       <h2>Explore at eye level</h2>
       <p><strong>Look:</strong> drag anywhere in the view. On desktop, Mouse look captures the pointer; <kbd>Esc</kbd> releases it.</p>
-      <p><strong>Full screen:</strong> controls tuck away so the house fills the screen. Tap Show controls for rooms, ceilings, lens and Exit full screen. Hide controls or tap the house to tuck them away again. <kbd>Esc</kbd> also exits full screen in supported browsers.</p>
+      <p><strong>Settings:</strong> ceilings, switchboards, pace, mouse look, lens and offline copies are grouped here. Close, press <kbd>Esc</kbd> or tap the house to return to exploring. Room and Full screen stay in the top bar, including in full screen.</p>
       <p id="lens-help"><strong>Lens:</strong> lower millimetres give a wider view without moving you. The 16–70 mm slider uses 35 mm-equivalent focal lengths with a fixed 36 mm horizontal film gate; viewport height follows its aspect ratio. Auto preserves the original 62° vertical view, capped at 90° horizontally. Reset lens restores Auto, not your position. Wide views stretch edges, especially in portrait; this is not a simulation of human eyesight. Release Mouse look with <kbd>Esc</kbd> before using the slider.</p>
       <p id="ceiling-help" hidden><strong>Ceiling concepts:</strong> switch the whole floor, including bedrooms, without moving your view. Existing restores the original ceiling fixtures. Fans are static provisions, not rotating. Web lighting and emissive faces are approximate; use Cycles reference previews for lighting comparisons. <span id="ceiling-note"></span></p>
       <p><strong>Starting view:</strong> each fresh visit opens Sculpted Luxe with proposed switchboards and nearby board labels. Tap a label without dragging to read each control and why the board is there, or use the Switchboards list. Labels respect walls, distance and your view; unresolved equipment needs stay list-only. Hide labels or boards for a clean view. Choose another ceiling at any time; loading will not overwrite your choice. Saving an offline copy still requires the Download button.</p>

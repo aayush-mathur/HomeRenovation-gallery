@@ -4,23 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>First-floor services inspection</title>
-  <link rel="stylesheet" href="./styles.css?v=31087e29cdbbf88d">
+  <link rel="stylesheet" href="./styles.css?v=68b52492107fe259">
   <script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
 </head>
 <body>
+  <button id="restore-controls" type="button">Show controls</button>
   <!-- THESIS: Inspect proposed hidden services in space, not in a static drawing.
        OWN-WORLD: Extend the existing house viewer's slate, system type and plain controls.
        STORY: Orbit, look straight down, remove walls, isolate a service, pick a route.
        FIRST VIEWPORT: Floor occupies the canvas; compact views above, layer controls beside it.
        FORM: Precisely scoped inspection extension of the existing walkthrough. -->
   <header>
-    <a href="../">House walkthrough</a>
-    <div class="title"><h1>First-floor services</h1><span>Proposed layout · v002</span></div>
+    <h1 class="visually-hidden">First-floor services</h1>
+    <nav class="viewer-nav" aria-label="Explore"><a href="../">House</a><a href="./" aria-current="page">Services</a><a href="../../">Gallery</a></nav>
     <nav aria-label="Camera views">
-      <button type="button" data-view="orbit" aria-label="3D overview" aria-pressed="true"><span class="wide-label">3D overview</span><span class="compact-label">3D</span></button>
-      <button type="button" data-view="plan" aria-label="Bird’s-eye" aria-pressed="false"><span class="wide-label">Bird’s-eye</span><span class="compact-label">Plan</span></button>
-      <button type="button" data-view="walk" aria-label="Eye-level / WASD" aria-pressed="false"><span class="wide-label">Eye-level / WASD</span><span class="compact-label">Walk</span></button>
-      <button type="button" id="fit" aria-label="Fit view"><span class="wide-label">Fit view</span><span class="compact-label" id="fit-compact">Fit</span></button>
+      <button type="button" data-view="orbit" aria-label="3D overview" aria-pressed="true">3D</button>
+      <button type="button" data-view="plan" aria-label="Bird’s-eye" aria-pressed="false">Plan</button>
+      <button type="button" data-view="walk" aria-label="Eye-level / WASD" aria-pressed="false">Walk</button>
       <button type="button" id="fullscreen" aria-label="Enter full screen" aria-pressed="false"><span class="wide-label">Full screen</span><span class="compact-label" id="fullscreen-compact">Full</span></button>
     </nav>
     <button type="button" id="panel-toggle" aria-expanded="false" aria-controls="panel">Settings</button>
@@ -29,7 +29,6 @@
     <section id="stage" aria-label="Interactive services model">
       <canvas id="model" tabindex="0" aria-label="3D services. Overview: drag to orbit, scroll to zoom. Eye-level: drag to look, WASD or arrow keys move, Page Up/Down raises and lowers the camera. Free inspection passes through walls."></canvas>
       <div id="loading"><h2>Opening the services model</h2><p id="load-status" role="status">Loading and verifying geometry…</p><button id="retry" type="button" hidden>Retry model</button></div>
-      <div class="view-note" id="view-note">Drag to rotate · right-drag to pan · scroll to zoom</div>
       <div id="movement" aria-label="Eye-level movement" hidden>
         <button type="button" id="services-stick" aria-label="Movement joystick. Hold and drag to move; release to stop. Keyboard: WASD or arrows." aria-pressed="false"><span class="stick-knob" aria-hidden="true"></span><span class="stick-label" aria-hidden="true">Move</span></button>
         <div class="height-controls">
@@ -41,6 +40,10 @@
     <button type="button" id="panel-backdrop" aria-label="Close settings" hidden></button>
     <aside id="panel" aria-label="Services settings" hidden>
       <div class="panel-heading"><h2>Settings</h2><button type="button" id="panel-close" aria-label="Close settings">Close</button></div>
+      <h2>View controls</h2>
+      <p id="view-note">Drag to rotate · right-drag to pan · scroll to zoom</p>
+      <p class="touch-instructions">Touch: one finger rotates; two fingers pan / zoom.</p>
+      <button type="button" id="fit" aria-label="Fit view"><span class="wide-label">Fit view</span><span class="compact-label" id="fit-compact">Fit</span></button>
       <h2>See through the floor</h2>
       <label class="field">Walls <select id="walls"><option value="ghost">Transparent</option><option value="hidden">Hidden</option><option value="solid">Solid</option></select></label>
       <label class="field">Focus room <select id="room"><option value="">Entire floor</option></select></label>
@@ -77,7 +80,7 @@
       <details class="limits"><summary>What is still provisional?</summary><ul id="limits"></ul></details>
     </aside>
   </main>
-  <footer><p id="status" role="status">Not for installation. Lines are proposed routes, not verified wiring circuits.</p><span>Touch: one finger rotates · two fingers pan / zoom</span></footer>
-  <script type="module" src="./app.js?v=70bc3b56e98b5039"></script>
+  <footer><p id="status" role="status">Not for installation. Lines are proposed routes, not verified wiring circuits.</p></footer>
+  <script type="module" src="./app.js?v=970be1919f26ac6d"></script>
 </body>
 </html>

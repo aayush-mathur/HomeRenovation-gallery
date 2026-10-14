@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "release": "3cbef86a973eb02fc36157b1fa959e6a2013ad7f5f4b22227119cd4a1bcf8579",
-  "totalBytes": 46455803,
+  "release": "5634767e87410282ff0849d521e55a88858bba809f1dbc07854f6ea458b68559",
+  "totalBytes": 46459988,
   "files": [
     {
       "path": "app.js",
-      "bytes": 31853,
-      "sha256": "4cf813fcaa75d9c1a0bc13b91568d3323716fcb19c8ffbd392ea564d39674654"
+      "bytes": 32509,
+      "sha256": "de357ed284110e77711a9c11db4b13f1f70650d6b3dbab6785722919e234727b"
     },
     {
       "path": "ceiling-comparison.js",
@@ -50,8 +50,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 9689,
-      "sha256": "ce1ab015f3ae96948f1a5fb5f3f25f57d7021cc2e0176dac1518751e37480cd9"
+      "bytes": 10077,
+      "sha256": "13eafd65bffcd4f82308b20f9ac991b69258caf3e60c0f98ce3b7427296b41e6"
     },
     {
       "path": "model/ceilings/linear-242d4caf58d1df4f.glb",
@@ -130,13 +130,13 @@
     },
     {
       "path": "services/app.js",
-      "bytes": 26610,
-      "sha256": "70bc3b56e98b5039379bd1a23d193bca9bda3d5c8cd051967e1036724a975db6"
+      "bytes": 27037,
+      "sha256": "970be1919f26ac6d8813c5ad95d9332abe194cfcc0e2c6016a3af85775770788"
     },
     {
       "path": "services/index.html",
-      "bytes": 6418,
-      "sha256": "0429460cea2c9bda7f9659c72ad3ddd09cbcb2524b42fd2246ca5ca1bf783181"
+      "bytes": 6356,
+      "sha256": "6e2cf1ab2b9464816e92d6b1d92ea9ab85918f5c59712a595e8845b68197d9f0"
     },
     {
       "path": "services/manifest.json",
@@ -150,8 +150,8 @@
     },
     {
       "path": "services/styles.css",
-      "bytes": 5808,
-      "sha256": "31087e29cdbbf88d83cf371fd6d0244537cbaea55f08efa0414a2633e456cedd"
+      "bytes": 6987,
+      "sha256": "68b52492107fe2597fbcfc57d9fb309ecbbfb9ebfbacb5f52a15bc703a7e7876"
     },
     {
       "path": "services/vendor/OrbitControls.js",
@@ -160,8 +160,8 @@
     },
     {
       "path": "styles.css",
-      "bytes": 7820,
-      "sha256": "74b6f73ab0663360cf9989f3a088aa19a692015b6074bc238630ff26251d61ca"
+      "bytes": 9417,
+      "sha256": "7d106b56a99c332032c986f57df091a41e201b75953750ec17fddf889d887691"
     },
     {
       "path": "vendor/BufferGeometryUtils.js",

@@ -438,6 +438,7 @@ $('#panel-toggle').addEventListener('click', () => {
 });
 function setPanel(open) {
   if (open) {
+    document.body.classList.remove('phone-exploring');
     stopMotion();
     if (lookPointer && canvas.hasPointerCapture(lookPointer.id)) canvas.releasePointerCapture(lookPointer.id);
     lookPointer = null; down = null;
@@ -448,6 +449,12 @@ function setPanel(open) {
   $('#panel-toggle').textContent = open ? 'Close settings' : 'Settings';
 }
 $('#panel-close').addEventListener('click', () => setPanel(false));
+$('#restore-controls').addEventListener('click', () => {
+  stopMotion();
+  document.body.classList.remove('phone-exploring');
+  $('#panel-toggle').focus({ preventScroll: true });
+});
+$('#fit').addEventListener('click', () => setPanel(false));
 $('#panel-backdrop').addEventListener('click', () => setPanel(false));
 window.addEventListener('keydown', event => {
   if (event.key === 'Escape' && !$('#panel').hidden) setPanel(false);
@@ -507,6 +514,9 @@ document.addEventListener('visibilitychange', () => { if (document.hidden) stopM
 stick.addEventListener('pointerdown', event => {
   if (mode !== 'walk' || loading || stickPointer !== null || event.button !== 0) return;
   event.preventDefault();
+  if (matchMedia('(any-pointer: coarse), (max-width: 760px)').matches) {
+    document.body.classList.add('phone-exploring');
+  }
   stick.focus({ preventScroll: true });
   stickPointer = event.pointerId;
   stickOrigin = [event.clientX, event.clientY];

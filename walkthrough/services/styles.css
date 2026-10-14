@@ -62,3 +62,24 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;bo
   #movement{bottom:calc(12px + env(safe-area-inset-bottom));left:10px;gap:8px}
   .walk-mode .view-note{top:8px;bottom:auto;max-width:calc(100% - 16px)}
 }
+.viewer-nav{margin-right:auto;gap:18px}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+#view-note,.touch-instructions{font-size:.8rem;color:#4d5c67;margin:8px 0}
+#restore-controls{display:none}
+.viewer-nav a{display:flex;align-items:center;min-height:44px;text-decoration:none}
+.viewer-nav a[aria-current]{color:#262d33;font-weight:700;border-bottom:2px solid #226b9b}
+#panel #fit{margin:16px 0 4px}
+@media(max-width:760px){
+  header .viewer-nav{grid-column:1;grid-row:1;overflow:visible;gap:20px;padding:0}
+  header nav[aria-label="Camera views"]{grid-row:2}
+  #panel-toggle{grid-row:1}
+}
+@media(any-pointer:coarse),(max-width:760px){
+  body{grid-template-rows:minmax(0,1fr)}
+  main{grid-row:1}
+  header{position:absolute;inset:0 0 auto;z-index:4;background:#f3f5f7}
+  footer{position:absolute;bottom:0;left:0;right:0;z-index:2;background:#f3f5f7}
+  #movement{bottom:max(64px,env(safe-area-inset-bottom))}
+  .phone-exploring header,.phone-exploring footer{display:none}
+  .phone-exploring #restore-controls{display:block;position:fixed;top:max(10px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:5}
+}
