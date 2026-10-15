@@ -71,8 +71,16 @@
         <summary>Inspection options</summary>
         <label><input id="carriers" type="checkbox" checked>Conduit / pipe envelopes</label>
         <label><input id="cables" type="checkbox">Cable-path reservations</label>
-        <label><input id="access" type="checkbox" checked>Driver &amp; service access</label>
+        <label><input id="access" type="checkbox" checked>Driver &amp; maintenance outlines</label>
         <label><input id="crossings" type="checkbox">Wall-crossing review markers</label>
+      </details>
+      <details class="symbol-legend">
+        <summary>What the symbols mean</summary>
+        <p><strong>Coloured routes:</strong> blue = normal power; orange = requested backup; green = data. Cyan / red = cold / hot water; purple / pink = waste / drain vents.</p>
+        <p><strong>Neutral equipment:</strong> light fittings use grey geometry; outlined volumes mark devices, drivers and connection-space reservations. Supply colours belong to the routes, not the equipment.</p>
+        <p><strong>Thin flat outlines:</strong> proposed maintenance access. These are see-through candidates, not solid ceiling plates or a confirmed hatch count.</p>
+        <p><strong>Incoming-service outlines:</strong> provisional entry/enclosure locations, not surveyed supply entries. Tap any marker for its label and proposed service.</p>
+        <p>Requested backup does not mean separate mains and backup connections to the same device. Transfer arrangements and actual equipment remain unselected.</p>
       </details>
       <section id="selection" class="selection" aria-label="Selected element">
         <h2 id="selection-title">Pick a route or fitting</h2>
@@ -86,6 +94,6 @@
     </aside>
   </main>
   <footer><p id="status" role="status">Not for installation. Lines are proposed routes, not verified wiring circuits.</p></footer>
-  <script type="module" src="./app.js?v=f60a4c71bc19b8b4"></script>
+  <script type="module" src="./app.js?v=b467fbdac279d623"></script>
 </body>
 </html>

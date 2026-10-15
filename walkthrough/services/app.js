@@ -13,6 +13,22 @@ const labels = { normal: 'Normal supply', backup: 'Requested backup', data: 'Dat
 const palette = { normal: '#1447cc', backup: '#b96806', data: '#24713f', cold: '#008898',
   hot: '#b92520', waste: '#782da0', vent: '#97388d', access: '#317553', context: '#758793' };
 const traceableRoles = new Set(['service', 'cable', 'lighting-feed', 'equipment-feed']);
+const markerRoles = new Set(['equipment', 'driver', 'boundary', 'access']);
+function markerStyle(descriptor) {
+  const { role, system } = descriptor;
+  if (role === 'access') return { color: '#586873', opacity: .035 };
+  if (markerRoles.has(role)) return { color: '#465461', opacity: .10 };
+  if (role === 'luminaire') return { color: '#697883', opacity: .75 };
+  return { color: palette[system] || '#758793', opacity: 1 };
+}
+function restoreAppearance(bucket, dimmed = false) {
+  const style = markerStyle(bucket.descriptor);
+  const opacity = style.opacity * (dimmed ? .14 : 1);
+  bucket.mesh.material.opacity = opacity;
+  bucket.mesh.material.transparent = opacity < 1;
+  bucket.mesh.material.depthWrite = opacity === 1;
+  if (bucket.outline) bucket.outline.material.opacity = dimmed ? .18 : .85;
+}
 let renderer, scene, camera, controls, model, manifest, highlight, traced, traceSelection, loading = false;
 let mode = 'orbit', preset = 'all', selectedRoom = '';
 const buckets = [];
@@ -225,11 +241,10 @@ function clearTrace(resetSelection = false) {
     traced = null;
   }
   if (resetSelection || !traced) {
-    for (const { mesh, descriptor } of buckets) {
+    for (const bucket of buckets) {
+      const { descriptor } = bucket;
       if (['walls','floor'].includes(descriptor.role)) continue;
-      mesh.material.transparent = false;
-      mesh.material.opacity = 1;
-      mesh.material.depthWrite = true;
+      restoreAppearance(bucket);
     }
   }
   if (resetSelection) traceSelection = null;
@@ -278,11 +293,10 @@ function traceRoute() {
     return;
   }
   scene.add(traced);
-  for (const { mesh, descriptor } of buckets) {
+  for (const bucket of buckets) {
+    const { descriptor } = bucket;
     if (['walls','floor'].includes(descriptor.role) || ['context','access'].includes(descriptor.system)) continue;
-    mesh.material.transparent = true;
-    mesh.material.opacity = .14;
-    mesh.material.depthWrite = false;
+    restoreAppearance(bucket, true);
   }
   $('#trace-status').textContent = `Highlighted ${pieces} model pieces named “${traceSelection.name}”. Only this named route is traced, not upstream supplies or other branches. The model does not define verified circuit connectivity.`;
   $('#trace-summary').textContent = `${traceSelection.name} · ${pieces} pieces in yellow`;
@@ -362,6 +376,14 @@ function pick(event) {
   scene.add(highlight);
   $('#selection-title').textContent = item.label;
   $('#selection-text').textContent = `${labels[bucket.descriptor.system] || 'Proposed provision'} · ${bucket.descriptor.role.replaceAll('-', ' ')}. Review geometry only; no approved sizing, energized connection or installation permission.`;
+  if (markerRoles.has(bucket.descriptor.role) || bucket.descriptor.role === 'luminaire') {
+    const meaning = bucket.descriptor.role === 'access'
+      ? 'Maintenance-access candidate, not an installed hatch or a requirement for one hatch per marker.'
+      : bucket.descriptor.role === 'boundary'
+        ? 'Unsurveyed incoming-service candidate, not a device or a confirmed entry location.'
+        : 'Neutral equipment / connection reference; colour does not indicate its power source.';
+    $('#selection-text').textContent += ` ${meaning} Proposed service: ${labels[bucket.descriptor.system] || 'maintenance access'}. Backup is a requested allocation, not proof of a dual mains/backup connection.`;
+  }
   if (traceableRoles.has(bucket.descriptor.role)) {
     traceSelection = { system: bucket.descriptor.system, role: bucket.descriptor.role, name: routeName(item.label) };
     $('#trace-route').hidden = false;
@@ -408,9 +430,19 @@ async function load() {
     for (const descriptor of manifest.layers) {
       const mesh = model.getObjectByName(descriptor.node);
       if (!mesh?.isMesh || mesh.geometry.getIndex().count / 3 !== descriptor.triangles) throw new Error(`Layer geometry mismatch: ${descriptor.node}`);
-      mesh.material = new THREE.MeshBasicMaterial({ color: palette[descriptor.system] || '#758793',
+      mesh.material = new THREE.MeshBasicMaterial({ color: markerStyle(descriptor).color,
         side: THREE.DoubleSide, toneMapped: false });
-      buckets.push({ mesh, descriptor });
+      let outline = null;
+      if (markerRoles.has(descriptor.role)) {
+        outline = new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry, 30),
+          new THREE.LineBasicMaterial({ color: markerStyle(descriptor).color, transparent: true,
+            opacity: .85, depthWrite: false, toneMapped: false }));
+        outline.raycast = () => {};
+        mesh.add(outline);
+      }
+      const bucket = { mesh, descriptor, outline };
+      restoreAppearance(bucket);
+      buckets.push(bucket);
     }
     for (const room of manifest.rooms) {
       const option = document.createElement('option'); option.value = room.id; option.textContent = room.label;
@@ -594,5 +626,9 @@ window.servicesViewer = { snapshot: () => ({
   trace: { active: Boolean(traced), route: traceSelection?.name || null,
     system: traceSelection?.system || null, role: traceSelection?.role || null,
     triangles: traced ? traced.children.reduce((sum, mesh) => sum + mesh.geometry.getAttribute('position').count / 3, 0) : 0 },
+  markers: buckets.filter(bucket => markerRoles.has(bucket.descriptor.role) || bucket.descriptor.role === 'luminaire')
+    .map(({ mesh, descriptor, outline }) => ({ role: descriptor.role, system: descriptor.system,
+      visible: mesh.visible, color: mesh.material.color.getHexString(), opacity: mesh.material.opacity,
+      outline: Boolean(outline), outlineOpacity: outline?.material.opacity ?? null })),
 }) };
 load();
