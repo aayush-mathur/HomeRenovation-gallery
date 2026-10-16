@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "release": "6e1378c04bc1d02e8d170a36c91688400156038a81cb407053ee2edc64f7d96d",
-  "totalBytes": 46465005,
+  "release": "597b89f066e94e64d59e5e891f199c8d2ac1582988e525188837d34a0df5227d",
+  "totalBytes": 46477339,
   "files": [
     {
       "path": "app.js",
@@ -130,18 +130,18 @@
     },
     {
       "path": "services/app.js",
-      "bytes": 30422,
-      "sha256": "b467fbdac279d623a2d9a5a7d270225610d3809fd30ffd0e16f09620ab4c5fce"
+      "bytes": 34076,
+      "sha256": "b4f7f620c61f3007cb9c6383837310b65152d8de9b921a30c9f7fb47a873890e"
     },
     {
       "path": "services/index.html",
-      "bytes": 7605,
-      "sha256": "e6cb2ece1a1218b61536ec47c225d9f05f382e58af704bb5c08f8d8f73962f4f"
+      "bytes": 8268,
+      "sha256": "48c82554668d498895090e31216f0a558c5fcf45016bb43bba71c490ad378bbd"
     },
     {
       "path": "services/manifest.json",
-      "bytes": 193887,
-      "sha256": "f689397b6484056ebbeb0c695dc9a0a56129d0aa58754269054477bdc9b3b227"
+      "bytes": 200975,
+      "sha256": "df7fe1eeac415a5c08051518f61adb3cc99a2220146eb230ed04aa7d5c97508c"
     },
     {
       "path": "services/services-c539f5dc7f2a9b84.glb",
@@ -150,8 +150,8 @@
     },
     {
       "path": "services/styles.css",
-      "bytes": 7370,
-      "sha256": "cc67cb36131643363475a5fbc5efa8c031d919aca16f20a24fbc837654895ad2"
+      "bytes": 8299,
+      "sha256": "12d23beccff065713925551f310da7a2d9698da1ca223d55b1bd961e218923bc"
     },
     {
       "path": "services/vendor/OrbitControls.js",

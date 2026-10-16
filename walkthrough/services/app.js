@@ -8,6 +8,9 @@ const canvas = $('#model');
 const stage = $('#stage');
 const layerInputs = [...document.querySelectorAll('#layers input')];
 const viewButtons = [...document.querySelectorAll('[data-view]')];
+const dimensionToggle = $('#dimensions');
+const dimensionLabelLayer = $('#dimension-labels');
+const dimensionSvg = $('#dimension-lines');
 const labels = { normal: 'Normal supply', backup: 'Requested backup', data: 'Data', cold: 'Cold water',
   hot: 'Hot water', waste: 'Waste', vent: 'Drain vent', access: 'Service access', context: 'Context' };
 const palette = { normal: '#1447cc', backup: '#b96806', data: '#24713f', cold: '#008898',
@@ -100,6 +103,61 @@ function startMotion() {
 function render() {
   if (!renderer) return;
   renderer.render(scene, camera);
+  renderDimensions();
+}
+
+function renderDimensions() {
+  const overlay = $('#dimension-overlay');
+  const enabled = dimensionToggle.checked && manifest?.switchboard_setout?.length && camera && mode !== 'walk';
+  overlay.hidden = !enabled;
+  if (!enabled) return;
+  const { width, height } = stage.getBoundingClientRect();
+  if (!width || !height) return;
+  dimensionSvg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+  dimensionSvg.replaceChildren();
+  dimensionLabelLayer.replaceChildren();
+  const occupied = [];
+  const roomBoards = manifest.switchboard_setout.filter(board => !selectedRoom || board.room === selectedRoom);
+  let visible = 0;
+  const project = values => new THREE.Vector3(...values).project(camera);
+  for (const board of roomBoards) {
+    const anchor = project(board.position_web_m);
+    const reference = project(board.reference_web_m);
+    if (anchor.z < -1 || anchor.z > 1 || anchor.x < -1 || anchor.x > 1 || anchor.y < -1 || anchor.y > 1 ||
+        reference.z < -1 || reference.z > 1) continue;
+    const x = (anchor.x + 1) * width / 2;
+    const y = (1 - anchor.y) * height / 2;
+    const rx = (reference.x + 1) * width / 2;
+    const ry = (1 - reference.y) * height / 2;
+    const labelWidth = Math.min(matchMedia('(max-width: 760px)').matches ? 186 : 220, width - 24);
+    const labelHeight = 45;
+    const candidates = [
+      [x-labelWidth/2,y-labelHeight-12], [x+14,y-labelHeight/2],
+      [x-labelWidth/2,y+12], [x-labelWidth-14,y-labelHeight/2],
+      [x+14,y-labelHeight-14], [x-labelWidth-14,y-labelHeight-14],
+    ];
+    const placement = candidates.find(([left, top]) => left >= 4 && top >= 4 && left+labelWidth <= width-4 &&
+      top+labelHeight <= height-4 && occupied.every(box => left+labelWidth+4 <= box.left ||
+        box.right+4 <= left || top+labelHeight+4 <= box.top || box.bottom+4 <= top));
+    if (!placement) continue;
+    const [left, top] = placement;
+    occupied.push({left,right:left+labelWidth,top,bottom:top+labelHeight});
+    for (const className of ['dimension-line-halo','dimension-line']) {
+      const line = document.createElementNS('http://www.w3.org/2000/svg','line');
+      line.setAttribute('x1', String(rx)); line.setAttribute('y1', String(ry));
+      line.setAttribute('x2', String(x)); line.setAttribute('y2', String(y));
+      line.setAttribute('class',className); dimensionSvg.append(line);
+    }
+    const label = document.createElement('div');
+    label.className = 'dimension-label';
+    label.style.left = `${left}px`; label.style.top = `${top}px`;
+    label.setAttribute('aria-label', `${board.id}; ${board.offset_mm} millimetres from nearest ${board.reference_edge} corner; ${board.height_aff_mm} millimetres above modeled finished floor`);
+    const title = document.createElement('strong'); title.textContent = board.id;
+    const offset = document.createElement('span'); offset.textContent = `${board.offset_mm.toLocaleString()} mm from ${board.reference_edge} corner`;
+    const elevation = document.createElement('span'); elevation.textContent = `${board.height_aff_mm.toLocaleString()} mm AFF · proposed`;
+    label.append(title,offset,elevation); dimensionLabelLayer.append(label); visible++;
+  }
+  dimensionLabelLayer.dataset.visible = String(visible);
 }
 
 function resize() {
@@ -477,6 +535,7 @@ $('#trace-details').addEventListener('click', () => {
 $('#room').addEventListener('change', () => { selectedRoom = $('#room').value; if (model) setView(mode); });
 for (const input of layerInputs) input.addEventListener('change', () => { preset = 'all'; updateLayers(); });
 for (const id of ['walls','carriers','cables','access','crossings']) $(`#${id}`).addEventListener('change', updateLayers);
+dimensionToggle.addEventListener('change', render);
 for (const button of document.querySelectorAll('[data-preset]')) button.addEventListener('click', () => {
   preset = button.dataset.preset;
   const water = new Set(['cold','hot','waste','vent']);
@@ -622,6 +681,8 @@ canvas.addEventListener('webglcontextlost', event => {
 new ResizeObserver(resize).observe(stage);
 window.servicesViewer = { snapshot: () => ({
   mode, position: camera?.position.toArray(), yaw, pitch,
+  dimensions: { enabled: dimensionToggle.checked, available: manifest?.switchboard_setout?.length || 0,
+    visible: Number(dimensionLabelLayer.dataset.visible || 0), overlayHidden: $('#dimension-overlay').hidden },
   joystick: { active: stickPointer !== null, input: [...stickInput] },
   trace: { active: Boolean(traced), route: traceSelection?.name || null,
     system: traceSelection?.system || null, role: traceSelection?.role || null,

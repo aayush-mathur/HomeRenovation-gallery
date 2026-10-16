@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>First-floor services inspection</title>
-  <link rel="stylesheet" href="./styles.css?v=cc67cb3613164336">
+  <link rel="stylesheet" href="./styles.css?v=12d23beccff06571">
   <script type="importmap">{"imports":{"three":"../vendor/three.module.js"}}</script>
 </head>
 <body>
@@ -28,6 +28,10 @@
   <main>
     <section id="stage" aria-label="Interactive services model">
       <canvas id="model" tabindex="0" aria-label="3D services. Overview: drag to orbit, scroll to zoom. Eye-level: drag to look, WASD or arrow keys move, Page Up/Down raises and lowers the camera. Free inspection passes through walls."></canvas>
+      <div id="dimension-overlay" hidden role="group" aria-label="Switchboard set-out annotations">
+        <svg id="dimension-lines"></svg>
+        <div id="dimension-labels"></div>
+      </div>
       <div id="trace-banner" hidden>
         <p id="trace-summary" role="status"></p>
         <button id="trace-details" type="button">Details</button>
@@ -73,6 +77,8 @@
         <label><input id="cables" type="checkbox">Cable-path reservations</label>
         <label><input id="access" type="checkbox" checked>Driver &amp; maintenance outlines</label>
         <label><input id="crossings" type="checkbox">Wall-crossing review markers</label>
+        <label><input id="dimensions" type="checkbox">Switchboard set-out distances</label>
+        <p class="dimension-note">Approximate offset from the nearest modeled room corner along the wall, plus proposed mounting height above the modeled finished floor (AFF). Shown in 3D and Plan; hidden while walking. Focus a room for clearer labels; callouts that would overlap are omitted. Confirm the actual wall, openings and heights with your electrician on site.</p>
       </details>
       <details class="symbol-legend">
         <summary>What the symbols mean</summary>
@@ -94,6 +100,6 @@
     </aside>
   </main>
   <footer><p id="status" role="status">Not for installation. Lines are proposed routes, not verified wiring circuits.</p></footer>
-  <script type="module" src="./app.js?v=b467fbdac279d623"></script>
+  <script type="module" src="./app.js?v=b4f7f620c61f3007"></script>
 </body>
 </html>
