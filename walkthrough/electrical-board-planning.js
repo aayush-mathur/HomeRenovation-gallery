@@ -1,6 +1,7 @@
 import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { validateBoardDescriptor, boardRooms } from './electrical-board-descriptor.js?v=d27cd293eda215a6';
-import { createBoardOverlay } from './electrical-board-overlay.js?v=b59d20a148989792';
+import { createBoardOverlay } from './electrical-board-overlay.js?v=f7a7a42f349f2c89';
+import { validateBoardSetout, setoutLabel } from './electrical-board-setout.js?v=794bc276450c530c';
 
 const ROOM_LABELS = {
   bedroom_1: 'Back bedroom', bedroom_2: 'Middle bedroom', bedroom_3: 'Front bedroom',
@@ -27,6 +28,8 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
   const document = container.ownerDocument, listeners = new AbortController();
   let disposed = false, descriptor = null, overlay = null, selected = null, room = 'all', category = 'boards';
   let error = '', initializing = false, definitionController = null, definitionTicket = 0, detailKey = '';
+  let setoutTexts = null, setoutError = '', manifestHash = '', setoutLoading = false;
+  let setoutController = null;
   const el = (tag, text, attrs = {}) => {
     const node = document.createElement(tag);
     if (text) node.textContent = text;
@@ -38,9 +41,14 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
   const content = el('div', null, { class: 'electrical-planning-content' });
   const plates = el('input', null, { type: 'checkbox', 'aria-label': 'Show proposed switchboards' });
   const labels = el('input', null, { type: 'checkbox', 'aria-label': 'Show nearby switchboard labels' });
+  const setout = el('input', null, { type: 'checkbox', 'aria-label': 'Show provisional set-out in Walk labels',
+    'aria-describedby': 'board-setout-warning' });
+  setout.disabled = true;
   labels.checked = true; plates.disabled = labels.disabled = true;
   const plateLabel = el('label'); plateLabel.append(plates, document.createTextNode('Show proposed switchboards'));
   const labelLabel = el('label'); labelLabel.append(labels, document.createTextNode('Show nearby switchboard labels'));
+  const setoutLabelControl = el('label');
+  setoutLabelControl.append(setout, document.createTextNode('Show provisional set-out in Walk labels'));
   const rooms = el('select', null, { 'aria-label': 'Switchboard room or served room' });
   const categories = el('select', null, { 'aria-label': 'Electrical design list' });
   rooms.append(new Option('All rooms', 'all'));
@@ -54,7 +62,9 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
   const status = el('p', 'Loading source-bound board design…', { class: 'electrical-planning-status', role: 'status' });
   const retry = el('button', 'Retry switchboard definitions', { type: 'button' }); retry.hidden = true;
   content.append(el('p', 'Proposed switchboards, not a wiring or installation plan. Lighting names describe Sculpted Luxe; controls are not simulated. Labels attach to physical boards and never show through walls.'),
-    plateLabel, labelLabel,
+    plateLabel, labelLabel, setoutLabelControl,
+    el('p', 'Set-out values are model-derived discussion dimensions, not surveyed or construction dimensions. Offsets run along the board wall from the nearest modeled plan-side corner/edge, not a measured opening. Plan-up is not surveyed north. AFF means above the modeled finished floor. The electrician must verify wall, opening, corner and mounting height on site.',
+      { id: 'board-setout-warning' }),
     el('p', 'Nearby visible boards are labelled. Tap without dragging to read a board; drag to look as usual. While walking or looking, labels do not intercept pointer input. The list also reaches boards outside your view.'),
     filters, list, detail, status, retry,
     el('p', 'Module arrangement, product ratings, backup capacity, wiring, wet-area protection and installation require qualified local review. A reason or reference below is not approval.'));
@@ -129,10 +139,13 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
     plates.disabled = labels.disabled = !descriptor;
     plates.checked = Boolean(state?.enabled);
     labels.checked = state?.labelsEnabled ?? true;
-    const failure = error || state?.error;
+    setout.disabled = !setoutTexts;
+    setout.checked = state?.setoutEnabled ?? false;
+    const failure = error || state?.error || setoutError;
     summary.textContent = failure ? 'Switchboards · needs retry' : 'Switchboards · proposed';
-    retry.hidden = !failure; retry.disabled = initializing || Boolean(state?.loading);
-    retry.textContent = descriptor ? 'Retry switchboard display' : 'Retry switchboard definitions';
+    retry.hidden = !failure; retry.disabled = initializing || setoutLoading || Boolean(state?.loading);
+    retry.textContent = setoutError && !state?.error ? 'Retry provisional set-out' :
+      descriptor ? 'Retry switchboard display' : 'Retry switchboard definitions';
     status.dataset.error = String(Boolean(failure));
     const count = state?.labels.visible.length || 0;
     status.textContent = failure || (state?.loading ? 'Loading verified switchboard geometry…' :
@@ -164,6 +177,26 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
     if (!items.some(item => item.id === selected)) { selected = null; overlay?.selectBoard(null); }
     list.value = selected || '';
   }
+  async function loadSetout() {
+    if (setoutLoading || disposed) return;
+    setoutLoading = true; setoutError = '';
+    const controller = new AbortController();
+    setoutController = controller;
+    try {
+      const response = await fetchAsset(new URL('./model/electrical/setout.json', document.baseURI),
+        { signal: controller.signal, cache: 'no-store', redirect: 'error', credentials: 'omit' });
+      if (!response.ok) throw new Error(`set-out HTTP ${response.status}`);
+      const records = validateBoardSetout(await response.json(), descriptor, manifestHash);
+      if (disposed || controller.signal.aborted) return;
+      setoutTexts = new Map([...records].map(([id, record]) => [id, setoutLabel(record)]));
+    } catch (cause) {
+      if (!disposed && !controller.signal.aborted) {
+        setoutError = `${cause.message}. Provisional set-out is unavailable; board labels and walking are unchanged.`;
+      }
+    } finally {
+      setoutController = null; setoutLoading = false; render();
+    }
+  }
   async function initialize() {
     if (initializing || disposed) return;
     initializing = true; error = ''; retry.disabled = true; retry.hidden = true;
@@ -173,14 +206,17 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
       const response = await fetchAsset(new URL('./model/electrical/manifest.json', document.baseURI),
         { signal: definitionController.signal, cache: 'no-store', redirect: 'error', credentials: 'omit' });
       if (!response.ok) throw new Error(`definitions HTTP ${response.status}`);
-      const value = await response.json();
+      const text = (await response.text()).replace(/\r\n/g, '\n');
+      const value = JSON.parse(text);
+      manifestHash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)))]
+        .map(n => n.toString(16).padStart(2, '0')).join('');
       if (disposed || ticket !== definitionTicket) return;
       descriptor = validateBoardDescriptor(value, houseDescriptor, document.baseURI);
       overlay = createBoardOverlay({ THREE, scene, camera, stage, descriptor, occluderRoots: [model], parse, fetchAsset,
         releaseInput, isInputBusy, onSelect: id => choose(id, true), onChange: render,
         excludedElements: [document.getElementById('touch-pad'), document.getElementById('toggle-controls')] });
       updateList(); render();
-      if (initialPlates) await overlay.setEnabled(true);
+      await Promise.all([loadSetout(), initialPlates ? overlay.setEnabled(true) : Promise.resolve()]);
     } catch (cause) {
       if (disposed || ticket !== definitionTicket) return;
       error = `${cause.message}. Switchboard planning is unavailable; ordinary walking is unchanged.`;
@@ -191,10 +227,12 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
   on(plates, 'change', () => overlay?.setEnabled(plates.checked));
   on(panel, 'toggle', () => render());
   on(labels, 'change', () => overlay?.setLabels(labels.checked));
+  on(setout, 'change', () => overlay?.setSetout(setout.checked ? setoutTexts : null));
   on(rooms, 'change', () => { room = rooms.value; overlay?.setRoom(room); updateList(); render(); });
   on(categories, 'change', () => { category = categories.value; updateList(); render(); });
   on(list, 'change', () => choose(list.value || null));
-  on(retry, 'click', () => descriptor ? overlay?.retry() : initialize());
+  on(retry, 'click', () => !descriptor ? initialize() : overlay?.snapshot().error ? overlay.retry() :
+    setoutError ? loadSetout() : overlay?.retry());
   const ready = initialize();
   return {
     ready,
@@ -204,6 +242,11 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
     snapshot: () => overlay?.snapshot() || { enabled: false, loading: initializing, error, disposed, overlayLoaded: false },
     cancelPending(message) {
       if (disposed) return;
+      if (setoutLoading) {
+        setoutController?.abort();
+        setoutError = `${message} Provisional set-out is unavailable; board labels and walking are unchanged.`;
+        render();
+      }
       if (initializing && !descriptor) {
         ++definitionTicket; definitionController?.abort(); initializing = false;
         error = `${message} Walking is available. Retry switchboard definitions.`; render();
@@ -213,7 +256,7 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
     },
     dispose() {
       if (disposed) return;
-      disposed = true; ++definitionTicket; definitionController?.abort(); listeners.abort();
+      disposed = true; ++definitionTicket; definitionController?.abort(); setoutController?.abort(); listeners.abort();
       overlay?.dispose(); container.replaceChildren();
     },
   };

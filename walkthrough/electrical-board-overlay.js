@@ -1,5 +1,5 @@
 import { assertEmbeddedGLB, disposeCeiling } from './ceiling-comparison.js?v=385a64a657a99098';
-import { createBoardLabels } from './electrical-board-labels.js?v=5a036b5e030f707f';
+import { createBoardLabels } from './electrical-board-labels.js?v=bca24d0b239238f8';
 import { boardRooms } from './electrical-board-descriptor.js?v=d27cd293eda215a6';
 
 export function createBoardOverlay({ THREE, scene, camera, stage, descriptor, occluderRoots, parse,
@@ -9,9 +9,10 @@ export function createBoardOverlay({ THREE, scene, camera, stage, descriptor, oc
   let root = null, labels = null, enabled = false, labelsEnabled = true, disposed = false;
   let loading = false, error = '', selected = null, room = 'all', highlight = null;
   let generation = 0, controller = null, pending = null;
+  let setout = null;
   const nodes = new Map();
   const rooms = new Map(descriptor.boards.map(board => [board.id, boardRooms(board, descriptor.fixture_groups)]));
-  const snapshot = () => ({ enabled, labelsEnabled, disposed, loading, error, selected, room,
+  const snapshot = () => ({ enabled, labelsEnabled, setoutEnabled: Boolean(setout), disposed, loading, error, selected, room,
     overlayLoaded: Boolean(root), boardCount: descriptor.boards.length,
     visibleBoardCount: enabled && root ? [...nodes.values()].filter(node => node.visible).length : 0,
     labels: labels?.snapshot() || { enabled: labelsEnabled, visible: [], hidden: [], selected, disposed } });
@@ -80,6 +81,7 @@ export function createBoardOverlay({ THREE, scene, camera, stage, descriptor, oc
         boards: descriptor.boards.map(board => ({ id: board.id, text: board.label, room: board.room, servedRooms: rooms.get(board.id),
           anchor: new THREE.Vector3(...board.position_web_m), normal: new THREE.Vector3(...board.normal_web) })),
         onSelect });
+      labels.setSetout(setout);
       loading = false; controller = null; sync();
     } catch (cause) {
       if (parsed) disposeCeiling(parsed);
@@ -112,6 +114,7 @@ export function createBoardOverlay({ THREE, scene, camera, stage, descriptor, oc
     snapshot,
     setEnabled(value) { if (disposed) return Promise.resolve(); enabled = Boolean(value); return reconcile(); },
     setLabels(value) { if (!disposed) { labelsEnabled = Boolean(value); sync(); } },
+    setSetout(texts) { if (!disposed) { setout = texts; labels?.setSetout(texts); emit(); } },
     setRoom(value) { if (!disposed) { room = value; sync(); } },
     selectBoard(id) {
       if (disposed) return;
