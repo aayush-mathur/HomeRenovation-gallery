@@ -69,6 +69,7 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
     filters, list, detail, status, retry,
     el('p', 'Module arrangement, product ratings, backup capacity, wiring, wet-area protection and installation require qualified local review. A reason or reference below is not approval.'));
   panel.append(summary, content); container.replaceChildren(panel);
+  const panelVisible = () => panel.open && panel.getClientRects().length > 0;
   const on = (target, name, callback) => target.addEventListener(name, callback, { signal: listeners.signal });
   on(panel, 'pointerdown', releaseInput); on(panel, 'focusin', releaseInput);
   function showReasons(reasonIDs) {
@@ -149,7 +150,7 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
     status.dataset.error = String(Boolean(failure));
     const count = state?.labels.visible.length || 0;
     status.textContent = failure || (state?.loading ? 'Loading verified switchboard geometry…' :
-      `${state?.visibleBoardCount || 0} proposed boards enabled in the scene; ${count} nearby labels visible.${!state?.enabled ? ' Board display is off.' : !state?.labelsEnabled ? ' Labels are hidden.' : panel.open ? ' Labels pause while this panel is open.' : count === 0 ? ' Boards may be outside your room/view, behind geometry, or hidden by the room filter; use the list without moving the camera.' : ''}`);
+      `${state?.visibleBoardCount || 0} proposed boards enabled in the scene; ${count} nearby labels visible.${!state?.enabled ? ' Board display is off.' : !state?.labelsEnabled ? ' Labels are hidden.' : panelVisible() ? ' Labels pause while this panel is open.' : count === 0 ? ' Boards may be outside your room/view, behind geometry, or hidden by the room filter; use the list without moving the camera.' : ''}`);
     const key = `${selected}|${Boolean(descriptor)}`;
     if (key !== detailKey) { detailKey = key; renderDetail(); }
   }
@@ -236,8 +237,8 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
   const ready = initialize();
   return {
     ready,
-    update({ time, currentRoom, paused = false }) { overlay?.update({ time, currentRoom, paused: paused || panel.open }); },
-    pickLabel(x, y) { return panel.open ? null : overlay?.pickLabel(x, y) || null; },
+    update({ time, currentRoom, paused = false }) { overlay?.update({ time, currentRoom, paused: paused || panelVisible() }); },
+    pickLabel(x, y) { return panelVisible() ? null : overlay?.pickLabel(x, y) || null; },
     selectLabel(id) { if (descriptor?.boards.some(board => board.id === id)) choose(id, true); },
     snapshot: () => overlay?.snapshot() || { enabled: false, loading: initializing, error, disposed, overlayLoaded: false },
     cancelPending(message) {

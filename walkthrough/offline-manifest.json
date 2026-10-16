@@ -1,12 +1,12 @@
 {
   "schema": 1,
-  "release": "ce395a5a8635792be429a91f72d1ed4475ce7f72b1d852aecb7c604703aeed68",
-  "totalBytes": 46495727,
+  "release": "371a2b034e588c22e6c7c34a88712bf960117c611c2d4b0af8cdad346301cfb0",
+  "totalBytes": 46495817,
   "files": [
     {
       "path": "app.js",
       "bytes": 32509,
-      "sha256": "09825f5ebe4e066b303737b7c18c77cc120470d655bf6a38649ac067ce9a4c97"
+      "sha256": "4dec9f92900bf39f94d9830154777238a6db53c660f35e40cfcff72b998bdfe3"
     },
     {
       "path": "ceiling-comparison.js",
@@ -35,8 +35,8 @@
     },
     {
       "path": "electrical-board-planning.js",
-      "bytes": 16665,
-      "sha256": "baccc1bbb25601879981b8bdd4c9affd55ad8eee23d553bf4819e32688b213ac"
+      "bytes": 16755,
+      "sha256": "7423dfa60fab20434a567cf95aae7ac69f2c51d70defc2d6b555433e9ca90cf9"
     },
     {
       "path": "electrical-board-setout.js",
@@ -56,7 +56,7 @@
     {
       "path": "index.html",
       "bytes": 10077,
-      "sha256": "bebe0669796737f2d1ea5eabf598de52fd82b02ee49eded80f0cce5f987a6b4f"
+      "sha256": "c10accd8f2170a0f5beefd562ebd9f0a6efbe654142b7f797c3694914826a955"
     },
     {
       "path": "model/ceilings/linear-242d4caf58d1df4f.glb",
