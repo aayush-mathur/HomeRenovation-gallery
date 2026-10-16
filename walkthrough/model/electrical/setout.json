@@ -1,0 +1,511 @@
+{
+  "version": 1,
+  "id": "board-setout-discussion",
+  "board_manifest_sha256": "8c43d2c7167a424d8ca0d175d4580396771f412902549d7cdbed0ee8c31c5e34",
+  "room_source_sha256": "5ef0bc96e06e2519939a9b3a22724a97728736d3c7ea794cb0d1e299645f0239",
+  "rooms": [
+    {
+      "id": "bedroom_1",
+      "sheet_extent": [
+        3.45,
+        12.75,
+        9.05,
+        17.9
+      ]
+    },
+    {
+      "id": "bedroom_2",
+      "sheet_extent": [
+        4.6,
+        4.95,
+        8.3,
+        10.2
+      ]
+    },
+    {
+      "id": "bedroom_3",
+      "sheet_extent": [
+        3.25,
+        -0.1,
+        7.05,
+        5.3
+      ]
+    },
+    {
+      "id": "drawing",
+      "sheet_extent": [
+        0,
+        -0.1,
+        3.65,
+        5.4
+      ]
+    },
+    {
+      "id": "lounge",
+      "sheet_extent": [
+        -0.15,
+        4.95,
+        5.05,
+        10.35
+      ]
+    },
+    {
+      "id": "dining",
+      "sheet_extent": [
+        -0.1,
+        9.9,
+        3.2,
+        13.3
+      ]
+    },
+    {
+      "id": "kitchen",
+      "sheet_extent": [
+        -0.1,
+        12.75,
+        3.85,
+        17.85
+      ]
+    },
+    {
+      "id": "dressing_3",
+      "sheet_extent": [
+        6.15,
+        1.95,
+        8.3,
+        4.2
+      ]
+    }
+  ],
+  "boards": [
+    {
+      "id": "EB-B1-ENTRY",
+      "room": "bedroom_1",
+      "position_web_m": [
+        3.745344,
+        1.164,
+        -14.25
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-left",
+      "from_edge": "plan-bottom",
+      "offset_mm": 1500
+    },
+    {
+      "id": "EB-B2-ENTRY",
+      "room": "bedroom_2",
+      "position_web_m": [
+        4.91358,
+        1.164,
+        -6.4
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-left",
+      "from_edge": "plan-bottom",
+      "offset_mm": 1450
+    },
+    {
+      "id": "EB-B3-ENTRY",
+      "room": "bedroom_3",
+      "position_web_m": [
+        5.3,
+        1.164,
+        -5.043048
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-top",
+      "from_edge": "plan-right",
+      "offset_mm": 1750
+    },
+    {
+      "id": "EB-B1-BED-A",
+      "room": "bedroom_1",
+      "position_web_m": [
+        4.87,
+        1.094,
+        -17.564785
+      ],
+      "height_aff_mm": 1080,
+      "wall_side": "plan-top",
+      "from_edge": "plan-left",
+      "offset_mm": 1420
+    },
+    {
+      "id": "EB-B1-BED-B",
+      "room": "bedroom_1",
+      "position_web_m": [
+        7.09,
+        1.094,
+        -17.564785
+      ],
+      "height_aff_mm": 1080,
+      "wall_side": "plan-top",
+      "from_edge": "plan-right",
+      "offset_mm": 1960
+    },
+    {
+      "id": "EB-B2-BED-A",
+      "room": "bedroom_2",
+      "position_web_m": [
+        4.91358,
+        1.264,
+        -7.23
+      ],
+      "height_aff_mm": 1250,
+      "wall_side": "plan-left",
+      "from_edge": "plan-bottom",
+      "offset_mm": 2280
+    },
+    {
+      "id": "EB-B2-BED-B",
+      "room": "bedroom_2",
+      "position_web_m": [
+        4.91358,
+        1.264,
+        -8.78
+      ],
+      "height_aff_mm": 1250,
+      "wall_side": "plan-left",
+      "from_edge": "plan-top",
+      "offset_mm": 1420
+    },
+    {
+      "id": "EB-B3-BED-A",
+      "room": "bedroom_3",
+      "position_web_m": [
+        3.516708,
+        1.094,
+        -1.37
+      ],
+      "height_aff_mm": 1080,
+      "wall_side": "plan-left",
+      "from_edge": "plan-bottom",
+      "offset_mm": 1470
+    },
+    {
+      "id": "EB-B3-BED-B",
+      "room": "bedroom_3",
+      "position_web_m": [
+        3.516708,
+        1.094,
+        -3.655
+      ],
+      "height_aff_mm": 1080,
+      "wall_side": "plan-left",
+      "from_edge": "plan-top",
+      "offset_mm": 1645
+    },
+    {
+      "id": "EB-B1-WORK",
+      "room": "bedroom_1",
+      "position_web_m": [
+        3.745344,
+        1.094,
+        -15.2
+      ],
+      "height_aff_mm": 1080,
+      "wall_side": "plan-left",
+      "from_edge": "plan-bottom",
+      "offset_mm": 2450
+    },
+    {
+      "id": "EB-B1-CLEAN",
+      "room": "bedroom_1",
+      "position_web_m": [
+        4.2,
+        0.464,
+        -17.564785
+      ],
+      "height_aff_mm": 450,
+      "wall_side": "plan-top",
+      "from_edge": "plan-left",
+      "offset_mm": 750
+    },
+    {
+      "id": "EB-B2-WORK",
+      "room": "bedroom_2",
+      "position_web_m": [
+        7.79,
+        1.314,
+        -9.944628
+      ],
+      "height_aff_mm": 1300,
+      "wall_side": "plan-top",
+      "from_edge": "plan-right",
+      "offset_mm": 510
+    },
+    {
+      "id": "EB-B2-VANITY",
+      "room": "bedroom_2",
+      "position_web_m": [
+        6.818892,
+        1.094,
+        -5.57
+      ],
+      "height_aff_mm": 1080,
+      "wall_side": "plan-right",
+      "from_edge": "plan-bottom",
+      "offset_mm": 620
+    },
+    {
+      "id": "EB-B3-WORK",
+      "room": "bedroom_3",
+      "position_web_m": [
+        6.11,
+        1.094,
+        -5.043048
+      ],
+      "height_aff_mm": 1080,
+      "wall_side": "plan-top",
+      "from_edge": "plan-right",
+      "offset_mm": 940
+    },
+    {
+      "id": "EB-B3-CLEAN",
+      "room": "bedroom_3",
+      "position_web_m": [
+        6.36162,
+        0.464,
+        -2.7
+      ],
+      "height_aff_mm": 450,
+      "wall_side": "plan-right",
+      "from_edge": "plan-top",
+      "offset_mm": 2600
+    },
+    {
+      "id": "EB-DR-ENTRY",
+      "room": "drawing",
+      "position_web_m": [
+        3.367428,
+        1.164,
+        -4.02
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-right",
+      "from_edge": "plan-top",
+      "offset_mm": 1380
+    },
+    {
+      "id": "EB-DR-SOFA",
+      "room": "drawing",
+      "position_web_m": [
+        0.293,
+        1.064,
+        -3.18
+      ],
+      "height_aff_mm": 1050,
+      "wall_side": "plan-left",
+      "from_edge": "plan-top",
+      "offset_mm": 2220
+    },
+    {
+      "id": "EB-DR-CLEAN",
+      "room": "drawing",
+      "position_web_m": [
+        3.367428,
+        0.464,
+        -2.9
+      ],
+      "height_aff_mm": 450,
+      "wall_side": "plan-right",
+      "from_edge": "plan-top",
+      "offset_mm": 2500
+    },
+    {
+      "id": "EB-HA-ENTRY",
+      "room": "lounge",
+      "position_web_m": [
+        4.7643,
+        1.164,
+        -6.7
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-right",
+      "from_edge": "plan-bottom",
+      "offset_mm": 1750
+    },
+    {
+      "id": "EB-HA-CLEAN",
+      "room": "lounge",
+      "position_web_m": [
+        4.7643,
+        0.464,
+        -6.7
+      ],
+      "height_aff_mm": 450,
+      "wall_side": "plan-right",
+      "from_edge": "plan-bottom",
+      "offset_mm": 1750
+    },
+    {
+      "id": "EB-HA-SOFA",
+      "room": "lounge",
+      "position_web_m": [
+        0.140412,
+        1.064,
+        -7.18
+      ],
+      "height_aff_mm": 1050,
+      "wall_side": "plan-left",
+      "from_edge": "plan-bottom",
+      "offset_mm": 2230
+    },
+    {
+      "id": "EB-HA-MANDIR",
+      "room": "lounge",
+      "position_web_m": [
+        0.140412,
+        1.164,
+        -5.48
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-left",
+      "from_edge": "plan-bottom",
+      "offset_mm": 530
+    },
+    {
+      "id": "EB-HA-MEDIA",
+      "room": "lounge",
+      "position_web_m": [
+        4.7643,
+        1.164,
+        -9.85
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-right",
+      "from_edge": "plan-top",
+      "offset_mm": 500
+    },
+    {
+      "id": "EB-DI-ENTRY",
+      "room": "dining",
+      "position_web_m": [
+        0.140412,
+        1.164,
+        -11.03
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-left",
+      "from_edge": "plan-bottom",
+      "offset_mm": 1130
+    },
+    {
+      "id": "EB-DI-POWER",
+      "room": "dining",
+      "position_web_m": [
+        0.140412,
+        0.564,
+        -11.03
+      ],
+      "height_aff_mm": 550,
+      "wall_side": "plan-left",
+      "from_edge": "plan-bottom",
+      "offset_mm": 1130
+    },
+    {
+      "id": "EB-EN-ARRIVAL",
+      "room": "lounge",
+      "position_web_m": [
+        4.7643,
+        1.164,
+        -10.015
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-right",
+      "from_edge": "plan-top",
+      "offset_mm": 335
+    },
+    {
+      "id": "EB-KI-LIGHT",
+      "room": "kitchen",
+      "position_web_m": [
+        3.498412,
+        1.164,
+        -13.6
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-right",
+      "from_edge": "plan-bottom",
+      "offset_mm": 850
+    },
+    {
+      "id": "EB-KI-POWER",
+      "room": "kitchen",
+      "position_web_m": [
+        3.498412,
+        1.164,
+        -13.94
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-right",
+      "from_edge": "plan-bottom",
+      "offset_mm": 1190
+    },
+    {
+      "id": "EB-KI-SERVICE",
+      "room": "kitchen",
+      "position_web_m": [
+        3.498412,
+        1.164,
+        -14.42
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-right",
+      "from_edge": "plan-bottom",
+      "offset_mm": 1670
+    },
+    {
+      "id": "EB-BA1-DRY",
+      "room": "bedroom_1",
+      "position_web_m": [
+        4.830072,
+        1.164,
+        -13.26
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-left",
+      "from_edge": "plan-bottom",
+      "offset_mm": 510
+    },
+    {
+      "id": "EB-BA2-DRY",
+      "room": "bedroom_2",
+      "position_web_m": [
+        7.18,
+        1.164,
+        -6.539088
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-bottom",
+      "from_edge": "plan-right",
+      "offset_mm": 1120
+    },
+    {
+      "id": "EB-BA3-DRY",
+      "room": "dressing_3",
+      "position_web_m": [
+        7.32,
+        1.164,
+        -2.248248
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-bottom",
+      "from_edge": "plan-right",
+      "offset_mm": 980
+    },
+    {
+      "id": "EB-DE-LIGHT",
+      "room": "dressing_3",
+      "position_web_m": [
+        6.514032,
+        1.164,
+        -2.65
+      ],
+      "height_aff_mm": 1150,
+      "wall_side": "plan-left",
+      "from_edge": "plan-bottom",
+      "offset_mm": 700
+    }
+  ]
+}

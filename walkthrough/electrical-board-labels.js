@@ -88,6 +88,7 @@ export function createBoardLabels({ THREE, camera, stage, boards, occluderRoots,
   stage.append(layer);
   const listeners = new AbortController(), elements = new Map();
   let enabled = true, disposed = false, selected = null, lastTime = -Infinity, lastRoom = null, roomFilter = 'all';
+  let setoutEnabled = false;
   let lastView = '';
   let last = { visible: [], hidden: [] };
   let occluded = createBoardOcclusion(THREE, occluderRoots);
@@ -97,7 +98,9 @@ export function createBoardLabels({ THREE, camera, stage, boards, occluderRoots,
     const text = document.createElement('span');
     text.className = 'electrical-board-label-text';
     text.textContent = board.text;
-    button.append(text);
+    const setout = document.createElement('span');
+    setout.className = 'electrical-board-label-setout'; setout.hidden = true;
+    button.append(text, setout);
     button.title = board.text;
     button.setAttribute('aria-label', `${board.text}: proposed switchboard details`);
     button.dataset.boardId = board.id;
@@ -113,6 +116,19 @@ export function createBoardLabels({ THREE, camera, stage, boards, occluderRoots,
     last = { visible: [], hidden: boards.map(board => ({ id: board.id, reason })) };
   }
   return {
+    setSetout(texts) {
+      setoutEnabled = Boolean(texts);
+      layer.dataset.setout = String(setoutEnabled);
+      for (const board of boards) {
+        const button = elements.get(board.id), text = texts?.get(board.id);
+        const span = button.querySelector('.electrical-board-label-setout');
+        span.hidden = !text;
+        span.textContent = text ? `${text}\nModel-derived; verify on site` : '';
+        button.title = text ? `${board.text}\n${span.textContent}` : board.text;
+        button.setAttribute('aria-label', `${button.title}: proposed switchboard details`);
+      }
+      lastTime = -Infinity; lastView = '';
+    },
     setEnabled(value) { enabled = Boolean(value); lastTime = -Infinity; lastView = ''; if (!enabled) hideAll('disabled'); },
     select(id) { selected = id; lastTime = -Infinity; lastView = ''; },
     setRoomFilter(value) { roomFilter = value; lastTime = -Infinity; lastView = ''; },
@@ -141,11 +157,14 @@ export function createBoardLabels({ THREE, camera, stage, boards, occluderRoots,
         ...camera.projectionMatrix.elements, ...excludedRects.flatMap(box => [box.x, box.y, box.width, box.height])].join('|');
       if (view === lastView) return;
       lastView = view; lastTime = time; lastRoom = room;
-      const labelWidth = Math.min(164, Math.max(120, rect.width * .38));
+      const labelWidth = setoutEnabled ? Math.min(190, Math.max(148, rect.width * .46)) :
+        Math.min(164, Math.max(120, rect.width * .38));
+      const labelHeight = setoutEnabled ? 108 : 44;
       layer.style.setProperty('--board-label-width', `${labelWidth}px`);
+      layer.style.setProperty('--board-label-height', `${labelHeight}px`);
       const activeBoards = boards.filter(board => roomFilter === 'all' || board.room === roomFilter || board.servedRooms?.includes(roomFilter));
       last = projectBoardLabels({ THREE, boards: activeBoards, camera, width: rect.width, height: rect.height,
-        room, selected, occluded, excludedRects, labelWidth });
+        room, selected, occluded, excludedRects, labelWidth, labelHeight });
       last.hidden.push(...boards.filter(board => !activeBoards.includes(board)).map(board => ({ id: board.id, reason: 'filter' })));
       const positions = new Map(last.visible.map(item => [item.id, item]));
       for (const [id, button] of elements) {
@@ -155,7 +174,7 @@ export function createBoardLabels({ THREE, camera, stage, boards, occluderRoots,
         if (position) button.style.transform = `translate(${position.box.x}px, ${position.box.y}px)`;
       }
     },
-    snapshot: () => ({ enabled, visible: last.visible.map(item => item.id),
+    snapshot: () => ({ enabled, setoutEnabled, visible: last.visible.map(item => item.id),
       hidden: last.hidden.map(item => ({ ...item })), selected, disposed }),
     dispose() {
       if (disposed) return;
