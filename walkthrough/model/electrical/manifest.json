@@ -5,9 +5,9 @@
   "base_navigation_sha256": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
   "luxe_sha256": "2fc0001646f3b8a7005af317dac1d009fb735447625672566814cd5081b754b4",
   "model": {
-    "src": "./model/electrical/boards-1c56f2504bd0f086.glb",
-    "sha256": "1c56f2504bd0f086b401949e5a6fc7c0f5be1b3f182494d3287c4020775ee5ae",
-    "bytes": 3787928
+    "src": "./model/electrical/boards-69aee1974c02f5ad.glb",
+    "sha256": "69aee1974c02f5ad5986c93e8d13de80be42f21de722ca82887c7348607eb563",
+    "bytes": 3679356
   },
   "boards": [
     {
@@ -684,7 +684,7 @@
       ],
       "height_aff_mm": 1080,
       "size_mm": [
-        165.0,
+        210.0,
         90.0,
         12.0
       ],
@@ -703,11 +703,11 @@
           "behavior": "Product, protection, segregation and final installation are installer decisions.",
           "id": "EB-B1-WORK-F01",
           "slot": 0,
-          "span": 2
+          "span": 3
         },
         {
-          "label": "USB-C charging",
-          "kind": "usb-c",
+          "label": "Charger socket",
+          "kind": "socket",
           "fixture_group_ids": [
             "UTILITY"
           ],
@@ -716,10 +716,10 @@
             "E-B1-06",
             "E-BA1-06"
           ],
-          "behavior": "Provisional USB-C module; product/output/PD unknown, with an ordinary socket retained.",
+          "behavior": "Ordinary power socket for the user's replaceable charger brick; not a built-in USB supply. Preserve the recorded mains/backup preference. Actual adaptor body, lead bend and module/backbox fit require product mockup.",
           "id": "EB-B1-WORK-F02",
-          "slot": 2,
-          "span": 2
+          "slot": 3,
+          "span": 3
         },
         {
           "label": "Data",
@@ -733,7 +733,7 @@
           ],
           "behavior": "Product, protection, segregation and final installation are installer decisions.",
           "id": "EB-B1-WORK-F03",
-          "slot": 4,
+          "slot": 6,
           "span": 1
         },
         {
@@ -748,7 +748,7 @@
           ],
           "behavior": "Dedicated fixed mirror task-light provision for face visibility, independently operable from room/cove. Generic dry luminaire reservation in separate proposal overlay; select diffuser/driver, glare/color rendering and maintenance access after mockup. No measured lux claim.",
           "id": "EB-B1-WORK-F04",
-          "slot": 5,
+          "slot": 7,
           "span": 1
         }
       ],
@@ -902,7 +902,7 @@
       ],
       "height_aff_mm": 1080,
       "size_mm": [
-        165.0,
+        210.0,
         90.0,
         12.0
       ],
@@ -921,11 +921,11 @@
           "behavior": "Product, protection, segregation and final installation are installer decisions.",
           "id": "EB-B2-VANITY-F01",
           "slot": 0,
-          "span": 2
+          "span": 3
         },
         {
-          "label": "USB-C charging",
-          "kind": "usb-c",
+          "label": "Charger socket",
+          "kind": "socket",
           "fixture_group_ids": [
             "UTILITY"
           ],
@@ -934,10 +934,10 @@
             "E-B2-08",
             "E-BA2-06"
           ],
-          "behavior": "Provisional USB-C module; product/output/PD unknown, with an ordinary socket retained.",
+          "behavior": "Ordinary power socket for the user's replaceable charger brick; not a built-in USB supply. Preserve the recorded mains/backup preference. Actual adaptor body, lead bend and module/backbox fit require product mockup.",
           "id": "EB-B2-VANITY-F02",
-          "slot": 2,
-          "span": 2
+          "slot": 3,
+          "span": 3
         },
         {
           "label": "Mirror task light",
@@ -951,7 +951,7 @@
           ],
           "behavior": "Dedicated fixed mirror task-light provision for face visibility, independently operable from room/cove. Generic dry luminaire reservation in separate proposal overlay; select diffuser/driver, glare/color rendering and maintenance access after mockup. No measured lux claim.",
           "id": "EB-B2-VANITY-F03",
-          "slot": 4,
+          "slot": 6,
           "span": 1
         }
       ],
@@ -976,7 +976,7 @@
       ],
       "height_aff_mm": 1080,
       "size_mm": [
-        165.0,
+        210.0,
         90.0,
         12.0
       ],
@@ -995,11 +995,11 @@
           "behavior": "Product, protection, segregation and final installation are installer decisions.",
           "id": "EB-B3-WORK-F01",
           "slot": 0,
-          "span": 2
+          "span": 3
         },
         {
-          "label": "USB-C charging",
-          "kind": "usb-c",
+          "label": "Charger socket",
+          "kind": "socket",
           "fixture_group_ids": [
             "UTILITY"
           ],
@@ -1008,10 +1008,10 @@
             "E-B3-06",
             "E-BA3-06"
           ],
-          "behavior": "Provisional USB-C module; product/output/PD unknown, with an ordinary socket retained.",
+          "behavior": "Ordinary power socket for the user's replaceable charger brick; not a built-in USB supply. Preserve the recorded mains/backup preference. Actual adaptor body, lead bend and module/backbox fit require product mockup.",
           "id": "EB-B3-WORK-F02",
-          "slot": 2,
-          "span": 2
+          "slot": 3,
+          "span": 3
         },
         {
           "label": "Data",
@@ -1025,7 +1025,7 @@
           ],
           "behavior": "Product, protection, segregation and final installation are installer decisions.",
           "id": "EB-B3-WORK-F03",
-          "slot": 4,
+          "slot": 6,
           "span": 1
         },
         {
@@ -1040,7 +1040,7 @@
           ],
           "behavior": "Dedicated fixed mirror task-light provision for face visibility, independently operable from room/cove. Generic dry luminaire reservation in separate proposal overlay; select diffuser/driver, glare/color rendering and maintenance access after mockup. No measured lux claim.",
           "id": "EB-B3-WORK-F04",
-          "slot": 5,
+          "slot": 7,
           "span": 1
         }
       ],
@@ -1611,7 +1611,7 @@
       ],
       "height_aff_mm": 550,
       "size_mm": [
-        165.0,
+        300.0,
         90.0,
         12.0
       ],
@@ -1629,7 +1629,7 @@
           "behavior": "Product, protection, segregation and final installation are installer decisions.",
           "id": "EB-DI-POWER-F01",
           "slot": 0,
-          "span": 2
+          "span": 3
         },
         {
           "label": "Utility socket",
@@ -1643,12 +1643,12 @@
           ],
           "behavior": "Product, protection, segregation and final installation are installer decisions.",
           "id": "EB-DI-POWER-F02",
-          "slot": 2,
-          "span": 2
+          "slot": 3,
+          "span": 3
         },
         {
-          "label": "USB-C charging",
-          "kind": "usb-c",
+          "label": "Charger socket",
+          "kind": "socket",
           "fixture_group_ids": [
             "UTILITY"
           ],
@@ -1656,10 +1656,10 @@
           "point_ids": [
             "E-DI-02"
           ],
-          "behavior": "Provisional USB-C module; product/output/PD unknown, with an ordinary socket retained.",
+          "behavior": "Ordinary power socket for the user's replaceable charger brick; not a built-in USB supply. Preserve the recorded mains/backup preference. Actual adaptor body, lead bend and module/backbox fit require product mockup.",
           "id": "EB-DI-POWER-F03",
-          "slot": 4,
-          "span": 2
+          "slot": 6,
+          "span": 3
         }
       ],
       "reason_ids": [
@@ -3513,6 +3513,7 @@
       "constraints": [
         "No separate dedicated desk or new grooming load rating assumed.",
         "Bathroom charging is moved to dry-room use, not declared forbidden everywhere.",
+        "Owner selected ordinary charger-brick sockets here; built-in USB-C retained only at hall and drawing-room sofas. No laptop charging capability assumed for those unselected USB-C products.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -3559,6 +3560,7 @@
       ],
       "constraints": [
         "Confirm grooming appliance lead reach and dry hands; no cord through bathroom door.",
+        "Owner selected ordinary charger-brick sockets here; built-in USB-C retained only at hall and drawing-room sofas. No laptop charging capability assumed for those unselected USB-C products.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -3577,6 +3579,7 @@
       ],
       "constraints": [
         "This is a compact vanity/laptop allowance, not a newly invented workstation.",
+        "Owner selected ordinary charger-brick sockets here; built-in USB-C retained only at hall and drawing-room sofas. No laptop charging capability assumed for those unselected USB-C products.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -3732,6 +3735,7 @@
       ],
       "constraints": [
         "550mmAFF exception to450mm utility band keeps plug access visible beside dock; verify manufacturer lead.",
+        "Owner selected ordinary charger-brick sockets here; built-in USB-C retained only at hall and drawing-room sofas. No laptop charging capability assumed for those unselected USB-C products.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },

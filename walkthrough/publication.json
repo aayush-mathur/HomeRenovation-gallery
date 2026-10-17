@@ -33,20 +33,20 @@
     "landing/vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
     "landing/vendor/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
     "model/ceilings/luxe-2fc0001646f3b8a7.glb": "2fc0001646f3b8a7005af317dac1d009fb735447625672566814cd5081b754b4",
-    "model/electrical/manifest.json": "67d3434170e24bce642928607a0d1708ff059b9c7c8e7255eb2862d9b57207ec",
-    "model/electrical/setout.json": "7b83c10746f2b248c346b3750a7910ba778214788b7a78fffee88d97116cfd3b",
+    "model/electrical/manifest.json": "b13abbefdd8972d73f5af5d8f90017df20d1fb309f2417bfab6e2806d185d95a",
+    "model/electrical/setout.json": "517d024ccbbe51d0c92f4d25f900c8c21c347edaf425b3bd3126a77e8f30233d",
     "model/house.glb": "e62bda4a91758ef4c394f274b958dd2b19f4df57116117e60db94c55facdf577",
     "model/inspection.json": "ec4b4ccfb542d01ab8ec85153a00faa43e844511fe07fb0b1e6c5ba032e1d8c5",
     "model/manifest.json": "a27e9d0ef10a624bb5df955aed13ff8ba451a81744ab7febd058eb1759b1057a",
     "model/navigation.json": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
     "navigation.js": "2e07ba696a2623435af03a89ebfaea01c9c9279c59df899460d3a0705686767b",
     "offline-client.js": "3eeb81982fb3e9640b72dc00a9851ab1290c5a9830e7a9d5428428736b7dc43d",
-    "offline-manifest.json": "178c296054e1e2426ec19d3a2e4387a935224160a1bfe4cc81a20ef4ad0d4e98",
+    "offline-manifest.json": "4b0c2f0db1cdec5b19ca5a0383c3f23460e852c2dadbcf120da7e78f4f4ce109",
     "offline-worker.js": "a4190b79d4c0a5ed48c2b570aca0b7b3c43424eb994c1dc6d2f943a7dd8f7e77",
     "offline.css": "1ab711a3c58028b60eb748f19d9066330a45f467689bc1702b5ba006ad5c4874",
     "services/app.js": "b4f7f620c61f3007cb9c6383837310b65152d8de9b921a30c9f7fb47a873890e",
     "services/index.html": "48c82554668d498895090e31216f0a558c5fcf45016bb43bba71c490ad378bbd",
-    "services/manifest.json": "ac648e6c1e05dc0eb4b7948939a38c1e4f6f8a12e8477f4ccd9bb7cd942f9efb",
+    "services/manifest.json": "7e4e2e7d5b50a9de07a4cbc282d93c9af8604399b68dcfc01254d410b44f3dd3",
     "services/styles.css": "12d23beccff065713925551f310da7a2d9698da1ca223d55b1bd961e218923bc",
     "services/vendor/OrbitControls.js": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
     "styles.css": "7d106b56a99c332032c986f57df091a41e201b75953750ec17fddf889d887691",
@@ -57,11 +57,11 @@
     "vendor/THREE-LICENSE.txt": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
     "vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
     "vendor/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
-    "services/services-9822f43e39b20217.glb": "9822f43e39b202178fdffde12268b8bab8fbd67b674f8f1d7c2984739a0e7dc4",
     "model/electrical/accessories.json": "f387562388a8b63d21de3c3d93f1199cdfb0866d62e894fce60242a7166619c7",
     "electrical-accessories.js": "d26bff5cb160507f0f200ba379951cf57b755fc5d6a3b8c20e82f08c72289f53",
-    "model/electrical/boards-1c56f2504bd0f086.glb": "1c56f2504bd0f086b401949e5a6fc7c0f5be1b3f182494d3287c4020775ee5ae",
-    "model/electrical/accessories-6761392b2bf094e8.glb": "6761392b2bf094e80d3d0ac3be3abb990b73d1b6cb5fc1a33f41917c07aac36c"
+    "model/electrical/accessories-6761392b2bf094e8.glb": "6761392b2bf094e80d3d0ac3be3abb990b73d1b6cb5fc1a33f41917c07aac36c",
+    "model/electrical/boards-69aee1974c02f5ad.glb": "69aee1974c02f5ad5986c93e8d13de80be42f21de722ca82887c7348607eb563",
+    "services/services-7370306461e88036.glb": "7370306461e8803613535c8ee20d305adebb61dc784da87bb5582dafd2754e07"
   },
   "ceiling_assets": {
     "luxe": "model/ceilings/luxe-2fc0001646f3b8a7.glb"
@@ -74,12 +74,12 @@
   "services_study": {
     "version": 1,
     "id": "services-v002",
-    "model": "services/services-9822f43e39b20217.glb"
+    "model": "services/services-7370306461e88036.glb"
   },
   "electrical_planning": {
     "version": 2,
     "id": "electrical-v004",
-    "model": "model/electrical/boards-1c56f2504bd0f086.glb",
+    "model": "model/electrical/boards-69aee1974c02f5ad.glb",
     "accessories": "model/electrical/accessories-6761392b2bf094e8.glb"
   },
   "runtime_compatibility": {

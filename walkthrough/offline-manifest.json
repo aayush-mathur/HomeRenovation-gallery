@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "release": "44a05490b9b2c8a28bec8251a3b31532e032b3220d4b913905706247b6991145",
-  "totalBytes": 39060607,
+  "release": "6ac249acb2ee8349ff8288c054ee9b644140da8f9844c41297c97f8888f59533",
+  "totalBytes": 38953351,
   "files": [
     {
       "path": "app.js",
@@ -79,19 +79,19 @@
       "sha256": "f387562388a8b63d21de3c3d93f1199cdfb0866d62e894fce60242a7166619c7"
     },
     {
-      "path": "model/electrical/boards-1c56f2504bd0f086.glb",
-      "bytes": 3787928,
-      "sha256": "1c56f2504bd0f086b401949e5a6fc7c0f5be1b3f182494d3287c4020775ee5ae"
+      "path": "model/electrical/boards-69aee1974c02f5ad.glb",
+      "bytes": 3679356,
+      "sha256": "69aee1974c02f5ad5986c93e8d13de80be42f21de722ca82887c7348607eb563"
     },
     {
       "path": "model/electrical/manifest.json",
-      "bytes": 132293,
-      "sha256": "67d3434170e24bce642928607a0d1708ff059b9c7c8e7255eb2862d9b57207ec"
+      "bytes": 133609,
+      "sha256": "b13abbefdd8972d73f5af5d8f90017df20d1fb309f2417bfab6e2806d185d95a"
     },
     {
       "path": "model/electrical/setout.json",
       "bytes": 12917,
-      "sha256": "7b83c10746f2b248c346b3750a7910ba778214788b7a78fffee88d97116cfd3b"
+      "sha256": "517d024ccbbe51d0c92f4d25f900c8c21c347edaf425b3bd3126a77e8f30233d"
     },
     {
       "path": "model/house.glb",
@@ -146,12 +146,12 @@
     {
       "path": "services/manifest.json",
       "bytes": 178529,
-      "sha256": "ac648e6c1e05dc0eb4b7948939a38c1e4f6f8a12e8477f4ccd9bb7cd942f9efb"
+      "sha256": "7e4e2e7d5b50a9de07a4cbc282d93c9af8604399b68dcfc01254d410b44f3dd3"
     },
     {
-      "path": "services/services-9822f43e39b20217.glb",
+      "path": "services/services-7370306461e88036.glb",
       "bytes": 5108772,
-      "sha256": "9822f43e39b202178fdffde12268b8bab8fbd67b674f8f1d7c2984739a0e7dc4"
+      "sha256": "7370306461e8803613535c8ee20d305adebb61dc784da87bb5582dafd2754e07"
     },
     {
       "path": "services/styles.css",
