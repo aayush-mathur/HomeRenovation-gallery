@@ -50,9 +50,9 @@
     ]
   },
   "ceiling_options": {
-    "version": 3,
+    "version": 4,
     "base_source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
-    "default": "existing",
+    "default": "luxe",
     "baseline_nodes": [
       "CEILING_BASELINE_5155462b4771fced",
       "CEILING_BASELINE_e6bb5689beec52c4",
@@ -66,46 +66,6 @@
     ],
     "variants": [
       {
-        "id": "quiet",
-        "label": "Quiet / beam-led",
-        "src": "./model/ceilings/quiet-dd3bea9b57f51f87.glb",
-        "sha256": "dd3bea9b57f51f8797f2290f82a1bb9a63af3206000477d94c11e2bc9d92c579",
-        "bytes": 1754472,
-        "summary": "Shallow perimeter trays, soft indirect light and exposed original beams; calm bedrooms with no bright lights over pillows.",
-        "min_ceiling_m": 2.88,
-        "fan_blade_height_m": 2.52
-      },
-      {
-        "id": "linear",
-        "label": "Linear",
-        "src": "./model/ceilings/linear-242d4caf58d1df4f.glb",
-        "sha256": "242d4caf58d1df4f59e01ff3d261dfb31237021ee9cd32a82ed8ebc6b0c805cf",
-        "bytes": 1080620,
-        "summary": "Clean lowered fields with recessed light lines, aligned to the beam bays and room axes; the raised dining volume remains open.",
-        "min_ceiling_m": 2.88,
-        "fan_blade_height_m": 2.52
-      },
-      {
-        "id": "warm",
-        "label": "Warm gallery",
-        "src": "./model/ceilings/warm-18ea31a48c51b4e7.glb",
-        "sha256": "18ea31a48c51b4e77d7dba11fcc3e4e58d2312a8166e362e0f5ea8edcad36128",
-        "bytes": 1753496,
-        "summary": "Timber-look slatted accents in the hall/drawing room, restrained bedroom headboard bands, and plain easy-clean kitchen/wet-area ceilings.",
-        "min_ceiling_m": 2.84,
-        "fan_blade_height_m": 2.52
-      },
-      {
-        "id": "sculpted",
-        "label": "Sculpted flow",
-        "src": "./model/ceilings/sculpted-26b7126f477fde51.glb",
-        "sha256": "26b7126f477fde51e2c42e003fdb0ce86aaba6d38ec6b2e9f99c69b74deeaacf",
-        "bytes": 2538904,
-        "summary": "Connected beam-level ribbons with curved transitions, higher fan pockets, a sculpted dining lightwell and one TV-wall return. Original structural cores and glazing remain.",
-        "min_ceiling_m": 2.66,
-        "fan_blade_height_m": 2.52
-      },
-      {
         "id": "luxe",
         "label": "Sculpted Luxe",
         "src": "./model/ceilings/luxe-2fc0001646f3b8a7.glb",
@@ -116,7 +76,7 @@
         "fan_blade_height_m": 2.52
       }
     ],
-    "note": "Whole-floor concepts with five static fan provisions. Sculpted Luxe adds floating curved layers and selective nonstructural beam casings without changing beam cores, fan pockets or the lightwell. Geometry, supports and installation remain provisional; browser lighting is simplified."
+    "note": "Sculpted Luxe is the sole active whole-floor design. Earlier schemes are historical studies. Structural beams, fan pockets and the lightwell remain; installation and lighting need site review."
   },
   "drinking_water": {
     "status": "Generic compact undercounter purifier provision; product and water treatment selection pending",

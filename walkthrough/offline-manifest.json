@@ -1,22 +1,27 @@
 {
   "schema": 1,
-  "release": "371a2b034e588c22e6c7c34a88712bf960117c611c2d4b0af8cdad346301cfb0",
-  "totalBytes": 46495817,
+  "release": "44a05490b9b2c8a28bec8251a3b31532e032b3220d4b913905706247b6991145",
+  "totalBytes": 39060607,
   "files": [
     {
       "path": "app.js",
-      "bytes": 32509,
-      "sha256": "4dec9f92900bf39f94d9830154777238a6db53c660f35e40cfcff72b998bdfe3"
+      "bytes": 35384,
+      "sha256": "2798e746322caf8bbbb6ee62a3686437c718b205eb037e3bc92f9889d6169884"
     },
     {
       "path": "ceiling-comparison.js",
-      "bytes": 9910,
-      "sha256": "385a64a657a990981c3d18a979ff5951196c11d87a6bd3322604d244173e929e"
+      "bytes": 10395,
+      "sha256": "a653fd99aa8b800dd149ebd28097ea6c84c3f0baee5b9a62cd1d2dc2816f07e3"
+    },
+    {
+      "path": "electrical-accessories.js",
+      "bytes": 4860,
+      "sha256": "d26bff5cb160507f0f200ba379951cf57b755fc5d6a3b8c20e82f08c72289f53"
     },
     {
       "path": "electrical-board-descriptor.js",
-      "bytes": 7982,
-      "sha256": "d27cd293eda215a6d5a9ce8e9ce0aedaa61fe9cbb2043ccf11c6aba45435e549"
+      "bytes": 8010,
+      "sha256": "60527b3213edf19560e0fb8e8af26e23060014d4afc0fd8be61b11c6b723ddfd"
     },
     {
       "path": "electrical-board-labels.css",
@@ -31,17 +36,17 @@
     {
       "path": "electrical-board-overlay.js",
       "bytes": 7433,
-      "sha256": "f7a7a42f349f2c89fc9e222fea743fd236b5089c39c5e6984a2cb03dae0cf392"
+      "sha256": "8f672f98c1227b5b9d52bb0ae9d247c76b73f11dc56ebdce4c1cbf3d8fa7de55"
     },
     {
       "path": "electrical-board-planning.js",
-      "bytes": 16755,
-      "sha256": "7423dfa60fab20434a567cf95aae7ac69f2c51d70defc2d6b555433e9ca90cf9"
+      "bytes": 16799,
+      "sha256": "c806edd01467174bd868431f035fb9d58c7bd0202885f72b20b6b1b5a82e225c"
     },
     {
       "path": "electrical-board-setout.js",
-      "bytes": 4070,
-      "sha256": "794bc276450c530cfb686173523a8a90c320334d0fe951523a200e275e86d306"
+      "bytes": 4099,
+      "sha256": "632fe2e2b0a491c535583f81d94f2a57124b6fb2f8af36f859dec3b1490d6677"
     },
     {
       "path": "electrical-planning.css",
@@ -55,13 +60,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 10077,
-      "sha256": "c10accd8f2170a0f5beefd562ebd9f0a6efbe654142b7f797c3694914826a955"
-    },
-    {
-      "path": "model/ceilings/linear-242d4caf58d1df4f.glb",
-      "bytes": 1080620,
-      "sha256": "242d4caf58d1df4f59e01ff3d261dfb31237021ee9cd32a82ed8ebc6b0c805cf"
+      "bytes": 10212,
+      "sha256": "4770888b9b1c90bd6a6da1b3009e926d372707b9883f83a827c7674e125f5f62"
     },
     {
       "path": "model/ceilings/luxe-2fc0001646f3b8a7.glb",
@@ -69,34 +69,29 @@
       "sha256": "2fc0001646f3b8a7005af317dac1d009fb735447625672566814cd5081b754b4"
     },
     {
-      "path": "model/ceilings/quiet-dd3bea9b57f51f87.glb",
-      "bytes": 1754472,
-      "sha256": "dd3bea9b57f51f8797f2290f82a1bb9a63af3206000477d94c11e2bc9d92c579"
+      "path": "model/electrical/accessories-6761392b2bf094e8.glb",
+      "bytes": 8468,
+      "sha256": "6761392b2bf094e80d3d0ac3be3abb990b73d1b6cb5fc1a33f41917c07aac36c"
     },
     {
-      "path": "model/ceilings/sculpted-26b7126f477fde51.glb",
-      "bytes": 2538904,
-      "sha256": "26b7126f477fde51e2c42e003fdb0ce86aaba6d38ec6b2e9f99c69b74deeaacf"
+      "path": "model/electrical/accessories.json",
+      "bytes": 1685,
+      "sha256": "f387562388a8b63d21de3c3d93f1199cdfb0866d62e894fce60242a7166619c7"
     },
     {
-      "path": "model/ceilings/warm-18ea31a48c51b4e7.glb",
-      "bytes": 1753496,
-      "sha256": "18ea31a48c51b4e77d7dba11fcc3e4e58d2312a8166e362e0f5ea8edcad36128"
-    },
-    {
-      "path": "model/electrical/boards-96f260b115b955f9.glb",
-      "bytes": 3466064,
-      "sha256": "96f260b115b955f97ceb7b1580ec3d7f696058f2d391670528abd6cc4285dc07"
+      "path": "model/electrical/boards-1c56f2504bd0f086.glb",
+      "bytes": 3787928,
+      "sha256": "1c56f2504bd0f086b401949e5a6fc7c0f5be1b3f182494d3287c4020775ee5ae"
     },
     {
       "path": "model/electrical/manifest.json",
-      "bytes": 109777,
-      "sha256": "8c43d2c7167a424d8ca0d175d4580396771f412902549d7cdbed0ee8c31c5e34"
+      "bytes": 132293,
+      "sha256": "67d3434170e24bce642928607a0d1708ff059b9c7c8e7255eb2862d9b57207ec"
     },
     {
       "path": "model/electrical/setout.json",
-      "bytes": 10018,
-      "sha256": "93cdf577559f9672a15f3bd31bd9f0da42ae319d86f61078106dfec657e2c88c"
+      "bytes": 12917,
+      "sha256": "7b83c10746f2b248c346b3750a7910ba778214788b7a78fffee88d97116cfd3b"
     },
     {
       "path": "model/house.glb",
@@ -110,8 +105,8 @@
     },
     {
       "path": "model/manifest.json",
-      "bytes": 14765,
-      "sha256": "bde6ac4274f58ef3b6211cba9daff4a3a1669c698318eb62f88103b38d248a55"
+      "bytes": 12765,
+      "sha256": "a27e9d0ef10a624bb5df955aed13ff8ba451a81744ab7febd058eb1759b1057a"
     },
     {
       "path": "model/navigation.json",
@@ -150,13 +145,13 @@
     },
     {
       "path": "services/manifest.json",
-      "bytes": 200975,
-      "sha256": "df7fe1eeac415a5c08051518f61adb3cc99a2220146eb230ed04aa7d5c97508c"
+      "bytes": 178529,
+      "sha256": "ac648e6c1e05dc0eb4b7948939a38c1e4f6f8a12e8477f4ccd9bb7cd942f9efb"
     },
     {
-      "path": "services/services-c539f5dc7f2a9b84.glb",
-      "bytes": 5757932,
-      "sha256": "c539f5dc7f2a9b8468bdfd14a65b491c852918ab10f31648fe412a65bc6622d4"
+      "path": "services/services-9822f43e39b20217.glb",
+      "bytes": 5108772,
+      "sha256": "9822f43e39b202178fdffde12268b8bab8fbd67b674f8f1d7c2984739a0e7dc4"
     },
     {
       "path": "services/styles.css",

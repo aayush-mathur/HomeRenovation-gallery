@@ -1,7 +1,7 @@
 import { GLTFLoader } from './vendor/GLTFLoader.js';
-import { validateBoardDescriptor, boardRooms } from './electrical-board-descriptor.js?v=d27cd293eda215a6';
-import { createBoardOverlay } from './electrical-board-overlay.js?v=f7a7a42f349f2c89';
-import { validateBoardSetout, setoutLabel } from './electrical-board-setout.js?v=794bc276450c530c';
+import { validateBoardDescriptor, boardRooms } from './electrical-board-descriptor.js?v=60527b3213edf195';
+import { createBoardOverlay } from './electrical-board-overlay.js?v=8f672f98c1227b5b';
+import { validateBoardSetout, setoutLabel } from './electrical-board-setout.js?v=632fe2e2b0a491c5';
 
 const ROOM_LABELS = {
   bedroom_1: 'Back bedroom', bedroom_2: 'Middle bedroom', bedroom_3: 'Front bedroom',
@@ -237,6 +237,7 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
   const ready = initialize();
   return {
     ready,
+    revision: () => descriptor?.id || null,
     update({ time, currentRoom, paused = false }) { overlay?.update({ time, currentRoom, paused: paused || panelVisible() }); },
     pickLabel(x, y) { return panelVisible() ? null : overlay?.pickLabel(x, y) || null; },
     selectLabel(id) { if (descriptor?.boards.some(board => board.id === id)) choose(id, true); },

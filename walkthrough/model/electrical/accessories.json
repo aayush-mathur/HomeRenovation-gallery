@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "id": "electrical-v004-accessories",
+  "base_source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
+  "model": {
+    "src": "./model/electrical/accessories-6761392b2bf094e8.glb",
+    "sha256": "6761392b2bf094e80d3d0ac3be3abb990b73d1b6cb5fc1a33f41917c07aac36c",
+    "bytes": 8468
+  },
+  "provisions": [
+    {
+      "id": "B2-A",
+      "center_m": [
+        5.04,
+        6.78,
+        0.504
+      ],
+      "size_m": [
+        0.22,
+        0.28,
+        0.025
+      ]
+    },
+    {
+      "id": "B2-B",
+      "center_m": [
+        5.04,
+        9.23,
+        0.504
+      ],
+      "size_m": [
+        0.22,
+        0.28,
+        0.025
+      ]
+    },
+    {
+      "id": "B1-MIRROR",
+      "room": "bedroom_1",
+      "center_m": [
+        3.82,
+        15.815,
+        2.17
+      ],
+      "size_m": [
+        0.025,
+        0.6,
+        0.035
+      ],
+      "status": "dry task-light reservation"
+    },
+    {
+      "id": "B2-MIRROR",
+      "room": "bedroom_2",
+      "center_m": [
+        6.325,
+        5.28,
+        2.13
+      ],
+      "size_m": [
+        0.6,
+        0.025,
+        0.035
+      ],
+      "status": "dry task-light reservation"
+    },
+    {
+      "id": "B3-MIRROR",
+      "room": "bedroom_3",
+      "center_m": [
+        6.79,
+        4.56,
+        2.17
+      ],
+      "size_m": [
+        0.025,
+        0.6,
+        0.035
+      ],
+      "status": "dry task-light reservation"
+    }
+  ],
+  "limits": [
+    "Separate provisional geometry, not installed products.",
+    "No wet-room luminaire modeled before qualified wet review.",
+    "Mirror bars reserve fixed task-light space, not measured lux or powered lighting."
+  ]
+}

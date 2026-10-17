@@ -1,9 +1,9 @@
 import * as THREE from 'three';
 import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { isSafe, move, movementVector, movementSpeed, joystickVector, roomAt, applyLens, inspectionNavigation } from './navigation.js?lens=1&controls=4';
-import { validateCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=385a64a657a99098';
+import { validateCeilingOptions, activeCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=a653fd99aa8b800d';
 import { createFixtureLighting } from './fixture-lighting.js?v=07ea12a8efadecfe';
-import { initBoardPlanning } from './electrical-board-planning.js?v=7423dfa60fab2043';
+import { initBoardPlanning } from './electrical-board-planning.js?v=c806edd01467174b';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';
@@ -28,9 +28,13 @@ let focalLength = null, lens;
 let ceilings, ceilingOptions, ceilingUnavailable = '';
 let fixtureLighting;
 let electrical;
+let electricalAccessories, accessoryController, accessoryRequest = 0, accessoryError = '';
 const STARTUP_VIEW = Object.freeze({ ceiling: 'luxe', electricalPlates: true, timeoutMs: 15000 });
 let ceilingRequest = Promise.resolve();
 const movementKeys = new Set(['KeyW', 'KeyA', 'KeyS', 'KeyD', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'KeyQ', 'KeyE', 'KeyR', 'KeyF']);
+on($('accessory-retry'), 'click', () => {
+  if (loadController && !loadController.signal.aborted) loadAccessories(loadController.signal);
+});
 const shiftHeld = () => keys.has('ShiftLeft') || keys.has('ShiftRight');
 function renderPace() {
   const fast = fasterPace || shiftHeld();
@@ -97,6 +101,9 @@ function teleport(id) {
   message(`${preset.name} · eye height 1.6 m`);
 }
 function disposeModel() {
+  ++accessoryRequest; accessoryController?.abort(); accessoryController = null;
+  electricalAccessories?.dispose(); electricalAccessories = null; accessoryError = '';
+  $('accessory-alert').hidden = true; $('accessory-retry').hidden = true;
   electrical?.dispose(); electrical = null;
   disposeCeilings();
   if (!model) return;
@@ -107,6 +114,37 @@ function disposeModel() {
     for (const mat of materials) mat?.dispose();
   });
   model = null;
+}
+async function loadAccessories(signal) {
+  const source = manifest;
+  const ticket = ++accessoryRequest;
+  accessoryController?.abort();
+  const controller = accessoryController = new AbortController();
+  const abort = () => controller.abort();
+  signal.addEventListener('abort', abort, { once: true });
+  const timer = setTimeout(() => controller.abort(new Error('Accessory loading timed out')), STARTUP_VIEW.timeoutMs);
+  $('accessory-retry').disabled = true;
+  try {
+    const { loadElectricalAccessories } = await import('./electrical-accessories.js?v=d26bff5cb160507f');
+    const loaded = await loadElectricalAccessories({
+      THREE, scene, house: source, baseURL: document.baseURI,
+      parse: bytes => new GLTFLoader().parseAsync(bytes, ''),
+      fetchAsset: (url, options) => fetch(url, { ...options, signal: controller.signal }),
+    });
+    if (disposed || signal.aborted || ticket !== accessoryRequest || source !== manifest) { loaded.dispose(); return; }
+    if (controller.signal.aborted) { loaded.dispose(); throw controller.signal.reason; }
+    electricalAccessories?.dispose();
+    electricalAccessories = loaded; accessoryError = '';
+    $('accessory-alert').hidden = true; $('accessory-retry').hidden = true;
+  } catch (error) {
+    if (disposed || signal.aborted || ticket !== accessoryRequest || source !== manifest) return;
+    accessoryError = `Bedside shelves and dry mirror-light provisions unavailable: ${error.message}. They are not shown; walking and switchboards remain available.`;
+    $('accessory-alert').textContent = accessoryError;
+    $('accessory-alert').hidden = false; $('accessory-retry').hidden = false;
+  } finally {
+    clearTimeout(timer); signal.removeEventListener('abort', abort);
+    if (ticket === accessoryRequest) $('accessory-retry').disabled = false;
+  }
 }
 function selectCeiling(id, options) {
   ceilingRequest = ceilings ? ceilings.select(id, options) : Promise.resolve();
@@ -126,7 +164,7 @@ function renderCeilings(state) {
   $('ceiling').value = state.pending || state.selected;
   $('ceiling').setAttribute('aria-busy', String(Boolean(state.pending)));
   $('ceiling-status').textContent = state.error || (pending
-    ? `Loading ${pending.label}… Still showing ${variant?.label || 'Existing'}.`
+    ? `Loading ${pending.label}… Still showing ${variant?.label || 'the base model'}.`
     : `${variant?.summary || 'Original ceiling and fixtures.'} Concepts only · web lighting is approximate.`);
   $('ceiling-feedback').dataset.error = String(Boolean(state.error));
   $('ceiling-alert').hidden = !state.error;
@@ -139,7 +177,7 @@ function renderCeilings(state) {
 }
 function setupCeilings() {
   try {
-    ceilingOptions = validateCeilingOptions(manifest, document.baseURI);
+    ceilingOptions = activeCeilingOptions(validateCeilingOptions(manifest, document.baseURI));
     if (!ceilingOptions) return;
     ceilings = createCeilingComparison({
       options: ceilingOptions, model, scene,
@@ -182,14 +220,16 @@ function setupCeilings() {
       },
       onChange: renderCeilings,
     });
-    $('ceiling').replaceChildren(new Option('Existing', 'existing'),
+    $('ceiling').replaceChildren(
+      ...(ceilingOptions.version === 4 ? [] : [new Option('Existing', 'existing')]),
       ...ceilingOptions.variants.map(v => new Option(v.label, v.id)));
+    $('ceiling').disabled = ceilingOptions.version === 4;
     $('ceiling-note').textContent = ceilingOptions.note;
     for (const id of ['ceiling-controls', 'ceiling-feedback', 'ceiling-help']) $(id).hidden = false;
     document.querySelector('header').classList.add('has-ceilings');
     renderCeilings(ceilings.snapshot());
   } catch (error) {
-    ceilingUnavailable = `${error.message} Showing Existing; walking is unchanged.`;
+    ceilingUnavailable = `${error.message} Showing the base model, not the selected Sculpted Luxe design; walking is unchanged.`;
     $('ceiling-feedback').hidden = false;
     $('ceiling-feedback').dataset.error = 'true';
     $('ceiling-status').textContent = ceilingUnavailable;
@@ -285,9 +325,12 @@ async function load() {
     teleport(nav.presets.some(p => p.id === selected) ? selected : nav.presets[0].id);
     $('loading-detail').textContent = 'Preparing Sculpted Luxe and proposed switchboards…';
     const initialElectrical = electrical;
+    const accessoriesReady = initialElectrical.ready.then(() => {
+      if (!disposed && !signal.aborted && initialElectrical.revision() === 'electrical-v004') return loadAccessories(signal);
+    });
     let startupTimer;
     const optionalReady = async () => {
-      await initialElectrical.ready;
+      await Promise.all([initialElectrical.ready, accessoriesReady]);
       let awaited;
       do {
         awaited = ceilingRequest;
@@ -645,6 +688,8 @@ window.walkthrough = { snapshot: () => ({
   storage: { enabled: false, mode: 'closed' },
   fixtures: fixtureLighting?.snapshot(),
   electrical: electrical?.snapshot() || null,
+  accessories: { loaded: Boolean(electricalAccessories), error: accessoryError,
+    count: electricalAccessories?.descriptor.provisions.length || 0 },
   ceiling: ceilings?.snapshot() || { selected: 'existing', pending: null, overlayLoaded: false, baselineHidden: false, unavailable: ceilingUnavailable },
 }), geometrySnapshot: () => {
   const meshes = [];

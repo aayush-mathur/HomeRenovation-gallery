@@ -3,6 +3,7 @@ const IDS = {
   1: ['quiet', 'linear', 'warm'],
   2: ['quiet', 'linear', 'warm', 'sculpted'],
   3: ['quiet', 'linear', 'warm', 'sculpted', 'luxe'],
+  4: ['luxe'],
 };
 
 export function validateCeilingOptions(manifest, baseURL) {
@@ -10,7 +11,7 @@ export function validateCeilingOptions(manifest, baseURL) {
   const options = manifest.ceiling_options;
   const invalid = detail => { throw new Error(`Ceiling comparison unavailable: ${detail}.`); };
   if (!options || !Number.isInteger(options.version) || !Object.hasOwn(IDS, options.version) ||
-      options.default !== 'existing') invalid('unsupported descriptor');
+      options.default !== (options.version === 4 ? 'luxe' : 'existing')) invalid('unsupported descriptor');
   const ids = IDS[options.version];
   if (!HASH.test(manifest.source_sha256) || options.base_source_sha256 !== manifest.source_sha256) invalid('source binding does not match this house');
   if (!Array.isArray(options.baseline_nodes) || !options.baseline_nodes.length ||
@@ -47,6 +48,12 @@ export function validateCeilingOptions(manifest, baseURL) {
   }
   if (typeof options.note !== 'string' || !options.note.trim()) invalid('missing concept note');
   return { ...options, quality, baseline_nodes: [...options.baseline_nodes], variants };
+}
+
+export function activeCeilingOptions(options) {
+  if (!options || !options.variants.some(variant => variant.id === 'luxe')) return options;
+  return { ...options, version: 4, default: 'luxe', quality: null,
+    variants: options.variants.filter(variant => variant.id === 'luxe') };
 }
 
 export function disposeCeiling(root) {
@@ -152,7 +159,7 @@ export function createCeilingComparison({ options, model, scene, parse, onChange
       if (loaded) { scene.remove(loaded); disposeCeiling(loaded); }
       if (ticket !== generation || disposed) return;
       pending = null; pendingQuality = false; abort = null; failed = id; failedQuality = wantQuality;
-      error = `Could not load ${variant.label}: ${cause.message}. Still showing ${qualityActive ? options.quality.label : selected === 'existing' ? 'Existing' : options.variants.find(v => v.id === selected).label}. Retry or choose Existing.`;
+      error = `Could not load ${variant.label}: ${cause.message}. Still showing ${qualityActive ? options.quality.label : selected === 'existing' ? 'the base model (not Sculpted Luxe)' : options.variants.find(v => v.id === selected).label}. ${options.version === 4 ? 'Retry loading Sculpted Luxe.' : 'Retry or choose Existing.'}`;
       emit();
     }
   }
@@ -163,7 +170,7 @@ export function createCeilingComparison({ options, model, scene, parse, onChange
       if (!pending || disposed) return;
       failed = pending; failedQuality = pendingQuality;
       ++generation; abort?.abort(); abort = null; pending = null; pendingQuality = false;
-      error = `${message} The current ceiling is retained. Retry or choose Existing.`;
+      error = `${message} The current ceiling is retained. ${options.version === 4 ? 'Retry loading Sculpted Luxe.' : 'Retry or choose Existing.'}`;
       emit();
     },
     dispose() {

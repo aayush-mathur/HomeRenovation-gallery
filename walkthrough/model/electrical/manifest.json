@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "id": "electrical-v003",
+  "id": "electrical-v004",
   "base_source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
   "base_navigation_sha256": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
   "luxe_sha256": "2fc0001646f3b8a7005af317dac1d009fb735447625672566814cd5081b754b4",
   "model": {
-    "src": "./model/electrical/boards-96f260b115b955f9.glb",
-    "sha256": "96f260b115b955f97ceb7b1580ec3d7f696058f2d391670528abd6cc4285dc07",
-    "bytes": 3466064
+    "src": "./model/electrical/boards-1c56f2504bd0f086.glb",
+    "sha256": "1c56f2504bd0f086b401949e5a6fc7c0f5be1b3f182494d3287c4020775ee5ae",
+    "bytes": 3787928
   },
   "boards": [
     {
@@ -27,7 +27,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        165.0,
+        120.0,
         90.0,
         12.0
       ],
@@ -79,21 +79,6 @@
           "id": "EB-B1-ENTRY-F03",
           "slot": 2,
           "span": 2
-        },
-        {
-          "label": "AC isolation",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "B1-AC"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-B1-09"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-B1-ENTRY-F04",
-          "slot": 4,
-          "span": 2
         }
       ],
       "reason_ids": [
@@ -117,7 +102,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        165.0,
+        120.0,
         90.0,
         12.0
       ],
@@ -168,21 +153,6 @@
           "id": "EB-B2-ENTRY-F03",
           "slot": 2,
           "span": 2
-        },
-        {
-          "label": "AC isolation",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "B2-AC"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-B2-09"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-B2-ENTRY-F04",
-          "slot": 4,
-          "span": 2
         }
       ],
       "reason_ids": [
@@ -206,7 +176,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        165.0,
+        120.0,
         90.0,
         12.0
       ],
@@ -257,21 +227,6 @@
           "id": "EB-B3-ENTRY-F03",
           "slot": 2,
           "span": 2
-        },
-        {
-          "label": "AC isolation",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "B3-AC"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-B3-09"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-B3-ENTRY-F04",
-          "slot": 4,
-          "span": 2
         }
       ],
       "reason_ids": [
@@ -284,8 +239,8 @@
       "room": "bedroom_1",
       "node_name": "BOARD_EB-B1-BED-A",
       "position_web_m": [
-        4.87,
-        1.094,
+        4.88,
+        0.664,
         -17.564785
       ],
       "normal_web": [
@@ -293,9 +248,9 @@
         -0.0,
         1.0
       ],
-      "height_aff_mm": 1080,
+      "height_aff_mm": 650,
       "size_mm": [
-        165.0,
+        120.0,
         90.0,
         12.0
       ],
@@ -304,31 +259,15 @@
           "label": "Charging socket",
           "kind": "socket",
           "fixture_group_ids": [
-            "UTILITY",
-            "B1-LAMP-A"
-          ],
-          "backup_preference": "requested",
-          "point_ids": [
-            "E-B1-01"
-          ],
-          "behavior": "Ordinary plug provision for charging or existing bedside lamp; choose a lamp with reachable local control rather than adding a redundant wall rocker. Product and protection unselected.",
-          "id": "EB-B1-BED-A-F01",
-          "slot": 0,
-          "span": 2
-        },
-        {
-          "label": "USB-C charging",
-          "kind": "usb-c",
-          "fixture_group_ids": [
             "UTILITY"
           ],
           "backup_preference": "requested",
           "point_ids": [
             "E-B1-01"
           ],
-          "behavior": "Provisional USB-C module; product/output/PD unknown, with an ordinary socket retained.",
-          "id": "EB-B1-BED-A-F02",
-          "slot": 2,
+          "behavior": "Always-available selected charging provision; bedtime scene never cuts this outlet or fan. Existing portable lamps retain local controls; simultaneous lamp/charging plug fit to be reviewed.",
+          "id": "EB-B1-BED-A-F01",
+          "slot": 0,
           "span": 2
         },
         {
@@ -342,9 +281,24 @@
           "point_ids": [
             "E-B1-02"
           ],
-          "behavior": "Desired ambient-plus-entry-path scene from entry and either bedside, so the small vestibule needs no extra routine button. Multi-location/driver compatibility and wiring are unselected.",
+          "behavior": "Bedtime control covers ambient AND the adjacent independently identified cove function. Desired coordinated all-lights-off scene with entry; never interrupt charging or fan. Architecture unselected, not wiring or backup transfer.",
           "id": "EB-B1-BED-A-F03",
-          "slot": 4,
+          "slot": 2,
+          "span": 1
+        },
+        {
+          "label": "Cove",
+          "kind": "switch",
+          "fixture_group_ids": [
+            "B1-COVE"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B1-02"
+          ],
+          "behavior": "Bedside bedtime cove off/on alongside ambient; desired coordinated all-lights-off, not a switched socket/fan supply. Cove mains-only remains distinct from selected ambient backup.",
+          "id": "EB-B1-BED-A-F04",
+          "slot": 3,
           "span": 1
         }
       ],
@@ -358,8 +312,8 @@
       "room": "bedroom_1",
       "node_name": "BOARD_EB-B1-BED-B",
       "position_web_m": [
-        7.09,
-        1.094,
+        7.08,
+        0.664,
         -17.564785
       ],
       "normal_web": [
@@ -367,9 +321,9 @@
         -0.0,
         1.0
       ],
-      "height_aff_mm": 1080,
+      "height_aff_mm": 650,
       "size_mm": [
-        165.0,
+        120.0,
         90.0,
         12.0
       ],
@@ -378,31 +332,15 @@
           "label": "Charging socket",
           "kind": "socket",
           "fixture_group_ids": [
-            "UTILITY",
-            "B1-LAMP-B"
-          ],
-          "backup_preference": "requested",
-          "point_ids": [
-            "E-B1-03"
-          ],
-          "behavior": "Ordinary plug provision for charging or existing bedside lamp; choose a lamp with reachable local control rather than adding a redundant wall rocker. Product and protection unselected.",
-          "id": "EB-B1-BED-B-F01",
-          "slot": 0,
-          "span": 2
-        },
-        {
-          "label": "USB-C charging",
-          "kind": "usb-c",
-          "fixture_group_ids": [
             "UTILITY"
           ],
           "backup_preference": "requested",
           "point_ids": [
             "E-B1-03"
           ],
-          "behavior": "Provisional USB-C module; product/output/PD unknown, with an ordinary socket retained.",
-          "id": "EB-B1-BED-B-F02",
-          "slot": 2,
+          "behavior": "Always-available selected charging provision; bedtime scene never cuts this outlet or fan. Existing portable lamps retain local controls; simultaneous lamp/charging plug fit to be reviewed.",
+          "id": "EB-B1-BED-B-F01",
+          "slot": 0,
           "span": 2
         },
         {
@@ -416,9 +354,24 @@
           "point_ids": [
             "E-B1-04"
           ],
-          "behavior": "Desired ambient-plus-entry-path scene from entry and either bedside, so the small vestibule needs no extra routine button. Multi-location/driver compatibility and wiring are unselected.",
+          "behavior": "Bedtime control covers ambient AND the adjacent independently identified cove function. Desired coordinated all-lights-off scene with entry; never interrupt charging or fan. Architecture unselected, not wiring or backup transfer.",
           "id": "EB-B1-BED-B-F03",
-          "slot": 4,
+          "slot": 2,
+          "span": 1
+        },
+        {
+          "label": "Cove",
+          "kind": "switch",
+          "fixture_group_ids": [
+            "B1-COVE"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B1-04"
+          ],
+          "behavior": "Bedside bedtime cove off/on alongside ambient; desired coordinated all-lights-off, not a switched socket/fan supply. Cove mains-only remains distinct from selected ambient backup.",
+          "id": "EB-B1-BED-B-F04",
+          "slot": 3,
           "span": 1
         }
       ],
@@ -433,17 +386,17 @@
       "node_name": "BOARD_EB-B2-BED-A",
       "position_web_m": [
         4.91358,
-        1.264,
-        -7.23
+        0.664,
+        -6.78
       ],
       "normal_web": [
         1.0,
         -0.0,
         0.0
       ],
-      "height_aff_mm": 1250,
+      "height_aff_mm": 650,
       "size_mm": [
-        165.0,
+        120.0,
         90.0,
         12.0
       ],
@@ -458,24 +411,9 @@
           "point_ids": [
             "E-B2-01"
           ],
-          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "behavior": "Always-available selected charging provision; bedtime scene never cuts this outlet or fan. Existing portable lamps retain local controls; simultaneous lamp/charging plug fit to be reviewed.",
           "id": "EB-B2-BED-A-F01",
           "slot": 0,
-          "span": 2
-        },
-        {
-          "label": "USB-C charging",
-          "kind": "usb-c",
-          "fixture_group_ids": [
-            "UTILITY"
-          ],
-          "backup_preference": "requested",
-          "point_ids": [
-            "E-B2-01"
-          ],
-          "behavior": "Provisional USB-C module; product/output/PD unknown, with an ordinary socket retained.",
-          "id": "EB-B2-BED-A-F02",
-          "slot": 2,
           "span": 2
         },
         {
@@ -488,9 +426,24 @@
           "point_ids": [
             "E-B2-02"
           ],
-          "behavior": "Desired same ambient group from this pillow and entry; not a wiring/2-way-device compatibility claim.",
+          "behavior": "Bedtime control covers ambient AND the adjacent independently identified cove function. Desired coordinated all-lights-off scene with entry; never interrupt charging or fan. Architecture unselected, not wiring or backup transfer.",
           "id": "EB-B2-BED-A-F03",
-          "slot": 4,
+          "slot": 2,
+          "span": 1
+        },
+        {
+          "label": "Cove",
+          "kind": "switch",
+          "fixture_group_ids": [
+            "B2-COVE"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B2-02"
+          ],
+          "behavior": "Bedside bedtime cove off/on alongside ambient; desired coordinated all-lights-off, not a switched socket/fan supply. Cove mains-only remains distinct from selected ambient backup.",
+          "id": "EB-B2-BED-A-F04",
+          "slot": 3,
           "span": 1
         }
       ],
@@ -505,17 +458,17 @@
       "node_name": "BOARD_EB-B2-BED-B",
       "position_web_m": [
         4.91358,
-        1.264,
-        -8.78
+        0.664,
+        -9.23
       ],
       "normal_web": [
         1.0,
         -0.0,
         0.0
       ],
-      "height_aff_mm": 1250,
+      "height_aff_mm": 650,
       "size_mm": [
-        165.0,
+        120.0,
         90.0,
         12.0
       ],
@@ -530,24 +483,9 @@
           "point_ids": [
             "E-B2-03"
           ],
-          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "behavior": "Always-available selected charging provision; bedtime scene never cuts this outlet or fan. Existing portable lamps retain local controls; simultaneous lamp/charging plug fit to be reviewed.",
           "id": "EB-B2-BED-B-F01",
           "slot": 0,
-          "span": 2
-        },
-        {
-          "label": "USB-C charging",
-          "kind": "usb-c",
-          "fixture_group_ids": [
-            "UTILITY"
-          ],
-          "backup_preference": "requested",
-          "point_ids": [
-            "E-B2-03"
-          ],
-          "behavior": "Provisional USB-C module; product/output/PD unknown, with an ordinary socket retained.",
-          "id": "EB-B2-BED-B-F02",
-          "slot": 2,
           "span": 2
         },
         {
@@ -560,9 +498,24 @@
           "point_ids": [
             "E-B2-04"
           ],
-          "behavior": "Desired same ambient group from this pillow and entry; not a wiring/2-way-device compatibility claim.",
+          "behavior": "Bedtime control covers ambient AND the adjacent independently identified cove function. Desired coordinated all-lights-off scene with entry; never interrupt charging or fan. Architecture unselected, not wiring or backup transfer.",
           "id": "EB-B2-BED-B-F03",
-          "slot": 4,
+          "slot": 2,
+          "span": 1
+        },
+        {
+          "label": "Cove",
+          "kind": "switch",
+          "fixture_group_ids": [
+            "B2-COVE"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B2-04"
+          ],
+          "behavior": "Bedside bedtime cove off/on alongside ambient; desired coordinated all-lights-off, not a switched socket/fan supply. Cove mains-only remains distinct from selected ambient backup.",
+          "id": "EB-B2-BED-B-F04",
+          "slot": 3,
           "span": 1
         }
       ],
@@ -577,17 +530,17 @@
       "node_name": "BOARD_EB-B3-BED-A",
       "position_web_m": [
         3.516708,
-        1.094,
-        -1.37
+        0.664,
+        -1.415
       ],
       "normal_web": [
         1.0,
         -0.0,
         0.0
       ],
-      "height_aff_mm": 1080,
+      "height_aff_mm": 650,
       "size_mm": [
-        165.0,
+        120.0,
         90.0,
         12.0
       ],
@@ -596,31 +549,15 @@
           "label": "Charging socket",
           "kind": "socket",
           "fixture_group_ids": [
-            "UTILITY",
-            "B3-LAMP-A"
-          ],
-          "backup_preference": "requested",
-          "point_ids": [
-            "E-B3-03"
-          ],
-          "behavior": "Ordinary plug provision for charging or existing bedside lamp; choose a lamp with reachable local control rather than adding a redundant wall rocker. Product and protection unselected.",
-          "id": "EB-B3-BED-A-F01",
-          "slot": 0,
-          "span": 2
-        },
-        {
-          "label": "USB-C charging",
-          "kind": "usb-c",
-          "fixture_group_ids": [
             "UTILITY"
           ],
           "backup_preference": "requested",
           "point_ids": [
             "E-B3-03"
           ],
-          "behavior": "Provisional USB-C module; product/output/PD unknown, with an ordinary socket retained.",
-          "id": "EB-B3-BED-A-F02",
-          "slot": 2,
+          "behavior": "Always-available selected charging provision; bedtime scene never cuts this outlet or fan. Existing portable lamps retain local controls; simultaneous lamp/charging plug fit to be reviewed.",
+          "id": "EB-B3-BED-A-F01",
+          "slot": 0,
           "span": 2
         },
         {
@@ -633,9 +570,24 @@
           "point_ids": [
             "E-B3-04"
           ],
-          "behavior": "Desired same ambient group from this pillow and entry; not a wiring/2-way-device compatibility claim.",
+          "behavior": "Bedtime control covers ambient AND the adjacent independently identified cove function. Desired coordinated all-lights-off scene with entry; never interrupt charging or fan. Architecture unselected, not wiring or backup transfer.",
           "id": "EB-B3-BED-A-F03",
-          "slot": 4,
+          "slot": 2,
+          "span": 1
+        },
+        {
+          "label": "Cove",
+          "kind": "switch",
+          "fixture_group_ids": [
+            "B3-COVE"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B3-04"
+          ],
+          "behavior": "Bedside bedtime cove off/on alongside ambient; desired coordinated all-lights-off, not a switched socket/fan supply. Cove mains-only remains distinct from selected ambient backup.",
+          "id": "EB-B3-BED-A-F04",
+          "slot": 3,
           "span": 1
         }
       ],
@@ -650,17 +602,17 @@
       "node_name": "BOARD_EB-B3-BED-B",
       "position_web_m": [
         3.516708,
-        1.094,
-        -3.655
+        0.664,
+        -3.615
       ],
       "normal_web": [
         1.0,
         -0.0,
         0.0
       ],
-      "height_aff_mm": 1080,
+      "height_aff_mm": 650,
       "size_mm": [
-        165.0,
+        120.0,
         90.0,
         12.0
       ],
@@ -669,31 +621,15 @@
           "label": "Charging socket",
           "kind": "socket",
           "fixture_group_ids": [
-            "UTILITY",
-            "B3-LAMP-B"
-          ],
-          "backup_preference": "requested",
-          "point_ids": [
-            "E-B3-01"
-          ],
-          "behavior": "Ordinary plug provision for charging or existing bedside lamp; choose a lamp with reachable local control rather than adding a redundant wall rocker. Product and protection unselected.",
-          "id": "EB-B3-BED-B-F01",
-          "slot": 0,
-          "span": 2
-        },
-        {
-          "label": "USB-C charging",
-          "kind": "usb-c",
-          "fixture_group_ids": [
             "UTILITY"
           ],
           "backup_preference": "requested",
           "point_ids": [
             "E-B3-01"
           ],
-          "behavior": "Provisional USB-C module; product/output/PD unknown, with an ordinary socket retained.",
-          "id": "EB-B3-BED-B-F02",
-          "slot": 2,
+          "behavior": "Always-available selected charging provision; bedtime scene never cuts this outlet or fan. Existing portable lamps retain local controls; simultaneous lamp/charging plug fit to be reviewed.",
+          "id": "EB-B3-BED-B-F01",
+          "slot": 0,
           "span": 2
         },
         {
@@ -706,9 +642,24 @@
           "point_ids": [
             "E-B3-02"
           ],
-          "behavior": "Desired same ambient group from this pillow and entry; not a wiring/2-way-device compatibility claim.",
+          "behavior": "Bedtime control covers ambient AND the adjacent independently identified cove function. Desired coordinated all-lights-off scene with entry; never interrupt charging or fan. Architecture unselected, not wiring or backup transfer.",
           "id": "EB-B3-BED-B-F03",
-          "slot": 4,
+          "slot": 2,
+          "span": 1
+        },
+        {
+          "label": "Cove",
+          "kind": "switch",
+          "fixture_group_ids": [
+            "B3-COVE"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B3-02"
+          ],
+          "behavior": "Bedside bedtime cove off/on alongside ambient; desired coordinated all-lights-off, not a switched socket/fan supply. Cove mains-only remains distinct from selected ambient backup.",
+          "id": "EB-B3-BED-B-F04",
+          "slot": 3,
           "span": 1
         }
       ],
@@ -784,6 +735,21 @@
           "id": "EB-B1-WORK-F03",
           "slot": 4,
           "span": 1
+        },
+        {
+          "label": "Mirror task light",
+          "kind": "switch",
+          "fixture_group_ids": [
+            "B1-MIRROR"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B1-06"
+          ],
+          "behavior": "Dedicated fixed mirror task-light provision for face visibility, independently operable from room/cove. Generic dry luminaire reservation in separate proposal overlay; select diffuser/driver, glare/color rendering and maintenance access after mockup. No measured lux claim.",
+          "id": "EB-B1-WORK-F04",
+          "slot": 5,
+          "span": 1
         }
       ],
       "reason_ids": [
@@ -838,8 +804,8 @@
       "room": "bedroom_2",
       "node_name": "BOARD_EB-B2-WORK",
       "position_web_m": [
-        7.79,
-        1.314,
+        7.8,
+        0.994,
         -9.944628
       ],
       "normal_web": [
@@ -847,19 +813,18 @@
         -0.0,
         1.0
       ],
-      "height_aff_mm": 1300,
+      "height_aff_mm": 980,
       "size_mm": [
-        165.0,
+        300.0,
         90.0,
         12.0
       ],
       "functions": [
         {
-          "label": "Study socket",
+          "label": "Monitor socket",
           "kind": "socket",
           "fixture_group_ids": [
-            "UTILITY",
-            "B2-TASK"
+            "UTILITY"
           ],
           "backup_preference": "mains-only",
           "point_ids": [
@@ -868,11 +833,26 @@
           "behavior": "Product, protection, segregation and final installation are installer decisions.",
           "id": "EB-B2-WORK-F01",
           "slot": 0,
-          "span": 2
+          "span": 3
         },
         {
-          "label": "USB-C charging",
-          "kind": "usb-c",
+          "label": "Task lamp socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "B2-TASK"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B2-06"
+          ],
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-B2-WORK-F04",
+          "slot": 3,
+          "span": 3
+        },
+        {
+          "label": "Laptop socket",
+          "kind": "socket",
           "fixture_group_ids": [
             "UTILITY"
           ],
@@ -880,10 +860,10 @@
           "point_ids": [
             "E-B2-06"
           ],
-          "behavior": "Provisional USB-C module; product/output/PD unknown, with an ordinary socket retained.",
-          "id": "EB-B2-WORK-F02",
-          "slot": 2,
-          "span": 2
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-B2-WORK-F05",
+          "slot": 6,
+          "span": 3
         },
         {
           "label": "Data",
@@ -891,13 +871,13 @@
           "fixture_group_ids": [
             "DATA"
           ],
-          "backup_preference": "mains-only",
+          "backup_preference": "not-decided",
           "point_ids": [
             "E-B2-07"
           ],
           "behavior": "Product, protection, segregation and final installation are installer decisions.",
           "id": "EB-B2-WORK-F03",
-          "slot": 4,
+          "slot": 9,
           "span": 1
         }
       ],
@@ -922,7 +902,7 @@
       ],
       "height_aff_mm": 1080,
       "size_mm": [
-        120.0,
+        165.0,
         90.0,
         12.0
       ],
@@ -958,6 +938,21 @@
           "id": "EB-B2-VANITY-F02",
           "slot": 2,
           "span": 2
+        },
+        {
+          "label": "Mirror task light",
+          "kind": "switch",
+          "fixture_group_ids": [
+            "B2-MIRROR"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B2-08"
+          ],
+          "behavior": "Dedicated fixed mirror task-light provision for face visibility, independently operable from room/cove. Generic dry luminaire reservation in separate proposal overlay; select diffuser/driver, glare/color rendering and maintenance access after mockup. No measured lux claim.",
+          "id": "EB-B2-VANITY-F03",
+          "slot": 4,
+          "span": 1
         }
       ],
       "reason_ids": [
@@ -1032,6 +1027,21 @@
           "id": "EB-B3-WORK-F03",
           "slot": 4,
           "span": 1
+        },
+        {
+          "label": "Mirror task light",
+          "kind": "switch",
+          "fixture_group_ids": [
+            "B3-MIRROR"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B3-06"
+          ],
+          "behavior": "Dedicated fixed mirror task-light provision for face visibility, independently operable from room/cove. Generic dry luminaire reservation in separate proposal overlay; select diffuser/driver, glare/color rendering and maintenance access after mockup. No measured lux claim.",
+          "id": "EB-B3-WORK-F04",
+          "slot": 5,
+          "span": 1
         }
       ],
       "reason_ids": [
@@ -1097,7 +1107,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        165.0,
+        120.0,
         90.0,
         12.0
       ],
@@ -1148,21 +1158,6 @@
           "behavior": "Desired control only; device, driver compatibility and wiring architecture are unselected. No simulated switching.",
           "id": "EB-DR-ENTRY-F03",
           "slot": 2,
-          "span": 2
-        },
-        {
-          "label": "AC isolation",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "DR-AC"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-DR-04"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-DR-ENTRY-F04",
-          "slot": 4,
           "span": 2
         }
       ],
@@ -1286,7 +1281,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        165.0,
+        120.0,
         90.0,
         12.0
       ],
@@ -1336,21 +1331,6 @@
           "behavior": "Desired control only; device, driver compatibility and wiring architecture are unselected. No simulated switching.",
           "id": "EB-HA-ENTRY-F03",
           "slot": 2,
-          "span": 2
-        },
-        {
-          "label": "AC isolation",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "HA-AC"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-HA-09"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-HA-ENTRY-F04",
-          "slot": 4,
           "span": 2
         }
       ],
@@ -1501,13 +1481,13 @@
     },
     {
       "id": "EB-HA-MEDIA",
-      "label": "Media / Wi-Fi services",
+      "label": "Media mains only",
       "room": "lounge",
       "node_name": "BOARD_EB-HA-MEDIA",
       "position_web_m": [
         4.7643,
         1.164,
-        -9.85
+        -9.78
       ],
       "normal_web": [
         -1.0,
@@ -1522,7 +1502,7 @@
       ],
       "functions": [
         {
-          "label": "TV / AV socket",
+          "label": "TV socket",
           "kind": "socket",
           "fixture_group_ids": [
             "HA-TV"
@@ -1534,37 +1514,22 @@
           "behavior": "Product, protection, segregation and final installation are installer decisions.",
           "id": "EB-HA-MEDIA-F01",
           "slot": 0,
-          "span": 2
+          "span": 3
         },
         {
-          "label": "Wi-Fi only socket",
+          "label": "Set-top socket",
           "kind": "socket",
           "fixture_group_ids": [
-            "HA-WIFI"
+            "HA-TV"
           ],
-          "backup_preference": "requested",
+          "backup_preference": "mains-only",
           "point_ids": [
-            "E-HA-06"
+            "E-HA-05"
           ],
           "behavior": "Product, protection, segregation and final installation are installer decisions.",
-          "id": "EB-HA-MEDIA-F02",
-          "slot": 2,
-          "span": 2
-        },
-        {
-          "label": "Data",
-          "kind": "data",
-          "fixture_group_ids": [
-            "DATA"
-          ],
-          "backup_preference": "not-decided",
-          "point_ids": [
-            "E-HA-07"
-          ],
-          "behavior": "Product, protection, segregation and final installation are installer decisions.",
-          "id": "EB-HA-MEDIA-F03",
-          "slot": 4,
-          "span": 1
+          "id": "EB-HA-MEDIA-F04",
+          "slot": 3,
+          "span": 3
         }
       ],
       "reason_ids": [
@@ -1709,7 +1674,7 @@
       "position_web_m": [
         4.7643,
         1.164,
-        -10.015
+        -10.045
       ],
       "normal_web": [
         -1.0,
@@ -1734,7 +1699,7 @@
             "E-EN-01",
             "E-EN-02"
           ],
-          "behavior": "Desired control only; device, driver compatibility and wiring architecture are unselected. No simulated switching.",
+          "behavior": "Existing lobby downlight pair to provide entrance light through a ceiling presence-sensor / maintained override provision, pending product, detection field and fail-safe review. This wall station is manual override; no fictional threshold wall.",
           "id": "EB-EN-ARRIVAL-F01",
           "slot": 0,
           "span": 1
@@ -1849,13 +1814,13 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        120.0,
+        300.0,
         90.0,
         12.0
       ],
       "functions": [
         {
-          "label": "Dry prep socket",
+          "label": "Kettle socket",
           "kind": "socket",
           "fixture_group_ids": [
             "UTILITY"
@@ -1865,13 +1830,13 @@
             "E-KI-08"
           ],
           "behavior": "Product, protection, segregation and final installation are installer decisions.",
-          "id": "EB-KI-POWER-F01",
+          "id": "EB-KI-POWER-F03",
           "slot": 0,
-          "span": 2
+          "span": 3
         },
         {
-          "label": "USB-C charging",
-          "kind": "usb-c",
+          "label": "Toaster socket",
+          "kind": "socket",
           "fixture_group_ids": [
             "UTILITY"
           ],
@@ -1879,10 +1844,25 @@
           "point_ids": [
             "E-KI-08"
           ],
-          "behavior": "Provisional USB-C module; product/output/PD unknown, with an ordinary socket retained.",
-          "id": "EB-KI-POWER-F02",
-          "slot": 2,
-          "span": 2
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-KI-POWER-F04",
+          "slot": 3,
+          "span": 3
+        },
+        {
+          "label": "Mixer / spare socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-KI-08"
+          ],
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-KI-POWER-F05",
+          "slot": 6,
+          "span": 3
         }
       ],
       "reason_ids": [
@@ -2008,7 +1988,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        120.0,
+        97.5,
         90.0,
         12.0
       ],
@@ -2045,19 +2025,19 @@
           "span": 1
         },
         {
-          "label": "Geyser isolate",
-          "kind": "isolation-control",
+          "label": "Mirror task light",
+          "kind": "switch",
           "fixture_group_ids": [
-            "BA1-GEYSER"
+            "BA1-MIRROR"
           ],
           "backup_preference": "mains-only",
           "point_ids": [
-            "E-BA1-02"
+            "E-BA1-01"
           ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-BA1-DRY-F03",
+          "behavior": "Fixed mirror face-light provision, not another socket label. Luminaire, driver/access, glare, spray exposure, IP/protection and wet-area location require qualified site/product review; no wet fitting is modeled or approved.",
+          "id": "EB-BA1-DRY-F04",
           "slot": 2,
-          "span": 2
+          "span": 1
         }
       ],
       "reason_ids": [
@@ -2081,7 +2061,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        120.0,
+        97.5,
         90.0,
         12.0
       ],
@@ -2118,19 +2098,19 @@
           "span": 1
         },
         {
-          "label": "Geyser isolate",
-          "kind": "isolation-control",
+          "label": "Mirror task light",
+          "kind": "switch",
           "fixture_group_ids": [
-            "BA2-GEYSER"
+            "BA2-MIRROR"
           ],
           "backup_preference": "mains-only",
           "point_ids": [
-            "E-BA2-02"
+            "E-BA2-01"
           ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-BA2-DRY-F03",
+          "behavior": "Fixed mirror face-light provision, not another socket label. Luminaire, driver/access, glare, spray exposure, IP/protection and wet-area location require qualified site/product review; no wet fitting is modeled or approved.",
+          "id": "EB-BA2-DRY-F04",
           "slot": 2,
-          "span": 2
+          "span": 1
         }
       ],
       "reason_ids": [
@@ -2154,7 +2134,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        120.0,
+        97.5,
         90.0,
         12.0
       ],
@@ -2191,19 +2171,19 @@
           "span": 1
         },
         {
-          "label": "Geyser isolate",
-          "kind": "isolation-control",
+          "label": "Mirror task light",
+          "kind": "switch",
           "fixture_group_ids": [
-            "BA3-GEYSER"
+            "BA3-MIRROR"
           ],
           "backup_preference": "mains-only",
           "point_ids": [
-            "E-BA3-02"
+            "E-BA3-01"
           ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-BA3-DRY-F03",
+          "behavior": "Fixed mirror face-light provision, not another socket label. Luminaire, driver/access, glare, spray exposure, IP/protection and wet-area location require qualified site/product review; no wet fitting is modeled or approved.",
+          "id": "EB-BA3-DRY-F04",
           "slot": 2,
-          "span": 2
+          "span": 1
         }
       ],
       "reason_ids": [
@@ -2251,6 +2231,483 @@
       ],
       "reason_ids": [
         "R-EB-DE-LIGHT"
+      ]
+    },
+    {
+      "id": "EB-B1-AC",
+      "label": "B1 AC maintenance",
+      "room": "bedroom_1",
+      "node_name": "BOARD_EB-B1-AC",
+      "position_web_m": [
+        3.745344,
+        1.414,
+        -14.55
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 1400,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "AC isolation",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "B1-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B1-09"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-B1-ENTRY-F04",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-B1-AC"
+      ]
+    },
+    {
+      "id": "EB-B2-AC",
+      "label": "B2 AC maintenance",
+      "room": "bedroom_2",
+      "node_name": "BOARD_EB-B2-AC",
+      "position_web_m": [
+        4.91358,
+        1.464,
+        -6.4
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 1450,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "AC isolation",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "B2-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B2-09"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-B2-ENTRY-F04",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-B2-AC"
+      ]
+    },
+    {
+      "id": "EB-B3-AC",
+      "label": "B3 AC maintenance",
+      "room": "bedroom_3",
+      "node_name": "BOARD_EB-B3-AC",
+      "position_web_m": [
+        5.65,
+        1.414,
+        -5.043048
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "height_aff_mm": 1400,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "AC isolation",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "B3-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B3-09"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-B3-ENTRY-F04",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-B3-AC"
+      ]
+    },
+    {
+      "id": "EB-DR-AC",
+      "label": "DR AC maintenance",
+      "room": "drawing",
+      "node_name": "BOARD_EB-DR-AC",
+      "position_web_m": [
+        3.367428,
+        1.414,
+        -3.72
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 1400,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "AC isolation",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "DR-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-DR-04"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-DR-ENTRY-F04",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-DR-AC"
+      ]
+    },
+    {
+      "id": "EB-HA-AC",
+      "label": "HA AC maintenance",
+      "room": "lounge",
+      "node_name": "BOARD_EB-HA-AC",
+      "position_web_m": [
+        4.7643,
+        1.464,
+        -6.7
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 1450,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "AC isolation",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "HA-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-HA-09"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-HA-ENTRY-F04",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-HA-AC"
+      ]
+    },
+    {
+      "id": "EB-BA1-GEYSER",
+      "label": "Bath 1 geyser maintenance",
+      "room": "bedroom_1",
+      "node_name": "BOARD_EB-BA1-GEYSER",
+      "position_web_m": [
+        4.830072,
+        1.464,
+        -13.26
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 1450,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Geyser isolate",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "BA1-GEYSER"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-BA1-02"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-BA1-DRY-F03",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-BA1-GEYSER"
+      ]
+    },
+    {
+      "id": "EB-BA2-GEYSER",
+      "label": "Bath 2 geyser maintenance",
+      "room": "bedroom_2",
+      "node_name": "BOARD_EB-BA2-GEYSER",
+      "position_web_m": [
+        7.18,
+        1.464,
+        -6.539088
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "height_aff_mm": 1450,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Geyser isolate",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "BA2-GEYSER"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-BA2-02"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-BA2-DRY-F03",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-BA2-GEYSER"
+      ]
+    },
+    {
+      "id": "EB-BA3-GEYSER",
+      "label": "Bath 3 geyser maintenance",
+      "room": "dressing_3",
+      "node_name": "BOARD_EB-BA3-GEYSER",
+      "position_web_m": [
+        7.32,
+        1.464,
+        -2.248248
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "height_aff_mm": 1450,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Geyser isolate",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "BA3-GEYSER"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-BA3-02"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-BA3-DRY-F03",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-BA3-GEYSER"
+      ]
+    },
+    {
+      "id": "EB-B2-CLEAN",
+      "label": "Middle separate cleaning",
+      "room": "bedroom_2",
+      "node_name": "BOARD_EB-B2-CLEAN",
+      "position_web_m": [
+        8.040372,
+        0.464,
+        -8.65
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 450,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Utility socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B2-08"
+          ],
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-B2-CLEAN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-B2-CLEAN"
+      ]
+    },
+    {
+      "id": "EB-HA-WIFI",
+      "label": "Wi-Fi selected backup",
+      "room": "lounge",
+      "node_name": "BOARD_EB-HA-WIFI",
+      "position_web_m": [
+        4.7643,
+        0.914,
+        -9.78
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 900,
+      "size_mm": [
+        165.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "ONT socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "HA-WIFI"
+          ],
+          "backup_preference": "requested",
+          "point_ids": [
+            "E-HA-06"
+          ],
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-HA-MEDIA-F02",
+          "slot": 0,
+          "span": 3
+        },
+        {
+          "label": "Router socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "HA-WIFI"
+          ],
+          "backup_preference": "requested",
+          "point_ids": [
+            "E-HA-06"
+          ],
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-HA-WIFI-F01",
+          "slot": 3,
+          "span": 3
+        }
+      ],
+      "reason_ids": [
+        "R-EB-HA-WIFI"
+      ]
+    },
+    {
+      "id": "EB-HA-DATA",
+      "label": "Media passive data",
+      "room": "lounge",
+      "node_name": "BOARD_EB-HA-DATA",
+      "position_web_m": [
+        4.7643,
+        1.414,
+        -9.78
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 1400,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Data",
+          "kind": "data",
+          "fixture_group_ids": [
+            "DATA"
+          ],
+          "backup_preference": "not-decided",
+          "point_ids": [
+            "E-HA-07"
+          ],
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-HA-MEDIA-F03",
+          "slot": 0,
+          "span": 1
+        }
+      ],
+      "reason_ids": [
+        "R-EB-HA-DATA"
       ]
     }
   ],
@@ -2850,12 +3307,48 @@
       "label": "Passive data termination / route not selected",
       "room": "shared",
       "status": "unselected-product"
+    },
+    {
+      "id": "B1-MIRROR",
+      "label": "B1-MIRROR fixed face/task light provision",
+      "room": "bedroom_1",
+      "status": "unselected-product"
+    },
+    {
+      "id": "B2-MIRROR",
+      "label": "B2-MIRROR fixed face/task light provision",
+      "room": "bedroom_2",
+      "status": "unselected-product"
+    },
+    {
+      "id": "B3-MIRROR",
+      "label": "B3-MIRROR fixed face/task light provision",
+      "room": "bedroom_3",
+      "status": "unselected-product"
+    },
+    {
+      "id": "BA1-MIRROR",
+      "label": "Bath 1 fixed mirror task-light provision",
+      "room": "bathroom_1",
+      "status": "unselected-product"
+    },
+    {
+      "id": "BA2-MIRROR",
+      "label": "Bath 2 fixed mirror task-light provision",
+      "room": "bathroom_2",
+      "status": "unselected-product"
+    },
+    {
+      "id": "BA3-MIRROR",
+      "label": "Bath 3 fixed mirror task-light provision",
+      "room": "bathroom_3",
+      "status": "unselected-product"
     }
   ],
   "reasons": [
     {
       "id": "R-EB-B1-ENTRY",
-      "summary": "Group arrival lighting and fan by use; AC isolation occupies a separately labelled double-width module, not a random second height. West vestibule wall beyond the open bedroom leaf tip at Y13.910; dressing begins Y15.04.",
+      "summary": "Everyday light/fan controls remain together; maintenance isolation is on a separate tested service plate, not another routine rocker. West vestibule wall beyond the open bedroom leaf tip at Y13.910; dressing begins Y15.04.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -2872,7 +3365,7 @@
     },
     {
       "id": "R-EB-B2-ENTRY",
-      "summary": "Group arrival lighting and fan by use; AC isolation occupies a separately labelled double-width module, not a random second height. West wall north of entry opening/sweep, south of bed start Y6.978; existing study is at north wall.",
+      "summary": "Everyday light/fan controls remain together; maintenance isolation is on a separate tested service plate, not another routine rocker. West wall north of entry opening/sweep, south of bed start Y6.978; existing study is at north wall.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -2888,7 +3381,7 @@
     },
     {
       "id": "R-EB-B3-ENTRY",
-      "summary": "Group arrival lighting and fan by use; AC isolation occupies a separately labelled double-width module, not a random second height. Solid north wall east of entrance opening; keep clear of the east vanity and overhead AC.",
+      "summary": "Everyday light/fan controls remain together; maintenance isolation is on a separate tested service plate, not another routine rocker. Solid north wall east of entrance opening; keep clear of the east vanity and overhead AC.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -2904,7 +3397,7 @@
     },
     {
       "id": "R-EB-B1-BED-A",
-      "summary": "One readable bedside station replaces separate socket/switch plates; matching module order at both pillows and ordinary socket plus USB-C. Existing lamp shades top952mm and nightstands top490mm; paired1080mmAFF stations clear shades without relocating lamps.",
+      "summary": "Compact charging / bedtime station beside the actual table, below lamp shade, outside headboard; no raised over-lamp reach. 650mm AFF provisional face center above 490mm existing table; middle room uses separate 220x280x25mm compact shelf reservations with tops at516.5mm world /502.5mmAFF.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -2913,15 +3406,15 @@
         "PROJECT"
       ],
       "constraints": [
-        "Owner seated-reach mockup required; source narrow aisles are not widened.",
-        "USB-C output/product unknown; no buried power brick.",
-        "Extra lamp rocker rejected: existing portable lamp should retain a reachable local control; do not create one wall switch per mesh.",
+        "Furniture-first owner mockup required: comfortable reach is not certified by collision tests.",
+        "Compact ordinary socket retained; optional USB omitted rather than crowding usable plug access.",
+        "No aisle or bed relocation. Middle shelves and six station locations remain provisional.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-B1-BED-B",
-      "summary": "One readable bedside station replaces separate socket/switch plates; matching module order at both pillows and ordinary socket plus USB-C. Existing lamp shades top952mm and nightstands top490mm; paired1080mmAFF stations clear shades without relocating lamps.",
+      "summary": "Compact charging / bedtime station beside the actual table, below lamp shade, outside headboard; no raised over-lamp reach. 650mm AFF provisional face center above 490mm existing table; middle room uses separate 220x280x25mm compact shelf reservations with tops at516.5mm world /502.5mmAFF.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -2930,15 +3423,15 @@
         "PROJECT"
       ],
       "constraints": [
-        "Owner seated-reach mockup required; source narrow aisles are not widened.",
-        "USB-C output/product unknown; no buried power brick.",
-        "Extra lamp rocker rejected: existing portable lamp should retain a reachable local control; do not create one wall switch per mesh.",
+        "Furniture-first owner mockup required: comfortable reach is not certified by collision tests.",
+        "Compact ordinary socket retained; optional USB omitted rather than crowding usable plug access.",
+        "No aisle or bed relocation. Middle shelves and six station locations remain provisional.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-B2-BED-A",
-      "summary": "One readable bedside station replaces separate socket/switch plates; matching module order at both pillows and ordinary socket plus USB-C. Middle bed headboard top1120mm requires raised1250mmAFF station; no nightstand exists.",
+      "summary": "Compact charging / bedtime station beside the actual table, below lamp shade, outside headboard; no raised over-lamp reach. 650mm AFF provisional face center above 490mm existing table; middle room uses separate 220x280x25mm compact shelf reservations with tops at516.5mm world /502.5mmAFF.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -2947,14 +3440,15 @@
         "PROJECT"
       ],
       "constraints": [
-        "Owner seated-reach mockup required; source narrow aisles are not widened.",
-        "USB-C output/product unknown; no buried power brick.",
+        "Furniture-first owner mockup required: comfortable reach is not certified by collision tests.",
+        "Compact ordinary socket retained; optional USB omitted rather than crowding usable plug access.",
+        "No aisle or bed relocation. Middle shelves and six station locations remain provisional.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-B2-BED-B",
-      "summary": "One readable bedside station replaces separate socket/switch plates; matching module order at both pillows and ordinary socket plus USB-C. Middle bed headboard top1120mm requires raised1250mmAFF station; no nightstand exists.",
+      "summary": "Compact charging / bedtime station beside the actual table, below lamp shade, outside headboard; no raised over-lamp reach. 650mm AFF provisional face center above 490mm existing table; middle room uses separate 220x280x25mm compact shelf reservations with tops at516.5mm world /502.5mmAFF.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -2963,14 +3457,15 @@
         "PROJECT"
       ],
       "constraints": [
-        "Owner seated-reach mockup required; source narrow aisles are not widened.",
-        "USB-C output/product unknown; no buried power brick.",
+        "Furniture-first owner mockup required: comfortable reach is not certified by collision tests.",
+        "Compact ordinary socket retained; optional USB omitted rather than crowding usable plug access.",
+        "No aisle or bed relocation. Middle shelves and six station locations remain provisional.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-B3-BED-A",
-      "summary": "One readable bedside station replaces separate socket/switch plates; matching module order at both pillows and ordinary socket plus USB-C. Existing lamp shades top952mm and nightstands top490mm; paired1080mmAFF stations clear shades without relocating lamps.",
+      "summary": "Compact charging / bedtime station beside the actual table, below lamp shade, outside headboard; no raised over-lamp reach. 650mm AFF provisional face center above 490mm existing table; middle room uses separate 220x280x25mm compact shelf reservations with tops at516.5mm world /502.5mmAFF.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -2979,15 +3474,15 @@
         "PROJECT"
       ],
       "constraints": [
-        "Owner seated-reach mockup required; source narrow aisles are not widened.",
-        "USB-C output/product unknown; no buried power brick.",
-        "Extra lamp rocker rejected: existing portable lamp should retain a reachable local control; do not create one wall switch per mesh.",
+        "Furniture-first owner mockup required: comfortable reach is not certified by collision tests.",
+        "Compact ordinary socket retained; optional USB omitted rather than crowding usable plug access.",
+        "No aisle or bed relocation. Middle shelves and six station locations remain provisional.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-B3-BED-B",
-      "summary": "One readable bedside station replaces separate socket/switch plates; matching module order at both pillows and ordinary socket plus USB-C. Existing lamp shades top952mm and nightstands top490mm; paired1080mmAFF stations clear shades without relocating lamps.",
+      "summary": "Compact charging / bedtime station beside the actual table, below lamp shade, outside headboard; no raised over-lamp reach. 650mm AFF provisional face center above 490mm existing table; middle room uses separate 220x280x25mm compact shelf reservations with tops at516.5mm world /502.5mmAFF.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -2996,9 +3491,9 @@
         "PROJECT"
       ],
       "constraints": [
-        "Owner seated-reach mockup required; source narrow aisles are not widened.",
-        "USB-C output/product unknown; no buried power brick.",
-        "Extra lamp rocker rejected: existing portable lamp should retain a reachable local control; do not create one wall switch per mesh.",
+        "Furniture-first owner mockup required: comfortable reach is not certified by collision tests.",
+        "Compact ordinary socket retained; optional USB omitted rather than crowding usable plug access.",
+        "No aisle or bed relocation. Middle shelves and six station locations remain provisional.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -3037,7 +3532,7 @@
     },
     {
       "id": "R-EB-B2-WORK",
-      "summary": "Unify study power/data above the work surface and beside monitor instead of two scattered heights. Desktop750mm; monitor endsX7.57, task-lamp shade top1200mm; board raised1300AFF to clear both.",
+      "summary": "Three simultaneous ordinary outlets for monitor, lamp and laptop, beside monitor above 750mm desktop; no dependency on lamp-top height. Face center980mmAFF, right of monitor X7.57; actual lamp shade is forward of wall approach. 67.5mm socket pitch is provisional pending real adaptor mockup.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -3045,7 +3540,7 @@
         "PROJECT"
       ],
       "constraints": [
-        "Existing modeled E11 data allowance remains unchanged; final installer consolidates the old allowance, not duplicates supplies.",
+        "Desk remains unchanged. Plug-body/lead space tested with generic 60x60x70mm envelopes, not selected manufacturer fit.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -3101,7 +3596,7 @@
     },
     {
       "id": "R-EB-DR-ENTRY",
-      "summary": "Usable arrival-side station below held-open door tip; separate ambient/cove/display intents, not one vague lighting rocker. Actual entry leaf beginsY4.279; eastwall clear of the west display/stoolconsole and L-chaise.",
+      "summary": "Everyday light/fan controls remain together; maintenance isolation is on a separate tested service plate, not another routine rocker. Actual entry leaf beginsY4.279; eastwall clear of the west display/stoolconsole and L-chaise.",
       "source_ids": [
         "INT-UD-BED",
         "INT-UD-CONTROLS",
@@ -3142,13 +3637,14 @@
     },
     {
       "id": "R-EB-HA-ENTRY",
-      "summary": "One clear routine hall station separates actual beam-bay coves and fan; AC isolation no longer scattered beside mandir. Eastwall beyond middle bedroom entry swing; obsolete tall service cabinet was removed byv015.",
+      "summary": "Everyday light/fan controls remain together; maintenance isolation is on a separate tested service plate, not another routine rocker. Eastwall beyond middle bedroom entry swing; obsolete tall service cabinet was removed byv015.",
       "source_ids": [
         "INT-UD-BED",
         "INT-UD-CONTROLS",
         "PROJECT"
       ],
       "constraints": [
+        "Existing route-bay cove must provide useful walking light; verify night illuminance/glare on actual route. No speculative new downlights.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -3196,7 +3692,7 @@
     },
     {
       "id": "R-EB-HA-MEDIA",
-      "summary": "One labelled service board replaces three vertical plates, with visible separation of TV mains-only and Wi-Fi-requested functions. Eastwall north of speakerendY9.615 and backingendY9.45, adjacent actualv015 network cavity.",
+      "summary": "Dedicated simultaneous TV and set-top ordinary outlets, mains-only; no media backup inheritance. Eastwall north of speakerendY9.615 and backingendY9.45, adjacent actualv015 network cavity.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -3241,7 +3737,7 @@
     },
     {
       "id": "R-EB-EN-ARRIVAL",
-      "summary": "Use nearest genuinely usable house-side solidwall instead of tiny entrypier/window/washniche; arrival controls serve connected lobby. Source entrance northpier onlyY11.761-11.889, width128mm and directly beside washbasin nicheY11.889-12.613; do not assume it is splash-free. PrivacywindowY10.14-10.83 excludes a closer solidwall position. Smallarrivalboardfitsbeforewindow, next to distinctmedia serviceboard.",
+      "summary": "Only available solid arrival wall retained, separated from media. Practical entrance operation is a ceiling sensor plus manual override provision, not a new threshold plate. Source entrance northpier onlyY11.761-11.889, width128mm and directly beside washbasin nicheY11.889-12.613; do not assume it is splash-free. PrivacywindowY10.14-10.83 excludes a closer solidwall position. Smallarrivalboardfitsbeforewindow, next to distinctmedia serviceboard.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -3249,8 +3745,8 @@
         "PROJECT"
       ],
       "constraints": [
-        "1150mmAFF matches routine control band; nearest usable solidwall requires entering/turning from stair threshold.",
-        "If owner wants control directly at stair threshold, installer/owner must approve a different system; no invented wall.",
+        "Confirm sensor detection before dark entry, false triggers, manual override and loss-of-sensor behavior on site.",
+        "No live automation, selected sensor or electrical wiring is implied.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -3270,7 +3766,7 @@
     },
     {
       "id": "R-EB-KI-POWER",
-      "summary": "One portable-use board at worktop, separated from appliance isolators and away from the prep sink/RO front. 900mmcounter, eastdryslab; oldrandomgrid removed, common1150AFF row stays below uppercupboards1600.",
+      "summary": "Three simultaneous portable-use ordinary outlets on existing dry prep backsplash; USB omitted so appliance access is not displaced. 900mmcounter, eastdryslab; oldrandomgrid removed, common1150AFF row stays below uppercupboards1600.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -3279,6 +3775,7 @@
       ],
       "constraints": [
         "Heat/splash/lead review still product-specific; not a socket over sink/hob.",
+        "Generic plug spacing only: actual appliance ratings, demand/circuit diversity, heat, sink splash and lead reach require qualified review.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -3300,7 +3797,7 @@
     },
     {
       "id": "R-EB-BA1-DRY",
-      "summary": "One labelled dry-side control station before entering wetroom; light/exhaust separate functions, geyser isolate visibly distinct. Dry rearbed vestibule wall solidY13.004-13.540, south of bathroom openingY13.540-14.301.",
+      "summary": "Everyday bath ceiling, exhaust and dedicated mirror task-light intent; geyser maintenance is on a separate tested dry-side plate. Dry rearbed vestibule wall solidY13.004-13.540, south of bathroom openingY13.540-14.301.",
       "source_ids": [
         "IND-BIS-REF",
         "IND-CEA-2023",
@@ -3320,7 +3817,7 @@
     },
     {
       "id": "R-EB-BA2-DRY",
-      "summary": "One labelled dry-side control station before entering wetroom; light/exhaust separate functions, geyser isolate visibly distinct. Dry bedroom side of bathnorthwall west of doorwayX7.442-8.052; openleaf swingsnorth along eastwall.",
+      "summary": "Everyday bath ceiling, exhaust and dedicated mirror task-light intent; geyser maintenance is on a separate tested dry-side plate. Dry bedroom side of bathnorthwall west of doorwayX7.442-8.052; openleaf swingsnorth along eastwall.",
       "source_ids": [
         "IND-BIS-REF",
         "IND-CEA-2023",
@@ -3340,7 +3837,7 @@
     },
     {
       "id": "R-EB-BA3-DRY",
-      "summary": "One labelled dry-side control station before entering wetroom; light/exhaust separate functions, geyser isolate visibly distinct. Dry dressing side between bathdoorendX7.163 and wardrobeX7.511; narrow260-350mm usablestrip demands small groupedboard.",
+      "summary": "Everyday bath ceiling, exhaust and dedicated mirror task-light intent; geyser maintenance is on a separate tested dry-side plate. Dry dressing side between bathdoorendX7.163 and wardrobeX7.511; narrow260-350mm usablestrip demands small groupedboard.",
       "source_ids": [
         "IND-BIS-REF",
         "IND-CEA-2023",
@@ -3368,6 +3865,185 @@
         "PROJECT"
       ],
       "constraints": [
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-B1-AC",
+      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "1150 mm AFF is a project ergonomic band, not a standard.",
+        "A real installer must establish actual isolation architecture.",
+        "Bedroom ambient and entry path are one desired operating scene; controller/driver compatibility remains unselected, not a shared-circuit assertion.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-B2-AC",
+      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "1150 mm AFF is a project ergonomic band, not a standard.",
+        "A real installer must establish actual isolation architecture.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-B3-AC",
+      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "1150 mm AFF is a project ergonomic band, not a standard.",
+        "A real installer must establish actual isolation architecture.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-DR-AC",
+      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
+      "source_ids": [
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Full board sweep/support checked; no control on glazed partition.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-HA-AC",
+      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
+      "source_ids": [
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-BA1-GEYSER",
+      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
+      "source_ids": [
+        "IND-BIS-REF",
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "INT-WET-IEC",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Actual wet/dry boundary and device suitability require site verification.",
+        "Exhaust humidity/timer logic and makeupair/discharge remainunselected.",
+        "Lighting backup requested; exhaust undecided; geyser mains-only. Grouping is not one shared circuit.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-BA2-GEYSER",
+      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
+      "source_ids": [
+        "IND-BIS-REF",
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "INT-WET-IEC",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Actual wet/dry boundary and device suitability require site verification.",
+        "Exhaust humidity/timer logic and makeupair/discharge remainunselected.",
+        "Lighting backup requested; exhaust undecided; geyser mains-only. Grouping is not one shared circuit.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-BA3-GEYSER",
+      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
+      "source_ids": [
+        "IND-BIS-REF",
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "INT-WET-IEC",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Actual wet/dry boundary and device suitability require site verification.",
+        "Exhaust humidity/timer logic and makeupair/discharge remainunselected.",
+        "Lighting backup requested; exhaust undecided; geyser mains-only. Grouping is not one shared circuit.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-B2-CLEAN",
+      "summary": "Separate accessible cleaning endpoint; grooming provision is not assumed to cover the far study/bed side. Existing east wall and bed-foot gap retained; no extended cord across grooming/bath door.",
+      "source_ids": [
+        "INT-ADA-REACH",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Furniture gap retained, not certified accessibility.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-HA-WIFI",
+      "summary": "Two simultaneous endpoints only for ONT and router; separate from mains media and passive data. Eastwall north of speakerendY9.615 and backingendY9.45, adjacent actualv015 network cavity.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-CONTROLS",
+        "MFR-USB-FORMAT",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Power/data segregation and module barriers require selected system.",
+        "Shared PoE/NVR/camera backup NOT authorized.",
+        "Lead reach/containment unresolved, not extension-board design.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-HA-DATA",
+      "summary": "Separate passive data service section; containment/barrier selection and cable routing remain unresolved. Eastwall north of speakerendY9.615 and backingendY9.45, adjacent actualv015 network cavity.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-CONTROLS",
+        "MFR-USB-FORMAT",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Power/data segregation and module barriers require selected system.",
+        "Shared PoE/NVR/camera backup NOT authorized.",
+        "Lead reach/containment unresolved, not extension-board design.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -3479,11 +4155,9 @@
       "id": "R-RQ-E-HA-13",
       "summary": "INSTALLER PLACEMENT REQUIRED. Diamond identifies tank, NOT receptacle. No outlet under leak path. Verify splash/leak avoidance, drip loops, accessible dry isolation, RCD and product instructions.",
       "source_ids": [
-        "IND-BIS-REF",
         "IND-CEA-2023",
         "IND-CEA-2026",
         "INT-UD-CONTROLS",
-        "INT-WET-IEC",
         "PROJECT"
       ],
       "constraints": [
@@ -3494,11 +4168,9 @@
       "id": "R-RQ-E-HA-14",
       "summary": "NOT PLACED until qualified wet-area assessment identifies a dry accessible control position, lead reach and separation from glazed partition/mandir. No blanket safe-distance claim.",
       "source_ids": [
-        "IND-BIS-REF",
         "IND-CEA-2023",
         "IND-CEA-2026",
         "INT-UD-CONTROLS",
-        "INT-WET-IEC",
         "PROJECT"
       ],
       "constraints": [

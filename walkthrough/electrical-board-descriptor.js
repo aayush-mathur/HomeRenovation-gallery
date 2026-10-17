@@ -24,7 +24,7 @@ export function validateBoardDescriptor(value, house, baseURL) {
   const fail = reason => { throw new Error(`Switchboard planning unavailable: ${reason}`); };
   const top = ['version', 'id', 'base_source_sha256', 'base_navigation_sha256', 'luxe_sha256',
     'model', 'boards', 'requirements', 'fixture_groups', 'reasons', 'sources'];
-  if (!exact(value, top) || value.version !== 2 || value.id !== 'electrical-v003') fail('unsupported public descriptor');
+  if (!exact(value, top) || value.version !== 2 || !['electrical-v003', 'electrical-v004'].includes(value.id)) fail('unsupported public descriptor');
   const luxe = house.ceiling_options?.variants.find(variant => variant.id === 'luxe');
   if (![value.base_source_sha256, value.base_navigation_sha256, value.luxe_sha256].every(hash => HASH.test(hash)) ||
       value.base_source_sha256 !== house.source_sha256 || value.base_navigation_sha256 !== house.navigation_sha256 ||

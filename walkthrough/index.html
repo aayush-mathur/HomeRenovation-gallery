@@ -15,7 +15,7 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
   <link rel="stylesheet" href="./electrical-planning.css?v=831b2e16568db094">
   <link rel="stylesheet" href="./electrical-board-labels.css?v=e00180375dfb7215">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script type="module" src="./app.js?v=4dec9f92900bf39f"></script>
+  <script type="module" src="./app.js?v=2798e746322caf8b"></script>
   <!-- offline-runtime -->
   <link rel="stylesheet" href="./offline.css">
   <script type="module" src="./offline-client.js"></script>
@@ -35,9 +35,10 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <div class="settings-heading"><h2>House settings</h2><button id="close-settings" type="button">Close</button></div>
     <span id="model-version" class="note">Local only</span>
     <h3>Appearance</h3>
-    <div id="ceiling-controls" hidden><label for="ceiling">Ceiling</label><select id="ceiling" aria-describedby="ceiling-status ceiling-help"><option value="existing">Existing</option></select></div>
+    <div id="ceiling-controls" hidden><label for="ceiling">Ceiling</label><select id="ceiling" aria-describedby="ceiling-status ceiling-help"><option value="luxe">Sculpted Luxe</option></select></div>
     <button id="quality" aria-pressed="false" aria-describedby="ceiling-status" hidden>Try baked lighting</button>
     <div id="ceiling-feedback" hidden><p id="ceiling-status" role="status" aria-live="polite" aria-atomic="true"></p><button id="ceiling-retry" hidden>Retry ceiling</button></div>
+    <p id="accessory-alert" role="alert" hidden></p><button id="accessory-retry" hidden>Retry shelves and mirror provisions</button>
     <div data-electrical-host></div>
     <h3>Movement</h3>
     <button id="reset" disabled>Reset position</button>
@@ -69,8 +70,8 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
       <p><strong>Look:</strong> drag anywhere in the view. On desktop, Mouse look captures the pointer; <kbd>Esc</kbd> releases it.</p>
       <p><strong>Settings:</strong> ceilings, switchboards, pace, mouse look, lens and offline copies are grouped here. Close, press <kbd>Esc</kbd> or tap the house to return to exploring. Room and Full screen stay in the top bar, including in full screen.</p>
       <p id="lens-help"><strong>Lens:</strong> lower millimetres give a wider view without moving you. The 16–70 mm slider uses 35 mm-equivalent focal lengths with a fixed 36 mm horizontal film gate; viewport height follows its aspect ratio. Auto preserves the original 62° vertical view, capped at 90° horizontally. Reset lens restores Auto, not your position. Wide views stretch edges, especially in portrait; this is not a simulation of human eyesight. Release Mouse look with <kbd>Esc</kbd> before using the slider.</p>
-      <p id="ceiling-help" hidden><strong>Ceiling concepts:</strong> switch the whole floor, including bedrooms, without moving your view. Existing restores the original ceiling fixtures. Fans are static provisions, not rotating. Web lighting and emissive faces are approximate; use Cycles reference previews for lighting comparisons. <span id="ceiling-note"></span></p>
-      <p><strong>Starting view:</strong> each fresh visit opens Sculpted Luxe with proposed switchboards and nearby board labels. Tap a label without dragging to read each control and why the board is there, or use the Switchboards list. Labels respect walls, distance and your view; unresolved equipment needs stay list-only. Hide labels or boards for a clean view. Choose another ceiling at any time; loading will not overwrite your choice. Saving an offline copy still requires the Download button.</p>
+      <p id="ceiling-help" hidden><strong>Ceiling concepts:</strong> Sculpted Luxe is the selected whole-floor design, including bedrooms. Earlier alternatives are historical studies only. Fans are static provisions, not rotating. Web lighting and emissive faces are approximate; use Cycles reference previews for lighting comparisons. <span id="ceiling-note"></span></p>
+      <p><strong>Starting view:</strong> each fresh visit opens Sculpted Luxe with proposed switchboards and nearby board labels. Tap a label without dragging to read each control and why the board is there, or use the Switchboards list. Labels respect walls, distance and your view; unresolved equipment needs stay list-only. Hide labels or boards for a clean view. If the ceiling cannot load, an explicit warning and retry remain available. Saving an offline copy still requires the Download button.</p>
       <p><strong>Walk:</strong> click or tab into the view or movement pad, then use <kbd>W A S D</kbd> or arrow keys. <kbd>Q E</kbd> turn; <kbd>R F</kbd> look up/down. Touch: hold and drag the thumbstick to walk; drag farther to walk faster. Release to stop. Use a second finger on the house to look while moving.</p>
       <p id="pace-help"><strong>Pace:</strong> switch Walk (1.35 m/s) to Faster (2 m/s) with the pace button. The thumbstick still gives fine control near its centre. On desktop, hold <kbd>Shift</kbd> while walking for temporary Faster pace; release it to return to your selected pace. Both paces pass through furniture for inspection, but not walls or floor boundaries. Each page visit starts in Walk.</p>
       <p><strong>Finger + pen:</strong> hold the movement pad with a finger and drag the house with the pen tip, in either order. Pen hover does not turn the view. Some tablets reject finger input when a pen is nearby; a website cannot override that device behavior. If movement stops, lift the pen and touch the pad again, or use two fingers. Cancelled finger input always stops walking safely.</p>

@@ -1,6 +1,6 @@
-import { assertEmbeddedGLB, disposeCeiling } from './ceiling-comparison.js?v=385a64a657a99098';
+import { assertEmbeddedGLB, disposeCeiling } from './ceiling-comparison.js?v=a653fd99aa8b800d';
 import { createBoardLabels } from './electrical-board-labels.js?v=bca24d0b239238f8';
-import { boardRooms } from './electrical-board-descriptor.js?v=d27cd293eda215a6';
+import { boardRooms } from './electrical-board-descriptor.js?v=60527b3213edf195';
 
 export function createBoardOverlay({ THREE, scene, camera, stage, descriptor, occluderRoots, parse,
   releaseInput = () => {}, isInputBusy = () => false, excludedElements = [], onSelect = () => {},
