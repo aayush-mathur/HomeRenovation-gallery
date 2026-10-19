@@ -122,6 +122,7 @@ export function createBoardOverlay({ THREE, scene, camera, stage, descriptor, oc
       selected = id; sync();
     },
     pickLabel(x, y) { return labels?.pick(x, y) || null; },
+    refreshOccluders() { labels?.refreshOccluders(occluderRoots); },
     update({ time, currentRoom, paused = false }) {
       if (!labels || disposed) return;
       const before = labels.snapshot().visible.length;

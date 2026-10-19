@@ -3,7 +3,8 @@ import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { isSafe, move, movementVector, movementSpeed, joystickVector, roomAt, applyLens, inspectionNavigation } from './navigation.js?lens=1&controls=4';
 import { validateCeilingOptions, activeCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=a653fd99aa8b800d';
 import { createFixtureLighting } from './fixture-lighting.js?v=07ea12a8efadecfe';
-import { initBoardPlanning } from './electrical-board-planning.js?v=7143dbc4610dec06';
+import { initBoardPlanning } from './electrical-board-planning.js?v=431f837ac004fd66';
+import { createFurnitureVisibility } from './furniture-visibility.js?v=7ba05605abc7c5e9';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';
@@ -28,6 +29,7 @@ let focalLength = null, lens;
 let ceilings, ceilingOptions, ceilingUnavailable = '';
 let fixtureLighting;
 let electrical;
+let furniture, furnitureController, furnitureRequest = 0;
 let electricalAccessories, accessoryController, accessoryRequest = 0, accessoryError = '';
 const STARTUP_VIEW = Object.freeze({ ceiling: 'luxe', electricalPlates: true, timeoutMs: 15000 });
 let ceilingRequest = Promise.resolve();
@@ -101,6 +103,11 @@ function teleport(id) {
   message(`${preset.name} · eye height 1.6 m`);
 }
 function disposeModel() {
+  ++furnitureRequest; furnitureController?.abort(); furnitureController = null;
+  furniture?.dispose(); furniture = null;
+  $('furniture').disabled = true;
+  $('furniture').checked = true;
+  $('furniture-alert').hidden = true; $('furniture-retry').hidden = true;
   ++accessoryRequest; accessoryController?.abort(); accessoryController = null;
   electricalAccessories?.dispose(); electricalAccessories = null; accessoryError = '';
   $('accessory-alert').hidden = true; $('accessory-retry').hidden = true;
@@ -114,6 +121,38 @@ function disposeModel() {
     for (const mat of materials) mat?.dispose();
   });
   model = null;
+}
+async function loadFurniture(signal) {
+  const ticket = ++furnitureRequest;
+  furnitureController?.abort();
+  $('furniture-retry').disabled = true;
+  const source = model;
+  const controller = furnitureController = new AbortController();
+  const abort = () => controller.abort();
+  signal.addEventListener('abort', abort, { once: true });
+  const timer = setTimeout(() => controller.abort(new Error('Furniture inspection loading timed out')), 15000);
+  try {
+    const bytes = await (await checkedFetch('./model/furniture-visibility.json', controller.signal)).arrayBuffer();
+    await verifyHash(bytes, manifest.furniture_visibility_sha256, 'Furniture visibility data');
+    const mask = JSON.parse(new TextDecoder().decode(bytes));
+    if (signal.aborted || source !== model || ticket !== furnitureRequest || disposed) return;
+    if (controller.signal.aborted) throw controller.signal.reason;
+    furniture?.dispose();
+    furniture = createFurnitureVisibility(THREE, model, mask, manifest.model_sha256);
+    $('furniture').disabled = false;
+    $('furniture-alert').hidden = true;
+    $('furniture-retry').hidden = true;
+  } catch (error) {
+    if (!signal.aborted && source === model && ticket === furnitureRequest && !disposed) {
+      $('furniture-alert').textContent = `${error.message} Furniture inspection is unavailable; the furnished house remains unchanged.`;
+      $('furniture-alert').hidden = false;
+      $('furniture-retry').hidden = false;
+    }
+  } finally {
+    clearTimeout(timer);
+    signal.removeEventListener('abort', abort);
+    if (ticket === furnitureRequest) $('furniture-retry').disabled = false;
+  }
 }
 async function loadAccessories(signal) {
   const source = manifest;
@@ -307,6 +346,7 @@ async function load() {
       }
     });
     scene.add(model);
+    const furnitureReady = loadFurniture(signal);
     fixtureLighting.setRooms(nav.rooms);
     fixtureLighting.register(model);
     setupCeilings();
@@ -330,7 +370,7 @@ async function load() {
     });
     let startupTimer;
     const optionalReady = async () => {
-      await Promise.all([initialElectrical.ready, accessoriesReady]);
+      await Promise.all([initialElectrical.ready, accessoriesReady, furnitureReady]);
       let awaited;
       do {
         awaited = ceilingRequest;
@@ -408,6 +448,14 @@ function animate(time) {
 on($('retry'), 'click', () => renderer && !contextLost ? load() : location.reload());
 on(room, 'change', () => teleport(room.value));
 on($('reset'), 'click', () => teleport(selected));
+on($('furniture'), 'change', () => {
+  clearInput();
+  furniture?.setVisible($('furniture').checked);
+  electrical?.refreshOccluders();
+});
+on($('furniture-retry'), 'click', () => {
+  if (loadController && !loadController.signal.aborted) loadFurniture(loadController.signal);
+});
 on($('pace'), 'click', () => {
   clearInput();
   fasterPace = !fasterPace;
@@ -686,6 +734,7 @@ window.walkthrough = { snapshot: () => ({
   memory: renderer ? { ...renderer.info.memory } : null, baseVisible: model?.visible,
   fov: camera?.fov, aspect: camera?.aspect, lens, eyeHeight: camera?.position.y,
   storage: { enabled: false, mode: 'closed' },
+  furniture: furniture?.snapshot() || null,
   fixtures: fixtureLighting?.snapshot(),
   electrical: electrical?.snapshot() || null,
   accessories: { loaded: Boolean(electricalAccessories), error: accessoryError,

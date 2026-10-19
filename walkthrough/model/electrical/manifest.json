@@ -5,9 +5,9 @@
   "base_navigation_sha256": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
   "luxe_sha256": "2fc0001646f3b8a7005af317dac1d009fb735447625672566814cd5081b754b4",
   "model": {
-    "src": "./model/electrical/boards-3969a8375f11c21a.glb",
-    "sha256": "3969a8375f11c21a3288ee97828aed8bc83c60e9730c458ef619cd5880083ad6",
-    "bytes": 4037216
+    "src": "./model/electrical/boards-8d8365f24536b3e4.glb",
+    "sha256": "8d8365f24536b3e41a9861854ce3935495257512776437fdb51c6f928562a864",
+    "bytes": 4379908
   },
   "boards": [
     {
@@ -27,7 +27,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        120.0,
+        165.0,
         90.0,
         12.0
       ],
@@ -79,6 +79,21 @@
           "id": "EB-B1-ENTRY-F03",
           "slot": 2,
           "span": 2
+        },
+        {
+          "label": "AC isolation",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "B1-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B1-09"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-B1-ENTRY-F04",
+          "slot": 4,
+          "span": 2
         }
       ],
       "reason_ids": [
@@ -102,7 +117,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        120.0,
+        165.0,
         90.0,
         12.0
       ],
@@ -153,6 +168,21 @@
           "id": "EB-B2-ENTRY-F03",
           "slot": 2,
           "span": 2
+        },
+        {
+          "label": "AC isolation",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "B2-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B2-09"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-B2-ENTRY-F04",
+          "slot": 4,
+          "span": 2
         }
       ],
       "reason_ids": [
@@ -176,7 +206,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        120.0,
+        165.0,
         90.0,
         12.0
       ],
@@ -226,6 +256,21 @@
           "behavior": "Desired control only; device, driver compatibility and wiring architecture are unselected. No simulated switching.",
           "id": "EB-B3-ENTRY-F03",
           "slot": 2,
+          "span": 2
+        },
+        {
+          "label": "AC isolation",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "B3-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B3-09"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-B3-ENTRY-F04",
+          "slot": 4,
           "span": 2
         }
       ],
@@ -1107,7 +1152,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        120.0,
+        165.0,
         90.0,
         12.0
       ],
@@ -1158,6 +1203,21 @@
           "behavior": "Desired control only; device, driver compatibility and wiring architecture are unselected. No simulated switching.",
           "id": "EB-DR-ENTRY-F03",
           "slot": 2,
+          "span": 2
+        },
+        {
+          "label": "AC isolation",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "DR-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-DR-04"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-DR-ENTRY-F04",
+          "slot": 4,
           "span": 2
         }
       ],
@@ -1281,7 +1341,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        120.0,
+        165.0,
         90.0,
         12.0
       ],
@@ -1331,6 +1391,21 @@
           "behavior": "Desired control only; device, driver compatibility and wiring architecture are unselected. No simulated switching.",
           "id": "EB-HA-ENTRY-F03",
           "slot": 2,
+          "span": 2
+        },
+        {
+          "label": "AC isolation",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "HA-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-HA-09"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-HA-ENTRY-F04",
+          "slot": 4,
           "span": 2
         }
       ],
@@ -1486,15 +1561,15 @@
       "node_name": "BOARD_EB-HA-MEDIA",
       "position_web_m": [
         4.7643,
-        1.164,
-        -9.78
+        1.264,
+        -8.32
       ],
       "normal_web": [
         -1.0,
         -0.0,
         0.0
       ],
-      "height_aff_mm": 1150,
+      "height_aff_mm": 1250,
       "size_mm": [
         165.0,
         90.0,
@@ -1988,7 +2063,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        97.5,
+        165.0,
         90.0,
         12.0
       ],
@@ -2025,6 +2100,21 @@
           "span": 1
         },
         {
+          "label": "Geyser isolate",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "BA1-GEYSER"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-BA1-02"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-BA1-DRY-F03",
+          "slot": 2,
+          "span": 2
+        },
+        {
           "label": "Mirror task light",
           "kind": "switch",
           "fixture_group_ids": [
@@ -2036,7 +2126,7 @@
           ],
           "behavior": "Fixed mirror face-light provision, not another socket label. Luminaire, driver/access, glare, spray exposure, IP/protection and wet-area location require qualified site/product review; no wet fitting is modeled or approved.",
           "id": "EB-BA1-DRY-F04",
-          "slot": 2,
+          "slot": 4,
           "span": 1
         }
       ],
@@ -2061,7 +2151,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        97.5,
+        165.0,
         90.0,
         12.0
       ],
@@ -2098,6 +2188,21 @@
           "span": 1
         },
         {
+          "label": "Geyser isolate",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "BA2-GEYSER"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-BA2-02"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-BA2-DRY-F03",
+          "slot": 2,
+          "span": 2
+        },
+        {
           "label": "Mirror task light",
           "kind": "switch",
           "fixture_group_ids": [
@@ -2109,7 +2214,7 @@
           ],
           "behavior": "Fixed mirror face-light provision, not another socket label. Luminaire, driver/access, glare, spray exposure, IP/protection and wet-area location require qualified site/product review; no wet fitting is modeled or approved.",
           "id": "EB-BA2-DRY-F04",
-          "slot": 2,
+          "slot": 4,
           "span": 1
         }
       ],
@@ -2134,7 +2239,7 @@
       ],
       "height_aff_mm": 1150,
       "size_mm": [
-        97.5,
+        165.0,
         90.0,
         12.0
       ],
@@ -2171,6 +2276,21 @@
           "span": 1
         },
         {
+          "label": "Geyser isolate",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "BA3-GEYSER"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-BA3-02"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-BA3-DRY-F03",
+          "slot": 2,
+          "span": 2
+        },
+        {
           "label": "Mirror task light",
           "kind": "switch",
           "fixture_group_ids": [
@@ -2182,7 +2302,7 @@
           ],
           "behavior": "Fixed mirror face-light provision, not another socket label. Luminaire, driver/access, glare, spray exposure, IP/protection and wet-area location require qualified site/product review; no wet fitting is modeled or approved.",
           "id": "EB-BA3-DRY-F04",
-          "slot": 2,
+          "slot": 4,
           "span": 1
         }
       ],
@@ -2231,342 +2351,6 @@
       ],
       "reason_ids": [
         "R-EB-DE-LIGHT"
-      ]
-    },
-    {
-      "id": "EB-B1-AC",
-      "label": "B1 AC maintenance",
-      "room": "bedroom_1",
-      "node_name": "BOARD_EB-B1-AC",
-      "position_web_m": [
-        3.745344,
-        1.414,
-        -14.55
-      ],
-      "normal_web": [
-        1.0,
-        -0.0,
-        0.0
-      ],
-      "height_aff_mm": 1400,
-      "size_mm": [
-        75.0,
-        90.0,
-        12.0
-      ],
-      "functions": [
-        {
-          "label": "AC isolation",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "B1-AC"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-B1-09"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-B1-ENTRY-F04",
-          "slot": 0,
-          "span": 2
-        }
-      ],
-      "reason_ids": [
-        "R-EB-B1-AC"
-      ]
-    },
-    {
-      "id": "EB-B2-AC",
-      "label": "B2 AC maintenance",
-      "room": "bedroom_2",
-      "node_name": "BOARD_EB-B2-AC",
-      "position_web_m": [
-        4.91358,
-        1.464,
-        -6.4
-      ],
-      "normal_web": [
-        1.0,
-        -0.0,
-        0.0
-      ],
-      "height_aff_mm": 1450,
-      "size_mm": [
-        75.0,
-        90.0,
-        12.0
-      ],
-      "functions": [
-        {
-          "label": "AC isolation",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "B2-AC"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-B2-09"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-B2-ENTRY-F04",
-          "slot": 0,
-          "span": 2
-        }
-      ],
-      "reason_ids": [
-        "R-EB-B2-AC"
-      ]
-    },
-    {
-      "id": "EB-B3-AC",
-      "label": "B3 AC maintenance",
-      "room": "bedroom_3",
-      "node_name": "BOARD_EB-B3-AC",
-      "position_web_m": [
-        5.65,
-        1.414,
-        -5.043048
-      ],
-      "normal_web": [
-        -0.0,
-        -0.0,
-        1.0
-      ],
-      "height_aff_mm": 1400,
-      "size_mm": [
-        75.0,
-        90.0,
-        12.0
-      ],
-      "functions": [
-        {
-          "label": "AC isolation",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "B3-AC"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-B3-09"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-B3-ENTRY-F04",
-          "slot": 0,
-          "span": 2
-        }
-      ],
-      "reason_ids": [
-        "R-EB-B3-AC"
-      ]
-    },
-    {
-      "id": "EB-DR-AC",
-      "label": "DR AC maintenance",
-      "room": "drawing",
-      "node_name": "BOARD_EB-DR-AC",
-      "position_web_m": [
-        3.367428,
-        1.414,
-        -3.72
-      ],
-      "normal_web": [
-        -1.0,
-        -0.0,
-        0.0
-      ],
-      "height_aff_mm": 1400,
-      "size_mm": [
-        75.0,
-        90.0,
-        12.0
-      ],
-      "functions": [
-        {
-          "label": "AC isolation",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "DR-AC"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-DR-04"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-DR-ENTRY-F04",
-          "slot": 0,
-          "span": 2
-        }
-      ],
-      "reason_ids": [
-        "R-EB-DR-AC"
-      ]
-    },
-    {
-      "id": "EB-HA-AC",
-      "label": "HA AC maintenance",
-      "room": "lounge",
-      "node_name": "BOARD_EB-HA-AC",
-      "position_web_m": [
-        4.7643,
-        1.464,
-        -6.7
-      ],
-      "normal_web": [
-        -1.0,
-        -0.0,
-        0.0
-      ],
-      "height_aff_mm": 1450,
-      "size_mm": [
-        75.0,
-        90.0,
-        12.0
-      ],
-      "functions": [
-        {
-          "label": "AC isolation",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "HA-AC"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-HA-09"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-HA-ENTRY-F04",
-          "slot": 0,
-          "span": 2
-        }
-      ],
-      "reason_ids": [
-        "R-EB-HA-AC"
-      ]
-    },
-    {
-      "id": "EB-BA1-GEYSER",
-      "label": "Bath 1 geyser maintenance",
-      "room": "bedroom_1",
-      "node_name": "BOARD_EB-BA1-GEYSER",
-      "position_web_m": [
-        4.830072,
-        1.464,
-        -13.26
-      ],
-      "normal_web": [
-        -1.0,
-        -0.0,
-        0.0
-      ],
-      "height_aff_mm": 1450,
-      "size_mm": [
-        75.0,
-        90.0,
-        12.0
-      ],
-      "functions": [
-        {
-          "label": "Geyser isolate",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "BA1-GEYSER"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-BA1-02"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-BA1-DRY-F03",
-          "slot": 0,
-          "span": 2
-        }
-      ],
-      "reason_ids": [
-        "R-EB-BA1-GEYSER"
-      ]
-    },
-    {
-      "id": "EB-BA2-GEYSER",
-      "label": "Bath 2 geyser maintenance",
-      "room": "bedroom_2",
-      "node_name": "BOARD_EB-BA2-GEYSER",
-      "position_web_m": [
-        7.18,
-        1.464,
-        -6.539088
-      ],
-      "normal_web": [
-        -0.0,
-        -0.0,
-        -1.0
-      ],
-      "height_aff_mm": 1450,
-      "size_mm": [
-        75.0,
-        90.0,
-        12.0
-      ],
-      "functions": [
-        {
-          "label": "Geyser isolate",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "BA2-GEYSER"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-BA2-02"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-BA2-DRY-F03",
-          "slot": 0,
-          "span": 2
-        }
-      ],
-      "reason_ids": [
-        "R-EB-BA2-GEYSER"
-      ]
-    },
-    {
-      "id": "EB-BA3-GEYSER",
-      "label": "Bath 3 geyser maintenance",
-      "room": "dressing_3",
-      "node_name": "BOARD_EB-BA3-GEYSER",
-      "position_web_m": [
-        7.32,
-        1.464,
-        -2.248248
-      ],
-      "normal_web": [
-        -0.0,
-        -0.0,
-        -1.0
-      ],
-      "height_aff_mm": 1450,
-      "size_mm": [
-        75.0,
-        90.0,
-        12.0
-      ],
-      "functions": [
-        {
-          "label": "Geyser isolate",
-          "kind": "isolation-control",
-          "fixture_group_ids": [
-            "BA3-GEYSER"
-          ],
-          "backup_preference": "mains-only",
-          "point_ids": [
-            "E-BA3-02"
-          ],
-          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
-          "id": "EB-BA3-DRY-F03",
-          "slot": 0,
-          "span": 2
-        }
-      ],
-      "reason_ids": [
-        "R-EB-BA3-GEYSER"
       ]
     },
     {
@@ -2675,15 +2459,15 @@
       "node_name": "BOARD_EB-HA-DATA",
       "position_web_m": [
         4.7643,
-        1.414,
-        -9.78
+        1.444,
+        -8.32
       ],
       "normal_web": [
         -1.0,
         -0.0,
         0.0
       ],
-      "height_aff_mm": 1400,
+      "height_aff_mm": 1430,
       "size_mm": [
         75.0,
         90.0,
@@ -3045,6 +2829,441 @@
       "reason_ids": [
         "R-EB-BA3-CONN"
       ]
+    },
+    {
+      "id": "EB-KI-FRIDGE-CONN",
+      "label": "Fridge connection provision reservation",
+      "room": "kitchen",
+      "node_name": "BOARD_EB-KI-FRIDGE-CONN",
+      "position_web_m": [
+        3.592932,
+        0.464,
+        -15.63
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 450,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Fridge connection provision",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "KI-FRIDGE"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-KI-01"
+          ],
+          "behavior": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+          "id": "EB-KI-FRIDGE-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-KI-FRIDGE-CONN"
+      ]
+    },
+    {
+      "id": "EB-KI-MW-CONN",
+      "label": "Microwave connection provision reservation",
+      "room": "kitchen",
+      "node_name": "BOARD_EB-KI-MW-CONN",
+      "position_web_m": [
+        1.65,
+        1.494,
+        -16.514784
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "height_aff_mm": 1480,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Microwave connection provision",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "KI-MICROWAVE"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-KI-02"
+          ],
+          "behavior": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+          "id": "EB-KI-MW-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-KI-MW-CONN"
+      ]
+    },
+    {
+      "id": "EB-KI-OTG-CONN",
+      "label": "OTG connection provision reservation",
+      "room": "kitchen",
+      "node_name": "BOARD_EB-KI-OTG-CONN",
+      "position_web_m": [
+        1.65,
+        1.014,
+        -16.514784
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "height_aff_mm": 1000,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "OTG connection provision",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "KI-OTG"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-KI-03"
+          ],
+          "behavior": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+          "id": "EB-KI-OTG-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-KI-OTG-CONN"
+      ]
+    },
+    {
+      "id": "EB-KI-DW-CONN",
+      "label": "Dishwasher connection provision reservation",
+      "room": "kitchen",
+      "node_name": "BOARD_EB-KI-DW-CONN",
+      "position_web_m": [
+        3.592932,
+        0.514,
+        -16.219999
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 500,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Dishwasher connection provision",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "KI-DISHWASHER"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-KI-04"
+          ],
+          "behavior": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+          "id": "EB-KI-DW-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-KI-DW-CONN"
+      ]
+    },
+    {
+      "id": "EB-KI-RO-CONN",
+      "label": "Undercounter RO power provision reservation",
+      "room": "kitchen",
+      "node_name": "BOARD_EB-KI-RO-CONN",
+      "position_web_m": [
+        0.140412,
+        0.464,
+        -13.52
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 450,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Undercounter RO power provision",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "KI-RO"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-KI-05"
+          ],
+          "behavior": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+          "id": "EB-KI-RO-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-KI-RO-CONN"
+      ]
+    },
+    {
+      "id": "EB-KI-HOB-CONN",
+      "label": "Potential hob ignition supply reservation",
+      "room": "kitchen",
+      "node_name": "BOARD_EB-KI-HOB-CONN",
+      "position_web_m": [
+        0.140412,
+        0.664,
+        -15.0
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 650,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Potential hob ignition supply",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-KI-06"
+          ],
+          "behavior": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+          "id": "EB-KI-HOB-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-KI-HOB-CONN"
+      ]
+    },
+    {
+      "id": "EB-KI-HOOD-CONN",
+      "label": "Potential extractor supply reservation",
+      "room": "kitchen",
+      "node_name": "BOARD_EB-KI-HOOD-CONN",
+      "position_web_m": [
+        0.140412,
+        2.214,
+        -15.0
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 2200,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Potential extractor supply",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-KI-07"
+          ],
+          "behavior": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+          "id": "EB-KI-HOOD-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-KI-HOOD-CONN"
+      ]
+    },
+    {
+      "id": "EB-HA-AQUARIUM-CONN",
+      "label": "Aquarium filter / aerator / light reservation",
+      "room": "lounge",
+      "node_name": "BOARD_EB-HA-AQUARIUM-CONN",
+      "position_web_m": [
+        0.140412,
+        0.364,
+        -5.6
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 350,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Aquarium filter / aerator / light",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-HA-13"
+          ],
+          "behavior": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+          "id": "EB-HA-AQUARIUM-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-HA-AQUARIUM-CONN"
+      ]
+    },
+    {
+      "id": "EB-HA-AQUARIUM-POWER",
+      "label": "Aquarium accessible power isolation",
+      "room": "lounge",
+      "node_name": "BOARD_EB-HA-AQUARIUM-POWER",
+      "position_web_m": [
+        0.140412,
+        1.164,
+        -5.6
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 1150,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Aquarium power isolation",
+          "kind": "isolation-control",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-HA-14"
+          ],
+          "behavior": "Accessible isolation intent, not a selected disconnect device or circuit/termination design.",
+          "id": "EB-HA-AQUARIUM-POWER-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-HA-AQUARIUM-POWER"
+      ]
+    },
+    {
+      "id": "EB-B1-TV",
+      "label": "Rear bedroom TV power and data",
+      "room": "bedroom_1",
+      "node_name": "BOARD_EB-B1-TV",
+      "position_web_m": [
+        6.22,
+        1.264,
+        -14.441124
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "height_aff_mm": 1250,
+      "size_mm": [
+        97.5,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "TV socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B1-14"
+          ],
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-B1-TV-F01",
+          "slot": 0,
+          "span": 2
+        },
+        {
+          "label": "TV wired data",
+          "kind": "data",
+          "fixture_group_ids": [
+            "DATA"
+          ],
+          "backup_preference": "not-decided",
+          "point_ids": [
+            "E-B1-15"
+          ],
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-B1-TV-F02",
+          "slot": 2,
+          "span": 1
+        }
+      ],
+      "reason_ids": [
+        "R-EB-B1-TV"
+      ]
     }
   ],
   "requirements": [
@@ -3082,114 +3301,6 @@
       "state": "installer-placement-required",
       "reason_ids": [
         "R-RQ-E-HA-08"
-      ]
-    },
-    {
-      "id": "RQ-E-HA-13",
-      "label": "Aquarium filter / aerator / light",
-      "room": "lounge",
-      "point_ids": [
-        "E-HA-13"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-HA-13"
-      ]
-    },
-    {
-      "id": "RQ-E-HA-14",
-      "label": "Aquarium dry isolation control",
-      "room": "lounge",
-      "point_ids": [
-        "E-HA-14"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-HA-14"
-      ]
-    },
-    {
-      "id": "RQ-E-KI-01",
-      "label": "Fridge connection provision",
-      "room": "kitchen",
-      "point_ids": [
-        "E-KI-01"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-KI-01"
-      ]
-    },
-    {
-      "id": "RQ-E-KI-02",
-      "label": "Microwave connection provision",
-      "room": "kitchen",
-      "point_ids": [
-        "E-KI-02"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-KI-02"
-      ]
-    },
-    {
-      "id": "RQ-E-KI-03",
-      "label": "OTG connection provision",
-      "room": "kitchen",
-      "point_ids": [
-        "E-KI-03"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-KI-03"
-      ]
-    },
-    {
-      "id": "RQ-E-KI-04",
-      "label": "Dishwasher connection provision",
-      "room": "kitchen",
-      "point_ids": [
-        "E-KI-04"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-KI-04"
-      ]
-    },
-    {
-      "id": "RQ-E-KI-05",
-      "label": "Undercounter RO power provision",
-      "room": "kitchen",
-      "point_ids": [
-        "E-KI-05"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-KI-05"
-      ]
-    },
-    {
-      "id": "RQ-E-KI-06",
-      "label": "Potential hob ignition supply",
-      "room": "kitchen",
-      "point_ids": [
-        "E-KI-06"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-KI-06"
-      ]
-    },
-    {
-      "id": "RQ-E-KI-07",
-      "label": "Potential extractor supply",
-      "room": "kitchen",
-      "point_ids": [
-        "E-KI-07"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-KI-07"
       ]
     },
     {
@@ -3588,7 +3699,7 @@
   "reasons": [
     {
       "id": "R-EB-B1-ENTRY",
-      "summary": "Everyday light/fan controls remain together; maintenance isolation is on a separate tested service plate, not another routine rocker. West vestibule wall beyond the open bedroom leaf tip at Y13.910; dressing begins Y15.04.",
+      "summary": "One accessible arrival board groups routine controls with clearly labelled AC power isolation. Physical grouping does not combine circuits or imply a selected rated device. West vestibule wall beyond the open bedroom leaf tip at Y13.910; dressing begins Y15.04.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -3600,12 +3711,13 @@
         "1150 mm AFF is a project ergonomic band, not a standard.",
         "A real installer must establish actual isolation architecture.",
         "Bedroom ambient and entry path are one desired operating scene; controller/driver compatibility remains unselected, not a shared-circuit assertion.",
+        "Select a compatible rated isolation module/backbox and preserve circuit segregation. AC remote remains the normal operating control.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-B2-ENTRY",
-      "summary": "Everyday light/fan controls remain together; maintenance isolation is on a separate tested service plate, not another routine rocker. West wall north of entry opening/sweep, south of bed start Y6.978; existing study is at north wall.",
+      "summary": "One accessible arrival board groups routine controls with clearly labelled AC power isolation. Physical grouping does not combine circuits or imply a selected rated device. West wall north of entry opening/sweep, south of bed start Y6.978; existing study is at north wall.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -3616,12 +3728,13 @@
       "constraints": [
         "1150 mm AFF is a project ergonomic band, not a standard.",
         "A real installer must establish actual isolation architecture.",
+        "Select a compatible rated isolation module/backbox and preserve circuit segregation. AC remote remains the normal operating control.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-B3-ENTRY",
-      "summary": "Everyday light/fan controls remain together; maintenance isolation is on a separate tested service plate, not another routine rocker. Solid north wall east of entrance opening; keep clear of the east vanity and overhead AC.",
+      "summary": "One accessible arrival board groups routine controls with clearly labelled AC power isolation. Physical grouping does not combine circuits or imply a selected rated device. Solid north wall east of entrance opening; keep clear of the east vanity and overhead AC.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -3632,6 +3745,7 @@
       "constraints": [
         "1150 mm AFF is a project ergonomic band, not a standard.",
         "A real installer must establish actual isolation architecture.",
+        "Select a compatible rated isolation module/backbox and preserve circuit segregation. AC remote remains the normal operating control.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -3839,7 +3953,7 @@
     },
     {
       "id": "R-EB-DR-ENTRY",
-      "summary": "Everyday light/fan controls remain together; maintenance isolation is on a separate tested service plate, not another routine rocker. Actual entry leaf beginsY4.279; eastwall clear of the west display/stoolconsole and L-chaise.",
+      "summary": "One accessible arrival board groups routine controls with clearly labelled AC power isolation. Physical grouping does not combine circuits or imply a selected rated device. Actual entry leaf beginsY4.279; eastwall clear of the west display/stoolconsole and L-chaise.",
       "source_ids": [
         "INT-UD-BED",
         "INT-UD-CONTROLS",
@@ -3847,6 +3961,7 @@
       ],
       "constraints": [
         "Full board sweep/support checked; no control on glazed partition.",
+        "Select a compatible rated isolation module/backbox and preserve circuit segregation. AC remote remains the normal operating control.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -3880,13 +3995,14 @@
     },
     {
       "id": "R-EB-HA-ENTRY",
-      "summary": "Everyday light/fan controls remain together; maintenance isolation is on a separate tested service plate, not another routine rocker. Eastwall beyond middle bedroom entry swing; obsolete tall service cabinet was removed byv015.",
+      "summary": "One accessible arrival board groups routine controls with clearly labelled AC power isolation. Physical grouping does not combine circuits or imply a selected rated device. Eastwall beyond middle bedroom entry swing; obsolete tall service cabinet was removed byv015.",
       "source_ids": [
         "INT-UD-BED",
         "INT-UD-CONTROLS",
         "PROJECT"
       ],
       "constraints": [
+        "Select a compatible rated isolation module/backbox and preserve circuit segregation. AC remote remains the normal operating control.",
         "Existing route-bay cove must provide useful walking light; verify night illuminance/glare on actual route. No speculative new downlights.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
@@ -3935,7 +4051,7 @@
     },
     {
       "id": "R-EB-HA-MEDIA",
-      "summary": "Dedicated simultaneous TV and set-top ordinary outlets, mains-only; no media backup inheritance. Eastwall north of speakerendY9.615 and backingendY9.45, adjacent actualv015 network cavity.",
+      "summary": "Behind the actual hall TV; inspect with furniture hidden. A bracket-accessible service recess and separate power/data containment remain installer/product decisions. Concealment by TV/media is intentional and reported; not a routine control hidden by furniture.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4055,6 +4171,7 @@
         "Actual wet/dry boundary and device suitability require site verification.",
         "Exhaust humidity/timer logic and makeupair/discharge remainunselected.",
         "Lighting backup requested; exhaust undecided; geyser mains-only. Grouping is not one shared circuit.",
+        "Geyser power isolation may be used daily, not maintenance-only. Module rating, circuit segregation and backbox compatibility require electrician/product approval.",
         "Outside placement is a conservative project decision, not a blanket legal prohibition on internal switches.",
         "Do not relocate ordinary mains switches inside without actual spray/wet-area and applicable local requirements review.",
         "An internal low-voltage or wireless control would need a separately selected suitable system; none is assumed or shown.",
@@ -4078,6 +4195,7 @@
         "Actual wet/dry boundary and device suitability require site verification.",
         "Exhaust humidity/timer logic and makeupair/discharge remainunselected.",
         "Lighting backup requested; exhaust undecided; geyser mains-only. Grouping is not one shared circuit.",
+        "Geyser power isolation may be used daily, not maintenance-only. Module rating, circuit segregation and backbox compatibility require electrician/product approval.",
         "Outside placement is a conservative project decision, not a blanket legal prohibition on internal switches.",
         "Do not relocate ordinary mains switches inside without actual spray/wet-area and applicable local requirements review.",
         "An internal low-voltage or wireless control would need a separately selected suitable system; none is assumed or shown.",
@@ -4101,6 +4219,7 @@
         "Actual wet/dry boundary and device suitability require site verification.",
         "Exhaust humidity/timer logic and makeupair/discharge remainunselected.",
         "Lighting backup requested; exhaust undecided; geyser mains-only. Grouping is not one shared circuit.",
+        "Geyser power isolation may be used daily, not maintenance-only. Module rating, circuit segregation and backbox compatibility require electrician/product approval.",
         "Outside placement is a conservative project decision, not a blanket legal prohibition on internal switches.",
         "Do not relocate ordinary mains switches inside without actual spray/wet-area and applicable local requirements review.",
         "An internal low-voltage or wireless control would need a separately selected suitable system; none is assumed or shown.",
@@ -4118,137 +4237,6 @@
         "PROJECT"
       ],
       "constraints": [
-        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
-      ]
-    },
-    {
-      "id": "R-EB-B1-AC",
-      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-BED",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "1150 mm AFF is a project ergonomic band, not a standard.",
-        "A real installer must establish actual isolation architecture.",
-        "Bedroom ambient and entry path are one desired operating scene; controller/driver compatibility remains unselected, not a shared-circuit assertion.",
-        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
-      ]
-    },
-    {
-      "id": "R-EB-B2-AC",
-      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-BED",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "1150 mm AFF is a project ergonomic band, not a standard.",
-        "A real installer must establish actual isolation architecture.",
-        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
-      ]
-    },
-    {
-      "id": "R-EB-B3-AC",
-      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-BED",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "1150 mm AFF is a project ergonomic band, not a standard.",
-        "A real installer must establish actual isolation architecture.",
-        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
-      ]
-    },
-    {
-      "id": "R-EB-DR-AC",
-      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
-      "source_ids": [
-        "INT-UD-BED",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "Full board sweep/support checked; no control on glazed partition.",
-        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
-      ]
-    },
-    {
-      "id": "R-EB-HA-AC",
-      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
-      "source_ids": [
-        "INT-UD-BED",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
-      ]
-    },
-    {
-      "id": "R-EB-BA1-GEYSER",
-      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
-      "source_ids": [
-        "IND-BIS-REF",
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-BED",
-        "INT-UD-CONTROLS",
-        "INT-WET-IEC",
-        "PROJECT"
-      ],
-      "constraints": [
-        "Actual wet/dry boundary and device suitability require site verification.",
-        "Exhaust humidity/timer logic and makeupair/discharge remainunselected.",
-        "Lighting backup requested; exhaust undecided; geyser mains-only. Grouping is not one shared circuit.",
-        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
-      ]
-    },
-    {
-      "id": "R-EB-BA2-GEYSER",
-      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
-      "source_ids": [
-        "IND-BIS-REF",
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-BED",
-        "INT-UD-CONTROLS",
-        "INT-WET-IEC",
-        "PROJECT"
-      ],
-      "constraints": [
-        "Actual wet/dry boundary and device suitability require site verification.",
-        "Exhaust humidity/timer logic and makeupair/discharge remainunselected.",
-        "Lighting backup requested; exhaust undecided; geyser mains-only. Grouping is not one shared circuit.",
-        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
-      ]
-    },
-    {
-      "id": "R-EB-BA3-GEYSER",
-      "summary": "Separate maintenance/service use from everyday operation; no shared circuit or rated product is implied. Full generic plate and hand approach tested against unchanged v021 furniture and door leaves.",
-      "source_ids": [
-        "IND-BIS-REF",
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-BED",
-        "INT-UD-CONTROLS",
-        "INT-WET-IEC",
-        "PROJECT"
-      ],
-      "constraints": [
-        "Actual wet/dry boundary and device suitability require site verification.",
-        "Exhaust humidity/timer logic and makeupair/discharge remainunselected.",
-        "Lighting backup requested; exhaust undecided; geyser mains-only. Grouping is not one shared circuit.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -4285,7 +4273,7 @@
     },
     {
       "id": "R-EB-HA-DATA",
-      "summary": "Separate passive data service section; containment/barrier selection and cable routing remain unresolved. Eastwall north of speakerendY9.615 and backingendY9.45, adjacent actualv015 network cavity.",
+      "summary": "Behind the actual hall TV; inspect with furniture hidden. A bracket-accessible service recess and separate power/data containment remain installer/product decisions. Concealment by TV/media is intentional and reported; not a routine control hidden by furniture.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4437,6 +4425,157 @@
       ]
     },
     {
+      "id": "R-EB-KI-FRIDGE-CONN",
+      "summary": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment. Owner requested equipment-side reservations and furniture-off inspection. Concealment is reported, not treated as everyday hand access.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-CONTROLS",
+        "MFR-USB-FORMAT",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-KI-MW-CONN",
+      "summary": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment. Owner requested equipment-side reservations and furniture-off inspection. Concealment is reported, not treated as everyday hand access.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-CONTROLS",
+        "MFR-USB-FORMAT",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-KI-OTG-CONN",
+      "summary": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment. Owner requested equipment-side reservations and furniture-off inspection. Concealment is reported, not treated as everyday hand access.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-CONTROLS",
+        "MFR-USB-FORMAT",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-KI-DW-CONN",
+      "summary": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment. Owner requested equipment-side reservations and furniture-off inspection. Concealment is reported, not treated as everyday hand access.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-CONTROLS",
+        "MFR-USB-FORMAT",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-KI-RO-CONN",
+      "summary": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment. Owner requested equipment-side reservations and furniture-off inspection. Concealment is reported, not treated as everyday hand access.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-CONTROLS",
+        "MFR-USB-FORMAT",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-KI-HOB-CONN",
+      "summary": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment. Owner requested equipment-side reservations and furniture-off inspection. Concealment is reported, not treated as everyday hand access.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-CONTROLS",
+        "MFR-USB-FORMAT",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-KI-HOOD-CONN",
+      "summary": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment. Owner requested equipment-side reservations and furniture-off inspection. Concealment is reported, not treated as everyday hand access.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-CONTROLS",
+        "MFR-USB-FORMAT",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-HA-AQUARIUM-CONN",
+      "summary": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment. Owner requested equipment-side reservations and furniture-off inspection. Concealment is reported, not treated as everyday hand access.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-CONTROLS",
+        "MFR-USB-FORMAT",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-HA-AQUARIUM-POWER",
+      "summary": "Accessible dry-side power isolation beside, not behind or directly above, the aquarium; splash and drip-loop details require site review. Eastwall beyond middle bedroom entry swing; obsolete tall service cabinet was removed byv015.",
+      "source_ids": [
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Connection below/behind tank remains provisional. No waterproofing, life-support backup or common-circuit architecture is implied.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-B1-TV",
+      "summary": "Owner requested a TV on the window wall opposite the bed, beside the glazing. Power/data location is provisional until the screen and bracket are selected. Solid wall left of W_bedroom_1, not over glazing. No screen size or structural bracket fixings approved.",
+      "source_ids": [
+        "IND-BIS-REF",
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-ADA-REACH",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "INT-WET-IEC",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Select TV size, viewing height and bracket before installation; separate mains/data compartments and accessible cable bend space required.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
       "id": "R-RQ-E-B1-13",
       "summary": "Existing optional AP, not an extra socket. Coverage and powered-backhaul equipment selection pending; Wi-Fi only, not CCTV backup.",
       "source_ids": [
@@ -4465,123 +4604,6 @@
     {
       "id": "R-RQ-E-HA-08",
       "summary": "Existing external ceiling AP. Backhaul/power method and exact ceiling interface TBD; camera/PoE loads excluded unless explicitly agreed.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-HA-13",
-      "summary": "INSTALLER PLACEMENT REQUIRED. Diamond identifies tank, NOT receptacle. No outlet under leak path. Verify splash/leak avoidance, drip loops, accessible dry isolation, RCD and product instructions.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-HA-14",
-      "summary": "NOT PLACED until qualified wet-area assessment identifies a dry accessible control position, lead reach and separation from glazed partition/mandir. No blanket safe-distance claim.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-KI-01",
-      "summary": "Endpoint NOT PLACED behind fixed fridge. Selected manual must establish adjacent accessible connection, ventilation and lead reach; remote control E-KI-09 is separate.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-KI-02",
-      "summary": "Endpoint installer placement required outside hot enclosure/service obstruction; selected plug, lead and ventilation instructions unknown.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-KI-03",
-      "summary": "Endpoint installer placement required; no receptacle over/behind hot cavity or extension-board workaround.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-KI-04",
-      "summary": "Endpoint installer placement required in manufacturer-permitted accessible adjacent location, not behind machine or in sink leak path.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-KI-05",
-      "summary": "Generic undercounter TYPE only, no brand/model. No socket inside RO reserve, tray, trap or removal zone; electrician to choose dry accessible endpoint after product selection.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-KI-06",
-      "summary": "Need depends on selected hob; no point over burners, hot enclosure or under unassessed leak path. Installer placement required.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-KI-07",
-      "summary": "Reference above existing hob, NOT a selected hood or receptacle location. Product/heat/maintenance/discharge review and installer placement required.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",

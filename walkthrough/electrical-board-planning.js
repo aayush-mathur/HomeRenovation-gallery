@@ -1,6 +1,6 @@
 import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { validateBoardDescriptor, boardRooms } from './electrical-board-descriptor.js?v=29a9d2cc8434e5f6';
-import { createBoardOverlay } from './electrical-board-overlay.js?v=d7a838d7f21e44c7';
+import { createBoardOverlay } from './electrical-board-overlay.js?v=9ef4727b72a06b9b';
 import { validateBoardSetout, setoutLabel } from './electrical-board-setout.js?v=632fe2e2b0a491c5';
 
 const ROOM_LABELS = {
@@ -113,7 +113,7 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
     detail.append(el('h3', `${item.label} · ${item.id}`, { tabindex: '-1' }));
     if (board) {
       if (board.functions.some(control => control.kind === 'connection-provision')) {
-        detail.append(el('p', 'CONNECTION RESERVATION ONLY - not an approved socket, plug top, wiring route or installation mark. AC supply may belong at the outdoor unit. Geyser wet-area suitability is unresolved; mounting height does not establish safety.'));
+        detail.append(el('p', 'CONNECTION RESERVATION ONLY - not an approved socket, plug top, wiring route or installation mark. Concealed equipment points need designed service access, cable clearance and selected appliance review. AC supply may belong outdoors; geyser wet-area suitability is unresolved.'));
       }
       detail.append(el('p', `Proposed board · ${ROOM_LABELS[board.room]} · ${board.height_aff_mm} mm above the modelled floor`),
         el('p', `Illustrative face ${board.size_mm[0]} × ${board.size_mm[1]} mm; product and final module sizing remain unselected.`),
@@ -241,6 +241,7 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
   return {
     ready,
     revision: () => descriptor?.id || null,
+    refreshOccluders() { overlay?.refreshOccluders(); },
     update({ time, currentRoom, paused = false }) { overlay?.update({ time, currentRoom, paused: paused || panelVisible() }); },
     pickLabel(x, y) { return panelVisible() ? null : overlay?.pickLabel(x, y) || null; },
     selectLabel(id) { if (descriptor?.boards.some(board => board.id === id)) choose(id, true); },

@@ -256,5 +256,6 @@
     "Capped hot/cold terminals and mounting-bracket concepts only. Safety-valve discharge, isolation, RCD protection, earthing and full wet-weight wall support require qualified design.",
     "Body bottom 2130 mm; lowest capped terminals 2075 mm. Service envelopes are provisional maintenance reservations, not an accessible-installation or wet-zone compliance claim.",
     "Shower keepouts are conservative spatial review aids based on current fixture positions, not measured spray envelopes or statutory electrical zones."
-  ]
+  ],
+  "furniture_visibility_sha256": "3ea3b704058567a8cf798bb0818e8e677bb5e156202f78ad2a6c25227344ae4e"
 }

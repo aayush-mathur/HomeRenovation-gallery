@@ -1,6 +1,6 @@
 {
   "source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
-  "electrical_descriptor_sha256": "723ba459e24e7b0cc43234810aaa458946478fbeb88b854f8ba68a9862adc0da",
+  "electrical_descriptor_sha256": "189119bf82db0a88bc6e42e4c97fa9346363ace10cc96d654e39939ac71c3edd",
   "basis": "Saved v021 evaluated floor/furniture geometry + latest local v004 electrical; not surveyed.",
   "outline_exceptions": {
     "kitchen": "Current integration bounds and OTS partition from house_integration_parameters.json and integrate_house_kitchen.py; obsolete Finish - Kitchen north edge is not a wall.",
@@ -154,44 +154,6 @@
         },
         {
           "number": 7,
-          "id": "EB-B1-AC",
-          "corner": "A",
-          "corner_plan_m": [
-            3.73334,
-            13.00406
-          ],
-          "along_wall_cm": 155,
-          "height_cm": 140.0,
-          "position_plan_m": [
-            3.745344,
-            14.55
-          ],
-          "badge_px": [
-            847.1686316239596,
-            1686.690210506523
-          ]
-        },
-        {
-          "number": 8,
-          "id": "EB-BA1-GEYSER",
-          "corner": "F",
-          "corner_plan_m": [
-            4.84207,
-            13.00406
-          ],
-          "along_wall_cm": 26,
-          "height_cm": 145.0,
-          "position_plan_m": [
-            4.830072,
-            13.26
-          ],
-          "badge_px": [
-            1179.272323447498,
-            2161.6406150801713
-          ]
-        },
-        {
-          "number": 9,
           "id": "EB-B1-CONN",
           "corner": "A",
           "corner_plan_m": [
@@ -207,6 +169,25 @@
           "badge_px": [
             847.1686316239596,
             1567.684192698096
+          ]
+        },
+        {
+          "number": 8,
+          "id": "EB-B1-TV",
+          "corner": "E",
+          "corner_plan_m": [
+            4.84207,
+            14.42912
+          ],
+          "along_wall_cm": 138,
+          "height_cm": 125.0,
+          "position_plan_m": [
+            6.22,
+            14.441124
+          ],
+          "badge_px": [
+            1604.8169947097003,
+            1720.024024652539
           ]
         }
       ],
@@ -504,44 +485,6 @@
         },
         {
           "number": 7,
-          "id": "EB-B2-AC",
-          "corner": "A",
-          "corner_plan_m": [
-            4.90158,
-            5.18346
-          ],
-          "along_wall_cm": 122,
-          "height_cm": 145.0,
-          "position_plan_m": [
-            4.91358,
-            6.4
-          ],
-          "badge_px": [
-            1166.446669613695,
-            1883.1813658428257
-          ]
-        },
-        {
-          "number": 8,
-          "id": "EB-BA2-GEYSER",
-          "corner": "E",
-          "corner_plan_m": [
-            6.83089,
-            6.52709
-          ],
-          "along_wall_cm": 35,
-          "height_cm": 145.0,
-          "position_plan_m": [
-            7.18,
-            6.539088
-          ],
-          "badge_px": [
-            1991.2015390191423,
-            1842.386003431682
-          ]
-        },
-        {
-          "number": 9,
           "id": "EB-B2-CLEAN",
           "corner": "C",
           "corner_plan_m": [
@@ -560,7 +503,7 @@
           ]
         },
         {
-          "number": 10,
+          "number": 8,
           "id": "EB-B2-CONN",
           "corner": "C",
           "corner_plan_m": [
@@ -806,25 +749,6 @@
         },
         {
           "number": 6,
-          "id": "EB-B3-AC",
-          "corner": "C",
-          "corner_plan_m": [
-            6.83089,
-            5.05505
-          ],
-          "along_wall_cm": 118,
-          "height_cm": 140.0,
-          "position_plan_m": [
-            5.65,
-            5.043048
-          ],
-          "badge_px": [
-            1922.026534165601,
-            763.4106003280126
-          ]
-        },
-        {
-          "number": 7,
           "id": "EB-B3-CONN",
           "corner": "C",
           "corner_plan_m": [
@@ -1073,15 +997,15 @@
             4.7763,
             10.08504
           ],
-          "along_wall_cm": 31,
-          "height_cm": 115.0,
+          "along_wall_cm": 177,
+          "height_cm": 125.0,
           "position_plan_m": [
             4.7643,
-            9.78
+            8.32
           ],
           "badge_px": [
             2445.3427874277277,
-            847.1261919625916
+            1264.1345851745762
           ]
         },
         {
@@ -1100,30 +1024,11 @@
           ],
           "badge_px": [
             2445.3427874277277,
-            927.1261919625916
+            771.436312372745
           ]
         },
         {
           "number": 7,
-          "id": "EB-HA-AC",
-          "corner": "D",
-          "corner_plan_m": [
-            4.7763,
-            5.18346
-          ],
-          "along_wall_cm": 152,
-          "height_cm": 145.0,
-          "position_plan_m": [
-            4.7643,
-            6.7
-          ],
-          "badge_px": [
-            2445.3427874277277,
-            1886.8425283276006
-          ]
-        },
-        {
-          "number": 8,
           "id": "EB-HA-WIFI",
           "corner": "C",
           "corner_plan_m": [
@@ -1138,30 +1043,30 @@
           ],
           "badge_px": [
             2445.3427874277277,
-            1007.1261919625916
+            851.436312372745
           ]
         },
         {
-          "number": 9,
+          "number": 8,
           "id": "EB-HA-DATA",
           "corner": "C",
           "corner_plan_m": [
             4.7763,
             10.08504
           ],
-          "along_wall_cm": 31,
-          "height_cm": 140.0,
+          "along_wall_cm": 177,
+          "height_cm": 143.0,
           "position_plan_m": [
             4.7643,
-            9.78
+            8.32
           ],
           "badge_px": [
             2445.3427874277277,
-            1087.1261919625917
+            1344.1345851745762
           ]
         },
         {
-          "number": 10,
+          "number": 9,
           "id": "EB-HA-CONN",
           "corner": "B",
           "corner_plan_m": [
@@ -1177,6 +1082,44 @@
           "badge_px": [
             964.6577838166468,
             995.6497292709697
+          ]
+        },
+        {
+          "number": 10,
+          "id": "EB-HA-AQUARIUM-CONN",
+          "corner": "A",
+          "corner_plan_m": [
+            0.12841,
+            5.18346
+          ],
+          "along_wall_cm": 42,
+          "height_cm": 35.0,
+          "position_plan_m": [
+            0.140412,
+            5.6
+          ],
+          "badge_px": [
+            964.6577838166468,
+            2155.3015966280263
+          ]
+        },
+        {
+          "number": 11,
+          "id": "EB-HA-AQUARIUM-POWER",
+          "corner": "A",
+          "corner_plan_m": [
+            0.12841,
+            5.18346
+          ],
+          "along_wall_cm": 42,
+          "height_cm": 115.0,
+          "position_plan_m": [
+            0.140412,
+            5.6
+          ],
+          "badge_px": [
+            964.6577838166468,
+            2235.3015966280263
           ]
         }
       ],
@@ -1404,6 +1347,139 @@
           "badge_px": [
             2283.7850572872885,
             1724.9556639393948
+          ]
+        },
+        {
+          "number": 4,
+          "id": "EB-KI-FRIDGE-CONN",
+          "corner": "E",
+          "corner_plan_m": [
+            3.604932,
+            17.576784
+          ],
+          "along_wall_cm": 195,
+          "height_cm": 45.0,
+          "position_plan_m": [
+            3.592932,
+            15.63
+          ],
+          "badge_px": [
+            2312.6776281716175,
+            1355.0867391611705
+          ]
+        },
+        {
+          "number": 5,
+          "id": "EB-KI-MW-CONN",
+          "corner": "C",
+          "corner_plan_m": [
+            2.028412,
+            16.526784
+          ],
+          "along_wall_cm": 38,
+          "height_cm": 148.0,
+          "position_plan_m": [
+            1.65,
+            16.514784
+          ],
+          "badge_px": [
+            1558.7683969673162,
+            1084.628799705819
+          ]
+        },
+        {
+          "number": 6,
+          "id": "EB-KI-OTG-CONN",
+          "corner": "C",
+          "corner_plan_m": [
+            2.028412,
+            16.526784
+          ],
+          "along_wall_cm": 38,
+          "height_cm": 100.0,
+          "position_plan_m": [
+            1.65,
+            16.514784
+          ],
+          "badge_px": [
+            1558.7683969673162,
+            1164.628799705819
+          ]
+        },
+        {
+          "number": 7,
+          "id": "EB-KI-DW-CONN",
+          "corner": "E",
+          "corner_plan_m": [
+            3.604932,
+            17.576784
+          ],
+          "along_wall_cm": 136,
+          "height_cm": 50.0,
+          "position_plan_m": [
+            3.592932,
+            16.219999
+          ],
+          "badge_px": [
+            2312.6776281716175,
+            1174.7377344089164
+          ]
+        },
+        {
+          "number": 8,
+          "id": "EB-KI-RO-CONN",
+          "corner": "A",
+          "corner_plan_m": [
+            0.128412,
+            13.004064
+          ],
+          "along_wall_cm": 52,
+          "height_cm": 45.0,
+          "position_plan_m": [
+            0.140412,
+            13.52
+          ],
+          "badge_px": [
+            1097.3223718283828,
+            2000.0647815430325
+          ]
+        },
+        {
+          "number": 9,
+          "id": "EB-KI-HOB-CONN",
+          "corner": "B",
+          "corner_plan_m": [
+            0.128412,
+            16.526784
+          ],
+          "along_wall_cm": 153,
+          "height_cm": 65.0,
+          "position_plan_m": [
+            0.140412,
+            15.0
+          ],
+          "badge_px": [
+            1097.3223718283828,
+            1547.663121483717
+          ]
+        },
+        {
+          "number": 10,
+          "id": "EB-KI-HOOD-CONN",
+          "corner": "B",
+          "corner_plan_m": [
+            0.128412,
+            16.526784
+          ],
+          "along_wall_cm": 153,
+          "height_cm": 220.0,
+          "position_plan_m": [
+            0.140412,
+            15.0
+          ],
+          "badge_px": [
+            1097.3223718283828,
+            1627.663121483717
           ]
         }
       ],
@@ -2020,25 +2096,6 @@
           "badge_px": [
             999.1397707058741,
             1814.3058143457922
-          ]
-        },
-        {
-          "number": 3,
-          "id": "EB-BA3-GEYSER",
-          "corner": "D",
-          "corner_plan_m": [
-            8.02418,
-            2.23625
-          ],
-          "along_wall_cm": 70,
-          "height_cm": 145.0,
-          "position_plan_m": [
-            7.32,
-            2.248248
-          ],
-          "badge_px": [
-            1832.5346121528135,
-            2229.9738859578056
           ]
         }
       ],
