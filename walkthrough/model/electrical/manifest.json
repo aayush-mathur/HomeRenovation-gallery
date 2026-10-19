@@ -5,9 +5,9 @@
   "base_navigation_sha256": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
   "luxe_sha256": "2fc0001646f3b8a7005af317dac1d009fb735447625672566814cd5081b754b4",
   "model": {
-    "src": "./model/electrical/boards-69aee1974c02f5ad.glb",
-    "sha256": "69aee1974c02f5ad5986c93e8d13de80be42f21de722ca82887c7348607eb563",
-    "bytes": 3679356
+    "src": "./model/electrical/boards-3969a8375f11c21a.glb",
+    "sha256": "3969a8375f11c21a3288ee97828aed8bc83c60e9730c458ef619cd5880083ad6",
+    "bytes": 4037216
   },
   "boards": [
     {
@@ -1973,7 +1973,7 @@
     },
     {
       "id": "EB-BA1-DRY",
-      "label": "Bath 1 dry-side controls",
+      "label": "Bath 1 outside light / fan / mirror",
       "room": "bedroom_1",
       "node_name": "BOARD_EB-BA1-DRY",
       "position_web_m": [
@@ -2046,7 +2046,7 @@
     },
     {
       "id": "EB-BA2-DRY",
-      "label": "Bath 2 dry-side controls",
+      "label": "Bath 2 outside light / fan / mirror",
       "room": "bedroom_2",
       "node_name": "BOARD_EB-BA2-DRY",
       "position_web_m": [
@@ -2119,7 +2119,7 @@
     },
     {
       "id": "EB-BA3-DRY",
-      "label": "Bath 3 dry-side controls",
+      "label": "Bath 3 outside light / fan / mirror",
       "room": "dressing_3",
       "node_name": "BOARD_EB-BA3-DRY",
       "position_web_m": [
@@ -2709,21 +2709,345 @@
       "reason_ids": [
         "R-EB-HA-DATA"
       ]
+    },
+    {
+      "id": "EB-B1-CONN",
+      "label": "B1 AC connection reservation",
+      "room": "bedroom_1",
+      "node_name": "BOARD_EB-B1-CONN",
+      "position_web_m": [
+        3.745344,
+        2.264,
+        -14.98
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 2250,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "AC connection reservation",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "B1-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B1-10"
+          ],
+          "behavior": "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. AC supply may terminate at the outdoor unit instead: this indoor candidate is NOT an instruction to run an indoor supply.",
+          "id": "EB-B1-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-B1-CONN"
+      ]
+    },
+    {
+      "id": "EB-B2-CONN",
+      "label": "B2 AC connection reservation",
+      "room": "bedroom_2",
+      "node_name": "BOARD_EB-B2-CONN",
+      "position_web_m": [
+        7.08,
+        2.264,
+        -9.944628
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "height_aff_mm": 2250,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "AC connection reservation",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "B2-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B2-10"
+          ],
+          "behavior": "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. AC supply may terminate at the outdoor unit instead: this indoor candidate is NOT an instruction to run an indoor supply.",
+          "id": "EB-B2-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-B2-CONN"
+      ]
+    },
+    {
+      "id": "EB-B3-CONN",
+      "label": "B3 AC connection reservation",
+      "room": "bedroom_3",
+      "node_name": "BOARD_EB-B3-CONN",
+      "position_web_m": [
+        6.18,
+        2.264,
+        -5.043048
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "height_aff_mm": 2250,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "AC connection reservation",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "B3-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B3-10"
+          ],
+          "behavior": "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. AC supply may terminate at the outdoor unit instead: this indoor candidate is NOT an instruction to run an indoor supply.",
+          "id": "EB-B3-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-B3-CONN"
+      ]
+    },
+    {
+      "id": "EB-DR-CONN",
+      "label": "DR AC connection reservation",
+      "room": "drawing",
+      "node_name": "BOARD_EB-DR-CONN",
+      "position_web_m": [
+        0.265692,
+        2.264,
+        -4.6
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 2250,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "AC connection reservation",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "DR-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-DR-05"
+          ],
+          "behavior": "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. AC supply may terminate at the outdoor unit instead: this indoor candidate is NOT an instruction to run an indoor supply.",
+          "id": "EB-DR-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-DR-CONN"
+      ]
+    },
+    {
+      "id": "EB-HA-CONN",
+      "label": "HA AC connection reservation",
+      "room": "lounge",
+      "node_name": "BOARD_EB-HA-CONN",
+      "position_web_m": [
+        0.140412,
+        2.264,
+        -9.26
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 2250,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "AC connection reservation",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "HA-AC"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-HA-10"
+          ],
+          "behavior": "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. AC supply may terminate at the outdoor unit instead: this indoor candidate is NOT an instruction to run an indoor supply.",
+          "id": "EB-HA-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-HA-CONN"
+      ]
+    },
+    {
+      "id": "EB-BA1-CONN",
+      "label": "BA1 Geyser connection reservation",
+      "room": "bathroom_1",
+      "node_name": "BOARD_EB-BA1-CONN",
+      "position_web_m": [
+        4.982484,
+        2.164,
+        -13.43
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 2150,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Geyser connection reservation",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "BA1-GEYSER"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-BA1-03"
+          ],
+          "behavior": "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. Open-shower bathroom: actual spray exposure, permitted wet-area location, enclosure/IP and manufacturer clearances are unresolved. Height does NOT establish a safe zone. No exposed socket or plug is proposed.",
+          "id": "EB-BA1-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-BA1-CONN"
+      ]
+    },
+    {
+      "id": "EB-BA2-CONN",
+      "label": "BA2 Geyser connection reservation",
+      "room": "bathroom_2",
+      "node_name": "BOARD_EB-BA2-CONN",
+      "position_web_m": [
+        6.971304,
+        2.164,
+        -5.4
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 2150,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Geyser connection reservation",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "BA2-GEYSER"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-BA2-03"
+          ],
+          "behavior": "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. Open-shower bathroom: actual spray exposure, permitted wet-area location, enclosure/IP and manufacturer clearances are unresolved. Height does NOT establish a safe zone. No exposed socket or plug is proposed.",
+          "id": "EB-BA2-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-BA2-CONN"
+      ]
+    },
+    {
+      "id": "EB-BA3-CONN",
+      "label": "BA3 Geyser connection reservation",
+      "room": "bathroom_3",
+      "node_name": "BOARD_EB-BA3-CONN",
+      "position_web_m": [
+        6.514032,
+        2.164,
+        -1.35
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 2150,
+      "size_mm": [
+        75.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "Geyser connection reservation",
+          "kind": "connection-provision",
+          "fixture_group_ids": [
+            "BA3-GEYSER"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-BA3-03"
+          ],
+          "behavior": "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. Open-shower bathroom: actual spray exposure, permitted wet-area location, enclosure/IP and manufacturer clearances are unresolved. Height does NOT establish a safe zone. No exposed socket or plug is proposed.",
+          "id": "EB-BA3-CONN-F01",
+          "slot": 0,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-BA3-CONN"
+      ]
     }
   ],
   "requirements": [
-    {
-      "id": "RQ-E-B1-10",
-      "label": "AC connection provision",
-      "room": "bedroom_1",
-      "point_ids": [
-        "E-B1-10"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-B1-10"
-      ]
-    },
     {
       "id": "RQ-E-B1-13",
       "label": "Optional rear Wi-Fi data feed",
@@ -2734,42 +3058,6 @@
       "state": "installer-placement-required",
       "reason_ids": [
         "R-RQ-E-B1-13"
-      ]
-    },
-    {
-      "id": "RQ-E-B2-10",
-      "label": "AC connection provision",
-      "room": "bedroom_2",
-      "point_ids": [
-        "E-B2-10"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-B2-10"
-      ]
-    },
-    {
-      "id": "RQ-E-B3-10",
-      "label": "AC connection provision",
-      "room": "bedroom_3",
-      "point_ids": [
-        "E-B3-10"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-B3-10"
-      ]
-    },
-    {
-      "id": "RQ-E-DR-05",
-      "label": "AC connection provision",
-      "room": "drawing",
-      "point_ids": [
-        "E-DR-05"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-DR-05"
       ]
     },
     {
@@ -2794,18 +3082,6 @@
       "state": "installer-placement-required",
       "reason_ids": [
         "R-RQ-E-HA-08"
-      ]
-    },
-    {
-      "id": "RQ-E-HA-10",
-      "label": "AC connection provision",
-      "room": "lounge",
-      "point_ids": [
-        "E-HA-10"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-HA-10"
       ]
     },
     {
@@ -2917,18 +3193,6 @@
       ]
     },
     {
-      "id": "RQ-E-BA1-03",
-      "label": "Rear geyser connection",
-      "room": "bathroom_1",
-      "point_ids": [
-        "E-BA1-03"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-BA1-03"
-      ]
-    },
-    {
       "id": "RQ-E-BA1-04",
       "label": "Rear exhaust connection",
       "room": "bathroom_1",
@@ -2941,18 +3205,6 @@
       ]
     },
     {
-      "id": "RQ-E-BA2-03",
-      "label": "Middle geyser connection",
-      "room": "bathroom_2",
-      "point_ids": [
-        "E-BA2-03"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-BA2-03"
-      ]
-    },
-    {
       "id": "RQ-E-BA2-04",
       "label": "Middle exhaust connection",
       "room": "bathroom_2",
@@ -2962,18 +3214,6 @@
       "state": "installer-placement-required",
       "reason_ids": [
         "R-RQ-E-BA2-04"
-      ]
-    },
-    {
-      "id": "RQ-E-BA3-03",
-      "label": "Front geyser connection",
-      "room": "bathroom_3",
-      "point_ids": [
-        "E-BA3-03"
-      ],
-      "state": "installer-placement-required",
-      "reason_ids": [
-        "R-RQ-E-BA3-03"
       ]
     },
     {
@@ -3801,7 +4041,7 @@
     },
     {
       "id": "R-EB-BA1-DRY",
-      "summary": "Everyday bath ceiling, exhaust and dedicated mirror task-light intent; geyser maintenance is on a separate tested dry-side plate. Dry rearbed vestibule wall solidY13.004-13.540, south of bathroom openingY13.540-14.301.",
+      "summary": "Keep ceiling light, exhaust and mirror-light controls on the existing bedroom vestibule wall outside. No enclosed dry basin zone is established. West doorway enters the north end; basin occupies the west recess and shower is at the south wall. Owner confirmed no fixed shower partitions are planned.",
       "source_ids": [
         "IND-BIS-REF",
         "IND-CEA-2023",
@@ -3815,13 +4055,16 @@
         "Actual wet/dry boundary and device suitability require site verification.",
         "Exhaust humidity/timer logic and makeupair/discharge remainunselected.",
         "Lighting backup requested; exhaust undecided; geyser mains-only. Grouping is not one shared circuit.",
+        "Outside placement is a conservative project decision, not a blanket legal prohibition on internal switches.",
+        "Do not relocate ordinary mains switches inside without actual spray/wet-area and applicable local requirements review.",
+        "An internal low-voltage or wireless control would need a separately selected suitable system; none is assumed or shown.",
         "Internal grooming was considered: this modeled bath has 3.858 m2 floor area and no surveyed shower enclosure/zone. A general socket is not justified yet; selected fixed mirror/specialist equipment may be reviewed, not categorically prohibited. Dry grooming alternative: EB-B1-WORK; no extension through door.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-BA2-DRY",
-      "summary": "Everyday bath ceiling, exhaust and dedicated mirror task-light intent; geyser maintenance is on a separate tested dry-side plate. Dry bedroom side of bathnorthwall west of doorwayX7.442-8.052; openleaf swingsnorth along eastwall.",
+      "summary": "Keep controls on the bedroom side of the north wall. The narrow open-shower room has no demonstrated splash-protected internal control position. North doorway opens toward the east side; compact basin is at northwest and shower is on the east wall. Owner confirmed no fixed shower partitions are planned.",
       "source_ids": [
         "IND-BIS-REF",
         "IND-CEA-2023",
@@ -3835,13 +4078,16 @@
         "Actual wet/dry boundary and device suitability require site verification.",
         "Exhaust humidity/timer logic and makeupair/discharge remainunselected.",
         "Lighting backup requested; exhaust undecided; geyser mains-only. Grouping is not one shared circuit.",
+        "Outside placement is a conservative project decision, not a blanket legal prohibition on internal switches.",
+        "Do not relocate ordinary mains switches inside without actual spray/wet-area and applicable local requirements review.",
+        "An internal low-voltage or wireless control would need a separately selected suitable system; none is assumed or shown.",
         "Internal grooming was considered: this modeled bath has 2.581 m2 floor area and no surveyed shower enclosure/zone. A general socket is not justified yet; selected fixed mirror/specialist equipment may be reviewed, not categorically prohibited. Dry grooming alternative: EB-B2-VANITY; no extension through door.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-BA3-DRY",
-      "summary": "Everyday bath ceiling, exhaust and dedicated mirror task-light intent; geyser maintenance is on a separate tested dry-side plate. Dry dressing side between bathdoorendX7.163 and wardrobeX7.511; narrow260-350mm usablestrip demands small groupedboard.",
+      "summary": "Keep controls in dressing outside the bathroom. No partition separates the basin/control approach from the shower. North doorway enters from dressing; basin and shower share the south end of the small room. Owner confirmed no fixed shower partitions are planned.",
       "source_ids": [
         "IND-BIS-REF",
         "IND-CEA-2023",
@@ -3855,6 +4101,9 @@
         "Actual wet/dry boundary and device suitability require site verification.",
         "Exhaust humidity/timer logic and makeupair/discharge remainunselected.",
         "Lighting backup requested; exhaust undecided; geyser mains-only. Grouping is not one shared circuit.",
+        "Outside placement is a conservative project decision, not a blanket legal prohibition on internal switches.",
+        "Do not relocate ordinary mains switches inside without actual spray/wet-area and applicable local requirements review.",
+        "An internal low-voltage or wireless control would need a separately selected suitable system; none is assumed or shown.",
         "Internal grooming was considered: this modeled bath has 3.013 m2 floor area and no surveyed shower enclosure/zone. A general socket is not justified yet; selected fixed mirror/specialist equipment may be reviewed, not categorically prohibited. Dry grooming alternative: EB-B3-WORK; no extension through door.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
@@ -4052,60 +4301,144 @@
       ]
     },
     {
-      "id": "R-RQ-E-B1-10",
-      "summary": "Installer placement required: actual product may supply via outdoor unit; no indoor socket or condensate route invented.",
+      "id": "R-EB-B1-CONN",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
+        "INT-UD-BED",
         "INT-UD-CONTROLS",
         "PROJECT"
       ],
       "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
+        "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. AC supply may terminate at the outdoor unit instead: this indoor candidate is NOT an instruction to run an indoor supply.",
+        "Model-derived discussion position only; do not use as an installation mark or infer a wiring route.",
+        "Connection reservation is not an additional load, circuit or routine switch.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-B2-CONN",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. AC supply may terminate at the outdoor unit instead: this indoor candidate is NOT an instruction to run an indoor supply.",
+        "Model-derived discussion position only; do not use as an installation mark or infer a wiring route.",
+        "Connection reservation is not an additional load, circuit or routine switch.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-B3-CONN",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. AC supply may terminate at the outdoor unit instead: this indoor candidate is NOT an instruction to run an indoor supply.",
+        "Model-derived discussion position only; do not use as an installation mark or infer a wiring route.",
+        "Connection reservation is not an additional load, circuit or routine switch.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-DR-CONN",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. AC supply may terminate at the outdoor unit instead: this indoor candidate is NOT an instruction to run an indoor supply.",
+        "Model-derived discussion position only; do not use as an installation mark or infer a wiring route.",
+        "Connection reservation is not an additional load, circuit or routine switch.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-HA-CONN",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. AC supply may terminate at the outdoor unit instead: this indoor candidate is NOT an instruction to run an indoor supply.",
+        "Model-derived discussion position only; do not use as an installation mark or infer a wiring route.",
+        "Connection reservation is not an additional load, circuit or routine switch.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-BA1-CONN",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. Open-shower bathroom: actual spray exposure, permitted wet-area location, enclosure/IP and manufacturer clearances are unresolved. Height does NOT establish a safe zone. No exposed socket or plug is proposed.",
+        "Model-derived discussion position only; do not use as an installation mark or infer a wiring route.",
+        "Connection reservation is not an additional load, circuit or routine switch.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-BA2-CONN",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. Open-shower bathroom: actual spray exposure, permitted wet-area location, enclosure/IP and manufacturer clearances are unresolved. Height does NOT establish a safe zone. No exposed socket or plug is proposed.",
+        "Model-derived discussion position only; do not use as an installation mark or infer a wiring route.",
+        "Connection reservation is not an additional load, circuit or routine switch.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-BA3-CONN",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-BED",
+        "INT-UD-CONTROLS",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Provisional equipment-side connection reservation, NOT an ordinary socket or selected plug top. Final connection method, cable entry, rating, isolation, protection, earthing and location require the appliance manual and qualified installer approval. Open-shower bathroom: actual spray exposure, permitted wet-area location, enclosure/IP and manufacturer clearances are unresolved. Height does NOT establish a safe zone. No exposed socket or plug is proposed.",
+        "Model-derived discussion position only; do not use as an installation mark or infer a wiring route.",
+        "Connection reservation is not an additional load, circuit or routine switch.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-RQ-E-B1-13",
       "summary": "Existing optional AP, not an extra socket. Coverage and powered-backhaul equipment selection pending; Wi-Fi only, not CCTV backup.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-B2-10",
-      "summary": "Installer placement required; product supply arrangement and outdoor location unknown.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-B3-10",
-      "summary": "Installer placement required; source positions unchanged and no drain route.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-DR-05",
-      "summary": "Installer placement required; solid support band and existing AC retained.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4132,19 +4465,6 @@
     {
       "id": "R-RQ-E-HA-08",
       "summary": "Existing external ceiling AP. Backhaul/power method and exact ceiling interface TBD; camera/PoE loads excluded unless explicitly agreed.",
-      "source_ids": [
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-HA-10",
-      "summary": "Installer placement required; filter access above seating remains unresolved and is not fixed by an electrical marker.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4273,21 +4593,6 @@
       ]
     },
     {
-      "id": "R-RQ-E-BA1-03",
-      "summary": "Equipment reference only. Installer wet-zone/IP/RCD/earthing/clearance and selected manual verification; NOT a receptacle location.",
-      "source_ids": [
-        "IND-BIS-REF",
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "INT-WET-IEC",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
       "id": "R-RQ-E-BA1-04",
       "summary": "Equipment reference only; fan model, humidity/timer behavior, outdoor discharge and makeup air unverified; no capacity claim.",
       "source_ids": [
@@ -4303,38 +4608,8 @@
       ]
     },
     {
-      "id": "R-RQ-E-BA2-03",
-      "summary": "Installer wet-zone/IP/RCD/earthing/clearance verification. Equipment reference is NOT an energized socket proposal.",
-      "source_ids": [
-        "IND-BIS-REF",
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "INT-WET-IEC",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
       "id": "R-RQ-E-BA2-04",
       "summary": "Window-mounted concept reference; final connection, timer/humidity control, makeup air and discharge need installer review.",
-      "source_ids": [
-        "IND-BIS-REF",
-        "IND-CEA-2023",
-        "IND-CEA-2026",
-        "INT-UD-CONTROLS",
-        "INT-WET-IEC",
-        "PROJECT"
-      ],
-      "constraints": [
-        "List-only requirement. No equipment box, socket, circuit or mounting location is implied."
-      ]
-    },
-    {
-      "id": "R-RQ-E-BA3-03",
-      "summary": "Installer wet-zone/IP/RCD/earthing/clearance verification required; no receptacle location selected.",
       "source_ids": [
         "IND-BIS-REF",
         "IND-CEA-2023",

@@ -3,7 +3,7 @@ import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { isSafe, move, movementVector, movementSpeed, joystickVector, roomAt, applyLens, inspectionNavigation } from './navigation.js?lens=1&controls=4';
 import { validateCeilingOptions, activeCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=a653fd99aa8b800d';
 import { createFixtureLighting } from './fixture-lighting.js?v=07ea12a8efadecfe';
-import { initBoardPlanning } from './electrical-board-planning.js?v=c806edd01467174b';
+import { initBoardPlanning } from './electrical-board-planning.js?v=7143dbc4610dec06';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';

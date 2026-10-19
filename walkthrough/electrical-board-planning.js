@@ -1,6 +1,6 @@
 import { GLTFLoader } from './vendor/GLTFLoader.js';
-import { validateBoardDescriptor, boardRooms } from './electrical-board-descriptor.js?v=60527b3213edf195';
-import { createBoardOverlay } from './electrical-board-overlay.js?v=8f672f98c1227b5b';
+import { validateBoardDescriptor, boardRooms } from './electrical-board-descriptor.js?v=29a9d2cc8434e5f6';
+import { createBoardOverlay } from './electrical-board-overlay.js?v=d7a838d7f21e44c7';
 import { validateBoardSetout, setoutLabel } from './electrical-board-setout.js?v=632fe2e2b0a491c5';
 
 const ROOM_LABELS = {
@@ -112,6 +112,9 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
     const item = board || requirement;
     detail.append(el('h3', `${item.label} · ${item.id}`, { tabindex: '-1' }));
     if (board) {
+      if (board.functions.some(control => control.kind === 'connection-provision')) {
+        detail.append(el('p', 'CONNECTION RESERVATION ONLY - not an approved socket, plug top, wiring route or installation mark. AC supply may belong at the outdoor unit. Geyser wet-area suitability is unresolved; mounting height does not establish safety.'));
+      }
       detail.append(el('p', `Proposed board · ${ROOM_LABELS[board.room]} · ${board.height_aff_mm} mm above the modelled floor`),
         el('p', `Illustrative face ${board.size_mm[0]} × ${board.size_mm[1]} mm; product and final module sizing remain unselected.`),
         el('h4', 'Controls, left to right'));

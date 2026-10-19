@@ -5,17 +5,17 @@
   "source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
   "lighting_revision": "distributed-fixtures-v1",
   "files": {
-    "app.js": "2798e746322caf8bbbb6ee62a3686437c718b205eb037e3bc92f9889d6169884",
+    "app.js": "931e27a9097de68c732d42cedbd9f040c039c8ee5755206b0b0ca60016dbdc95",
     "ceiling-comparison.js": "a653fd99aa8b800dd149ebd28097ea6c84c3f0baee5b9a62cd1d2dc2816f07e3",
-    "electrical-board-descriptor.js": "60527b3213edf19560e0fb8e8af26e23060014d4afc0fd8be61b11c6b723ddfd",
+    "electrical-board-descriptor.js": "29a9d2cc8434e5f6fec0b6de2b8735d81265bf01158fa844898626396660232d",
     "electrical-board-labels.css": "e00180375dfb72152777ddf5744fc935b978ae5c830b52fcb8ce5707d743a4f4",
     "electrical-board-labels.js": "bca24d0b239238f849dd2110240083a3f573abbb144a4918c4b5a5262d25a6a6",
-    "electrical-board-overlay.js": "8f672f98c1227b5b9d52bb0ae9d247c76b73f11dc56ebdce4c1cbf3d8fa7de55",
-    "electrical-board-planning.js": "c806edd01467174bd868431f035fb9d58c7bd0202885f72b20b6b1b5a82e225c",
+    "electrical-board-overlay.js": "d7a838d7f21e44c79b37ae0691a211dadfaea17b44585bc9f2104e8f397427ef",
+    "electrical-board-planning.js": "7143dbc4610dec06e30b67f1314c74a1557eeedbe67300b25ca5b65ce5f1565e",
     "electrical-board-setout.js": "632fe2e2b0a491c535583f81d94f2a57124b6fb2f8af36f859dec3b1490d6677",
     "electrical-planning.css": "831b2e16568db094e822bbc207599160b401bf07e90d6a2f08d648510229c789",
     "fixture-lighting.js": "07ea12a8efadecfef05558c590b7f57686e27c8dc491c7731353be52c5e2ebcb",
-    "index.html": "4770888b9b1c90bd6a6da1b3009e926d372707b9883f83a827c7674e125f5f62",
+    "index.html": "5cfb108011e3e74f46a2280dc886d1ec46236b634e713b13602ed7f73c5a8c9f",
     "landing/app.js": "428a0c8633c7d4f2bc1789cfc8b94f0533f994490d77eefc600249bf60a6212b",
     "landing/index.html": "1bf33b93974f6e3cadea69a84ebb3da43e2272a55b1d9a11ab04a7a46339d888",
     "landing/landing-52b0ed7fa6daa1b2.glb": "52b0ed7fa6daa1b261896b6b611075254022ecbdb2a867aab47162eb70069398",
@@ -33,20 +33,20 @@
     "landing/vendor/three.core.js": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
     "landing/vendor/three.module.js": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
     "model/ceilings/luxe-2fc0001646f3b8a7.glb": "2fc0001646f3b8a7005af317dac1d009fb735447625672566814cd5081b754b4",
-    "model/electrical/manifest.json": "b13abbefdd8972d73f5af5d8f90017df20d1fb309f2417bfab6e2806d185d95a",
-    "model/electrical/setout.json": "517d024ccbbe51d0c92f4d25f900c8c21c347edaf425b3bd3126a77e8f30233d",
+    "model/electrical/manifest.json": "723ba459e24e7b0cc43234810aaa458946478fbeb88b854f8ba68a9862adc0da",
+    "model/electrical/setout.json": "4ca482e1ec6595664d8fd002cb7ffe3ec01102609b7f7ae2632bb134557fd63f",
     "model/house.glb": "e62bda4a91758ef4c394f274b958dd2b19f4df57116117e60db94c55facdf577",
     "model/inspection.json": "ec4b4ccfb542d01ab8ec85153a00faa43e844511fe07fb0b1e6c5ba032e1d8c5",
     "model/manifest.json": "a27e9d0ef10a624bb5df955aed13ff8ba451a81744ab7febd058eb1759b1057a",
     "model/navigation.json": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
     "navigation.js": "2e07ba696a2623435af03a89ebfaea01c9c9279c59df899460d3a0705686767b",
     "offline-client.js": "3eeb81982fb3e9640b72dc00a9851ab1290c5a9830e7a9d5428428736b7dc43d",
-    "offline-manifest.json": "4b0c2f0db1cdec5b19ca5a0383c3f23460e852c2dadbcf120da7e78f4f4ce109",
+    "offline-manifest.json": "d4e6b75f5d8282e1d5d7d9f74106c25920c2c0042b3240712133db1867051b77",
     "offline-worker.js": "a4190b79d4c0a5ed48c2b570aca0b7b3c43424eb994c1dc6d2f943a7dd8f7e77",
     "offline.css": "1ab711a3c58028b60eb748f19d9066330a45f467689bc1702b5ba006ad5c4874",
     "services/app.js": "b4f7f620c61f3007cb9c6383837310b65152d8de9b921a30c9f7fb47a873890e",
-    "services/index.html": "48c82554668d498895090e31216f0a558c5fcf45016bb43bba71c490ad378bbd",
-    "services/manifest.json": "7e4e2e7d5b50a9de07a4cbc282d93c9af8604399b68dcfc01254d410b44f3dd3",
+    "services/index.html": "926a0f35ba74435c55f08efa6824cdc97abe0d5d226c14f35957d938e8148e0e",
+    "services/manifest.json": "f77e44264e1f3ac0c78dc0f1c33055c9f200620a0605853eafb4adfe085743fd",
     "services/styles.css": "12d23beccff065713925551f310da7a2d9698da1ca223d55b1bd961e218923bc",
     "services/vendor/OrbitControls.js": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
     "styles.css": "7d106b56a99c332032c986f57df091a41e201b75953750ec17fddf889d887691",
@@ -60,8 +60,8 @@
     "model/electrical/accessories.json": "f387562388a8b63d21de3c3d93f1199cdfb0866d62e894fce60242a7166619c7",
     "electrical-accessories.js": "d26bff5cb160507f0f200ba379951cf57b755fc5d6a3b8c20e82f08c72289f53",
     "model/electrical/accessories-6761392b2bf094e8.glb": "6761392b2bf094e80d3d0ac3be3abb990b73d1b6cb5fc1a33f41917c07aac36c",
-    "model/electrical/boards-69aee1974c02f5ad.glb": "69aee1974c02f5ad5986c93e8d13de80be42f21de722ca82887c7348607eb563",
-    "services/services-7370306461e88036.glb": "7370306461e8803613535c8ee20d305adebb61dc784da87bb5582dafd2754e07"
+    "model/electrical/boards-3969a8375f11c21a.glb": "3969a8375f11c21a3288ee97828aed8bc83c60e9730c458ef619cd5880083ad6",
+    "services/services-d172d20e2d227874.glb": "d172d20e2d227874fb1102e6ae1722c85d2303473042755614b7f8da82e68cb7"
   },
   "ceiling_assets": {
     "luxe": "model/ceilings/luxe-2fc0001646f3b8a7.glb"
@@ -74,12 +74,12 @@
   "services_study": {
     "version": 1,
     "id": "services-v002",
-    "model": "services/services-7370306461e88036.glb"
+    "model": "services/services-d172d20e2d227874.glb"
   },
   "electrical_planning": {
     "version": 2,
     "id": "electrical-v004",
-    "model": "model/electrical/boards-69aee1974c02f5ad.glb",
+    "model": "model/electrical/boards-3969a8375f11c21a.glb",
     "accessories": "model/electrical/accessories-6761392b2bf094e8.glb"
   },
   "runtime_compatibility": {

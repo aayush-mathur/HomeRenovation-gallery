@@ -3,7 +3,7 @@ const FLOOR_ELEVATION_MM = 14; // v003 source-bound house finish floor, not an a
 const ID = /^[A-Za-z0-9_-]{1,64}$/;
 const ROOMS = new Set(['bedroom_1', 'bedroom_2', 'bedroom_3', 'drawing', 'lounge', 'dining',
   'kitchen', 'lobby', 'bathroom_1', 'bathroom_2', 'bathroom_3', 'dressing_3', 'utility', 'rear_ots']);
-const KINDS = new Set(['switch', 'fan-control', 'socket', 'usb-c', 'data', 'isolation-control']);
+const KINDS = new Set(['switch', 'fan-control', 'socket', 'usb-c', 'data', 'isolation-control', 'connection-provision']);
 const BACKUP = new Set(['requested', 'mains-only', 'not-decided']);
 const SOURCE_TYPES = new Set(['india-framework', 'manufacturer-guidance', 'international-reference', 'project-assumption']);
 const exact = (value, fields) => value && typeof value === 'object' && !Array.isArray(value) &&
