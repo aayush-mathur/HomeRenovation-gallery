@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
-  "model_sha256": "e62bda4a91758ef4c394f274b958dd2b19f4df57116117e60db94c55facdf577",
+  "source_sha256": "ddf35d094002b9272ff3c2ce68da5b7d65233365e3585f3c13f8ed7c04ba4637",
+  "model_sha256": "c1fc27ea41a8afb86ca5eef31715ef064b47fb7d5bc72985e1cae92b6adf71d6",
   "navigation_sha256": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
-  "bytes": 18622920,
+  "bytes": 22956432,
   "units": "meters",
   "eye_height": 1.6,
   "triangles": 344798,
   "inspection_navigation_sha256": "ec4b4ccfb542d01ab8ec85153a00faa43e844511fe07fb0b1e6c5ba032e1d8c5",
-  "source": "house_layout_v021.blend",
+  "source": "house_layout_v021_middle_ac_v002.blend",
   "layout_revision": {
     "version": "layout-v021"
   },
@@ -51,7 +51,7 @@
   },
   "ceiling_options": {
     "version": 4,
-    "base_source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
+    "base_source_sha256": "ddf35d094002b9272ff3c2ce68da5b7d65233365e3585f3c13f8ed7c04ba4637",
     "default": "luxe",
     "baseline_nodes": [
       "CEILING_BASELINE_5155462b4771fced",
@@ -257,5 +257,5 @@
     "Body bottom 2130 mm; lowest capped terminals 2075 mm. Service envelopes are provisional maintenance reservations, not an accessible-installation or wet-zone compliance claim.",
     "Shower keepouts are conservative spatial review aids based on current fixture positions, not measured spray envelopes or statutory electrical zones."
   ],
-  "furniture_visibility_sha256": "3ea3b704058567a8cf798bb0818e8e677bb5e156202f78ad2a6c25227344ae4e"
+  "furniture_visibility_sha256": "8fe0b83423c246b3fa80f774e3f5e7c76523e62fc33caab79ecd6387e97cdd8f"
 }

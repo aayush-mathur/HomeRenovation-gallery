@@ -1,13 +1,13 @@
 {
   "version": 2,
   "id": "electrical-v004",
-  "base_source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
+  "base_source_sha256": "ddf35d094002b9272ff3c2ce68da5b7d65233365e3585f3c13f8ed7c04ba4637",
   "base_navigation_sha256": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
   "luxe_sha256": "2fc0001646f3b8a7005af317dac1d009fb735447625672566814cd5081b754b4",
   "model": {
-    "src": "./model/electrical/boards-8d8365f24536b3e4.glb",
-    "sha256": "8d8365f24536b3e41a9861854ce3935495257512776437fdb51c6f928562a864",
-    "bytes": 4379908
+    "src": "./model/electrical/boards-57e23ad13a9d3d19.glb",
+    "sha256": "57e23ad13a9d3d19597e7f785c123cd9ba2b62a2ed73a08d4506a41d274d58ef",
+    "bytes": 4379924
   },
   "boards": [
     {
@@ -2542,14 +2542,14 @@
       "room": "bedroom_2",
       "node_name": "BOARD_EB-B2-CONN",
       "position_web_m": [
-        7.08,
+        8.040372,
         2.264,
-        -9.944628
+        -9.46
       ],
       "normal_web": [
+        -1.0,
         -0.0,
-        -0.0,
-        1.0
+        0.0
       ],
       "height_aff_mm": 2250,
       "size_mm": [
@@ -4290,7 +4290,7 @@
     },
     {
       "id": "R-EB-B1-CONN",
-      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the modeled appliance, with full wall support, body/hand approach and door checks. Middle AC follows the owner-directed move to the wall opposite the bed. These checks do not establish electrical suitability.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4307,7 +4307,7 @@
     },
     {
       "id": "R-EB-B2-CONN",
-      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the modeled appliance, with full wall support, body/hand approach and door checks. Middle AC follows the owner-directed move to the wall opposite the bed. These checks do not establish electrical suitability.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4324,7 +4324,7 @@
     },
     {
       "id": "R-EB-B3-CONN",
-      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the modeled appliance, with full wall support, body/hand approach and door checks. Middle AC follows the owner-directed move to the wall opposite the bed. These checks do not establish electrical suitability.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4341,7 +4341,7 @@
     },
     {
       "id": "R-EB-DR-CONN",
-      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the modeled appliance, with full wall support, body/hand approach and door checks. Middle AC follows the owner-directed move to the wall opposite the bed. These checks do not establish electrical suitability.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4358,7 +4358,7 @@
     },
     {
       "id": "R-EB-HA-CONN",
-      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the modeled appliance, with full wall support, body/hand approach and door checks. Middle AC follows the owner-directed move to the wall opposite the bed. These checks do not establish electrical suitability.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4375,7 +4375,7 @@
     },
     {
       "id": "R-EB-BA1-CONN",
-      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the modeled appliance, with full wall support, body/hand approach and door checks. Middle AC follows the owner-directed move to the wall opposite the bed. These checks do not establish electrical suitability.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4392,7 +4392,7 @@
     },
     {
       "id": "R-EB-BA2-CONN",
-      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the modeled appliance, with full wall support, body/hand approach and door checks. Middle AC follows the owner-directed move to the wall opposite the bed. These checks do not establish electrical suitability.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4409,7 +4409,7 @@
     },
     {
       "id": "R-EB-BA3-CONN",
-      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the unchanged modeled appliance, with full wall support, body/hand approach and door checks. These checks do not establish electrical suitability.",
+      "summary": "Separate the equipment connection from the accessible isolation switch; blank cover is a coordination reservation, not a selected fitting. Candidate beside the modeled appliance, with full wall support, body/hand approach and door checks. Middle AC follows the owner-directed move to the wall opposite the bed. These checks do not establish electrical suitability.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "id": "electrical-v004-accessories",
-  "base_source_sha256": "4d3af872362cfaef37bacb7ca1c0fe66724c2dac44c768009ab17692ef8df8f1",
+  "base_source_sha256": "ddf35d094002b9272ff3c2ce68da5b7d65233365e3585f3c13f8ed7c04ba4637",
   "model": {
     "src": "./model/electrical/accessories-6761392b2bf094e8.glb",
     "sha256": "6761392b2bf094e80d3d0ac3be3abb990b73d1b6cb5fc1a33f41917c07aac36c",
