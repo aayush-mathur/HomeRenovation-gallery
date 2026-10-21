@@ -3,8 +3,9 @@ import { GLTFLoader } from './vendor/GLTFLoader.js';
 import { isSafe, move, movementVector, movementSpeed, joystickVector, roomAt, applyLens, inspectionNavigation } from './navigation.js?lens=1&controls=4';
 import { validateCeilingOptions, activeCeilingOptions, createCeilingComparison, disposeCeiling } from './ceiling-comparison.js?v=a653fd99aa8b800d';
 import { createFixtureLighting } from './fixture-lighting.js?v=07ea12a8efadecfe';
-import { initBoardPlanning } from './electrical-board-planning.js?v=431f837ac004fd66';
-import { createFurnitureVisibility } from './furniture-visibility.js?v=7ba05605abc7c5e9';
+import { initBoardPlanning } from './electrical-board-planning.js?v=f631e2d32d862637';
+import { createFurnitureVisibility } from './furniture-visibility.js';
+import { loadHouseReview } from './house-review.js';
 
 const $ = id => document.getElementById(id);
 const publicSite = document.documentElement.dataset.hosting === 'public';
@@ -30,6 +31,7 @@ let ceilings, ceilingOptions, ceilingUnavailable = '';
 let fixtureLighting;
 let electrical;
 let furniture, furnitureController, furnitureRequest = 0;
+let houseReview, eyeHeight = 1.6;
 let electricalAccessories, accessoryController, accessoryRequest = 0, accessoryError = '';
 const STARTUP_VIEW = Object.freeze({ ceiling: 'luxe', electricalPlates: true, timeoutMs: 15000 });
 let ceilingRequest = Promise.resolve();
@@ -95,7 +97,8 @@ function teleport(id) {
   const dx = preset.target[0] - position[0], dy = preset.target[1] - position[1];
   yaw = Math.atan2(-dx, dy);
   pitch = Math.atan2(preset.target[2] - preset.position[2], Math.hypot(dx, dy));
-  camera.position.set(position[0], 1.6, -position[1]);
+  eyeHeight = 1.6; renderHeight();
+  camera.position.set(position[0], eyeHeight, -position[1]);
   orientation();
   room.value = id;
   blocked = false;
@@ -105,8 +108,11 @@ function teleport(id) {
 function disposeModel() {
   ++furnitureRequest; furnitureController?.abort(); furnitureController = null;
   furniture?.dispose(); furniture = null;
+  houseReview?.dispose(); houseReview = null;
   $('furniture').disabled = true;
   $('furniture').checked = true;
+  $('furniture-mode').disabled = true;
+  $('furniture-mode').value = 'solid';
   $('furniture-alert').hidden = true; $('furniture-retry').hidden = true;
   ++accessoryRequest; accessoryController?.abort(); accessoryController = null;
   electricalAccessories?.dispose(); electricalAccessories = null; accessoryError = '';
@@ -139,7 +145,11 @@ async function loadFurniture(signal) {
     if (controller.signal.aborted) throw controller.signal.reason;
     furniture?.dispose();
     furniture = createFurnitureVisibility(THREE, model, mask, manifest.model_sha256);
+    furniture.setMode($('furniture-mode').value);
+    houseReview?.setFurnitureMode($('furniture-mode').value);
     $('furniture').disabled = false;
+    $('furniture-mode').disabled = false;
+    electrical?.refreshOccluders();
     $('furniture-alert').hidden = true;
     $('furniture-retry').hidden = true;
   } catch (error) {
@@ -204,7 +214,7 @@ function renderCeilings(state) {
   $('ceiling').setAttribute('aria-busy', String(Boolean(state.pending)));
   $('ceiling-status').textContent = state.error || (pending
     ? `Loading ${pending.label}… Still showing ${variant?.label || 'the base model'}.`
-    : `${variant?.summary || 'Original ceiling and fixtures.'} Concepts only · web lighting is approximate.`);
+    : 'Historical ceiling visualization only. Designer to finalize; not the basis for switch/module counts.');
   $('ceiling-feedback').dataset.error = String(Boolean(state.error));
   $('ceiling-alert').hidden = !state.error;
   $('ceiling-alert').textContent = state.error ? `${state.error} Open Settings for ceiling recovery.` : '';
@@ -261,14 +271,14 @@ function setupCeilings() {
     });
     $('ceiling').replaceChildren(
       ...(ceilingOptions.version === 4 ? [] : [new Option('Existing', 'existing')]),
-      ...ceilingOptions.variants.map(v => new Option(v.label, v.id)));
+      ...ceilingOptions.variants.map(v => new Option(v.id === 'luxe' ? 'Luxe · historical only' : v.label, v.id)));
     $('ceiling').disabled = ceilingOptions.version === 4;
     $('ceiling-note').textContent = ceilingOptions.note;
     for (const id of ['ceiling-controls', 'ceiling-feedback', 'ceiling-help']) $(id).hidden = false;
     document.querySelector('header').classList.add('has-ceilings');
     renderCeilings(ceilings.snapshot());
   } catch (error) {
-    ceilingUnavailable = `${error.message} Showing the base model, not the selected Sculpted Luxe design; walking is unchanged.`;
+    ceilingUnavailable = `${error.message} Showing the base model; the historical ceiling preview is unavailable. Walking is unchanged.`;
     $('ceiling-feedback').hidden = false;
     $('ceiling-feedback').dataset.error = 'true';
     $('ceiling-status').textContent = ceilingUnavailable;
@@ -346,6 +356,14 @@ async function load() {
       }
     });
     scene.add(model);
+    try {
+      houseReview = await loadHouseReview({ THREE, model, scene, house: manifest, signal });
+      $('house-review-alert').hidden = true;
+    } catch (error) {
+      if (signal.aborted || disposed) return;
+      $('house-review-alert').textContent = `Rear TV, separate phone outlets and lower glass panels are not shown: ${error.message}. Reload to retry; the base house remains available.`;
+      $('house-review-alert').hidden = false;
+    }
     const furnitureReady = loadFurniture(signal);
     fixtureLighting.setRooms(nav.rooms);
     fixtureLighting.register(model);
@@ -356,13 +374,58 @@ async function load() {
     electrical = initBoardPlanning({
       THREE, scene, camera, stage, model, container: document.querySelector('[data-electrical-host]'),
       houseDescriptor: manifest, releaseInput: clearInput, initialPlates: STARTUP_VIEW.electricalPlates,
+      reviewDescriptor: houseReview?.data || null,
+      reviewRoot: houseReview?.root || null,
+      setJoineryServiceOpen: value => houseReview?.setServiceOpen(value),
       isInputBusy: () => stickPointer !== null || Boolean(dragging) || keys.size > 0 || document.pointerLockElement === canvas,
       revealControls: () => showControls(true),
+      inspectSocket: (target, normal, roomID, label, mode = 'socket') => {
+        const distances = mode === 'equipment' ? [2, 1.8, 1.5, 1.2] : mode === 'panel' ? [1.2, 1, .8] :
+          /^bedroom_[13]$/.test(roomID) ? [.6, .8, 1, 1.2] : [.8, .6, 1, 1.2];
+        const candidates = distances.flatMap(distance => (mode === 'panel' ? [-.3, 0, .3] : [0, .3, -.3, .55, -.55]).map(side => [
+          target[0] + normal[0] * distance - normal[2] * side,
+          -target[2] - normal[2] * distance - normal[0] * side,
+        ])).filter(point => isSafe(nav, ...point) && roomAt(nav, point)?.id === roomID);
+        model.updateWorldMatrix(true, true);
+        const visibleFrom = point => {
+          const eye = new THREE.Vector3(point[0], 1.6, -point[1]);
+          const direction = new THREE.Vector3(...target).sub(eye);
+          const ray = new THREE.Raycaster(eye, direction.clone().normalize(), 0, direction.length() - .04);
+          return !ray.intersectObjects([model, ...(houseReview ? [houseReview.root] : [])], true).some(hit => {
+            const material = Array.isArray(hit.object.material) ? hit.object.material[hit.face?.materialIndex || 0] : hit.object.material;
+            return hit.object.visible && material?.visible !== false && !(material?.transparent && material.opacity < .5);
+          });
+        };
+        const clearDestination = candidates.find(visibleFrom);
+        const destination = clearDestination || candidates[0];
+        if (!destination) throw new Error('No safe close-up position in this room. Use the room menu and Look at device instead.');
+        release(); position = destination; selected = roomID; room.value = roomID; blocked = false;
+        eyeHeight = 1.6; renderHeight();
+        camera.position.set(position[0], 1.6, -position[1]);
+        const dx = target[0] - position[0], dy = -target[2] - position[1];
+        yaw = Math.atan2(-dx, dy);
+        pitch = THREE.MathUtils.clamp(Math.atan2(target[1] - eyeHeight, Math.hypot(dx, dy)), -1.35, 1.35);
+        focalLength = mode === 'equipment' ? 30 : mode === 'panel' ? 35 : 45; updateLens(); orientation(); showControls(false);
+        message(`${label} · ${mode === 'equipment' ? 'equipment view' : 'plug close-up'} · 1.6 m eye height${clearDestination ? '' : ' · View obscured: use Transparent furniture'} · Reset lens restores a wider view`);
+      },
+      aimAt: target => {
+        release();
+        const dx = target[0] - position[0], dy = -target[2] - position[1];
+        yaw = Math.atan2(-dx, dy);
+        pitch = THREE.MathUtils.clamp(Math.atan2(target[1] - eyeHeight, Math.hypot(dx, dy)), -1.35, 1.35);
+        orientation(); showControls(false);
+      },
     });
     // The GLB contains the authored closed pose. Do not instantiate animation,
     // picking or dynamic collision controllers in this stability fallback.
     room.replaceChildren(...nav.presets.map(p => new Option(p.name, p.id)));
     teleport(nav.presets.some(p => p.id === selected) ? selected : nav.presets[0].id);
+    const previewCord = new URL(location.href).searchParams.get('cord');
+    if (previewCord) electrical.ready.then(() => {
+      if (disposed || signal.aborted || !electrical?.snapshot().physicalLeads?.loaded) return;
+      try { electrical.inspectCord(previewCord); }
+      catch (cause) { message(`Cord close-up unavailable: ${cause.message}`); }
+    });
     $('loading-detail').textContent = 'Preparing Sculpted Luxe and proposed switchboards…';
     const initialElectrical = electrical;
     const accessoriesReady = initialElectrical.ready.then(() => {
@@ -403,6 +466,7 @@ function updateLens() {
   $('lens').setAttribute('aria-valuetext', `${lens.auto ? 'Auto, ' : ''}${value}, 35 mm equivalent`);
 }
 function resize() {
+  stage.style.setProperty('--viewer-footer-height', `${document.querySelector('footer').getBoundingClientRect().height}px`);
   const { width, height } = stage.getBoundingClientRect();
   if (!renderer || !height) return;
   renderer.setSize(width, height, false);
@@ -434,11 +498,11 @@ function animate(time) {
     const hit = Math.hypot(dx, dy) > 0 && Math.hypot(next[0] - position[0], next[1] - position[1]) < Math.hypot(dx, dy) * .2;
     const location = roomAt(nav, next);
     if (!inputNotice && hit && !blocked) message('Wall or floor boundary · turn or sidestep. Furniture is pass-through.');
-    if (!inputNotice && !hit && (blocked || currentRoom !== location?.id)) message(`${location?.name || 'Passage'} · eye height 1.6 m`);
+    if (!inputNotice && !hit && (blocked || currentRoom !== location?.id)) message(`${location?.name || 'Passage'} · view height ${eyeHeight.toFixed(2)} m`);
     currentRoom = location?.id;
     blocked = hit;
     position = next;
-    camera.position.set(position[0], 1.6, -position[1]);
+    camera.position.set(position[0], eyeHeight, -position[1]);
   }
   electrical?.update({ time, currentRoom, paused: !ready || !$('instructions').hidden ||
     document.body.classList.contains('controls-open') || document.pointerLockElement === canvas });
@@ -447,10 +511,34 @@ function animate(time) {
 
 on($('retry'), 'click', () => renderer && !contextLost ? load() : location.reload());
 on(room, 'change', () => teleport(room.value));
+function renderHeight() {
+  $('view-height').textContent = `${eyeHeight.toFixed(2)} m`;
+  $('rise').disabled = eyeHeight >= 2.75;
+  $('lower').disabled = eyeHeight <= .35;
+}
+function changeHeight(delta) {
+  if (!ready) return;
+  release();
+  eyeHeight = THREE.MathUtils.clamp(Math.round((eyeHeight + delta) * 100) / 100, .35, 2.75);
+  camera.position.y = eyeHeight; renderHeight();
+  message(`Inspection height ${eyeHeight.toFixed(2)} m · walls still block horizontal travel · not stair climbing`);
+}
+on($('rise'), 'click', () => changeHeight(.25));
+on($('lower'), 'click', () => changeHeight(-.25));
+on($('eye-level'), 'click', () => changeHeight(1.6 - eyeHeight));
 on($('reset'), 'click', () => teleport(selected));
 on($('furniture'), 'change', () => {
   clearInput();
-  furniture?.setVisible($('furniture').checked);
+  $('furniture-mode').value = $('furniture').checked ? 'solid' : 'hidden';
+  furniture?.setMode($('furniture-mode').value);
+  houseReview?.setFurnitureMode($('furniture-mode').value);
+  electrical?.refreshOccluders();
+});
+on($('furniture-mode'), 'change', () => {
+  clearInput();
+  furniture?.setMode($('furniture-mode').value);
+  houseReview?.setFurnitureMode($('furniture-mode').value);
+  $('furniture').checked = $('furniture-mode').value !== 'hidden';
   electrical?.refreshOccluders();
 });
 on($('furniture-retry'), 'click', () => {
@@ -630,6 +718,9 @@ on(document, 'keydown', event => {
     event.preventDefault();
     return;
   }
+  if (event.code === 'PageUp' || event.code === 'PageDown') {
+    event.preventDefault(); changeHeight(event.code === 'PageUp' ? .25 : -.25); return;
+  }
   if (event.code === 'ShiftLeft' || event.code === 'ShiftRight') {
     keys.add(event.code); renderPace(); return;
   }
@@ -735,6 +826,7 @@ window.walkthrough = { snapshot: () => ({
   fov: camera?.fov, aspect: camera?.aspect, lens, eyeHeight: camera?.position.y,
   storage: { enabled: false, mode: 'closed' },
   furniture: furniture?.snapshot() || null,
+  houseReview: houseReview?.snapshot() || null,
   fixtures: fixtureLighting?.snapshot(),
   electrical: electrical?.snapshot() || null,
   accessories: { loaded: Boolean(electricalAccessories), error: accessoryError,
@@ -766,6 +858,6 @@ try {
   const sun = new THREE.DirectionalLight(0xfff2de, 2.5);
   sun.position.set(5, 10, -8); sun.target.position.set(3, 0, -10);
   scene.add(sun, sun.target);
-  observer = new ResizeObserver(resize); observer.observe(stage);
+  observer = new ResizeObserver(resize); observer.observe(stage); observer.observe(document.querySelector('footer'));
   resize(); frame = requestAnimationFrame(animate); load();
 } catch (error) { failure(new Error(`WebGL initialization failed: ${error.message}`)); }

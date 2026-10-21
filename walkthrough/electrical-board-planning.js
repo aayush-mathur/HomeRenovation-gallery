@@ -1,7 +1,9 @@
 import { GLTFLoader } from './vendor/GLTFLoader.js';
-import { validateBoardDescriptor, boardRooms } from './electrical-board-descriptor.js?v=29a9d2cc8434e5f6';
-import { createBoardOverlay } from './electrical-board-overlay.js?v=9ef4727b72a06b9b';
-import { validateBoardSetout, setoutLabel } from './electrical-board-setout.js?v=632fe2e2b0a491c5';
+import { validateBoardDescriptor, boardRooms } from './electrical-board-descriptor.js?v=f339c18550afc705';
+import { createBoardOverlay } from './electrical-board-overlay.js?v=645fc12ec23684af';
+import { validateBoardSetout, setoutLabel } from './electrical-board-setout.js?v=7eef564fea493eaf';
+import { initControlConnections, controlPlanHash } from './control-connections.js';
+import { initPhysicalLeads } from './physical-leads.js';
 
 const ROOM_LABELS = {
   bedroom_1: 'Back bedroom', bedroom_2: 'Middle bedroom', bedroom_3: 'Front bedroom',
@@ -23,13 +25,15 @@ const SOURCE_LABELS = {
 
 export function initBoardPlanning({ THREE, scene, camera, stage, model, container, houseDescriptor,
   releaseInput = () => {}, isInputBusy = () => false, revealControls = () => {},
-  initialPlates = true, fetchAsset = fetch, parse = bytes => new GLTFLoader().parseAsync(bytes, '') }) {
+  aimAt = () => {}, inspectSocket = () => {}, reviewDescriptor = null, reviewRoot = null,
+  setJoineryServiceOpen = () => {}, initialPlates = true, fetchAsset = fetch, parse = bytes => new GLTFLoader().parseAsync(bytes, '') }) {
   if (!container || !stage || !model) throw new Error('Switchboard planning requires its viewer mount and house model');
   const document = container.ownerDocument, listeners = new AbortController();
   let disposed = false, descriptor = null, overlay = null, selected = null, room = 'all', category = 'boards';
   let error = '', initializing = false, definitionController = null, definitionTicket = 0, detailKey = '';
   let setoutTexts = null, setoutError = '', manifestHash = '', setoutLoading = false;
   let setoutController = null;
+  let connections = null, physicalLeads = null;
   const el = (tag, text, attrs = {}) => {
     const node = document.createElement(tag);
     if (text) node.textContent = text;
@@ -61,7 +65,7 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
   const detail = el('div', null, { class: 'electrical-point-detail', 'aria-live': 'polite' });
   const status = el('p', 'Loading source-bound board design…', { class: 'electrical-planning-status', role: 'status' });
   const retry = el('button', 'Retry switchboard definitions', { type: 'button' }); retry.hidden = true;
-  content.append(el('p', 'Proposed switchboards, not a wiring or installation plan. Lighting names describe Sculpted Luxe; controls are not simulated. Labels attach to physical boards and never show through walls.'),
+  content.append(el('p', 'Wired switches now; smart-ready later. Lighting functions are under review independently of the ceiling. Board faces and module sizes are illustrative, not a purchase list. Controls are not simulated.'),
     plateLabel, labelLabel, setoutLabelControl,
     el('p', 'Set-out values are model-derived discussion dimensions, not surveyed or construction dimensions. Offsets run along the board wall from the nearest modeled plan-side corner/edge, not a measured opening. Plan-up is not surveyed north. AFF means above the modeled finished floor. The electrician must verify wall, opening, corner and mounting height on site.',
       { id: 'board-setout-warning' }),
@@ -120,12 +124,12 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
         el('h4', 'Controls, left to right'));
       const controls = el('ol', null, { class: 'electrical-board-functions' });
       const behaviors = el('details', null, { class: 'electrical-design-sources' });
-      behaviors.append(el('summary', 'Desired control behavior and limits'));
+      behaviors.append(el('summary', 'Earlier board assumptions · not final wiring'));
       for (const control of [...board.functions].sort((a, b) => a.slot - b.slot)) {
         const li = el('li');
-        li.append(el('strong', control.label));
+        li.append(el('strong', connections?.control(control.id)?.label || control.label));
         const groups = control.fixture_group_ids.map(id => descriptor.fixture_groups.find(item => item.id === id));
-        if (groups.length) li.append(el('p', `Serves: ${groups.map(group => group.label).join(' + ')}`));
+        if (groups.length) li.append(el('p', `Serves: ${groups.map(group => connections?.group(group.id)?.label || group.label).join(' + ')}`));
         li.append(el('p', BACKUP_LABELS[control.backup_preference]));
         behaviors.append(el('p', `${control.label}: ${control.behavior}`));
         controls.append(li);
@@ -153,7 +157,7 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
     status.dataset.error = String(Boolean(failure));
     const count = state?.labels.visible.length || 0;
     status.textContent = failure || (state?.loading ? 'Loading verified switchboard geometry…' :
-      `${state?.visibleBoardCount || 0} proposed boards enabled in the scene; ${count} nearby labels visible.${!state?.enabled ? ' Board display is off.' : !state?.labelsEnabled ? ' Labels are hidden.' : panelVisible() ? ' Labels pause while this panel is open.' : count === 0 ? ' Boards may be outside your room/view, behind geometry, or hidden by the room filter; use the list without moving the camera.' : ''}`);
+      `${state?.visibleBoardCount || 0} proposed boards enabled in the scene; ${count} nearby labels visible.${!state?.enabled ? ' Board display is off.' : !state?.labelsEnabled ? ' Labels are hidden.' : panel.open ? ' Labels pause while this panel is open.' : count === 0 ? ' Boards may be outside your room/view, behind geometry, or hidden by the room filter; use the list without moving the camera.' : ''}`);
     const key = `${selected}|${Boolean(descriptor)}`;
     if (key !== detailKey) { detailKey = key; renderDetail(); }
   }
@@ -161,6 +165,7 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
     selected = id;
     const board = descriptor?.boards.find(item => item.id === id);
     overlay?.selectBoard(board ? id : null);
+    connections?.setBoard(board ? id : null);
     if (open) {
       if (room !== 'all' && board && !boardRooms(board, descriptor.fixture_groups).includes(room)) room = board.room;
       category = 'boards'; rooms.value = room; categories.value = category;
@@ -210,17 +215,23 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
       const response = await fetchAsset(new URL('./model/electrical/manifest.json', document.baseURI),
         { signal: definitionController.signal, cache: 'no-store', redirect: 'error', credentials: 'omit' });
       if (!response.ok) throw new Error(`definitions HTTP ${response.status}`);
-      const text = (await response.text()).replace(/\r\n/g, '\n');
-      const value = JSON.parse(text);
-      manifestHash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)))]
-        .map(n => n.toString(16).padStart(2, '0')).join('');
+      const boardBytes = await response.arrayBuffer();
+      const value = JSON.parse(new TextDecoder().decode(boardBytes));
+      manifestHash = await controlPlanHash(boardBytes);
       if (disposed || ticket !== definitionTicket) return;
       descriptor = validateBoardDescriptor(value, houseDescriptor, document.baseURI);
-      overlay = createBoardOverlay({ THREE, scene, camera, stage, descriptor, occluderRoots: [model], parse, fetchAsset,
+      overlay = createBoardOverlay({ THREE, scene, camera, stage, descriptor, occluderRoots: [model, ...(reviewRoot ? [reviewRoot] : [])], parse, fetchAsset,
         releaseInput, isInputBusy, onSelect: id => choose(id, true), onChange: render,
         excludedElements: [document.getElementById('touch-pad'), document.getElementById('toggle-controls')] });
+      connections = initControlConnections({ THREE, scene, stage, container: content, house: houseDescriptor,
+        descriptor, boardHash: manifestHash, fetchAsset, aimAt });
+      physicalLeads = initPhysicalLeads({ THREE, scene, container: document.querySelector('[data-physical-leads-host]'),
+        house: houseDescriptor, descriptor, boardHash: manifestHash, fetchAsset, aimAt, inspectSocket,
+        releaseInput, reviewDescriptor, setJoineryServiceOpen });
       updateList(); render();
       await Promise.all([loadSetout(), initialPlates ? overlay.setEnabled(true) : Promise.resolve()]);
+      await Promise.all([connections.ready, physicalLeads.ready]);
+      if (!disposed) { detailKey = ''; render(); }
     } catch (cause) {
       if (disposed || ticket !== definitionTicket) return;
       error = `${cause.message}. Switchboard planning is unavailable; ordinary walking is unchanged.`;
@@ -232,7 +243,7 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
   on(panel, 'toggle', () => render());
   on(labels, 'change', () => overlay?.setLabels(labels.checked));
   on(setout, 'change', () => overlay?.setSetout(setout.checked ? setoutTexts : null));
-  on(rooms, 'change', () => { room = rooms.value; overlay?.setRoom(room); updateList(); render(); });
+  on(rooms, 'change', () => { room = rooms.value; overlay?.setRoom(room); connections?.setRoom(room); updateList(); render(); });
   on(categories, 'change', () => { category = categories.value; updateList(); render(); });
   on(list, 'change', () => choose(list.value || null));
   on(retry, 'click', () => !descriptor ? initialize() : overlay?.snapshot().error ? overlay.retry() :
@@ -241,11 +252,11 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
   return {
     ready,
     revision: () => descriptor?.id || null,
-    refreshOccluders() { overlay?.refreshOccluders(); },
     update({ time, currentRoom, paused = false }) { overlay?.update({ time, currentRoom, paused: paused || panelVisible() }); },
     pickLabel(x, y) { return panelVisible() ? null : overlay?.pickLabel(x, y) || null; },
     selectLabel(id) { if (descriptor?.boards.some(board => board.id === id)) choose(id, true); },
-    snapshot: () => overlay?.snapshot() || { enabled: false, loading: initializing, error, disposed, overlayLoaded: false },
+    snapshot: () => ({ ...(overlay?.snapshot() || { enabled: false, loading: initializing, error, disposed, overlayLoaded: false }),
+      connections: connections?.snapshot() || null, physicalLeads: physicalLeads?.snapshot() || null }),
     cancelPending(message) {
       if (disposed) return;
       if (setoutLoading) {
@@ -259,11 +270,12 @@ export function initBoardPlanning({ THREE, scene, camera, stage, model, containe
       }
       if (descriptor) initializing = false;
       overlay?.cancelPending(message);
+      connections?.cancelPending(message); physicalLeads?.cancelPending(message);
     },
     dispose() {
       if (disposed) return;
       disposed = true; ++definitionTicket; definitionController?.abort(); setoutController?.abort(); listeners.abort();
-      overlay?.dispose(); container.replaceChildren();
+      overlay?.dispose(); connections?.dispose(); physicalLeads?.dispose(); container.replaceChildren();
     },
   };
 }

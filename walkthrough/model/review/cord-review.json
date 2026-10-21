@@ -1,0 +1,607 @@
+{
+  "version": 1,
+  "base_source_sha256": "ddf35d094002b9272ff3c2ce68da5b7d65233365e3585f3c13f8ed7c04ba4637",
+  "base_model_sha256": "f8da33a6aae86eacfb79ee676c1dda9cc88457d36f930fcdc8c6218b33727b47",
+  "physical_leads_sha256": "13b07144e9528752f99bb736142d279166058f91ed0641e27f0730a978747933",
+  "review_model_sha256": "831f876f14ac34120c5e806d352abc92fa9c083d7e48a28d0b93e5e19a7a0ae4",
+  "reviewed": "2026-10-21",
+  "verdict": "IMPROVED VISUAL PROPOSAL, NOT INSTALLATION READY. Shared bedside plates, service entries, adjacent dry supplies and conditional fixed AC/geyser leads are modeled. Manufacturer/site approval, circuits and protective tests remain mandatory.",
+  "method": "All 29 appliance leads, 3 aquarium cords and 12 media signal cables inspected. Rounded centerline sampled at 96 intervals against actual current base + revision mesh triangles, with a spatial broad phase. This detects crossings, not cable-radius clearance, manufacturer bend radius, structural adequacy, safe working access or electrical compliance. Water-surface crossings are reported separately from solid obstructions; they are expected for immersed aquarium equipment.",
+  "design_principles": [
+    "Provide a socket for each simultaneous appliance and a separate available phone outlet at each bedside.",
+    "Keep ordinary leads short, supported and off circulation routes; provide service slack without dangling loops or pinching.",
+    "Prefer an accessible dry service zone behind/beside equipment, with designed cable entries rather than invisible routes through wood.",
+    "Separate electrical safety from visual tidiness: a hidden cord is not necessarily safe, and a visible cord is not automatically unsafe.",
+    "Do not invent a permanent multi-plug/extension solution, circuit ratings, protection or AC/stabilizer decisions."
+  ],
+  "sources": [
+    {
+      "id": "cpsc",
+      "title": "US CPSC: Household Extension Cords Can Cause Fires",
+      "url": "https://www.cpsc.gov/s3fs-public/5032.pdf",
+      "use": "International safety reference, NOT Indian installation law. Temporary extension use; protect against pinching, overloading and damage."
+    },
+    {
+      "id": "nicrew",
+      "title": "NICREW aquarium heater manufacturer instructions",
+      "url": "https://www.nicrew.com/wp-content/uploads/2024/06/NICREW_Aquarium_-Heater_Instruction_Manual-US.pdf",
+      "use": "Example manufacturer guidance, not a selected product: offset tank/outlet, drip loop on each lead, disconnect before hands enter water; model-specific heater cooling/submersion instructions."
+    },
+    {
+      "id": "cea",
+      "title": "CEA official electrical-safety regulations index",
+      "url": "https://cea.nic.in/regulations-subcategory/875a4ba8-5b28-41d2-8e3e-18aa936e111e?lang=en",
+      "use": "Indian legal framework to be applied by a qualified local electrician. This visualization does not inspect circuits, earthing, protective devices, product ratings or site wiring. No legal-compliance certificate."
+    }
+  ],
+  "results": [
+    {
+      "id": "study-monitor",
+      "label": "Middle study \u00b7 monitor",
+      "drawn_length_m": 0.744,
+      "status": "VISUAL-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Short rear desk route avoids the tested book/pedestal/rail envelopes. Add retained cable clips and a rear guide, leaving device service slack; verify selected monitor inlet/brick.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "study-lamp",
+      "label": "Middle study \u00b7 lamp",
+      "drawn_length_m": 0.764,
+      "status": "VISUAL-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Route skirts books but follows the exposed right desk edge. A removable under/rear-edge guide would reduce visible slack; do not trap it in drawers.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "b1-lamp-a",
+      "label": "Rear bedside A \u00b7 lamp",
+      "drawn_length_m": 0.288,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Lamp uses its own upper-row outlet. A separate empty phone outlet is integrated into the SAME shared bedside plate below, not on a floating extra plate. No hidden splitter. Supplier two-row backbox/module fit, charger-tail access and circuit design require approval.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "b1-lamp-b",
+      "label": "Rear bedside B \u00b7 lamp",
+      "drawn_length_m": 0.384,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Lamp uses its own upper-row outlet. A separate empty phone outlet is integrated into the SAME shared bedside plate below, not on a floating extra plate. No hidden splitter. Supplier two-row backbox/module fit, charger-tail access and circuit design require approval.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "b3-lamp-a",
+      "label": "Front bedside A \u00b7 lamp",
+      "drawn_length_m": 0.262,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Lamp uses its own upper-row outlet. A separate empty phone outlet is integrated into the SAME shared bedside plate below, not on a floating extra plate. No hidden splitter. Supplier two-row backbox/module fit, charger-tail access and circuit design require approval.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "b3-lamp-b",
+      "label": "Front bedside B \u00b7 lamp",
+      "drawn_length_m": 0.285,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Lamp uses its own upper-row outlet. A separate empty phone outlet is integrated into the SAME shared bedside plate below, not on a floating extra plate. No hidden splitter. Supplier two-row backbox/module fit, charger-tail access and circuit design require approval.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "rear-tv",
+      "label": "Rear bedroom \u00b7 television",
+      "drawn_length_m": 0.38,
+      "status": "VISUAL-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "New wall TV and short rear power lead to existing TV socket. Confirm bracket stand-off, service access and comfortable screen height; signal/data leads are still not selected.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "hall-tv",
+      "label": "Hall \u00b7 television",
+      "drawn_length_m": 0.233,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Backing/slat service recess is now physically cut; retain bracket-release access and verify final plug/TV stand-off with selected products.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "hall-settop",
+      "label": "Hall \u00b7 set-top box",
+      "drawn_length_m": 1.434,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Re-routed down a real narrow media-backing chase, not the previous exposed high sideways loop. Keep the removable service path and select cable guides/bushings.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "hall-ont",
+      "label": "Hall \u00b7 ONT power adapter",
+      "drawn_length_m": 1.32,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Console entry is now physically open; support clips retain the wall-side tail. Keep the backup-only supply identity and dry adapter access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "hall-router",
+      "label": "Hall \u00b7 router power adapter",
+      "drawn_length_m": 1.383,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Console entry and support clips replace the solid-wood conflict. Verify the final adapter/lead reach; no splitter or shared-power assumption.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "robot-dock",
+      "label": "Dining \u00b7 robot dock",
+      "drawn_length_m": 0.805,
+      "status": "VISUAL-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Wall-side route avoids robot ramp and walking route. Use the selected dock cable channel/retainer and confirm rear inlet; avoid loose floor slack.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "kitchen-microwave",
+      "label": "Kitchen \u00b7 microwave",
+      "drawn_length_m": 0.216,
+      "status": "NEEDS-COORDINATION",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Rear lead is short but inlet, cabinet entry, reachable disconnect and heat/ventilation gap are provisional. Resolve with selected product/manual, not an extension.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "kitchen-otg",
+      "label": "Kitchen \u00b7 OTG",
+      "drawn_length_m": 0.209,
+      "status": "NEEDS-COORDINATION",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Heat-rated flex, rear clearance and reachable supply depend on selected oven; cord must not contact hot surfaces or be crushed.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "kitchen-fridge",
+      "label": "Kitchen \u00b7 fridge",
+      "drawn_length_m": 0.237,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Socket moved to the adjacent pantry service compartment, with a real divider opening, not trapped behind the fridge. Final manufacturer inlet/lead length and grommet/fire/ventilation details remain to be approved.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "kitchen-dishwasher",
+      "label": "Kitchen \u00b7 dishwasher",
+      "drawn_length_m": 0.45,
+      "status": "NEEDS-COORDINATION",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Plan a reachable adjacent dry service compartment, separated from hoses and leaks; product-specific lead reach and isolation unselected.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "kitchen-ro",
+      "label": "Kitchen \u00b7 purifier adapter",
+      "drawn_length_m": 0.762,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Adapter relocated to the upper dry side of its own service compartment. No lead through sink cabinet/front; access through existing removable front. Verify moisture exposure and the selected adapter.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "hall-avr",
+      "label": "Hall \u00b7 5.1 AV receiver",
+      "drawn_length_m": 0.727,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Dedicated mains outlet; compact receiver sits on open console top with a nominal90mm rear cable zone, not inside a hot sealed cupboard. Final receiver depth, ventilation, load and plug reach require selected-product approval.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "hall-subwoofer",
+      "label": "Hall \u00b7 powered subwoofer",
+      "drawn_length_m": 2.487,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Own mains outlet plus separate LFE signal from receiver. Neither wireless power nor a passive speaker output. Keep rear controls and plug access; tune position by measurement/listening.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "hall-nvr",
+      "label": "Hall \u00b7 NVR adapter",
+      "drawn_length_m": 1.288,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Dedicated replaceable adapter outlet, no splitter. Wall-side entry and rear shelf bypass keep it removable. Mains-only: existing ONT/router backup request is NOT extended to NVR/PoE.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "hall-poe",
+      "label": "Hall \u00b7 POE adapter",
+      "drawn_length_m": 1.483,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Dedicated replaceable adapter outlet, no splitter. Wall-side entry and rear shelf bypass keep it removable. Mains-only: existing ONT/router backup request is NOT extended to NVR/PoE.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "ac-b1",
+      "label": "Rear bedroom AC \u00b7 conditional fixed lead",
+      "drawn_length_m": 0.479,
+      "status": "PRODUCT-DECISION-REQUIRED",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Conditional sheathed fixed indoor supply shown with glands, not a plug. Selected AC may instead require supply at the outdoor unit: omit this branch in that case. Stabilizer, interconnect/outdoor route, cable ratings and protection remain unselected.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "ac-b2",
+      "label": "Middle bedroom AC \u00b7 conditional fixed lead",
+      "drawn_length_m": 0.582,
+      "status": "PRODUCT-DECISION-REQUIRED",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Conditional sheathed fixed indoor supply shown with glands, not a plug. Selected AC may instead require supply at the outdoor unit: omit this branch in that case. Stabilizer, interconnect/outdoor route, cable ratings and protection remain unselected.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "ac-b3",
+      "label": "Front bedroom AC \u00b7 conditional fixed lead",
+      "drawn_length_m": 0.557,
+      "status": "PRODUCT-DECISION-REQUIRED",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Conditional sheathed fixed indoor supply shown with glands, not a plug. Selected AC may instead require supply at the outdoor unit: omit this branch in that case. Stabilizer, interconnect/outdoor route, cable ratings and protection remain unselected.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "ac-dr",
+      "label": "Drawing room AC \u00b7 conditional fixed lead",
+      "drawn_length_m": 0.72,
+      "status": "PRODUCT-DECISION-REQUIRED",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Conditional sheathed fixed indoor supply shown with glands, not a plug. Selected AC may instead require supply at the outdoor unit: omit this branch in that case. Stabilizer, interconnect/outdoor route, cable ratings and protection remain unselected.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "ac-ha",
+      "label": "Hall AC \u00b7 conditional fixed lead",
+      "drawn_length_m": 0.554,
+      "status": "PRODUCT-DECISION-REQUIRED",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Conditional sheathed fixed indoor supply shown with glands, not a plug. Selected AC may instead require supply at the outdoor unit: omit this branch in that case. Stabilizer, interconnect/outdoor route, cable ratings and protection remain unselected.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "geyser-1",
+      "label": "Bath 1 geyser \u00b7 fixed sheathed lead",
+      "drawn_length_m": 0.752,
+      "status": "SITE-APPROVAL-REQUIRED",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Fixed sheathed lead and gland proposal, no ordinary wet-room plug/socket. Dry outside isolation retained; actual spray zone, product manual, enclosure/IP, cable, earth and protective devices must be approved/tested before energizing.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "geyser-2",
+      "label": "Bath 2 geyser \u00b7 fixed sheathed lead",
+      "drawn_length_m": 0.794,
+      "status": "SITE-APPROVAL-REQUIRED",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Fixed sheathed lead and gland proposal, no ordinary wet-room plug/socket. Dry outside isolation retained; actual spray zone, product manual, enclosure/IP, cable, earth and protective devices must be approved/tested before energizing.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "geyser-3",
+      "label": "Bath 3 geyser \u00b7 fixed sheathed lead",
+      "drawn_length_m": 0.776,
+      "status": "SITE-APPROVAL-REQUIRED",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Fixed sheathed lead and gland proposal, no ordinary wet-room plug/socket. Dry outside isolation retained; actual spray zone, product manual, enclosure/IP, cable, earth and protective devices must be approved/tested before energizing.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "aquarium-filter",
+      "label": "Aquarium filter",
+      "drawn_length_m": 2.094,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [
+        {
+          "batch": "A14_aquarium_water",
+          "point_web_m": [
+            1.0325,
+            1.076,
+            -5.294
+          ]
+        }
+      ],
+      "solid_crossings": 0,
+      "action": "Two cable notches and feeder opening are physically cut in the revised lid; drip loops and a protected fixed-feed proposal are shown. NOT energized: select equipment, dry enclosure/protection and verify lid lift-off/cleaning access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "aquarium-heater",
+      "label": "Aquarium heater",
+      "drawn_length_m": 3.407,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [
+        {
+          "batch": "A14_aquarium_water",
+          "point_web_m": [
+            2.15,
+            1.076,
+            -5.29
+          ]
+        }
+      ],
+      "solid_crossings": 0,
+      "action": "Two cable notches and feeder opening are physically cut in the revised lid; drip loops and a protected fixed-feed proposal are shown. NOT energized: select equipment, dry enclosure/protection and verify lid lift-off/cleaning access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "aquarium-light",
+      "label": "Aquarium light",
+      "drawn_length_m": 1.786,
+      "status": "IMPROVED-PROPOSAL",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Two cable notches and feeder opening are physically cut in the revised lid; drip loops and a protected fixed-feed proposal are shown. NOT energized: select equipment, dry enclosure/protection and verify lid lift-off/cleaning access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "media-front-left",
+      "label": "5.1 front-left speaker",
+      "drawn_length_m": 1.034,
+      "status": "PRODUCT-AND-SITE-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Physical signal proposal between case-bound terminals. Passive speakers use receiver outputs; subwoofer uses LFE. Rear grooves and removable nonstructural lining conceal actual cables without structural chases or floor/doorway trip routes. Verify cable/fire class, connector, bend radius, impedance/polarity and service access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "media-front-right",
+      "label": "5.1 front-right speaker",
+      "drawn_length_m": 2.519,
+      "status": "PRODUCT-AND-SITE-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Physical signal proposal between case-bound terminals. Passive speakers use receiver outputs; subwoofer uses LFE. Rear grooves and removable nonstructural lining conceal actual cables without structural chases or floor/doorway trip routes. Verify cable/fire class, connector, bend radius, impedance/polarity and service access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "media-centre",
+      "label": "5.1 centre speaker",
+      "drawn_length_m": 1.225,
+      "status": "PRODUCT-AND-SITE-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Physical signal proposal between case-bound terminals. Passive speakers use receiver outputs; subwoofer uses LFE. Rear grooves and removable nonstructural lining conceal actual cables without structural chases or floor/doorway trip routes. Verify cable/fire class, connector, bend radius, impedance/polarity and service access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "media-surround-left",
+      "label": "5.1 surround-left speaker",
+      "drawn_length_m": 12.449,
+      "status": "PRODUCT-AND-SITE-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Physical signal proposal between case-bound terminals. Passive speakers use receiver outputs; subwoofer uses LFE. Rear grooves and removable nonstructural lining conceal actual cables without structural chases or floor/doorway trip routes. Verify cable/fire class, connector, bend radius, impedance/polarity and service access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "media-surround-right",
+      "label": "5.1 surround-right speaker",
+      "drawn_length_m": 10.574,
+      "status": "PRODUCT-AND-SITE-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Physical signal proposal between case-bound terminals. Passive speakers use receiver outputs; subwoofer uses LFE. Rear grooves and removable nonstructural lining conceal actual cables without structural chases or floor/doorway trip routes. Verify cable/fire class, connector, bend radius, impedance/polarity and service access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "media-sub-lfe",
+      "label": "Receiver to powered subwoofer \u00b7 LFE",
+      "drawn_length_m": 2.562,
+      "status": "PRODUCT-AND-SITE-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Physical signal proposal between case-bound terminals. Passive speakers use receiver outputs; subwoofer uses LFE. Rear grooves and removable nonstructural lining conceal actual cables without structural chases or floor/doorway trip routes. Verify cable/fire class, connector, bend radius, impedance/polarity and service access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "media-tv-earc",
+      "label": "tv-earc \u00b7 HDMI",
+      "drawn_length_m": 1.388,
+      "status": "PRODUCT-AND-SITE-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Physical signal proposal between case-bound terminals. Passive speakers use receiver outputs; subwoofer uses LFE. Rear grooves and removable nonstructural lining conceal actual cables without structural chases or floor/doorway trip routes. Verify cable/fire class, connector, bend radius, impedance/polarity and service access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "media-stb-hdmi",
+      "label": "stb-hdmi \u00b7 HDMI",
+      "drawn_length_m": 1.271,
+      "status": "PRODUCT-AND-SITE-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Physical signal proposal between case-bound terminals. Passive speakers use receiver outputs; subwoofer uses LFE. Rear grooves and removable nonstructural lining conceal actual cables without structural chases or floor/doorway trip routes. Verify cable/fire class, connector, bend radius, impedance/polarity and service access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "media-nvr-hdmi",
+      "label": "nvr-hdmi \u00b7 HDMI",
+      "drawn_length_m": 2.209,
+      "status": "PRODUCT-AND-SITE-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Physical signal proposal between case-bound terminals. Passive speakers use receiver outputs; subwoofer uses LFE. Rear grooves and removable nonstructural lining conceal actual cables without structural chases or floor/doorway trip routes. Verify cable/fire class, connector, bend radius, impedance/polarity and service access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "media-ont-router",
+      "label": "Network \u00b7 ont-router",
+      "drawn_length_m": 0.28,
+      "status": "PRODUCT-AND-SITE-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Physical signal proposal between case-bound terminals. Passive speakers use receiver outputs; subwoofer uses LFE. Rear grooves and removable nonstructural lining conceal actual cables without structural chases or floor/doorway trip routes. Verify cable/fire class, connector, bend radius, impedance/polarity and service access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "media-router-poe",
+      "label": "Network \u00b7 router-poe",
+      "drawn_length_m": 0.21,
+      "status": "PRODUCT-AND-SITE-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Physical signal proposal between case-bound terminals. Passive speakers use receiver outputs; subwoofer uses LFE. Rear grooves and removable nonstructural lining conceal actual cables without structural chases or floor/doorway trip routes. Verify cable/fire class, connector, bend radius, impedance/polarity and service access.",
+      "electrical_safety_certified": false
+    },
+    {
+      "id": "media-poe-nvr",
+      "label": "Network \u00b7 poe-nvr",
+      "drawn_length_m": 0.28,
+      "status": "PRODUCT-AND-SITE-REVIEW",
+      "centerline_surface_hits": [],
+      "solid_crossings": 0,
+      "action": "Physical signal proposal between case-bound terminals. Passive speakers use receiver outputs; subwoofer uses LFE. Rear grooves and removable nonstructural lining conceal actual cables without structural chases or floor/doorway trip routes. Verify cable/fire class, connector, bend radius, impedance/polarity and service access.",
+      "electrical_safety_certified": false
+    }
+  ],
+  "service_geometry": [
+    {
+      "id": "dry-bay-back-low",
+      "surface_intersections": []
+    },
+    {
+      "id": "dry-bay-back-high",
+      "surface_intersections": []
+    },
+    {
+      "id": "dry-bay-back-port-side",
+      "surface_intersections": []
+    },
+    {
+      "id": "dry-bay-top",
+      "surface_intersections": []
+    },
+    {
+      "id": "dry-bay-left",
+      "surface_intersections": []
+    },
+    {
+      "id": "dry-bay-end",
+      "surface_intersections": []
+    },
+    {
+      "id": "dry-bay-base",
+      "surface_intersections": []
+    },
+    {
+      "id": "dry-bay-removable-front",
+      "surface_intersections": []
+    },
+    {
+      "id": "stand-right-skin",
+      "surface_intersections": []
+    },
+    {
+      "id": "stand-front-left",
+      "surface_intersections": []
+    },
+    {
+      "id": "stand-front-right",
+      "surface_intersections": []
+    },
+    {
+      "id": "riser-back",
+      "surface_intersections": []
+    },
+    {
+      "id": "riser-west",
+      "surface_intersections": []
+    },
+    {
+      "id": "riser-east",
+      "surface_intersections": []
+    },
+    {
+      "id": "riser-lift-off-face",
+      "surface_intersections": []
+    },
+    {
+      "id": "rear-trough-bottom",
+      "surface_intersections": []
+    },
+    {
+      "id": "rear-trough-back",
+      "surface_intersections": []
+    },
+    {
+      "id": "rear-trough-lift-off-cap",
+      "surface_intersections": []
+    },
+    {
+      "id": "rear-trough-feeder-clear-bottom-0",
+      "surface_intersections": []
+    },
+    {
+      "id": "rear-trough-feeder-clear-cap-0",
+      "surface_intersections": []
+    },
+    {
+      "id": "rear-trough-feeder-clear-bottom-1",
+      "surface_intersections": []
+    },
+    {
+      "id": "rear-trough-feeder-clear-cap-1",
+      "surface_intersections": []
+    },
+    {
+      "id": "rear-trough-slotted-face-0",
+      "surface_intersections": []
+    },
+    {
+      "id": "rear-trough-slotted-face-1",
+      "surface_intersections": []
+    },
+    {
+      "id": "rear-trough-slotted-face-2",
+      "surface_intersections": []
+    },
+    {
+      "id": "rear-trough-slotted-face-3",
+      "surface_intersections": []
+    },
+    {
+      "id": "receiver",
+      "surface_intersections": []
+    }
+  ]
+}

@@ -1,0 +1,699 @@
+{
+  "version": 1,
+  "base_source_sha256": "ddf35d094002b9272ff3c2ce68da5b7d65233365e3585f3c13f8ed7c04ba4637",
+  "base_model_sha256": "f8da33a6aae86eacfb79ee676c1dda9cc88457d36f930fcdc8c6218b33727b47",
+  "model": {
+    "src": "./model/review/review-v022.glb",
+    "sha256": "831f876f14ac34120c5e806d352abc92fa9c083d7e48a28d0b93e5e19a7a0ae4",
+    "bytes": 1476944
+  },
+  "remove": [
+    {
+      "node": "F5 charcoal",
+      "index_count": 3924,
+      "ranges": [
+        [
+          2268,
+          648
+        ],
+        [
+          3276,
+          324
+        ]
+      ]
+    },
+    {
+      "node": "F5 dark oak",
+      "index_count": 13092,
+      "ranges": [
+        [
+          3972,
+          5448
+        ]
+      ]
+    },
+    {
+      "node": "F5 oak",
+      "index_count": 10488,
+      "ranges": [
+        [
+          5472,
+          1776
+        ]
+      ]
+    },
+    {
+      "node": "F16 aged timber",
+      "index_count": 41340,
+      "ranges": [
+        [
+          8244,
+          648
+        ],
+        [
+          28596,
+          648
+        ]
+      ]
+    },
+    {
+      "node": "F16 panel timber",
+      "index_count": 24624,
+      "ranges": [
+        [
+          0,
+          648
+        ],
+        [
+          12312,
+          648
+        ]
+      ]
+    },
+    {
+      "node": "L13 parchment",
+      "index_count": 20412,
+      "ranges": [
+        [
+          324,
+          4176
+        ]
+      ]
+    },
+    {
+      "node": "oak.001",
+      "index_count": 24888,
+      "ranges": [
+        [
+          324,
+          36
+        ],
+        [
+          504,
+          12
+        ],
+        [
+          720,
+          36
+        ],
+        [
+          852,
+          12
+        ],
+        [
+          1332,
+          36
+        ],
+        [
+          1404,
+          72
+        ],
+        [
+          1488,
+          12
+        ],
+        [
+          1512,
+          108
+        ],
+        [
+          1980,
+          36
+        ],
+        [
+          2100,
+          12
+        ],
+        [
+          2376,
+          36
+        ],
+        [
+          2496,
+          12
+        ],
+        [
+          2592,
+          36
+        ],
+        [
+          2664,
+          36
+        ],
+        [
+          2736,
+          12
+        ],
+        [
+          2760,
+          60
+        ],
+        [
+          2832,
+          84
+        ]
+      ]
+    },
+    {
+      "node": "plaster",
+      "index_count": 109014,
+      "ranges": [
+        [
+          24,
+          105978
+        ],
+        [
+          108066,
+          648
+        ]
+      ]
+    }
+  ],
+  "removed_triangles": 40746,
+  "phone_outlets": [
+    {
+      "id": "EB-B1-BED-A-PHONE",
+      "room": "bedroom_1",
+      "label": "Phone charging outlet - shared bedside plate",
+      "position_web_m": [
+        4.8575,
+        0.59,
+        -17.564785
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "status": "proposed-empty-outlet-circuit-and-product-unselected"
+    },
+    {
+      "id": "EB-B1-BED-B-PHONE",
+      "room": "bedroom_1",
+      "label": "Phone charging outlet - shared bedside plate",
+      "position_web_m": [
+        7.0575,
+        0.59,
+        -17.564785
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "status": "proposed-empty-outlet-circuit-and-product-unselected"
+    },
+    {
+      "id": "EB-B2-BED-A-PHONE",
+      "room": "bedroom_2",
+      "label": "Phone charging outlet - shared bedside plate",
+      "position_web_m": [
+        4.91358,
+        0.59,
+        -6.7575
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "status": "proposed-empty-outlet-circuit-and-product-unselected"
+    },
+    {
+      "id": "EB-B2-BED-B-PHONE",
+      "room": "bedroom_2",
+      "label": "Phone charging outlet - shared bedside plate",
+      "position_web_m": [
+        4.91358,
+        0.59,
+        -9.2075
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "status": "proposed-empty-outlet-circuit-and-product-unselected"
+    },
+    {
+      "id": "EB-B3-BED-A-PHONE",
+      "room": "bedroom_3",
+      "label": "Phone charging outlet - shared bedside plate",
+      "position_web_m": [
+        3.516708,
+        0.59,
+        -1.3925
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "status": "proposed-empty-outlet-circuit-and-product-unselected"
+    },
+    {
+      "id": "EB-B3-BED-B-PHONE",
+      "room": "bedroom_3",
+      "label": "Phone charging outlet - shared bedside plate",
+      "position_web_m": [
+        3.516708,
+        0.59,
+        -3.5925
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "status": "proposed-empty-outlet-circuit-and-product-unselected"
+    }
+  ],
+  "furniture_nodes": [
+    "R22_PART_0062",
+    "R22_PART_0063",
+    "R22_PART_0064",
+    "R22_PART_0065",
+    "R22_PART_0066",
+    "R22_PART_0067",
+    "R22_PART_0068",
+    "R22_PART_0069",
+    "R22_PART_0070",
+    "R22_PART_0071",
+    "R22_PART_0072",
+    "R22_PART_0073",
+    "R22_PART_0074",
+    "R22_PART_0075",
+    "R22_PART_0076",
+    "R22_PART_0077",
+    "R22_PART_0078",
+    "R22_PART_0079",
+    "R22_PART_0080",
+    "R22_PART_0081",
+    "R22_PART_0082",
+    "R22_PART_0083",
+    "R22_PART_0084",
+    "R22_PART_0085",
+    "R22_PART_0086",
+    "R22_PART_0087",
+    "R22_PART_0088",
+    "R22_PART_0089",
+    "R22_PART_0090",
+    "R22_PART_0091",
+    "R22_PART_0092",
+    "R22_PART_0093",
+    "R22_PART_0094",
+    "R22_PART_0095",
+    "R22_PART_0096"
+  ],
+  "service_cover_nodes": [
+    "R22_PART_0064",
+    "R22_PART_0065",
+    "R22_PART_0066",
+    "R22_PART_0067",
+    "R22_PART_0068",
+    "R22_PART_0069",
+    "R22_PART_0070",
+    "R22_PART_0071",
+    "R22_PART_0072",
+    "R22_PART_0073",
+    "R22_PART_0074",
+    "R22_PART_0075",
+    "R22_PART_0076",
+    "R22_PART_0077",
+    "R22_PART_0078",
+    "R22_PART_0079",
+    "R22_PART_0080",
+    "R22_PART_0081",
+    "R22_PART_0090",
+    "R22_PART_0091",
+    "R22_PART_0092",
+    "R22_PART_0093",
+    "R22_PART_0094",
+    "R22_PART_0095",
+    "R22_PART_0096"
+  ],
+  "service_openings": [
+    {
+      "id": "opening-00",
+      "bounds_m": [
+        4.69,
+        8.21,
+        1.15,
+        4.78,
+        8.43,
+        1.35
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-01",
+      "bounds_m": [
+        4.738,
+        8.255,
+        0.59,
+        4.78,
+        8.315,
+        1.35
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-02",
+      "bounds_m": [
+        4.69,
+        8.21,
+        1.15,
+        4.78,
+        8.43,
+        1.35
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-03",
+      "bounds_m": [
+        4.685,
+        9.205,
+        0.2,
+        4.755,
+        9.275,
+        0.575
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-04",
+      "bounds_m": [
+        4.718,
+        8.68,
+        0.215,
+        4.755,
+        9.21,
+        0.515
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-05",
+      "bounds_m": [
+        3.43,
+        15.285,
+        0.235,
+        3.5,
+        15.37,
+        0.305
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-06",
+      "bounds_m": [
+        3.43,
+        15.285,
+        0.235,
+        3.5,
+        15.37,
+        0.305
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-07",
+      "bounds_m": [
+        1.0025,
+        5.26,
+        1.265,
+        1.0625,
+        5.325,
+        1.295
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-08",
+      "bounds_m": [
+        2.12,
+        5.26,
+        1.265,
+        2.18,
+        5.325,
+        1.295
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-09",
+      "bounds_m": [
+        1.775,
+        5.295,
+        1.265,
+        1.825,
+        5.355,
+        1.295
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-10",
+      "bounds_m": [
+        4.4,
+        8.7,
+        0.17,
+        4.69,
+        9.18,
+        0.215
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-11",
+      "bounds_m": [
+        4.718,
+        8.7,
+        0.495,
+        4.75,
+        9.18,
+        0.56
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-12",
+      "bounds_m": [
+        4.71,
+        8.7,
+        0.2,
+        4.76,
+        9.18,
+        0.22
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-13",
+      "bounds_m": [
+        4.71,
+        8.7,
+        0.495,
+        4.76,
+        9.18,
+        0.515
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-14",
+      "bounds_m": [
+        4.34,
+        7.415,
+        0.205,
+        4.718,
+        7.995,
+        0.525
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-15",
+      "bounds_m": [
+        4.34,
+        8.035,
+        0.205,
+        4.718,
+        8.605,
+        0.525
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-16",
+      "bounds_m": [
+        4.34,
+        8.655,
+        0.205,
+        4.718,
+        9.225,
+        0.525
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-17",
+      "bounds_m": [
+        4.738,
+        7.19,
+        0.88,
+        4.77,
+        9.45,
+        0.925
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-18",
+      "bounds_m": [
+        4.738,
+        7.53,
+        0.59,
+        4.77,
+        7.93,
+        0.925
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-19",
+      "bounds_m": [
+        4.738,
+        9.35,
+        0.59,
+        4.77,
+        9.41,
+        2.32
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-20",
+      "bounds_m": [
+        4.738,
+        8.48,
+        0.59,
+        4.77,
+        8.525,
+        1.19
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-21",
+      "bounds_m": [
+        4.69,
+        8.29,
+        0.84,
+        4.77,
+        8.35,
+        0.88
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-22",
+      "bounds_m": [
+        4.69,
+        8.48,
+        1.14,
+        4.77,
+        8.525,
+        1.19
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-23",
+      "bounds_m": [
+        4.69,
+        8.48,
+        1.14,
+        4.77,
+        8.525,
+        1.19
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-24",
+      "bounds_m": [
+        4.718,
+        7.4,
+        0.2,
+        4.755,
+        9.24,
+        0.525
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-25",
+      "bounds_m": [
+        4.69,
+        7.85,
+        0.5,
+        4.755,
+        7.93,
+        0.575
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-26",
+      "bounds_m": [
+        4.718,
+        7.55,
+        0.17,
+        4.755,
+        7.62,
+        0.22
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    },
+    {
+      "id": "opening-27",
+      "bounds_m": [
+        4.718,
+        9.205,
+        0.17,
+        4.755,
+        9.255,
+        0.22
+      ],
+      "status": "modeled-joinery-opening-product-and-fabrication-review-required"
+    }
+  ],
+  "rear_tv": {
+    "center_web_m": [
+      6.22,
+      1.55,
+      -14.5275
+    ],
+    "bounds_blender_m": [
+      [
+        5.77,
+        14.5,
+        1.2925
+      ],
+      [
+        6.67,
+        14.555,
+        1.8075
+      ]
+    ]
+  },
+  "notes": [
+    "Owner requested both lower timber panels become independent framed glass-and-grille sections.",
+    "Existing shell is replaced only to open the two former apron infills; no other structure moves.",
+    "Six empty phone sockets share the bedside faceplates with independent lamp outlets and controls. No separate floating plates or splitters.",
+    "Media service recess/chase, console cable entry, fridge divider entry and aquarium lid openings are physically cut in this editable proposal; no structural cable holes invented.",
+    "TV bracket, display size and all electrical ratings/products are provisional."
+  ]
+}

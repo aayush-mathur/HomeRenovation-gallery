@@ -11,11 +11,11 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
   <meta name="color-scheme" content="light">
   <title>House walkthrough</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="./styles.css?v=7d106b56a99c3320">
+  <link rel="stylesheet" href="./styles.css?v=dca79047dc559c03">
   <link rel="stylesheet" href="./electrical-planning.css?v=831b2e16568db094">
   <link rel="stylesheet" href="./electrical-board-labels.css?v=e00180375dfb7215">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
-  <script type="module" src="./app.js?v=9baf8f4a495042a3"></script>
+  <script type="module" src="./app.js?v=76987b7b82035f45"></script>
   <!-- offline-runtime -->
   <link rel="stylesheet" href="./offline.css">
   <script type="module" src="./offline-client.js"></script>
@@ -39,6 +39,8 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <button id="quality" aria-pressed="false" aria-describedby="ceiling-status" hidden>Try baked lighting</button>
     <div id="ceiling-feedback" hidden><p id="ceiling-status" role="status" aria-live="polite" aria-atomic="true"></p><button id="ceiling-retry" hidden>Retry ceiling</button></div>
     <p id="accessory-alert" role="alert" hidden></p><button id="accessory-retry" hidden>Retry shelves and mirror provisions</button>
+    <p id="house-review-alert" role="alert" hidden></p>
+    <div data-physical-leads-host></div>
     <div data-electrical-host></div>
     <h3>Movement</h3>
     <button id="reset" disabled>Reset position</button>
@@ -47,7 +49,9 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
     <button id="help" aria-expanded="false" aria-controls="instructions">Help</button>
     <h3>View</h3>
     <label><input id="furniture" type="checkbox" checked disabled> Show furniture and appliances</label>
-    <p class="note">Turn off to inspect concealed electrical points. Walls, doors and windows stay visible. Hidden furniture does not establish safe service access.</p>
+    <label for="furniture-mode">Furniture inspection</label>
+    <select id="furniture-mode" disabled><option value="solid">Solid</option><option value="transparent">Transparent</option><option value="hidden">Hidden</option></select>
+    <p class="note">Transparent reveals concealed equipment while keeping furniture outlines. Walls, doors and windows stay solid. This does not prove service access or safe cable routing.</p>
     <p id="furniture-alert" role="alert" hidden></p><button id="furniture-retry" type="button" hidden>Retry furniture inspection</button>
     <div id="lens-controls">
       <label for="lens">Lens <span class="lens-equivalent">35 mm eq.</span></label>
@@ -73,8 +77,8 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
       <p><strong>Look:</strong> drag anywhere in the view. On desktop, Mouse look captures the pointer; <kbd>Esc</kbd> releases it.</p>
       <p><strong>Settings:</strong> ceilings, switchboards, pace, mouse look, lens and offline copies are grouped here. Close, press <kbd>Esc</kbd> or tap the house to return to exploring. Room and Full screen stay in the top bar, including in full screen.</p>
       <p id="lens-help"><strong>Lens:</strong> lower millimetres give a wider view without moving you. The 16–70 mm slider uses 35 mm-equivalent focal lengths with a fixed 36 mm horizontal film gate; viewport height follows its aspect ratio. Auto preserves the original 62° vertical view, capped at 90° horizontally. Reset lens restores Auto, not your position. Wide views stretch edges, especially in portrait; this is not a simulation of human eyesight. Release Mouse look with <kbd>Esc</kbd> before using the slider.</p>
-      <p id="ceiling-help" hidden><strong>Ceiling concepts:</strong> Sculpted Luxe is the selected whole-floor design, including bedrooms. Earlier alternatives are historical studies only. Fans are static provisions, not rotating. Web lighting and emissive faces are approximate; use Cycles reference previews for lighting comparisons. <span id="ceiling-note"></span></p>
-      <p><strong>Starting view:</strong> each fresh visit opens Sculpted Luxe with proposed switchboards and nearby board labels. Tap a label without dragging to read each control and why the board is there, or use the Switchboards list. Labels respect walls, distance and your view; unresolved equipment needs stay list-only. Hide labels or boards for a clean view. If the ceiling cannot load, an explicit warning and retry remain available. Saving an offline copy still requires the Download button.</p>
+      <p id="ceiling-help" hidden><strong>Ceiling:</strong> Sculpted Luxe is a historical visualization, not the approved ceiling or lighting layout. Your designer will finalize the ceiling. Functional lighting groups are reviewed separately. Fans are static provisions, not rotating. Web lighting and emissive faces are approximate. <span id="ceiling-note"></span></p>
+      <p><strong>Starting view:</strong> each fresh visit opens the historical Luxe visualization with provisional switchboards, nearby board labels and solid appliance cords. The ceiling is not approved. Settings → Appliance cords lists physical plugs/flex, missing supplies and joinery clashes. View socket close-up moves you to a safe nearby position at 1.6 m eye height and uses a 45 mm inspection lens; Reset lens restores a wider view. Transparent furniture reveals concealed cords without making walls transparent. Socket/adapter shapes, device inlets and cabinet entries are proposals, not approved installation details. Lighting &amp; connections separately shows dashed relationships, not physical wires or safe routes. If an overlay cannot load, an explicit warning and retry remain available. Saving an offline copy still requires the Download button.</p>
       <p><strong>Walk:</strong> click or tab into the view or movement pad, then use <kbd>W A S D</kbd> or arrow keys. <kbd>Q E</kbd> turn; <kbd>R F</kbd> look up/down. Touch: hold and drag the thumbstick to walk; drag farther to walk faster. Release to stop. Use a second finger on the house to look while moving.</p>
       <p id="pace-help"><strong>Pace:</strong> switch Walk (1.35 m/s) to Faster (2 m/s) with the pace button. The thumbstick still gives fine control near its centre. On desktop, hold <kbd>Shift</kbd> while walking for temporary Faster pace; release it to return to your selected pace. Both paces pass through furniture for inspection, but not walls or floor boundaries. Each page visit starts in Walk.</p>
       <p><strong>Finger + pen:</strong> hold the movement pad with a finger and drag the house with the pen tip, in either order. Pen hover does not turn the view. Some tablets reject finger input when a pen is nearby; a website cannot override that device behavior. If movement stops, lift the pen and touch the pad again, or use two fingers. Cancelled finger input always stops walking safely.</p>
@@ -84,11 +88,17 @@ FORM: Brief-pinned Experience extension, not a new visual identity. No decorativ
       <p><strong>Walk between rooms:</strong> interior doors are held open on their real hinges, with leaves and handles intact. Walk through doorways normally; the room menu is just an optional shortcut.</p>
       <p><strong>Storage opening is disabled:</strong> cupboards and drawers stay in their closed, fixed positions while you explore. Click/tap only focuses the view; dragging looks around. Furniture and room layouts are retained.</p>
       <p><strong>Furniture pass-through:</strong> beds, sofas, tables, cabinetry and fixtures no longer block navigation. Their geometry and positions are unchanged. Walls, doors, fixed glazing, partitions, guards and floor boundaries remain solid. <span id="clearance-note">The preview retains a 40 cm round body against structural barriers; passing through furniture is an inspection aid, not proof of usable aisles or accessibility.</span> Reset position returns to your selected starting room.</p>
-      <p class="note">1.6 m eye height. Simplified real-time materials and lighting, not Cycles. Mirrors are material approximations, not real reflections. Walking stays on this floor: stair flights are visual only, not climbable. The rear OTS has a provisional open metal grate at floor level with the shaft void below; grating, supports and glazing are visualization only, not certified load-bearing construction. Other exterior exits remain blocked.</p>
+      <p class="note">Start at 1.6 m eye height. Rise / Lower (or Page Up / Page Down while the house is focused) changes inspection height by 25 cm, between 0.35 and 2.75 m; Eye level returns to 1.6 m. Room changes and socket close-ups also reset height. Walls and floor boundaries still block horizontal travel; this is not stair climbing. Simplified real-time materials and lighting, not Cycles. Mirrors are material approximations, not real reflections. The rear OTS has a provisional open metal grate at floor level with the shaft void below; grating, supports and glazing are visualization only, not certified load-bearing construction. Other exterior exits remain blocked.</p>
       <button id="close-help">Back to house</button>
     </div>
     <div id="touch-pad">
       <button id="touch-stick" type="button" aria-label="Movement pad. Hold and drag to walk; release to stop. With keyboard, use W A S D or arrow keys." aria-describedby="quick-help"><span aria-hidden="true"></span><span class="stick-label" aria-hidden="true">Move</span></button>
+    </div>
+    <div id="height-controls" role="group" aria-label="Inspection view height">
+      <button id="rise" type="button" aria-label="Rise 25 centimetres">Rise</button>
+      <output id="view-height" aria-live="polite">1.60 m</output>
+      <button id="lower" type="button" aria-label="Lower 25 centimetres">Lower</button>
+      <button id="eye-level" type="button">Eye level</button>
     </div>
   </main>
   <noscript>This walkthrough needs JavaScript and WebGL. No data is uploaded.</noscript>

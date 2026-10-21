@@ -1,6 +1,6 @@
 import { assertEmbeddedGLB, disposeCeiling } from './ceiling-comparison.js?v=a653fd99aa8b800d';
 import { createBoardLabels } from './electrical-board-labels.js?v=bca24d0b239238f8';
-import { boardRooms } from './electrical-board-descriptor.js?v=29a9d2cc8434e5f6';
+import { boardRooms } from './electrical-board-descriptor.js?v=f339c18550afc705';
 
 export function createBoardOverlay({ THREE, scene, camera, stage, descriptor, occluderRoots, parse,
   releaseInput = () => {}, isInputBusy = () => false, excludedElements = [], onSelect = () => {},
@@ -122,7 +122,6 @@ export function createBoardOverlay({ THREE, scene, camera, stage, descriptor, oc
       selected = id; sync();
     },
     pickLabel(x, y) { return labels?.pick(x, y) || null; },
-    refreshOccluders() { labels?.refreshOccluders(occluderRoots); },
     update({ time, currentRoom, paused = false }) {
       if (!labels || disposed) return;
       const before = labels.snapshot().visible.length;

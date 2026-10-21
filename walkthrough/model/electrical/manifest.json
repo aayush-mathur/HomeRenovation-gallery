@@ -5,9 +5,9 @@
   "base_navigation_sha256": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
   "luxe_sha256": "2fc0001646f3b8a7005af317dac1d009fb735447625672566814cd5081b754b4",
   "model": {
-    "src": "./model/electrical/boards-57e23ad13a9d3d19.glb",
-    "sha256": "57e23ad13a9d3d19597e7f785c123cd9ba2b62a2ed73a08d4506a41d274d58ef",
-    "bytes": 4379924
+    "src": "./model/electrical/boards-b8580393021ed830.glb",
+    "sha256": "b8580393021ed830cf60e8257825fddc4e9d2716b3180fb8058f1bbea1fcae27",
+    "bytes": 4732556
   },
   "boards": [
     {
@@ -285,7 +285,7 @@
       "node_name": "BOARD_EB-B1-BED-A",
       "position_web_m": [
         4.88,
-        0.664,
+        0.629,
         -17.564785
       ],
       "normal_web": [
@@ -293,10 +293,10 @@
         -0.0,
         1.0
       ],
-      "height_aff_mm": 650,
+      "height_aff_mm": 615,
       "size_mm": [
         120.0,
-        90.0,
+        160.0,
         12.0
       ],
       "functions": [
@@ -310,10 +310,11 @@
           "point_ids": [
             "E-B1-01"
           ],
-          "behavior": "Always-available selected charging provision; bedtime scene never cuts this outlet or fan. Existing portable lamps retain local controls; simultaneous lamp/charging plug fit to be reviewed.",
+          "behavior": "Dedicated bedside lamp outlet; local lamp switch retained. Bedtime lighting controls never interrupt this socket.",
           "id": "EB-B1-BED-A-F01",
           "slot": 0,
-          "span": 2
+          "span": 2,
+          "row": 0
         },
         {
           "label": "Ambient",
@@ -329,7 +330,8 @@
           "behavior": "Bedtime control covers ambient AND the adjacent independently identified cove function. Desired coordinated all-lights-off scene with entry; never interrupt charging or fan. Architecture unselected, not wiring or backup transfer.",
           "id": "EB-B1-BED-A-F03",
           "slot": 2,
-          "span": 1
+          "span": 1,
+          "row": 0
         },
         {
           "label": "Cove",
@@ -344,7 +346,24 @@
           "behavior": "Bedside bedtime cove off/on alongside ambient; desired coordinated all-lights-off, not a switched socket/fan supply. Cove mains-only remains distinct from selected ambient backup.",
           "id": "EB-B1-BED-A-F04",
           "slot": 3,
-          "span": 1
+          "span": 1,
+          "row": 0
+        },
+        {
+          "label": "Phone charger socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B1-01"
+          ],
+          "behavior": "Separate always-available charger socket on the SAME shared bedside plate as the lamp socket and bedtime controls. No splitter; actual charger/plug fit and circuit selection need approval.",
+          "id": "EB-B1-BED-A-F05",
+          "slot": 0,
+          "span": 2,
+          "row": 1
         }
       ],
       "reason_ids": [
@@ -358,7 +377,7 @@
       "node_name": "BOARD_EB-B1-BED-B",
       "position_web_m": [
         7.08,
-        0.664,
+        0.629,
         -17.564785
       ],
       "normal_web": [
@@ -366,10 +385,10 @@
         -0.0,
         1.0
       ],
-      "height_aff_mm": 650,
+      "height_aff_mm": 615,
       "size_mm": [
         120.0,
-        90.0,
+        160.0,
         12.0
       ],
       "functions": [
@@ -383,10 +402,11 @@
           "point_ids": [
             "E-B1-03"
           ],
-          "behavior": "Always-available selected charging provision; bedtime scene never cuts this outlet or fan. Existing portable lamps retain local controls; simultaneous lamp/charging plug fit to be reviewed.",
+          "behavior": "Dedicated bedside lamp outlet; local lamp switch retained. Bedtime lighting controls never interrupt this socket.",
           "id": "EB-B1-BED-B-F01",
           "slot": 0,
-          "span": 2
+          "span": 2,
+          "row": 0
         },
         {
           "label": "Ambient",
@@ -402,7 +422,8 @@
           "behavior": "Bedtime control covers ambient AND the adjacent independently identified cove function. Desired coordinated all-lights-off scene with entry; never interrupt charging or fan. Architecture unselected, not wiring or backup transfer.",
           "id": "EB-B1-BED-B-F03",
           "slot": 2,
-          "span": 1
+          "span": 1,
+          "row": 0
         },
         {
           "label": "Cove",
@@ -417,7 +438,24 @@
           "behavior": "Bedside bedtime cove off/on alongside ambient; desired coordinated all-lights-off, not a switched socket/fan supply. Cove mains-only remains distinct from selected ambient backup.",
           "id": "EB-B1-BED-B-F04",
           "slot": 3,
-          "span": 1
+          "span": 1,
+          "row": 0
+        },
+        {
+          "label": "Phone charger socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B1-03"
+          ],
+          "behavior": "Separate always-available charger socket on the SAME shared bedside plate as the lamp socket and bedtime controls. No splitter; actual charger/plug fit and circuit selection need approval.",
+          "id": "EB-B1-BED-B-F05",
+          "slot": 0,
+          "span": 2,
+          "row": 1
         }
       ],
       "reason_ids": [
@@ -431,7 +469,7 @@
       "node_name": "BOARD_EB-B2-BED-A",
       "position_web_m": [
         4.91358,
-        0.664,
+        0.629,
         -6.78
       ],
       "normal_web": [
@@ -439,10 +477,10 @@
         -0.0,
         0.0
       ],
-      "height_aff_mm": 650,
+      "height_aff_mm": 615,
       "size_mm": [
         120.0,
-        90.0,
+        160.0,
         12.0
       ],
       "functions": [
@@ -456,10 +494,11 @@
           "point_ids": [
             "E-B2-01"
           ],
-          "behavior": "Always-available selected charging provision; bedtime scene never cuts this outlet or fan. Existing portable lamps retain local controls; simultaneous lamp/charging plug fit to be reviewed.",
+          "behavior": "Dedicated bedside lamp outlet; local lamp switch retained. Bedtime lighting controls never interrupt this socket.",
           "id": "EB-B2-BED-A-F01",
           "slot": 0,
-          "span": 2
+          "span": 2,
+          "row": 0
         },
         {
           "label": "Ambient",
@@ -474,7 +513,8 @@
           "behavior": "Bedtime control covers ambient AND the adjacent independently identified cove function. Desired coordinated all-lights-off scene with entry; never interrupt charging or fan. Architecture unselected, not wiring or backup transfer.",
           "id": "EB-B2-BED-A-F03",
           "slot": 2,
-          "span": 1
+          "span": 1,
+          "row": 0
         },
         {
           "label": "Cove",
@@ -489,7 +529,24 @@
           "behavior": "Bedside bedtime cove off/on alongside ambient; desired coordinated all-lights-off, not a switched socket/fan supply. Cove mains-only remains distinct from selected ambient backup.",
           "id": "EB-B2-BED-A-F04",
           "slot": 3,
-          "span": 1
+          "span": 1,
+          "row": 0
+        },
+        {
+          "label": "Phone charger socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B2-01"
+          ],
+          "behavior": "Separate always-available charger socket on the SAME shared bedside plate as the lamp socket and bedtime controls. No splitter; actual charger/plug fit and circuit selection need approval.",
+          "id": "EB-B2-BED-A-F05",
+          "slot": 0,
+          "span": 2,
+          "row": 1
         }
       ],
       "reason_ids": [
@@ -503,7 +560,7 @@
       "node_name": "BOARD_EB-B2-BED-B",
       "position_web_m": [
         4.91358,
-        0.664,
+        0.629,
         -9.23
       ],
       "normal_web": [
@@ -511,10 +568,10 @@
         -0.0,
         0.0
       ],
-      "height_aff_mm": 650,
+      "height_aff_mm": 615,
       "size_mm": [
         120.0,
-        90.0,
+        160.0,
         12.0
       ],
       "functions": [
@@ -528,10 +585,11 @@
           "point_ids": [
             "E-B2-03"
           ],
-          "behavior": "Always-available selected charging provision; bedtime scene never cuts this outlet or fan. Existing portable lamps retain local controls; simultaneous lamp/charging plug fit to be reviewed.",
+          "behavior": "Dedicated bedside lamp outlet; local lamp switch retained. Bedtime lighting controls never interrupt this socket.",
           "id": "EB-B2-BED-B-F01",
           "slot": 0,
-          "span": 2
+          "span": 2,
+          "row": 0
         },
         {
           "label": "Ambient",
@@ -546,7 +604,8 @@
           "behavior": "Bedtime control covers ambient AND the adjacent independently identified cove function. Desired coordinated all-lights-off scene with entry; never interrupt charging or fan. Architecture unselected, not wiring or backup transfer.",
           "id": "EB-B2-BED-B-F03",
           "slot": 2,
-          "span": 1
+          "span": 1,
+          "row": 0
         },
         {
           "label": "Cove",
@@ -561,7 +620,24 @@
           "behavior": "Bedside bedtime cove off/on alongside ambient; desired coordinated all-lights-off, not a switched socket/fan supply. Cove mains-only remains distinct from selected ambient backup.",
           "id": "EB-B2-BED-B-F04",
           "slot": 3,
-          "span": 1
+          "span": 1,
+          "row": 0
+        },
+        {
+          "label": "Phone charger socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B2-03"
+          ],
+          "behavior": "Separate always-available charger socket on the SAME shared bedside plate as the lamp socket and bedtime controls. No splitter; actual charger/plug fit and circuit selection need approval.",
+          "id": "EB-B2-BED-B-F05",
+          "slot": 0,
+          "span": 2,
+          "row": 1
         }
       ],
       "reason_ids": [
@@ -575,7 +651,7 @@
       "node_name": "BOARD_EB-B3-BED-A",
       "position_web_m": [
         3.516708,
-        0.664,
+        0.629,
         -1.415
       ],
       "normal_web": [
@@ -583,10 +659,10 @@
         -0.0,
         0.0
       ],
-      "height_aff_mm": 650,
+      "height_aff_mm": 615,
       "size_mm": [
         120.0,
-        90.0,
+        160.0,
         12.0
       ],
       "functions": [
@@ -600,10 +676,11 @@
           "point_ids": [
             "E-B3-03"
           ],
-          "behavior": "Always-available selected charging provision; bedtime scene never cuts this outlet or fan. Existing portable lamps retain local controls; simultaneous lamp/charging plug fit to be reviewed.",
+          "behavior": "Dedicated bedside lamp outlet; local lamp switch retained. Bedtime lighting controls never interrupt this socket.",
           "id": "EB-B3-BED-A-F01",
           "slot": 0,
-          "span": 2
+          "span": 2,
+          "row": 0
         },
         {
           "label": "Ambient",
@@ -618,7 +695,8 @@
           "behavior": "Bedtime control covers ambient AND the adjacent independently identified cove function. Desired coordinated all-lights-off scene with entry; never interrupt charging or fan. Architecture unselected, not wiring or backup transfer.",
           "id": "EB-B3-BED-A-F03",
           "slot": 2,
-          "span": 1
+          "span": 1,
+          "row": 0
         },
         {
           "label": "Cove",
@@ -633,7 +711,24 @@
           "behavior": "Bedside bedtime cove off/on alongside ambient; desired coordinated all-lights-off, not a switched socket/fan supply. Cove mains-only remains distinct from selected ambient backup.",
           "id": "EB-B3-BED-A-F04",
           "slot": 3,
-          "span": 1
+          "span": 1,
+          "row": 0
+        },
+        {
+          "label": "Phone charger socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B3-03"
+          ],
+          "behavior": "Separate always-available charger socket on the SAME shared bedside plate as the lamp socket and bedtime controls. No splitter; actual charger/plug fit and circuit selection need approval.",
+          "id": "EB-B3-BED-A-F05",
+          "slot": 0,
+          "span": 2,
+          "row": 1
         }
       ],
       "reason_ids": [
@@ -647,7 +742,7 @@
       "node_name": "BOARD_EB-B3-BED-B",
       "position_web_m": [
         3.516708,
-        0.664,
+        0.629,
         -3.615
       ],
       "normal_web": [
@@ -655,10 +750,10 @@
         -0.0,
         0.0
       ],
-      "height_aff_mm": 650,
+      "height_aff_mm": 615,
       "size_mm": [
         120.0,
-        90.0,
+        160.0,
         12.0
       ],
       "functions": [
@@ -672,10 +767,11 @@
           "point_ids": [
             "E-B3-01"
           ],
-          "behavior": "Always-available selected charging provision; bedtime scene never cuts this outlet or fan. Existing portable lamps retain local controls; simultaneous lamp/charging plug fit to be reviewed.",
+          "behavior": "Dedicated bedside lamp outlet; local lamp switch retained. Bedtime lighting controls never interrupt this socket.",
           "id": "EB-B3-BED-B-F01",
           "slot": 0,
-          "span": 2
+          "span": 2,
+          "row": 0
         },
         {
           "label": "Ambient",
@@ -690,7 +786,8 @@
           "behavior": "Bedtime control covers ambient AND the adjacent independently identified cove function. Desired coordinated all-lights-off scene with entry; never interrupt charging or fan. Architecture unselected, not wiring or backup transfer.",
           "id": "EB-B3-BED-B-F03",
           "slot": 2,
-          "span": 1
+          "span": 1,
+          "row": 0
         },
         {
           "label": "Cove",
@@ -705,7 +802,24 @@
           "behavior": "Bedside bedtime cove off/on alongside ambient; desired coordinated all-lights-off, not a switched socket/fan supply. Cove mains-only remains distinct from selected ambient backup.",
           "id": "EB-B3-BED-B-F04",
           "slot": 3,
-          "span": 1
+          "span": 1,
+          "row": 0
+        },
+        {
+          "label": "Phone charger socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-B3-01"
+          ],
+          "behavior": "Separate always-available charger socket on the SAME shared bedside plate as the lamp socket and bedtime controls. No splitter; actual charger/plug fit and circuit selection need approval.",
+          "id": "EB-B3-BED-B-F05",
+          "slot": 0,
+          "span": 2,
+          "row": 1
         }
       ],
       "reason_ids": [
@@ -2402,15 +2516,15 @@
       "node_name": "BOARD_EB-HA-WIFI",
       "position_web_m": [
         4.7643,
-        0.914,
-        -9.78
+        0.449,
+        -7.79
       ],
       "normal_web": [
         -1.0,
         -0.0,
         0.0
       ],
-      "height_aff_mm": 900,
+      "height_aff_mm": 435,
       "size_mm": [
         165.0,
         90.0,
@@ -2836,16 +2950,16 @@
       "room": "kitchen",
       "node_name": "BOARD_EB-KI-FRIDGE-CONN",
       "position_web_m": [
-        3.592932,
-        0.464,
-        -15.63
+        3.496412,
+        0.414,
+        -15.2
       ],
       "normal_web": [
         -1.0,
         -0.0,
         0.0
       ],
-      "height_aff_mm": 450,
+      "height_aff_mm": 400,
       "size_mm": [
         75.0,
         90.0,
@@ -3004,16 +3118,16 @@
       "room": "kitchen",
       "node_name": "BOARD_EB-KI-RO-CONN",
       "position_web_m": [
-        0.140412,
-        0.464,
-        -13.52
+        1.2,
+        0.794,
+        -13.028784
       ],
       "normal_web": [
-        1.0,
         -0.0,
-        0.0
+        -0.0,
+        -1.0
       ],
-      "height_aff_mm": 450,
+      "height_aff_mm": 780,
       "size_mm": [
         75.0,
         90.0,
@@ -3263,6 +3377,120 @@
       ],
       "reason_ids": [
         "R-EB-B1-TV"
+      ]
+    },
+    {
+      "id": "EB-HA-AV-AUX",
+      "label": "AV receiver and powered subwoofer",
+      "room": "lounge",
+      "node_name": "BOARD_EB-HA-AV-AUX",
+      "position_web_m": [
+        4.7643,
+        0.449,
+        -7.55
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 435,
+      "size_mm": [
+        120.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "AV receiver socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-HA-15"
+          ],
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-HA-AV-AUX-F01",
+          "slot": 0,
+          "span": 2
+        },
+        {
+          "label": "Subwoofer socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-HA-16"
+          ],
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-HA-AV-AUX-F02",
+          "slot": 2,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-HA-AV-AUX"
+      ]
+    },
+    {
+      "id": "EB-HA-NET-AUX",
+      "label": "CCTV network equipment",
+      "room": "lounge",
+      "node_name": "BOARD_EB-HA-NET-AUX",
+      "position_web_m": [
+        4.7643,
+        0.284,
+        -7.78
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "height_aff_mm": 270,
+      "size_mm": [
+        120.0,
+        90.0,
+        12.0
+      ],
+      "functions": [
+        {
+          "label": "NVR socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-HA-17"
+          ],
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-HA-NET-AUX-F01",
+          "slot": 0,
+          "span": 2
+        },
+        {
+          "label": "PoE switch socket",
+          "kind": "socket",
+          "fixture_group_ids": [
+            "UTILITY"
+          ],
+          "backup_preference": "mains-only",
+          "point_ids": [
+            "E-HA-18"
+          ],
+          "behavior": "Product, protection, segregation and final installation are installer decisions.",
+          "id": "EB-HA-NET-AUX-F02",
+          "slot": 2,
+          "span": 2
+        }
+      ],
+      "reason_ids": [
+        "R-EB-HA-NET-AUX"
       ]
     }
   ],
@@ -3751,7 +3979,7 @@
     },
     {
       "id": "R-EB-B1-BED-A",
-      "summary": "Compact charging / bedtime station beside the actual table, below lamp shade, outside headboard; no raised over-lamp reach. 650mm AFF provisional face center above 490mm existing table; middle room uses separate 220x280x25mm compact shelf reservations with tops at516.5mm world /502.5mmAFF.",
+      "summary": "One aligned shared bedside plate with separate lamp and phone sockets plus bedtime controls, outside the headboard and below the lamp shade. One compact two-row 120x160mm shared plate, center615mmAFF: original lamp/control row remains650mmAFF; separate phone socket row580mmAFF. Middle shelves retain their existing positions.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -3761,14 +3989,14 @@
       ],
       "constraints": [
         "Furniture-first owner mockup required: comfortable reach is not certified by collision tests.",
-        "Compact ordinary socket retained; optional USB omitted rather than crowding usable plug access.",
+        "Two simultaneous ordinary sockets at70mm vertical pitch; selected chargers/plug tails must be mocked up. One compatible shared two-row backbox/faceplate, not separate floating plates.",
         "No aisle or bed relocation. Middle shelves and six station locations remain provisional.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-B1-BED-B",
-      "summary": "Compact charging / bedtime station beside the actual table, below lamp shade, outside headboard; no raised over-lamp reach. 650mm AFF provisional face center above 490mm existing table; middle room uses separate 220x280x25mm compact shelf reservations with tops at516.5mm world /502.5mmAFF.",
+      "summary": "One aligned shared bedside plate with separate lamp and phone sockets plus bedtime controls, outside the headboard and below the lamp shade. One compact two-row 120x160mm shared plate, center615mmAFF: original lamp/control row remains650mmAFF; separate phone socket row580mmAFF. Middle shelves retain their existing positions.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -3778,14 +4006,14 @@
       ],
       "constraints": [
         "Furniture-first owner mockup required: comfortable reach is not certified by collision tests.",
-        "Compact ordinary socket retained; optional USB omitted rather than crowding usable plug access.",
+        "Two simultaneous ordinary sockets at70mm vertical pitch; selected chargers/plug tails must be mocked up. One compatible shared two-row backbox/faceplate, not separate floating plates.",
         "No aisle or bed relocation. Middle shelves and six station locations remain provisional.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-B2-BED-A",
-      "summary": "Compact charging / bedtime station beside the actual table, below lamp shade, outside headboard; no raised over-lamp reach. 650mm AFF provisional face center above 490mm existing table; middle room uses separate 220x280x25mm compact shelf reservations with tops at516.5mm world /502.5mmAFF.",
+      "summary": "One aligned shared bedside plate with separate lamp and phone sockets plus bedtime controls, outside the headboard and below the lamp shade. One compact two-row 120x160mm shared plate, center615mmAFF: original lamp/control row remains650mmAFF; separate phone socket row580mmAFF. Middle shelves retain their existing positions.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -3795,14 +4023,14 @@
       ],
       "constraints": [
         "Furniture-first owner mockup required: comfortable reach is not certified by collision tests.",
-        "Compact ordinary socket retained; optional USB omitted rather than crowding usable plug access.",
+        "Two simultaneous ordinary sockets at70mm vertical pitch; selected chargers/plug tails must be mocked up. One compatible shared two-row backbox/faceplate, not separate floating plates.",
         "No aisle or bed relocation. Middle shelves and six station locations remain provisional.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-B2-BED-B",
-      "summary": "Compact charging / bedtime station beside the actual table, below lamp shade, outside headboard; no raised over-lamp reach. 650mm AFF provisional face center above 490mm existing table; middle room uses separate 220x280x25mm compact shelf reservations with tops at516.5mm world /502.5mmAFF.",
+      "summary": "One aligned shared bedside plate with separate lamp and phone sockets plus bedtime controls, outside the headboard and below the lamp shade. One compact two-row 120x160mm shared plate, center615mmAFF: original lamp/control row remains650mmAFF; separate phone socket row580mmAFF. Middle shelves retain their existing positions.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -3812,14 +4040,14 @@
       ],
       "constraints": [
         "Furniture-first owner mockup required: comfortable reach is not certified by collision tests.",
-        "Compact ordinary socket retained; optional USB omitted rather than crowding usable plug access.",
+        "Two simultaneous ordinary sockets at70mm vertical pitch; selected chargers/plug tails must be mocked up. One compatible shared two-row backbox/faceplate, not separate floating plates.",
         "No aisle or bed relocation. Middle shelves and six station locations remain provisional.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-B3-BED-A",
-      "summary": "Compact charging / bedtime station beside the actual table, below lamp shade, outside headboard; no raised over-lamp reach. 650mm AFF provisional face center above 490mm existing table; middle room uses separate 220x280x25mm compact shelf reservations with tops at516.5mm world /502.5mmAFF.",
+      "summary": "One aligned shared bedside plate with separate lamp and phone sockets plus bedtime controls, outside the headboard and below the lamp shade. One compact two-row 120x160mm shared plate, center615mmAFF: original lamp/control row remains650mmAFF; separate phone socket row580mmAFF. Middle shelves retain their existing positions.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -3829,14 +4057,14 @@
       ],
       "constraints": [
         "Furniture-first owner mockup required: comfortable reach is not certified by collision tests.",
-        "Compact ordinary socket retained; optional USB omitted rather than crowding usable plug access.",
+        "Two simultaneous ordinary sockets at70mm vertical pitch; selected chargers/plug tails must be mocked up. One compatible shared two-row backbox/faceplate, not separate floating plates.",
         "No aisle or bed relocation. Middle shelves and six station locations remain provisional.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
     {
       "id": "R-EB-B3-BED-B",
-      "summary": "Compact charging / bedtime station beside the actual table, below lamp shade, outside headboard; no raised over-lamp reach. 650mm AFF provisional face center above 490mm existing table; middle room uses separate 220x280x25mm compact shelf reservations with tops at516.5mm world /502.5mmAFF.",
+      "summary": "One aligned shared bedside plate with separate lamp and phone sockets plus bedtime controls, outside the headboard and below the lamp shade. One compact two-row 120x160mm shared plate, center615mmAFF: original lamp/control row remains650mmAFF; separate phone socket row580mmAFF. Middle shelves retain their existing positions.",
       "source_ids": [
         "INT-ADA-REACH",
         "INT-UD-BED",
@@ -3846,7 +4074,7 @@
       ],
       "constraints": [
         "Furniture-first owner mockup required: comfortable reach is not certified by collision tests.",
-        "Compact ordinary socket retained; optional USB omitted rather than crowding usable plug access.",
+        "Two simultaneous ordinary sockets at70mm vertical pitch; selected chargers/plug tails must be mocked up. One compatible shared two-row backbox/faceplate, not separate floating plates.",
         "No aisle or bed relocation. Middle shelves and six station locations remain provisional.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
@@ -4256,7 +4484,7 @@
     },
     {
       "id": "R-EB-HA-WIFI",
-      "summary": "Two simultaneous endpoints only for ONT and router; separate from mains media and passive data. Eastwall north of speakerendY9.615 and backingendY9.45, adjacent actualv015 network cavity.",
+      "summary": "Accessible dry service sockets inside the existing left console bay, behind its opening front. No visible adapter stack beside the designer wall; no splitter. Lift-off rear service lining and actual cable entries are modeled in the house revision. Eastwall north of speakerendY9.615 and backingendY9.45, adjacent actualv015 network cavity.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4265,9 +4493,7 @@
         "PROJECT"
       ],
       "constraints": [
-        "Power/data segregation and module barriers require selected system.",
-        "Shared PoE/NVR/camera backup NOT authorized.",
-        "Lead reach/containment unresolved, not extension-board design.",
+        "Open the existing console front before unplugging; supplier backbox, adapter spacing and reachable isolation need a full-size service mockup. ONT/router alone retain requested backup; new AV/NVR/PoE remain mains-only.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },
@@ -4426,7 +4652,7 @@
     },
     {
       "id": "R-EB-KI-FRIDGE-CONN",
-      "summary": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment. Owner requested equipment-side reservations and furniture-off inspection. Concealment is reported, not treated as everyday hand access.",
+      "summary": "Adjacent pantry service socket below the shelf, accessible through the pantry door; refrigerator lead uses a real opening in the shared divider. Edge-protection trim is to be specified. Remote labelled isolation remains at the kitchen service bank. Owner requested equipment-side reservations and furniture-off inspection. Concealment is reported, not treated as everyday hand access.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4486,7 +4712,7 @@
     },
     {
       "id": "R-EB-KI-RO-CONN",
-      "summary": "Provisional connection reservation, NOT an ordinary socket or selected rated fitting. Concealed by modeled equipment/cabinetry; requires a deliberately accessible service compartment, safe plug/cable clearance and selected appliance manual review. No installation mark or wiring route. Do not trap a plug behind a fitted appliance or put a connection in a wet/heat-exposed compartment. Owner requested equipment-side reservations and furniture-off inspection. Concealment is reported, not treated as everyday hand access.",
+      "summary": "Upper-right purifier service compartment, above the modeled purifier/leak tray and away from the adjacent sink. Accessible by removing the existing lift-off service front; selected enclosure, moisture exposure and product lead reach require approval. Owner requested equipment-side reservations and furniture-off inspection. Concealment is reported, not treated as everyday hand access.",
       "source_ids": [
         "IND-CEA-2023",
         "IND-CEA-2026",
@@ -4572,6 +4798,36 @@
       ],
       "constraints": [
         "Select TV size, viewing height and bracket before installation; separate mains/data compartments and accessible cable bend space required.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-HA-AV-AUX",
+      "summary": "Accessible dry service sockets inside the existing left console bay, behind its opening front. No visible adapter stack beside the designer wall; no splitter. Lift-off rear service lining and actual cable entries are modeled in the house revision. Owner authorized completing wired 5.1 and media/network power. Existing architecture and equipment retained.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-CONTROLS",
+        "MFR-USB-FORMAT",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Open the existing console front before unplugging; supplier backbox, adapter spacing and reachable isolation need a full-size service mockup. ONT/router alone retain requested backup; new AV/NVR/PoE remain mains-only.",
+        "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
+      ]
+    },
+    {
+      "id": "R-EB-HA-NET-AUX",
+      "summary": "Accessible dry service sockets inside the existing left console bay, behind its opening front. No visible adapter stack beside the designer wall; no splitter. Lift-off rear service lining and actual cable entries are modeled in the house revision. Owner authorized completing wired 5.1 and media/network power. Existing architecture and equipment retained.",
+      "source_ids": [
+        "IND-CEA-2023",
+        "IND-CEA-2026",
+        "INT-UD-CONTROLS",
+        "MFR-USB-FORMAT",
+        "PROJECT"
+      ],
+      "constraints": [
+        "Open the existing console front before unplugging; supplier backbox, adapter spacing and reachable isolation need a full-size service mockup. ONT/router alone retain requested backup; new AV/NVR/PoE remain mains-only.",
         "Proposed module/plate fit and final electrical protection require selected products and qualified site review."
       ]
     },

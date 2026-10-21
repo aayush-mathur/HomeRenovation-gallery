@@ -1,0 +1,2487 @@
+{
+  "version": 1,
+  "id": "conventional-controls-v001",
+  "base_source_sha256": "ddf35d094002b9272ff3c2ce68da5b7d65233365e3585f3c13f8ed7c04ba4637",
+  "base_model_sha256": "f8da33a6aae86eacfb79ee676c1dda9cc88457d36f930fcdc8c6218b33727b47",
+  "board_manifest_sha256": "10a483ec30cc16ce51bdbff297c6775e80a4967a90b9c08c073abdfbdb9aa5cc",
+  "decision": "conventional-wired-smart-ready",
+  "decision_date": "2026-10-21",
+  "status": "functional-review-not-for-installation",
+  "groups": [
+    {
+      "id": "B1-COVE",
+      "room": "bedroom_1",
+      "label": "Soft light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          5.75,
+          2.8869999999999996,
+          -16.0
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "B1-AMBIENT",
+      "room": "bedroom_1",
+      "label": "Main light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          5.74,
+          2.916,
+          -15.08
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "B2-COVE",
+      "room": "bedroom_2",
+      "label": "Soft light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          5.869999999999999,
+          2.8869999999999996,
+          -8.02
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "B2-AMBIENT",
+      "room": "bedroom_2",
+      "label": "Main light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          6.43,
+          2.916,
+          -8.17
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "B3-COVE",
+      "room": "bedroom_3",
+      "label": "Soft light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          4.78,
+          2.8869999999999996,
+          -2.52
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "B3-AMBIENT",
+      "room": "bedroom_3",
+      "label": "Main light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          5.88,
+          2.916,
+          -2.42
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "DR-COVE",
+      "room": "drawing",
+      "label": "Soft light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          1.65,
+          2.8869999999999996,
+          -2.5500000000000003
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "DR-AMBIENT",
+      "room": "drawing",
+      "label": "Main light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          1.8250000000000002,
+          2.916,
+          -2.4850000000000003
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "B1-FAN",
+      "room": "bedroom_1",
+      "label": "Fan",
+      "kind": "fan",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          5.75,
+          2.6020000000000003,
+          -16.0000005
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "B1-AC",
+      "room": "bedroom_1",
+      "label": "Existing back bedroom AC",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          3.8455,
+          2.55,
+          -15.55
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "B2-FAN",
+      "room": "bedroom_2",
+      "label": "Fan",
+      "kind": "fan",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          5.87,
+          2.6020000000000003,
+          -8.02
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "B2-AC",
+      "room": "bedroom_2",
+      "label": "Existing middle bedroom AC",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          7.93649959564209,
+          2.5500001907348633,
+          -8.84999942779541
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "B3-FAN",
+      "room": "bedroom_3",
+      "label": "Fan",
+      "kind": "fan",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          4.779999999999999,
+          2.6020000000000003,
+          -2.52
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "B3-AC",
+      "room": "bedroom_3",
+      "label": "Existing front bedroom AC",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          5.55,
+          2.55,
+          -4.9425
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "DR-FAN",
+      "room": "drawing",
+      "label": "Fan",
+      "kind": "fan",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          1.65,
+          2.6020000000000003,
+          -2.55
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "DR-AC",
+      "room": "drawing",
+      "label": "Existing drawing AC",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          1.1,
+          2.55,
+          -4.9425
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "HA-FAN",
+      "room": "lounge",
+      "label": "Fan",
+      "kind": "fan",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          3.62,
+          2.6020000000000003,
+          -7.7
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "HA-AC",
+      "room": "lounge",
+      "label": "Existing hall AC",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          0.2505,
+          2.56,
+          -8.6
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "HA-LEFT",
+      "room": "lounge",
+      "label": "Main / walking light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          1.16,
+          2.8869999999999996,
+          -7.6
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "HA-RIGHT",
+      "room": "lounge",
+      "label": "Soft / seating light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          3.62,
+          2.8869999999999996,
+          -7.699999999999999
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "B1-VESTIBULE",
+      "room": "bedroom_1",
+      "label": "Bedroom entrance light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          4.25,
+          2.8899999999999997,
+          -13.620000000000001
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "EN-AMBIENT",
+      "room": "lobby",
+      "label": "Entrance light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          3.3499999999999996,
+          2.9189999999999996,
+          -11.44999975
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "DI-LIGHTWELL",
+      "room": "dining",
+      "label": "Dining light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          1.2810000000000001,
+          3.702,
+          -11.6000005
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "KI-AMBIENT",
+      "room": "kitchen",
+      "label": "Kitchen main light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          2.25,
+          2.9189999999999996,
+          -14.875
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "DE-LIGHT",
+      "room": "dressing_3",
+      "label": "Dressing light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          7.01,
+          2.8899999999999997,
+          -3.065
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "HA-MANDIR",
+      "room": "lounge",
+      "label": "Existing mandir electric light",
+      "kind": "light",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          0.643626,
+          2.292,
+          -6.300018
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "DR-DISPLAY",
+      "room": "drawing",
+      "label": "Display light",
+      "kind": "light",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          0.46799999999999997,
+          2.146,
+          -2.5700000000000003
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "B2-TASK",
+      "room": "bedroom_2",
+      "label": "Existing study task lamp",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          7.714999499999999,
+          1.153,
+          -9.49
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "HA-TV",
+      "room": "lounge",
+      "label": "Existing TV / set-top equipment",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          4.66,
+          1.34,
+          -8.3199995
+        ],
+        [
+          4.625,
+          0.5775,
+          -8.95
+        ]
+      ],
+      "fitting_count": 2
+    },
+    {
+      "id": "HA-WIFI",
+      "room": "lounge",
+      "label": "Existing ONT / router; AP feed pending",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          4.619999999999999,
+          0.4625,
+          -8.945
+        ],
+        [
+          4.615,
+          0.31,
+          -8.945
+        ]
+      ],
+      "fitting_count": 2
+    },
+    {
+      "id": "DI-DOCK",
+      "room": "dining",
+      "label": "Existing dining-side robot dock",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          0.27749999999999997,
+          0.371,
+          -10.5
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "KI-TASK",
+      "room": "kitchen",
+      "label": "Counter task light",
+      "kind": "light",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          3.242412,
+          1.5835,
+          -17.0517845
+        ],
+        [
+          0.17941200000000002,
+          1.5295,
+          -13.526784
+        ],
+        [
+          3.229412,
+          1.593,
+          -16.226783
+        ],
+        [
+          3.229412,
+          1.593,
+          -14.0517845
+        ],
+        [
+          0.439412,
+          1.593,
+          -14.2317835
+        ],
+        [
+          0.439412,
+          1.593,
+          -15.651784
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "KI-DISPLAY",
+      "room": "kitchen",
+      "label": "Cabinet display light",
+      "kind": "light",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          2.969912,
+          0.5115000000000001,
+          -13.1867845
+        ],
+        [
+          2.969912,
+          0.9165000000000001,
+          -13.1867845
+        ],
+        [
+          2.969912,
+          1.3215,
+          -13.1867845
+        ],
+        [
+          2.969912,
+          1.7265000000000001,
+          -13.1867845
+        ],
+        [
+          2.969912,
+          2.1215,
+          -13.1867845
+        ],
+        [
+          2.969912,
+          2.3715,
+          -13.1867845
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "B1-LAMP-A",
+      "room": "bedroom_1",
+      "label": "Existing bedside A lamp",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          4.735585,
+          0.767,
+          -17.373205499999997
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "B1-LAMP-B",
+      "room": "bedroom_1",
+      "label": "Existing bedside B lamp",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          7.275637,
+          0.767,
+          -17.373205499999997
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "B3-LAMP-A",
+      "room": "bedroom_3",
+      "label": "Existing bedside A lamp",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          3.7490040000000002,
+          0.767,
+          -1.334232
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "B3-LAMP-B",
+      "room": "bedroom_3",
+      "label": "Existing bedside B lamp",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          3.7490040000000002,
+          0.767,
+          -3.698892
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "BA1-LIGHT",
+      "room": "bathroom_1",
+      "label": "Bathroom main light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          5.83,
+          2.8899999999999997,
+          -13.3
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "BA1-EXHAUST",
+      "room": "bathroom_1",
+      "label": "Existing provisional bath exhaust",
+      "kind": "fan",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          6.793308,
+          2.067,
+          -13.355588000000001
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "BA1-GEYSER",
+      "room": "bathroom_1",
+      "label": "Existing provisional electric geyser",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          5.165,
+          2.41,
+          -13.090000499999999
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "BA2-LIGHT",
+      "room": "bathroom_2",
+      "label": "Bathroom main light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          7.49,
+          2.8899999999999997,
+          -5.115
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "BA2-EXHAUST",
+      "room": "bathroom_2",
+      "label": "Existing provisional bath exhaust",
+      "kind": "fan",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          8.100918,
+          2.067,
+          -4.213279999999999
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "BA2-GEYSER",
+      "room": "bathroom_2",
+      "label": "Existing provisional electric geyser",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          7.155,
+          2.41,
+          -5.02
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "BA3-LIGHT",
+      "room": "bathroom_3",
+      "label": "Bathroom main light",
+      "kind": "light",
+      "endpoint_basis": "functional-zone-only",
+      "points_web_m": [
+        [
+          7.119999999999999,
+          2.8899999999999997,
+          -0.825
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "BA3-EXHAUST",
+      "room": "bathroom_3",
+      "label": "Existing provisional bath exhaust",
+      "kind": "fan",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          8.100918,
+          2.067,
+          -0.301412
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "BA3-GEYSER",
+      "room": "bathroom_3",
+      "label": "Existing provisional electric geyser",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          6.7,
+          2.41,
+          -0.99
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "KI-FRIDGE",
+      "room": "kitchen",
+      "label": "Fridge connection requirement",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          3.225912,
+          0.96,
+          -15.6267845
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "KI-MICROWAVE",
+      "room": "kitchen",
+      "label": "Microwave connection requirement",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          1.628412,
+          1.5,
+          -16.2217845
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "KI-OTG",
+      "room": "kitchen",
+      "label": "OTG connection requirement",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          1.628412,
+          1.02,
+          -16.226784
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "KI-DISHWASHER",
+      "room": "kitchen",
+      "label": "Dishwasher connection requirement",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          3.228412,
+          0.44,
+          -16.2267835
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "KI-RO",
+      "room": "kitchen",
+      "label": "Generic undercounter RO; no brand/model",
+      "kind": "equipment",
+      "endpoint_basis": "modeled-object-center",
+      "points_web_m": [
+        [
+          0.9750000000000001,
+          0.39,
+          -13.305
+        ]
+      ],
+      "fitting_count": 1
+    },
+    {
+      "id": "UTILITY",
+      "room": "shared",
+      "label": "Portable use / product not selected",
+      "kind": "equipment",
+      "endpoint_basis": "unresolved",
+      "points_web_m": [],
+      "fitting_count": null
+    },
+    {
+      "id": "DATA",
+      "room": "shared",
+      "label": "Passive data termination / route not selected",
+      "kind": "equipment",
+      "endpoint_basis": "unresolved",
+      "points_web_m": [],
+      "fitting_count": null
+    },
+    {
+      "id": "B1-MIRROR",
+      "room": "bedroom_1",
+      "label": "Mirror task light",
+      "kind": "light",
+      "endpoint_basis": "provisional-accessory",
+      "points_web_m": [
+        [
+          3.82,
+          2.17,
+          -15.815
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "B2-MIRROR",
+      "room": "bedroom_2",
+      "label": "Mirror task light",
+      "kind": "light",
+      "endpoint_basis": "provisional-accessory",
+      "points_web_m": [
+        [
+          6.325,
+          2.13,
+          -5.28
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "B3-MIRROR",
+      "room": "bedroom_3",
+      "label": "Mirror task light",
+      "kind": "light",
+      "endpoint_basis": "provisional-accessory",
+      "points_web_m": [
+        [
+          6.79,
+          2.17,
+          -4.56
+        ]
+      ],
+      "fitting_count": null
+    },
+    {
+      "id": "BA1-MIRROR",
+      "room": "bathroom_1",
+      "label": "Mirror task light",
+      "kind": "light",
+      "endpoint_basis": "unresolved",
+      "points_web_m": [],
+      "fitting_count": null
+    },
+    {
+      "id": "BA2-MIRROR",
+      "room": "bathroom_2",
+      "label": "Mirror task light",
+      "kind": "light",
+      "endpoint_basis": "unresolved",
+      "points_web_m": [],
+      "fitting_count": null
+    },
+    {
+      "id": "BA3-MIRROR",
+      "room": "bathroom_3",
+      "label": "Mirror task light",
+      "kind": "light",
+      "endpoint_basis": "unresolved",
+      "points_web_m": [],
+      "fitting_count": null
+    }
+  ],
+  "controls": [
+    {
+      "id": "EB-B1-ENTRY-F01",
+      "board_id": "EB-B1-ENTRY",
+      "room": "bedroom_1",
+      "label": "Main light + Bedroom entrance light",
+      "kind": "switch",
+      "group_ids": [
+        "B1-AMBIENT",
+        "B1-VESTIBULE"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B1-ENTRY-F02",
+      "board_id": "EB-B1-ENTRY",
+      "room": "bedroom_1",
+      "label": "Soft light",
+      "kind": "switch",
+      "group_ids": [
+        "B1-COVE"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B1-ENTRY-F03",
+      "board_id": "EB-B1-ENTRY",
+      "room": "bedroom_1",
+      "label": "Fan",
+      "kind": "fan-control",
+      "group_ids": [
+        "B1-FAN"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B1-ENTRY-F04",
+      "board_id": "EB-B1-ENTRY",
+      "room": "bedroom_1",
+      "label": "AC isolation",
+      "kind": "isolation-control",
+      "group_ids": [
+        "B1-AC"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-ENTRY-F01",
+      "board_id": "EB-B2-ENTRY",
+      "room": "bedroom_2",
+      "label": "Main light",
+      "kind": "switch",
+      "group_ids": [
+        "B2-AMBIENT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B2-ENTRY-F02",
+      "board_id": "EB-B2-ENTRY",
+      "room": "bedroom_2",
+      "label": "Soft light",
+      "kind": "switch",
+      "group_ids": [
+        "B2-COVE"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-ENTRY-F03",
+      "board_id": "EB-B2-ENTRY",
+      "room": "bedroom_2",
+      "label": "Fan",
+      "kind": "fan-control",
+      "group_ids": [
+        "B2-FAN"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B2-ENTRY-F04",
+      "board_id": "EB-B2-ENTRY",
+      "room": "bedroom_2",
+      "label": "AC isolation",
+      "kind": "isolation-control",
+      "group_ids": [
+        "B2-AC"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B3-ENTRY-F01",
+      "board_id": "EB-B3-ENTRY",
+      "room": "bedroom_3",
+      "label": "Main light",
+      "kind": "switch",
+      "group_ids": [
+        "B3-AMBIENT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B3-ENTRY-F02",
+      "board_id": "EB-B3-ENTRY",
+      "room": "bedroom_3",
+      "label": "Soft light",
+      "kind": "switch",
+      "group_ids": [
+        "B3-COVE"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B3-ENTRY-F03",
+      "board_id": "EB-B3-ENTRY",
+      "room": "bedroom_3",
+      "label": "Fan",
+      "kind": "fan-control",
+      "group_ids": [
+        "B3-FAN"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B3-ENTRY-F04",
+      "board_id": "EB-B3-ENTRY",
+      "room": "bedroom_3",
+      "label": "AC isolation",
+      "kind": "isolation-control",
+      "group_ids": [
+        "B3-AC"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B1-BED-A-F01",
+      "board_id": "EB-B1-BED-A",
+      "room": "bedroom_1",
+      "label": "Charging socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B1-BED-A-F03",
+      "board_id": "EB-B1-BED-A",
+      "room": "bedroom_1",
+      "label": "Main light + Bedroom entrance light",
+      "kind": "switch",
+      "group_ids": [
+        "B1-AMBIENT",
+        "B1-VESTIBULE"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B1-BED-A-F04",
+      "board_id": "EB-B1-BED-A",
+      "room": "bedroom_1",
+      "label": "Soft light",
+      "kind": "switch",
+      "group_ids": [
+        "B1-COVE"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B1-BED-A-F05",
+      "board_id": "EB-B1-BED-A",
+      "room": "bedroom_1",
+      "label": "Phone charger socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B1-BED-B-F01",
+      "board_id": "EB-B1-BED-B",
+      "room": "bedroom_1",
+      "label": "Charging socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B1-BED-B-F03",
+      "board_id": "EB-B1-BED-B",
+      "room": "bedroom_1",
+      "label": "Main light + Bedroom entrance light",
+      "kind": "switch",
+      "group_ids": [
+        "B1-AMBIENT",
+        "B1-VESTIBULE"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B1-BED-B-F04",
+      "board_id": "EB-B1-BED-B",
+      "room": "bedroom_1",
+      "label": "Soft light",
+      "kind": "switch",
+      "group_ids": [
+        "B1-COVE"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B1-BED-B-F05",
+      "board_id": "EB-B1-BED-B",
+      "room": "bedroom_1",
+      "label": "Phone charger socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-BED-A-F01",
+      "board_id": "EB-B2-BED-A",
+      "room": "bedroom_2",
+      "label": "Charging socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B2-BED-A-F03",
+      "board_id": "EB-B2-BED-A",
+      "room": "bedroom_2",
+      "label": "Main light",
+      "kind": "switch",
+      "group_ids": [
+        "B2-AMBIENT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B2-BED-A-F04",
+      "board_id": "EB-B2-BED-A",
+      "room": "bedroom_2",
+      "label": "Soft light",
+      "kind": "switch",
+      "group_ids": [
+        "B2-COVE"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-BED-A-F05",
+      "board_id": "EB-B2-BED-A",
+      "room": "bedroom_2",
+      "label": "Phone charger socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-BED-B-F01",
+      "board_id": "EB-B2-BED-B",
+      "room": "bedroom_2",
+      "label": "Charging socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B2-BED-B-F03",
+      "board_id": "EB-B2-BED-B",
+      "room": "bedroom_2",
+      "label": "Main light",
+      "kind": "switch",
+      "group_ids": [
+        "B2-AMBIENT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B2-BED-B-F04",
+      "board_id": "EB-B2-BED-B",
+      "room": "bedroom_2",
+      "label": "Soft light",
+      "kind": "switch",
+      "group_ids": [
+        "B2-COVE"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-BED-B-F05",
+      "board_id": "EB-B2-BED-B",
+      "room": "bedroom_2",
+      "label": "Phone charger socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B3-BED-A-F01",
+      "board_id": "EB-B3-BED-A",
+      "room": "bedroom_3",
+      "label": "Charging socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B3-BED-A-F03",
+      "board_id": "EB-B3-BED-A",
+      "room": "bedroom_3",
+      "label": "Main light",
+      "kind": "switch",
+      "group_ids": [
+        "B3-AMBIENT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B3-BED-A-F04",
+      "board_id": "EB-B3-BED-A",
+      "room": "bedroom_3",
+      "label": "Soft light",
+      "kind": "switch",
+      "group_ids": [
+        "B3-COVE"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B3-BED-A-F05",
+      "board_id": "EB-B3-BED-A",
+      "room": "bedroom_3",
+      "label": "Phone charger socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B3-BED-B-F01",
+      "board_id": "EB-B3-BED-B",
+      "room": "bedroom_3",
+      "label": "Charging socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B3-BED-B-F03",
+      "board_id": "EB-B3-BED-B",
+      "room": "bedroom_3",
+      "label": "Main light",
+      "kind": "switch",
+      "group_ids": [
+        "B3-AMBIENT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B3-BED-B-F04",
+      "board_id": "EB-B3-BED-B",
+      "room": "bedroom_3",
+      "label": "Soft light",
+      "kind": "switch",
+      "group_ids": [
+        "B3-COVE"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B3-BED-B-F05",
+      "board_id": "EB-B3-BED-B",
+      "room": "bedroom_3",
+      "label": "Phone charger socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B1-WORK-F01",
+      "board_id": "EB-B1-WORK",
+      "room": "bedroom_1",
+      "label": "Vanity / laptop socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B1-WORK-F02",
+      "board_id": "EB-B1-WORK",
+      "room": "bedroom_1",
+      "label": "Charger socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B1-WORK-F03",
+      "board_id": "EB-B1-WORK",
+      "room": "bedroom_1",
+      "label": "Data",
+      "kind": "data",
+      "group_ids": [
+        "DATA"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B1-WORK-F04",
+      "board_id": "EB-B1-WORK",
+      "room": "bedroom_1",
+      "label": "Mirror task light",
+      "kind": "switch",
+      "group_ids": [
+        "B1-MIRROR"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B1-CLEAN-F01",
+      "board_id": "EB-B1-CLEAN",
+      "room": "bedroom_1",
+      "label": "Utility socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-WORK-F01",
+      "board_id": "EB-B2-WORK",
+      "room": "bedroom_2",
+      "label": "Monitor socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-WORK-F04",
+      "board_id": "EB-B2-WORK",
+      "room": "bedroom_2",
+      "label": "Task lamp socket",
+      "kind": "socket",
+      "group_ids": [
+        "B2-TASK"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-WORK-F05",
+      "board_id": "EB-B2-WORK",
+      "room": "bedroom_2",
+      "label": "Laptop socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-WORK-F03",
+      "board_id": "EB-B2-WORK",
+      "room": "bedroom_2",
+      "label": "Data",
+      "kind": "data",
+      "group_ids": [
+        "DATA"
+      ],
+      "lighting_control": false,
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "EB-B2-VANITY-F01",
+      "board_id": "EB-B2-VANITY",
+      "room": "bedroom_2",
+      "label": "Grooming / utility socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-VANITY-F02",
+      "board_id": "EB-B2-VANITY",
+      "room": "bedroom_2",
+      "label": "Charger socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-VANITY-F03",
+      "board_id": "EB-B2-VANITY",
+      "room": "bedroom_2",
+      "label": "Mirror task light",
+      "kind": "switch",
+      "group_ids": [
+        "B2-MIRROR"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B3-WORK-F01",
+      "board_id": "EB-B3-WORK",
+      "room": "bedroom_3",
+      "label": "Vanity / laptop socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B3-WORK-F02",
+      "board_id": "EB-B3-WORK",
+      "room": "bedroom_3",
+      "label": "Charger socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B3-WORK-F03",
+      "board_id": "EB-B3-WORK",
+      "room": "bedroom_3",
+      "label": "Data",
+      "kind": "data",
+      "group_ids": [
+        "DATA"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B3-WORK-F04",
+      "board_id": "EB-B3-WORK",
+      "room": "bedroom_3",
+      "label": "Mirror task light",
+      "kind": "switch",
+      "group_ids": [
+        "B3-MIRROR"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B3-CLEAN-F01",
+      "board_id": "EB-B3-CLEAN",
+      "room": "bedroom_3",
+      "label": "Utility socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-DR-ENTRY-F01",
+      "board_id": "EB-DR-ENTRY",
+      "room": "drawing",
+      "label": "Main light",
+      "kind": "switch",
+      "group_ids": [
+        "DR-AMBIENT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-DR-ENTRY-F02",
+      "board_id": "EB-DR-ENTRY",
+      "room": "drawing",
+      "label": "Soft light + Display light",
+      "kind": "switch",
+      "group_ids": [
+        "DR-COVE",
+        "DR-DISPLAY"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-DR-ENTRY-F03",
+      "board_id": "EB-DR-ENTRY",
+      "room": "drawing",
+      "label": "Fan",
+      "kind": "fan-control",
+      "group_ids": [
+        "DR-FAN"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-DR-ENTRY-F04",
+      "board_id": "EB-DR-ENTRY",
+      "room": "drawing",
+      "label": "AC isolation",
+      "kind": "isolation-control",
+      "group_ids": [
+        "DR-AC"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-DR-SOFA-F01",
+      "board_id": "EB-DR-SOFA",
+      "room": "drawing",
+      "label": "Phone socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-DR-SOFA-F02",
+      "board_id": "EB-DR-SOFA",
+      "room": "drawing",
+      "label": "USB-C charging",
+      "kind": "usb-c",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-DR-CLEAN-F01",
+      "board_id": "EB-DR-CLEAN",
+      "room": "drawing",
+      "label": "Utility socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-ENTRY-F01",
+      "board_id": "EB-HA-ENTRY",
+      "room": "lounge",
+      "label": "Soft / seating light",
+      "kind": "switch",
+      "group_ids": [
+        "HA-RIGHT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-HA-ENTRY-F02",
+      "board_id": "EB-HA-ENTRY",
+      "room": "lounge",
+      "label": "Main / walking light",
+      "kind": "switch",
+      "group_ids": [
+        "HA-LEFT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-ENTRY-F03",
+      "board_id": "EB-HA-ENTRY",
+      "room": "lounge",
+      "label": "Fan",
+      "kind": "fan-control",
+      "group_ids": [
+        "HA-FAN"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-HA-ENTRY-F04",
+      "board_id": "EB-HA-ENTRY",
+      "room": "lounge",
+      "label": "AC isolation",
+      "kind": "isolation-control",
+      "group_ids": [
+        "HA-AC"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-CLEAN-F01",
+      "board_id": "EB-HA-CLEAN",
+      "room": "lounge",
+      "label": "Utility socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-SOFA-F01",
+      "board_id": "EB-HA-SOFA",
+      "room": "lounge",
+      "label": "Phone socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-HA-SOFA-F02",
+      "board_id": "EB-HA-SOFA",
+      "room": "lounge",
+      "label": "USB-C charging",
+      "kind": "usb-c",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-HA-MANDIR-F01",
+      "board_id": "EB-HA-MANDIR",
+      "room": "lounge",
+      "label": "Existing mandir electric light",
+      "kind": "switch",
+      "group_ids": [
+        "HA-MANDIR"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-MEDIA-F01",
+      "board_id": "EB-HA-MEDIA",
+      "room": "lounge",
+      "label": "TV socket",
+      "kind": "socket",
+      "group_ids": [
+        "HA-TV"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-MEDIA-F04",
+      "board_id": "EB-HA-MEDIA",
+      "room": "lounge",
+      "label": "Set-top socket",
+      "kind": "socket",
+      "group_ids": [
+        "HA-TV"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-DI-ENTRY-F01",
+      "board_id": "EB-DI-ENTRY",
+      "room": "dining",
+      "label": "Entrance light",
+      "kind": "switch",
+      "group_ids": [
+        "EN-AMBIENT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-DI-ENTRY-F02",
+      "board_id": "EB-DI-ENTRY",
+      "room": "dining",
+      "label": "Dining light",
+      "kind": "switch",
+      "group_ids": [
+        "DI-LIGHTWELL"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-DI-POWER-F01",
+      "board_id": "EB-DI-POWER",
+      "room": "dining",
+      "label": "Dock socket",
+      "kind": "socket",
+      "group_ids": [
+        "DI-DOCK"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-DI-POWER-F02",
+      "board_id": "EB-DI-POWER",
+      "room": "dining",
+      "label": "Utility socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-DI-POWER-F03",
+      "board_id": "EB-DI-POWER",
+      "room": "dining",
+      "label": "Charger socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-EN-ARRIVAL-F01",
+      "board_id": "EB-EN-ARRIVAL",
+      "room": "lounge",
+      "label": "Entrance light",
+      "kind": "switch",
+      "group_ids": [
+        "EN-AMBIENT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-EN-ARRIVAL-F02",
+      "board_id": "EB-EN-ARRIVAL",
+      "room": "lounge",
+      "label": "Soft / seating light",
+      "kind": "switch",
+      "group_ids": [
+        "HA-RIGHT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-KI-LIGHT-F01",
+      "board_id": "EB-KI-LIGHT",
+      "room": "kitchen",
+      "label": "Kitchen main light",
+      "kind": "switch",
+      "group_ids": [
+        "KI-AMBIENT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-KI-LIGHT-F02",
+      "board_id": "EB-KI-LIGHT",
+      "room": "kitchen",
+      "label": "Counter task light",
+      "kind": "switch",
+      "group_ids": [
+        "KI-TASK"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-LIGHT-F03",
+      "board_id": "EB-KI-LIGHT",
+      "room": "kitchen",
+      "label": "Cabinet display light",
+      "kind": "switch",
+      "group_ids": [
+        "KI-DISPLAY"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-POWER-F03",
+      "board_id": "EB-KI-POWER",
+      "room": "kitchen",
+      "label": "Kettle socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-POWER-F04",
+      "board_id": "EB-KI-POWER",
+      "room": "kitchen",
+      "label": "Toaster socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-POWER-F05",
+      "board_id": "EB-KI-POWER",
+      "room": "kitchen",
+      "label": "Mixer / spare socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-SERVICE-F01",
+      "board_id": "EB-KI-SERVICE",
+      "room": "kitchen",
+      "label": "Fridge",
+      "kind": "isolation-control",
+      "group_ids": [
+        "KI-FRIDGE"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-SERVICE-F02",
+      "board_id": "EB-KI-SERVICE",
+      "room": "kitchen",
+      "label": "Microwave",
+      "kind": "isolation-control",
+      "group_ids": [
+        "KI-MICROWAVE"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-SERVICE-F03",
+      "board_id": "EB-KI-SERVICE",
+      "room": "kitchen",
+      "label": "Otg",
+      "kind": "isolation-control",
+      "group_ids": [
+        "KI-OTG"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-SERVICE-F04",
+      "board_id": "EB-KI-SERVICE",
+      "room": "kitchen",
+      "label": "Dishwasher",
+      "kind": "isolation-control",
+      "group_ids": [
+        "KI-DISHWASHER"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-SERVICE-F05",
+      "board_id": "EB-KI-SERVICE",
+      "room": "kitchen",
+      "label": "Ro",
+      "kind": "isolation-control",
+      "group_ids": [
+        "KI-RO"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-BA1-DRY-F01",
+      "board_id": "EB-BA1-DRY",
+      "room": "bedroom_1",
+      "label": "Bathroom main light",
+      "kind": "switch",
+      "group_ids": [
+        "BA1-LIGHT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-BA1-DRY-F02",
+      "board_id": "EB-BA1-DRY",
+      "room": "bedroom_1",
+      "label": "Exhaust",
+      "kind": "switch",
+      "group_ids": [
+        "BA1-EXHAUST"
+      ],
+      "lighting_control": false,
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "EB-BA1-DRY-F03",
+      "board_id": "EB-BA1-DRY",
+      "room": "bedroom_1",
+      "label": "Geyser isolate",
+      "kind": "isolation-control",
+      "group_ids": [
+        "BA1-GEYSER"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-BA1-DRY-F04",
+      "board_id": "EB-BA1-DRY",
+      "room": "bedroom_1",
+      "label": "Mirror task light",
+      "kind": "switch",
+      "group_ids": [
+        "BA1-MIRROR"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-BA2-DRY-F01",
+      "board_id": "EB-BA2-DRY",
+      "room": "bedroom_2",
+      "label": "Bathroom main light",
+      "kind": "switch",
+      "group_ids": [
+        "BA2-LIGHT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-BA2-DRY-F02",
+      "board_id": "EB-BA2-DRY",
+      "room": "bedroom_2",
+      "label": "Exhaust",
+      "kind": "switch",
+      "group_ids": [
+        "BA2-EXHAUST"
+      ],
+      "lighting_control": false,
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "EB-BA2-DRY-F03",
+      "board_id": "EB-BA2-DRY",
+      "room": "bedroom_2",
+      "label": "Geyser isolate",
+      "kind": "isolation-control",
+      "group_ids": [
+        "BA2-GEYSER"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-BA2-DRY-F04",
+      "board_id": "EB-BA2-DRY",
+      "room": "bedroom_2",
+      "label": "Mirror task light",
+      "kind": "switch",
+      "group_ids": [
+        "BA2-MIRROR"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-BA3-DRY-F01",
+      "board_id": "EB-BA3-DRY",
+      "room": "dressing_3",
+      "label": "Bathroom main light",
+      "kind": "switch",
+      "group_ids": [
+        "BA3-LIGHT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-BA3-DRY-F02",
+      "board_id": "EB-BA3-DRY",
+      "room": "dressing_3",
+      "label": "Exhaust",
+      "kind": "switch",
+      "group_ids": [
+        "BA3-EXHAUST"
+      ],
+      "lighting_control": false,
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "EB-BA3-DRY-F03",
+      "board_id": "EB-BA3-DRY",
+      "room": "dressing_3",
+      "label": "Geyser isolate",
+      "kind": "isolation-control",
+      "group_ids": [
+        "BA3-GEYSER"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-BA3-DRY-F04",
+      "board_id": "EB-BA3-DRY",
+      "room": "dressing_3",
+      "label": "Mirror task light",
+      "kind": "switch",
+      "group_ids": [
+        "BA3-MIRROR"
+      ],
+      "lighting_control": true,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-DE-LIGHT-F01",
+      "board_id": "EB-DE-LIGHT",
+      "room": "dressing_3",
+      "label": "Dressing light",
+      "kind": "switch",
+      "group_ids": [
+        "DE-LIGHT"
+      ],
+      "lighting_control": true,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-B2-CLEAN-F01",
+      "board_id": "EB-B2-CLEAN",
+      "room": "bedroom_2",
+      "label": "Utility socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-MEDIA-F02",
+      "board_id": "EB-HA-WIFI",
+      "room": "lounge",
+      "label": "ONT socket",
+      "kind": "socket",
+      "group_ids": [
+        "HA-WIFI"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-HA-WIFI-F01",
+      "board_id": "EB-HA-WIFI",
+      "room": "lounge",
+      "label": "Router socket",
+      "kind": "socket",
+      "group_ids": [
+        "HA-WIFI"
+      ],
+      "lighting_control": false,
+      "backup_preference": "requested"
+    },
+    {
+      "id": "EB-HA-MEDIA-F03",
+      "board_id": "EB-HA-DATA",
+      "room": "lounge",
+      "label": "Data",
+      "kind": "data",
+      "group_ids": [
+        "DATA"
+      ],
+      "lighting_control": false,
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "EB-B1-CONN-F01",
+      "board_id": "EB-B1-CONN",
+      "room": "bedroom_1",
+      "label": "AC connection reservation",
+      "kind": "connection-provision",
+      "group_ids": [
+        "B1-AC"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B2-CONN-F01",
+      "board_id": "EB-B2-CONN",
+      "room": "bedroom_2",
+      "label": "AC connection reservation",
+      "kind": "connection-provision",
+      "group_ids": [
+        "B2-AC"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B3-CONN-F01",
+      "board_id": "EB-B3-CONN",
+      "room": "bedroom_3",
+      "label": "AC connection reservation",
+      "kind": "connection-provision",
+      "group_ids": [
+        "B3-AC"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-DR-CONN-F01",
+      "board_id": "EB-DR-CONN",
+      "room": "drawing",
+      "label": "AC connection reservation",
+      "kind": "connection-provision",
+      "group_ids": [
+        "DR-AC"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-CONN-F01",
+      "board_id": "EB-HA-CONN",
+      "room": "lounge",
+      "label": "AC connection reservation",
+      "kind": "connection-provision",
+      "group_ids": [
+        "HA-AC"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-BA1-CONN-F01",
+      "board_id": "EB-BA1-CONN",
+      "room": "bathroom_1",
+      "label": "Geyser connection reservation",
+      "kind": "connection-provision",
+      "group_ids": [
+        "BA1-GEYSER"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-BA2-CONN-F01",
+      "board_id": "EB-BA2-CONN",
+      "room": "bathroom_2",
+      "label": "Geyser connection reservation",
+      "kind": "connection-provision",
+      "group_ids": [
+        "BA2-GEYSER"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-BA3-CONN-F01",
+      "board_id": "EB-BA3-CONN",
+      "room": "bathroom_3",
+      "label": "Geyser connection reservation",
+      "kind": "connection-provision",
+      "group_ids": [
+        "BA3-GEYSER"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-FRIDGE-CONN-F01",
+      "board_id": "EB-KI-FRIDGE-CONN",
+      "room": "kitchen",
+      "label": "Fridge connection provision",
+      "kind": "connection-provision",
+      "group_ids": [
+        "KI-FRIDGE"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-MW-CONN-F01",
+      "board_id": "EB-KI-MW-CONN",
+      "room": "kitchen",
+      "label": "Microwave connection provision",
+      "kind": "connection-provision",
+      "group_ids": [
+        "KI-MICROWAVE"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-OTG-CONN-F01",
+      "board_id": "EB-KI-OTG-CONN",
+      "room": "kitchen",
+      "label": "OTG connection provision",
+      "kind": "connection-provision",
+      "group_ids": [
+        "KI-OTG"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-DW-CONN-F01",
+      "board_id": "EB-KI-DW-CONN",
+      "room": "kitchen",
+      "label": "Dishwasher connection provision",
+      "kind": "connection-provision",
+      "group_ids": [
+        "KI-DISHWASHER"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-RO-CONN-F01",
+      "board_id": "EB-KI-RO-CONN",
+      "room": "kitchen",
+      "label": "Undercounter RO power provision",
+      "kind": "connection-provision",
+      "group_ids": [
+        "KI-RO"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-HOB-CONN-F01",
+      "board_id": "EB-KI-HOB-CONN",
+      "room": "kitchen",
+      "label": "Potential hob ignition supply",
+      "kind": "connection-provision",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-KI-HOOD-CONN-F01",
+      "board_id": "EB-KI-HOOD-CONN",
+      "room": "kitchen",
+      "label": "Potential extractor supply",
+      "kind": "connection-provision",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-AQUARIUM-CONN-F01",
+      "board_id": "EB-HA-AQUARIUM-CONN",
+      "room": "lounge",
+      "label": "Aquarium filter / aerator / light",
+      "kind": "connection-provision",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-AQUARIUM-POWER-F01",
+      "board_id": "EB-HA-AQUARIUM-POWER",
+      "room": "lounge",
+      "label": "Aquarium power isolation",
+      "kind": "isolation-control",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B1-TV-F01",
+      "board_id": "EB-B1-TV",
+      "room": "bedroom_1",
+      "label": "TV socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-B1-TV-F02",
+      "board_id": "EB-B1-TV",
+      "room": "bedroom_1",
+      "label": "TV wired data",
+      "kind": "data",
+      "group_ids": [
+        "DATA"
+      ],
+      "lighting_control": false,
+      "backup_preference": "not-decided"
+    },
+    {
+      "id": "EB-HA-AV-AUX-F01",
+      "board_id": "EB-HA-AV-AUX",
+      "room": "lounge",
+      "label": "AV receiver socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-AV-AUX-F02",
+      "board_id": "EB-HA-AV-AUX",
+      "room": "lounge",
+      "label": "Subwoofer socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-NET-AUX-F01",
+      "board_id": "EB-HA-NET-AUX",
+      "room": "lounge",
+      "label": "NVR socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    },
+    {
+      "id": "EB-HA-NET-AUX-F02",
+      "board_id": "EB-HA-NET-AUX",
+      "room": "lounge",
+      "label": "PoE switch socket",
+      "kind": "socket",
+      "group_ids": [
+        "UTILITY"
+      ],
+      "lighting_control": false,
+      "backup_preference": "mains-only"
+    }
+  ],
+  "requirements": [
+    "User selected ordinary wired switches now, with provision for future smart controls; no Hue system selected.",
+    "Main, soft and task describe functions, not cove shapes, fitting quantities, driver quantities or final ceiling positions.",
+    "One group can serve several fittings; preserve separate functional feeds until the designer and electrician agree the final grouping.",
+    "Bedroom main and soft groups should operate from entry and both bedsides. Three locations require a suitable multiway scheme, not three parallel ordinary switches. Confirm intermediate/two-way devices and interconnecting conductors locally.",
+    "Charging sockets stay available when bedroom lighting is off; fan control remains separate.",
+    "Conventional on/off switches give manual combinations, not preset dimming. No dimmer, smart relay or fan regulator compatibility is assumed.",
+    "Reserve practical backbox space, accessible junction/driver positions and spare containment; agree neutral availability for possible future modules without mixing circuits or backup supplies.",
+    "Board faces and module spans remain legacy illustrative envelopes, not a final switch/module purchase list.",
+    "Keep AC stabilizer, termination and isolation decisions deferred; a relationship to an indoor unit does not specify where its mains supply enters.",
+    "Qualified local design must establish circuits, protective devices, cable sizes, earthing, wet-area suitability and backup arrangements before installation."
+  ],
+  "drawing_limits": [
+    "Dashed lines show control/service relationships only. They are not wires, conduit, appliance leads, safe routes or shared-circuit topology.",
+    "Lighting rings are functional-zone markers, not final fitting positions. Existing decorative ceiling remains a historical visualization only.",
+    "Equipment points are modeled body centers, not verified cable entry terminals. No lead-length or clearance conclusion can be taken from these lines.",
+    "Unresolved endpoints remain listed without invented geometry. Physical routing and visible-lead proposals need terminal/product and ceiling coordination."
+  ]
+}

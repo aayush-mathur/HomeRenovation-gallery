@@ -35,7 +35,7 @@ export function validateBoardSetout(value, descriptor, manifestHash) {
   }
   const sources = new Map(descriptor.boards.map(board => [board.id, board]));
   const usedRooms = new Set(descriptor.boards.map(board => board.room));
-  if (sources.size !== descriptor.boards.length || sources.size < 1 || sources.size > 150 || rooms.size !== usedRooms.size ||
+  if (!sources.size || sources.size !== descriptor.boards.length || rooms.size !== usedRooms.size ||
       [...usedRooms].some(id => !rooms.has(id))) fail('source boards/rooms');
   if (!Array.isArray(value.boards) || value.boards.length !== sources.size) fail('board count');
   const records = new Map();

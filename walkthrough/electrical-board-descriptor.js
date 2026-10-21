@@ -20,6 +20,35 @@ export function boardRooms(board, fixtureGroups) {
     .map(group => group.room)])];
 }
 
+export function validateBoardSetout(value, boards) {
+  const fail = () => { throw new Error('Switchboard set-out unavailable: invalid or stale board dimensions'); };
+  if (!list(value, 150, 1) || value.length !== boards.length) fail();
+  const byID = new Map(boards.map(board => [board.id, board]));
+  const seen = new Set();
+  for (const item of value) {
+    if (!exact(item, ['id', 'room', 'label', 'position_web_m', 'reference_web_m',
+      'reference_edge', 'offset_mm', 'height_aff_mm'])) fail();
+    const board = byID.get(item.id);
+    if (!board || seen.has(item.id) || item.room !== board.room || item.label !== board.label ||
+        item.height_aff_mm !== board.height_aff_mm || !['plan-left', 'plan-right', 'plan-up', 'plan-down'].includes(item.reference_edge) ||
+        !Number.isInteger(item.offset_mm) || item.offset_mm < 0 || item.offset_mm > 30000 ||
+        !vector(item.position_web_m) || !vector(item.reference_web_m) ||
+        item.position_web_m.some((n, i) => Math.abs(n - board.position_web_m[i]) > .001)) fail();
+    const horizontalPlanAxis = item.reference_edge === 'plan-left' || item.reference_edge === 'plan-right';
+    const axis = horizontalPlanAxis ? 0 : 2;
+    if (board.normal_web?.length !== 3 || (Math.abs(board.normal_web[2]) > .5) !== horizontalPlanAxis) fail();
+    const referenceIsGreater = item.reference_edge === 'plan-right' || item.reference_edge === 'plan-down';
+    const pointsTowardEdge = referenceIsGreater
+      ? item.reference_web_m[axis] > item.position_web_m[axis]
+      : item.reference_web_m[axis] < item.position_web_m[axis];
+    if (Math.abs(item.position_web_m[1] - item.reference_web_m[1]) > .001 ||
+        item.position_web_m.some((n, i) => i !== axis && Math.abs(n - item.reference_web_m[i]) > .001) ||
+        !pointsTowardEdge || Math.abs(Math.abs(item.position_web_m[axis] - item.reference_web_m[axis]) * 1000 - item.offset_mm) > 1) fail();
+    seen.add(item.id);
+  }
+  return structuredClone(value);
+}
+
 export function validateBoardDescriptor(value, house, baseURL) {
   const fail = reason => { throw new Error(`Switchboard planning unavailable: ${reason}`); };
   const top = ['version', 'id', 'base_source_sha256', 'base_navigation_sha256', 'luxe_sha256',
@@ -88,7 +117,8 @@ export function validateBoardDescriptor(value, house, baseURL) {
     }
     const slots = new Set();
     for (const control of board.functions) {
-      if (!exact(control, ['id', 'label', 'kind', 'slot', 'span', 'point_ids', 'fixture_group_ids', 'backup_preference', 'behavior']) ||
+      if (!exact(control, ['id', 'label', 'kind', 'slot', 'span', 'point_ids', 'fixture_group_ids', 'backup_preference', 'behavior', ...('row' in control ? ['row'] : [])]) ||
+          ('row' in control && (!board.id.includes('-BED-') || ![0, 1].includes(control.row) || board.size_mm[1] !== 160)) ||
           !ID.test(control.id) || functionIDs.has(control.id) || !text(control.label, 160) || !KINDS.has(control.kind) ||
           !Number.isInteger(control.slot) || control.slot < 0 || !Number.isInteger(control.span) || control.span < 1 ||
           control.slot + control.span > 40 || !list(control.point_ids, 100, 1) ||
@@ -98,8 +128,9 @@ export function validateBoardDescriptor(value, house, baseURL) {
           !text(control.behavior, 700)) fail('invalid control/module mapping');
       functionIDs.add(control.id);
       for (let slot = control.slot; slot < control.slot + control.span; slot++) {
-        if (slots.has(slot)) fail('overlapping board modules');
-        slots.add(slot);
+        const key = `${control.row || 0}:${slot}`;
+        if (slots.has(key)) fail('overlapping board modules');
+        slots.add(key);
       }
     }
   }

@@ -1,0 +1,3919 @@
+{
+  "version": 1,
+  "id": "physical-appliance-leads-v001",
+  "status": "visualization-proposal-not-installation",
+  "base_source_sha256": "ddf35d094002b9272ff3c2ce68da5b7d65233365e3585f3c13f8ed7c04ba4637",
+  "base_model_sha256": "f8da33a6aae86eacfb79ee676c1dda9cc88457d36f930fcdc8c6218b33727b47",
+  "board_manifest_sha256": "10a483ec30cc16ce51bdbff297c6775e80a4967a90b9c08c073abdfbdb9aa5cc",
+  "leads": [
+    {
+      "id": "study-monitor",
+      "label": "Middle study \u00b7 monitor",
+      "room": "bedroom_2",
+      "board_id": "EB-B2-WORK",
+      "function_id": "EB-B2-WORK-F01",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        7.69875,
+        0.99,
+        -9.944628
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          7.69875,
+          0.965,
+          -9.914628
+        ],
+        [
+          7.699,
+          0.85,
+          -9.868
+        ],
+        [
+          7.67,
+          0.758,
+          -9.837
+        ],
+        [
+          7.4,
+          0.758,
+          -9.837
+        ],
+        [
+          7.4,
+          0.8,
+          -9.812
+        ],
+        [
+          7.4,
+          0.965,
+          -9.807
+        ],
+        [
+          7.4,
+          1.005,
+          -9.79
+        ]
+      ],
+      "length_m": 0.753,
+      "device_bounds_web_m": [
+        [
+          7.1,
+          0.94,
+          -9.752999
+        ],
+        [
+          7.570001,
+          1.22,
+          -9.79
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Power-inlet location is a case-surface proposal. A selected monitor may instead use an external supply."
+      ]
+    },
+    {
+      "id": "study-lamp",
+      "label": "Middle study \u00b7 lamp",
+      "room": "bedroom_2",
+      "board_id": "EB-B2-WORK",
+      "function_id": "EB-B2-WORK-F04",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        7.76625,
+        0.99,
+        -9.944628
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          7.76625,
+          0.965,
+          -9.914628
+        ],
+        [
+          7.766,
+          0.82,
+          -9.865
+        ],
+        [
+          7.8,
+          0.758,
+          -9.84
+        ],
+        [
+          8.008,
+          0.758,
+          -9.84
+        ],
+        [
+          8.008,
+          0.758,
+          -9.574
+        ],
+        [
+          7.965,
+          0.758,
+          -9.574
+        ],
+        [
+          7.94,
+          0.76,
+          -9.555
+        ]
+      ],
+      "length_m": 0.777,
+      "device_bounds_web_m": [
+        [
+          7.83,
+          0.75,
+          -9.434999
+        ],
+        [
+          7.95,
+          0.77,
+          -9.554999
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Cord skirts the modeled notebooks along the desk edge, not through them."
+      ]
+    },
+    {
+      "id": "b1-lamp-a",
+      "label": "Rear bedside A \u00b7 lamp",
+      "room": "bedroom_1",
+      "board_id": "EB-B1-BED-A",
+      "function_id": "EB-B1-BED-A-F01",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        4.8575,
+        0.66,
+        -17.564785
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          4.8575,
+          0.635,
+          -17.534785
+        ],
+        [
+          4.7975,
+          0.635,
+          -17.51
+        ],
+        [
+          4.7975,
+          0.565,
+          -17.49
+        ],
+        [
+          4.7975,
+          0.498,
+          -17.486
+        ],
+        [
+          4.7356,
+          0.498,
+          -17.486
+        ],
+        [
+          4.7356,
+          0.505,
+          -17.4532
+        ]
+      ],
+      "length_m": 0.3,
+      "device_bounds_web_m": [
+        [
+          4.655585,
+          0.492,
+          -17.293205
+        ],
+        [
+          4.815585,
+          0.516,
+          -17.453205
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Lamp uses its own upper-row outlet. A separate empty phone outlet is integrated into the SAME shared bedside plate below, not on a floating extra plate. No hidden splitter. Supplier two-row backbox/module fit, charger-tail access and circuit design require approval."
+      ]
+    },
+    {
+      "id": "b1-lamp-b",
+      "label": "Rear bedside B \u00b7 lamp",
+      "room": "bedroom_1",
+      "board_id": "EB-B1-BED-B",
+      "function_id": "EB-B1-BED-B-F01",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        7.0575,
+        0.66,
+        -17.564785
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          7.0575,
+          0.635,
+          -17.534785
+        ],
+        [
+          7.1175,
+          0.635,
+          -17.51
+        ],
+        [
+          7.1175,
+          0.565,
+          -17.49
+        ],
+        [
+          7.1175,
+          0.498,
+          -17.486
+        ],
+        [
+          7.2756,
+          0.498,
+          -17.486
+        ],
+        [
+          7.2756,
+          0.505,
+          -17.4532
+        ]
+      ],
+      "length_m": 0.396,
+      "device_bounds_web_m": [
+        [
+          7.195637,
+          0.492,
+          -17.293205
+        ],
+        [
+          7.355637,
+          0.516,
+          -17.453205
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Lamp uses its own upper-row outlet. A separate empty phone outlet is integrated into the SAME shared bedside plate below, not on a floating extra plate. No hidden splitter. Supplier two-row backbox/module fit, charger-tail access and circuit design require approval."
+      ]
+    },
+    {
+      "id": "b3-lamp-a",
+      "label": "Front bedside A \u00b7 lamp",
+      "room": "bedroom_3",
+      "board_id": "EB-B3-BED-A",
+      "function_id": "EB-B3-BED-A-F01",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        3.516708,
+        0.66,
+        -1.3925
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          3.5467079999999997,
+          0.635,
+          -1.3925
+        ],
+        [
+          3.55,
+          0.635,
+          -1.3325
+        ],
+        [
+          3.587,
+          0.555,
+          -1.3325
+        ],
+        [
+          3.619,
+          0.498,
+          -1.3325
+        ],
+        [
+          3.637,
+          0.498,
+          -1.345
+        ],
+        [
+          3.669,
+          0.505,
+          -1.345
+        ]
+      ],
+      "length_m": 0.268,
+      "device_bounds_web_m": [
+        [
+          3.669004,
+          0.492,
+          -1.254232
+        ],
+        [
+          3.829004,
+          0.516,
+          -1.414232
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Lamp uses its own upper-row outlet. A separate empty phone outlet is integrated into the SAME shared bedside plate below, not on a floating extra plate. No hidden splitter. Supplier two-row backbox/module fit, charger-tail access and circuit design require approval."
+      ]
+    },
+    {
+      "id": "b3-lamp-b",
+      "label": "Front bedside B \u00b7 lamp",
+      "room": "bedroom_3",
+      "board_id": "EB-B3-BED-B",
+      "function_id": "EB-B3-BED-B-F01",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        3.516708,
+        0.66,
+        -3.5925
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          3.5467079999999997,
+          0.635,
+          -3.5925
+        ],
+        [
+          3.55,
+          0.635,
+          -3.6525
+        ],
+        [
+          3.587,
+          0.555,
+          -3.6525
+        ],
+        [
+          3.619,
+          0.498,
+          -3.6525
+        ],
+        [
+          3.637,
+          0.498,
+          -3.698
+        ],
+        [
+          3.669,
+          0.505,
+          -3.698
+        ]
+      ],
+      "length_m": 0.295,
+      "device_bounds_web_m": [
+        [
+          3.669004,
+          0.492,
+          -3.618892
+        ],
+        [
+          3.829004,
+          0.516,
+          -3.778892
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Lamp uses its own upper-row outlet. A separate empty phone outlet is integrated into the SAME shared bedside plate below, not on a floating extra plate. No hidden splitter. Supplier two-row backbox/module fit, charger-tail access and circuit design require approval."
+      ]
+    },
+    {
+      "id": "rear-tv",
+      "label": "Rear bedroom \u00b7 television",
+      "room": "bedroom_1",
+      "board_id": "EB-B1-TV",
+      "function_id": "EB-B1-TV-F01",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        6.23125,
+        1.26,
+        -14.441124
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "adapter": false,
+      "radius_m": 0.0028,
+      "points_web_m": [
+        [
+          6.23125,
+          1.235,
+          -14.471124
+        ],
+        [
+          6.209,
+          1.2,
+          -14.493
+        ],
+        [
+          6.3,
+          1.2,
+          -14.493
+        ],
+        [
+          6.35,
+          1.27,
+          -14.483
+        ],
+        [
+          6.35,
+          1.41,
+          -14.483
+        ],
+        [
+          6.35,
+          1.43,
+          -14.5
+        ]
+      ],
+      "length_m": 0.391,
+      "device_bounds_web_m": [
+        [
+          5.77,
+          1.2925,
+          -14.5
+        ],
+        [
+          6.67,
+          1.8075,
+          -14.555
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Generic 40-inch-class TV/bracket proposal opposite the bed. Rear flex has a stand-off gap; exact inlet, lead reach, bracket service access and screen height need product/site confirmation."
+      ]
+    },
+    {
+      "id": "hall-tv",
+      "label": "Hall \u00b7 television",
+      "room": "lounge",
+      "board_id": "EB-HA-MEDIA",
+      "function_id": "EB-HA-MEDIA-F01",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        4.7643,
+        1.26,
+        -8.35375
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.0025,
+      "points_web_m": [
+        [
+          4.7343,
+          1.235,
+          -8.35375
+        ],
+        [
+          4.718,
+          1.18,
+          -8.354
+        ],
+        [
+          4.701,
+          1.13,
+          -8.354
+        ],
+        [
+          4.701,
+          1.12,
+          -8.46
+        ],
+        [
+          4.695,
+          1.12,
+          -8.48
+        ]
+      ],
+      "length_m": 0.238,
+      "device_bounds_web_m": [
+        [
+          4.625,
+          0.935,
+          -7.599999
+        ],
+        [
+          4.695,
+          1.745,
+          -9.04
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "A real media-backing service recess now clears the socket and plug. Keep bracket-release/service access; final TV/plug/lead bend clearance needs the selected product, not this generic envelope."
+      ]
+    },
+    {
+      "id": "hall-settop",
+      "label": "Hall \u00b7 set-top box",
+      "room": "lounge",
+      "board_id": "EB-HA-MEDIA",
+      "function_id": "EB-HA-MEDIA-F04",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        4.7643,
+        1.26,
+        -8.28625
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.0025,
+      "points_web_m": [
+        [
+          4.7343,
+          1.235,
+          -8.28625
+        ],
+        [
+          4.713,
+          1.18,
+          -8.286
+        ],
+        [
+          4.75,
+          1.18,
+          -8.286
+        ],
+        [
+          4.75,
+          0.615,
+          -8.286
+        ],
+        [
+          4.745,
+          0.6,
+          -8.286
+        ],
+        [
+          4.745,
+          0.6,
+          -8.99
+        ],
+        [
+          4.7,
+          0.6,
+          -8.99
+        ],
+        [
+          4.69,
+          0.577,
+          -8.99
+        ]
+      ],
+      "length_m": 1.451,
+      "device_bounds_web_m": [
+        [
+          4.56,
+          0.56,
+          -8.855
+        ],
+        [
+          4.69,
+          0.595,
+          -9.045
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Vertical lead now uses the modeled backing service chase, then follows the rear console edge instead of the long exposed high sideways run. Removable support clips and actual supplied lead reach need product confirmation."
+      ]
+    },
+    {
+      "id": "hall-ont",
+      "label": "Hall \u00b7 ONT power adapter",
+      "room": "lounge",
+      "board_id": "EB-HA-WIFI",
+      "function_id": "EB-HA-MEDIA-F02",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        4.7643,
+        0.445,
+        -7.82375
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": true,
+      "radius_m": 0.0018,
+      "points_web_m": [
+        [
+          4.7263,
+          0.41100000000000003,
+          -7.82375
+        ],
+        [
+          4.72,
+          0.39,
+          -7.824
+        ],
+        [
+          4.735,
+          0.39,
+          -7.824
+        ],
+        [
+          4.735,
+          0.39,
+          -8.995
+        ],
+        [
+          4.735,
+          0.46,
+          -8.995
+        ],
+        [
+          4.68,
+          0.46,
+          -8.995
+        ]
+      ],
+      "length_m": 1.333,
+      "device_bounds_web_m": [
+        [
+          4.56,
+          0.445,
+          -8.865
+        ],
+        [
+          4.68,
+          0.48,
+          -9.025
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Console rear/side entry is physically opened in the revised joinery. Clips support the wall-side tail; retain a removable service zone and keep the selected-backup outlet identifiable."
+      ]
+    },
+    {
+      "id": "hall-router",
+      "label": "Hall \u00b7 router power adapter",
+      "room": "lounge",
+      "board_id": "EB-HA-WIFI",
+      "function_id": "EB-HA-WIFI-F01",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        4.7643,
+        0.445,
+        -7.75625
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": true,
+      "radius_m": 0.0018,
+      "points_web_m": [
+        [
+          4.7263,
+          0.41100000000000003,
+          -7.75625
+        ],
+        [
+          4.72,
+          0.375,
+          -7.756
+        ],
+        [
+          4.735,
+          0.31,
+          -7.756
+        ],
+        [
+          4.735,
+          0.31,
+          -8.99
+        ],
+        [
+          4.68,
+          0.31,
+          -8.99
+        ]
+      ],
+      "length_m": 1.392,
+      "device_bounds_web_m": [
+        [
+          4.55,
+          0.29,
+          -8.855
+        ],
+        [
+          4.68,
+          0.33,
+          -9.035
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "A modeled console service entry and retained cable clips replace the uncut-panel conflict. Keep the adapter dry, ventilated and removable; no door trapping or hidden splitter."
+      ]
+    },
+    {
+      "id": "robot-dock",
+      "label": "Dining \u00b7 robot dock",
+      "room": "dining",
+      "board_id": "EB-DI-POWER",
+      "function_id": "EB-DI-POWER-F01",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        0.140412,
+        0.56,
+        -10.92875
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          0.170412,
+          0.535,
+          -10.92875
+        ],
+        [
+          0.19,
+          0.39,
+          -10.929
+        ],
+        [
+          0.19,
+          0.115,
+          -10.929
+        ],
+        [
+          0.19,
+          0.115,
+          -10.72
+        ],
+        [
+          0.22,
+          0.25,
+          -10.72
+        ],
+        [
+          0.22,
+          0.25,
+          -10.67
+        ]
+      ],
+      "length_m": 0.819,
+      "device_bounds_web_m": [
+        [
+          0.14,
+          0.136,
+          -10.33
+        ],
+        [
+          0.415,
+          0.606,
+          -10.67
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Wall-side flex loop, not a cable across the walking route; selected dock inlet/lead length still needs checking."
+      ]
+    },
+    {
+      "id": "kitchen-microwave",
+      "label": "Kitchen \u00b7 microwave",
+      "room": "kitchen",
+      "board_id": "EB-KI-MW-CONN",
+      "function_id": "EB-KI-MW-CONN-F01",
+      "connection_state": "proposed-socket",
+      "socket_web_m": [
+        1.65,
+        1.49,
+        -16.514784
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          1.65,
+          1.465,
+          -16.484783999999998
+        ],
+        [
+          1.65,
+          1.425,
+          -16.474
+        ],
+        [
+          1.72,
+          1.38,
+          -16.465
+        ],
+        [
+          1.78,
+          1.38,
+          -16.45
+        ],
+        [
+          1.78,
+          1.39,
+          -16.4168
+        ]
+      ],
+      "length_m": 0.222,
+      "device_bounds_web_m": [
+        [
+          1.388412,
+          1.35,
+          -16.026785
+        ],
+        [
+          1.868412,
+          1.65,
+          -16.416784
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "REVIEW: rear service gap, cupboard cable-entry and reachable isolation must be resolved with the selected appliance.",
+        "Generic plug/socket proposal on the existing connection reservation; selected appliance and electrician must confirm plug versus fixed termination, access and rating."
+      ]
+    },
+    {
+      "id": "kitchen-otg",
+      "label": "Kitchen \u00b7 OTG",
+      "room": "kitchen",
+      "board_id": "EB-KI-OTG-CONN",
+      "function_id": "EB-KI-OTG-CONN-F01",
+      "connection_state": "proposed-socket",
+      "socket_web_m": [
+        1.65,
+        1.01,
+        -16.514784
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          1.65,
+          0.985,
+          -16.484783999999998
+        ],
+        [
+          1.65,
+          0.95,
+          -16.478
+        ],
+        [
+          1.72,
+          0.895,
+          -16.474
+        ],
+        [
+          1.78,
+          0.895,
+          -16.46
+        ],
+        [
+          1.78,
+          0.91,
+          -16.4368
+        ]
+      ],
+      "length_m": 0.214,
+      "device_bounds_web_m": [
+        [
+          1.388412,
+          0.85,
+          -16.016785
+        ],
+        [
+          1.868412,
+          1.19,
+          -16.436783
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "REVIEW: appliance heat clearance, flex suitability and service access are unselected.",
+        "Generic plug/socket proposal on the existing connection reservation; selected appliance and electrician must confirm plug versus fixed termination, access and rating."
+      ]
+    },
+    {
+      "id": "kitchen-fridge",
+      "label": "Kitchen \u00b7 fridge",
+      "room": "kitchen",
+      "board_id": "EB-KI-FRIDGE-CONN",
+      "function_id": "EB-KI-FRIDGE-CONN-F01",
+      "connection_state": "proposed-socket",
+      "socket_web_m": [
+        3.496412,
+        0.41,
+        -15.2
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          3.466412,
+          0.38499999999999995,
+          -15.2
+        ],
+        [
+          3.455,
+          0.34,
+          -15.2
+        ],
+        [
+          3.465,
+          0.3,
+          -15.2
+        ],
+        [
+          3.465,
+          0.27,
+          -15.285
+        ],
+        [
+          3.465,
+          0.27,
+          -15.346785
+        ]
+      ],
+      "length_m": 0.24,
+      "device_bounds_web_m": [
+        [
+          2.953412,
+          0.02,
+          -15.346785
+        ],
+        [
+          3.498412,
+          1.9,
+          -15.906784
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Supply moved into the adjacent accessible pantry service area below its shelf, not trapped behind the fridge. A real divider opening passes the lead without pinching it; edge-protection trim is a fabrication requirement, not a selected product. Generic side inlet must be coordinated with the selected fridge; rear ventilation remains product-specific.",
+        "Generic plug/socket proposal on the existing connection reservation; selected appliance and electrician must confirm plug versus fixed termination, access and rating."
+      ]
+    },
+    {
+      "id": "kitchen-dishwasher",
+      "label": "Kitchen \u00b7 dishwasher",
+      "room": "kitchen",
+      "board_id": "EB-KI-DW-CONN",
+      "function_id": "EB-KI-DW-CONN-F01",
+      "connection_state": "proposed-socket",
+      "socket_web_m": [
+        3.592932,
+        0.51,
+        -16.219999
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          3.562932,
+          0.485,
+          -16.219999
+        ],
+        [
+          3.55,
+          0.36,
+          -16.22
+        ],
+        [
+          3.545,
+          0.155,
+          -16.22
+        ],
+        [
+          3.54,
+          0.155,
+          -16.29
+        ],
+        [
+          3.5034,
+          0.2,
+          -16.29
+        ]
+      ],
+      "length_m": 0.459,
+      "device_bounds_web_m": [
+        [
+          2.953412,
+          0.025,
+          -15.930784
+        ],
+        [
+          3.503412,
+          0.855,
+          -16.522783
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "REVIEW: selected product, wet-service separation and accessible adjacent service compartment are not approved.",
+        "Generic plug/socket proposal on the existing connection reservation; selected appliance and electrician must confirm plug versus fixed termination, access and rating."
+      ]
+    },
+    {
+      "id": "kitchen-ro",
+      "label": "Kitchen \u00b7 purifier adapter",
+      "room": "kitchen",
+      "board_id": "EB-KI-RO-CONN",
+      "function_id": "EB-KI-RO-CONN-F01",
+      "connection_state": "proposed-socket",
+      "socket_web_m": [
+        1.2,
+        0.79,
+        -13.028784
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "adapter": true,
+      "radius_m": 0.0018,
+      "points_web_m": [
+        [
+          1.2,
+          0.756,
+          -13.066784
+        ],
+        [
+          1.2,
+          0.7,
+          -13.08
+        ],
+        [
+          1.17,
+          0.65,
+          -13.08
+        ],
+        [
+          1.17,
+          0.65,
+          -13.4
+        ],
+        [
+          1.17,
+          0.37,
+          -13.4
+        ],
+        [
+          1.11,
+          0.37,
+          -13.4
+        ]
+      ],
+      "length_m": 0.776,
+      "device_bounds_web_m": [
+        [
+          0.84,
+          0.18,
+          -13.1
+        ],
+        [
+          1.11,
+          0.6,
+          -13.51
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Adapter relocated to the high dry side of the purifier service compartment. Lead stays within that accessible compartment, above the leak tray and away from the adjacent sink, rather than crossing its cabinet/front. Moisture exposure and selected product require installer approval.",
+        "Generic plug/socket proposal on the existing connection reservation; selected appliance and electrician must confirm plug versus fixed termination, access and rating."
+      ]
+    },
+    {
+      "id": "hall-avr",
+      "label": "Hall \u00b7 5.1 AV receiver",
+      "room": "lounge",
+      "board_id": "EB-HA-AV-AUX",
+      "function_id": "EB-HA-AV-AUX-F01",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        4.7643,
+        0.445,
+        -7.5725
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          4.7343,
+          0.42,
+          -7.5725
+        ],
+        [
+          4.72,
+          0.39,
+          -7.516
+        ],
+        [
+          4.735,
+          0.39,
+          -7.516
+        ],
+        [
+          4.735,
+          0.39,
+          -7.88
+        ],
+        [
+          4.735,
+          0.6,
+          -7.88
+        ],
+        [
+          4.7,
+          0.6,
+          -7.88
+        ],
+        [
+          4.66,
+          0.63,
+          -7.88
+        ]
+      ],
+      "length_m": 0.74,
+      "device_bounds_web_m": [
+        [
+          4.36,
+          0.575,
+          -7.5
+        ],
+        [
+          4.66,
+          0.725,
+          -7.94
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Dedicated mains outlet; compact receiver sits on open console top with a nominal90mm rear cable zone, not inside a hot sealed cupboard. Final receiver depth, ventilation, load and plug reach require selected-product approval."
+      ]
+    },
+    {
+      "id": "hall-subwoofer",
+      "label": "Hall \u00b7 powered subwoofer",
+      "room": "lounge",
+      "board_id": "EB-HA-AV-AUX",
+      "function_id": "EB-HA-AV-AUX-F02",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        4.7643,
+        0.445,
+        -7.5275
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.003,
+      "points_web_m": [
+        [
+          4.7343,
+          0.42,
+          -7.5275
+        ],
+        [
+          4.72,
+          0.36,
+          -7.584
+        ],
+        [
+          4.735,
+          0.12,
+          -7.584
+        ],
+        [
+          4.735,
+          0.12,
+          -9.23
+        ],
+        [
+          4.735,
+          0.12,
+          -9.65
+        ],
+        [
+          4.7,
+          0.18,
+          -9.7
+        ],
+        [
+          4.68,
+          0.18,
+          -9.7
+        ]
+      ],
+      "length_m": 2.496,
+      "device_bounds_web_m": [
+        [
+          4.36,
+          0.025,
+          -9.445
+        ],
+        [
+          4.68,
+          0.4,
+          -9.735001
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Own mains outlet plus separate LFE signal from receiver. Neither wireless power nor a passive speaker output. Keep rear controls and plug access; tune position by measurement/listening."
+      ]
+    },
+    {
+      "id": "hall-nvr",
+      "label": "Hall \u00b7 NVR adapter",
+      "room": "lounge",
+      "board_id": "EB-HA-NET-AUX",
+      "function_id": "EB-HA-NET-AUX-F01",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        4.7643,
+        0.28,
+        -7.8025
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": true,
+      "radius_m": 0.0018,
+      "points_web_m": [
+        [
+          4.7263,
+          0.24600000000000002,
+          -7.8025
+        ],
+        [
+          4.72,
+          0.22,
+          -7.78
+        ],
+        [
+          4.735,
+          0.22,
+          -7.78
+        ],
+        [
+          4.735,
+          0.22,
+          -8.95
+        ],
+        [
+          4.735,
+          0.24,
+          -8.95
+        ],
+        [
+          4.68,
+          0.24,
+          -8.95
+        ]
+      ],
+      "length_m": 1.295,
+      "device_bounds_web_m": [
+        [
+          4.454999,
+          0.218,
+          -8.8125
+        ],
+        [
+          4.68,
+          0.266,
+          -9.077499
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Dedicated replaceable adapter outlet, no splitter. Wall-side entry and rear shelf bypass keep it removable. Mains-only: existing ONT/router backup request is NOT extended to NVR/PoE."
+      ]
+    },
+    {
+      "id": "hall-poe",
+      "label": "Hall \u00b7 POE adapter",
+      "room": "lounge",
+      "board_id": "EB-HA-NET-AUX",
+      "function_id": "EB-HA-NET-AUX-F02",
+      "connection_state": "plugged-proposal",
+      "socket_web_m": [
+        4.7643,
+        0.28,
+        -7.7575
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": true,
+      "radius_m": 0.0018,
+      "points_web_m": [
+        [
+          4.7263,
+          0.24600000000000002,
+          -7.7575
+        ],
+        [
+          4.72,
+          0.22,
+          -7.78
+        ],
+        [
+          4.735,
+          0.22,
+          -7.78
+        ],
+        [
+          4.735,
+          0.22,
+          -9.0
+        ],
+        [
+          4.735,
+          0.39,
+          -9.0
+        ],
+        [
+          4.68,
+          0.39,
+          -9.0
+        ]
+      ],
+      "length_m": 1.495,
+      "device_bounds_web_m": [
+        [
+          4.53,
+          0.365,
+          -8.835
+        ],
+        [
+          4.68,
+          0.41,
+          -9.054999
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Dedicated replaceable adapter outlet, no splitter. Wall-side entry and rear shelf bypass keep it removable. Mains-only: existing ONT/router backup request is NOT extended to NVR/PoE."
+      ]
+    },
+    {
+      "id": "ac-b1",
+      "label": "Rear bedroom AC \u00b7 conditional fixed lead",
+      "room": "bedroom_1",
+      "board_id": "EB-B1-CONN",
+      "function_id": "EB-B1-CONN-F01",
+      "connection_state": "fixed-flex-proposal",
+      "socket_web_m": [
+        3.745344,
+        2.26,
+        -14.98
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.004,
+      "points_web_m": [
+        [
+          3.7753439999999996,
+          2.3,
+          -14.98
+        ],
+        [
+          3.79,
+          2.34,
+          -14.98
+        ],
+        [
+          3.98,
+          2.34,
+          -14.98
+        ],
+        [
+          3.98,
+          2.36,
+          -15.16
+        ],
+        [
+          3.948,
+          2.43,
+          -15.16
+        ]
+      ],
+      "length_m": 0.491,
+      "device_bounds_web_m": [
+        [
+          3.743,
+          2.4,
+          -15.1
+        ],
+        [
+          3.948,
+          2.7,
+          -16.0
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Conditional indoor-supply visualization only: a sheathed fixed lead and gland replace a fictional plug. Some selected split ACs are powered at the outdoor unit; if so this indoor supply branch must be omitted and the manufacturer interconnect used. No stabilizer decision, conductor count/rating or outdoor route is invented."
+      ]
+    },
+    {
+      "id": "ac-b2",
+      "label": "Middle bedroom AC \u00b7 conditional fixed lead",
+      "room": "bedroom_2",
+      "board_id": "EB-B2-CONN",
+      "function_id": "EB-B2-CONN-F01",
+      "connection_state": "fixed-flex-proposal",
+      "socket_web_m": [
+        8.040372,
+        2.26,
+        -9.46
+      ],
+      "normal_web": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.004,
+      "points_web_m": [
+        [
+          8.010372,
+          2.3,
+          -9.46
+        ],
+        [
+          7.99,
+          2.34,
+          -9.46
+        ],
+        [
+          7.8,
+          2.34,
+          -9.46
+        ],
+        [
+          7.8,
+          2.36,
+          -9.18
+        ],
+        [
+          7.834,
+          2.43,
+          -9.18
+        ]
+      ],
+      "length_m": 0.593,
+      "device_bounds_web_m": [
+        [
+          7.834,
+          2.4,
+          -8.459999
+        ],
+        [
+          8.039,
+          2.7,
+          -9.24
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Conditional indoor-supply visualization only: a sheathed fixed lead and gland replace a fictional plug. Some selected split ACs are powered at the outdoor unit; if so this indoor supply branch must be omitted and the manufacturer interconnect used. No stabilizer decision, conductor count/rating or outdoor route is invented."
+      ]
+    },
+    {
+      "id": "ac-b3",
+      "label": "Front bedroom AC \u00b7 conditional fixed lead",
+      "room": "bedroom_3",
+      "board_id": "EB-B3-CONN",
+      "function_id": "EB-B3-CONN-F01",
+      "connection_state": "fixed-flex-proposal",
+      "socket_web_m": [
+        6.18,
+        2.26,
+        -5.043048
+      ],
+      "normal_web": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "adapter": false,
+      "radius_m": 0.004,
+      "points_web_m": [
+        [
+          6.18,
+          2.3,
+          -5.0130479999999995
+        ],
+        [
+          6.18,
+          2.34,
+          -4.99
+        ],
+        [
+          6.18,
+          2.34,
+          -4.8
+        ],
+        [
+          5.93,
+          2.36,
+          -4.8
+        ],
+        [
+          5.93,
+          2.43,
+          -4.84
+        ]
+      ],
+      "length_m": 0.568,
+      "device_bounds_web_m": [
+        [
+          5.1,
+          2.4,
+          -4.84
+        ],
+        [
+          6.0,
+          2.7,
+          -5.045
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Conditional indoor-supply visualization only: a sheathed fixed lead and gland replace a fictional plug. Some selected split ACs are powered at the outdoor unit; if so this indoor supply branch must be omitted and the manufacturer interconnect used. No stabilizer decision, conductor count/rating or outdoor route is invented."
+      ]
+    },
+    {
+      "id": "ac-dr",
+      "label": "Drawing room AC \u00b7 conditional fixed lead",
+      "room": "drawing",
+      "board_id": "EB-DR-CONN",
+      "function_id": "EB-DR-CONN-F01",
+      "connection_state": "fixed-flex-proposal",
+      "socket_web_m": [
+        0.265692,
+        2.26,
+        -4.6
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.004,
+      "points_web_m": [
+        [
+          0.29569199999999995,
+          2.3,
+          -4.6
+        ],
+        [
+          0.32,
+          2.34,
+          -4.6
+        ],
+        [
+          0.72,
+          2.34,
+          -4.6
+        ],
+        [
+          0.72,
+          2.36,
+          -4.8
+        ],
+        [
+          0.72,
+          2.43,
+          -4.84
+        ]
+      ],
+      "length_m": 0.728,
+      "device_bounds_web_m": [
+        [
+          0.65,
+          2.4,
+          -4.84
+        ],
+        [
+          1.55,
+          2.7,
+          -5.045
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Conditional indoor-supply visualization only: a sheathed fixed lead and gland replace a fictional plug. Some selected split ACs are powered at the outdoor unit; if so this indoor supply branch must be omitted and the manufacturer interconnect used. No stabilizer decision, conductor count/rating or outdoor route is invented."
+      ]
+    },
+    {
+      "id": "ac-ha",
+      "label": "Hall AC \u00b7 conditional fixed lead",
+      "room": "lounge",
+      "board_id": "EB-HA-CONN",
+      "function_id": "EB-HA-CONN-F01",
+      "connection_state": "fixed-flex-proposal",
+      "socket_web_m": [
+        0.140412,
+        2.26,
+        -9.26
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.004,
+      "points_web_m": [
+        [
+          0.170412,
+          2.3,
+          -9.26
+        ],
+        [
+          0.19,
+          2.34,
+          -9.26
+        ],
+        [
+          0.4,
+          2.34,
+          -9.26
+        ],
+        [
+          0.4,
+          2.36,
+          -9.03
+        ],
+        [
+          0.363,
+          2.43,
+          -9.03
+        ]
+      ],
+      "length_m": 0.565,
+      "device_bounds_web_m": [
+        [
+          0.138,
+          2.4,
+          -8.1
+        ],
+        [
+          0.363,
+          2.72,
+          -9.1
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Conditional indoor-supply visualization only: a sheathed fixed lead and gland replace a fictional plug. Some selected split ACs are powered at the outdoor unit; if so this indoor supply branch must be omitted and the manufacturer interconnect used. No stabilizer decision, conductor count/rating or outdoor route is invented."
+      ]
+    },
+    {
+      "id": "geyser-1",
+      "label": "Bath 1 geyser \u00b7 fixed sheathed lead",
+      "room": "bathroom_1",
+      "board_id": "EB-BA1-CONN",
+      "function_id": "EB-BA1-CONN-F01",
+      "connection_state": "fixed-flex-proposal",
+      "socket_web_m": [
+        4.982484,
+        2.16,
+        -13.43
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.004,
+      "points_web_m": [
+        [
+          5.012484000000001,
+          2.12,
+          -13.43
+        ],
+        [
+          5.037484,
+          2.04,
+          -13.43
+        ],
+        [
+          5.36,
+          2.04,
+          -13.43
+        ],
+        [
+          5.36,
+          2.04,
+          -13.25
+        ],
+        [
+          5.36,
+          2.18,
+          -13.25
+        ],
+        [
+          5.325,
+          2.2,
+          -13.25
+        ]
+      ],
+      "length_m": 0.767,
+      "device_bounds_web_m": [
+        [
+          5.005,
+          2.13,
+          -12.900001
+        ],
+        [
+          5.325,
+          2.69,
+          -13.28
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Proposed fixed sheathed lead with glands and no exposed plug/socket in the open-shower room. Outside dry-side geyser isolation remains. Enclosure/IP, actual spray zone, heat-resistant cable, earth/RCD protection, ratings and tests must be selected/verified locally before energizing. Water connection caps are not electrical terminals."
+      ]
+    },
+    {
+      "id": "geyser-2",
+      "label": "Bath 2 geyser \u00b7 fixed sheathed lead",
+      "room": "bathroom_2",
+      "board_id": "EB-BA2-CONN",
+      "function_id": "EB-BA2-CONN-F01",
+      "connection_state": "fixed-flex-proposal",
+      "socket_web_m": [
+        6.971304,
+        2.16,
+        -5.4
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.004,
+      "points_web_m": [
+        [
+          7.001304,
+          2.12,
+          -5.4
+        ],
+        [
+          7.026304,
+          2.04,
+          -5.4
+        ],
+        [
+          7.35,
+          2.04,
+          -5.4
+        ],
+        [
+          7.35,
+          2.04,
+          -5.18
+        ],
+        [
+          7.35,
+          2.18,
+          -5.18
+        ],
+        [
+          7.315,
+          2.2,
+          -5.18
+        ]
+      ],
+      "length_m": 0.808,
+      "device_bounds_web_m": [
+        [
+          6.995,
+          2.13,
+          -4.83
+        ],
+        [
+          7.315,
+          2.69,
+          -5.21
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Proposed fixed sheathed lead with glands and no exposed plug/socket in the open-shower room. Outside dry-side geyser isolation remains. Enclosure/IP, actual spray zone, heat-resistant cable, earth/RCD protection, ratings and tests must be selected/verified locally before energizing. Water connection caps are not electrical terminals."
+      ]
+    },
+    {
+      "id": "geyser-3",
+      "label": "Bath 3 geyser \u00b7 fixed sheathed lead",
+      "room": "bathroom_3",
+      "board_id": "EB-BA3-CONN",
+      "function_id": "EB-BA3-CONN-F01",
+      "connection_state": "fixed-flex-proposal",
+      "socket_web_m": [
+        6.514032,
+        2.16,
+        -1.35
+      ],
+      "normal_web": [
+        1.0,
+        -0.0,
+        0.0
+      ],
+      "adapter": false,
+      "radius_m": 0.004,
+      "points_web_m": [
+        [
+          6.5440320000000005,
+          2.12,
+          -1.35
+        ],
+        [
+          6.569032,
+          2.04,
+          -1.35
+        ],
+        [
+          6.895,
+          2.04,
+          -1.35
+        ],
+        [
+          6.895,
+          2.04,
+          -1.15
+        ],
+        [
+          6.895,
+          2.18,
+          -1.15
+        ],
+        [
+          6.86,
+          2.2,
+          -1.15
+        ]
+      ],
+      "length_m": 0.79,
+      "device_bounds_web_m": [
+        [
+          6.54,
+          2.13,
+          -0.8
+        ],
+        [
+          6.86,
+          2.69,
+          -1.18
+        ]
+      ],
+      "terminal_basis": "proposed-case-surface-not-surveyed",
+      "review": [
+        "Proposed fixed sheathed lead with glands and no exposed plug/socket in the open-shower room. Outside dry-side geyser isolation remains. Enclosure/IP, actual spray zone, heat-resistant cable, earth/RCD protection, ratings and tests must be selected/verified locally before energizing. Water connection caps are not electrical terminals."
+      ]
+    }
+  ],
+  "unconnected": [
+    {
+      "id": "aquarium",
+      "room": "lounge",
+      "label": "Aquarium equipment \u00b7 protected feed proposal NOT energized",
+      "point_web_m": [
+        1.65,
+        1.1,
+        -5.4
+      ]
+    },
+    {
+      "id": "aquarium-panel",
+      "room": "lounge",
+      "label": "Aquarium lateral dry-bay cassette \u00b7 fixed feed proposed, NOT energized",
+      "point_web_m": [
+        0.896,
+        0.39,
+        -5.4
+      ]
+    },
+    {
+      "id": "kitchen-hob",
+      "room": "kitchen",
+      "label": "Hob ignition \u00b7 terminal/product selection pending",
+      "point_web_m": [
+        0.43,
+        0.91,
+        -15.0
+      ]
+    },
+    {
+      "id": "kitchen-hood",
+      "room": "kitchen",
+      "label": "Extractor \u00b7 terminal/product selection pending",
+      "point_web_m": [
+        0.4,
+        1.78,
+        -15.0
+      ]
+    }
+  ],
+  "aquarium": {
+    "status": "proposed-equipment-unenergized-panel",
+    "bodies": [
+      {
+        "id": "filter",
+        "label": "Internal filter / circulation pump - generic",
+        "power": "proposed-panel-outlet",
+        "position_web_m": [
+          1.0325,
+          0.881,
+          -5.294
+        ],
+        "size_web_m": [
+          0.075,
+          0.33,
+          0.042
+        ]
+      },
+      {
+        "id": "heater",
+        "label": "Immersed heater - capacity/species requirement unselected",
+        "power": "proposed-panel-outlet",
+        "position_web_m": [
+          2.15,
+          0.855,
+          -5.29
+        ],
+        "size_web_m": [
+          0.038,
+          0.31,
+          0.038
+        ]
+      },
+      {
+        "id": "feeder",
+        "label": "Automatic food dispenser - battery-operated proposal",
+        "power": "battery-no-mains-cord",
+        "position_web_m": [
+          1.8,
+          1.35,
+          -5.28
+        ],
+        "size_web_m": [
+          0.12,
+          0.1,
+          0.09
+        ]
+      },
+      {
+        "id": "light",
+        "label": "Aquarium LED bar - generic",
+        "power": "proposed-panel-outlet",
+        "position_web_m": [
+          1.65,
+          1.345,
+          -5.4
+        ],
+        "size_web_m": [
+          1.32,
+          0.028,
+          0.045
+        ]
+      }
+    ],
+    "cords": [
+      {
+        "id": "filter",
+        "socket_index": 0,
+        "points_web_m": [
+          [
+            0.926,
+            0.435,
+            -5.33
+          ],
+          [
+            0.926,
+            0.26,
+            -5.33
+          ],
+          [
+            0.926,
+            0.16,
+            -5.33
+          ],
+          [
+            0.85,
+            0.16,
+            -5.33
+          ],
+          [
+            0.85,
+            0.26,
+            -5.33
+          ],
+          [
+            0.86,
+            0.26,
+            -5.23
+          ],
+          [
+            0.895,
+            0.26,
+            -5.23
+          ],
+          [
+            0.895,
+            1.325,
+            -5.23
+          ],
+          [
+            1.0325,
+            1.325,
+            -5.235
+          ],
+          [
+            1.0325,
+            1.325,
+            -5.294
+          ],
+          [
+            1.0325,
+            1.046,
+            -5.294
+          ]
+        ]
+      },
+      {
+        "id": "heater",
+        "socket_index": 1,
+        "points_web_m": [
+          [
+            0.926,
+            0.435,
+            -5.46
+          ],
+          [
+            0.926,
+            0.26,
+            -5.465
+          ],
+          [
+            0.926,
+            0.16,
+            -5.465
+          ],
+          [
+            0.85,
+            0.16,
+            -5.465
+          ],
+          [
+            0.85,
+            0.27,
+            -5.465
+          ],
+          [
+            0.86,
+            0.27,
+            -5.23
+          ],
+          [
+            0.905,
+            0.27,
+            -5.22
+          ],
+          [
+            0.905,
+            1.332,
+            -5.22
+          ],
+          [
+            2.15,
+            1.332,
+            -5.22
+          ],
+          [
+            2.15,
+            1.332,
+            -5.29
+          ],
+          [
+            2.15,
+            1.01,
+            -5.29
+          ]
+        ]
+      },
+      {
+        "id": "light",
+        "socket_index": 2,
+        "points_web_m": [
+          [
+            0.926,
+            0.295,
+            -5.33
+          ],
+          [
+            0.926,
+            0.26,
+            -5.34
+          ],
+          [
+            0.926,
+            0.16,
+            -5.34
+          ],
+          [
+            0.85,
+            0.16,
+            -5.34
+          ],
+          [
+            0.85,
+            0.28,
+            -5.34
+          ],
+          [
+            0.86,
+            0.28,
+            -5.23
+          ],
+          [
+            0.915,
+            0.28,
+            -5.22
+          ],
+          [
+            0.915,
+            1.332,
+            -5.22
+          ],
+          [
+            1.0,
+            1.332,
+            -5.22
+          ],
+          [
+            1.0,
+            1.345,
+            -5.4
+          ]
+        ]
+      }
+    ],
+    "service": [
+      {
+        "id": "dry-bay-back-low",
+        "position_web_m": [
+          0.53,
+          0.155,
+          -5.25
+        ],
+        "size_web_m": [
+          0.76,
+          0.11,
+          0.01
+        ],
+        "cover": false
+      },
+      {
+        "id": "dry-bay-back-high",
+        "position_web_m": [
+          0.53,
+          0.435,
+          -5.25
+        ],
+        "size_web_m": [
+          0.76,
+          0.23,
+          0.01
+        ],
+        "cover": false
+      },
+      {
+        "id": "dry-bay-back-port-side",
+        "position_web_m": [
+          0.49,
+          0.265,
+          -5.25
+        ],
+        "size_web_m": [
+          0.68,
+          0.11,
+          0.01
+        ],
+        "cover": false
+      },
+      {
+        "id": "dry-bay-top",
+        "position_web_m": [
+          0.53,
+          0.558,
+          -5.4025
+        ],
+        "size_web_m": [
+          0.76,
+          0.016,
+          0.295
+        ],
+        "cover": false
+      },
+      {
+        "id": "dry-bay-left",
+        "position_web_m": [
+          0.158,
+          0.333,
+          -5.4025
+        ],
+        "size_web_m": [
+          0.016,
+          0.434,
+          0.295
+        ],
+        "cover": false
+      },
+      {
+        "id": "dry-bay-end",
+        "position_web_m": [
+          0.87,
+          0.3925,
+          -5.4
+        ],
+        "size_web_m": [
+          0.01,
+          0.315,
+          0.26
+        ],
+        "cover": false
+      },
+      {
+        "id": "dry-bay-base",
+        "position_web_m": [
+          0.53,
+          0.108,
+          -5.41
+        ],
+        "size_web_m": [
+          0.76,
+          0.016,
+          0.28
+        ],
+        "cover": false
+      },
+      {
+        "id": "dry-bay-removable-front",
+        "position_web_m": [
+          0.5305,
+          0.3415,
+          -5.568
+        ],
+        "size_web_m": [
+          0.721,
+          0.393,
+          0.016
+        ],
+        "cover": true
+      },
+      {
+        "id": "stand-right-skin",
+        "position_web_m": [
+          2.371,
+          0.32,
+          -5.415
+        ],
+        "size_web_m": [
+          0.016,
+          0.46,
+          0.27
+        ],
+        "cover": true
+      },
+      {
+        "id": "stand-front-left",
+        "position_web_m": [
+          1.2935,
+          0.32,
+          -5.568
+        ],
+        "size_web_m": [
+          0.701,
+          0.46,
+          0.016
+        ],
+        "cover": true
+      },
+      {
+        "id": "stand-front-right",
+        "position_web_m": [
+          2.005,
+          0.32,
+          -5.568
+        ],
+        "size_web_m": [
+          0.71,
+          0.46,
+          0.016
+        ],
+        "cover": true
+      },
+      {
+        "id": "riser-back",
+        "position_web_m": [
+          0.905,
+          0.735,
+          -5.204
+        ],
+        "size_web_m": [
+          0.06,
+          1.23,
+          0.006
+        ],
+        "cover": false
+      },
+      {
+        "id": "riser-west",
+        "position_web_m": [
+          0.878,
+          0.735,
+          -5.223
+        ],
+        "size_web_m": [
+          0.006,
+          1.23,
+          0.032
+        ],
+        "cover": false
+      },
+      {
+        "id": "riser-east",
+        "position_web_m": [
+          0.932,
+          0.71,
+          -5.223
+        ],
+        "size_web_m": [
+          0.006,
+          1.18,
+          0.032
+        ],
+        "cover": false
+      },
+      {
+        "id": "riser-lift-off-face",
+        "position_web_m": [
+          0.905,
+          0.9435,
+          -5.242
+        ],
+        "size_web_m": [
+          0.048,
+          0.727,
+          0.006
+        ],
+        "cover": true
+      },
+      {
+        "id": "rear-trough-bottom",
+        "position_web_m": [
+          1.6,
+          1.3035,
+          -5.2175
+        ],
+        "size_web_m": [
+          1.44,
+          0.007,
+          0.025
+        ],
+        "cover": false
+      },
+      {
+        "id": "rear-trough-back",
+        "position_web_m": [
+          1.6,
+          1.3285,
+          -5.2085
+        ],
+        "size_web_m": [
+          1.44,
+          0.043,
+          0.007
+        ],
+        "cover": false
+      },
+      {
+        "id": "rear-trough-lift-off-cap",
+        "position_web_m": [
+          1.6,
+          1.3465,
+          -5.221
+        ],
+        "size_web_m": [
+          1.44,
+          0.007,
+          0.018
+        ],
+        "cover": true
+      },
+      {
+        "id": "rear-trough-feeder-clear-bottom-0",
+        "position_web_m": [
+          1.305,
+          1.3035,
+          -5.2395
+        ],
+        "size_web_m": [
+          0.85,
+          0.007,
+          0.019
+        ],
+        "cover": false
+      },
+      {
+        "id": "rear-trough-feeder-clear-cap-0",
+        "position_web_m": [
+          1.305,
+          1.3465,
+          -5.2395
+        ],
+        "size_web_m": [
+          0.85,
+          0.007,
+          0.019
+        ],
+        "cover": true
+      },
+      {
+        "id": "rear-trough-feeder-clear-bottom-1",
+        "position_web_m": [
+          2.095,
+          1.3035,
+          -5.2395
+        ],
+        "size_web_m": [
+          0.45,
+          0.007,
+          0.019
+        ],
+        "cover": false
+      },
+      {
+        "id": "rear-trough-feeder-clear-cap-1",
+        "position_web_m": [
+          2.095,
+          1.3465,
+          -5.2395
+        ],
+        "size_web_m": [
+          0.45,
+          0.007,
+          0.019
+        ],
+        "cover": true
+      },
+      {
+        "id": "rear-trough-slotted-face-0",
+        "position_web_m": [
+          0.9475,
+          1.325,
+          -5.2455
+        ],
+        "size_web_m": [
+          0.045,
+          0.036,
+          0.007
+        ],
+        "cover": true
+      },
+      {
+        "id": "rear-trough-slotted-face-1",
+        "position_web_m": [
+          1.4,
+          1.325,
+          -5.2455
+        ],
+        "size_web_m": [
+          0.66,
+          0.036,
+          0.007
+        ],
+        "cover": true
+      },
+      {
+        "id": "rear-trough-slotted-face-2",
+        "position_web_m": [
+          1.995,
+          1.325,
+          -5.2455
+        ],
+        "size_web_m": [
+          0.25,
+          0.036,
+          0.007
+        ],
+        "cover": true
+      },
+      {
+        "id": "rear-trough-slotted-face-3",
+        "position_web_m": [
+          2.25,
+          1.325,
+          -5.2455
+        ],
+        "size_web_m": [
+          0.14,
+          0.036,
+          0.007
+        ],
+        "cover": true
+      }
+    ],
+    "panel": {
+      "position_web_m": [
+        0.884,
+        0.39,
+        -5.4
+      ],
+      "sockets_web_m": [
+        [
+          0.896,
+          0.46,
+          -5.33
+        ],
+        [
+          0.896,
+          0.46,
+          -5.46
+        ],
+        [
+          0.896,
+          0.32,
+          -5.33
+        ],
+        [
+          0.896,
+          0.32,
+          -5.46
+        ]
+      ],
+      "feed_state": "FIXED-FEED-PROPOSAL-NOT-ENERGIZED",
+      "feed_points_web_m": [
+        [
+          0.173,
+          0.364,
+          -5.6
+        ],
+        [
+          0.185,
+          0.364,
+          -5.6
+        ],
+        [
+          0.185,
+          0.131,
+          -5.6
+        ],
+        [
+          0.185,
+          0.131,
+          -5.4
+        ],
+        [
+          0.884,
+          0.23,
+          -5.4
+        ]
+      ]
+    },
+    "review": [
+      "The source already has a generic internal filter casing. It is retained and given a visible power lead, not duplicated. Heater, LED bar and battery food dispenser are additional generic proposals, not selected products.",
+      "Three real flex runs plug into a NEW proposed four-outlet dry service panel; one outlet is spare. This is not a multi-plug adapter in the old blank cover.",
+      "Flush timber skins wrap the existing metal stand without altering its frame or tank support. The adjacent low dry bay is wholly outside the tank footprint, separated by a side wall; there is no mains panel under the water. Lift-off front and upper/lower shadow gaps give access and airflow, not an IP certification.",
+      "Separate shallow rear trough has a lift-off cap and slotted face; cables remain accessible without lifting the wet lid or cutting plugs. No sealed cable bundle, shared aquarium/mains tray or wet-location extension is introduced.",
+      "A protected surface-feed proposal now connects the low connection reservation to the dry service panel, avoiding the accessible isolation control. This is NOT energized: DB/circuit, isolation wiring, earth continuity and protective devices are not designed or verified.",
+      "Panel is a compact east-facing two-by-two outlet cassette wholly west of x=.94, not a front-facing plate trapped behind the mandir. Remove the first tank-stand front skin and service it laterally through the clear gap between the retained frame legs. The shared side is intentionally open; the cassette has a solid rear mounting partition. Kneeling reach and supplier backbox/plug fit still require a mockup. No tank lifting or mandir movement.",
+      "The side bay is outside the tank's vertical leak footprint, but a real floor-level leak or splash can still reach it. Site splash/flood exposure, dedicated protection, accessible isolation, sealed backbox choice and a reach/removal mockup are mandatory approval gates before energizing.",
+      "All three equipment leads show drip-loop intent and over-rim entry. The lower bay requires longer factory-supplied flex, especially at the heater; select and verify actual lead lengths against these routes or revise the design. Do not splice, extend or add wet-location extension cords to make the illustration fit.",
+      "The revised editable lid now has two cable notches and a separate feeder opening. Smooth edge trims and cable support are illustrated. Actual lid material, feeding clearance, humidity protection, cleaning/lift-off access and fabrication require supplier approval.",
+      "The automatic food dispenser is a battery-operated proposal: it deliberately has no mains cord. Battery checks, moisture protection and a trial of feed quantities are required before relying on it.",
+      "Filter outlet implies circulation, not verified oxygenation. Stocking, filtration duty, heater need/wattage, light schedule and any separate aerator must be selected for the livestock, tank volume and ambient conditions.",
+      "Water level and rim geometry are unchanged. Heater is below the current water surface; feeding drop and light placement are only illustrative. No filled tank/support, electrical or aquatic-life safety certification."
+    ]
+  },
+  "media": {
+    "status": "wired-5.1-proposal-not-commissioned",
+    "receiver": {
+      "position_web_m": [
+        4.51,
+        0.65,
+        -7.72
+      ],
+      "size_web_m": [
+        0.3,
+        0.15,
+        0.44
+      ],
+      "bounds_web_m": [
+        [
+          4.36,
+          0.575,
+          -7.5
+        ],
+        [
+          4.66,
+          0.725,
+          -7.94
+        ]
+      ]
+    },
+    "signals": [
+      {
+        "id": "front-left",
+        "label": "5.1 front-left speaker",
+        "kind": "speaker-pair",
+        "from": {
+          "device": "receiver",
+          "port": "receiver:front-left",
+          "position_web_m": [
+            4.66,
+            0.665,
+            -7.55
+          ],
+          "bounds_web_m": [
+            [
+              4.36,
+              0.575,
+              -7.5
+            ],
+            [
+              4.66,
+              0.725,
+              -7.94
+            ]
+          ]
+        },
+        "to": {
+          "device": "front-left",
+          "port": "front-left:binding-posts",
+          "position_web_m": [
+            4.675,
+            1.02,
+            -7.12
+          ],
+          "bounds_web_m": [
+            [
+              4.535,
+              0.89,
+              -7.015
+            ],
+            [
+              4.675,
+              1.37,
+              -7.225
+            ]
+          ]
+        },
+        "radius_m": 0.0025,
+        "points_web_m": [
+          [
+            4.66,
+            0.665,
+            -7.55
+          ],
+          [
+            4.695,
+            0.6,
+            -7.55
+          ],
+          [
+            4.75,
+            0.6,
+            -7.55
+          ],
+          [
+            4.75,
+            0.9,
+            -7.55
+          ],
+          [
+            4.75,
+            0.9,
+            -7.12
+          ],
+          [
+            4.75,
+            1.02,
+            -7.12
+          ],
+          [
+            4.69,
+            1.02,
+            -7.12
+          ],
+          [
+            4.675,
+            1.02,
+            -7.12
+          ]
+        ]
+      },
+      {
+        "id": "front-right",
+        "label": "5.1 front-right speaker",
+        "kind": "speaker-pair",
+        "from": {
+          "device": "receiver",
+          "port": "receiver:front-right",
+          "position_web_m": [
+            4.66,
+            0.665,
+            -7.595
+          ],
+          "bounds_web_m": [
+            [
+              4.36,
+              0.575,
+              -7.5
+            ],
+            [
+              4.66,
+              0.725,
+              -7.94
+            ]
+          ]
+        },
+        "to": {
+          "device": "front-right",
+          "port": "front-right:binding-posts",
+          "position_web_m": [
+            4.675,
+            1.02,
+            -9.51
+          ],
+          "bounds_web_m": [
+            [
+              4.535,
+              0.89,
+              -9.405001
+            ],
+            [
+              4.675,
+              1.37,
+              -9.615
+            ]
+          ]
+        },
+        "radius_m": 0.0025,
+        "points_web_m": [
+          [
+            4.66,
+            0.665,
+            -7.595
+          ],
+          [
+            4.695,
+            0.6,
+            -7.595
+          ],
+          [
+            4.75,
+            0.6,
+            -7.595
+          ],
+          [
+            4.75,
+            0.9,
+            -7.595
+          ],
+          [
+            4.75,
+            0.9,
+            -9.51
+          ],
+          [
+            4.75,
+            1.02,
+            -9.51
+          ],
+          [
+            4.69,
+            1.02,
+            -9.51
+          ],
+          [
+            4.675,
+            1.02,
+            -9.51
+          ]
+        ]
+      },
+      {
+        "id": "centre",
+        "label": "5.1 centre speaker",
+        "kind": "speaker-pair",
+        "from": {
+          "device": "receiver",
+          "port": "receiver:centre",
+          "position_web_m": [
+            4.66,
+            0.665,
+            -7.64
+          ],
+          "bounds_web_m": [
+            [
+              4.36,
+              0.575,
+              -7.5
+            ],
+            [
+              4.66,
+              0.725,
+              -7.94
+            ]
+          ]
+        },
+        "to": {
+          "device": "centre",
+          "port": "centre:binding-posts",
+          "position_web_m": [
+            4.655,
+            0.86,
+            -8.32
+          ],
+          "bounds_web_m": [
+            [
+              4.533,
+              0.788,
+              -8.0
+            ],
+            [
+              4.655,
+              0.932,
+              -8.639999
+            ]
+          ]
+        },
+        "radius_m": 0.0025,
+        "points_web_m": [
+          [
+            4.66,
+            0.665,
+            -7.64
+          ],
+          [
+            4.695,
+            0.6,
+            -7.64
+          ],
+          [
+            4.75,
+            0.6,
+            -7.64
+          ],
+          [
+            4.75,
+            0.9,
+            -7.64
+          ],
+          [
+            4.75,
+            0.9,
+            -8.32
+          ],
+          [
+            4.75,
+            0.86,
+            -8.32
+          ],
+          [
+            4.69,
+            0.86,
+            -8.32
+          ],
+          [
+            4.655,
+            0.86,
+            -8.32
+          ]
+        ]
+      },
+      {
+        "id": "surround-left",
+        "label": "5.1 surround-left speaker",
+        "kind": "speaker-pair",
+        "from": {
+          "device": "receiver",
+          "port": "receiver:surround-left",
+          "position_web_m": [
+            4.66,
+            0.665,
+            -7.685
+          ],
+          "bounds_web_m": [
+            [
+              4.36,
+              0.575,
+              -7.5
+            ],
+            [
+              4.66,
+              0.725,
+              -7.94
+            ]
+          ]
+        },
+        "to": {
+          "device": "surround-left",
+          "port": "surround-left:binding-posts",
+          "position_web_m": [
+            0.16,
+            1.7,
+            -7.58
+          ],
+          "bounds_web_m": [
+            [
+              0.16,
+              1.58,
+              -7.48
+            ],
+            [
+              0.3,
+              1.82,
+              -7.68
+            ]
+          ]
+        },
+        "radius_m": 0.0025,
+        "points_web_m": [
+          [
+            4.66,
+            0.665,
+            -7.685
+          ],
+          [
+            4.695,
+            0.6,
+            -7.685
+          ],
+          [
+            4.75,
+            0.6,
+            -7.685
+          ],
+          [
+            4.75,
+            0.6,
+            -9.38
+          ],
+          [
+            4.763,
+            2.24,
+            -9.38
+          ],
+          [
+            4.763,
+            2.58,
+            -9.38
+          ],
+          [
+            4.763,
+            2.58,
+            -10.06
+          ],
+          [
+            0.141,
+            2.58,
+            -10.06
+          ],
+          [
+            0.141,
+            2.24,
+            -10.06
+          ],
+          [
+            0.141,
+            2.24,
+            -7.58
+          ],
+          [
+            0.141,
+            1.7,
+            -7.58
+          ],
+          [
+            0.16,
+            1.7,
+            -7.58
+          ]
+        ]
+      },
+      {
+        "id": "surround-right",
+        "label": "5.1 surround-right speaker",
+        "kind": "speaker-pair",
+        "from": {
+          "device": "receiver",
+          "port": "receiver:surround-right",
+          "position_web_m": [
+            4.66,
+            0.665,
+            -7.73
+          ],
+          "bounds_web_m": [
+            [
+              4.36,
+              0.575,
+              -7.5
+            ],
+            [
+              4.66,
+              0.725,
+              -7.94
+            ]
+          ]
+        },
+        "to": {
+          "device": "surround-right",
+          "port": "surround-right:binding-posts",
+          "position_web_m": [
+            0.16,
+            1.7,
+            -9.4
+          ],
+          "bounds_web_m": [
+            [
+              0.16,
+              1.58,
+              -9.299999
+            ],
+            [
+              0.3,
+              1.82,
+              -9.5
+            ]
+          ]
+        },
+        "radius_m": 0.0025,
+        "points_web_m": [
+          [
+            4.66,
+            0.665,
+            -7.73
+          ],
+          [
+            4.689,
+            0.594,
+            -7.724
+          ],
+          [
+            4.744,
+            0.594,
+            -7.724
+          ],
+          [
+            4.744,
+            0.594,
+            -9.374
+          ],
+          [
+            4.757,
+            2.234,
+            -9.374
+          ],
+          [
+            4.757,
+            2.574,
+            -9.374
+          ],
+          [
+            4.757,
+            2.574,
+            -10.054
+          ],
+          [
+            0.145,
+            2.574,
+            -10.054
+          ],
+          [
+            0.145,
+            2.234,
+            -10.054
+          ],
+          [
+            0.145,
+            2.234,
+            -9.394
+          ],
+          [
+            0.145,
+            1.694,
+            -9.394
+          ],
+          [
+            0.16,
+            1.7,
+            -9.4
+          ]
+        ]
+      },
+      {
+        "id": "sub-lfe",
+        "label": "Receiver to powered subwoofer \u00b7 LFE",
+        "kind": "line-level",
+        "from": {
+          "device": "receiver",
+          "port": "receiver:sub-pre-out",
+          "position_web_m": [
+            4.66,
+            0.665,
+            -7.79
+          ],
+          "bounds_web_m": [
+            [
+              4.36,
+              0.575,
+              -7.5
+            ],
+            [
+              4.66,
+              0.725,
+              -7.94
+            ]
+          ]
+        },
+        "to": {
+          "device": "subwoofer",
+          "port": "subwoofer:lfe",
+          "position_web_m": [
+            4.68,
+            0.22,
+            -9.64
+          ],
+          "bounds_web_m": [
+            [
+              4.36,
+              0.025,
+              -9.445
+            ],
+            [
+              4.68,
+              0.4,
+              -9.735001
+            ]
+          ]
+        },
+        "radius_m": 0.0025,
+        "points_web_m": [
+          [
+            4.66,
+            0.665,
+            -7.79
+          ],
+          [
+            4.695,
+            0.6,
+            -7.79
+          ],
+          [
+            4.745,
+            0.6,
+            -7.79
+          ],
+          [
+            4.745,
+            0.6,
+            -9.23
+          ],
+          [
+            4.745,
+            0.12,
+            -9.23
+          ],
+          [
+            4.745,
+            0.12,
+            -9.64
+          ],
+          [
+            4.7,
+            0.22,
+            -9.64
+          ],
+          [
+            4.68,
+            0.22,
+            -9.64
+          ]
+        ]
+      },
+      {
+        "id": "tv-earc",
+        "label": "tv-earc \u00b7 HDMI",
+        "kind": "hdmi",
+        "from": {
+          "device": "receiver",
+          "port": "receiver:earc",
+          "position_web_m": [
+            4.66,
+            0.64,
+            -7.82
+          ],
+          "bounds_web_m": [
+            [
+              4.36,
+              0.575,
+              -7.5
+            ],
+            [
+              4.66,
+              0.725,
+              -7.94
+            ]
+          ]
+        },
+        "to": {
+          "device": "tv-earc",
+          "port": "tv-earc:hdmi",
+          "position_web_m": [
+            4.695,
+            1.16,
+            -8.5
+          ],
+          "bounds_web_m": [
+            [
+              4.625,
+              0.935,
+              -7.599999
+            ],
+            [
+              4.695,
+              1.745,
+              -9.04
+            ]
+          ]
+        },
+        "radius_m": 0.003,
+        "points_web_m": [
+          [
+            4.66,
+            0.64,
+            -7.82
+          ],
+          [
+            4.695,
+            0.6,
+            -7.82
+          ],
+          [
+            4.75,
+            0.6,
+            -7.82
+          ],
+          [
+            4.75,
+            0.6,
+            -8.5
+          ],
+          [
+            4.75,
+            1.16,
+            -8.5
+          ],
+          [
+            4.695,
+            1.16,
+            -8.5
+          ]
+        ]
+      },
+      {
+        "id": "stb-hdmi",
+        "label": "stb-hdmi \u00b7 HDMI",
+        "kind": "hdmi",
+        "from": {
+          "device": "receiver",
+          "port": "receiver:hdmi-in-1",
+          "position_web_m": [
+            4.66,
+            0.64,
+            -7.85
+          ],
+          "bounds_web_m": [
+            [
+              4.36,
+              0.575,
+              -7.5
+            ],
+            [
+              4.66,
+              0.725,
+              -7.94
+            ]
+          ]
+        },
+        "to": {
+          "device": "stb-hdmi",
+          "port": "stb-hdmi:hdmi",
+          "position_web_m": [
+            4.69,
+            0.58,
+            -8.96
+          ],
+          "bounds_web_m": [
+            [
+              4.56,
+              0.56,
+              -8.855
+            ],
+            [
+              4.69,
+              0.595,
+              -9.045
+            ]
+          ]
+        },
+        "radius_m": 0.003,
+        "points_web_m": [
+          [
+            4.66,
+            0.64,
+            -7.85
+          ],
+          [
+            4.695,
+            0.6,
+            -7.85
+          ],
+          [
+            4.75,
+            0.6,
+            -7.85
+          ],
+          [
+            4.75,
+            0.6,
+            -8.96
+          ],
+          [
+            4.69,
+            0.58,
+            -8.96
+          ]
+        ]
+      },
+      {
+        "id": "nvr-hdmi",
+        "label": "nvr-hdmi \u00b7 HDMI",
+        "kind": "hdmi",
+        "from": {
+          "device": "receiver",
+          "port": "receiver:hdmi-in-2",
+          "position_web_m": [
+            4.66,
+            0.64,
+            -7.88
+          ],
+          "bounds_web_m": [
+            [
+              4.36,
+              0.575,
+              -7.5
+            ],
+            [
+              4.66,
+              0.725,
+              -7.94
+            ]
+          ]
+        },
+        "to": {
+          "device": "nvr-hdmi",
+          "port": "nvr-hdmi:hdmi",
+          "position_web_m": [
+            4.68,
+            0.24,
+            -8.9
+          ],
+          "bounds_web_m": [
+            [
+              4.454999,
+              0.218,
+              -8.8125
+            ],
+            [
+              4.68,
+              0.266,
+              -9.077499
+            ]
+          ]
+        },
+        "radius_m": 0.003,
+        "points_web_m": [
+          [
+            4.66,
+            0.64,
+            -7.88
+          ],
+          [
+            4.695,
+            0.6,
+            -7.88
+          ],
+          [
+            4.75,
+            0.6,
+            -7.88
+          ],
+          [
+            4.75,
+            0.61,
+            -9.24
+          ],
+          [
+            4.73,
+            0.24,
+            -9.24
+          ],
+          [
+            4.73,
+            0.24,
+            -8.9
+          ],
+          [
+            4.68,
+            0.24,
+            -8.9
+          ]
+        ]
+      },
+      {
+        "id": "ont-router",
+        "label": "Network \u00b7 ont-router",
+        "kind": "ethernet",
+        "from": {
+          "device": "ont",
+          "port": "ont:ont-router",
+          "position_web_m": [
+            4.68,
+            0.46,
+            -8.99
+          ],
+          "bounds_web_m": [
+            [
+              4.56,
+              0.445,
+              -8.865
+            ],
+            [
+              4.68,
+              0.48,
+              -9.025
+            ]
+          ]
+        },
+        "to": {
+          "device": "router",
+          "port": "router:ont-router",
+          "position_web_m": [
+            4.68,
+            0.31,
+            -8.96
+          ],
+          "bounds_web_m": [
+            [
+              4.55,
+              0.29,
+              -8.855
+            ],
+            [
+              4.68,
+              0.33,
+              -9.035
+            ]
+          ]
+        },
+        "radius_m": 0.002,
+        "points_web_m": [
+          [
+            4.68,
+            0.46,
+            -8.99
+          ],
+          [
+            4.735,
+            0.46,
+            -8.99
+          ],
+          [
+            4.735,
+            0.31,
+            -8.99
+          ],
+          [
+            4.735,
+            0.31,
+            -8.96
+          ],
+          [
+            4.68,
+            0.31,
+            -8.96
+          ]
+        ]
+      },
+      {
+        "id": "router-poe",
+        "label": "Network \u00b7 router-poe",
+        "kind": "ethernet",
+        "from": {
+          "device": "router",
+          "port": "router:router-poe",
+          "position_web_m": [
+            4.68,
+            0.31,
+            -8.99
+          ],
+          "bounds_web_m": [
+            [
+              4.55,
+              0.29,
+              -8.855
+            ],
+            [
+              4.68,
+              0.33,
+              -9.035
+            ]
+          ]
+        },
+        "to": {
+          "device": "poe_switch",
+          "port": "poe_switch:router-poe",
+          "position_web_m": [
+            4.68,
+            0.39,
+            -8.96
+          ],
+          "bounds_web_m": [
+            [
+              4.53,
+              0.365,
+              -8.835
+            ],
+            [
+              4.68,
+              0.41,
+              -9.054999
+            ]
+          ]
+        },
+        "radius_m": 0.002,
+        "points_web_m": [
+          [
+            4.68,
+            0.31,
+            -8.99
+          ],
+          [
+            4.735,
+            0.31,
+            -8.99
+          ],
+          [
+            4.735,
+            0.39,
+            -8.99
+          ],
+          [
+            4.735,
+            0.39,
+            -8.96
+          ],
+          [
+            4.68,
+            0.39,
+            -8.96
+          ]
+        ]
+      },
+      {
+        "id": "poe-nvr",
+        "label": "Network \u00b7 poe-nvr",
+        "kind": "ethernet",
+        "from": {
+          "device": "poe_switch",
+          "port": "poe_switch:poe-nvr",
+          "position_web_m": [
+            4.68,
+            0.39,
+            -8.99
+          ],
+          "bounds_web_m": [
+            [
+              4.53,
+              0.365,
+              -8.835
+            ],
+            [
+              4.68,
+              0.41,
+              -9.054999
+            ]
+          ]
+        },
+        "to": {
+          "device": "nvr",
+          "port": "nvr:poe-nvr",
+          "position_web_m": [
+            4.68,
+            0.24,
+            -8.96
+          ],
+          "bounds_web_m": [
+            [
+              4.454999,
+              0.218,
+              -8.8125
+            ],
+            [
+              4.68,
+              0.266,
+              -9.077499
+            ]
+          ]
+        },
+        "radius_m": 0.002,
+        "points_web_m": [
+          [
+            4.68,
+            0.39,
+            -8.99
+          ],
+          [
+            4.735,
+            0.39,
+            -8.99
+          ],
+          [
+            4.735,
+            0.24,
+            -8.99
+          ],
+          [
+            4.735,
+            0.24,
+            -8.96
+          ],
+          [
+            4.68,
+            0.24,
+            -8.96
+          ]
+        ]
+      }
+    ],
+    "review": [
+      "Conventional 5.1: five passive speakers are driven by the receiver; they do not each need a mains socket. The active subwoofer has both a dedicated power lead and a separate LFE signal.",
+      "Generic compact receiver sits on the console top, not inside the shallow closed cupboard. Its top remains open and its rear has a nominal 90mm cable zone. Select a unit that actually fits; manufacturer ventilation/connector space overrides these provisional dimensions.",
+      "Front speaker and HDMI cables use physically cut rear channels and local ports in the timber backing. The front face is uninterrupted: no applied horizontal raceway across the design. Lift-off joinery access is a fabrication proposal, not a structural wall chase.",
+      "Rear speaker pairs use physically grooved, removable paint-matched nonstructural lining: an upper east service band, north high-level return and west lining below the AC, with local ports behind speakers. No applied white tube crosses the finished wall, no loose floor lead, and no structural wall/beam chase is implied. Lining fixings, substrate, fire/cable class and fabrication need site coordination.",
+      "Mains-only outlets for receiver/subwoofer and NVR/PoE are separate from passive signal paths. Existing ONT/router backup preference is retained without extending it to NVR/PoE. No shared unpartitioned mains/data raceway or extension strip.",
+      "Receiver-to-TV HDMI eARC, set-top and NVR HDMI, ONT/router/PoE/NVR patch leads are physical proposals. Camera home runs, ISP entry, impedance, polarity, cable class, bend limits and calibration remain selected-product/site work.",
+      "Speaker locations are retained, not acoustically certified. Commission levels, crossover, delays and subwoofer position by listening/measurement at the actual seating.",
+      "Network bay uses actual concealed underside intake and high rear openings, keeping the timber door face uncut. They provide a passive airflow proposal, not a verified thermal calculation. Check equipment dissipation and temperature with the door closed; add suitable quiet ventilation or relocate if the selected products require it."
+    ],
+    "sources": [
+      {
+        "title": "Denon: connecting 5.1-channel speakers (example architecture, not selected receiver)",
+        "url": "https://manuals.denon.com/AVRX1800H/EU/EN/DRDZSYdcvbtfwy.php"
+      },
+      {
+        "title": "Denon: speaker-terminal connections and precautions",
+        "url": "https://manuals.denon.com/AVRX1800H/EU/EN/DRDZSYhdenfbwz.php"
+      }
+    ]
+  },
+  "additions": {
+    "model_sha256": "831f876f14ac34120c5e806d352abc92fa9c083d7e48a28d0b93e5e19a7a0ae4",
+    "phone_outlets": [
+      {
+        "id": "EB-B1-BED-A-PHONE",
+        "room": "bedroom_1",
+        "label": "Phone charging outlet - shared bedside plate",
+        "position_web_m": [
+          4.8575,
+          0.59,
+          -17.564785
+        ],
+        "normal_web": [
+          -0.0,
+          -0.0,
+          1.0
+        ],
+        "status": "proposed-empty-outlet-circuit-and-product-unselected"
+      },
+      {
+        "id": "EB-B1-BED-B-PHONE",
+        "room": "bedroom_1",
+        "label": "Phone charging outlet - shared bedside plate",
+        "position_web_m": [
+          7.0575,
+          0.59,
+          -17.564785
+        ],
+        "normal_web": [
+          -0.0,
+          -0.0,
+          1.0
+        ],
+        "status": "proposed-empty-outlet-circuit-and-product-unselected"
+      },
+      {
+        "id": "EB-B2-BED-A-PHONE",
+        "room": "bedroom_2",
+        "label": "Phone charging outlet - shared bedside plate",
+        "position_web_m": [
+          4.91358,
+          0.59,
+          -6.7575
+        ],
+        "normal_web": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "status": "proposed-empty-outlet-circuit-and-product-unselected"
+      },
+      {
+        "id": "EB-B2-BED-B-PHONE",
+        "room": "bedroom_2",
+        "label": "Phone charging outlet - shared bedside plate",
+        "position_web_m": [
+          4.91358,
+          0.59,
+          -9.2075
+        ],
+        "normal_web": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "status": "proposed-empty-outlet-circuit-and-product-unselected"
+      },
+      {
+        "id": "EB-B3-BED-A-PHONE",
+        "room": "bedroom_3",
+        "label": "Phone charging outlet - shared bedside plate",
+        "position_web_m": [
+          3.516708,
+          0.59,
+          -1.3925
+        ],
+        "normal_web": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "status": "proposed-empty-outlet-circuit-and-product-unselected"
+      },
+      {
+        "id": "EB-B3-BED-B-PHONE",
+        "room": "bedroom_3",
+        "label": "Phone charging outlet - shared bedside plate",
+        "position_web_m": [
+          3.516708,
+          0.59,
+          -3.5925
+        ],
+        "normal_web": [
+          1.0,
+          -0.0,
+          0.0
+        ],
+        "status": "proposed-empty-outlet-circuit-and-product-unselected"
+      }
+    ]
+  },
+  "limits": [
+    "Solid 3D flex and plugs are physical-layout proposals, not dashed control links or building wiring.",
+    "Cable entries are provisional points on modeled case surfaces, not surveyed manufacturer terminals.",
+    "Cable diameters, plug/adapter shapes and drawn lengths illustrate appearance only; no electrical rating or supplied lead length is selected.",
+    "Revised joinery has explicit service openings, with source-bound removal masks. No structural cable hole or hidden unsafe shortcut is invented. Fabrication/product approval remains required.",
+    "Phone and lamp sockets share each bedside plate, with independent charging and lighting controls. No splitter is modeled.",
+    "Unused sockets remain empty. Aquarium fixed-feed containment is proposed, NOT energized. Neither it nor conditional AC/geyser leads prove a designed/tested building circuit.",
+    "Qualified local review must establish safe terminations, cable routing, heat/water separation, earthing, protection and product-specific access."
+  ]
+}

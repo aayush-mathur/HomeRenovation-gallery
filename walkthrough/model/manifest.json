@@ -1,9 +1,9 @@
 {
   "version": 1,
   "source_sha256": "ddf35d094002b9272ff3c2ce68da5b7d65233365e3585f3c13f8ed7c04ba4637",
-  "model_sha256": "c1fc27ea41a8afb86ca5eef31715ef064b47fb7d5bc72985e1cae92b6adf71d6",
+  "model_sha256": "f8da33a6aae86eacfb79ee676c1dda9cc88457d36f930fcdc8c6218b33727b47",
   "navigation_sha256": "f1cbd7a13ff9cffd1d14fdffa193f75cacb3de5cfdc1b629d81cc0961429419e",
-  "bytes": 22956432,
+  "bytes": 18622920,
   "units": "meters",
   "eye_height": 1.6,
   "triangles": 344798,
@@ -76,7 +76,7 @@
         "fan_blade_height_m": 2.52
       }
     ],
-    "note": "Sculpted Luxe is the sole active whole-floor design. Earlier schemes are historical studies. Structural beams, fan pockets and the lightwell remain; installation and lighting need site review."
+    "note": "Sculpted Luxe is the selected whole-floor ceiling. Earlier alternatives remain historical studies only. Beam cores, fan pockets and the dining lightwell are retained; dimensions, support and lighting require site review."
   },
   "drinking_water": {
     "status": "Generic compact undercounter purifier provision; product and water treatment selection pending",
@@ -257,5 +257,5 @@
     "Body bottom 2130 mm; lowest capped terminals 2075 mm. Service envelopes are provisional maintenance reservations, not an accessible-installation or wet-zone compliance claim.",
     "Shower keepouts are conservative spatial review aids based on current fixture positions, not measured spray envelopes or statutory electrical zones."
   ],
-  "furniture_visibility_sha256": "8fe0b83423c246b3fa80f774e3f5e7c76523e62fc33caab79ecd6387e97cdd8f"
+  "furniture_visibility_sha256": "013a01a7fd2ea3f7f16ee96e017cc70f5bb47f167bd2b89e31f6c81d307320bb"
 }
