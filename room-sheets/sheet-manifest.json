@@ -1,0 +1,507 @@
+{
+  "source_sha256": "ddf35d094002b9272ff3c2ce68da5b7d65233365e3585f3c13f8ed7c04ba4637",
+  "descriptor_sha256": "6c58fbc24eff1986b22cbd93fb52eafc0b7e0ae6e06936e7e38851ff6d73c4fd",
+  "pages": [
+    {
+      "filename": "eb-b1-entry.png",
+      "board": "EB-B1-ENTRY",
+      "room": "bedroom_1",
+      "title": "पीछे का कमरा • कमरे की लाइट / पंखा / AC",
+      "kind": "board",
+      "source_view": "bedroom_1-wall-1-1.png"
+    },
+    {
+      "filename": "eb-b1-conn.png",
+      "board": "EB-B1-CONN",
+      "room": "bedroom_1",
+      "title": "पीछे का कमरा • AC • कनेक्शन",
+      "kind": "board",
+      "source_view": "bedroom_1-wall-1-1.png"
+    },
+    {
+      "filename": "eb-b1-work.png",
+      "board": "EB-B1-WORK",
+      "room": "bedroom_1",
+      "title": "पीछे का कमरा • टेबल के पास",
+      "kind": "board",
+      "source_view": "bedroom_1-wall-1-1.png"
+    },
+    {
+      "filename": "eb-b1-clean.png",
+      "board": "EB-B1-CLEAN",
+      "room": "bedroom_1",
+      "title": "पीछे का कमरा • सफ़ाई का सॉकेट",
+      "kind": "board",
+      "source_view": "bedroom_1-wall-2-1.png"
+    },
+    {
+      "filename": "eb-b1-bed-a.png",
+      "board": "EB-B1-BED-A",
+      "room": "bedroom_1",
+      "title": "पीछे का कमरा • पलंग के पास",
+      "kind": "board",
+      "source_view": "bedroom_1-wall-2-1.png"
+    },
+    {
+      "filename": "eb-b1-bed-b.png",
+      "board": "EB-B1-BED-B",
+      "room": "bedroom_1",
+      "title": "पीछे का कमरा • पलंग के पास",
+      "kind": "board",
+      "source_view": "bedroom_1-wall-2-1.png"
+    },
+    {
+      "filename": "eb-ba1-dry.png",
+      "board": "EB-BA1-DRY",
+      "room": "bedroom_1",
+      "title": "पीछे का कमरा • बाथरूम • लाइट / पंखा / गीज़र",
+      "kind": "board",
+      "source_view": "bedroom_1-wall-5-1.png"
+    },
+    {
+      "filename": "eb-b1-tv.png",
+      "board": "EB-B1-TV",
+      "room": "bedroom_1",
+      "title": "पीछे का कमरा • TV • पावर / इंटरनेट",
+      "kind": "board",
+      "source_view": "bedroom_1-wall-4-1.png"
+    },
+    {
+      "filename": "bedroom_1-furniture-1.png",
+      "room": "bedroom_1",
+      "title": "पीछे का कमरा • फर्नीचर का माप",
+      "kind": "furniture"
+    },
+    {
+      "filename": "eb-b2-entry.png",
+      "board": "EB-B2-ENTRY",
+      "room": "bedroom_2",
+      "title": "बीच का कमरा • कमरे की लाइट / पंखा / AC",
+      "kind": "board",
+      "source_view": "bedroom_2-wall-1-1.png"
+    },
+    {
+      "filename": "eb-b2-bed-a.png",
+      "board": "EB-B2-BED-A",
+      "room": "bedroom_2",
+      "title": "बीच का कमरा • पलंग के पास",
+      "kind": "board",
+      "source_view": "bedroom_2-wall-1-1.png"
+    },
+    {
+      "filename": "eb-b2-bed-b.png",
+      "board": "EB-B2-BED-B",
+      "room": "bedroom_2",
+      "title": "बीच का कमरा • पलंग के पास",
+      "kind": "board",
+      "source_view": "bedroom_2-wall-1-1.png"
+    },
+    {
+      "filename": "eb-b2-work.png",
+      "board": "EB-B2-WORK",
+      "room": "bedroom_2",
+      "title": "बीच का कमरा • टेबल के पास",
+      "kind": "board",
+      "source_view": "bedroom_2-wall-2-1.png"
+    },
+    {
+      "filename": "eb-b2-vanity.png",
+      "board": "EB-B2-VANITY",
+      "room": "bedroom_2",
+      "title": "बीच का कमरा • ड्रेसिंग के पास",
+      "kind": "board",
+      "source_view": "bedroom_2-wall-5-1.png"
+    },
+    {
+      "filename": "eb-ba2-dry.png",
+      "board": "EB-BA2-DRY",
+      "room": "bedroom_2",
+      "title": "बीच का कमरा • बाथरूम • लाइट / पंखा / गीज़र",
+      "kind": "board",
+      "source_view": "bedroom_2-wall-4-1.png"
+    },
+    {
+      "filename": "eb-b2-clean.png",
+      "board": "EB-B2-CLEAN",
+      "room": "bedroom_2",
+      "title": "बीच का कमरा • सफ़ाई का सॉकेट",
+      "kind": "board",
+      "source_view": "bedroom_2-wall-3-1.png"
+    },
+    {
+      "filename": "eb-b2-conn.png",
+      "board": "EB-B2-CONN",
+      "room": "bedroom_2",
+      "title": "बीच का कमरा • AC • कनेक्शन",
+      "kind": "board",
+      "source_view": "bedroom_2-wall-3-1.png"
+    },
+    {
+      "filename": "bedroom_2-furniture-1.png",
+      "room": "bedroom_2",
+      "title": "बीच का कमरा • फर्नीचर का माप",
+      "kind": "furniture"
+    },
+    {
+      "filename": "eb-b3-entry.png",
+      "board": "EB-B3-ENTRY",
+      "room": "bedroom_3",
+      "title": "आगे का कमरा • कमरे की लाइट / पंखा / AC",
+      "kind": "board",
+      "source_view": "bedroom_3-wall-2-1.png"
+    },
+    {
+      "filename": "eb-b3-work.png",
+      "board": "EB-B3-WORK",
+      "room": "bedroom_3",
+      "title": "आगे का कमरा • टेबल के पास",
+      "kind": "board",
+      "source_view": "bedroom_3-wall-2-1.png"
+    },
+    {
+      "filename": "eb-b3-conn.png",
+      "board": "EB-B3-CONN",
+      "room": "bedroom_3",
+      "title": "आगे का कमरा • AC • कनेक्शन",
+      "kind": "board",
+      "source_view": "bedroom_3-wall-2-1.png"
+    },
+    {
+      "filename": "eb-b3-bed-a.png",
+      "board": "EB-B3-BED-A",
+      "room": "bedroom_3",
+      "title": "आगे का कमरा • पलंग के पास",
+      "kind": "board",
+      "source_view": "bedroom_3-wall-1-1.png"
+    },
+    {
+      "filename": "eb-b3-bed-b.png",
+      "board": "EB-B3-BED-B",
+      "room": "bedroom_3",
+      "title": "आगे का कमरा • पलंग के पास",
+      "kind": "board",
+      "source_view": "bedroom_3-wall-1-1.png"
+    },
+    {
+      "filename": "eb-b3-clean.png",
+      "board": "EB-B3-CLEAN",
+      "room": "bedroom_3",
+      "title": "आगे का कमरा • सफ़ाई का सॉकेट",
+      "kind": "board",
+      "source_view": "bedroom_3-wall-5-1.png"
+    },
+    {
+      "filename": "bedroom_3-furniture-1.png",
+      "room": "bedroom_3",
+      "title": "आगे का कमरा • फर्नीचर का माप",
+      "kind": "furniture"
+    },
+    {
+      "filename": "eb-ha-entry.png",
+      "board": "EB-HA-ENTRY",
+      "room": "lounge",
+      "title": "हॉल • कमरे की लाइट / पंखा / AC",
+      "kind": "board",
+      "source_view": "lounge-wall-3-1.png"
+    },
+    {
+      "filename": "eb-ha-clean.png",
+      "board": "EB-HA-CLEAN",
+      "room": "lounge",
+      "title": "हॉल • सफ़ाई का सॉकेट",
+      "kind": "board",
+      "source_view": "lounge-wall-3-1.png"
+    },
+    {
+      "filename": "eb-ha-media.png",
+      "board": "EB-HA-MEDIA",
+      "room": "lounge",
+      "title": "हॉल • TV • पावर / इंटरनेट",
+      "kind": "board",
+      "source_view": "lounge-wall-3-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ha-data.png",
+      "board": "EB-HA-DATA",
+      "room": "lounge",
+      "title": "हॉल • TV • इंटरनेट",
+      "kind": "board",
+      "source_view": "lounge-wall-3-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ha-wifi.png",
+      "board": "EB-HA-WIFI",
+      "room": "lounge",
+      "title": "हॉल • Wi-Fi",
+      "kind": "board",
+      "source_view": "lounge-wall-3-1.png"
+    },
+    {
+      "filename": "eb-en-arrival.png",
+      "board": "EB-EN-ARRIVAL",
+      "room": "lounge",
+      "title": "हॉल • प्रवेश की लाइट",
+      "kind": "board",
+      "source_view": "lounge-wall-3-1.png"
+    },
+    {
+      "filename": "eb-ha-mandir.png",
+      "board": "EB-HA-MANDIR",
+      "room": "lounge",
+      "title": "हॉल • मंदिर",
+      "kind": "board",
+      "source_view": "lounge-wall-1-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ha-aquarium-conn.png",
+      "board": "EB-HA-AQUARIUM-CONN",
+      "room": "lounge",
+      "title": "हॉल • एक्वेरियम • कनेक्शन",
+      "kind": "board",
+      "source_view": "lounge-wall-1-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ha-aquarium-power.png",
+      "board": "EB-HA-AQUARIUM-POWER",
+      "room": "lounge",
+      "title": "हॉल • एक्वेरियम • चालू / बंद",
+      "kind": "board",
+      "source_view": "lounge-wall-1-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ha-sofa.png",
+      "board": "EB-HA-SOFA",
+      "room": "lounge",
+      "title": "हॉल • सोफ़े के पास",
+      "kind": "board",
+      "source_view": "lounge-wall-1-1.png"
+    },
+    {
+      "filename": "eb-ha-conn.png",
+      "board": "EB-HA-CONN",
+      "room": "lounge",
+      "title": "हॉल • AC • कनेक्शन",
+      "kind": "board",
+      "source_view": "lounge-wall-1-2.png"
+    },
+    {
+      "filename": "lounge-furniture-1.png",
+      "room": "lounge",
+      "title": "हॉल • फर्नीचर का माप",
+      "kind": "furniture"
+    },
+    {
+      "filename": "eb-di-entry.png",
+      "board": "EB-DI-ENTRY",
+      "room": "dining",
+      "title": "डाइनिंग • कमरे की लाइट / पंखा / AC",
+      "kind": "board",
+      "source_view": "dining-wall-1-1.png"
+    },
+    {
+      "filename": "eb-di-power.png",
+      "board": "EB-DI-POWER",
+      "room": "dining",
+      "title": "डाइनिंग • सॉकेट",
+      "kind": "board",
+      "source_view": "dining-wall-1-1.png"
+    },
+    {
+      "filename": "dining-furniture-1.png",
+      "room": "dining",
+      "title": "डाइनिंग • फर्नीचर का माप",
+      "kind": "furniture"
+    },
+    {
+      "filename": "eb-ki-light.png",
+      "board": "EB-KI-LIGHT",
+      "room": "kitchen",
+      "title": "रसोई • लाइट",
+      "kind": "board",
+      "source_view": "kitchen-wall-5-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ki-power.png",
+      "board": "EB-KI-POWER",
+      "room": "kitchen",
+      "title": "रसोई • सॉकेट",
+      "kind": "board",
+      "source_view": "kitchen-wall-5-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ki-service.png",
+      "board": "EB-KI-SERVICE",
+      "room": "kitchen",
+      "title": "रसोई • रसोई • पावर बंद",
+      "kind": "board",
+      "source_view": "kitchen-wall-5-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ki-fridge-conn.png",
+      "board": "EB-KI-FRIDGE-CONN",
+      "room": "kitchen",
+      "title": "रसोई • फ्रिज • कनेक्शन",
+      "kind": "board",
+      "source_view": "kitchen-wall-5-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ki-dw-conn.png",
+      "board": "EB-KI-DW-CONN",
+      "room": "kitchen",
+      "title": "रसोई • डिशवॉशर • कनेक्शन",
+      "kind": "board",
+      "source_view": "kitchen-wall-5-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ki-mw-conn.png",
+      "board": "EB-KI-MW-CONN",
+      "room": "kitchen",
+      "title": "रसोई • माइक्रोवेव • कनेक्शन",
+      "kind": "board",
+      "source_view": "kitchen-wall-2-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ki-otg-conn.png",
+      "board": "EB-KI-OTG-CONN",
+      "room": "kitchen",
+      "title": "रसोई • ओवन • कनेक्शन",
+      "kind": "board",
+      "source_view": "kitchen-wall-2-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ki-ro-conn.png",
+      "board": "EB-KI-RO-CONN",
+      "room": "kitchen",
+      "title": "रसोई • RO • कनेक्शन",
+      "kind": "board",
+      "source_view": "kitchen-wall-1-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ki-hob-conn.png",
+      "board": "EB-KI-HOB-CONN",
+      "room": "kitchen",
+      "title": "रसोई • चूल्हा • कनेक्शन",
+      "kind": "board",
+      "source_view": "kitchen-wall-1-1-uncovered.png"
+    },
+    {
+      "filename": "eb-ki-hood-conn.png",
+      "board": "EB-KI-HOOD-CONN",
+      "room": "kitchen",
+      "title": "रसोई • AC • कनेक्शन",
+      "kind": "board",
+      "source_view": "kitchen-wall-1-1-uncovered.png"
+    },
+    {
+      "filename": "kitchen-furniture-1.png",
+      "room": "kitchen",
+      "title": "रसोई • फर्नीचर का माप",
+      "kind": "furniture"
+    },
+    {
+      "filename": "kitchen-furniture-2.png",
+      "room": "kitchen",
+      "title": "रसोई • फर्नीचर का माप",
+      "kind": "furniture"
+    },
+    {
+      "filename": "lobby-context-sheet.png",
+      "room": "lobby",
+      "title": "प्रवेश",
+      "kind": "context"
+    },
+    {
+      "filename": "lobby-furniture-1.png",
+      "room": "lobby",
+      "title": "प्रवेश • फर्नीचर का माप",
+      "kind": "furniture"
+    },
+    {
+      "filename": "eb-ba1-conn.png",
+      "board": "EB-BA1-CONN",
+      "room": "bathroom_1",
+      "title": "पीछे का बाथरूम • गीज़र • कनेक्शन",
+      "kind": "board",
+      "source_view": "bathroom_1-wall-1-1.png"
+    },
+    {
+      "filename": "bathroom_1-furniture-1.png",
+      "room": "bathroom_1",
+      "title": "पीछे का बाथरूम • फर्नीचर का माप",
+      "kind": "furniture"
+    },
+    {
+      "filename": "eb-ba2-conn.png",
+      "board": "EB-BA2-CONN",
+      "room": "bathroom_2",
+      "title": "बीच का बाथरूम • गीज़र • कनेक्शन",
+      "kind": "board",
+      "source_view": "bathroom_2-wall-1-1.png"
+    },
+    {
+      "filename": "bathroom_2-furniture-1.png",
+      "room": "bathroom_2",
+      "title": "बीच का बाथरूम • फर्नीचर का माप",
+      "kind": "furniture"
+    },
+    {
+      "filename": "eb-ba3-conn.png",
+      "board": "EB-BA3-CONN",
+      "room": "bathroom_3",
+      "title": "आगे का बाथरूम • गीज़र • कनेक्शन",
+      "kind": "board",
+      "source_view": "bathroom_3-wall-1-1.png"
+    },
+    {
+      "filename": "bathroom_3-furniture-1.png",
+      "room": "bathroom_3",
+      "title": "आगे का बाथरूम • फर्नीचर का माप",
+      "kind": "furniture"
+    },
+    {
+      "filename": "eb-ba3-dry.png",
+      "board": "EB-BA3-DRY",
+      "room": "dressing_3",
+      "title": "आगे की ड्रेसिंग • बाथरूम • लाइट / पंखा / गीज़र",
+      "kind": "board",
+      "source_view": "dressing_3-wall-4-1.png"
+    },
+    {
+      "filename": "eb-de-light.png",
+      "board": "EB-DE-LIGHT",
+      "room": "dressing_3",
+      "title": "आगे की ड्रेसिंग • लाइट",
+      "kind": "board",
+      "source_view": "dressing_3-wall-1-1.png"
+    },
+    {
+      "filename": "dressing_3-furniture-1.png",
+      "room": "dressing_3",
+      "title": "आगे की ड्रेसिंग • फर्नीचर का माप",
+      "kind": "furniture"
+    },
+    {
+      "filename": "utility-context-sheet.png",
+      "room": "utility",
+      "title": "पुरानी यूटिलिटी — अब रसोई का हिस्सा",
+      "kind": "context"
+    },
+    {
+      "filename": "rear_ots_grating-context-sheet.png",
+      "room": "rear_ots_grating",
+      "title": "पीछे की खुली जाली",
+      "kind": "context"
+    },
+    {
+      "filename": "stair_entry_landing-context-sheet.png",
+      "room": "stair_entry_landing",
+      "title": "सीढ़ी का प्रवेश",
+      "kind": "context"
+    }
+  ],
+  "language": "Hindi",
+  "units": "feet/inches",
+  "font": "Nirmala UI",
+  "measurements": "To plate centre from finished floor and the pictured frame edge or wall corner.",
+  "limits": "Model-derived positions to plate centre. Installation, stabilizer and selected appliance termination unresolved."
+}
